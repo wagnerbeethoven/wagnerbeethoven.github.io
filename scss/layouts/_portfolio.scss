@@ -1,0 +1,96 @@
+// @mixin respond-above($breakpoint) {
+// @mixin respond-below($breakpoint) {
+// @mixin respond-between($lower, $upper) {
+
+.portfolio {
+    &__container {
+        @extend .row;
+
+    }
+
+    &__article {
+
+        p,
+        ul,
+        ol,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @extend .col-12;
+            @extend .col-md-8;
+            @extend .mx-auto;
+        }
+
+        img {
+            @extend .mx-auto;
+            @extend .d-block;
+            box-shadow: none !important;
+            @extend .mb-3;
+        }
+    }
+
+    &__item {
+        @extend .col-12;
+        @extend .col-md-3;
+        @extend .col-lg-4;
+        @extend .mb-4;
+
+        &:last-of-type {
+            @extend .mb-0;
+        }
+
+        &--content {
+            @extend .card;
+            height: 350px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            a {
+                @extend .text-center;
+                @extend .p-1;
+                @extend .text-white;
+                @extend .d-flex;
+                @extend .justify-content-center;
+                @extend .align-items-center;
+                @extend .position-absolute;
+                @extend .font-weight-normal;
+                opacity: 0;
+                z-index: 2;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+
+                &:focus,
+                &:hover {
+                    @extend .text-white;
+                   
+                }
+            }
+
+            &:hover,
+            &:focus {
+                z-index: 2;
+
+                &:after {
+                    @extend .position-absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 0.65);
+                    content: "";
+                }
+
+                a {
+                    opacity: 1;
+
+
+                }
+            }
+        }
+    }
+}

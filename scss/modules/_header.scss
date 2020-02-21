@@ -1,0 +1,44 @@
+.header {
+    @extend .navbar;
+    @extend .navbar-light;
+    @extend .px-0;
+    @extend .py-3;
+    @extend .sticky-top;
+    @extend .navbar-expand-sm;
+    @extend .mb-3;
+    @extend .bg-white;
+
+    &__logo {
+        @extend .d-flex;
+        @extend .align-top;
+        @extend .mb-0;
+
+        img {
+            width: 80px;
+            height: 80px;
+            @extend .m-0;
+            @extend .mr-3;
+        }
+    }
+
+    &__title {
+        @extend .d-flex;
+        @extend .flex-column;
+
+        span {
+            @extend .d-block;
+            @extend .w-100;
+        }
+    }
+
+    &__name {
+        @extend .display-4;
+        // @extend .m-0;
+       // @extend .p-0;
+    }
+
+    &__description {
+        @extend .font-weight-light;
+        font-size: 1rem;
+    }
+}

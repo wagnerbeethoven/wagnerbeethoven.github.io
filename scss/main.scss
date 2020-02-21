@@ -1,0 +1,21 @@
+// jekyll serve
+// sass --watch --style compressed scss:css
+
+@import "base/variables";
+
+@import "base/mixins";
+@import "libs/bootstrap/bootstrap";
+
+@import "base/general";
+@import "modules/header";
+@import "modules/nav";
+@import "modules/footer";
+@import "modules/aside";
+@import "modules/article";
+@import "modules/comment";
+
+@import "components/sections";
+@import "components/modal";
+
+@import "layouts/page";
+@import "layouts/portfolio";

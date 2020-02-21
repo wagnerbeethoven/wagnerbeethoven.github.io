@@ -1,0 +1,17 @@
+---
+layout: page
+title: Portfólio
+permalink: portfolio
+image: "img/page/portfolio.jpg"
+alt-image: "Em uma rua, várias pessoas com idades variadas de 3 a 17 anos estão sentadas no chão sob uma loma com a
+atenção voltada para os seus próprios desenhos, no centro, Wagner encontra-se em pé atrás de uma mesa, usa barba e
+óculos, de cabelo e barbas castanho escuro, veste camisa branca, bermuda e tênis e está pitando de preto um desenho com
+pincel"
+legend-image: "Olinda / 9 de setembro de 2018"
+summary: Confira todos meus meus trabalhos
+---
+<div class="portfolio__container">{% for post in site.categories.portfolio%}{% if post.url %}<div
+        class="portfolio__item portfolio__item--{{post.slug}}">{{ page.date | date: "%e/%m/%y" }}<div
+            class="portfolio__item--content" style="background-image: url('{{ post.image }}')" title="{{ post.title }}">
+            <a href="{{ post.url }}"><span> {{ post.title }}</span></a></div>
+    </div>{% endif %}{% endfor %}</div>

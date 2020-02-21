@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<figure class="page__banner">
+  <img src="{{page.image}}" class="{{page.alt-image}}">
+  {% if page.legend-image %}<figcaption>{{page.legend-image}}</figcaption>{% else %}{% endif %}
+</figure>
+
+<div class="conteudo">
+  <h2 class="page__title">{{ page.title }}</h2>
+
+
+  <article class="portfolio__article">
+    {{ content }}
+  </article>
+
+  <aside class="aside__portfolio">
+    <ul class="aside__areas">
+      <li>Campos de criação:</li>
+      {% if post %}{% assign areas = post.areas %}{% else %}{% assign areas = page.areas %}{% endif %}{% for areas in areas %}
+      <li>{{areas }}</li>{% unless forloop.last %}{% endunless %}{% endfor %}{% for tag in page.areas %}{% endfor %}
+    </ul>
+
+    <ul class="aside__tools">
+      <li>Ferramentas utilzadas:</li>
+      {% if post %}{% assign tools = post.tools %}{% else %}{% assign tools = page.tools %}{% endif %}{% for tools in tools %}
+      <li><img src="{{site.url}}/img/tools/{{tools}}.svg" alt="Ferramenta: {{tools | upcase }}"title=" {{tools | upcase }}"></li>
+      {% unless forloop.last %}{% endunless %}{% endfor %}
+      {% for tag in page.tools %}
+      {% endfor %}
+    </ul>
+  </aside>
+
+
+  <div class="top">
+    <a href="#top">[Top]</a>
+  </div>
+</div>
