@@ -12,18 +12,9 @@ layout: default
   <p class="page__summary">{{page.summary}}</p>
 
   <div class="post__meta">
-    <a href="{{site.url}}/sobre">
-      <img class="post__meta--picture" title="Conteúdo produzido por Wagner Beethoven"
-        src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
-    </a>
-    &bull;
-    <span class="post__meta--data"
-      title="Data de publicação">{% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ page.date | date:"%Y" }}</span>
-    &bull;
-    <span class="post__meta--read" title="Tempo de leitura estimado">
-      {% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }}
-      mins{% endif %}
-    </span>
+    <img class="post__meta--picture" title="Conteúdo produzido por Wagner Beethoven"
+      src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
+
   </div>
   <article class="post__article">
     {{ content }}

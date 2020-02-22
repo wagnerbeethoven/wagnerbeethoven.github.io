@@ -1,4 +1,9 @@
 <aside class="post__sidebar">
+  <hr>
+<p class="py-2">
+ Publicado em {% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ page.date | date:"%Y" }}
+</p>
+
   <ul class="aside__section">
     <li title="Seções"><img src="{{site.url}}/img/icons/caterogy.svg"></li>
     {% if post %}{% assign categories = post.categories %}{% else %}{% assign categories = page.categories %}{% endif %}{% for category in categories %}

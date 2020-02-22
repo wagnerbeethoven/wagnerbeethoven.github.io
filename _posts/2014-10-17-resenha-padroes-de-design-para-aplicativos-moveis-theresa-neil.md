@@ -24,7 +24,7 @@ O primeiro post será um review sobre um dos livros da [Theresa Neil].
 
 ## Sobre a autora
 
-Theresa atua há mais de dez anos como designer e com desenvolvimento de interfaces para usuários, trabalhou como líder de usabilidade da Sabre Airlines e mantém [um blog muito bom] sobre _mobile_, usabilidade e experiência de usuário.
+Theresa atua há mais de dez anos como designer e com desenvolvimento de interfaces para usuários, trabalhou como líder de usabilidade da [Sabre Airlines] e mantém [um blog muito bom] sobre _mobile_, usabilidade e experiência de usuário.
 
 ## Sobre o livro
 
@@ -59,7 +59,9 @@ Páginas: 208<br />
 Preço: ~ R$ 59,00
 
 [Novatec]: http://www.novatec.com.br/ "Site da editora Novatec [o link irá abrir uma nova aba"
-[@clubedosposts]: https://twitter.com/ClubeDosPosts "Twitter do Clube dos Posts [o link irá abrir uma nova aba"
-[Theresa Neil]: https://twitter.com/theresaneil "Twitter da Theresa [o link irá abrir uma nova aba"
-[um blog muito bom]: http://theresaneil.wordpress.com/ "blog da Theresa Neil [o link irá abrir uma nova aba"
+[@clubedosposts]: https://twitter.com/ClubeDosPosts "Twitter do Clube dos Posts [o link irá abrir uma nova aba]"
+[Theresa Neil]: https://twitter.com/theresaneil "Twitter da Theresa [o link irá abrir uma nova aba]"
+[Sabre Airlines]: https://www.sabre.com/insights/category/airlines/ "Sabre Airlines [o link irá abrir uma nova aba]"
+
+[um blog muito bom]: http://theresaneil.wordpress.com/ "blog da Theresa Neil [o link irá abrir uma nova aba]"
 [Padrões de Design para Aplicativos Móveis]: https://novatec.com.br/livros/padroes-de-design-para-aplicativos-moveis/ "Padrões de Design para Aplicativos Móveis [o link irá abrir uma nova aba"
