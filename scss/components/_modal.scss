@@ -9,6 +9,12 @@
     }
 }
 
+img[data-toggle='modal'] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .modal-backdrop.show {
     opacity: .85;
     // background-color: var(--main-color);

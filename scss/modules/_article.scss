@@ -11,6 +11,25 @@ article {
         }
     }
 
+
+    blockquote {
+        @extend .blockquote;
+        @extend .border-top;
+        @extend .border-bottom;
+        @extend .py-3;
+
+        footer {
+            @extend .blockquote-footer;
+
+        }
+
+        p {
+            &:first-child {
+                @extend .mb-0;
+            }
+        }
+    }
+
     dl {
         @extend .w-100;
         @extend .d-flex;
@@ -151,23 +170,23 @@ article {
 
     }
 
-    blockquote {
-        @extend .blockquote;
+    // blockquote {
+    //     @extend .blockquote;
 
-        p {
-            @extend .mb-0;
-        }
+    //     p {
+    //         @extend .mb-0;
+    //     }
 
-        cite {
-            @extend .blockquote-footer;
-        }
-    }
+    //     cite {
+    //         @extend .blockquote-footer;
+    //     }
+    // }
 
     img {
         @extend .img-fluid;
         @extend .rounded;
         @extend .shadow-sm;
-        @extend .my-2;
+        @extend .my-5;
     }
 
     figure {

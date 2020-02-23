@@ -424,12 +424,12 @@ mark {
   margin-bottom: 1rem;
   font-size: 1.25rem; }
 
-.blockquote-footer, article blockquote cite {
+.blockquote-footer, article blockquote footer {
   display: block;
   font-size: 80%;
   color: #6c757d; }
 
-.blockquote-footer::before, article blockquote cite::before {
+.blockquote-footer::before, article blockquote footer::before {
   content: "— "; }
 
 .img-fluid, article img, .section img, .modal-dialog.modal-image img, .page__banner img, .about__picture img {
@@ -6089,13 +6089,13 @@ button.bg-dark:hover {
 .border {
   border: 1px solid #dee2e6 !important; }
 
-.border-top {
+.border-top, article blockquote {
   border-top: 1px solid #dee2e6 !important; }
 
 .border-right {
   border-right: 1px solid #dee2e6 !important; }
 
-.border-bottom {
+.border-bottom, article blockquote {
   border-bottom: 1px solid #dee2e6 !important; }
 
 .border-left {
@@ -7261,7 +7261,7 @@ article figure img {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0, .header__logo, .aside__section--related, article blockquote p, .section__blog ul li p, .page__title, .page__content--blog ul li p, .portfolio__item:last-of-type,
+.mb-0, .header__logo, .aside__section--related, article blockquote p:first-child, .section__blog ul li p, .page__title, .page__content--blog ul li p, .portfolio__item:last-of-type,
 .my-0,
 article figure img {
   margin-bottom: 0 !important; }
@@ -7295,7 +7295,6 @@ article figure img {
 .mt-2, .about__id--title,
 .my-2,
 .menu--main ul,
-article img,
 article figure,
 .about__id--links .links__items li.links__item--social {
   margin-top: 0.5rem !important; }
@@ -7307,7 +7306,6 @@ article figure,
 .mb-2, .about__id--links .links__items li,
 .my-2,
 .menu--main ul,
-article img,
 article figure,
 .about__id--links .links__items li.links__item--social {
   margin-bottom: 0.5rem !important; }
@@ -7375,7 +7373,8 @@ article figure,
 
 .mt-5, .footer, .post__sidebar, .aside__section--related, .aside__portfolio,
 .my-5,
-.top {
+.top,
+article img {
   margin-top: 3rem !important; }
 
 .mr-5,
@@ -7384,7 +7383,8 @@ article figure,
 
 .mb-5, .page__summary,
 .my-5,
-.top {
+.top,
+article img {
   margin-bottom: 3rem !important; }
 
 .ml-5,
@@ -7459,7 +7459,8 @@ article figure,
 
 .pt-3, .aside__section--related,
 .py-3,
-.header {
+.header,
+article blockquote {
   padding-top: 1rem !important; }
 
 .pr-3,
@@ -7468,7 +7469,8 @@ article figure,
 
 .pb-3,
 .py-3,
-.header {
+.header,
+article blockquote {
   padding-bottom: 1rem !important; }
 
 .pl-3,
@@ -9479,6 +9481,9 @@ pre {
 
   .header__logo .header__name {
     font-size: 2rem; } }
+img[data-toggle='modal']:hover {
+  cursor: pointer; }
+
 .modal-backdrop.show {
   opacity: .85; }
 
