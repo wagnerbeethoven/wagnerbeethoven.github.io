@@ -4,7 +4,8 @@
     &.modal-image {
         img {
             @extend .img-fluid;
-            @extend .w-100;
+            @extend .rounded;
+            // @extend .w-100;
         }
     }
 }
