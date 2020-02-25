@@ -1,16 +1,13 @@
-body {
-    // @extend .container;
-    @extend .px-4;
-    @extend .py-5;
-    // background: #000;
-    color: var(--text-color);
-}
-
 * {
     transition: all .3s linear;
 }
 
-// main,
+body {
+    @extend .px-4;
+    @extend .py-5;
+    color: var(--text-color);
+}
+
 section {
     @extend .py-5;
 
