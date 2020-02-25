@@ -1,9 +1,12 @@
 name: Agência Sumô
 description: Portfólio do designer Wagner Beethoven!
-google_analytics:
+
+image-default: "img/image-default.jpg"
+
 url: ""
 baseurl: ""
 permalink:  /:categories/:title.html
-image-default: "img/image-default.jpg"
-plugins:
-  - jekyll-seo-tag
+
+sass:
+  sass_dir: scss
+  style: compressed
