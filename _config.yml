@@ -4,3 +4,6 @@ google_analytics:
 url: ""
 baseurl: ""
 permalink:  /:categories/:title.html
+image-default: "img/image-default.jpg"
+plugins:
+  - jekyll-seo-tag

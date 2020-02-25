@@ -17,18 +17,19 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+<meta property="og:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}" />
 <meta property="og:site_name" content="{{site.name}}">
 <meta property="article:publisher" content="http://www.facebook.com/wagnerbeethoven" />
 <meta property="article:author" content="https://www.facebook.com/wagnerbeethoven" />
 <meta property="article:published_time" content="{{ page.date }}" />
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
 
 
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
 <meta name="twitter:site" content="@agenciasumo" />
 <meta name="twitter:creator" content="@wagnerbeethoven">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}">
