@@ -87,25 +87,6 @@
 
 
 .about {
-    &__cv {
-        border-color: #f00;
-        color: #f00 !important;
-        @extend .btn;
-        @extend .btn-lg;
-        @extend .my-3;
-        font-size: 1rem;
-
-        &:hover,
-        &:focus {
-            background: #f00;
-            color: #fff !important;
-            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
-        }
-
-        &:after {
-            @extend .d-none;
-        }
-    }
 
     &__description,
     &__picture {
@@ -133,6 +114,10 @@
     &__description {
         @extend .col-md-8;
 
+        p {
+            @extend .col-12;
+        }
+
         .links__social {
             a {
                 @extend .mr-3;
@@ -143,7 +128,6 @@
             }
         }
     }
-
 
     &__id {
         &--name {
@@ -157,47 +141,86 @@
             @extend .mb-4;
         }
 
-        &--links {
-            .links__items {
-                @extend .ml-0;
-                @extend .mr-0;
 
-                li {
-                    display: block;
-                    @extend .w-100;
-                    @extend .mb-2;
 
-                    &.links__item--social {
-                        float: left;
-                        @extend .mr-3;
-                        @extend .my-2;
-                        width: 22px !important;
+        // &--links {
+        //     .links__items {
+        //         @extend .ml-0;
+        //         @extend .mr-0;
 
-                        i {
-                            font-size: 22px
-                        }
-                    }
+        //         li {
+        //             display: block;
+        //             @extend .w-100;
+        //             @extend .mb-2;
 
-                    a {
-                        &:before {
-                            fill: currentColor;
-                            color: red;
-                        }
+        //             &.links__item--social {
+        //                 float: left;
+        //                 @extend .mr-3;
+        //                 @extend .my-2;
+        //                 width: 22px !important;
 
-                        &:hover {
-                            &:after {
-                                @extend .d-none;
-                            }
-                        }
-                    }
-                }
+        //                 i {
+        //                     font-size: 22px
+        //                 }
+        //             }
+
+        //             a {
+        //                 &:before {
+        //                     fill: currentColor;
+        //                     color: red;
+        //                 }
+
+        //                 &:hover {
+        //                     &:after {
+        //                         @extend .d-none;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+
+
+        // }
+    }
+
+
+
+    &__description--jobs {
+        @extend .col-12;
+
+        h2 {
+            @extend .col-12;
+            @extend .px-0;
+            font-size: 20px;
+
+            &:after {
+                @extend .position-relative;
+                @extend .d-block;
+                @extend .w-100;
+                content: "";
+                height: 1px;
+                background: rgba(0, 0, 0, 0.1);
+                bottom: -5px;
             }
-
-
+        }
+        details {
+            span.text-muted {
+                @extend .small;
+                @extend .float-right;
+            }
         }
     }
 }
 
+.links__social--linkedin {
+    img {
+        @extend .shadow-none;
+        @extend .d-inline-block;
+        @extend .my-2;
+        width: 88px;
+        height: 22px;
+    }
+}
 
 .post {
     &__meta {
