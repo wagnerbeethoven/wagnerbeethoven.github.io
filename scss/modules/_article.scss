@@ -1,16 +1,37 @@
 article {
-    a {
-        font-weight: 600;
+
+    p,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @extend .col-12;
+        @extend .col-md-8;
+        @extend .mx-auto;
     }
 
     p {
-        a:after {
-            opacity: 1;
-            transform: scale(1, 1);
-            border-bottom-color: var(--text-color);
+
+        a {
+            font-weight: 600;
+
+            a:after {
+                opacity: 1;
+                transform: scale(1, 1);
+                border-bottom-color: var(--text-color);
+            }
         }
+
     }
 
+    ul,
+    ol {
+        padding-left: 40px;
+    }
 
     blockquote {
         @extend .blockquote;
@@ -58,110 +79,6 @@ article {
 
     }
 
-    p {
-        @extend .w-100;
-    }
-
-    // form {
-
-    //     @extend .ml-0;
-    //     @extend .mr-0;
-    //     @extend .row;
-
-    //     label,
-    //     input,
-    //     select,
-    //     textarea {
-    //         @extend .col-12;
-
-    //     }
-
-    //     label {
-    //         @extend .col-form-label;
-    //         @extend .col-md-4;
-    //         @extend .text-md-right;
-    //     }
-
-    //     input[type=text],
-    //     input[type=email],
-    //     input[type=password],
-    //     input[type=number],
-    //     input[type=tel],
-    //     input[type=search],
-    //     input[type=file],
-    //     select,
-    //     textarea {
-    //         @extend .col-md-8;
-    //         @extend .form-control;
-    //         @extend .mb-4;
-    //     }
-
-    //     input[type=file] {
-    //         height: auto;
-    //     }
-
-    //     button,
-    //     input[type=reset],
-    //     input[type=button],
-    //     input[type=submit] {
-    //         @extend .col;
-    //     }
-
-    //     input[type=button],
-    //     input[type=submit] {
-    //         @extend .btn;
-    //         @extend .btn-outline-primary;
-    //         width: auto;
-    //         color: var(--main-color);
-    //         border-color: var(--main-color);
-
-    //         &:focus,
-    //         &:hover {
-    //             background-color: var(--main-color);
-    //             border-color: var(--main-color);
-    //         }
-    //     }
-
-    //     input[type=reset] {
-    //         @extend .btn;
-    //         @extend .btn-link;
-    //         color: var(--main-color);
-    //     }
-
-    //     textarea {
-    //         min-height: 150px;
-    //     }
-
-    //     .checkbox,
-    //     .radio {
-    //         @extend .custom-control;
-    //         @extend .col-12;
-    //         @extend .col-md-4;
-    //         @extend .mb-4;
-
-    //         input {
-    //             @extend .custom-control-input;
-    //         }
-
-    //         label {
-    //             @extend .custom-control-label;
-    //             @extend .text-md-left;
-    //             @extend .p-0;
-    //         }
-
-    //     }
-
-    //     .radio {
-    //         @extend .custom-radio;
-
-    //     }
-
-    //     .checkbox {
-    //         @extend .custom-checkbox;
-
-    //     }
-    // }
-
     table {
         @extend .table;
         @extend .table-striped;
@@ -170,23 +87,13 @@ article {
 
     }
 
-    // blockquote {
-    //     @extend .blockquote;
-
-    //     p {
-    //         @extend .mb-0;
-    //     }
-
-    //     cite {
-    //         @extend .blockquote-footer;
-    //     }
-    // }
-
     img {
         @extend .img-fluid;
         @extend .rounded;
+        @extend .d-block;
         @extend .shadow-sm;
         @extend .my-5;
+        @extend .mb-3;
     }
 
     figure {
@@ -205,9 +112,6 @@ article {
         }
     }
 
-
-
-
     hr {
         border-color: var(--main-color);
         margin: 4rem 0;
@@ -217,14 +121,13 @@ article {
         @extend .mx-auto;
 
     }
-}
 
+    pre {
+        background-color: #232323;
+        font-size: 13px;
+        color: #E6E1DC;
+        line-height: 1.9em;
+        @extend .p-2;
 
-pre {
-    background-color: #232323;
-    font-size: 13px;
-    color: #E6E1DC;
-    line-height: 1.9em;
-    @extend .p-2;
-
+    }
 }

@@ -5,33 +5,14 @@
 .portfolio {
     &__container {
         @extend .row;
-
     }
-
     &__article {
-
-        p,
-        ul,
-        ol,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            @extend .col-12;
-            @extend .col-md-8;
-            @extend .mx-auto;
-        }
-
         img {
             @extend .mx-auto;
-            @extend .d-block;
             box-shadow: none !important;
-            @extend .mb-3;
+    
         }
     }
-
     &__item {
         @extend .col-12;
         @extend .col-md-3;
