@@ -1,8 +1,8 @@
 <aside class="post__sidebar">
-  <hr>
-<p class="py-2">
- Publicado em {% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ page.date | date:"%Y" }}
-</p>
+  <p class="py-2">
+    Publicado em
+    {% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ page.date | date:"%Y" }}
+  </p>
 
   <ul class="aside__section">
     <li title="Seções"><img src="{{site.url}}/img/icons/caterogy.svg"></li>
@@ -17,7 +17,7 @@
   </ul>
   <ul class="aside__section aside__section--related">
     {% assign maxRelated = 4 %}
-    {% assign minCommonTags =  3 %}
+    {% assign minCommonTags =  1 %}
     {% assign maxRelatedCounter = 0 %}
     {% for post in site.posts %}
     {% assign sameTagCount = 0 %}
@@ -26,26 +26,33 @@
     {% if post.url != page.url %}
     {% if page.tags contains tag %}
     {% assign sameTagCount = sameTagCount | plus: 1 %}
-    {% capture tagmarkup %}
-    {% endcapture %}
+    {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
     {% assign commonTags = commonTags | append: tagmarkup %}
     {% endif %}
     {% endif %}
     {% endfor %}
     {% if sameTagCount >= minCommonTags %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}{% if maxRelatedCounter >= maxRelated %}
+    <li> <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a></li>
+
+    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+    {% if maxRelatedCounter >= maxRelated %}
     {% break %}
     {% endif %}
     {% endif %}
     {% endfor %}
+
+
+
   </ul>
+
 
   {% if page.comments %}
   <div class="comment__area">
     <button class="comment__button" type="button" data-toggle="collapse" data-target="#comments" aria-expanded="false"
       aria-controls="comments">
-      <i class="comment__icon far fa-comments"></i>  Escrever comentário
+      <i class="comment__icon far fa-comments"></i> Escrever comentário
     </button>
     <div class="collapse" id="comments">
       <div id="disqus_thread"></div>
