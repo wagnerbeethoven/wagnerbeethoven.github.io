@@ -6,13 +6,37 @@
     &__container {
         @extend .row;
     }
+
     &__article {
+
+
+        p,
+        ul,
+        ol,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @extend .col-12;
+            @extend .col-md-8;
+            @extend .mx-auto;
+        }
+
+
+        ul,
+        ol {
+            padding-left: 40px;
+        }
+
         img {
             @extend .mx-auto;
             box-shadow: none !important;
-    
+
         }
     }
+
     &__item {
         @extend .col-12;
         @extend .col-md-3;
@@ -48,7 +72,7 @@
                 &:focus,
                 &:hover {
                     @extend .text-white;
-                   
+
                 }
             }
 

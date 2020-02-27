@@ -84,7 +84,11 @@
     }
 
 }
-
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 .about {
 
@@ -203,6 +207,7 @@
                 bottom: -5px;
             }
         }
+
         details {
             span.text-muted {
                 @extend .small;
@@ -272,11 +277,20 @@
 
     &__article {
 
+        @extend .clearfix;
+
+        p {
+            @extend .col-12;
+            @extend .px-0;
+        }
+
         h2,
-        h2,
+        h3,
         h4,
         h5,
         h6 {
+            @extend .col-12;
+            @extend .px-0;
             @extend .font-weight-lighter;
             @extend .mt-3;
 

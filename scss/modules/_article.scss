@@ -1,18 +1,5 @@
 article {
 
-    p,
-    ul,
-    ol,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @extend .col-12;
-        @extend .col-md-8;
-        @extend .mx-auto;
-    }
 
     p {
 
@@ -129,5 +116,17 @@ article {
         line-height: 1.9em;
         @extend .p-2;
 
+    }
+}
+
+.img {
+    &--right {
+        @extend .float-none;
+        @extend .m-0;
+        @extend .float-none;
+        @extend .float-md-right;
+        @extend .pl-0;
+        @extend .pl-md-2;
+        height: auto;
     }
 }
