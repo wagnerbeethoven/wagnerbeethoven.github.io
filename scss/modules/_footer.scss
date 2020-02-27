@@ -20,6 +20,9 @@
 
     .amor {
         animation: pulso 1.0s infinite alternate;
+        @extend .m-0;
+        @extend .p-0;
+        @extend .d-inline-block;
     }
 
     &:before {
