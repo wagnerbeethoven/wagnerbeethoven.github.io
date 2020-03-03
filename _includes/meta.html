@@ -1,9 +1,11 @@
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
 <meta charset="utf-8" />
 <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-
-<link rel="canonical" href="{{ page.url | prepend: site.url }}">
 
 <!-- FAVICON -->
 <link href="{{site.url}}/img/favicon/favicon-60x60.png" rel="shortcut icon" type="image/x-icon">
@@ -24,7 +26,6 @@
 <meta property="article:published_time" content="{{ page.date }}" />
 <meta property="og:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
 
-
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -32,4 +33,9 @@
 <meta name="twitter:site" content="@agenciasumo" />
 <meta name="twitter:creator" content="@wagnerbeethoven">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}">
+<meta name="twitter:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}"> 
+
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{'/feed.xml'| prepend: site.baseurl | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />

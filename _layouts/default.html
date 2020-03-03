@@ -6,13 +6,8 @@
 
   {% include meta.html %}
 
-  <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" crossorigin="anonymous"></script>
   </head>
 
@@ -25,7 +20,7 @@
         <figcaption class="header__title">
           <a href="{{ site.baseurl }}/">
             <h1 class="header__name">{{ site.name }} </h1>
-            <h2 class="header__description">{{ site.description }}</h2>
+            <h2 class="header__description">{{ site.slogan }}</h2>
           </a>
         </figcaption>
       </figure>
