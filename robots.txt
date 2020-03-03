@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+# Disallow: 
+Sitemap: http://sumo.pe/sitemap.xml

@@ -1,6 +1,6 @@
 name: Agência Sumô
-description: Portfólio do designer Wagner Beethoven!
-
+description: "Portfólio de Wagner Beethoven, Designer experiência na concepção e criação de artefatos digitas e entusiasta da acessibilidade e tecnologia assistivas"
+slogan: Portfólio do designer Wagner Beethoven!
 image-default: "img/image-default.jpg"
 
 url: ""
@@ -10,3 +10,11 @@ permalink:  /:categories/:title.html
 sass:
   sass_dir: scss
   style: compressed
+
+
+about-title: UX/UI Designer
+about-email: contato@sumo.pe
+about-phone: +55 81 986 496 080
+about-neighborhood: Jardim Atlântico
+about-city: Olinda
+about-state: Pernambuco
