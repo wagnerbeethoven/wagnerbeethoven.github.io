@@ -1,7 +1,7 @@
 <aside class="post__sidebar">
   <p class="py-2">
     Publicado em
-    <time itemprop="datePublished" datetime="{{ page.date}}">
+    <time itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d'}}" datetime="{{ page.date | date: '%Y-%m-%d'}}">
       {% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ page.date | date:"%Y" }}
     </time>
   </p>

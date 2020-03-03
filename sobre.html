@@ -3,16 +3,16 @@ layout: page
 title: Sobre
 permalink: sobre
 ---
-<div class="row">
+<div class="row" itemscope itemtype="http://schema.org/Person">
     <section class="about__picture">
         <img src="{{site.url}}/img/page/sobre.jpg" />
     </section>
     <section class="about__description">
-        <div class="about__id--name">
+        <div  itemprop="name" class="about__id--name">
             Wagner
             Beethoven
         </div>
-        <div class="about__id--title">
+        <div itemprop="jobTitle" class="about__id--title">
             UI/UX Designer &bull; <a class="no-border" href="mailto:contato@sumo.pe">contato@sumo.pe</a> &bull; <a
                 class="no-border" target="_blank" href="tel:+5581986496080">81 986 496 080</a>
         </div>
@@ -28,7 +28,7 @@ permalink: sobre
         </p>
         <p>Me chamo Wagner Beethoven (de batismo) , um belo nome, mas muito extenso. Por isso resolvi criar um site
             com o nome mais curto (<a href="{{site.url}}/blog/its-just-a-hello-world.html">maiores explicações</a>)
-            e nele mostrar meu trabalho. Tenho por volta dos trintas anos e resido em Olinda – PE.</p>
+            e nele mostrar meu trabalho. Tenho por volta dos trintas anos e resido em <span  itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Olinda</span> – <span itemprop="addressRegion">Pernambuco &bull; Brasil</span>.</p>
         <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram
             madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei
             tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou
