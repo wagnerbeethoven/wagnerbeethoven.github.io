@@ -4,12 +4,6 @@ title: Arquivo
 permalink: arquivo
 summary: "Todas as publicações"
 ---
-
 {% for category in site.categories %}
 <h3>{{ category[0] }}</h3>
-<ul>
-  {% for post in category[1] %}
-  <li>{% assign m = post.date | date: "%-m" %}{{ post.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ post.date | date:"%Y" }}: <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
-  {% endfor %}
-</ul>
-{% endfor %}
+<ul>{% for post in category[1] %}<li>{% assign m = post.date | date: "%-m" %}{{ post.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ post.date | date:"%Y" }}: <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a></li>{% endfor %}</ul>{% endfor %}

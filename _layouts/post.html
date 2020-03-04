@@ -2,32 +2,13 @@
 layout: default
 ---
 <section itemscope itemtype="http://schema.org/NewsArticle">
-  <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page__banner">
-    <img src="{{page.image}}" class="{{page.alt-image}}">
-    <meta itemprop="url" content="{{page.image}}">
-    {% if page.legend-image %}<figcaption>{{page.legend-image}}</figcaption>{% else %}{% endif %}
-  </figure>
-
-  <div class="conteudo">
-    <h2 class="page__title" itemprop="headline">{{ page.title }}</h2>
-    <p class="page__summary" itemprop="description">{{page.summary}}</p>
-
-    <div class="post__meta">
-      <figure class="mb-0" itemprop="creator" itemscope itemtype="http://schema.org/Person">
-        <img class="post__meta--picture" title="Conteúdo produzido por Wagner Beethoven"
-          src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
-        <figcaption class="sr-only" itemprop="author">Wagner Beethoven</figcaption>
-      </figure>
-    </div>
-    <article itemprop="articleBody" class="post__article">
-      {{ content }}
-    </article>
-
-    {% include aside.html %}
-
-
-    <div class="top">
-      <a href="#top">[Top]</a>
-    </div>
-  </div>
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page__banner"><img src="{{page.image}}" class="{{page.alt-image}}"><meta itemprop="url" content="{{page.image}}">{% if page.legend-image %}<figcaption>{{page.legend-image}}</figcaption>{% else %}{% endif %}</figure>
+<div class="conteudo">
+<h2 class="page__title" itemprop="headline">{{ page.title }}</h2>
+<p class="page__summary" itemprop="description">{{page.summary}}</p>
+<div class="post__meta"><figure class="mb-0" itemprop="creator" itemscope itemtype="http://schema.org/Person"><img class="post__meta--picture" title="Conteúdo produzido por Wagner Beethoven"src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75"><figcaption class="sr-only" itemprop="author">Wagner Beethoven</figcaption></figure></div>
+<article itemprop="articleBody" class="post__article">{{ content }}</article>
+{% include aside/blog.html %}
+<div class="top"><a href="#top">[Top]</a></div>
+</div>
 </section>
