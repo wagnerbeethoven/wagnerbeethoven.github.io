@@ -1,11 +1,7 @@
 article {
-
-
     p {
-
         a {
             font-weight: 600;
-
             a:after {
                 opacity: 1;
                 transform: scale(1, 1);
@@ -15,10 +11,6 @@ article {
 
     }
 
-    ul,
-    ol {
-        padding-left: 40px;
-    }
 
     blockquote {
         @extend .blockquote;
