@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bem vindo
+title: Bem-vindo
 permalink: index
 ---
 {% for post in site.categories.portfolio limit:1 %}{% if post.url %}<section class="section__banner" style="background-image: url('{{ post.image }}')"><a href="{{ post.url }}" title=" {{ post.title }}"><span>{{ post.title }}</span></a></section>{% endif %}{% endfor %}
