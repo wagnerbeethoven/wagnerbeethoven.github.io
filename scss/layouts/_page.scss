@@ -85,12 +85,6 @@
 
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .about {
 
     &__description,
@@ -188,42 +182,133 @@
         // }
     }
 
-
-
     &__description--jobs {
-        @extend .col-12;
+        @extend .px-0;
 
-        h2 {
-            @extend .col-12;
-            @extend .px-0;
-            font-size: 20px;
+        button {
+            background: transparent;
+            border-width: 0;
+            font-weight: 600;
+            @extend .py-2;
 
-            &:after {
-                @extend .position-relative;
-                @extend .d-block;
-                @extend .w-100;
-                content: "";
-                height: 1px;
-                background: rgba(0, 0, 0, 0.1);
-                bottom: -5px;
+            &[aria-expanded=true] {
+                svg {
+                    transform: rotate(-180deg)
+                }
             }
         }
 
-        details {
-            span.text-muted {
-                @extend .small;
-                @extend .float-right;
+        ul {
+            @extend .mb-4;
+
+            li {
+                @extend .w-100;
+                @extend .media;
+                @extend .px-3;
+                @extend .py-3;
+                @extend .border-bottom;
+
+                &:last-child {
+                    @extend .border-0;
+                }
+
+                &.profile {
+                    &--course-certification {
+
+                        .job__detail--description {
+                            clear: both;
+                        }
+
+                        .job__detail--duration,
+                        .job__detail--company {
+                            @extend .d-inline-block;
+                            @extend .float-left;
+                        }
+
+                        .job__detail--duration {
+                            font-size: 100%;
+                            @extend .pl-2;
+                            font-weight: 200;
+                            &:after {content: ")"}
+                            &:before {content: "("}
+                        }
+
+                        .job__detail--logo {
+                            @extend .d-none;
+                        }
+
+                        &:last-child {
+                            @extend .border-bottom;
+                        }
+                    }
+                }
+
+                .job__detail {
+
+                    @extend .media-body;
+
+                    span {
+                        @extend .d-block;
+                    }
+
+                    &--logo {
+                        @extend .shadow-none;
+                        @extend .my-0;
+                        @extend .mr-3;
+                    }
+
+                    &--position {
+                        font-weight: 600;
+                    }
+
+                    &--company {
+                        font-weight: 200;
+                    }
+
+                    &--description {
+                        @extend .pt-2;
+                        font-size: 14px;
+
+                        p {
+                            @extend .px-0;
+
+                            &:first-child,
+                            &:last-child {
+                                @extend .mb-0;
+                            }
+                        }
+
+                        p+p {
+                            @extend .pt-3;
+                        }
+                    }
+                }
+
+
             }
         }
     }
 }
 
-.links__social--linkedin {
-    img {
-        @extend .shadow-none;
+.links__social {
+    @extend .px-0;
+    @extend .mt-3;
+
+    &--linkedin {
         @extend .d-inline-block;
-        @extend .my-2;
-        width: 88px;
-        height: 22px;
+        padding-top: 5px;
+
+        &,
+        & img {
+            @extend .shadow-none;
+            width: 88px;
+            height: 22px;
+        }
+
+        & img {
+            @extend .shadow-none;
+            @extend .d-block;
+            @extend .my-0;
+        }
     }
 }

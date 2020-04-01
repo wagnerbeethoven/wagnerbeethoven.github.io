@@ -13,6 +13,11 @@ section {
 
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 a {
     @extend .position-relative;
     @extend .text-dark;

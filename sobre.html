@@ -5,12 +5,44 @@ permalink: sobre
 ---
 <div class="row" itemscope itemtype="http://schema.org/Person">
 <section class="about__picture"><img src="{{site.url}}/img/page/sobre.jpg" /></section>
-<section class="about__description"><div  itemprop="name" class="about__id--name">Wagner Beethoven</div>
+<section class="about__description">
+<div itemprop="name" class="about__id--name">Wagner Beethoven</div>
 <div itemprop="jobTitle"><span class="about__id--title">{{site.about-title}}</span> &bull; <a class="no-border" href="mailto:{{site.about-email}}">{{site.about-email}}</a> &bull; <a class="no-border" target="_blank" href="tel:+5581986496080">{{site.about-phone}}</a>
 </div>
-<p class="links__social"><a target="_blank" class="links__social--linkedin" href="http://linkedin.com/in/wagnerbeethoven"><img title="Linkedin [Este link irá abrir uma nova janela]" src="{{site.url}}/img/social/linkedin.svg" alt="Logo do LINKEDIN, o trecho 'LINKED' escrito em azul e o 'IN'' dentro de um quadrado azul com e as letras nas cores brancas"></a><a target="_blank" title="Skype" href="skype:wagnerbeethoven?chat"><i class="fab fa-lg fa-skype"></i></a><a target="_blank" title="Behance" href="http://behance.net/wagnerbeethoven"><i class="fab fa-lg fa-behance"></i></a><a target="_blank" title="Github" href="http://github.com/wagnerbeethoven"><i class="fab fa-lg fa-github-alt"></i></a></p>
-<p>Me chamo Wagner Beethoven (de batismo) , um belo nome, mas muito extenso. Por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/its-just-a-hello-world.html">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos e resido em <span  itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span> – <span itemprop="addressRegion">{{site.about-state}} &bull; Brasil</span>.</p>
-<p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
+<p class="links__social"><a target="_blank" class="links__social--linkedin" href="http://linkedin.com/in/wagnerbeethoven"><img class="injectable" title="Linkedin [Este link irá abrir uma nova janela]" src="{{site.url}}/img/social/linkedin.svg" alt="Logo do LINKEDIN, o trecho 'LINKED' escrito em azul e o 'IN'' dentro de um quadrado azul com e as letras nas cores brancas"></a><a target="_blank" title="Skype" href="skype:wagnerbeethoven?chat"><i class="fab fa-lg fa-skype"></i></a><a target="_blank" title="Behance [Este link irá abrir uma nova janela]" href="http://behance.net/wagnerbeethoven"><i class="fab fa-lg fa-behance"></i></a><a target="_blank" title="Github [Este link irá abrir uma nova janela]" href="http://github.com/wagnerbeethoven"><i class="fab fa-lg fa-github-alt"></i></a></p>
+<p class="px-0">Me chamo Wagner Beethoven (de batismo) , um belo nome, mas muito extenso. Por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/its-just-a-hello-world.html">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos e resido em <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span> – <span itemprop="addressRegion">{{site.about-state}} &bull; Brasil</span>.</p>
+<p class="px-0">A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
+
+<div class="about__description--jobs">
+{% assign category = site.profile | group_by: 'category' %}
+{% for item in category %}
+<button class="w-100 text-left" type="button" data-toggle="collapse" data-target="#{{ item.name | slugify }}" aria-expanded="false"
+    aria-controls="{{ item.name | slugify }}">
+    <i class="fas fa-angle-down"></i>
+    {{ item.name }}
+</button>
+
+<ul class="collapse" id="{{ item.name | slugify }}">
+    {% assign profile = site.profile | sort: 'date' | reverse | where: 'category', item.name %}
+    {% for entry in profile %}
+    <li class="profile--{{ entry.section }}">
+      <img src="{{site.url}}/img/profile/{{ entry.logo }}" class="job__detail--logo" alt="Logo da {{entry.company}}">
+      <div class="job__detail">
+        <span class="job__detail--position">{{entry.title}}</span>
+        <span class="job__detail--company">{{entry.company}}</span>
+        <small class="job__detail--duration">{{entry.duration}}</small>
+        <div class="job__detail--description">
+          {{ entry.content }}
+        </div>
+      </div>
+
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}
+</div>
 </section>
+
+
 </div>
 <script type="application/ld+json">{"@context": "http://schema.org/","@type": "Person","name": "Wagner Beethoven","jobTitle": "{{site.about-title}}","address": {"@type": "PostalAddress","addressLocality": "{{site.about-city}}","addressRegion": "{{site.about-state}}"}}</script>

@@ -18,3 +18,7 @@ about-phone: +55 81 986 496 080
 about-neighborhood: Jardim Atlântico
 about-city: Olinda
 about-state: Pernambuco
+
+collections:
+  profile:
+    output: true
