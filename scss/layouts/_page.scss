@@ -115,6 +115,7 @@
 
         p {
             @extend .col-12;
+            @extend .px-0;
         }
 
         .links__social {
