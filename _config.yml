@@ -5,7 +5,7 @@ image-default: "img/image-default.jpg"
 
 url: ""
 baseurl: ""
-permalink:  /:categories/:title.html
+permalink:  /:categories/:title/
 
 sass:
   sass_dir: scss
