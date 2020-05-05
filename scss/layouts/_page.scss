@@ -185,13 +185,22 @@
 
     &__description--jobs {
         @extend .px-0;
+        @extend .d-flex;
+        @extend .flex-column;
 
         button {
             background: transparent;
             border-width: 0;
             font-weight: 600;
             @extend .py-2;
-
+            &:nth-child(1){order: 1}
+            &:nth-child(2){order: 2}
+            &:nth-child(3){order: 3}
+            &:nth-child(4){order: 4}
+           
+            svg {
+                @extend .mr-2;
+            }
             &[aria-expanded=true] {
                 svg {
                     transform: rotate(-180deg)
@@ -201,7 +210,10 @@
 
         ul {
             @extend .mb-4;
-
+            &:nth-child(1){order: 1}
+            &:nth-child(2){order: 2}
+            &:nth-child(3){order: 3}
+            &:nth-child(4){order: 4}
             li {
                 @extend .w-100;
                 @extend .media;
@@ -214,7 +226,9 @@
                 }
 
                 &.profile {
-                    &--course-certification {
+
+                    &--course,
+                    &--certification {
 
                         .job__detail--description {
                             clear: both;
@@ -230,8 +244,14 @@
                             font-size: 100%;
                             @extend .pl-2;
                             font-weight: 200;
-                            &:after {content: ")"}
-                            &:before {content: "("}
+
+                            &:after {
+                                content: ")"
+                            }
+
+                            &:before {
+                                content: "("
+                            }
                         }
 
                         .job__detail--logo {
