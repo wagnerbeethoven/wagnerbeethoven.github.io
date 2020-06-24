@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head><title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }} – {{ site.description }}</title>{% include meta.html %}<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" crossorigin="anonymous"></script></head>
-<body><div class="container">{% include header.html %}<main class="main">{% include breadcrumbs.html %}{{ content }}{% include footer.html %}</main></div></body>
+
+<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+    {% include meta.html %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">{% include header.html %}<main class="main">
+            {% include breadcrumbs.html %}{{ content }}{% include footer.html %}</main>
+    </div>
+</body>
+
 </html>
