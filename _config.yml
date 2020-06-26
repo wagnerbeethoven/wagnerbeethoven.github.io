@@ -8,7 +8,6 @@ baseurl: ""
 permalink:  /:categories/:title.html
 
 sass:
-  sass_dir: scss
   style: compressed
 
 about-name: Wagner Beethoven
