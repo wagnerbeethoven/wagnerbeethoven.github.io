@@ -1,29 +1,30 @@
 .modal-dialog {
-    @extend .modal-dialog-centered;
+  @extend .modal-dialog-centered;
 
-    &.modal-image {
-        img {
-            @extend .img-fluid;
-            @extend .rounded;
-            // @extend .w-100;
-        }
+  &.modal-image {
+    img {
+      @extend .img-fluid;
+      @extend .rounded;
+      @extend .d-block;
+      @extend .mx-auto;
     }
+  }
 }
 
-img[data-toggle='modal'] {
-    &:hover {
-        cursor: pointer;
-    }
+img[data-toggle="modal"] {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .modal-backdrop.show {
-    opacity: .85;
-    // background-color: var(--main-color);
+  opacity: 0.85;
+  // background-color: var(--main-color);
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 1000px;
-        margin: auto;
-    }
+  .modal-dialog {
+    max-width: 1000px;
+    margin: auto;
+  }
 }
