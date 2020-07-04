@@ -1,335 +1,286 @@
 .page {
-    &__banner {
-        img {
-            @extend .w-100;
-            @extend .img-fluid;
-            @extend .rounded;
-        }
-
-        figcaption {
-            @extend .text-center;
-            @extend .small;
-            @extend .p-2;
-            opacity: .5;
-        }
+  &__banner {
+    img {
+      @extend .w-100;
+      @extend .img-fluid;
+      @extend .rounded;
     }
 
-    &__title {
-        @extend .display-4;
-        @extend .text-center;
-        @extend .py-4;
-        @extend .h2;
+    figcaption {
+      @extend .text-center;
+      @extend .small;
+      @extend .p-2;
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    @extend .display-4;
+    @extend .text-center;
+    @extend .py-4;
+    @extend .h2;
+    @extend .font-weight-light;
+    @extend .mb-0;
+  }
+
+  &__summary {
+    @extend .lead;
+    @extend .font-italic;
+    @extend .text-center;
+    height: auto;
+    @extend .mx-auto;
+    @extend .col-12;
+    @extend .col-md-10;
+    @extend .mb-5;
+  }
+
+  &__content {
+    &--blog {
+      ul {
+        @extend .list-unstyled;
+
+        li {
+          @extend .col-12;
+          @extend .pb-4;
+
+          p {
+            @extend .mb-0;
+            @extend .text-muted;
+            font-size: 0.825rem;
+          }
+
+          strong {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &--arquivo {
+      h3 {
         @extend .font-weight-light;
-        @extend .mb-0;
+        @extend .text-capitalize;
+        @extend .mb-4;
+      }
 
-    }
+      ul {
+        @extend .list-unstyled;
 
-    &__summary {
-        @extend .lead;
-        @extend .font-italic;
-        @extend .text-center;
-        height: auto;
-        @extend .mx-auto;
-        @extend .col-12;
-        @extend .col-md-10;
-        @extend .mb-5;
-    }
+        li {
+          @extend .col-12;
+          @extend .pb-2;
+          @extend .px-0;
 
-    &__content {
-        &--blog {
-            ul {
-                @extend .list-unstyled;
-
-                li {
-                    @extend .col-12;
-                    @extend .pb-4;
-
-                    p {
-                        @extend .mb-0;
-                        @extend .text-muted;
-                        font-size: .825rem;
-                    }
-
-                    strong {
-                        font-weight: 600
-                    }
-                }
+          a {
+            strong {
+              font-weight: 600;
             }
+          }
         }
-
-        &--arquivo {
-            h3 {
-                @extend .font-weight-light;
-                @extend .text-capitalize;
-                @extend .mb-4;
-            }
-
-            ul {
-                @extend .list-unstyled;
-
-                li {
-                    @extend .col-12;
-                    @extend .pb-2;
-                    @extend .px-0;
-
-                    a {
-                        strong {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-        }
-
+      }
     }
-
+  }
 }
 
-.about {
+.sobre {
+  &__description,
+  &__picture {
+    @extend .col-12;
+  }
 
-    &__description,
-    &__picture {
-        @extend .col-12;
+  &__picture {
+    @extend .col-md-4;
+
+    img {
+      @extend .rounded;
+      @extend .img-fluid;
+      @extend .m-auto;
+      box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.1) !important;
+      transform: scaleX(-1);
+      height: auto;
+
+      &:hover {
+        box-shadow: 0 0 0 10px rgba(20, 121, 121, 1) !important;
+        background-size: 110%;
+      }
+    }
+  }
+
+  &__description {
+    @extend .col-md-8;
+
+    p {
+      @extend .col-12;
+      @extend .px-0;
     }
 
-    &__picture {
-        @extend .col-md-4;
+    .links__social {
+      a {
+        @extend .mr-3;
 
-        img {
-            @extend .rounded;
-            @extend .img-fluid;
-            @extend .m-auto;
-            box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.1) !important;
-            transform: scaleX(-1);
-            height: auto;
+        &:after {
+          @extend .d-none;
+        }
+      }
+    }
+  }
 
-            &:hover {
-                box-shadow: 0 0 0 10px rgba(20, 121, 121, 1) !important;
-                background-size: 110%;
+  &__id {
+    &--name {
+      @extend .text-uppercase;
+      @extend .d-block;
+      font-size: 35px;
+    }
+
+    &--title {
+      @extend .mt-2;
+      @extend .mb-4;
+    }
+  }
+
+  &__description--jobs {
+    @extend .px-0;
+    @extend .d-flex;
+    @extend .flex-column;
+
+    button {
+      background: transparent;
+      border-width: 0;
+      font-weight: 600;
+      @extend .py-2;
+
+      svg {
+        @extend .mr-2;
+      }
+      &[aria-expanded="true"] {
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    ul {
+      @extend .mb-4;
+
+      li {
+        @extend .w-100;
+        @extend .media;
+        @extend .px-3;
+        @extend .py-3;
+        @extend .border-bottom;
+
+        &:last-child {
+          @extend .border-0;
+        }
+
+        &.profile {
+          &--course,
+          &--certification {
+            .job__detail--description {
+              clear: both;
             }
-        }
-    }
 
-    &__description {
-        @extend .col-md-8;
-
-        p {
-            @extend .col-12;
-            @extend .px-0;
-        }
-
-        .links__social {
-            a {
-                @extend .mr-3;
-
-                &:after {
-                    @extend .d-none;
-                }
+            .job__detail--duration,
+            .job__detail--company {
+              @extend .d-inline-block;
+              @extend .float-left;
             }
-        }
-    }
 
-    &__id {
-        &--name {
-            @extend .text-uppercase;
+            .job__detail--duration {
+              font-size: 100%;
+              @extend .pl-2;
+              font-weight: 200;
+
+              &:after {
+                content: ")";
+              }
+
+              &:before {
+                content: "(";
+              }
+            }
+
+            .job__detail--logo {
+              @extend .d-none;
+            }
+
+            &:last-child {
+              @extend .border-bottom;
+            }
+          }
+        }
+
+        .job__detail {
+          @extend .media-body;
+
+          span {
             @extend .d-block;
-            font-size: 35px;
-        }
+          }
 
-        &--title {
-            @extend .mt-2;
-            @extend .mb-4;
-        }
+          &--logo {
+            @extend .shadow-none;
+            @extend .my-0;
+            @extend .mr-3;
+          }
 
-
-
-        // &--links {
-        //     .links__items {
-        //         @extend .ml-0;
-        //         @extend .mr-0;
-
-        //         li {
-        //             display: block;
-        //             @extend .w-100;
-        //             @extend .mb-2;
-
-        //             &.links__item--social {
-        //                 float: left;
-        //                 @extend .mr-3;
-        //                 @extend .my-2;
-        //                 width: 22px !important;
-
-        //                 i {
-        //                     font-size: 22px
-        //                 }
-        //             }
-
-        //             a {
-        //                 &:before {
-        //                     fill: currentColor;
-        //                     color: red;
-        //                 }
-
-        //                 &:hover {
-        //                     &:after {
-        //                         @extend .d-none;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-
-
-        // }
-    }
-
-    &__description--jobs {
-        @extend .px-0;
-        @extend .d-flex;
-        @extend .flex-column;
-
-        button {
-            background: transparent;
-            border-width: 0;
+          &--position {
             font-weight: 600;
-            @extend .py-2;
-            &:nth-child(1){order: 1}
-            &:nth-child(2){order: 2}
-            &:nth-child(3){order: 3}
-            &:nth-child(4){order: 4}
-           
-            svg {
-                @extend .mr-2;
+          }
+
+          &--company {
+            font-weight: 200;
+          }
+
+          &--description {
+            @extend .pt-2;
+            font-size: 14px;
+
+            p {
+              @extend .px-0;
+
+              &:first-child,
+              &:last-child {
+                @extend .mb-0;
+              }
             }
-            &[aria-expanded=true] {
-                svg {
-                    transform: rotate(-180deg)
-                }
+
+            p + p {
+              @extend .pt-3;
             }
+          }
         }
-
-        ul {
-            @extend .mb-4;
-            &:nth-child(1){order: 1}
-            &:nth-child(2){order: 2}
-            &:nth-child(3){order: 3}
-            &:nth-child(4){order: 4}
-            li {
-                @extend .w-100;
-                @extend .media;
-                @extend .px-3;
-                @extend .py-3;
-                @extend .border-bottom;
-
-                &:last-child {
-                    @extend .border-0;
-                }
-
-                &.profile {
-
-                    &--course,
-                    &--certification {
-
-                        .job__detail--description {
-                            clear: both;
-                        }
-
-                        .job__detail--duration,
-                        .job__detail--company {
-                            @extend .d-inline-block;
-                            @extend .float-left;
-                        }
-
-                        .job__detail--duration {
-                            font-size: 100%;
-                            @extend .pl-2;
-                            font-weight: 200;
-
-                            &:after {
-                                content: ")"
-                            }
-
-                            &:before {
-                                content: "("
-                            }
-                        }
-
-                        .job__detail--logo {
-                            @extend .d-none;
-                        }
-
-                        &:last-child {
-                            @extend .border-bottom;
-                        }
-                    }
-                }
-
-                .job__detail {
-
-                    @extend .media-body;
-
-                    span {
-                        @extend .d-block;
-                    }
-
-                    &--logo {
-                        @extend .shadow-none;
-                        @extend .my-0;
-                        @extend .mr-3;
-                    }
-
-                    &--position {
-                        font-weight: 600;
-                    }
-
-                    &--company {
-                        font-weight: 200;
-                    }
-
-                    &--description {
-                        @extend .pt-2;
-                        font-size: 14px;
-
-                        p {
-                            @extend .px-0;
-
-                            &:first-child,
-                            &:last-child {
-                                @extend .mb-0;
-                            }
-                        }
-
-                        p+p {
-                            @extend .pt-3;
-                        }
-                    }
-                }
-
-
-            }
-        }
+      }
     }
+    button:nth-of-type(1) {order: 1;}
+    ul:nth-of-type(1) {order: 2;}
+    button:nth-of-type(2) {order: 3;}
+    ul:nth-of-type(2) {order: 4;}
+    button:nth-of-type(3) {order: 5;}
+    ul:nth-of-type(3) {order: 6;}
+    button:nth-of-type(4) {order: 7;}
+    ul:nth-of-type(4) {order: 8;}
+  }
 }
 
 .links__social {
-    @extend .px-0;
-    @extend .mt-3;
+  @extend .px-0;
+  @extend .mt-3;
 
-    &--linkedin {
-        @extend .d-inline-block;
-        padding-top: 5px;
+  &--linkedin {
+    @extend .d-inline-block;
+    padding-top: 5px;
 
-        &,
-        & img {
-            @extend .shadow-none;
-            width: 88px;
-            height: 22px;
-        }
-
-        & img {
-            @extend .shadow-none;
-            @extend .d-block;
-            @extend .my-0;
-        }
+    &,
+    & img {
+      @extend .shadow-none;
+      width: 88px;
+      height: 22px;
     }
+
+    & img {
+      @extend .shadow-none;
+      @extend .d-block;
+      @extend .my-0;
+    }
+  }
 }
