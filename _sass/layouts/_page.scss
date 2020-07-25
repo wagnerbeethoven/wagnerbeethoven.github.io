@@ -61,13 +61,17 @@
         @extend .font-weight-light;
         @extend .text-capitalize;
         @extend .mb-4;
+
+        &:first-of-type {
+          text-transform: none !important;
+        }
       }
 
       ul {
         @extend .list-unstyled;
 
         li {
-          @extend .col-12;
+          @extend .w-100;
           @extend .pb-2;
           @extend .px-0;
 
@@ -76,6 +80,17 @@
               font-weight: 600;
             }
           }
+        }
+      }
+
+      .page__list {
+        @extend .pt-0;
+        @extend .list-inline;
+        a {
+          @extend .mr-md-3;
+          @extend .mr-0;
+          @extend .d-block;
+          @extend .d-md-inline-block;
         }
       }
     }
@@ -251,14 +266,30 @@
         }
       }
     }
-    button:nth-of-type(1) {order: 1;}
-    ul:nth-of-type(1) {order: 2;}
-    button:nth-of-type(2) {order: 3;}
-    ul:nth-of-type(2) {order: 4;}
-    button:nth-of-type(3) {order: 5;}
-    ul:nth-of-type(3) {order: 6;}
-    button:nth-of-type(4) {order: 7;}
-    ul:nth-of-type(4) {order: 8;}
+    button:nth-of-type(1) {
+      order: 1;
+    }
+    ul:nth-of-type(1) {
+      order: 2;
+    }
+    button:nth-of-type(2) {
+      order: 3;
+    }
+    ul:nth-of-type(2) {
+      order: 4;
+    }
+    button:nth-of-type(3) {
+      order: 5;
+    }
+    ul:nth-of-type(3) {
+      order: 6;
+    }
+    button:nth-of-type(4) {
+      order: 7;
+    }
+    ul:nth-of-type(4) {
+      order: 8;
+    }
   }
 }
 
