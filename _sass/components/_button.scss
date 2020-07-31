@@ -1,8 +1,10 @@
 button.btn {
   &--vcard {
     @extend .btn;
-    @extend .btn-outline-primary;
-    border-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    @extend .px-3;
+    @extend .py-2;
+    @extend .rounded;
     color: var(--main-color);
     transition: none;
 

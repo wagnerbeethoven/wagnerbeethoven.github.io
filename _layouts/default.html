@@ -1,1 +1,16 @@
-<!DOCTYPE html><html lang="pt-br"><head><title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>{% include meta.html %}<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"crossorigin="anonymous"></script></head><body><div class="container">{% include header.html %}<main class="main">{% include breadcrumbs.html %}{{ content }}{% include footer.html %}</main></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>{% include meta.html %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+</head>
+
+<body>
+    <div class="container">{% include header.html %}<main class="main">
+            {% include breadcrumbs.html %}{{ content }}{% include footer.html %}</main>
+    </div>
+</body>
+
+</html>

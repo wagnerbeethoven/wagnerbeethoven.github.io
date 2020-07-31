@@ -3,99 +3,112 @@
 // @mixin respond-between($lower, $upper) {
 
 .portfolio {
-    &__container {
-        @extend .row;
+  &__container {
+    @extend .row;
+  }
+
+  &__article {
+    p,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .col-12;
+      @extend .col-md-8;
+      @extend .mx-auto;
     }
 
-    &__article {
-
-
-        p,
-        ul,
-        ol,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            @extend .col-12;
-            @extend .col-md-8;
-            @extend .mx-auto;
-        }
-
-
-        ul,
-        ol {
-            padding-left: 40px;
-        }
-
-        img {
-            @extend .mx-auto;
-            box-shadow: none !important;
-
-        }
+    ul,
+    ol {
+      padding-left: 40px;
     }
 
-    &__item {
-        @extend .col-12;
-        @extend .col-md-3;
-        @extend .col-lg-4;
-        @extend .mb-4;
-
-        &:last-of-type {
-            @extend .mb-0;
-        }
-
-        &--content {
-            @extend .card;
-            height: 350px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            a {
-                @extend .text-center;
-                @extend .p-1;
-                @extend .text-white;
-                @extend .d-flex;
-                @extend .justify-content-center;
-                @extend .align-items-center;
-                @extend .position-absolute;
-                @extend .font-weight-normal;
-                opacity: 0;
-                z-index: 2;
-                z-index: 3;
-                width: 100%;
-                height: 100%;
-
-                &:focus,
-                &:hover {
-                    @extend .text-white;
-
-                }
-            }
-
-            &:hover,
-            &:focus {
-                z-index: 2;
-
-                &:after {
-                    @extend .position-absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    background: rgba(0, 0, 0, 0.65);
-                    content: "";
-                }
-
-                a {
-                    opacity: 1;
-
-
-                }
-            }
-        }
+    img {
+      @extend .mx-auto;
+      box-shadow: none !important;
     }
+  }
+
+  &__item {
+    @extend .col-12;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+    @extend .mb-4;
+
+    &:last-of-type {
+      @extend .mb-0;
+    }
+    &--legend {
+      @extend .text-center;
+      @extend .p-2;
+      @extend .d-block;
+    //   @extend .d-md-none;
+    }
+    &--content {
+      @extend .card;
+      height: 350px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include media-breakpoint-only(xs) {
+        height: 242px;
+      }
+      @include media-breakpoint-only(sm) {
+        height: 236px;
+      }
+      @include media-breakpoint-only(md) {
+        height: 210px;
+      }
+      @include media-breakpoint-only(lg) {
+        height: 284px;
+      }
+      @include media-breakpoint-only(xl) {
+        height: 348px;
+      }
+
+      a {
+        @extend .text-center;
+        @extend .p-1;
+        @extend .text-white;
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+        @extend .position-absolute;
+        @extend .font-weight-normal;
+        opacity: 0;
+        z-index: 2;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+
+        &:focus,
+        &:hover {
+          @extend .text-white;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        z-index: 2;
+
+        &:after {
+          @extend .position-absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.65);
+          content: "";
+        }
+
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

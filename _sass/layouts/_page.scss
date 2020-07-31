@@ -295,23 +295,35 @@
 
 .links__social {
   @extend .px-0;
-  @extend .mt-3;
-
+  @extend .pt-3;
+  @extend .d-inline-block;
+  height: 27px;
+  width: 27px;
+  background: transparent no-repeat center;
+  background-size: 100%;
+  &--skype {
+    background-image: url(img/social/skype.svg);
+  }
+  &--github {
+    background-image: url(img/social/github.svg);
+  }
+  &--behance {
+    background-image: url(img/social/behance.svg);
+  }
   &--linkedin {
-    @extend .d-inline-block;
-    padding-top: 5px;
+    // padding-top: 5px;
+    background-image: url(img/social/linkedin.svg);
+    width: 88px;
 
     &,
     & img {
       @extend .shadow-none;
-      width: 88px;
-      height: 22px;
     }
 
     & img {
       @extend .shadow-none;
-      @extend .d-block;
       @extend .my-0;
+      height: 22px;
     }
   }
 }
