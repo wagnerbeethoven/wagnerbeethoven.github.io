@@ -1,9 +1,44 @@
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<meta charset="utf-8" /><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-<!-- YOUTUBE --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
-<!-- FAVICON --><link href="{{site.url}}/img/favicon/favicon-60x60.png" rel="shortcut icon" type="image/x-icon"><link href="{{site.url}}/img/favicon//favicon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60" ><link href="{{site.url}}/img/favicon/favicon-76x76.png" rel="apple-touch-icon-precomposed" sizes="72x72"><link href="{{site.url}}/img/favicon/favicon-120x120.png" rel="apple-touch-icon-precomposed" sizes="114x114"><link href="{{site.url}}/img/favicon//favicon-152x152.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-<!-- FACEBOOK --><meta property="og:locale" content="pt-br"><meta property="og:type" content="article"><meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><meta property="og:url" content="{{ site.url }}{{ page.url }}"><meta property="og:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}" /><meta property="og:site_name" content="{{site.name}}"><meta property="article:publisher" content="http://www.facebook.com/wagnerbeethoven" /><meta property="article:author" content="https://www.facebook.com/wagnerbeethoven" /><meta property="article:published_time" content="{{ page.date }}" /><meta property="og:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
-<!-- TWITTER --><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><meta name="twitter:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}"><meta name="twitter:site" content="@agenciasumo" /><meta name="twitter:creator" content="@wagnerbeethoven"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}"> 
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"><link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{'/feed.xml'| prepend: site.baseurl | prepend: site.url }}"><link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+<!-- YOUTUBE -->
+<meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
+
+<!-- FAVICON -->
+<link href="{{site.url}}/img/favicon/favicon-48x48.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+<link href="{{site.url}}/img/favicon/favicon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="{{site.url}}/img/favicon/favicon-96x96.png" rel="apple-touch-icon-precomposed" sizes="96x96">
+<link href="{{site.url}}/img/favicon/favicon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="{{site.url}}/img/favicon/favicon-168x168.png" rel="apple-touch-icon-precomposed" sizes="168x168">
+<link href="{{site.url}}/img/favicon/favicon-192x192.png" rel="apple-touch-icon-precomposed" sizes="192x192">
+
+<!-- FACEBOOK -->
+<meta property="og:locale" content="pt-br">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}" />
+<meta property="og:site_name" content="{{site.name}}">
+<meta property="article:publisher" content="http://www.facebook.com/wagnerbeethoven" />
+<meta property="article:author" content="https://www.facebook.com/wagnerbeethoven" />
+<meta property="article:published_time" content="{{ page.date }}" />
+<meta property="og:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:site" content="@agenciasumo" />
+<meta name="twitter:creator" content="@wagnerbeethoven">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{% if page.image %}{{page.image }}{% else %}{{site.url}}/{{ site.image-default }}{% endif %}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{'/feed.xml'| prepend: site.baseurl | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" ref="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
+
+<link rel="manifest" href="{{site.url}}/manifest.json">
