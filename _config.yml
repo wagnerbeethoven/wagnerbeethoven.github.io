@@ -21,3 +21,12 @@ about-state: Pernambuco
 collections:
   profile:
     output: true
+
+compress_html:
+  clippings: ["all"]
+  comments: ["all"]
+  endings: []
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
