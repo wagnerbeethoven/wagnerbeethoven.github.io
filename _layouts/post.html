@@ -2,7 +2,7 @@
 layout: default
 ---
 <section itemscope itemtype="http://schema.org/NewsArticle">
-<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page__banner"><img src="{{page.image}}" class="{{page.alt-image}}"><meta itemprop="url" content="{{page.image}}">{% if page.legend-image %}<figcaption>{{page.legend-image}}</figcaption>{% else %}{% endif %}</figure>
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page__banner"><img src="{{page.image}}" alt="{{page.alt-image}}"><meta itemprop="url" content="{{page.image}}">{% if page.legend-image %}<figcaption>{{page.legend-image}}</figcaption>{% else %}{% endif %}</figure>
 <div class="conteudo">
 <h2 class="page__title" itemprop="headline">{{ page.title }}</h2>
 <p class="page__summary" itemprop="description">{{page.summary}}</p>
