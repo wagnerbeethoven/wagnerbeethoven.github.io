@@ -1,6 +1,7 @@
 ---
 layout: null
 title: Sitemap
+permalink: sitemap.xml
 sitemap:
   exclude: 'yes'
 ---

@@ -1,3 +1,5 @@
+.disqus-placeholder.is-hidden { display: none; }
+
 .comment {
     &__area {
         @extend .my-4;
