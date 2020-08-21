@@ -6,7 +6,8 @@ layout: compress
 <html lang="pt-br">
 
 <head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>{% include meta.html %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+    {% include meta.html %}
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
 </head>

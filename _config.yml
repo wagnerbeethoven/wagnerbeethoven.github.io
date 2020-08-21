@@ -3,6 +3,7 @@ description: "Portfólio de Wagner Beethoven, designer com experiência na conce
 slogan: Portfólio do designer Wagner Beethoven!
 image-default: "img/image-default.jpg"
 
+
 url: ""
 baseurl: ""
 permalink: /:categories/:title.html
@@ -18,15 +19,16 @@ about-neighborhood: Jardim Atlântico
 about-city: Olinda
 about-state: Pernambuco
 
-collections:
-  profile:
-    output: true
 
 compress_html:
-  clippings: ["all"]
-  comments: ["all"]
+  clippings: []
+  comments: []
   endings: []
   profile: false
   blanklines: false
   ignore:
     envs: []
+
+plugins:
+  - jekyll-admin
+  - jekyll-feed
