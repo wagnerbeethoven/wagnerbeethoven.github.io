@@ -4,7 +4,7 @@ slogan: Portfólio do designer Wagner Beethoven!
 image-default: "img/image-default.jpg"
 
 
-url: ""
+url: "http://sumo.pe"
 baseurl: ""
 permalink: /:categories/:title.html
 
