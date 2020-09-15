@@ -97,11 +97,14 @@ article {
     }
 
     pre {
-        background-color: #232323;
-        font-size: 13px;
-        color: #E6E1DC;
-        line-height: 1.9em;
+        // background-color: #232323;
+        // font-size: 13px;
+        // background: #E6E1DC;
+        // line-height: 1.9em;
         @extend .p-2;
+        font-size: 87.5%;
+        color: #e83e8c;
+        // @include rfs();
 
     }
 }
