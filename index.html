@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bem-vindo
-permalink: index
+permalink: /
 ---
 {% for post in site.categories.portfolio limit:1 %}{% if post.url %}<section class="section__banner" style="background-image: url('{{ post.image }}')"><a href="{{ post.url }}" title=" {{ post.title }}"><span>{{ post.title }}</span></a></section>{% endif %}{% endfor %}
 <section class="section__portfolio"><header class="section__header"><h2><a href="{{site.url}}/portfolio">Portfólio</a></h2><p>Confira os trabalhos mais recentes</p></header><div class="portfolio__container">{% for post in site.categories.portfolio limit:3%}{% include portfolio-list.html %}{% endfor %}</div></section>
