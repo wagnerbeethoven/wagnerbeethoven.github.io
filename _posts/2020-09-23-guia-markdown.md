@@ -18,7 +18,7 @@ O markdown não abrangem tantas possibilidades como <abbr title="HyperText Marku
 
 - Eu sempre gosto de contextualizar tudo que pesquiso, por isso uma informação detalhada sobre a linguagem estará disponível aqui para depois mostrar as aplicações práticas da linguagem.
 - Outra coisa bem importante que vou iniciar é passar para markdown todas as páginas do site. Só não vou dizer prazos 😏.
-- Esta página que você está lendo está escrita em duas linguagens diferentes, mas essa flexibilidade é aceitável pelo [Github](http://github.com/wagnerbeethoven/wagnerbeethoven.github.io) e pelo Markdown. A maneira como ela foi descritita pode ser visualizada através do [arquivo disponibilizado no repositótio do site](#).
+- Esta página que você está lendo está escrita em duas linguagens diferentes, mas essa flexibilidade é aceitável pelo [Github](http://github.com/wagnerbeethoven/wagnerbeethoven.github.io) e pelo Markdown. A maneira como ela foi descritita pode ser visualizada através do [arquivo disponibilizado no repositótio do site](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven.github.io/master/_posts/2020-09-23-guia-markdown.md).
 - A fonte este *post* é muito mais extensa do que está disponibilizado aqui, mas escolhi publicar usar apenas o que faz sentido para mim, já que essa publicação será uma guia caso eu vá ter alguma dúvida na escrita do Markdown. 
 
 > O texto abaixo foi traduzido para o português a partir o material disponível no site [Markdown Guide][markdownguide] sob a licença [CC BY-SA 4.0][cc].
@@ -31,7 +31,7 @@ Usar Markdown é diferente de usar um editor WYSIWYG. Em um aplicativo como o Mi
 
 Por exemplo, para exibir um título, você adiciona um sinal dele (por exemplo, `# Título Um`) ou para deixar uma frase em negrito, você adiciona dois asteriscos antes e depois dela (por exemplo, `**este texto está em negrito**`). Pode demorar um pouco para se acostumar a ver a sintaxe Markdown em seu texto, especialmente se você estiver acostumado com aplicativos WYSIWYG. A captura de tela abaixo mostra um arquivo Markdown exibido no [editor de texto Atom](http://atom.io/).
 
-![Editor Atom](http://d33wubrfki0l68.cloudfront.net/722f0d393d543949f94038accfbb3887ba9c318b/f6fc0/assets/images/atom.png)
+![Editor Atom](https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no)
 
 Você pode adicionar elementos de formatação Markdown a um arquivo de texto simples usando um aplicativo editor de texto. Ou você pode usar um dos muitos aplicativos Markdown para sistemas operacionais macOS, Windows, Linux, iOS e Android. Existem também vários aplicativos baseados na web projetados especificamente para escrever em Markdown.
 
@@ -55,7 +55,7 @@ A melhor maneira de começar a usar o Markdown é usá-lo. Isso é mais fácil d
 
 Você nem precisa fazer download de nada. Existem vários editores Markdown online que você pode usar para tentar escrever no Markdown. [Dillinger](dillinger) é um dos melhores editores online do Markdown. Basta abrir o site e começar a digitar no painel esquerdo. Uma visualização do documento formatado aparece no painel direito.
 
-![Dillinger](http://d33wubrfki0l68.cloudfront.net/541d89b49cfeb577c7ba61491899adeac8bdf4d0/2826b/assets/images/dillinger.png)
+![Dillinger](https://lh3.googleusercontent.com/pw/ACtC-3cXPu3yAuz6yeh3XMuQ2MQxrlF4E4EC9H04qAujwBoaEF83-mOmN7P1qmw3cUOdi5Fo0f2_50aJJ1DSwvrHLozGuUwkGIUOqS7bhSUMFA8xpBbbh5G_GgZPyrCBI8YcwVytIUjcpsXRYzf62lGYIdH6=w907-h701-no)
 
 Provavelmente, você desejará manter o site do Dillinger aberto enquanto lê este guia. Dessa forma, você pode experimentar a sintaxe à medida que aprende sobre ela. Depois de se familiarizar com o Markdown, você pode usar um aplicativo Markdown que pode ser instalado em seu computador desktop ou dispositivo móvel.
 
@@ -71,8 +71,7 @@ Os aplicativos Markdown usam algo chamado de processador Markdown (também comum
 
 **Nota**: O aplicativo Markdown e o processador são dois componentes separados. Por uma questão de prática eu os combinei em um elemento ("Markdown App") na figura abaixo.
 
-![The Markdown Process](http://d33wubrfki0l68.cloudfront.net/75cdd78aba218a9abbfe91d2ba2cf540a7502d8c/553fa/assets/images/process.png)
-
+![The Markdown Process](https://lh3.googleusercontent.com/pw/ACtC-3fWTwfhbNYM-ihA1vw1QPLHid87Qhov37DQ6bqoifAtUzE-kMga_R2yYynEQVmJDMxlwIk33goMx-tSapmAXODg_ur228lSMYmAURpO7i3oBo0Sup6PoqIliAUlRmCuvXGCQLu6ElDbaz0u-MC9F2wR=w432-h536-no)
 
 Para resumir, este é um processo de quatro partes:
 
@@ -840,7 +839,7 @@ A renderização é essa:
 1. Abra o arquivo que contém o mascote do Linux.
 2. Maravilhe-se com sua beleza.
 
-   ![Tux, O mascote Linux](http://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+   ![Tux, O mascote Linux](https://lh3.googleusercontent.com/pw/ACtC-3drDR1IW2PCA5hz-Ieu83yQovD0UYPePQNkyXRFutqrrlXj7G65IqfYMdV7LrewxBjD4yG_H62-u11nsZh2cri9e65iuKgE6O-eHA7U9x7wfKkluACdD_U6Febrp4ghD1V_Jdf2vyUByZo4M2GDJ5cy=s120-no?authuser=0)
 
 3. Fechar o arquivo
 
