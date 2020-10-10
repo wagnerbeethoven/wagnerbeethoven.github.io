@@ -2,11 +2,11 @@
 layout: post
 title: "Anotações de estudo para certificação SCRUM"
 date: 20200302 22:11
+categories: blog
 comments: true
-category: ['blog']
 image: https://lh3.googleusercontent.com/cJmbYfOIibKmsVItn1sOp6PK4jJGMcyPJY1cxwawOYZkBZpXdFzwgWtCpZC_a2Abvs6YCF1Aa5R2e6W9qcnujUvnfQXOqeFDvFJGr19cpZsIRKtW0Z970VDDESjMXVCclOZJ6YZKESabbJGFo-Q_dhikCCbGjVgip2x1OKYRBEDqSmpln-MEy4q5s0F2b0jb1zFKqcfkC40g5J5kkBFdMf11FMEUxEVmzQygnw9h_ilo7_3f9lxfeGflrKPk3l1BDrKSk6WpDaSz193y9DMRF3OPN-gG-UCmWCfmq647FMR-nxdMKX-UxOaG8PBXVIMopEKDXHWszsE4y4Dxn9-W6uVG7X56V1sOZE_2b49YusbN3k6gPrzGKLCU-5ZV1m8lGWVI3R2BPWq3K5iPmxiFdNFGw1JMhOtImBDaSxT7v-qD9_Ke8z3q6d7YRJEGDP4Jjtw-2yc0p_Ze9jmag_JnHVdIbnj-siVS4vCUekmyx59WxdMYE4t9roElZeP8K9r3MBAPyhEZjWPH0BzOqZOPnhqtNSb3Mk-4w3n1NDkA_ll_Dg8_N5h2FZ9LaXgr21pN-QYYM4cjtYpTLfe1rSCR9RtaKmLfvGAthQ9dOgCnEyFmTW26_BUR9l0Fub4pGxeDTI1wj-DW8nYX8TUv0Xsm_EDwgZ4XSRN9VMu5xjXKr0_KVU8GMUYrL3cFWonawojVcWc1pfxKV5EcR2gd7BUd6_Nhvptpk4L4UCPAVMS1r4tz2_c=w1280-h853-no
-legend-image: "&quot;Team Huddle Togetherness&quot; (Foto&colon; <a href='https://www.instagram.com/chrisreadingfoto' target='_blank'>Chris Reading</a> / <a href='https://pixabay.com/' target='_blank'>Pixabay</a>)"
-alt-image: "Jogadores de rugby abraçados em circulo de costas com vestimentas típicas. A foto está em preto e branco"
+legend: "&quot;Team Huddle Togetherness&quot; (Foto&colon; <a href='https://www.instagram.com/chrisreadingfoto' target='_blank'>Chris Reading</a> / <a href='https://pixabay.com/' target='_blank'>Pixabay</a>)"
+alt: "Jogadores de rugby abraçados em circulo de costas com vestimentas típicas. A foto está em preto e branco"
 description: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 tags:
@@ -16,8 +16,6 @@ tags:
  - Metodologia ágil
  - SCRUMstudy
 ---
-
-
 
 Certificar o conhecimento para uma pessoa tão inquieta como eu é sim um desafio, porque sempre busquei conhecimento de maneira independente, ser autodidata para mim é um estilo de vida, mas sei da importância em obter um certificado sobre um determinado assunto, além de aumentar o nível do currículo, reforça os conceitos e os conhecimentos sobre o assunto.
 
@@ -79,7 +77,7 @@ Este documento será escrito a partir da conversa com os <em lang="en">stakehold
 
 Só após essa reunião a equipe Scrum é formalmente definida pelo: <abbr title="Product Owner" lang="en">PO</abbr>,  <abbr title="Scrum Master" lang="en">SM</abbr> e os desenvolvedores (testadores, programadores, designers, etc.).
 
-### 1. Reunião de planejamento da <em lang="en">sprint</em> (<em lang="en">sprint planning</em>) {#sprint-planning}
+### Reunião de planejamento da <em lang="en">sprint</em> (<em lang="en">sprint planning</em>) {#sprint-planning}
 A <em lang="en">sprint</em> propriamente dita começa neste momento. Será nesta cerimônia o <em lang="en">backlog</em> da <em lang="en">sprint</em> será o artefato de saída. Estarão presentes o <abbr title="Product Owner" lang="en">PO</abbr> e o time de desenvolvimento Scrum (<abbr title="Scrum Master" lang="en">SM</abbr> pode participar), ela é dividida em duas partes, são elas:
 
 #### 1ª parte {#sprint-planning-p1}
@@ -92,7 +90,7 @@ A seleção das histórias do usuário para compor a <em lang="en">sprint</em> c
 
 Concepção dos entregáveis dos designers, atividades de teste e integração devem ser contempladas como atividades da <em lang="en">sprint</em>. A estimativa de tempo deve ser dita pelo time desenvolvimento.
 
-### 2. Reunião diárias (<em lang="en">daily meeting</em>) {#daily-meeting}
+### Reunião diárias (<em lang="en">daily meeting</em>) {#daily-meeting}
 
 As reuniões diárias devem ter duração máxima de 15 minutos. Os integrantes da equipe devem responder 3 perguntas:
 
@@ -102,13 +100,13 @@ As reuniões diárias devem ter duração máxima de 15 minutos. Os integrantes 
 
 As perguntas 1 e 2 são obrigatórias, os impedimentos são declarados na 3ª pergunta, mas a solução deles deverá ser feita após o final da reunião.
 
-### 3. Reunião de revisão (<em lang="en">sprint review</em>) {#sprint-review}
+### Reunião de revisão (<em lang="en">sprint review</em>) {#sprint-review}
 
 É neste momento que acontece a demonstração do entregável construído na sprint. Nesta etapa estarão presentes: <abbr title="Product Owner" lang="en">PO</abbr>, <em lang="en">stakeholders</em> e o time Scrum.
 
 Após a demonstração do artefato, o <abbr title="Product Owner" lang="en">PO</abbr> irá analisar o que foi apresentado, se estiver de acordo com os critérios de aceitação definidos no ritual anterior, reunião de planejamento da <em lang="en">sprint</em> (<em lang="en">sprint planning</em>), o entregável é aceito.
 
-### 4. Retrospectiva (<em lang="en">sprint retrospective</em>) {#sprint-retrospective}
+### Retrospectiva (<em lang="en">sprint retrospective</em>) {#sprint-retrospective}
 
 O momento de “lavar a roupas sujas”, os desenvolvedores, designers e testadores junto com o <abbr title="Product Owner" lang="en">PO</abbr> e  <abbr title="Scrum Master" lang="en">SM</abbr> irão expor os pontos altos e baixos da sprint. Neste momento são relatadas as lições aprendidas.
 

@@ -1,0 +1,45 @@
+.toc {
+  @extend .col-12;
+  @extend .mx-auto;
+  @extend .py-3;
+  @extend .px-0;
+  box-shadow: none;
+  nav {
+    @extend .rounded;
+    @extend .border;
+    @extend .border;
+    @extend .p-3;
+    i {
+      font-style: initial;
+      font-size: 2rem;
+      @extend .font-weight-lighter;
+      @extend .d-block;
+      @extend .mt-2;
+      @extend .pb-2;
+    }
+    ol {
+      @extend .px-0;
+      @extend .pl-4;
+      @extend .mb-0;
+      @extend .col-12;
+      list-style: decimal;
+      li {
+        @extend .w-100;
+
+        & > ol {
+          list-style: lower-alpha;
+          & > li > ol {
+            list-style: lower-roman;
+          }
+        }
+      }
+    }
+  }
+}
+
+.portfolio-article {
+  .toc {
+    @extend .col-md-8;
+    @extend .px-3;
+  }
+}

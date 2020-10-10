@@ -1,0 +1,50 @@
+table {
+  @extend .table;
+  @extend .table-striped;
+  @extend .table-hover;
+}
+
+.td-info {
+  @extend .d-sm-block;
+  @extend .d-md-none;
+  @extend .font-weight-bold;
+}
+
+@media (max-width: 576px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border-width: 0;
+    margin-bottom: 1rem;
+    border-width: 0 1px;
+  }
+
+  td {
+    border: 1px solid #dee2e6;
+    border-bottom-width: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-width: 1px;
+    }
+  }
+}

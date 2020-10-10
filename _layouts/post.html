@@ -5,30 +5,45 @@ layout: default
 
 <section itemscope itemtype="http://schema.org/NewsArticle">
     {% if page.image %}
-
-    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page__banner"><img
-            src="{{page.image}}" alt="{{page.alt-image}}">
-        <meta itemprop="url" content="{{page.image}}">{% if page.legend-image %}<figcaption>{{page.legend-image}}
-        </figcaption>{% else %}{% endif %}</figure>
+    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page-banner">
+        <img src="{{page.image}}" alt="{{page.alt}}">
+        <meta itemprop="url" content="{{page.image}}">
+        {% if page.legend %}
+        <figcaption>
+            {{page.legend}}
+        </figcaption>
+        {% else %}
+        {% endif %}
+    </figure>
     {% endif%}
-    <div class="conteudo">
-        <h2 class="page__title" itemprop="headline">{{ page.title }}</h2>
-        <p class="page__summary" itemprop="description">{{page.summary}}</p>
-        <div class="post__meta">
-            <figure class="mb-0" itemprop="creator" itemscope itemtype="http://schema.org/Person"><img
-                    class="post__meta--picture" title="Conteúdo produzido por {{site.about-name}}"
-                    src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
-                <figcaption class="sr-only" itemprop="author">{{site.about-name}}</figcaption>
-            </figure>
+
+    <article itemprop="articleBody"
+        class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
+        <h2 class="page-title" itemprop="headline">{{ page.title }}</h2>
+        <p class="page-summary" itemprop="description">{{page.summary}}</p>
+        <div class="post-meta">
+            <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture"
+                title="Conteúdo produzido por {{site.about-name}}"
+                src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
+            <div class="post-meta-time">
+                {% if page.categories contains "blog" %}
+                {% include post/post-date.html %}
+
+                {% include post/post-read.html %}
+                {% else%}
+                {% endif %}
+            </div>
         </div>
 
-        <div class="row d-flex justify-content-between align-items-start">
-            <article itemprop="articleBody" class="post__article">
-                {{ content }}
-            </article>
-            <nav class="toc" id="toc"></nav>
-        </div>
-        {% include aside/blog.html %}
-        <div class="top"><a href="#top">[Top]</a></div>
-    </div>
+        <section class="toc">
+            <nav id="toc"></nav>
+        </section>
+
+        {{ content }}
+    </article>
+    {% if page.categories contains "blog" %}
+    {% include post/post-aside.html %}
+    {% else%}
+    {% include portfolio/portfolio-aside.html %}
+    {% endif %}
 </section>

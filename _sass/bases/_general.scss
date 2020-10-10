@@ -1,0 +1,66 @@
+* {
+  transition: background-color linear 0.25s, width linear 0s, height linear 0s,
+    transform 0.2s ease-in-out;
+}
+
+body {
+  @extend .container;
+  @extend .mx-auto;
+  @extend .py-3;
+  color: $neutral-primary;
+  font: normal normal 16px/1.5 $font-family;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  @extend .row;
+  @extend .list-inline;
+  @extend .list-unstyled;
+  @extend .m-0;
+  @extend .p-0;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+section {
+  @extend .py-5;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+a {
+  @extend .position-relative;
+  @extend .text-dark;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $main-color !important;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @extend .d-inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid $main-color;
+    margin-top: 10px;
+    opacity: 0;
+    transform: scale(0, 1);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

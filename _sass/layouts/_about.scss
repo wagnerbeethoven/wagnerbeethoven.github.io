@@ -1,0 +1,208 @@
+.about {
+  @extend .row;
+  &-description,
+  &-picture {
+    @extend .col-12;
+  }
+
+  &-picture {
+    @extend .col-md-4;
+
+    img {
+      @extend .rounded;
+      @extend .img-fluid;
+      @extend .m-auto;
+      box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.1) !important;
+      transform: scaleX(-1);
+      height: auto;
+
+      &:hover {
+        box-shadow: 0 0 0 10px rgba(20, 121, 121, 1) !important;
+        background-size: 110%;
+      }
+    }
+  }
+  &-name {
+    @extend .text-uppercase;
+    @extend .d-block;
+    font-size: 35px;
+  }
+
+  &-title {
+    @extend .mt-2;
+    @extend .mb-4;
+  }
+  &-description {
+    @extend .col-md-8;
+
+    p {
+      @extend .col-12;
+      @extend .px-0;
+    }
+
+    .links-social {
+      a {
+        @extend .mr-3;
+
+        &:after {
+          @extend .d-none;
+        }
+      }
+    }
+  }
+
+  &-id {
+  }
+}
+
+.jobs {
+  @extend .px-0;
+  @extend .d-flex;
+  @extend .flex-column;
+
+  button {
+    background: transparent;
+    border-width: 0;
+    font-weight: 600;
+    @extend .py-2;
+    @extend .w-100;
+    @extend .text-left;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .rounded;
+    .chevron {
+      @extend .mx-2;
+      @include square(14px);
+      padding: 0;
+      display: inline-block;
+      background-size: contain;
+      background: transparent url(img/chevron.svg) center no-repeat;
+    }
+    &[aria-expanded="true"] {
+      @extend .shadow-sm;
+      @extend .border;
+      border: $main-color;
+      background: $gray-100;
+      .chevron {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  ul {
+    @extend .mb-4;
+    @extend .px-0;
+
+    li {
+      @extend .w-100;
+      @extend .media;
+      @extend .px-3;
+      @extend .py-3;
+      @extend .border-bottom;
+
+      &:last-child {
+        @extend .border-0;
+      }
+
+      &.profile {
+        &-course,
+        &-certification {
+          .job-detail-description {
+            clear: both;
+          }
+
+          .job-detail-duration,
+          .job-detail-company {
+            @extend .d-inline-block;
+            @extend .float-left;
+          }
+
+          .job-detail-duration {
+            font-size: 100%;
+            @extend .pl-2;
+            font-weight: 200;
+
+            &:after {
+              content: ")";
+            }
+
+            &:before {
+              content: "(";
+            }
+          }
+
+          .job-detail-logo {
+            @extend .d-none;
+          }
+
+          &:last-child {
+            @extend .border-bottom;
+          }
+        }
+      }
+    }
+  }
+
+  .job {
+    &-logo {
+      @extend .shadow-none;
+      @extend .my-0;
+      @extend .mr-3;
+    }
+    &-detail {
+      @extend .media-body;
+
+      span {
+        @extend .d-block;
+      }
+
+      &-position {
+        font-weight: 600;
+      }
+
+      &-company {
+        font-weight: 200;
+      }
+
+      &-description {
+        @extend .pt-2;
+        font-size: 14px;
+
+        p {
+          @extend .px-0;
+
+          &:first-child,
+          &:last-child {
+            @extend .mb-0;
+          }
+        }
+
+        p + p {
+          @extend .pt-3;
+        }
+      }
+    }
+  }
+}
+
+.links-social {
+  @extend .p-0;
+  @extend .my-3;
+  @extend .d-inline-block;
+  @include square(27px);
+  background: transparent no-repeat center;
+  background-size: 100%;
+  &-skype {
+    background-image: url(img/social/skype.svg);
+  }
+  &-github {
+    background-image: url(img/social/github.svg);
+  }
+  &-behance {
+    background-image: url(img/social/behance.svg);
+  }
+  &-linkedin {
+    background-image: url(img/social/linkedin.svg);
+    width: 88px;
+  }
+}

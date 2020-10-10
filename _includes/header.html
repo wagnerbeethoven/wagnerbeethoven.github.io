@@ -1,19 +1,21 @@
-<header class="header" id="top">
-  <figure class="header__logo"><img src="{{ site.url }}/img/logo.svg" alt="Logo {{site.name}}" class="svg"
+<header class="site-header" id="top">
+  <figure class="site-logo">
+    <img src="{{ site.url }}/img/logo.svg" alt="Logo {{site.name}}" class="svg"
       longdesc="Desenho de um lutador de sumô, de pele clara, cabelo escuro e vestindo uma mawashi, a cuequinha do lutador na cor verde" />
-    <figcaption class="header__title"><a title="Página inicial" href="{{ site.baseurl }}/">
-        <h1 class="header__name">{{ site.name }} </h1>
-        <h2 class="header__description">{{ site.slogan }}</h2>
-      </a></figcaption>
+    <figcaption class="site-title">
+      <a title="Página inicial" href="{{ site.baseurl }}/">
+        <h1 class="site-name">
+          {{ site.name }}
+        </h1>
+        <h2 class="site-description">
+          {{ site.slogan }}
+        </h2>
+      </a>
+    </figcaption>
   </figure>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
-    aria-expanded="false" aria-label="Navigation"> <span class="navbar-toggler-icon"></span> Menu</button>
-  <nav class="collapse menu--main" id="menu">{% assign current = page.url | downcase | split: '/' %}<a
-      title="Acesse a página inicial" href='{{site.url}}' {% if current[1] == 'index' %}class='menu-item--active'
-      {% endif %}>Página inicial</a><a title="Confira todos os meus trabalhos" href='/portfolio'
-      {% if current[1] == 'portfolio' %}class='menu-item--active' {% endif %}>Portfólio</a><a
-      title="Acompanhe meu cotidiano" href='/blog' {% if current[1] == 'blog' %}class='menu-item--active'
-      {% endif %}>Blog</a><a title="Saiba mais sobre minhas experiências" href='/sobre'
-      {% if current[1] == 'sobre' %}class='menu-item--active' {% endif %}>Sobre</a><a title="Fale comigo"
-      href='/contato' {% if current[1] == 'contato' %}class='menu-item--active' {% endif %}> Contato</a> </nav>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Navigation">
+    <span class="navbar-toggler-icon"></span> 
+      Menu
+  </button>
+  {% include menu.html %}
 </header>

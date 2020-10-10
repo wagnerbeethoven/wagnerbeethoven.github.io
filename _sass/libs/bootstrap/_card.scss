@@ -1,12 +1,8 @@
-//
-// Base styles
-//
-
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  min-width: 0; 
   height: $card-height;
   word-wrap: break-word;
   background-color: $card-bg;
@@ -36,11 +32,7 @@
 }
 
 .card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
-  // Workaround for the image size bug in IE
-  // See: https://github.com/twbs/bootstrap/pull/28855
   min-height: 1px;
   padding: $card-spacer-x;
   color: $card-color;
@@ -132,8 +124,8 @@
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .card-img,

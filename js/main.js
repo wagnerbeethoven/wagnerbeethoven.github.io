@@ -3,7 +3,7 @@
 $("#menu ul li a").each(function () {
   //console.log($(this).attr('href'));
   if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
-    $(this).parent().addClass('menu-item--active');
+    $(this).parent().addClass('active');
   }
 });
 
@@ -17,8 +17,7 @@ var disqus_shortname = 'wagnerbeethoven';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 
-// SVG INJECT
-SVGInject(document.getElementsByClassName('svg'));
+
 
 // TOC
 $(document).ready(function () {
@@ -46,6 +45,3 @@ function targetBlank() {
 };
 
 targetBlank();
-
-// ADICIONA O LINK NOS Hs
-anchors.add();

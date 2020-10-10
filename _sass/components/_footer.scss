@@ -1,0 +1,44 @@
+@keyframes pulso {0% {transform: scale(0.8);}100% {transform: scale(1);}}
+
+.site-footer {
+  @extend .position-relative;
+  @extend .row;
+  @extend .ml-0;
+  @extend .mr-0;
+  @extend .small;
+  @extend .pt-5;
+  @extend .mt-5;
+
+  .love {
+    animation: pulso 1s infinite alternate;
+    @extend .m-0;
+    @extend .p-0;
+    @extend .d-inline-block;
+  }
+
+  &:before {
+    @extend .position-absolute;
+    content: "";
+    width: calc(100% - 30px);
+    height: 1px;
+    background: #ddd;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  > p {
+    @extend .py-4;
+    @extend .text-center;
+    @extend .col-12;
+    @extend .col-md-6;
+
+    &:first-of-type {
+      @extend .text-md-left;
+      @extend .pb-0;
+    }
+
+    &:last-of-type {
+      @extend .text-md-right;
+    }
+  }
+}

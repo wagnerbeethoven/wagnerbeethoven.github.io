@@ -1,125 +1,34 @@
-main {
-    section {
-        & ul {
-            @extend .row;
-            @extend .list-inline;
-            @extend .list-unstyled;
-        }
-    }
-}
-
 .section {
-    &__header {
-        h2 {
-            @extend .font-weight-light;
-        }
+  &-name {
+    @extend .font-weight-light;
+  }
 
-        p {
-            @extend .text-muted;
-            @extend .small;
-        }
+  &-description {
+    @extend .text-muted;
+    @extend .small;
+  }
+
+  img {
+    @extend .rounded;
+    @extend .img-fluid;
+    @extend .shadow;
+  }
+
+  &-blog {
+    li {
+      @extend .col-12;
+      @extend .p-0;
+      @extend .pb-4;
+
+      p {
+        @extend .mb-0;
+        @extend .text-muted;
+        font-size: 0.825rem;
+      }
+
+      strong {
+        font-weight: 600;
+      }
     }
-
-    img {
-        @extend .rounded;
-        @extend .img-fluid;
-    }
-
-    &__banner {
-        @extend .rounded;
-        @extend .clearfix;
-        @extend .p-0;
-        position: relative;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        filter: grayscale(1);
-
-        &:hover {
-            filter: none;
-        }
-
-        &,
-        a,
-        a:before {
-            height: 700px;
-        }
-
-
-
-        a {
-            @extend .p-3;
-
-            z-index: 2;
-            @extend .d-flex;
-            @extend .justify-content-center;
-            @extend .align-items-center;
-
-            span {
-                @extend .display-4;
-                color: #fff;
-                z-index: 3;
-                position: absolute;
-                @extend .text-center;
-                @extend .p-md-5;
-                @extend .p-1;
-            }
-
-            &:before {
-                @extend .rounded;
-                @extend .position-absolute;
-                content: "";
-                z-index: 1;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background: rgba(0, 0, 0, 0.5);
-            }
-        }
-    }
-
-
-
-    &__blog {
-        ul {
-            li {
-                @extend .col-12;
-                @extend .pb-4;
-
-
-
-                p {
-                    @extend .mb-0;
-                    @extend .text-muted;
-                    font-size: .825rem;
-                }
-
-                strong {
-                    font-weight: 600
-                }
-            }
-        }
-    }
-}
-
-
-
-@include respond-below(md) {
-
-    .header,
-    .header__logo {
-        flex-direction: column;
-        text-align: center;
-
-        img {
-            margin: 0 auto 1rem !important;
-        }
-    }
-
-    .header__logo {
-        .header__name {
-            font-size: 2rem;
-        }
-    }
+  }
 }

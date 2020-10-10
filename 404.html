@@ -1,81 +1,16 @@
 ---
-layout: none
+layout: default
 title: "Ops, página não encontrada."
 ---
 
-<style>
-    .notfound {
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 50%;
-    }
 
-    .notfound p {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-    .notfound a {
-        display: inline-block;
-        border-radius: 5rem;
-        font-size: 16px;
-        padding: 16px 32px;
-        background: var(--main-color);
-        border: 2px solid var(--main-color);
-        color: #fff !important;
-    }
-
-    .notfound a:hover,
-    .notfound a:focus {
-        background: #fff;
-        color: var(--main-color) !important;
-    }
-
-    .notfound a:after {
-        display: none;
-    }
-
-    .notfound svg {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 300px;
-    }
-</style>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>{% include meta.html %}
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-</head>
-
-<body class="notfound">
-    <div class="container">
-
-        <main class="main">
-            <div class=" page__content--notfound">
-                <header>
-                    <title>Ops, página não encontrada.</title>
-                    <link rel="stylesheet" href="{{site.url}}/css/main.css">
-                </header>
-                <div class="notfound__container">
-                    <img src="{{site.url}}/img/404.svg" class="svg">
-                    <p>Não consegui encontrar o que você está procurando.</p><a href="{{site.url}}">Página inicial</a>
-                </div>
-            </div>
-        </main>
+<div class="notfound">
+    <header>
+        <title>Ops, página não encontrada.</title>
+        <link rel="stylesheet" href="{{site.url}}/css/main.css">
+    </header>
+    <div class="notfound-container">
+        <img src="{{site.url}}/img/404.svg" class="svg">
+        <p>Não consegui encontrar o que você está procurando.</p><a href="{{site.url}}">Página inicial</a>
     </div>
-    <script src="{{site.url}}/js/svg-inject.min.js"></script>
-    <script src="{{site.url}}/js/main.js"></script>
-</body>
-
-</html>
+</div>

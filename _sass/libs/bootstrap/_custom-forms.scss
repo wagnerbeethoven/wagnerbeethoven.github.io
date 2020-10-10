@@ -320,7 +320,6 @@
     box-shadow: $custom-file-focus-box-shadow;
   }
 
-  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
   &[disabled] ~ .custom-file-label,
   &:disabled ~ .custom-file-label {
     background-color: $custom-file-disabled-bg;

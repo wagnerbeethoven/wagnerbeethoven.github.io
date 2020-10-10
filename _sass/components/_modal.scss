@@ -19,7 +19,7 @@ img[data-toggle="modal"] {
 
 .modal-backdrop.show {
   opacity: 0.85;
-  // background-color: var(--main-color);
+  // background-color: $main-color;
 }
 
 @media (min-width: 576px) {

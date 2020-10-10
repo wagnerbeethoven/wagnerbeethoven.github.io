@@ -1,9 +1,10 @@
 .page {
-  &__banner {
+  &-banner {
     img {
       @extend .w-100;
       @extend .img-fluid;
       @extend .rounded;
+      @extend .shadow-sm;
     }
 
     figcaption {
@@ -14,7 +15,7 @@
     }
   }
 
-  &__title {
+  &-title {
     @extend .display-4;
     @extend .text-center;
     @extend .py-4;
@@ -23,7 +24,7 @@
     @extend .mb-0;
   }
 
-  &__summary {
+  &-summary {
     @extend .lead;
     @extend .font-italic;
     @extend .text-center;
@@ -55,259 +56,40 @@
         }
       }
     }
-
-    &--arquivo {
-      h3 {
-        @extend .font-weight-light;
-        @extend .text-capitalize;
-        @extend .mb-4;
-
-        &:first-of-type {
-          text-transform: none !important;
-        }
-      }
-
-      ul {
-        @extend .list-unstyled;
-
-        li {
-          @extend .w-100;
-          @extend .pb-2;
-          @extend .px-0;
-
-          a {
-            strong {
-              font-weight: 600;
-            }
-          }
-        }
-      }
-
-      .page__list {
-        @extend .pt-0;
-        @extend .list-inline;
-        a {
-          @extend .mr-md-3;
-          @extend .mr-0;
-          @extend .d-block;
-          @extend .d-md-inline-block;
-        }
-      }
-    }
   }
-}
-
-.sobre {
-  &__description,
-  &__picture {
-    @extend .col-12;
-  }
-
-  &__picture {
-    @extend .col-md-4;
-
-    img {
-      @extend .rounded;
-      @extend .img-fluid;
-      @extend .m-auto;
-      box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.1) !important;
-      transform: scaleX(-1);
-      height: auto;
-
-      &:hover {
-        box-shadow: 0 0 0 10px rgba(20, 121, 121, 1) !important;
-        background-size: 110%;
-      }
-    }
-  }
-
-  &__description {
-    @extend .col-md-8;
-
-    p {
-      @extend .col-12;
-      @extend .px-0;
-    }
-
-    .links__social {
-      a {
-        @extend .mr-3;
-
-        &:after {
-          @extend .d-none;
-        }
-      }
-    }
-  }
-
-  &__id {
-    &--name {
-      @extend .text-uppercase;
-      @extend .d-block;
-      font-size: 35px;
-    }
-
-    &--title {
-      @extend .mt-2;
-      @extend .mb-4;
-    }
-  }
-
-  &__description--jobs {
-    @extend .px-0;
-    @extend .d-flex;
-    @extend .flex-column;
-
-    button {
-      background: transparent;
-      border-width: 0;
-      font-weight: 600;
-      @extend .py-2;
-
-      svg {
-        @extend .mr-2;
-      }
-      &[aria-expanded="true"] {
-        svg {
-          transform: rotate(-180deg);
-        }
-      }
+  &-archive {
+    @extend .pt-0;
+    h3 {
+      @extend .font-weight-light;
+      @extend .text-capitalize;
+      @extend .mt-4;
+      @extend .mb-2;
     }
 
     ul {
-      @extend .mb-4;
+      @extend .list-unstyled;
 
       li {
         @extend .w-100;
-        @extend .media;
-        @extend .px-3;
-        @extend .py-3;
-        @extend .border-bottom;
+        @extend .pb-2;
+        @extend .px-0;
 
-        &:last-child {
-          @extend .border-0;
-        }
-
-        &.profile {
-          &--course,
-          &--certification {
-            .job__detail--description {
-              clear: both;
-            }
-
-            .job__detail--duration,
-            .job__detail--company {
-              @extend .d-inline-block;
-              @extend .float-left;
-            }
-
-            .job__detail--duration {
-              font-size: 100%;
-              @extend .pl-2;
-              font-weight: 200;
-
-              &:after {
-                content: ")";
-              }
-
-              &:before {
-                content: "(";
-              }
-            }
-
-            .job__detail--logo {
-              @extend .d-none;
-            }
-
-            &:last-child {
-              @extend .border-bottom;
-            }
-          }
-        }
-
-        .job__detail {
-          @extend .media-body;
-
-          span {
-            @extend .d-block;
-          }
-
-          &--logo {
-            @extend .shadow-none;
-            @extend .my-0;
-            @extend .mr-3;
-          }
-
-          &--position {
+        a {
+          strong {
             font-weight: 600;
           }
-
-          &--company {
-            font-weight: 200;
-          }
-
-          &--description {
-            @extend .pt-2;
-            font-size: 14px;
-
-            p {
-              @extend .px-0;
-
-              &:first-child,
-              &:last-child {
-                @extend .mb-0;
-              }
-            }
-
-            p + p {
-              @extend .pt-3;
-            }
-          }
         }
       }
     }
-    // button {
-    //   &:nth-of-type(1) {order: 7}
-    // }
-    // ul {
-    //   &:nth-of-type(1) {order: 8}
-
-    // }
   }
-
-
+  &-list {
+    @extend .pt-0;
+    @extend .list-inline;
+    a {
+      @extend .mr-md-3;
+      @extend .mr-0;
+      @extend .d-block;
+      @extend .d-md-inline-block;
+    }
+  }
 }
-  .links__social {
-    @extend .px-0;
-    @extend .pt-3;
-    @extend .d-inline-block;
-    height: 27px;
-    width: 27px;
-    background: transparent no-repeat center;
-    background-size: 100%;
-    &--skype {
-      background-image: url(img/social/skype.svg);
-    }
-    &--github {
-      background-image: url(img/social/github.svg);
-    }
-    &--behance {
-      background-image: url(img/social/behance.svg);
-    }
-    &--linkedin {
-      // padding-top: 5px;
-      background-image: url(img/social/linkedin.svg);
-      width: 88px;
-
-      &,
-      & img {
-        @extend .shadow-none;
-      }
-
-      & img {
-        @extend .shadow-none;
-        @extend .my-0;
-        height: 22px;
-      }
-    }
-  }

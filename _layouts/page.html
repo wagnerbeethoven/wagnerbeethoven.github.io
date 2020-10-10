@@ -1,27 +1,44 @@
 ---
 layout: default
 ---
-<figure class="page__banner">
-    <img src="{{site.url}}/{{page.image}}" alt="{{page.alt-image}}">
-    {% if page.legend-image %}
+
+{% if page.image %}
+<figure class="page-banner">
+    <img src="{{site.url}}/{{page.image}}" alt="{{page.alt}}">
+    {% if page.legend %}
     <figcaption>
-        {{page.legend-image}}
+        {{page.legend}}
     </figcaption>
     {% else %}
     {% endif %}
 </figure>
-<header class="{{page.permalink}}">
-    <h2 class="page__title">
+{% else %}
+{% endif %}
+
+<header class="section-header">
+    <h2 class="section-name page-title">
         {{ page.title }}
     </h2>
     {% if page.summary %}
-    <p class="page__summary">
+    </h2>
+    <p class="section-description page-summary">
         {{page.summary}}
     </p>
     {% else %}
     {% endif %}
 </header>
-<article class="page__content page__content--{{page.permalink}}">
-    {{ content }}
+
+{% if page.full-width == false %}
+<article class="post-content col-12 col-md-8 mx-auto">
+    {%else%}
+    <article class="post-content">
+        {% endif%}
+
+        {{ content }}
+
+
+        {% if page.full-widht == false %}
+    </article>
+    {%else%}
 </article>
-<div class="top"><a href="#top">[Top]</a></div>
+{% endif%}

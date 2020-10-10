@@ -1,0 +1,43 @@
+.nav {
+  &-main {
+    @extend .justify-content-md-end;
+    @extend .navbar-collapse;
+
+    ul {
+      @extend .navbar-nav;
+      @extend .my-2;
+      @extend .my-lg-0;
+    }
+    a {
+      @extend .nav-item;
+      @extend .nav-link;
+      &.active {
+        &:after {
+          border-bottom-width: 3px;
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &-pages {
+    ul {
+      li {
+        @extend .p-2;
+        &:first-of-type {
+          @extend .pl-0;
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  @extend .w-100;
+  @extend .my-3;
+}
+
+.top {
+  @extend .text-center;
+  @extend .my-5;
+}

@@ -1,0 +1,11 @@
+{% if post.url %}
+<div class="portfolio-item">
+    <a href="{{ post.url }}">
+        <img class="portfolio-image" src="{{ post.image }}" title="{{ post.title }}">
+
+        <p class="portfolio-name">
+            {{ post.title }}
+        </p>
+    </a>
+</div>
+{% endif %}

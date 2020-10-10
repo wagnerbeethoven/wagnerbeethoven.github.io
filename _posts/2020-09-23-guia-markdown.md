@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "Guia Markdown"
-permalink: guia-markdown
 summary: "Guia de referência escrito por Matt Cone traduzido para o português"
-category: ['blog']
+categories: blog
+comments: true
+image: https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no
+legend: Print do Editor Atom
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
+alt:  Print do Editor Atom representando um texto formatado em Markdown
 tags:
  - Markdown
  - Traduação

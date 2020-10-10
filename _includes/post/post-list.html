@@ -1,0 +1,12 @@
+<li>
+    {% if post.url %}
+        <a href="{{ post.url }}">
+            <strong>
+                {{ post.title }}
+            </strong>
+        </a>
+        <p>
+            {{ post.summary }}
+        </p>
+</li>
+{% endif %}

@@ -30,5 +30,4 @@ compress_html:
     envs: []
 
 plugins:
-  - jekyll-admin
   - jekyll-feed

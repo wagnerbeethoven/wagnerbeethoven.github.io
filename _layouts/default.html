@@ -4,18 +4,20 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+        {% include snippets/meta.html %}
+        <style>{% capture critical %}{% include style.scss %}{% endcapture %}{{ critical | scssify }}</style>
+    </head>
+    <body class="{{page.permalink}}">
+        
+        {% include snippets/analytics.html %}
 
-<head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
-    {% include meta.html %}
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-</head>
-
-<body>
-    <div class="container">{% include header.html %}<main class="main">
-            {% include breadcrumbs.html %}{{ content }}{% include footer.html %}</main>
-    </div>
-</body>
-
+        {% include header.html %}
+        <main class="main">
+            {% include breadcrumbs.html %}
+            {{ content }}
+            {% include footer.html %}
+        </main>
+    </body>
 </html>

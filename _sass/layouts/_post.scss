@@ -1,33 +1,40 @@
 .post {
-  &__meta {
+  &-meta {
     @extend .d-flex;
+    @extend .flex-column;
     @extend .justify-content-center;
     @extend .align-items-center;
-    @extend .py-5;
-
-    a {
-      &:after {
-        @extend .d-none;
-      }
+    @extend .col-12;
+    @extend .px-0;
+    @extend .mx-auto;
+    &-time {
+      @extend .flex-column;
+      @extend .flex-md-row;
+      @extend .text-center;
+      @extend .text-md-left;
+      @extend .d-flex;
+      @extend .justify-content-between;
+      @extend .py-3;
+      @extend .mt-5;
+      @extend .mb-3;
+      @extend .w-100;
+      @extend .border-top;
     }
-
-    img,
-    span {
-      @extend .mx-3;
-    }
-
     img {
-      width: 50px;
-      height: 50px;
+      @include size(50px, 50px);
       @extend .rounded-circle;
-
+      @extend .d-block;
+      @extend .mx-auto;
+      @extend .my-0;
       &:hover {
-        box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.5);
+        box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.5) !important;
       }
     }
   }
-
-  h2,
+  &-container {
+    @extend .list-unstyled;
+  }
+  h1,
   h2,
   h4,
   h5,
@@ -36,22 +43,17 @@
     @extend .mt-3;
   }
 
-  &__sidebar {
-    @extend .col-12;
-    @extend .mx-auto;
-  }
-
-  &__article {
+  &-article {
     @extend .col-md-8;
     @extend .mx-auto;
     @extend .clearfix;
+    @extend .px-0;
 
     p {
-      @extend .col-12;
       @extend .px-0;
+      @extend .col-12;
     }
-
-
+    h1,
     h2,
     h3,
     h4,
@@ -60,7 +62,8 @@
       @extend .col-12;
       @extend .px-0;
       @extend .font-weight-lighter;
-      @extend .mt-3;
+      @extend .pt-5;
+      @extend .pb-3;
     }
 
     ul,
@@ -78,35 +81,5 @@
         list-style-type: square !important;
       }
     }
-  }
-}
-.toc {
-  @extend .col-md-4;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 1rem;
-  // bottom: 1rem;
-  border: 1px solid #aaa;
-  padding: 1rem;
-  @extend .rounded;
-  @extend .shadow-sm;
-  font-size: smaller;
-  i {
-    font-style: initial;
-    font-size: 2rem;
-    @extend .font-weight-lighter;
-    @extend .d-block;
-    @extend .mt-2;
-    @extend .pb-2;
-  }
-  ul,
-  ol {
-    @extend .mx-0;
-    padding-left: 30px;
-
-    list-style: decimal;
-  }
-  li {
-    @extend .w-100;
   }
 }

@@ -1,0 +1,26 @@
+.disqus-placeholder.is-hidden {
+  display: none;
+}
+
+.comment {
+  &-area {
+    @extend .my-4;
+  }
+  &-button {
+    @extend .btn;
+    @extend .px-4;
+    @extend .py-2;
+    border-width: 0;
+    @extend .rounded-pill;
+    background: #f1f1f1;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &[aria-expanded="true"] {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+}

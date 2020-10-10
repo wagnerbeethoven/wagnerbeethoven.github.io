@@ -1,17 +1,43 @@
 ---
 layout: default
-title: Bem-vindo
-permalink: /
+title: Página inicial
 ---
-{% for post in site.categories.portfolio limit:1 %}{% if post.url %}<section class="section__banner" style="background-image: url('{{ post.image }}')"><a href="{{ post.url }}" title=" {{ post.title }}"><span>{{ post.title }}</span></a></section>{% endif %}{% endfor %}
-<section class="section__portfolio"><header class="section__header"><h2><a href="{{site.url}}/portfolio">Portfólio</a></h2><p>Confira os trabalhos mais recentes</p></header><div class="portfolio__container">{% for post in site.categories.portfolio limit:3%}{% include portfolio-list.html %}{% endfor %}</div></section>
-<section class="section__blog">
-    <header class="section__header">
-        <h2><a href="{{site.url}}/blog">Blog</a></h2>
-        <p>Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.</p>
+
+<section class="section-portfolio">
+    <header class="section-header">
+        <h2 class="section-name">
+            <a href="{{site.url}}/portfolio">
+                Portfólio
+            </a>
+        </h2>
+        <p class="section-description">
+            Confira os trabalhos mais recentes
+        </p>
     </header>
-    <ul> {% for post in site.categories.blog limit:6 %}
-        {% include blog-list.html %}
-        {% endfor %} </ul>
+    <div class="portfolio-container">
+        {% for post in site.categories.portfolio limit:3%}
+        {% include portfolio/portfolio-list.html %}
+        {% endfor %}
+    </div>
 </section>
-<script type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>
+<section class="section-blog">
+    <header class="section-header">
+        <h2 class="section-name">
+            <a href="{{site.url}}/blog">
+                Blog
+            </a>
+        </h2>
+        <p class="section-description">
+            Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
+        </p>
+    </header>
+    <div class="post-container">
+        <ul>
+            {% for post in site.categories.blog limit:6 %}
+            {% include post/post-list.html %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+<script
+    type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>
