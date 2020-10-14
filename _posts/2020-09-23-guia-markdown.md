@@ -9,6 +9,7 @@ legend: Print do Editor Atom
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
 alt:  Print do Editor Atom representando um texto formatado em Markdown
 tags:
+ - Material de apoio
  - Markdown
  - Traduação
 ---

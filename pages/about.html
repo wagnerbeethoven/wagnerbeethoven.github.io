@@ -26,12 +26,12 @@ permalink: sobre
         <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Sobre meus trabalho, você pode <a href="{{site.url}}/portfolio">visualizar na seção portfólio</a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade e sigilo) e <a href="{{site.url}}/blog">alguns textos estão disponivéis no meu blog</a>.</p>
         <button data-toggle="modal" data-target="#vcard" title="Clique para abrir o QR Code e salvar minhas informações de contato mais facilmente no seu celular" class="btn-vcard">Salve na agenda minhas informações de contato</button></P> <div title="Clique para fechar a janela" class="modal fade" id="vcard" tabindex="-1" role="dialog" aria-labelledby="pj-1" aria-hidden="true"> <div class="modal-dialog modal-image" title="clique para fechar" role="document"> <div class="modal-body"><img src="{{site.url}}/img/vcard.png"></div> </div> </div>
         <div class="jobs">
-            <!--EXPERIENCIA -->
-            <button type="button" data-toggle="collapse" data-target="#experiencia" aria-expanded="false" aria-controls="experiencia"><i class="chevron"></i>Experiência profissional</button>
-            <ul class="collapse" id="experiencia">
-                {% for empresa in site.data.experiencia %}
+            <!--experience -->
+            <button type="button" data-toggle="collapse" data-target="#experience" aria-expanded="false" aria-controls="experience"><i class="chevron"></i>Experiência profissional</button>
+            <ul class="collapse" id="experience">
+                {% for empresa in site.data.experience %}
                 <li>
-                    <img src="{{site.url}}/{{empresa.logo}}" class="job-logo" alt="Logo {{experiencia.nome}}">
+                    <img src="{{site.url}}/{{empresa.logo}}" class="job-logo" alt="Logo {{experience.nome}}">
                     <div class="job-detail">
                         {% if empresa.atividade %}<strong class="w-100">{{empresa.atividade}}</strong>{% endif %}
                         {% if empresa.nome %}<span>{{empresa.nome}}</span>{% endif %}
@@ -43,9 +43,9 @@ permalink: sobre
             </ul>
 
             <!--ESCOLARIDADE -->
-            <button type="button" data-toggle="collapse" data-target="#formacaoacademia" aria-expanded="false" aria-controls="formacaoacademia"><i class="chevron"></i>Escolaridade</button>
-            <ul class="collapse" id="formacaoacademia">
-                {% for escolaridade in site.data.formacaoacademica %}
+            <button type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="education"><i class="chevron"></i>Escolaridade</button>
+            <ul class="collapse" id="education">
+                {% for escolaridade in site.data.education %}
                 <li>
                     <img src="{{site.url}}/{{escolaridade.logo}}" class="job-logo"
                         alt="Logo {{escolaridade.nome}}">
@@ -60,9 +60,9 @@ permalink: sobre
             </ul>
 
             <!--CERTIFICAÇÃO -->
-            <button type="button" data-toggle="collapse" data-target="#certificacao" aria-expanded="false" aria-controls="certificacao"><i class="chevron"></i>Certificação</button>
-            <ul class="collapse" id="certificacao">
-                {% for certificacao in site.data.certificacoes %}
+            <button type="button" data-toggle="collapse" data-target="#certifications" aria-expanded="false" aria-controls="certifications"><i class="chevron"></i>Certificação</button>
+            <ul class="collapse" id="certifications">
+                {% for certificacao in site.data.certifications %}
                 <li>
                     <img src="{{site.url}}/{{certificacao.logo}}" class="job-logo"
                         alt="Logo da {{certificacao.nome}}">
@@ -77,9 +77,9 @@ permalink: sobre
             </ul>
 
             <!--CURSOS -->
-            <button type="button" data-toggle="collapse" data-target="#curso" aria-expanded="false" aria-controls="curso"><i class="chevron"></i>Cursos</button>
-            <ul class="collapse" id="curso">
-                {% for curso in site.data.cursos %}
+            <button type="button" data-toggle="collapse" data-target="#courses" aria-expanded="false" aria-controls="courses"><i class="chevron"></i>Cursos</button>
+            <ul class="collapse" id="courses">
+                {% for curso in site.data.courses %}
                 <li>
                     <img src="{{site.url}}/{{curso.logo}}" class="job-logo d-none" alt="Logo {{escolaridade.nome}}">
                     <div class="job-detail">

@@ -1,12 +1,20 @@
-@keyframes pulso {0% {transform: scale(0.8);}100% {transform: scale(1);}}
+@keyframes pulso {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .site-footer {
   @extend .position-relative;
+  @extend .justify-content-between;
+  @extend .d-flex;
   @extend .row;
-  @extend .ml-0;
-  @extend .mr-0;
   @extend .small;
   @extend .pt-5;
+  @extend .mx-0;
   @extend .mt-5;
 
   .love {
@@ -27,18 +35,8 @@
   }
 
   > p {
+    @extend .m-0;
     @extend .py-4;
     @extend .text-center;
-    @extend .col-12;
-    @extend .col-md-6;
-
-    &:first-of-type {
-      @extend .text-md-left;
-      @extend .pb-0;
-    }
-
-    &:last-of-type {
-      @extend .text-md-right;
-    }
   }
 }
