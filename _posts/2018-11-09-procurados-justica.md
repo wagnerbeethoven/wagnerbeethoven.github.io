@@ -21,11 +21,11 @@ tools:
 
 ## Sobre o projeto
 
-Segurança é um assunto que engloba todas as pessoas, em qualquer cidade do mundo . No Brasil, em especial, é um dos temas que mais preocupa por conta de casos graves como assaltos, ataques a caixas eletrônicos, roubo de cargas e tráfico de drogas, por exemplo. A tecnologia tem sido arma para tentar amenizar as ocorrências e transformar as cidades em lugares mais seguros.</p>
+Segurança é um assunto que engloba todas as pessoas, em qualquer cidade do mundo . No Brasil, em especial, é um dos temas que mais preocupa por conta de casos graves como assaltos, ataques a caixas eletrônicos, roubo de cargas e tráfico de drogas, por exemplo. A tecnologia tem sido arma para tentar amenizar as ocorrências e transformar as cidades em lugares mais seguros.
 
 ## Desafio proposto
 
-Construir uma aplicação mobile onde os usuários anonimamente possam consultar pessoas procuradas pela justiça, confirmar confirmar seus dados e fisionomia e finalmente, denunciar/alertar a polícia sobre a presença dessas pessoas na região.</p>
+Construir uma aplicação mobile onde os usuários anonimamente possam consultar pessoas procuradas pela justiça, confirmar confirmar seus dados e fisionomia e finalmente, denunciar/alertar a polícia sobre a presença dessas pessoas na região.
 
 ## Personas
 **Gael Bento**  
@@ -48,10 +48,10 @@ Abaixo você tem mais detalhes sobre cada uma das personas
 ## Histórias do usuários
 
 Eu, como usupario, quero visualizar maiores detalhes de cada procurado;
-Eu, como usuário, quero ter acesso a lista completa de rocurados pela polícia e a partir dela realiza uma busca detalhada baseada em cararísticas físicas;
-Eu, como usuário quero alertar as autoridades responsáveis do local em que me encontro, de forma anônima ou não anônima, a presença de suspeito(s) podendo enviar foto, vídeo e/ou áudio.
 
-<img src="https://lh3.googleusercontent.com/xI-TGf9kuinhaGt9UHpkI-qSp-MoggKrt-TMFMU0bjnJ9ELRLGe4ocFfYwnpWw1r_wPLkfhHQp6bWlNpFqAUgxT15b3zQ2xD7GMvupdMdPO2fL7VEip8LGH52q2YVpSUj8T_ajifDB4-fN8d_Y0LoYV-CpG6lMg3_BcOMj_KV3CQv04OtfdkYwaDeLufVCiMeVp2RQ5_lS-YRt9TqNyIfuG291_dSjXSnT6SjNurlmsHsz8uLuq40GWMi2AwQZZW7n-AvxAHZclGHbubGzGPtHVgIP7PqpVV8td3QiZ4Gi8FKp4tFvB2qcKFAPdeMAyo6Yll9Nso0qOuHepkT27oKvShOIqetXfxwuQdfHVmi3bnSl9gzwjUDQ-L87cnu9mSXjwjvkSCMheV5S5yFLkAs-nltcXsjBRlJheKDYBaohOJpFAJBIFFFUgsRPbZg0zi0pRpQPKFYNEv-sbVTTTmqU7iupvVNoVpCKjftHQil4BwRKumcGrtlGbnFzE1vGV7rlM9-Ob1NUp-R4SPS07wKBocgYdAxyHKI7mPkZ7qfOVicZ47t6CAVBuglmc4PmNwJCsMQHM2QKV02SrC5SXzqMuTPV6byKfCZf_gyCtjtM2i0q6DyF1P0U1zS71WdTrXs4Xx2_MWdNU3vwZf7j5vExM4DHi9aUwo7E0h3uSyQr4rNdT4ThHg6SfKcLaLQUQmBaDAlWKgFSA1LhVSm01u5ho175XSwGa-lXxtU0oAPplN9eoU=w1000-h429-no" alt="Representação de 3 post-its. O primeiro laranja tem escrito: 'Eu como usuário quero ter acesso a lista completa de procurados pela polícia e a partir dela realizar uma busca detalhada baseada em características físicas;', o segundo, verde tem escrito: 'Eu como usuário quero visualizar maiores detalhes de cada procurado, e;' e o último, rosa tem escrito: 'Eu como usuário quero alertar as autoridades responsáveis através das proximidades do local em que me encontro, de forma anônima ou não anônima, a presença de suspeito(s) podendo enviar vídeo, foto e/ou áudio.">
+Eu, como usuário, quero ter acesso a lista completa de rocurados pela polícia e a partir dela realiza uma busca detalhada baseada em cararísticas físicas;
+
+Eu, como usuário quero alertar as autoridades responsáveis do local em que me encontro, de forma anônima ou não anônima, a presença de suspeito(s) podendo enviar foto, vídeo e/ou áudio.
 
 ## Fluxo
 
@@ -100,7 +100,6 @@ Assista o vídeo ou acesse: <https://xd.adobe.com/view/c25a7bd9-8c4a-4769-6537-7
     <img data-toggle="modal" data-target="#pj-14" class="col col-md-2 mx-auto rounded" title="Clique para abrir a imagem maior" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/daf41692763985.5e5433dd3820c.jpg">
 </div>
 
-
 Descrição das telas da esquerda para a direita
 
 **Tela de alerta**  
@@ -124,8 +123,6 @@ Como uma segunda versão, pensei nas seguintes funcionalidas:
 
 - Recompensas dos criminosos;
 - Versão administrativida do aplicativo. A versão web para ser utilizada pelos policiais, com <em lang="en">dashboards</em>, relatórios, chats com os denuciantes.
-
-
 
 <!-- PERSONAS -->
 <div title="Clique para fechar a janela" class="modal fade" id="pj-1" tabindex="-1" role="dialog" aria-labelledby="pj-1" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://mir-cdn.behance.net/v1/rendition/project_modules/1400_opt_1/f73c3392763985.5e5429789da8d.jpg"></div></div>
