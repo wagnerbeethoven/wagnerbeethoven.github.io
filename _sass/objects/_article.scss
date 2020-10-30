@@ -78,10 +78,15 @@ article {
   }
 
   hr {
-    border-color: $main-color;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    // border-color: $main-color;
     margin: 4rem 0;
-    border-width: 1px;
-    height: 1px;
+    // border-width: 1px;
+    // height: 1px;
     @extend .w-50;
     @extend .mx-auto;
   }
@@ -94,6 +99,14 @@ article {
   ul {
     @extend .px-3;
     list-style-type: disc;
+
+    li {
+      > * {
+        @extend .ml-0;
+        @extend .mr-0;
+        @extend .w-100;
+      }
+    }
   }
 }
 

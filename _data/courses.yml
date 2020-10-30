@@ -1,8 +1,15 @@
+
+- nome: 'Web Typography for Designers & Developers'
+  instituicao: Udemy
+  periodo: Agosto/2020 - 6.5h
+  logo: img/cv/arquivo-livros-uff.jpg
+  descricao: 'Curso ministrador por Rob Sutcliffe. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOka1QBLn_cVmQXHaJIw?e=RsdwFH">Visualizar certificado</a>'
+ 
 - nome: 'Design Editorial de Livros: Teoria e Prática de Diagramação'
   instituicao: Arquivo dos Livros (UFF) e Laboratório de Publicações Lima Barreto (UERJ)
   periodo: Julho/2020 - 2h
-  logo: img/cv/arquivo-livros-uff.jpg
-  descricao: 'Curso ministrador por Ronald Monteiro. <a href="https: //1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>'
+  logo: img/cv/udemy.jpg
+  descricao: 'Curso ministrador por Ronald Monteiro. <a href="https: //1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea">Visualizar certificado</a>'
  
 - nome: Introdução ao Design do Dia a Dia
   instituicao: Udacity
@@ -32,19 +39,19 @@
   instituicao: Udemy
   periodo: Maio/2020 - 38min
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Mônica Mesquita. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>'
+  descricao: 'Curso ministrador por Mônica Mesquita. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>'
 
 - nome: 'Adobe XD: UI Design do básico aos protótipos'
   instituicao: Udemy
   periodo: Maio/2020 - 5h
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>.'
 
 - nome: Hello Design Thinking
   instituicao: IDEO U
   periodo: Maio/2020
   logo: img/cv/ideou.png
-  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYVT4CXvNjbu2MDKNA?e=42oRov" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado.</a>'
+  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYVT4CXvNjbu2MDKNA?e=42oRov">Visualizar certificado.</a>'
 
 - nome: UX Design Masterclass
   instituicao: UXDMC
@@ -56,92 +63,92 @@
   instituicao: Product School
   periodo: Abril/202
   logo: img/cv/product-school.png
-  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQR_bgdOG7YR53a0Q?e=YKN7k5" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQR_bgdOG7YR53a0Q?e=YKN7k5">Visualizar certificado</a>.'
 
 - nome: 'Product Masterclass: How to Build Digital Products'
   instituicao: Product School
   periodo: Abril/2020
   logo: img/cv/product-school.png
-  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQSnU6N2NRKxdG_KA?e=SDzc0U" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQSnU6N2NRKxdG_KA?e=SDzc0U">Visualizar certificado</a>.'
 
 - nome: 'UX & Design Thinking: Experiência do Usuário nos negócios'
   instituicao: Udemy
   periodo: Abril/2020 - 11h 30min
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
 
 - nome: Fundamentos do Kanban
   instituicao: Treinaweb
   periodo: Março/2020 - 4h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/POASJ4A90KES" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/POASJ4A90KES">Visualizar certificado</a>.'
 
 - nome: Design Thinking
   instituicao: Treinaweb
   periodo: Março/2020 - 6h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/BRY2UGBYOJSO" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/BRY2UGBYOJSO">Visualizar certificado</a>.'
 
 - nome: Usando Kanban com Scrum
   instituicao: Treinaweb
   periodo: Março/2020 - 4h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/5PNBXHCV7FKG" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/5PNBXHCV7FKG">Visualizar certificado</a>.'
 
 - nome: User Experience / User Interface
   instituicao: Treinaweb
   periodo: Março/2020 - 10h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/ULEYUJEJ389C" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/ULEYUJEJ389C">Visualizar certificado</a>.'
 
 - nome: Scrum - Planejamento e Desenvolvimento Ágeis
   instituicao: Treinaweb
   periodo: Março/2020 - 8h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/8LZB6U1XYYEA" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/8LZB6U1XYYEA">Visualizar certificado</a>.'
 
 - nome: 'Lettering Básico / Avançado'
   instituicao: Faber-Castell
   periodo: Março/2020 (1h 30min /  1h 30min)
   logo: img/cv/faber-castell.jpg
-  descricao: <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado do curso básico</a> e do <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">curso avançado</a>'
+  descricao: <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766">Visualizar certificado do curso básico</a> e do <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776">curso avançado</a>'
 
 
 - nome: Prototipação Rápida
   instituicao: Treinaweb
   periodo: Março/2020 - 2h  
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/1L2YBCP2CRXH" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/1L2YBCP2CRXH">Visualizar certificado</a>.'
 
 - nome: Introdução à Acessibilidade
   instituicao: Treinaweb
   periodo: Março/2020 - 10h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/CRFH2FQIRJA7" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/CRFH2FQIRJA7">Visualizar certificado</a>.'
 
 - nome: 'Figma: Design colaborativo do básico ao protótipo responsivo'
   instituicao: Udemy
   periodo: Março/2020 - 6h 30min 
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
 
 - nome:  HTML5 para quem não sabe nada de HTML5
   instituicao: Udemy
   periodo: Março/2020 - 6h 10min 
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Paulo Andrade. <a rel="noreferrer" href="http://ude.my/UC-ea0d259d-fe64-4fe7-9854-b91981e188a6" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Paulo Andrade. <a rel="noreferrer" href="http://ude.my/UC-ea0d259d-fe64-4fe7-9854-b91981e188a6">Visualizar certificado</a>.'
 
 - nome: XML Completo
   instituicao: Treinaweb
   periodo: Março/2020 - 18h
   logo: img/cv/treinaweb.png
-  descricao: '<a href="https://www.treinaweb.com.br/certificado/BFVG42Q4FLMD" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: '<a href="https://www.treinaweb.com.br/certificado/BFVG42Q4FLMD">Visualizar certificado</a>.'
 
 - nome: 'UX Design de A à Z: tudo sobre experiência do usuário'
   instituicao: Udemy
   periodo: Março/2020 - 11h
   logo: img/cv/udemy.jpg
-  descricao: 'Curso Ministrado por Chaiane Thiesen Bitelo e Bruna Ruschel Moreira. <a rel="noreferrer" href="http://ude.my/UC-967ee31c-e1c6-4be9-a276-8592f43bbccf" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>'
+  descricao: 'Curso Ministrado por Chaiane Thiesen Bitelo e Bruna Ruschel Moreira. <a rel="noreferrer" href="http://ude.my/UC-967ee31c-e1c6-4be9-a276-8592f43bbccf">Visualizar certificado</a>'
 
 - nome: Criando sites estáticos com Jekyll
   instituicao: Udemy
@@ -189,42 +196,40 @@
   instituicao: Design Culture
   periodo: Janeiro/2020 - 8h
   logo: img/cv/udemy.jpg
-  descricao: 'Curso ministrador por Leo Macedo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkLw_eFplf5lKzyBnfw" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Leo Macedo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkLw_eFplf5lKzyBnfw">Visualizar certificado</a>.'
 
 - nome: 'UX: Experiência do Usuário'
   instituicao: DesignThinkers Academy
   periodo: Março/2017 - 12h
   logo: img/cv/dta.jpg
-  descricao: 'Curso ministrador por Tássia Spinelli. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkP4QlDlIZjxPTK58LA" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Tássia Spinelli. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkP4QlDlIZjxPTK58LA">Visualizar certificado</a>.'
 
 - nome: 'Programando com Acessibilidade: TA/TI no contexto da acessibilidade computacional'
   instituicao: Universidade Federal de Santa Maria
   periodo: Maio/2016 - 4h
   logo: img/cv/ufsm.png
-  descricao: 'Curso ministrador por Bruno Hipólito. <a rel="noreferrer" href="http://www.ufsm.br/autenticacao/index.html?hash=13E6.A53E.B723.AFAF.E7F9.E48D.6087.035E" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Bruno Hipólito. <a rel="noreferrer" href="http://www.ufsm.br/autenticacao/index.html?hash=13E6.A53E.B723.AFAF.E7F9.E48D.6087.035E">Visualizar certificado</a>.'
 
 - nome: UX Weekend/ UX Design
   instituicao: Mergo
   periodo: Agosto/2014 - 14h
   logo: img/cv/mergo.jpg
-  descricao: 'Curso ministrador por Edu Agni. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQlyo1H2FmflVVrq" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Edu Agni. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQlyo1H2FmflVVrq">Visualizar certificado</a>.'
 
 - nome: Arquitetura de CSS/Sass
   instituicao: Hello Bits
   periodo: Agosto/2014 - 8h
   logo: img/cv/hello-bits.png
-  descricao: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_">Visualizar certificado</a>.'
 
 - nome: 'Curso Web - Foco na Certificação "<em>Microsoft 70-480: Programming in HTML5 with JavaScript & CSS3</em>"'
   instituicao: Qualiti Innovative Learning
   periodo: Fevereiro/2013 — Agosto/2013 - 88h
   logo: img/cv/qualiti.png
-  descricao: 'Curso ministrador por Thiago Burgo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQh8Jwk0WB8j0TW3" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
+  descricao: 'Curso ministrador por Thiago Burgo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQh8Jwk0WB8j0TW3">Visualizar certificado</a>.'
 
 - nome: Formação Pedagógica para Professores
   instituicao: Microcamp Internacional
   periodo: Maio/2010 - 24h
   logo: img/cv/microcamp.png
-  descricao: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank">Visualizar certificado</a>.'
-
-
+  descricao: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'

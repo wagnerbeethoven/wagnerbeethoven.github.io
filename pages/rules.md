@@ -12,7 +12,7 @@ Bem-vindo ao **{{site.name}}**. Faço o possível para garantir que as discussõ
 - **Seja educado** - não seja rude com ninguém e respeite os outros. Se algo que você diria irá te fazer passar vergonha, não o diga aqui. Lembre-se de que uma pessoa está atrás da tela e que suas palavras afetam as pessoas.
 - **Não trollar** - agradeço as críticas, mas os comentários que não agregam valor à discussão ou que são meramente insultantes serão excluídos sem explicação.
 - **Spam?** Adeus. Entendo que você pode ganhar muito dinheiro trabalhando em casa, no entanto, não estou interessado.
-</ul>
+
 
 Para simplificar: "**Não seja idiota**". Se você não seguir nenhuma dessas diretrizes, vou remover seu comentário e proibi-lo de participar das discussões
 Se você encontrar algum comentário que viole essas diretrizes, “sinalize” ou “marque como spam” - irei agradecer seu apoio

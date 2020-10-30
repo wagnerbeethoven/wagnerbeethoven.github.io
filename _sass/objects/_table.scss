@@ -2,6 +2,10 @@ table {
   @extend .table;
   @extend .table-striped;
   @extend .table-hover;
+  @extend .table-bordered;
+  th {
+    vertical-align: middle !important;
+  }
 }
 
 .td-info {

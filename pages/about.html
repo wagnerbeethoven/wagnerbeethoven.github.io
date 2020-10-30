@@ -29,14 +29,14 @@ permalink: sobre
             <!--experience -->
             <button type="button" data-toggle="collapse" data-target="#experience" aria-expanded="false" aria-controls="experience"><i class="chevron"></i>Experiência profissional</button>
             <ul class="collapse" id="experience">
-                {% for empresa in site.data.experience %}
+                {% for company in site.data.experience %}
                 <li>
-                    <img src="{{site.url}}/{{empresa.logo}}" class="job-logo" alt="Logo {{experience.nome}}">
+                    <img src="{{site.url}}/{{company.logo}}" class="job-logo" alt="Logo {{experience.nome}}">
                     <div class="job-detail">
-                        {% if empresa.atividade %}<strong class="w-100">{{empresa.atividade}}</strong>{% endif %}
-                        {% if empresa.nome %}<span>{{empresa.nome}}</span>{% endif %}
-                        {% if empresa.periodo %}<small class="d-block">{{empresa.periodo}}</small>{% endif %}
-                        {% if empresa.descricao %}<p class="mt-2">{{empresa.descricao}}</p>{% endif %}
+                        {% if company.atividade %}<strong class="w-100">{{company.atividade}}</strong>{% endif %}
+                        {% if company.nome %}<span>{{company.nome}}</span>{% endif %}
+                        {% if company.periodo %}<small class="d-block">{{company.periodo}}</small>{% endif %}
+                        {% if company.descricao %}<p class="mt-2">{{company.descricao}}</p>{% endif %}
                     </div>
                 </li>
                 {% endfor %}

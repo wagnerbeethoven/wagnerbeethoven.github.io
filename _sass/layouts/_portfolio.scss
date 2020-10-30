@@ -28,6 +28,7 @@
     height: 350px;
     width: 100%;
     object-fit: cover;
+    @extend .mb-0;
     &:hover,
     &:focus {
       filter: grayscale(0.9);
@@ -56,7 +57,7 @@
       @extend .col-md-8;
       @extend .px-3;
     }
-
+    
     p,
     ul,
     ol,
@@ -69,11 +70,26 @@
       @extend .col-12;
       @extend .col-md-8;
       @extend .mx-auto;
+      @extend .px-0;
     }
-
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .col-12;
+      @extend .font-weight-lighter;
+      @extend .pt-5;
+      @extend .pb-3;
+    }
     ul,
     ol {
+      @extend .pb-3;
       padding-left: 40px;
+      li {
+        @extend .w-100;
+      }
     }
 
     img {
