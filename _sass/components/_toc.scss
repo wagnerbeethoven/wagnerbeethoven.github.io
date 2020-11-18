@@ -28,6 +28,9 @@
       @extend .pb-0;
       li {
         @extend .w-100;
+        a {
+          @extend .font-weight-normal;
+        }
 
         & > ol {
           list-style: lower-alpha;

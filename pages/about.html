@@ -1,8 +1,4 @@
----
-layout: page
-title: Sobre
-permalink: sobre
----
+--- layout: page title: Sobre permalink: sobre ---
 
 
 <div class="about" itemscope itemtype="http://schema.org/Person">
@@ -20,11 +16,21 @@ permalink: sobre
             <a target="_blank" rel="noreferrer" title="Behance [Este link irá abrir uma nova janela]" class="links-social links-social-behance" href="http://behance.net/wagnerbeethoven"> <span class="sr-only">Behance: wagnerbeethoven</span> </a>
             <a target="_blank" rel="noreferrer" title="Github [Este link irá abrir uma nova janela]" class="links-social links-social-github" href="http://github.com/wagnerbeethoven"> <span class="sr-only">Github: wagnerbeethoven</span> </a>
         </p>
-        <p>Me chamo {{site.about-name}} (de batismo) , um belo nome, mas muito extenso. Por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/is-it-just-a-hello-world.html">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos e resido em <span itemprop="address" itemscope                 itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span> – <span itemprop="addressRegion">{{site.about-state}} &bull; Brasil</span>.</p>
-        <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
-        <p>Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para desktops, celulares, tablet e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educaional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
-        <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Sobre meus trabalho, você pode <a href="{{site.url}}/portfolio">visualizar na seção portfólio</a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade e sigilo) e <a href="{{site.url}}/blog">alguns textos estão disponivéis no meu blog</a>.</p>
-        <button data-toggle="modal" data-target="#vcard" title="Clique para abrir o QR Code e salvar minhas informações de contato mais facilmente no seu celular" class="btn-vcard">Salve na agenda minhas informações de contato</button></P> <div title="Clique para fechar a janela" class="modal fade" id="vcard" tabindex="-1" role="dialog" aria-labelledby="pj-1" aria-hidden="true"> <div class="modal-dialog modal-image" title="clique para fechar" role="document"> <div class="modal-body"><img src="{{site.url}}/img/vcard.png"></div> </div> </div>
+        <p>Me chamo {{site.about-name}} (de batismo) , um belo nome, mas muito extenso. Por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/is-it-just-a-hello-world.html">maiores explicações</a>) e nele mostrar meu trabalho.
+            Tenho por volta dos trintas anos e resido em <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span> – <span itemprop="addressRegion">{{site.about-state}} &bull; Brasil</span>.</p>
+        <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos
+            falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
+        <p>Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para desktops, celulares, tablet e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educaional, Unimed
+            (diversos estados), Banco Itaú, Celpe, Cemig.</p>
+        <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Sobre meus trabalho, você pode <a href="{{site.url}}/portfolio">visualizar na seção portfólio</a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade
+            e sigilo) e <a href="{{site.url}}/blog">alguns textos estão disponivéis no meu blog</a>.</p>
+        <button data-toggle="modal" data-target="#vcard" title="Clique para abrir o QR Code e salvar minhas informações de contato mais facilmente no seu celular" class="btn-vcard">Salve na agenda minhas informações de contato</button></P>
+        <div title="Clique para fechar a janela"
+            class="modal fade" id="vcard" tabindex="-1" role="dialog" aria-labelledby="pj-1" aria-hidden="true">
+            <div class="modal-dialog modal-image" title="clique para fechar" role="document">
+                <div class="modal-body"><img src="{{site.url}}/img/vcard.png"></div>
+            </div>
+        </div>
         <div class="jobs">
             <!--experience -->
             <button type="button" data-toggle="collapse" data-target="#experience" aria-expanded="false" aria-controls="experience"><i class="chevron"></i>Experiência profissional</button>
@@ -33,10 +39,9 @@ permalink: sobre
                 <li>
                     <img src="{{site.url}}/{{company.logo}}" class="job-logo" alt="Logo {{experience.nome}}">
                     <div class="job-detail">
-                        {% if company.atividade %}<strong class="w-100">{{company.atividade}}</strong>{% endif %}
-                        {% if company.nome %}<span>{{company.nome}}</span>{% endif %}
-                        {% if company.periodo %}<small class="d-block">{{company.periodo}}</small>{% endif %}
-                        {% if company.descricao %}<p class="mt-2">{{company.descricao}}</p>{% endif %}
+                        {% if company.atividade %}<strong class="w-100">{{company.atividade}}</strong>{% endif %} {% if company.nome %}<span>{{company.nome}}</span>{% endif %} {% if company.periodo %}<small class="d-block">{{company.periodo}}</small>{%
+                        endif %} {% if company.descricao %}
+                        <p class="mt-2">{{company.descricao}}</p>{% endif %}
                     </div>
                 </li>
                 {% endfor %}
@@ -47,13 +52,11 @@ permalink: sobre
             <ul class="collapse" id="education">
                 {% for escolaridade in site.data.education %}
                 <li>
-                    <img src="{{site.url}}/{{escolaridade.logo}}" class="job-logo"
-                        alt="Logo {{escolaridade.nome}}">
+                    <img src="{{site.url}}/{{escolaridade.logo}}" class="job-logo" alt="Logo {{escolaridade.nome}}">
                     <div class="job-detail">
-                        {% if escolaridade.nome %}<strong class="w-100">{{escolaridade.nome}}</strong>{% endif %}
-                        {% if escolaridade.instituicaao %}<span>{{escolaridade.instituicaao}}</span>{% endif %}
-                        {% if escolaridade.periodo %}<small class="d-block">{{escolaridade.periodo}}</small>{% endif %}
-                        {% if escolaridade.descricao %}<p class="mt-2">{{escolaridade.descricao}}</p>{% endif %}
+                        {% if escolaridade.nome %}<strong class="w-100">{{escolaridade.nome}}</strong>{% endif %} {% if escolaridade.instituicaao %}<span>{{escolaridade.instituicaao}}</span>{% endif %} {% if escolaridade.periodo %}<small class="d-block">{{escolaridade.periodo}}</small>{%
+                        endif %} {% if escolaridade.descricao %}
+                        <p class="mt-2">{{escolaridade.descricao}}</p>{% endif %}
                     </div>
                 </li>
                 {% endfor %}
@@ -64,13 +67,11 @@ permalink: sobre
             <ul class="collapse" id="certifications">
                 {% for certificacao in site.data.certifications %}
                 <li>
-                    <img src="{{site.url}}/{{certificacao.logo}}" class="job-logo"
-                        alt="Logo da {{certificacao.nome}}">
+                    <img src="{{site.url}}/{{certificacao.logo}}" class="job-logo" alt="Logo da {{certificacao.nome}}">
                     <div class="job-detail">
-                        {% if certificacao.nome %}<strong class="w-100">{{certificacao.nome}}</strong>{% endif %}
-                        {% if certificacao.instituicao %}<span>{{certificacao.instituicao}}</span>{% endif %}
-                        {% if certificacao.periodo %}<small class="d-block">{{certificacao.periodo}}</small>{% endif %}
-                        {% if certificacao.descricao %}<p class="mt-2">{{certificacao.descricao}}</p>{% endif %}
+                        {% if certificacao.nome %}<strong class="w-100">{{certificacao.nome}}</strong>{% endif %} {% if certificacao.instituicao %}<span>{{certificacao.instituicao}}</span>{% endif %} {% if certificacao.periodo %}<small class="d-block">{{certificacao.periodo}}</small>{%
+                        endif %} {% if certificacao.descricao %}
+                        <p class="mt-2">{{certificacao.descricao}}</p>{% endif %}
                     </div>
                 </li>
                 {% endfor %}
@@ -83,8 +84,7 @@ permalink: sobre
                 <li>
                     <img src="{{site.url}}/{{curso.logo}}" class="job-logo d-none" alt="Logo {{escolaridade.nome}}">
                     <div class="job-detail">
-                        {% if curso.nome %}<strong class="w-100">{{curso.nome}}</strong> {% endif %}
-                        {% if curso.instituicao %}<span>{{curso.instituicao}}
+                        {% if curso.nome %}<strong class="w-100">{{curso.nome}}</strong> {% endif %} {% if curso.instituicao %}<span>{{curso.instituicao}}
                             {% if curso.periodo %}({{curso.periodo}}){% endif %} {% endif %}
 
                             {% if curso.descricao %}<p class="mt-2">{{curso.descricao}}</p> {% endif %}

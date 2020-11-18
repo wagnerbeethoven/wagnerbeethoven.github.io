@@ -57,7 +57,7 @@ Você pode estar se perguntando por que as pessoas usam Markdown em vez de um ed
 
 A melhor maneira de começar a usar o Markdown é usá-lo. Isso é mais fácil do que nunca graças a uma variedade de ferramentas gratuitas.
 
-Você nem precisa fazer download de nada. Existem vários editores Markdown online que você pode usar para tentar escrever no Markdown. [Dillinger](dillinger) é um dos melhores editores online do Markdown. Basta abrir o site e começar a digitar no painel esquerdo. Uma visualização do documento formatado aparece no painel direito.
+Você nem precisa fazer download de nada. Existem vários editores Markdown online que você pode usar para tentar escrever no Markdown. [Dillinger][dillinger] é um dos melhores editores online do Markdown. Basta abrir o site e começar a digitar no painel esquerdo. Uma visualização do documento formatado aparece no painel direito.
 
 ![Dillinger](https://lh3.googleusercontent.com/pw/ACtC-3cXPu3yAuz6yeh3XMuQ2MQxrlF4E4EC9H04qAujwBoaEF83-mOmN7P1qmw3cUOdi5Fo0f2_50aJJ1DSwvrHLozGuUwkGIUOqS7bhSUMFA8xpBbbh5G_GgZPyrCBI8YcwVytIUjcpsXRYzf62lGYIdH6=w907-h701-no)
 
