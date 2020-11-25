@@ -50,9 +50,6 @@
       }
     }
   }
-
-  &-id {
-  }
 }
 
 .jobs {
@@ -103,43 +100,6 @@
       &:last-child {
         @extend .border-0;
       }
-
-      &.profile {
-        &-course,
-        &-certification {
-          .job-detail-description {
-            clear: both;
-          }
-
-          .job-detail-duration,
-          .job-detail-company {
-            @extend .d-inline-block;
-            @extend .float-left;
-          }
-
-          .job-detail-duration {
-            font-size: 100%;
-            @extend .pl-2;
-            font-weight: 200;
-
-            &:after {
-              content: ")";
-            }
-
-            &:before {
-              content: "(";
-            }
-          }
-
-          .job-detail-logo {
-            @extend .d-none;
-          }
-
-          &:last-child {
-            @extend .border-bottom;
-          }
-        }
-      }
     }
   }
 
@@ -148,6 +108,8 @@
       @extend .shadow-none;
       @extend .my-0;
       @extend .mr-3;
+      width: 100px !important;
+      height: auto;
     }
     &-detail {
       @extend .media-body;
