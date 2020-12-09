@@ -47,7 +47,7 @@ Dependendo do aplicativo que você usa, você pode não conseguir visualizar o d
 
 Você pode estar se perguntando por que as pessoas usam Markdown em vez de um editor WYSIWYG. Por que escrever com Markdown quando você pode pressionar botões em uma interface para formatar seu texto? Acontece que existem algumas razões diferentes pelas quais as pessoas usam Markdown em vez de editores WYSIWYG.
 
-- Markdown pode ser usado para tudo. As pessoas o usam para criar [sites](#sites), [documentos](#documentos), [anotações](#anotações), [livros](#livros), [apresentações](#apresentações), [mensagens de e-mail](#email) e [documentação técnica](#documentação).
+- Markdown pode ser usado para tudo. As pessoas o usam para criar [sites](#sites "Como escrever o conteúdo de sites"), [documentos](#documentos "Como escrever seus documentos"), [anotações](#anotações "Como fazer suas anotações"), [livros](#livros "Como escrever o conteúdo dos seus livros"), [apresentações](#apresentações "Como criar suas apresentações"), [mensagens de e-mail](#email "Como escrever emails") e [documentação técnica](#documentação "Como escrever documentações técnicas").
 - Markdown é portátil. Arquivos contendo texto formatado em Markdown podem ser abertos usando virtualmente qualquer aplicativo. Se você decidir que não gosta do aplicativo Markdown que está usando no momento, pode importar seus arquivos Markdown para outro aplicativo Markdown. Isso contrasta fortemente com os aplicativos de processamento de texto, como o Microsoft Word, que bloqueiam seu conteúdo em um formato de arquivo proprietário.
 - Markdown é independente de plataforma. Você pode criar texto formatado em Markdown em qualquer dispositivo que execute qualquer sistema operacional.
 - Markdown é à prova de futuro. Mesmo que o aplicativo que você está usando pare de funcionar em algum momento no futuro, você ainda poderá ler seu texto formatado em Markdown usando um aplicativo de edição de texto. Esta é uma consideração importante quando se trata de livros, teses universitárias e outros documentos importantes que precisam ser preservados indefinidamente.
@@ -59,7 +59,7 @@ A melhor maneira de começar a usar o Markdown é usá-lo. Isso é mais fácil d
 
 Você nem precisa fazer download de nada. Existem vários editores Markdown online que você pode usar para tentar escrever no Markdown. [Dillinger][dillinger] é um dos melhores editores online do Markdown. Basta abrir o site e começar a digitar no painel esquerdo. Uma visualização do documento formatado aparece no painel direito.
 
-![Dillinger](https://lh3.googleusercontent.com/pw/ACtC-3cXPu3yAuz6yeh3XMuQ2MQxrlF4E4EC9H04qAujwBoaEF83-mOmN7P1qmw3cUOdi5Fo0f2_50aJJ1DSwvrHLozGuUwkGIUOqS7bhSUMFA8xpBbbh5G_GgZPyrCBI8YcwVytIUjcpsXRYzf62lGYIdH6=w907-h701-no)
+![Dillinger](https://lh3.googleusercontent.com/pw/ACtC-3cXPu3yAuz6yeh3XMuQ2MQxrlF4E4EC9H04qAujwBoaEF83-mOmN7P1qmw3cUOdi5Fo0f2_50aJJ1DSwvrHLozGuUwkGIUOqS7bhSUMFA8xpBbbh5G_GgZPyrCBI8YcwVytIUjcpsXRYzf62lGYIdH6=w907-h701-no "Dillinger")
 
 Provavelmente, você desejará manter o site do Dillinger aberto enquanto lê este guia. Dessa forma, você pode experimentar a sintaxe à medida que aprende sobre ela. Depois de se familiarizar com o Markdown, você pode usar um aplicativo Markdown que pode ser instalado em seu computador desktop ou dispositivo móvel.
 
@@ -75,7 +75,7 @@ Os aplicativos Markdown usam algo chamado de processador Markdown (também comum
 
 **Nota**: O aplicativo Markdown e o processador são dois componentes separados. Por uma questão de prática eu os combinei em um elemento ("Markdown App") na figura abaixo.
 
-![The Markdown Process](https://lh3.googleusercontent.com/pw/ACtC-3fWTwfhbNYM-ihA1vw1QPLHid87Qhov37DQ6bqoifAtUzE-kMga_R2yYynEQVmJDMxlwIk33goMx-tSapmAXODg_ur228lSMYmAURpO7i3oBo0Sup6PoqIliAUlRmCuvXGCQLu6ElDbaz0u-MC9F2wR=w432-h536-no)
+![The Markdown Process](https://lh3.googleusercontent.com/pw/ACtC-3fWTwfhbNYM-ihA1vw1QPLHid87Qhov37DQ6bqoifAtUzE-kMga_R2yYynEQVmJDMxlwIk33goMx-tSapmAXODg_ur228lSMYmAURpO7i3oBo0Sup6PoqIliAUlRmCuvXGCQLu6ElDbaz0u-MC9F2wR=w432-h536-no "Processo do Markdown")
 
 Para resumir, este é um processo de quatro partes:
 
@@ -179,46 +179,46 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
     </thead>
     <tbody>
         <tr>
-            <td><span class="td-info">Caractere</span> <a href="#headings">Cabeçalho</a></td>
+            <td><span class="td-info">Caractere</span> <a title="Cabeçalho" href="#headings">Cabeçalho</a></td>
             <td><span class="td-info">Sintaxe de Markdown<br></span><code># Cabeçalho nível 1<br>## Cabeçalho nível 2<br>### Cabeçalho nível 3</code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#bold">Negrito</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Negrito" href="#bold">Negrito</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code><strong>texto em negrito</strong></code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#italic">Itálico</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Itálico" href="#italic">Itálico</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code><em>texto em itálico</em></code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#blockquote">Bloco de citação</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Bloco de citação" href="#blockquote">Bloco de citação</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code>&gt; bloco de citação</code></td>
         </tr>   
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#ordered-lists">Lista ordenada</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Lista ordenada" href="#ordered-lists">Lista ordenada</a></td>
             <td><span class="td-info">Sintaxe de Markdown<br></span> <code>1. Primeiro item<br>2. Segundo item<br>3. Terceiro item<br></code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#unordered-lists">Lista não ordenada</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Lista não ordenada" href="#unordered-lists">Lista não ordenada</a></td>
             <td><span class="td-info">Sintaxe de Markdown<br></span> 
                 <code>- Primeiro item<br>- Segundo item<br>- Terceiro item</code>
             </td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#code">Código</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Código" href="#code">Código</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code>codigo</code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#horizontal-rules">Régua horizontal</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Régua horizontal" href="#horizontal-rules">Régua horizontal</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code>---</code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#links">Link</a></td>
+            <td><span class="td-info">Elemento</span> <a title="Link" href="#links">Link</a></td>
             <td><span class="td-info">Sintaxe de Markdown</span> <code>[texto](http://google.com)</code></td>
         </tr>
         <tr>
-            <td><span class="td-info">Elemento</span> <a href="#image">Imagem</a></td>
-            <td><span class="td-info">Sintaxe de Markdown</span> <code><img src="{{site.url}}/img/favicon/favicon-48x48.png" style="margin: 0 !important; box-shadow: none !important" alt="alt text"></code>
+            <td><span class="td-info">Elemento</span> <a title="Imagem" href="#image">Imagem</a></td>
+            <td><span class="td-info">Sintaxe de Markdown</span> <code><img alt="Logo da Agência Sumô" src="{{site.url}}/img/favicon/favicon-48x48.png" style="margin: 0 !important; box-shadow: none !important" alt="alt text"></code>
             </td>
         </tr>
     </tbody>
@@ -1579,7 +1579,7 @@ A renderização é essa:
 
 `http://google.com`
 
-[markdownguide]: http://markdownguide.org/
+[markdownguide]: http://markdownguide.org/ "Markdown Guide"
 [cc]: http://creativecommons.org/licenses/by-sa/4.0/
 [dillinger]: http://dillinger.io/
 [jekyll]: http://jekyllrb.com

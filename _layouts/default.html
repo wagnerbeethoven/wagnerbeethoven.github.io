@@ -9,7 +9,7 @@ layout: compress
         {% include snippets/meta.html %}
         <style>{% capture critical %}{% include style.scss %}{% endcapture %}{{ critical | scssify }}</style>
     </head>
-    <body class="{{page.permalink}}">
+    <body class="main-container {{page.permalink}}">
         
         {% include snippets/analytics.html %}
 

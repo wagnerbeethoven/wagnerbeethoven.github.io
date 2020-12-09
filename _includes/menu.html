@@ -1,10 +1,10 @@
 {% assign current = page.url | downcase | split: '/' %}
 <nav class="collapse nav nav-main" id="menu">
    <ul>
-     <li><a href='{{site.url}}' {% if current[1] == '/' %}class='active'{% endif %}>Página inicial</a></li>
-     <li><a href='{{site.url}}/portfolio' {% if current[1] == 'portfolio' %}class='active'{% endif %}>Portfolio</a></li>
-     <li><a href='{{site.url}}/blog' {% if current[1] == 'blog' %}class='active'{% endif %}>Blog</a></li>
-     <li><a href='{{site.url}}/sobre' {% if current[1] == 'sobre' %}class='active'{% endif %}>Sobre</a></li>
-    <li><a href='{{site.url}}/contato' {% if current[1] == 'contato' %}class='active'{% endif %}>Contato</a></li>
+      <li><a title="Página inicial" href='{{site.url}}' {% if current[1] == '/' %}class='active'{% endif %}>Página inicial</a></li>
+      <li><a title="Portfolio" href='{{site.url}}/portfolio' {% if current[1] == 'portfolio' %}class='active'{% endif %}>Portfolio</a></li>
+      <li><a title="Blog" href='{{site.url}}/blog' {% if current[1] == 'blog' %}class='active'{% endif %}>Blog</a></li>
+      <li><a title="Sobre" href='{{site.url}}/sobre' {% if current[1] == 'sobre' %}class='active'{% endif %}>Sobre</a></li>
+      <li><a title="Contato" href='{{site.url}}/contato' {% if current[1] == 'contato' %}class='active'{% endif %}>Contato</a></li>
    </ul>
 </nav>

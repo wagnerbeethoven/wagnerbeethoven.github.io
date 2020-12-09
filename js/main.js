@@ -21,7 +21,14 @@ var disqus_shortname = 'wagnerbeethoven';
 
 // TOC
 $(document).ready(function () {
-  $('#toc').toc();
+  $('#toc').toc({
+    classes: {
+      list: 'toc-container',
+      item: 'toc-item',
+      noBackToTopLinks: true,
+      showEffect: 'slideDown'
+    }
+  });
 });
 
 // ADICIONA _BLANK E NO OPENER E REFERRER

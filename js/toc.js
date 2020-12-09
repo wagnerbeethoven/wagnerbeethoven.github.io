@@ -24,7 +24,7 @@
 
     function createLink(header) {
       var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
-      return "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
+      return "<a href='#" + fixedEncodeURIComponent(header.id) + "' title='" + innerText + "'>"  + innerText + "</a>";
     }
 
     var headers = $(settings.headers).filter(function () {
