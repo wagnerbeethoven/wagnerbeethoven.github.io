@@ -10,16 +10,16 @@ alt: "Jogadores de rugby abraçados em circulo de costas com vestimentas típica
 description: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 tags:
- - Blog
- - SCRUM
- - Agile
- - Metodologia ágil
- - SCRUMstudy
+  - Blog
+  - SCRUM
+  - Agile
+  - Metodologia ágil
+  - SCRUMstudy
 ---
 
 Certificar o conhecimento para uma pessoa tão inquieta como eu é sim um desafio, porque sempre busquei conhecimento de maneira independente, ser autodidata para mim é um estilo de vida, mas sei da importância em obter um certificado sobre um determinado assunto, além de aumentar o nível do currículo, reforça os conceitos e os conhecimentos sobre o assunto.
 
-Soube da certificação em conhecimentos em Scrum, pensei, por que não? A prova deveria ser de uma instituição que desse suporte, já que nunca tive treinamento formal ou conhecimento através de algum curso ou livro, porque sempre vivi o Scrum e as metodologias ágeis na prática, então procurei a [SCRUMstudy][SCRUMstudy].
+Soube da certificação em conhecimentos em Scrum, pensei, por que não? A prova deveria ser de uma instituição que desse suporte, já que nunca tive treinamento formal ou conhecimento através de algum curso ou livro, porque sempre vivi o Scrum e as metodologias ágeis na prática, então procurei a [SCRUMstudy][scrumstudy].
 
 A instituição disponibiliza o <abbr lang="en" title="Scrum Body of Knowledge">SBOK</abbr>, um livro de mais 400 e umas vídeo aulas que ajudam e ilustram muito mais rapidamente o material do livro.
 
@@ -33,7 +33,7 @@ Scrum é o <em lang="en">framework</em> ágil mais popular do mercado que tem a 
 
 Scrum é interativo, adaptável, flexível, rápido e efetivo, promovendo essencialmente o esforço colaborativo/cooperativo para criar produto ou serviço através de entregas contínuas.
 
-O Scrum lida muito bem com mudanças de requisitos, já que é totalmente orientado a mudanças. Criar pequenas entregas que possibilitam a detecção de riscos mais rapidamente. 
+O Scrum lida muito bem com mudanças de requisitos, já que é totalmente orientado a mudanças. Criar pequenas entregas que possibilitam a detecção de riscos mais rapidamente.
 
 Como aspectos do Scrum, podemos destacar: organização, justificativa do negócio, qualidade, mudança e risco.
 
@@ -54,9 +54,83 @@ O Scrum é dividido em fases, essas fases são: iniciação, planejamento e esti
 
 Cada fase tem entradas, saídas e ferramentas.
 
-Como exemplo de ferramentas, cito: [Jira][Jira] [Mantis][Mantis], [Redmine][Redmine], aplicativo de criação de gráfico de acompanhamento (<em lang="en">burn down</em>) ou de criação de <em lang="en">scrum board</em>.
+Como exemplo de ferramentas, cito: [Jira][jira] [Mantis][mantis], [Redmine][redmine], aplicativo de criação de gráfico de acompanhamento (<em lang="en">burn down</em>) ou de criação de <em lang="en">scrum board</em>.
 
-<table><caption>Fases e Processos detalhados do Scrum</caption><thead><tr><td scope="col">Fases</td><td scope="col">Processos</td></tr></thead><tbody><tr><td scope="col"><span class="td-info">Fase: <br></span> 1. Iniciação</td><td><span class="td-info">Processos: <br></span>1. Criação do documento de visão <br />2. Identificação do <em lang="en">Scrum Master</em> e <emlang="en">stakeholder(s)</em> <br />3. Formação do time Scrum <br />4. Criação dos épicos<br />5. Criação do Product <em lang="en">backlog</em>priorizado <br />6. Planejamento de lançamentodas versões</td></tr><tr><td scope="col"><span class="td-info">Fase: <br></span>2. Planejamento e estimativa</td><td><span class="td-info">Processos: <br></span>7. Criação das histórias do usuário<br />8. Aprovação, estimativa e confirmação das histórias dousuário<br />9. Criação das atividades<br />10. Estimar o tempo das atividades <br />11. Criação do<em lang="en">backlog</em>da <em lang="en">sprint</em></td></tr><tr><td scope="col"><span class="td-info">Fase: <br></span>3. Implementação</td><td><span class="td-info">Processos: <br></span>12. Desenvolver os entregáveis <br />13. Conduzir reuniões diárias <br />14. Melhoria do <emlang="en">backlog</em>priorizado do produto</td></tr><tr><td scope="col"><span class="td-info">Fase: <br></span>4. Revisão e retrospectiva</td><td><span class="td-info">Processos: <br></span>15. Converter alguém do time em <em lang="en">Scrum Master</em> <br />16. Demonstração e validaçãoda <em lang="en">sprint</em><br />17. Reunião de retrospectiva</td></tr><tr><td scope="col"><span class="td-info">Fase: <br></span>5. Release</td><td><span class="td-info">Processos: <br></span>18. Entrega do produto finalizado <br /> 19. Retrospectiva do projeto</td></tr></tbody></table>
+<table summary="1. Iniciação, 2. Planejamento e estimativa, 3. Implementação, 4. Revisão e retrospectiva e 5. Release">
+    <caption>Fases e Processos detalhados do Scrum</caption>
+    <thead>
+        <tr>
+            <td scope="col">Fases</td>
+            <td scope="col">Processos</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="col">
+                <span class="td-info">Fase: <br></span> 1. Iniciação
+            </td>
+            <td>
+                <span class="td-info">Processos: <br></span>
+                1. Criação do documento de visão <br />
+                2. Identificação do <em lang="en">Scrum Master</em> e <em lang="en">stakeholder(s)</em> <br />
+                3. Formação do time Scrum <br />
+                4. Criação dos épicos<br />
+                5. Criação do Product <em lang="en">backlog</em>priorizado <br />
+                6. Planejamento de lançamentodas versões
+            </td>
+        </tr>
+        <tr>
+            <td scope="col"> 
+                <span class="td-info">Fase: <br></span>
+                2. Planejamento e estimativa
+            </td>
+            <td>
+                <span class="td-info">Processos: <br></span>
+                7. Criação das histórias do usuário<br />
+                8. Aprovação, estimativa e confirmação das histórias dousuário<br />
+                9. Criação das atividades<br />
+                10. Estimar o tempo das atividades <br />
+                11. Criação do<em lang="en">backlog</em>da <em lang="en">sprint</em>
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">
+                <span class="td-info">Fase: <br></span>
+                3. Implementação
+            </td>
+            <td>
+                <span class="td-info">Processos: <br></span>
+                12. Desenvolver os entregáveis <br />
+                13. Conduzir reuniões diárias <br />
+                14. Melhoria do <em lang="en">backlog</em>priorizado do produto
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">
+                <span class="td-info">Fase: <br></span>
+                4. Revisão e retrospectiva
+            </td>
+            <td>
+                <span class="td-info">Processos: <br></span>
+                15. Converter alguém do time em <em lang="en">Scrum Master</em> <br />
+                16. Demonstração e validaçãoda <em lang="en">sprint</em><br />
+                17. Reunião de retrospectiva
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">
+                <span class="td-info">Fase: <br></span>
+                5. Release
+            </td>
+            <td>
+                <span class="td-info">Processos: <br></span>
+                18. Entrega do produto finalizado <br />
+                19. Retrospectiva do projeto
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 Os projetos são impactados por tempo, custo, escopo, qualidade, recursos, capacidades organizacionais ou outras limitações que impedem de planejar, executar, administrar e obter sucesso.
 
 ## Benefícios {#beneficios}
@@ -69,21 +143,22 @@ Os riscos são classificados de acordo com o impacto: positivos (oportunidades) 
 
 ## Ciclos do Scrum {#ciclo}
 
-No Scrum, os projetos são divididos em ciclos chamados de <em lang="en">sprints</em>. A <em lang="en">sprint</em> representa uma duração dentro do qual um conjunto de atividades deve ser executado. Antes de iniciar o ciclo do Scrum, é obrigatório que ocorra a reunião com os <em lang="en">stakeholders</em>, esta reunião é chamada de  <em lang="en">stakeholder meeting</em> . Os envolvidos no encontro são <abbr title="Product Owner" lang="en">PO</abbr> e os <em lang="en">stakeholders</em>, esta cerimônia resulta na concepção do documento de visão do projeto e deve conter obrigatoriamente a justificativa de negócio, fornecendo uma visão ampla do produto que se pretende desenvolver, sem se aprofundar em detalhes.
-
+No Scrum, os projetos são divididos em ciclos chamados de <em lang="en">sprints</em>. A <em lang="en">sprint</em> representa uma duração dentro do qual um conjunto de atividades deve ser executado. Antes de iniciar o ciclo do Scrum, é obrigatório que ocorra a reunião com os <em lang="en">stakeholders</em>, esta reunião é chamada de <em lang="en">stakeholder meeting</em> . Os envolvidos no encontro são <abbr title="Product Owner" lang="en">PO</abbr> e os <em lang="en">stakeholders</em>, esta cerimônia resulta na concepção do documento de visão do projeto e deve conter obrigatoriamente a justificativa de negócio, fornecendo uma visão ampla do produto que se pretende desenvolver, sem se aprofundar em detalhes.
 
 Este documento será escrito a partir da conversa com os <em lang="en">stakeholders</em> pelo <abbr title="Product Owner" lang="en">PO</abbr>, sendo formado pelos épicos do projeto e as histórias do usuário. As histórias do usuário serão priorizadas pelo <abbr title="Product Owner" lang="en">PO</abbr> de acordo com o valor de negócio no <em lang="en">backlog</em> do projeto/produto.
 
-
-Só após essa reunião a equipe Scrum é formalmente definida pelo: <abbr title="Product Owner" lang="en">PO</abbr>,  <abbr title="Scrum Master" lang="en">SM</abbr> e os desenvolvedores (testadores, programadores, designers, etc.).
+Só após essa reunião a equipe Scrum é formalmente definida pelo: <abbr title="Product Owner" lang="en">PO</abbr>, <abbr title="Scrum Master" lang="en">SM</abbr> e os desenvolvedores (testadores, programadores, designers, etc.).
 
 ### Reunião de planejamento da <em lang="en">sprint</em> (<em lang="en">sprint planning</em>) {#sprint-planning}
+
 A <em lang="en">sprint</em> propriamente dita começa neste momento. Será nesta cerimônia o <em lang="en">backlog</em> da <em lang="en">sprint</em> será o artefato de saída. Estarão presentes o <abbr title="Product Owner" lang="en">PO</abbr> e o time de desenvolvimento Scrum (<abbr title="Scrum Master" lang="en">SM</abbr> pode participar), ela é dividida em duas partes, são elas:
 
 #### 1ª parte {#sprint-planning-p1}
+
 O <abbr title="Product Owner" lang="en">PO</abbr> irá relatar e explicar as histórias do usuário com maiores prioridades e junto com o time de desenvolvimento Scrum definirão o objetivo da <em lang="en">sprint</em>.
 
 #### 2ª parte {#sprint-planning-p2}
+
 O time de desenvolvimento Scrum irá escolher quais serão as histórias do usuário de maior priorização que irão compor a <em lang="en">sprint</em> e definir quais serão as tarefas e suas estimativas. A lista de tarefas estimadas será utilizada para criar o <em lang="en">backlog</em> da <em lang="en">sprint</em> e o gráfico de acompanhamento burn down.
 
 A seleção das histórias do usuário para compor a <em lang="en">sprint</em> chama-se <em lang="en">backlog</em>da sprint. As histórias do usuário que não entraram, ficarão disponíveis para as próximas <em lang="en">sprints</em>
@@ -108,7 +183,7 @@ Após a demonstração do artefato, o <abbr title="Product Owner" lang="en">PO</
 
 ### Retrospectiva (<em lang="en">sprint retrospective</em>) {#sprint-retrospective}
 
-O momento de “lavar a roupas sujas”, os desenvolvedores, designers e testadores junto com o <abbr title="Product Owner" lang="en">PO</abbr> e  <abbr title="Scrum Master" lang="en">SM</abbr> irão expor os pontos altos e baixos da sprint. Neste momento são relatadas as lições aprendidas.
+O momento de “lavar a roupas sujas”, os desenvolvedores, designers e testadores junto com o <abbr title="Product Owner" lang="en">PO</abbr> e <abbr title="Scrum Master" lang="en">SM</abbr> irão expor os pontos altos e baixos da sprint. Neste momento são relatadas as lições aprendidas.
 
 ## Duração (<em lang="en">time-box</em>) {#time-box}
 
@@ -133,7 +208,7 @@ O time Scrum pode fazer qualquer atividade do <abbr title="Product Owner" lang="
 ## Scrum X Método tradicional {#scrumXtradicional}
 
 <div class="table-responsive">
-    <table>
+    <table summary="Scrum é interativo e tem foco no humano e o Metódo Tradicional é burocrático e tem foco nos processos">
         <caption>Diferenças entre o Scrum e a Método tradicional de desenvolvimento de software</caption>
         <thead>
             <tr>
@@ -184,7 +259,7 @@ Fique calmo, se você estudar corretamente e entender o que realmente está send
 
 **PS: Eu sei que há diferença entre as instituições que aplicam a certificação, mas lembre-se, essas anotações foram feitas para a certificação de conhecimentos em SCRUM da SCRUMstudy.**
 
-[SCRUMstudy]:https://www.scrumstudy.com/
-[Jira]: https://www.atlassian.com/br/software/jira
-[Mantis]: https://www.mantisbt.org
-[Redmine]: https://www.redmine.org
+[scrumstudy]: https://www.scrumstudy.com/
+[jira]: https://www.atlassian.com/br/software/jira
+[mantis]: https://www.mantisbt.org
+[redmine]: https://www.redmine.org

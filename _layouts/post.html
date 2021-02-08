@@ -17,14 +17,11 @@ layout: default
     </figure>
     {% endif%}
 
-    <article itemprop="articleBody"
-        class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
+    <article itemprop="articleBody" class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
         <h2 class="page-title" itemprop="headline">{{ page.title }}</h2>
         <p class="page-summary" itemprop="description">{{page.summary}}</p>
         <div class="post-meta">
-            <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture"
-                title="Conteúdo produzido por {{site.about-name}}" alt="{{site.about-altavatar}}" 
-                src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
+            <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture" title="Conteúdo produzido por {{site.about-name}}" alt="{{site.about-altavatar}}" src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
             <div class="post-meta-time">
                 {% if page.categories contains "blog" %}
                 {% include post/post-date.html %}

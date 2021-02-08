@@ -17,4 +17,16 @@ button.btn {
       box-shadow: 0 0 0 0.2rem $main-color !important;
     }
   }
+  &-link {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+    }
+  }
 }

@@ -1,0 +1,27 @@
+.main-container-links {
+  @extend .py-3;
+  .container {
+    @extend .shadow;
+    @extend .p-0;
+    background: #fff;
+  }
+  header {
+ border-radius: 1rem 1rem 0 0;
+    @extend .py-5;
+    @extend .px-3;
+    color: #fff;
+    background: #333;
+    @extend .text-center;
+    h1 {
+      @extend .display-4;
+    }
+    p {
+      @extend .lead;
+    }
+    img {
+      @extend .d-block;
+      @extend .mx-auto;
+      @extend .rounded-circle;
+    }
+  }
+}

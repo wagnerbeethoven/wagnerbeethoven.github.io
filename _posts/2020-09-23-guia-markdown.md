@@ -7,11 +7,11 @@ comments: true
 image: https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no
 legend: Print do Editor Atom
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
-alt:  Print do Editor Atom representando um texto formatado em Markdown
+alt: Print do Editor Atom representando um texto formatado em Markdown
 tags:
- - Material de apoio
- - Markdown
- - Traduação
+  - Material de apoio
+  - Markdown
+  - Traduação
 ---
 
 Quando comecei a pesquisar sobre o [Jekyll][jekyll] e sobre a construção de página com geradores de HTML estático sempre ouvi falar sobre Markdown. Essa informação martelou na minha cabeça, mas buscava informações de maneiras esporádicas, à medida que ia sentido a necessidade de uma <span lang="en">tag</span> ia na internet e pesquisava, mas essa busca ficava cada vez mais cansativa, já que minha preocupação maior é deixar o mais semântico e mais acessível possível.
@@ -23,7 +23,7 @@ O markdown não abrangem tantas possibilidades como <abbr title="HyperText Marku
 - Eu sempre gosto de contextualizar tudo que pesquiso, por isso uma informação detalhada sobre a linguagem estará disponível aqui para depois mostrar as aplicações práticas da linguagem.
 - Outra coisa bem importante que vou iniciar é passar para markdown todas as páginas do site. Só não vou dizer prazos 😏.
 - Esta página que você está lendo está escrita em duas linguagens diferentes, mas essa flexibilidade é aceitável pelo [Github](http://github.com/wagnerbeethoven/wagnerbeethoven.github.io) e pelo Markdown. A maneira como ela foi descritita pode ser visualizada através do [arquivo disponibilizado no repositótio do site](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven.github.io/master/_posts/2020-09-23-guia-markdown.md).
-- A fonte este *post* é muito mais extensa do que está disponibilizado aqui, mas escolhi publicar usar apenas o que faz sentido para mim, já que essa publicação será uma guia caso eu vá ter alguma dúvida na escrita do Markdown. 
+- A fonte este _post_ é muito mais extensa do que está disponibilizado aqui, mas escolhi publicar usar apenas o que faz sentido para mim, já que essa publicação será uma guia caso eu vá ter alguma dúvida na escrita do Markdown.
 
 > O texto abaixo foi traduzido para o português a partir o material disponível no site [Markdown Guide][markdownguide] sob a licença [CC BY-SA 4.0][cc].
 
@@ -35,13 +35,13 @@ Usar Markdown é diferente de usar um editor WYSIWYG. Em um aplicativo como o Mi
 
 Por exemplo, para exibir um título, você adiciona um sinal dele (por exemplo, `# Título Um`) ou para deixar uma frase em negrito, você adiciona dois asteriscos antes e depois dela (por exemplo, `**este texto está em negrito**`). Pode demorar um pouco para se acostumar a ver a sintaxe Markdown em seu texto, especialmente se você estiver acostumado com aplicativos WYSIWYG. A captura de tela abaixo mostra um arquivo Markdown exibido no [editor de texto Atom](http://atom.io/).
 
-![Editor Atom](https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no)
+![Editor Atom](https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no "Editor Atom")
 
 Você pode adicionar elementos de formatação Markdown a um arquivo de texto simples usando um aplicativo editor de texto. Ou você pode usar um dos muitos aplicativos Markdown para sistemas operacionais macOS, Windows, Linux, iOS e Android. Existem também vários aplicativos baseados na web projetados especificamente para escrever em Markdown.
 
 Dependendo do aplicativo que você usa, você pode não conseguir visualizar o documento formatado em tempo real. Mas está tudo bem. De [acordo com Gruber](http://daringfireball.net/projects/markdown/), a sintaxe do Markdown foi projetada para ser legível e discreta, de modo que o texto nos arquivos do Markdown pode ser lido mesmo que não sejam processados por máquinas.
 
->O objetivo principal do design para a sintaxe de formatação do Markdown é torná-lo o mais legível possível. A ideia é que um documento formatado em Markdown deve ser publicável como está, como texto simples, sem parecer que foi marcado com tags ou instruções de formatação.
+> O objetivo principal do design para a sintaxe de formatação do Markdown é torná-lo o mais legível possível. A ideia é que um documento formatado em Markdown deve ser publicável como está, como texto simples, sem parecer que foi marcado com tags ou instruções de formatação.
 
 ## Por que usar Markdown?
 
@@ -95,6 +95,7 @@ Não demora muito para aprender a sintaxe do Markdown e, depois que você souber
 Aqui estão alguns exemplos do que você pode fazer com o Markdown.
 
 ### Sites
+
 O Markdown foi projetado para a web, portanto, não é nenhuma surpresa que existam muitos aplicativos projetados especificamente para a criação de conteúdo de sites.
 
 Se você está procurando a maneira mais simples possível de criar um site com arquivos Markdown, verifique [blot.im](http://blot.im) e [smallvictori.es](http://smallvictori.es). Depois de se inscrever em um desses serviços, eles criam uma pasta Dropbox no seu computador. Basta arrastar e soltar seus arquivos Markdown na pasta e - puf! - eles estão em seu site. Não poderia ser mais fácil.
@@ -116,6 +117,7 @@ Aqui estão alguns aplicativos de criação de documentos Markdown que eu recome
 **Dica**: o [iA Writer][ia-writer] fornece modelos para visualizar, imprimir e exportar documentos formatados com Markdown. Por exemplo, o modelo "Academic - MLA Style" recua parágrafos e adiciona espaçamento duplo de frases.
 
 ### Anotações
+
 Em quase todos os aspectos, o Markdown é a sintaxe ideal para fazer anotações. Infelizmente, [Evernote](http://evernote.com/) e [OneNote](http://onenote.com/), dois dos aplicativos de notas mais populares, não são compatíveis com Markdown. A boa notícia é que vários outros aplicativos de notas suportam Markdown:
 
 - [Simplenote](http://simplenote.com/) é um aplicativo de anotações básico gratuito disponível para todas as plataformas.
@@ -126,15 +128,19 @@ Em quase todos os aspectos, o Markdown é a sintaxe ideal para fazer anotações
 Se você não pode se separar do Evernote, dê uma olhada no [Marxico](http://marxi.co/), um editor do Markdown baseado em assinatura para o Evernote, ou use o [Markdown Here](http://markdown-here.com/) com o site do Evernote.
 
 ### Livros
+
 Quer publicar um romance por conta própria? Experimente o [Leanpub](http://leanpub.com/), um serviço que pega seus arquivos formatados em Markdown e os transforma em um livro eletrônico. Leanpub produz seu livro em formato de arquivo PDF, EPUB e MOBI. Se desejar criar cópias de seu livro em brochura, você pode fazer upload do arquivo PDF para outro serviço, como [Kindle Direct Publishing](http://kdp.amazon.com/). Para saber mais sobre como escrever e publicar um livro por conta própria usando Markdown, leia [esta postagem do blog](http://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca).
 
 ### Apresentações
+
 Acredite ou não, você pode gerar apresentações a partir de arquivos formatados em Markdown. Demora um pouco para se acostumar com a criação de apresentações no Markdown, mas quando você pega o jeito, é muito mais rápido e fácil do que usar um aplicativo como o PowerPoint ou Keynote. [Remark](http://remarkjs.com/) ([projeto GitHub](http://github.com/gnab/remark)) é uma ferramenta popular de apresentação de slides Markdown baseada em navegador, assim como o [Cleaver](http://jdan.github.io/cleaver/) ([projeto GitHub](http://github.com/jdan/cleaver)). Se você usa um Mac e prefere usar um aplicativo, verifique [Deckset](http://decksetapp.com/) ou [Marked](http://marked2app.com/).
 
 ### Email
+
 Se você envia muitos e-mails e está cansado dos controles de formatação disponíveis na maioria dos sites de provedores de e-mail, ficará feliz em saber que existe uma maneira fácil de escrever mensagens de e-mail usando Markdown. [Markdown Here](http://markdown-here.com/) é uma extensão de navegador gratuita e de código aberto que converte texto formatado em Markdown em HTML que está pronto para ser enviado.
 
 ### Documentação
+
 Markdown é um ajuste natural para documentação técnica. Empresas como o GitHub estão mudando cada vez mais para o Markdown para sua documentação - confira [sua postagem no blog](http://github.blog/2015-01-06-how-github-uses-github-to-document-github/) sobre como eles migraram sua documentação formatada com Markdown para o [Jekyll][jekyll]. Se você escreve documentação para um produto ou serviço, dê uma olhada nestas ferramentas úteis:
 
 - O [Read the Docs](http://readthedocs.org/) pode gerar um site de documentação a partir de seus arquivos Markdown de código aberto. Basta conectar seu repositório GitHub ao serviço e enviar - Read the Docs faz o resto. Eles também têm um [serviço para entidades comerciais](http://readthedocs.com/).
@@ -165,12 +171,13 @@ Existem muitos recursos que você pode usar para aprender o Markdown. Aqui estã
 ---
 
 ## Visão geral {#overview}
-Esses são os elementos descritos no documento do John Gruber. Todos os aplicativos Markdown oferecem suporte a esses elementos. Existem pequenas variações e discrepâncias entre os processadores Markdown - essas diferenças serão descritas no documento sempre que possível.
 
+Esses são os elementos descritos no documento do John Gruber. Todos os aplicativos Markdown oferecem suporte a esses elementos. Existem pequenas variações e discrepâncias entre os processadores Markdown - essas diferenças serão descritas no documento sempre que possível.
 
 ## Sintaxe Básica {#basic-syntax}
 
-<div class="table-responsive"><table>
+<div class="table-responsive">
+<table summary="Sintaxe básica">
     <thead>
         <tr>
             <th>Elemento</th>
@@ -214,11 +221,11 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
         </tr>
         <tr>
             <td><span class="td-info">Elemento</span> <a title="Link" href="#links">Link</a></td>
-            <td><span class="td-info">Sintaxe de Markdown</span> <code>[texto](http://google.com)</code></td>
+            <td><span class="td-info">Sintaxe de Markdown</span> <code>[texto](google.com)</code></td>
         </tr>
         <tr>
             <td><span class="td-info">Elemento</span> <a title="Imagem" href="#image">Imagem</a></td>
-            <td><span class="td-info">Sintaxe de Markdown</span> <code><img alt="Logo da Agência Sumô" src="{{site.url}}/img/favicon/favicon-48x48.png" style="margin: 0 !important; box-shadow: none !important" alt="alt text"></code>
+            <td><span class="td-info">Sintaxe de Markdown</span> <code><img alt="Logo da Agência Sumô" title="Logo da Agência Sumô" src="{{site.url}}/img/favicon/favicon-48x48.png" class="m-0 shadow-0"></code>
             </td>
         </tr>
     </tbody>
@@ -228,7 +235,7 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
 
 Para criar um título, adicione sinais numéricos (`#`) na frente de uma palavra ou frase. O número de sinais numéricos que você usa deve corresponder ao nível do título. Por exemplo, para criar um título de nível três (`<h3>`), use três sinais numéricos (por exemplo, `### Meu cabeçalho`).
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Formatação de títulos">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -274,7 +281,7 @@ Para criar um título, adicione sinais numéricos (`#`) na frente de uma palavra
 
 Como alternativa, na linha abaixo do texto, adicione qualquer número de `==` caracteres para o título de nível 1 ou `--` caracteres para o título de nível 2.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Sintase alternativas de formatação de títulos">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -300,7 +307,7 @@ Como alternativa, na linha abaixo do texto, adicione qualquer número de `==` ca
 
 Os aplicativos Markdown não concordam sobre como lidar com a falta de espaço entre os sinais numéricos (`#`) e o nome do título. Para compatibilidade, sempre coloque um espaço entre os sinais numéricos e o nome do título.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Práticas recomendadas do uso de Títulos">
     <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -324,7 +331,7 @@ Os aplicativos Markdown não concordam sobre como lidar com a falta de espaço e
 Para criar parágrafos, use uma linha em branco para separar uma ou mais linhas de texto.
 
 <div class="table-responsive">
-    <table>
+    <table summary="Parágrafo">
         <thead>
             <tr>
                 <th>Markdown</th>
@@ -344,9 +351,9 @@ Para criar parágrafos, use uma linha em branco para separar uma ou mais linhas 
 
 #### Práticas recomendadas {#paragraph-best-practices}
 
-A menos que o [parágrafo esteja em uma lista](#paragraph-list), não avance as linhas dos parágrafos com espaços ou tabulações.
+A menos que o [parágrafo esteja em uma lista](#paragraph-list "Paragrafo dentro de listas"), não avance as linhas dos parágrafos com espaços ou tabulações.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Práticas recomendadas do uso de parágrafos">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -372,7 +379,7 @@ A menos que o [parágrafo esteja em uma lista](#paragraph-list), não avance as 
 
 Para criar uma quebra de linha (`<br>`), termine uma linha com dois ou mais espaços e retorne a digitar.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Quebra de linha">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -399,7 +406,7 @@ Para compatibilidade, use um espaço em branco à direita ou a tag `<br>` HTML n
 
 Existem duas outras opções que não recomendo usar. [CommonMark][commonmark] e algumas outras linguagens de marcação leves permitem que você digite uma barra invertida (`\`) no final da linha, mas nem todos os aplicativos Markdown suportam isso, então não é uma ótima opção de uma perspectiva de compatibilidade. E pelo menos algumas linguagens de marcação leves não exigem nada no final da linha - basta voltar a digitar e elas criarão uma quebra de linha
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table  summary="Práticas recomendadas do uso de quebras de linha">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -427,7 +434,7 @@ Você pode adicionar ênfase colocando o texto em negrito ou itálico.
 
 Para texto em negrito, adicione dois asteriscos ou sublinhados antes e depois de uma palavra ou frase. Para colocar em negrito no meio de uma palavra para dar ênfase, adicione dois asteriscos sem espaços ao redor das letras.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Negrito">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -458,7 +465,7 @@ Para texto em negrito, adicione dois asteriscos ou sublinhados antes e depois de
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em negrito o meio de uma palavra para dar ênfase.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Práticas recomendadas do uso de negrito">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -477,7 +484,7 @@ Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no me
 
 Para colocar o texto em itálico, adicione um asterisco ou sublinhado antes e depois de uma palavra ou frase. Para colocar em itálico o meio de uma palavra para dar ênfase, adicione um asterisco sem espaços ao redor das letras.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Itálico">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -508,7 +515,7 @@ Para colocar o texto em itálico, adicione um asterisco ou sublinhado antes e de
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em itálico uma letra no meio de uma palavra.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Práticas recomendadas do uso de itálico">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -528,7 +535,7 @@ Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no me
 
 Para enfatizar o texto com negrito e itálico ao mesmo tempo, adicione três asteriscos ou sublinhados antes e depois de uma palavra ou frase. Para colocar em negrito e itálico no meio de uma palavra para dar ênfase, adicione três asteriscos sem espaços ao redor das letras.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Negrito e Itálico">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -569,7 +576,7 @@ Para enfatizar o texto com negrito e itálico ao mesmo tempo, adicione três ast
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em negrito e itálico no meio de uma palavra para dar ênfase.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Práticas recomendadas do uso de itálico e negrito">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -619,7 +626,7 @@ A renderização é essa:
 
 #### Citações em bloco alinhados {#nested-blockquotes}
 
-Citações em bloco (<code>blockquote</code>) podem ser aninhados. Adicione um  `>>`  na frente do parágrafo que deseja aninhar.
+Citações em bloco (<code>blockquote</code>) podem ser aninhados. Adicione um `>>` na frente do parágrafo que deseja aninhar.
 
 ```
 >Dorothy a seguiu por muitas das belas salas de seu castelo.
@@ -664,7 +671,7 @@ Você pode organizar itens em listas ordenadas e não ordenadas.
 
 Para criar uma lista ordenada, adicione itens de linha com números seguidos de pontos. Os números não precisam estar em ordem numérica, mas a lista deve começar com o número um.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Listas ordenadas">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -700,7 +707,9 @@ Para criar uma lista ordenada, adicione itens de linha com números seguidos de 
 
 CommonMark e algumas outras linguagens de marcação leves permitem que você use um parêntese (`)`) como um delimitador (por exemplo, `1) Primeiro item`), mas nem todos os aplicativos Markdown suportam isso, então não é uma ótima opção de uma perspectiva de compatibilidade. Para compatibilidade, use apenas ponto (`.`).
 
-<div class="table-responsive"><table><thead>
+<div class="table-responsive">
+<table  summary="Práticas recomendadas do uso de listas ordenadas">
+<thead>
         <tr>
             <th>✅ Faça isso</th>
             <th>❌ Não faça isso</th>
@@ -722,7 +731,9 @@ Para criar uma lista não ordenada, adicione travessões (`-`), asteriscos (`*`)
 
 Os aplicativos de Markdown não concordam sobre como lidar com diferentes delimitadores na mesma lista. Para compatibilidade, não misture e combine delimitadores na mesma lista - escolha um e fique com ele.
 
-<div class="table-responsive"><table><thead>
+<div class="table-responsive">
+<table summary="Práticas recomendadas do uso de listas não ordenadas">
+    <thead>
         <tr>
             <th>✅ Faça isso</th>
             <th>❌ Não faça isso</th>
@@ -797,7 +808,7 @@ A renderização é essa:
 
 ##### Blocos de código {#code-blocks-1}
 
-Os [blocos de código](#code-blocks) são normalmente recuados quatro espaços ou uma <kbd>tab</kbd> <br>
+Os [blocos de código](#code-blocks "Bloco de código") são normalmente recuados quatro espaços ou uma <kbd>tab</kbd> <br>
 
 Quando estiverem em uma lista, recue oito espaços ou duas tabulações.
 
@@ -833,7 +844,7 @@ A renderização é essa:
  1. Abra o arquivo que contém o mascote do Linux.
  2. Maravilhe-se com sua beleza.
 
-    ![Tux, O mascote Linux](http://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+    ![Tux, O mascote Linux](upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
 
  3. Fechar o arquivo
 ```
@@ -843,7 +854,7 @@ A renderização é essa:
 1. Abra o arquivo que contém o mascote do Linux.
 2. Maravilhe-se com sua beleza.
 
-   ![Tux, O mascote Linux](https://lh3.googleusercontent.com/pw/ACtC-3drDR1IW2PCA5hz-Ieu83yQovD0UYPePQNkyXRFutqrrlXj7G65IqfYMdV7LrewxBjD4yG_H62-u11nsZh2cri9e65iuKgE6O-eHA7U9x7wfKkluACdD_U6Febrp4ghD1V_Jdf2vyUByZo4M2GDJ5cy=s120-no?authuser=0)
+   ![Tux, O mascote Linux](https://lh3.googleusercontent.com/pw/ACtC-3drDR1IW2PCA5hz-Ieu83yQovD0UYPePQNkyXRFutqrrlXj7G65IqfYMdV7LrewxBjD4yG_H62-u11nsZh2cri9e65iuKgE6O-eHA7U9x7wfKkluACdD_U6Febrp4ghD1V_Jdf2vyUByZo4M2GDJ5cy=s120-no?authuser=0 "Mascote do Linux")
 
 3. Fechar o arquivo
 
@@ -873,7 +884,8 @@ A renderização é essa:
 
 Para denotar uma palavra ou frase como código, coloque-a entre crases (<code> ` </code>).
 
-<div class="table-responsive"><table>
+<div class="table-responsive">
+<table summary="Código">
 <thead>
       <tr>
         <th>Markdown</th>
@@ -894,7 +906,7 @@ Para denotar uma palavra ou frase como código, coloque-a entre crases (<code> `
 
 Se a palavra ou frase que você deseja exibir como código inclui um ou mais crases, você pode fazer o escape colocando a palavra ou frase entre crases duplos (<code> `</code>)
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Crase">
 <thead>
       <tr>
         <th>Markdown</th>
@@ -931,7 +943,7 @@ A renderização é essa:
     </html>
 ```
 
-**Note**: Para criar blocos de código sem recuar linha, acesse [configurações avançadas de código](#fenced-code-blocks).
+**Note**: Para criar blocos de código sem recuar linha, acesse [configurações avançadas de código](#fenced-code-blocks "Configurações avançadas de código").
 
 ### Régua horizontal {#horizontal}
 
@@ -949,7 +961,8 @@ A renderização é essa:
 
 Para compatibilidade, coloque linhas em branco antes e depois das régua horizontal <code>&lt;hr&gt;</code>.
 
-<div class="table-responsive"><table>
+<div class="table-responsive">
+<table summary="Práticas recomendadas do uso de régua horizontal">
   <thead>
     <tr>
       <th>✅ Faça isso</th>
@@ -966,9 +979,9 @@ Para compatibilidade, coloque linhas em branco antes e depois das régua horizon
 
 ### Links {#links}
 
-Para criar um link, coloque o texto do link entre colchetes (por exemplo, `[Duck Duck Go]`) e siga-o imediatamente com o URL entre parênteses (por exemplo, `(http://duckduckgo.com)`).
+Para criar um link, coloque o texto do link entre colchetes (por exemplo, `[Duck Duck Go]`) e siga-o imediatamente com o URL entre parênteses (por exemplo, `(duckduckgo.com)`).
 
-`Meu mecanismo de pesquisa favorito é [Duck Duck Go](http://duckduckgo.com).`
+`Meu mecanismo de pesquisa favorito é [Duck Duck Go](duckduckgo.com).`
 
 A renderização é essa:
 
@@ -978,7 +991,7 @@ Meu mecanismo de pesquisa favorito é [Duck Duck Go](http://duckduckgo.com).
 
 Você pode adicionar um título para um link. Isso aparecerá como uma dica quando o usuário passar o mouse sobre o link. Para adicionar um título, coloque-o entre parênteses após o URL.
 
-`Meu mecanismo de pesquisa favorito é [Duck Duck Go](http://duckduckgo.com "O melhor mecanismo de pesquisa para privacidade").`
+`Meu mecanismo de pesquisa favorito é [Duck Duck Go](duckduckgo.com "O melhor mecanismo de pesquisa para privacidade").`
 
 A renderização é essa:
 
@@ -1069,7 +1082,7 @@ e o HTML para o link seria:
 
 Os aplicativos de Markdown não concordam sobre como lidar com espaços no meio de uma URL. Para compatibilidade, tente codificar em URL quaisquer espaços com `%20`.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table  summary="Práticas recomendadas do uso de links">
   <thead>
     <tr>
       <th>✅ Faça isso</th>
@@ -1118,7 +1131,7 @@ A saída renderizada é semelhante a esta:
 
 Você pode usar uma barra invertida para exibir os caracteres a seguir:
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Barra invertida">
   <thead>
     <tr>
       <th>Caractere</th>
@@ -1182,7 +1195,6 @@ Você pode usar uma barra invertida para exibir os caracteres a seguir:
   </tbody>
 </table></div>
 
-
 ### HTML {#html}
 
 Muitos aplicativos Markdown permitem que você use tags HTML em texto formatado por Markdown. Isso é útil se você preferir certas tags HTML à sintaxe Markdown. Por exemplo, algumas pessoas acham mais fácil usar tags HTML para imagens. Usar HTML também é útil quando você precisa alterar os atributos de um elemento, como especificar a cor do texto ou alterar a largura de uma imagem.
@@ -1199,7 +1211,7 @@ Esta **palavra** está em negrito. Esta <em>palavra</em> está em itálico.
 
 Por razões de segurança, nem todos os aplicativos Markdown suportam HTML em documentos Markdown. Em caso de dúvida, verifique a documentação do aplicativo Markdown. Alguns aplicativos suportam apenas um subconjunto de tags HTML.
 
-Use linhas em branco para separar elementos HTML em nível de bloco como `<div>`, `<div class="table-responsive"><table>`, `<pre>` e `<p>` do conteúdo circundante. Tente não recuar as tags com tabulações ou espaços - isso pode interferir na formatação.
+Use linhas em branco para separar elementos HTML em nível de bloco como `<div>`, `<table>`, `<pre>` e `<p>` do conteúdo circundante. Tente não recuar as tags com tabulações ou espaços - isso pode interferir na formatação.
 
 Você não pode usar a sintaxe Markdown dentro de tags HTML de nível de bloco. Por exemplo, `<p>_itálico_ e **negrito** </p>` não funcionam.
 
@@ -1209,7 +1221,7 @@ Você não pode usar a sintaxe Markdown dentro de tags HTML de nível de bloco. 
 
 Esses elementos estendem a sintaxe básica, adicionando recursos adicionais. Nem todos os aplicativos Markdown suportam esses elementos.
 
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Síntaxe avançada de Markdown">
 <thead>
         <tr>
             <th>Elemento</th>
@@ -1276,7 +1288,7 @@ Nem todos os aplicativos Markdown oferecem suporte a elementos de sintaxe estend
 
 ### Linguagens de marcação leves
 
-Existem várias linguagens de marcação leves que são *superconjuntos* do Markdown. Eles incluem a sintaxe básica de Gruber e a baseiam na adição de elementos adicionais como tabelas, blocos de código, destaque de sintaxe, link automático de URL e notas de rodapé. Muitos dos aplicativos Markdown mais populares usam uma das seguintes linguagens de marcação leves:
+Existem várias linguagens de marcação leves que são _superconjuntos_ do Markdown. Eles incluem a sintaxe básica de Gruber e a baseiam na adição de elementos adicionais como tabelas, blocos de código, destaque de sintaxe, link automático de URL e notas de rodapé. Muitos dos aplicativos Markdown mais populares usam uma das seguintes linguagens de marcação leves:
 
 - [CommonMark][commonmark]
 - [GitHub Flavored Markdown (GFM)][gfm]
@@ -1291,18 +1303,20 @@ Existem [dezenas de processadores Markdown][dezenas] disponíveis. Muitos deles 
 ### Tabelas {#tables}
 
 Para adicionar uma tabela, use três ou mais hifens (`---`) para criar o cabeçalho de cada coluna e use barras verticais (`|`) para separar cada coluna. Opcionalmente, você pode adicionar tubos em qualquer extremidade da tabela.
+
 ```
 | Sintaxe      | Descrição    |
 | ------------ | ------------ |
 | Cabeçalho    | Título       |
 | Paragrafo    | Texto        |
 ```
+
 A renderização é essa:
 
-| Sintaxe      | Descrição    |
-| ------------ | ------------ |
-| Cabeçalho    | Título       |
-| Paragrafo    | Texto        |
+| Sintaxe   | Descrição |
+| --------- | --------- |
+| Cabeçalho | Título    |
+| Paragrafo | Texto     |
 
 As larguras das células podem variar, conforme mostrado abaixo, mas o resultado será sempre o mesmo
 
@@ -1328,27 +1342,26 @@ Você pode alinhar o texto nas colunas à esquerda, à direita ou ao centro adic
 
 A renderização é essa:
 
-| Sintaxe      | Descrição    | Teste texto      |
-| :---         | :----:       | ---:             |
-| Cabeçalho    | Título       | Exemplo de texto |
-| Paragrafo    | Texto        | E mais exemplo   |
-
+| Sintaxe   | Descrição |      Teste texto |
+| :-------- | :-------: | ---------------: |
+| Cabeçalho |  Título   | Exemplo de texto |
+| Paragrafo |   Texto   |   E mais exemplo |
 
 #### Formatação de textos em tabelas {#formatting-text-in-tables}
 
-Você pode formatar o texto dentro das tabelas. Por exemplo, você pode adicionar [links](#links), [código](#code) (formatação de palavras ou frases utilizando a crase  (<code> ` </code>), mas não [blocos de código](#code-blocks)) e formação com [ênfase](#emphasis).
+Você pode formatar o texto dentro das tabelas. Por exemplo, você pode adicionar [links](#links), [código](#code) (formatação de palavras ou frases utilizando a crase (<code> ` </code>), mas não [blocos de código](#code-blocks)) e formação com [ênfase](#emphasis).
 
 Você não pode adicionar títulos, cotas bloqueadas, listas, regras horizontais, imagens ou tags HTML.
 
 #### Exibindo o `pipe` {#escaping-pipe-characters-in-tables}
 
-Você pode exibir um caractere de barra vertical (` | `) em uma tabela usando seu código de caractere HTML (`&#124;`).
+Você pode exibir um caractere de barra vertical (`|`) em uma tabela usando seu código de caractere HTML (`&#124;`).
 
 ### Bloco de códigos indentados {#fenced-code-blocks}
 
-A sintaxe básica do Markdown permite criar [blocos de código](#code-blocks) avançando as linhas em quatro espaços ou uma tabulação. Se você achar isso inconveniente, tente usar blocos de código protegidos. Dependendo do seu processador ou editor Markdown, você usará três crases (``` `` ```) ou três tis (` ~~~ `) nas linhas antes e depois do bloco de código. A melhor parte? Você não precisa recuar nenhuma linha!
+A sintaxe básica do Markdown permite criar [blocos de código](#code-blocks) avançando as linhas em quatro espaços ou uma tabulação. Se você achar isso inconveniente, tente usar blocos de código protegidos. Dependendo do seu processador ou editor Markdown, você usará três crases (` `` `) ou três tis (`~~~`) nas linhas antes e depois do bloco de código. A melhor parte? Você não precisa recuar nenhuma linha!
 
-~~~~
+````
 ```
 {
   "primeiroNome": "João",
@@ -1356,7 +1369,7 @@ A sintaxe básica do Markdown permite criar [blocos de código](#code-blocks) av
   "idade": 25
 }
 ```
-~~~~
+````
 
 A renderização é essa:
 
@@ -1374,7 +1387,7 @@ A renderização é essa:
 
 Muitos processadores Markdown suportam realce de bloco de código. Este recurso permite adicionar realce de cor para qualquer linguagem em que seu código foi escrito. Para adicionar realce de sintaxe, especifique um idioma próximo as crases antes do bloco de código exibido.
 
-~~~~
+````
 ```json
   {
   "firstName": "John",
@@ -1382,20 +1395,19 @@ Muitos processadores Markdown suportam realce de bloco de código. Este recurso 
   "age": 25
   }
 ```
-~~~~
+````
 
 A renderização é essa:
 
 ```json
-  {
+{
   "firstName": "John",
   "lastName": "Smith",
   "age": 25
-  }
+}
 ```
 
 ### Notas de rodapé {#footnotes}
-
 
 As notas de rodapé permitem adicionar notas e referências sem confundir o corpo do documento. Quando você cria uma nota de rodapé, um número sobrescrito com um link aparece onde você adicionou a referência da nota de rodapé. Os leitores podem clicar no link para ir para o conteúdo da nota de rodapé na parte inferior da página.
 
@@ -1403,7 +1415,7 @@ Para criar uma referência de nota de rodapé, adicione um circunflexo e um iden
 
 Adicione a nota de rodapé usando outro acento circunflexo e número entre colchetes com dois pontos e texto (`[^1]: Minha nota de rodapé`). Você não precisa colocar notas de rodapé no final do documento. Você pode colocá-los em qualquer lugar, exceto dentro de outros elementos como listas, citações em bloco e tabelas. `[^1]: Minha nota de rodapé`.
 
-~~~
+```
 Aqui está uma nota de rodapé simples, [^1] e aqui está outra mais longa. [^nota]
 
 [^1]: Esta é a primeira nota de rodapé.
@@ -1414,7 +1426,7 @@ Avance parágrafos para incluí-los na nota de rodapé.
 `{meu código}`
 
 Adicione quantos parágrafos desejar.
-~~~
+```
 
 A renderização é essa:
 
@@ -1433,7 +1445,6 @@ Adicione quantos parágrafos desejar.
 
 Muitos processadores Markdown suportam IDs personalizados para [cabeçalhos](#headings) - alguns processadores Markdown os adicionam automaticamente. Adicionar IDs personalizados permite que você vincule diretamente aos títulos e os modifique com CSS. Para adicionar um ID de título personalizado, coloque o ID personalizado entre chaves na mesma linha do título.
 
-
 ```text
 ### Meu ótimo título {#meu-id-personalizado}
 ```
@@ -1446,10 +1457,9 @@ A renderização é essa:
 
 #### Links para os IDs dos títulos
 
+Você pode vincular títulos com IDs personalizados no arquivo criando um [link padrão](#links) com um sinal de número (`#`) seguido pelo ID do cabeçalho personalizado.
 
-Você pode vincular títulos com IDs personalizados no arquivo criando um [link padrão](#links) com um sinal de número (` # `) seguido pelo ID do cabeçalho personalizado.
-
-<div class="table-responsive"><table>
+<div class="table-responsive"><table summary="Links âncoras">
   <thead>
     <tr>
       <th>Markdown</th>
@@ -1466,15 +1476,13 @@ Você pode vincular títulos com IDs personalizados no arquivo criando um [link 
   </tbody>
 </table></div>
 
-
 Outros sites podem se vincular ao título adicionando o ID do título personalizado ao URL completo da página da web (por exemplo, `[ID do título](http://markdownguide.org/extended-syntax#heading-ids)`).
-
 
 ### Listas de Definição {#definition-lists}
 
 Alguns processadores Markdown permitem criar lista de definições de termos (_definition list_) e suas definições correspondentes. Para criar uma lista de definições, digite o termo na primeira linha. Na próxima linha, digite dois pontos seguido por um espaço e a definição
 
-~~~
+````
 ```html
 Primeiro termo
 : Esta é a definição do primeiro item.
@@ -1482,7 +1490,7 @@ Primeiro termo
 Segundo termo
 : Esta é a definição do segundo item.
 ```
-~~~
+````
 
 O HTML será esse:
 
@@ -1491,7 +1499,7 @@ O HTML será esse:
   <dt>First Term</dt>
   <dd>This is the definition of the first term.</dd>
   <dt>Second Term</dt>
-  <dd>This is one definition of the second term. </dd>
+  <dd>This is one definition of the second term.</dd>
 </dl>
 ```
 
@@ -1515,17 +1523,17 @@ A renderização é essa:
 
 ### Lista de tarefas {#task-lists}
 
-As listas de tarefas permitem que você crie uma lista de itens com caixas de seleção. Em aplicativos Markdown que suportam listas de tarefas, as caixas de seleção serão exibidas ao lado do conteúdo. Para criar uma lista de tarefas, adicione travessões  ( `-` ) e colchetes com um espaço  ( `[ ]` ) na frente dos itens da lista de tarefas. Para selecionar uma caixa de seleção, adicione um `x` entre os colchetes ( `[x]` ).
+As listas de tarefas permitem que você crie uma lista de itens com caixas de seleção. Em aplicativos Markdown que suportam listas de tarefas, as caixas de seleção serão exibidas ao lado do conteúdo. Para criar uma lista de tarefas, adicione travessões ( `-` ) e colchetes com um espaço ( `[ ]` ) na frente dos itens da lista de tarefas. Para selecionar uma caixa de seleção, adicione um `x` entre os colchetes ( `[x]` ).
 
-~~~
+```
 - [x] Escrever o *release* para imprensa
 - [ ] Atualizar o site
 - [ ] Contactar a mídia
-~~~
+```
 
 O resultado será algo parecido com a imagem abaixo:
 
-- [x] Escrever o *release* para imprensa
+- [x] Escrever o _release_ para imprensa
 - [ ] Atualizar o site
 - [ ] Contactar a mídia
 
@@ -1571,15 +1579,15 @@ A renderização é essa:
 
 e você não quiser que um URL seja vinculado automaticamente, você pode remover o link [exibindo o URL como um código com crases](#code).
 
-~~~
+```
 `http://google.com`
-~~~
+```
 
 A renderização é essa:
 
 `http://google.com`
 
-[markdownguide]: http://markdownguide.org/ "Markdown Guide"
+[markdownguide]: http://markdownguide.org/
 [cc]: http://creativecommons.org/licenses/by-sa/4.0/
 [dillinger]: http://dillinger.io/
 [jekyll]: http://jekyllrb.com
