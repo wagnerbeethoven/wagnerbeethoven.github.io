@@ -40,7 +40,9 @@
   h5,
   h6 {
     @extend .font-weight-lighter;
-    @extend .mt-3;
+    &:not(:first-child) {
+      margin-top: 3rem;
+    }
   }
 
   &-article {
@@ -60,10 +62,11 @@
     h5,
     h6 {
       @extend .col-12;
-      @extend .px-0;
+      @extend .p-0;
       @extend .font-weight-lighter;
-      @extend .pt-5;
-      @extend .pb-3;
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
     }
 
     ul,
@@ -80,6 +83,10 @@
       li {
         list-style-type: square !important;
       }
+    }
+    img {
+      @extend .my-0;
+      @extend .mx-auto;
     }
   }
 }

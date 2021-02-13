@@ -39,12 +39,12 @@ article {
     @extend .rounded;
     @extend .d-block;
     @extend .shadow-sm;
-    @extend .my-5;
-    @extend .mb-3;
+    @extend .m-0;
+    // @extend .mb-3;
   }
 
   figure {
-    @extend .my-2;
+    @extend .my-0;
 
     img {
       @extend .my-0;
