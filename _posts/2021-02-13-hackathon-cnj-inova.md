@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
-summary: "Todos os detalhes da construção e as impressões do que rolou na competição ou o primeiro Hackathon a gente nunca esquece"
+summary: "Todos os detalhes da construção e as impressões do que rolou na competição"
 categories: blog
 comments: true
 image: https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-demoday.jpg
@@ -16,19 +16,21 @@ tags:
 
 # Panorama traz os gargalos da Justiça Brasileira
 
-Na minha cabeça hackathon sempre foi sinônimo de virar noites produzindo e construído ideias inacabadas. Diego Lages já tinha me convidado uma vez, neguei por causa de um periodo ruim da vida, mas no segundo convite, já estava mentalmente mais estável e de coração aberto para cair de cabeça na aventura.
+Na minha cabeça hackathon sempre foi sinônimo de virar noites produzindo e construído ideias inacabadas. Diego Lages já tinha me convidado uma vez, neguei por causa de um período ruim da vida, mas no segundo convite, já estava mentalmente mais estável e de coração aberto para cair de cabeça na aventura.
 
-O hackathon foi o do **Conselho Nacional de Justiça**, após o aceite, em pouco tempo já estava num grupo do WhatsApp formado por mim e mais 5 mentes desconhecidas, mas brilhantes!
+O hackathon foi o do **Conselho Nacional de Justiça**, após o aceite, já estava num grupo do WhatsApp formado por mim e mais 5 mentes desconhecidas, mas brilhantes!
 
 A turma tinha vivência e *khow-how* gigantesco sobre Justiça Brasileira, processamento de dados e desenvolvimento de software.
 
-**Nós conquistamos o 2º lugar!** Foi um grata surpresa, mesmo não tenho conquistado a vitória, o resultado foi muito melhor do que esperava.
+**Nós conquistamos o 2º lugar!** Foi uma grata surpresa, mesmo não tenho conquistado o 1º lugar, o resultado foi muito melhor do que esperava.
 
 Vou tentar detalhar todo o processo nos textos abaixo.
 
 # O Hackathon
 
 [![imagem da fachada de um prédio ao fundo com diversos pontos por cima. Texto: Enap Convida. CNJ Inova. Ciência de dados e Inteligência Artificial. Abertura das inscrições: sexta, 11 de setembro, as 10h. [www.youtube.com/user/CanalENAP](http://www.youtube.com/user/CanalENAP). Live. CNJ. Pátria Amada Brasil Governo Federal.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-facebook.png "Clique na imagem para visualizar a publicação original no Facebook")](https://www.facebook.com/cnj.oficial/photos/4446714988734560)
+
+## Release
 
 > O Conselho Nacional de Justiça (CNJ) convidou profissionais de áreas multidisciplinares para que desenvolvam soluções inovadoras, descentralizadas e disruptivas que beneficiarão toda a sociedade para atacar duas dores da Justiça Brasileira.
 > Os desafios propostos foram:
@@ -39,7 +41,7 @@ Vou tentar detalhar todo o processo nos textos abaixo.
 
 [![ao fundo fotografia de um grupo de pessoas ao redor de uma mesa escrevendo. Texto: Números Desafio CNJ Inova. 522 inscritos no CNJ Inova. 66 times em 2 desafios. Desafio 1: 43 times. Desafio 2: 23 times. 263 horários disponíveis para mentoria. CNJ Inova. Ciência de dados e Inteligência artificial. Enap. Lab Griô. Shawee. CNJ. Pátria amada Brasil. Governo Federal.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-resultado-dos-inscritos.jpg "Cique na imagem para visualizar a publicação original do CNJ no Instagram")](https://www.instagram.com/p/CGXvY4RBLOs)
 
-Conseguimos ganhar dos 43 times que estavam concorrendo na primeira etapa, já na segunda a disputa estava entre os 3 melhores do primeiro desafio e 3 do segundo desafio.
+Conseguimos ganhar dos 43 times que estavam concorrendo na primeira etapa, já na segunda a disputa estava entre os 3 melhores do primeiro desafio.
 
 ## Composição da equipe
 
@@ -50,10 +52,11 @@ Conseguimos ganhar dos 43 times que estavam concorrendo na primeira etapa, já n
 
 ## Documentos do CNJ
 
-<a href="https://1drv.ms/b/s!AkkMpcXs4WkOka9GcqyKBkvGqNG6rw?e=lwMWqa" download class="documento">CNJ Inova: Edital <small>250 KB</small></a> <br>
-<a href="https://1drv.ms/b/s!AkkMpcXs4WkOka4pN2KhckB4P_atXg?e=WEI07i" download class="documento">CNJ Inova: Briefing <small>3 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-1-edital.pdf" download class="documento">CNJ Inova: Edital <small>250 KB</small></a>
 
-# A competição
+<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf" download class="documento">CNJ Inova: Briefing <small>3 MB</small></a>
+
+# O desafio
 
 Nossa equipe escolheu o primeiro desafio. **Tempo e Produtividade**, a organização entregou diversos materiais que auxiliaram para concepção da solução.
 
@@ -71,7 +74,7 @@ Nossa equipe escolheu o primeiro desafio. **Tempo e Produtividade**, a organiza
 > (1) construir uma estratégia inteligente de controle interno de processos e alertar sobre possíveis gargalos no tempo de tramitação processual;  
 > (2) auxiliar na construção de um diagnóstico para oportunizar medidas assertivas a fim de permitir maior eficiência dos atos.
 >
-> A clusterização de unidades judiciárias semelhantes é particularmente importante, pois permite comparações nacionais, considerando suas características específicas. O modelo de classificação deve ser capaz de identificar os fatores de discriminação entre as unidades com base nos tipos processuais nas classes, nos assuntos, no fluxo dos processos, entre outros.
+> A clusterização[^1] de unidades judiciárias semelhantes é particularmente importante, pois permite comparações nacionais, considerando suas características específicas. O modelo de classificação deve ser capaz de identificar os fatores de discriminação entre as unidades com base nos tipos processuais nas classes, nos assuntos, no fluxo dos processos, entre outros.
 
 ### Mentorias e Avaliações
 
@@ -85,17 +88,18 @@ A avaliação dos projetos foram feitas por especialistas em computação.
 
 #### 2ª Etapa
 
-Na segunda etapa, a mentoria foi feita com os envolvidos diretamente com o CNJ. Foi sugerido que mudássemos a persona (ao invés mudássemos para alguma já existente e escolhidas pela organização), agora o foco seria os funcionários do CNJ, porém sem interesse com o usuário final da aplicação, ou seja, nada de juízes.
+Na segunda etapa, a mentoria foi feita com os envolvidos diretamente com o CNJ. Foi sugerido que mudássemos a persona — ao invés utilizar as personas já existentes e fornecidas pela organização. O foco seria os funcionários do CNJ, porém sem interesse com o usuário final da aplicação, ou seja, nada de juízes.
 
 ## Demoday
 
 A apresentação final da solução proposta foi feita no sábado (28/12/2020) pela manhã através de vídeo conferência. Os avaliadores foram Carl Smith (Secretaria de Programas, Pesquisas e Gestão Estratégica), Thiago Vieira (Gestor de Sistemas Corporativos do CNJ) e Fábio Porto (Magistrado) e tivemos exatamente 5 minutos para apresentação e mais 5 minutos perguntas dos jurados.
 
-O processo ocorreu de maneira como tínhamos previsto, algumas dúvidas nos já tínhamos mapeado e isso foi bom, por que nossas respostas foram mais diretas e assertivas, porém após todas as equipes do primeiro desafio se apresentarem, eles pediram que escolhêssemos 1 membro para participar sozinho de uma sabatina de perguntas sobre o processo durante 30 minutos.
+O processo ocorreu de maneira como tínhamos previsto, algumas dúvidas nos [já tínhamos mapeado](#possíveis-perguntas) e isso foi bom, já que as nossas respostas foram mais diretas e assertivas. Após todas as equipes do primeiro desafio se apresentarem, pediram que escolhêssemos 1 membro para participar sozinho de uma sabatina de perguntas sobre o processo de construção da solução e funcionamento da ferramenta durante 30 minutos.
 
-Após isso, o resultado foi dito e ficamos com o segundo lugar - como havia tido no início do texto.
+Com o final das equipes do segundo desafio, o resultado foi dito!  
+🏆 Ficamos com o segundo lugar.
 
-Abaixo vou tentar trazer do processo de Design que tentei junto copm a equipe planejar, mesmo com o pouco tempo para desenvolver e imergir no problema - os detalhes de desenvolvimento e negócios poderá ser [conferido no github do projeto](https://github.com/lfvvercosa/fase2_desafio_cnj).
+Tentarei trazer do processo de Design que desenvolvi junto com a equipe, mesmo com o pouco tempo para desenvolver e imergir no problema.
 
 # A solução - Panorama
 
@@ -110,16 +114,16 @@ Para primeira fase, a organização nos forneceu 4 perfis do publico alvo:
 - advogado
 - cidadão comum
 
-Vendo o tanto que esses perfis podem ganhar e o tanto que precisaríamos trabalhar para sanar suas dores de maneira eficiente, decidimos escolher apenas o juiz. Sendo ele, o topo da cadeia jurídica, seu trabalho é decisório para o processo. Embora o cidadão comum ter sido cogitado, não iríamos agregar ganhos significativos quanto o juiz.
+Vendo o tanto que esses perfis poderiam trazer de ganhos reais e rápidos para o ambiente jurídico e o tanto que precisaríamos trabalhar para sanar suas dores de maneira eficiente, decidimos escolher apenas o juiz. Sendo ele, o topo da cadeia jurídica, seu trabalho é decisório para o processo. Embora o cidadão comum ter sido cogitado, não iríamos agregar ganhos significativos quanto o juiz.
 
-[![(Personas) Casos e Relatos: Relato 01 - Juiz - Desembargador "Após a digitalização dos processos, gostaria de ter um sistema que me auxilie a identificar os problemas da minha unidade a fim de consertá-los e aumentar a produtividade da vara..." Logo do CNJ Inova, do Conselho Nacional de Justiça e do Brasil.](https://4gtmug.bl.files.1drv.com/y4mi01SAOGQY5GqSMtZka1opdNifBE5Uy8Sg7iZE5YVgO_vWdVeFA4L9VBx-7Ax62YtkskFcaLCgeirL6BWnad7vdQYNlRS5hzXP_uZIlq4gvBbZmAYzksB2gnVbckjwACE06B7QSNvDPZE3fGU6hgabq_9gpxzRnwbD4YBopGLB7Z5WeZEKLahWf9rmbgPGC7Fy4UAXsL5BlFIotV-sKrw0A/CNJ%20Inova%20Resumo%20da%20Persona.jpg?psid=1 "Clique para visualizar a publicação original do para Lab Griô no Instagram")](ttps://www.instagram.com/p/CFzfi32ne4i)
+[![(Personas) Casos e Relatos: Relato 01 - Juiz - Desembargador "Após a digitalização dos processos, gostaria de ter um sistema que me auxilie a identificar os problemas da minha unidade a fim de consertá-los e aumentar a produtividade da vara..." Logo do CNJ Inova, do Conselho Nacional de Justiça e do Brasil.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-resumo-da-persona.jpg "Clique para visualizar a publicação original do para Lab Griô no Instagram")](ttps://www.instagram.com/p/CFzfi32ne4i)
 
 O CNJ forneceu algumas fichas das personas que você poderá conferir abaixo:  
-<a href="https://1drv.ms/b/s!AkkMpcXs4WkOka4nDBqZclmyyQuOUw?e=lcw7Yp" download class="documento">CNJ Inova - Casos e Relatos (Personas) <small>1 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf" download class="documento">CNJ Inova - Casos e Relatos (Personas) <small>1 MB</small></a>
 
 ### Analise da Persona: O Juiz
 
-Analisando os documentos disponibilizados pelo Hackathon: **CNJ Inova: Briefing** e **CNJ Inova - Casos e Relatos (Personas)** pudemos entender melhor o contexto geral do problema e as necessidades dos principais *Stakeholders* envolvidos. Decidimos restringir o escopo do projeto para atender essencialmente as necessidades identificadas da **persona do JUIZ/DESEMBARGADOR**, que:
+Analisando os documentos disponibilizados pelo Hackathon: [**CNJ Inova: Briefing**][briefing] e [**CNJ Inova - Casos e Relatos (Personas)**](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf) pudemos entender melhor o contexto geral do problema e as necessidades dos principais <em lang="en">Stakeholders<em> envolvidos. Decidimos restringir o escopo do projeto para atender essencialmente as necessidades identificadas da **persona do JUIZ/DESEMBARGADOR**, que:
 
 > Cuida, atualmente, de uma vara com 80.000 processos, sendo a maioria físicos, sente que sua equipe está motivada e quer gerar resultados, mas diante da quantidade de processos pendentes de julgamento e da administração da sua unidade judiciária, vê-se absolutamente sem tempo.
 
@@ -153,104 +157,103 @@ Após analise da persona, nós planejamos a solução criamos a Panorama.
 
 **Identificar e solucionar os gargalos de tramitações processuais de unidades judiciárias similares, considerando a colaboração, o alerta de desempenho e a geração de informação para tomada de decisão.**
 
-Falando de maneira mais clara (para quem não é da área jurídica), a Panorama compara o tempo dos processos de unidades jurídicas que tratam do mesmo assunto, após essa comparação, o sistema ranqueia as melhores e as piores. Para ajudar nessa comparação e ranqueamento, separamos em macro etapas padrões que são associadas a todos os processos.
+Falando de maneira mais clara (para quem não é da área jurídica), a Panorama compara o tempo dos processos de unidades jurídicas (UJs) que tratam do mesmo assunto, após essa comparação, o sistema ranqueia as melhores e as piores. Para ajudar nessa comparação e ranqueamento, separamos em macro etapas padrões que são associadas a todos os processos.
 
 ### Macro etapas
 
-Organizamos em 10 etapas os processos, elas serão os pontos de analise e comparação dos processos. Essa padronização foi necessária por falta de similaridade nos fluxos dos processos jurídicos.
+Algumas características foram pensadas para guiar nossa solução, organizamos em 10 etapas. Elas serviram como guias para a tomada de decisões.
 
-![1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despachoã; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Transito em Julgado; 10 - Arquivamento; Algumas características foram pensadas para guiar nossa solução. Elas serviram como guias para a tomada de decisões.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-etapas.svg "1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despachoã; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Transito em Julgado; 10 - Arquivamento; Algumas características foram pensadas para guiar nossa solução. Elas serviram como guias para a tomada de decisões.")
+<figure>
+   <img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-etapas.svg" alt="1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despachoã; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Transito em Julgado; 10 - Arquivamento;">
+   <figcaption>1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despachoã; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Transito em Julgado; 10 - Arquivamento;</figcaption>
+</figure>
 
 ### Principais características da solução
 
-![1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial; A panorama vai além do ranqueamento. Essas funcionalidades foram as apresentadas na 2ª fase da competição.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg "1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial; A panorama vai além do ranqueamento. Essas funcionalidades foram as apresentadas na 2ª fase da competição.")
+A panorama vai além do ranqueamento. Essas funcionalidades foram as apresentadas na 2ª fase da competição.
+
+<figure><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg" alt="1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;"><figcaption>1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;</figcaption></figure>
 
 ### Funcionalidades principais
 
-![Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte à decisões;](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg "Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte à decisões;")
+<figure class="w-75 h-auto mx-auto d-block"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg" alt="Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte à decisões;"><figcaption>Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte à decisões;</figcaption></figure>
 
 ### As tecnologias utilizadas
 
-![HTML; CSS; JS; Mongo; Heroku; Phython;](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg "HTML; CSS; JS; Mongo; Heroku; Phython;")
+<figure><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg" alt="Ícones representando as tecnoligias: HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker;"><figcaption>HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker</figcaption></figure>
 
-Não irei detalhas aspectos de back-end de fluxos e manipulação de dados, arquitetura do sistema. Maiores detalhes podem ser acessados no [github do projeto](https://github.com/lfvvercosa/fase2_desafio_cnj).
-
----
-
-Da 1ª para a 2ª etapa, a solução passou por grandes mudanças.
+Não irei detalhar aspectos de back-end, tais como: fluxos e manipulação de dados, arquitetura do sistema.  
+Maiores detalhes podem ser acessados no [github do projeto][github-front-2].
 
 ## Entregáveis
 
-Inicialmente o Diogo Lages construiu uma versão preliminar, porém já muito complexa, essa complexidade são era um entregável ruim, longe disso, porém inviável pelo pouquíssimo tempo que tínhamos, já que nenhum membro da equipe tinha dedicação exclusiva ao projeto, ficando apenas com as noites e os finais de semana.
+Inicialmente o Diogo Lages construiu uma versão preliminar, porém já muito complexa, essa complexidade não era um entregável ruim, longe disso, porém inviável pelo pouquíssimo tempo que tínhamos, já que nenhum membro da equipe tinha dedicação exclusiva ao projeto, ficando apenas com as noites e os finais de semana.
 
-O link da versão "zero" foi idealizado por Diego, porém reorganizado por mim. O arquivo que está em anexo, está todo navegável. Não é facilmente entendi por usuários que não está familiarizados com as terminologias jurídicas e de analise de dados.
+O material apresentando abaixo - versão "zero", foi idealizado por Diego, porém reorganizado por mim. Os arquivos podem ser acessados através dos links abaixo, porém só estão navegável se o `.pdf` for aberto no navegador. Não é facilmente compreendido por usuários que não estão familiarizados com as terminologias jurídicas e de análise de dados.
 
-<iframe src="https://onedrive.live.com/embed?cid=0E69E1ECC5A50C49&resid=E69E1ECC5A50C49%21284502&authkey=AC2zpgKWkmI1WaQ&em=2" width="100%" height="576px" frameborder="0" scrolling="no"></iframe>
+<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/e38a0f6a5243ed970126ea47e3d2161285050907/hackathon/0-cnj-inova-wireframe-diego.pdf" class="documento">Versão premilinar construída por Diogo <small>2.42 MB</small></a>
+
+<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/e38a0f6a5243ed970126ea47e3d2161285050907/hackathon/1-cnj-inova-wireframe-diego.pdf" class="documento">Versão "Zero" refeita<small>1.11 MB</small></a>
 
 ### Fase 1
 
-Na fase 1, a aplicação ainda estava baseada no Juiz e o foco era comparação de finalização de etapas e/ou processos. A interação com os grafos era muito forte, neles, o Juiz poderia visualizar quanto tempo o processo passava em cada macro etapa e as movimentação e quantidade de movimentações ocorreu em cada etapa e/ou macro etapas.
+Na fase 1 a aplicação ainda estava baseada no Juiz e o foco era comparação da finalização de etapas e/ou processos. A interação com os grafos era muito forte, neles, o Juiz poderia visualizar a duração de cada macro etapa e quantidade de movimentações.
 
-As funcionalidades dessa primeira entrega são:
+As funcionalidades dessa primeira entrega foram:
 
-1. Posicionamento da UJ - a classificação entre as instituição são sempre entre as etapas e a finalização do processo.
-2. Alertas (grafos) das etapas com os maiores (piores) tempos de conclusão de cada etapa.
-3. Destaques (grafos) de melhores tempos de conclusão de cada etapa.
-4. Comentários dos juízes das mais bem posicionadas UJs relacionadas as etapas exibidas em tela.
-5. Exibição de alguns números: tempo de baixa de processo, movimentação por processo, processos julgados, etapa com o melhor e pior desempenho.
-6. Gráfico de analise das macro etapas
-7. Ranking com os melhores tempos
-8. "Unidades vizinhas", baseado na posição da UJ, será exibida as duas da posição acima e as duas abaixo.
-9. Mapa de distribuição geográfica das UJ semelhantes
+1. Posicionamento da UJ - a classificação entre as instituições são sempre entre as etapas e a finalização do processo;
+2. Alertas (grafos) com os maiores (piores) tempos de conclusão das etapas;
+3. Destaques (grafos) de melhores tempos de conclusão de cada etapa;
+4. Comentários dos juízes das mais bem posicionadas UJs relacionadas as etapas exibidas em tela;
+5. Exibição de alguns números: tempo de baixa de processo, movimentação por processo, processos julgados, etapa com o melhor e pior desempenho;
+6. Gráfico de análise das macro etapas;
+7. Ranking com os melhores tempos;
+8. "Unidades vizinhas" - baseado na posição da UJ. Serão exibidas as duas da posição acima e as duas abaixo, e;
+9. Mapa de distribuição geográfica das UJs semelhantes
 
 **Wireframe**
 
-<figure><img alt="Página inicial da Panoroma da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png">
-<figcaption>Página inicial</figcaption></figure>
-
-<figure><img alt="Página de detalhes da Panoroma da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"><figcaption>Tela de Detalhes</figcaption></figure>
+<div class="row">
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-4" title="Clique para abrir a imagem maior" alt="Página inicial da Panoroma da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"><figcaption>Página inicial da Panoroma da fase 1 do Hackathon</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-5" title="Clique para abrir a imagem maior" alt="Página de detalhes da Panoroma da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"><figcaption>Página de detalhes da Panoroma da fase 1 do Hackathon</figcaption></figure></div>
+</div>
 
 ### Fase 1 e ½
 
-Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo, neste tempo fizemos algumas seções de _brainstorm_, infelizmente a versão não foi desenvolvida, apenas desenhada, eu coloquei o nome dessa versão de "fase 1 e ½", nossas decisões foram baseadas na persona na fase 1, porém a mentoria da segunda fase **sugeriu** que nos mudássemos de persona.
+Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo e fizemos algumas seções de _brainstorm_, infelizmente a versão não foi desenvolvida, apenas desenhada, coloquei o nome dessa versão de "fase 1 e ½".
 
-Parte do que foi planejado nesta etapa foi aproveitada na fase 2, fizemos uns ajustes e usamos o "melhor" dos mundos.
-
-<figure><img alt="Página inicial da Panoroma da fase 1 1 1/2 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
+<figure><img alt="Página inicial da Panoroma da fase 1 e ½ do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
 
 1. Região que exibe qual é a posição da unidade jurídica no ranking com as demais com mesmo tipo;
 2. Espaço destinado ao usuário filtrar as informações da tela;
 3. Menu da aplicação
-4. Área do usuário - aqui ele poderá visualizar seu nome e foto, aceso as configurações da aplicação e link para sair;
+4. Área do usuário - aqui ele poderá visualizar seu nome e foto, acesso as configurações da aplicação e link para sair;
 5. Região de informações rápidas associadas a unidade jurídica do usuário logado, com essas informações o juiz irá visualizar:
    - quanto tempo em média leva cada processo;
-   - quantidade de etapas passa cada processo até a finalização
+   - quantidade de etapas passa cada processo até a finalização;
    - quantos processos são julgados mensalmente;
-   - qual é a etapa com o melhor desempenho (a mais veloz)
-   - qual é a etapa com o pior desempenho (a mais lenta)
-6. A região de "Análise detalhada das unidades jurídicas" é o único local de interação do usuário. Aqui o juiz irá enxergar os numeros de outras UJs
-7. Seletor que tipo de informação ele quer saber, as etapas das UJs com bons (destaques) ou maus números (gargalos)
+   - qual é a etapa com o melhor desempenho (a mais veloz);
+   - qual é a etapa com o pior desempenho (a mais lenta);
+6. A região de "Análise detalhada das unidades jurídicas" é o único local de interação do usuário. Aqui o juiz irá enxergar os números de outras UJs;
+7. Seletor que tipo de informação ele quer saber, as etapas das UJs com bons (destaques) ou maus (gargalos) números;
 8. O sistema exibe as informações conforme o ranking, porém filtrar quais etapas ele quer exibir na tela, assim saber quais UJs tem determinada posição e quais os comentários. Esse filtro deverá ser utilizado em conjunto com o seletor de Destaques ou Gargalos;
-9. Essa seção mostra os detalhes das etapas, tais como: duração, posição da UJ do usuário locado e a quantidade de vezes que essa etapa ocorre, além de comentário de UJs sobre as mesmas etapas.  
-   Aqui ,o juiz pode compartilhar impressões de bons resultados sobre as etapas, além do usuário logado poder curtir ou escrever o comentário.
+9. Essa seção mostra os detalhes das etapas, tais como: duração, posição da UJ do usuário logado e a quantidade de vezes que essa etapa ocorre, além de comentário de UJs sobre as mesmas etapas.  
+   Aqui ,o juiz pode compartilhar impressões de bons resultados sobre as etapas e o usuário logado poderá curtir ou escrever um comentário;
 10. As informações descritas acima são exibidas com o mesmo formato, porém com etapas diferentes.  
-    Não há limite para a quantidade de vezes que esse contêiner pode aparecer.
-11. Um gráfico com as macro etapas mostrando a média percentual de cada uma delas e o nome das melhores UJs
-12. lista dos melhores tempos das UJs do mesmo tipo.
-13. mapa com a posição geográfica e informações de contato das 10 melhores UJs
-14. ranking mostrando a UJ do usuário logado e as duas com posição a cima e as duas com posição abaixo.
+    Não há limite para a quantidade de vezes que esse contêiner pode aparecer;
+11. Um gráfico com as macro etapas mostrando a média percentual de cada uma delas e o nome das melhores UJs;
+12. Lista dos melhores tempos das UJs do mesmo tipo;
+13. Mapa com a posição geográfica e informações de contato das 10 melhores UJs, e ;
+14. Ranking mostrando a UJ do usuário logado e as duas com posição a cima e as duas com posição abaixo.
 
 ### Fase 2
 
-Na fase 2, a mentoria sugeriu uma mudança enorme na persona, com isso, precisamos mudar alguns contextos apresentados anteriormente. Aqui, o filtro passou a considerar além da justiça e o grau, o grupo. O sistema parou de usar grafos, passou a focar nos alertas e a possibilidade do CNJ mandar mensagens para as UJs sobre as atividades fora do esperado.
-
-Nesta etapa, consideramos mostrar a tela de login e assim mostrar que o sistema está interessado com o uso das boas práticas do CNJ.
+Na fase 2, a mentoria na segunda fase [**sugeriu** mudássemos](#2ª-etapa) a persona, com isso, precisamos mudar alguns contextos apresentados anteriormente. Aproveitamos parte da etapa 1 e da 1 e ½. Aqui, o filtro passou a considerar além da justiça e o grau, o grupo. O sistema parou de usar grafos, passou a focar nos alertas e a possibilidade do CNJ mandar mensagens para as UJs sobre as atividades fora do esperado ou enviar elogios para as UJs que superaram as expectativas. Consideramos mostrar a tela de login e assim mostrar que o sistema está interessado com o uso das boas práticas do CNJ.
 
 <div class="row">
-
-   <div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
-   <div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
-   <div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
 </div>
 
 # Pitch da Panorama
@@ -266,7 +269,7 @@ Para o nosso Pitch, escolhemos Renato Cirne, pelo conhecimento na área jurídic
 - Ser respeitoso
 - Relaxar e sorrir
 
-## **Critérios**
+## Critérios
 
 - Efetividade na Resolução do problema proposto
 - Completude da solução
@@ -277,24 +280,16 @@ Para o nosso Pitch, escolhemos Renato Cirne, pelo conhecimento na área jurídic
 
 Para antecipar as dúvidas, elaboramos algumas perguntas e respostas, afim de acabar com as possíveis lacunas deixadas na apresentação.
 
-1. **O que acontece se quisermos carregar todos os dados na solução?**  
-   _Nossa solução está preparada. Limitamos o que foi carregado no banco de dados para fins demonstrativos, porém a solução foi arquitetada para receber todos os dados._
-2. **Achei os tempos das UJs que tem o mesmo gargalo muito inferiores aos da UJ sendo analisada. Isso está correto?**  
-   _Sim, é o que os dados nos revelam. Aí é um bom momento para que juízes e analistas possam conversar, discutir seus processos e compartilhar boas práticas._
-3. **Quem iria usar a solução?**  
-   _A solução pode ser utilizada pelos membros do CNJ e suas equipes. Avaliamos que a solução pode e deve ser expandida para o uso por todos Tribunais e UJs. Disponibiliza informações tanto em nível de grupos como de unidades judiciárias específicas._
-4. **O grupo contém muito poucas UJs. Qual a justificativa?**  
-   _Isso se deve às especificidades das UJs. O algoritmo inteligente agrupa-as de acordo com as classes e assuntos dos processos que chegam em cada UJ. Assim, é possível a formação de grupos com dezenas de membros ou até centenas. A ferramenta está preparada para incorporar novas variáveis para ampliar a acurácia da clusterização._
-5. **O que quer dizer o gráfico de barras (macroetapas)?**  
-   _Traz o tempo percentual gasto pela UJ em cada fase do processo._
-6. **Como as macroetapas são calculadas?**  
-   _Através de agrupamentos de atividades utilizando a hierarquia de nomenclatura dos movimentos processuais disponibilizado pelo CNJ. Exemplo: “Contas Aprovadas” e “Homologação de Transação” são atividades que a solução reconhece como “Julgamento”. Outro exemplo: “Acolhimento de Exceção” e “Declaração de Prisão Civil” são reconhecidos como “Decisão”._
-7. **Como você acha que essa solução resolve o problema?**  
-   _Nossa solução permite a celeridade e compartilhamento de boas práticas através do agrupamento de UJs semelhantes, geração de alertas de desempenho, identificação dos marcos processuais e principalmente através da identificação de onde estão os gargalos processuais colocando pra conversar quem se parece comigo e que consequentemente tem dores semelhantes às minhas._
-8. **O que você acha que fará com que os juízes queiram comentar sobre as transições?**  
-   _A própria curiosidade. Como essa UJ vizinha consegue esse resultado? Como eles gastam tão pouco tempo no “Julgamento”? Além disso, implementar gamificação está no nosso roadmap e acreditamos que também impulsionará a colaboração._
+<details><summary>1. O que acontece se quisermos carregar todos os dados na solução?</summary><p>Nossa solução está preparada. Limitamos o que foi carregado no banco de dados para fins demonstrativos, porém a solução foi arquitetada para receber todos os dados.</p></details>
+<details><summary>2. Achei os tempos das UJs que tem o mesmo gargalo muito inferiores aos da UJ sendo analisada. Isso está correto?</summary><p>exitSim, é o que os dados nos revelam. Aí é um bom momento para que juízes e analistas possam conversar, discutir seus processos e compartilhar boas práticas.</p></details>
+<details><summary>3. Quem iria usar a solução?</summary><p>A solução pode ser utilizada pelos membros do CNJ e suas equipes. Avaliamos que a solução pode e deve ser expandida para o uso por todos Tribunais e UJs. Disponibiliza informações tanto em nível de grupos como de unidades judiciárias específicas.</p></details>
+<details><summary>4. O grupo contém muito poucas UJs. Qual a justificativa?</summary><p>Isso se deve às especificidades das UJs. O algoritmo inteligente agrupa-as de acordo com as classes e assuntos dos processos que chegam em cada UJ. Assim, é possível a formação de grupos com dezenas de membros ou até centenas. A ferramenta está preparada para incorporar novas variáveis para ampliar a acurácia da clusterização.</p></details>
+<details><summary>5. O que quer dizer o gráfico de barras (macroetapas)</summary><p>Traz o tempo percentual gasto pela UJ em cada fase do processo.</p></details>
+<details><summary>6. Como as macroetapas são calculadas?</summary><p>Através de agrupamentos de atividades utilizando a hierarquia de nomenclatura dos movimentos processuais disponibilizado pelo CNJ. Exemplo: “Contas Aprovadas” e “Homologação de Transação” são atividades que a solução reconhece como “Julgamento”. Outro exemplo: “Acolhimento de Exceção” e “Declaração de Prisão Civil” são reconhecidos como “Decisão”.</p></details>
+<details><summary>7. Como você acha que essa solução resolve o problema?</summary><p>Nossa solução permite a celeridade e compartilhamento de boas práticas através do agrupamento de UJs semelhantes, geração de alertas de desempenho, identificação dos marcos processuais e principalmente através da identificação de onde estão os gargalos processuais colocando pra conversar quem se parece comigo e que consequentemente tem dores semelhantes às minhas.</p></details>
+<details><summary>8. O que você acha que fará com que os juízes queiram comentar sobre as transições?</summary><p>A própria curiosidade. Como essa UJ vizinha consegue esse resultado? Como eles gastam tão pouco tempo no “Julgamento”? Além disso, implementar gamificação está no nosso roadmap e acreditamos que também impulsionará a colaboração.</p></details>
 
-O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar todos o Demo Day completo, você poderá acessar através do [perfil do CNJ no Youtube](https://www.youtube.com/watch?v=2-9nHdoP_-Y).
+O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar as apresentações completas, acesse o [perfil do CNJ no Youtube][demoday-final].
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GfGHxTlJRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -302,16 +297,26 @@ O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar
 
 # Links do projeto:
 
-- Aplicação final: [**http://panorama-fase2.herokuapp.com/index.html**](http://panorama-fase2.herokuapp.com/index.html).
-- Repositório front-end: [https://github.com/lfvvercosa/fase2_desafio_cnj](https://github.com/lfvvercosa/fase2_desafio_cnj).
-- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj](https://github.com/gabriel-bandeira/backend-desafio-cnj)
-  
----
+❗ Como o projeto foi construído exclusivamente para o hackthon e não foi feito nenhum investimento por isso utilizamos o Heroku, então navegação pode sofrer instabilidade.
 
-**Informação!**  
-Alguns trechos do material apresentando aqui foram extraídos da comunicação oficial do CNJ e do repositório no Github do projeto.  
-Como o projeto foi construído exclusivamente para o hackthon, utilizamos o Heroku, por isso, a navegação na aplicação foi sofre instabilidade
+- Aplicação final: [**http://panorama-fase2.herokuapp.com/index.html**][panorama-final]
+- Repositório front-end: [https://github.com/lfvvercosa/fase2_desafio_cnj][github-front-2]
+- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj][github-back-2]
+
+## Aviso!
+Alguns trechos do material apresentando aqui foram extraídos da comunicação oficial do CNJ e do repositório no Github do projeto.
 
 <div title="Clique para fechar a janela" class="modal fade" id="cnj-1" tabindex="-1" role="dialog" aria-labelledby="cnj-1" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"></div></div>
 <div title="Clique para fechar a janela" class="modal fade" id="cnj-2" tabindex="-1" role="dialog" aria-labelledby="cnj-2" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"></div></div>
 <div title="Clique para fechar a janela" class="modal fade" id="cnj-3" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"></div></div>
+
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-4" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-5" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"></div></div>
+
+[^1]: Formação de conjuntos de dados que ‘se assemelham’ de alguma forma - independentemente de classes predefinidas.
+
+[panorama-final]: http://panorama-fase2.herokuapp.com/index.html
+[github-front-2]: https://github.com/lfvvercosa/fase2_desafio_cnj
+[github-back-2]: https://github.com/gabriel-bandeira/backend-desafio-cnj
+[demoday-final]: https://www.youtube.com/watch?v=2-9nHdoP_-Y
+[briefing]: https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf
