@@ -1,0 +1,13 @@
+details {
+  @extend .mb-2;
+  @extend .border-bottom;
+  @extend .pb-2;
+  summary:focus {
+    outline: none;
+  }
+  &[open] {
+    summary {
+      @extend .font-weight-bold;
+    }
+  }
+}
