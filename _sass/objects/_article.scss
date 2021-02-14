@@ -145,10 +145,40 @@ article {
     background-size: contain;
     height: 1rem;
     width: 1rem;
+    margin-right: 0.25rem;
   }
   small {
     @extend .text-muted;
     font-weight: normal;
     font-size: small;
+  }
+}
+
+.footnote {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+
+  &s {
+    &:before {
+      content: "Notas de rodapé";
+      @extend .font-weight-bold;
+      @extend .border-top;
+      @extend .d-block;
+      @extend .w-100;
+      @extend .py-4;
+    }
+  }
+}
+sup {
+  .footnote {
+    top: -0.5em;
+  }
+}
+
+sub {
+  .footnote {
+    bottom: -0.25em;
   }
 }
