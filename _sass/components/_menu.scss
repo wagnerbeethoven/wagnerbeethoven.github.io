@@ -20,16 +20,7 @@
       }
     }
   }
-  &-pages {
-    ul {
-      li {
-        @extend .p-2;
-        &:first-of-type {
-          @extend .pl-0;
-        }
-      }
-    }
-  }
+
 }
 
 .navbar-toggler {
