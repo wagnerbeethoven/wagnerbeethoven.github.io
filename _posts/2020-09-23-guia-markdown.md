@@ -4,7 +4,7 @@ title: "Guia Markdown"
 summary: "Guia de referência escrito por Matt Cone traduzido para o português"
 categories: blog
 comments: true
-image: https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no
+image: https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/atom.png
 legend: Print do Editor Atom
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
 alt: Print do Editor Atom representando um texto formatado em Markdown
@@ -35,7 +35,7 @@ Usar Markdown é diferente de usar um editor WYSIWYG. Em um aplicativo como o Mi
 
 Por exemplo, para exibir um título, você adiciona um sinal dele (por exemplo, `# Título Um`) ou para deixar uma frase em negrito, você adiciona dois asteriscos antes e depois dela (por exemplo, `**este texto está em negrito**`). Pode demorar um pouco para se acostumar a ver a sintaxe Markdown em seu texto, especialmente se você estiver acostumado com aplicativos WYSIWYG. A captura de tela abaixo mostra um arquivo Markdown exibido no [editor de texto Atom](http://atom.io/).
 
-![Editor Atom](https://lh3.googleusercontent.com/pw/ACtC-3d47pn-vezIkWCHR7Jb3lmRACKA-otlt4JbeqZ5oyrSWWEBPF_RNCVIpJVKxFSKB6URVwxlWfstDymqWBoB6afpPnUFcOXvFqoGI2O1cEAezKWL0e4cjLTfqQdGHGTX4587i6gekZ5aNE-XaxxeTUw_=w1410-h600-no "Editor Atom")
+![Editor Atom](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/atom.png "Editor Atom")
 
 Você pode adicionar elementos de formatação Markdown a um arquivo de texto simples usando um aplicativo editor de texto. Ou você pode usar um dos muitos aplicativos Markdown para sistemas operacionais macOS, Windows, Linux, iOS e Android. Existem também vários aplicativos baseados na web projetados especificamente para escrever em Markdown.
 
@@ -59,7 +59,7 @@ A melhor maneira de começar a usar o Markdown é usá-lo. Isso é mais fácil d
 
 Você nem precisa fazer download de nada. Existem vários editores Markdown online que você pode usar para tentar escrever no Markdown. [Dillinger][dillinger] é um dos melhores editores online do Markdown. Basta abrir o site e começar a digitar no painel esquerdo. Uma visualização do documento formatado aparece no painel direito.
 
-![Dillinger](https://lh3.googleusercontent.com/pw/ACtC-3cXPu3yAuz6yeh3XMuQ2MQxrlF4E4EC9H04qAujwBoaEF83-mOmN7P1qmw3cUOdi5Fo0f2_50aJJ1DSwvrHLozGuUwkGIUOqS7bhSUMFA8xpBbbh5G_GgZPyrCBI8YcwVytIUjcpsXRYzf62lGYIdH6=w907-h701-no "Dillinger")
+![Dillinger](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/dillinger.jpg "Dillinger")
 
 Provavelmente, você desejará manter o site do Dillinger aberto enquanto lê este guia. Dessa forma, você pode experimentar a sintaxe à medida que aprende sobre ela. Depois de se familiarizar com o Markdown, você pode usar um aplicativo Markdown que pode ser instalado em seu computador desktop ou dispositivo móvel.
 
@@ -75,7 +75,7 @@ Os aplicativos Markdown usam algo chamado de processador Markdown (também comum
 
 **Nota**: O aplicativo Markdown e o processador são dois componentes separados. Por uma questão de prática eu os combinei em um elemento ("Markdown App") na figura abaixo.
 
-![The Markdown Process](https://lh3.googleusercontent.com/pw/ACtC-3fWTwfhbNYM-ihA1vw1QPLHid87Qhov37DQ6bqoifAtUzE-kMga_R2yYynEQVmJDMxlwIk33goMx-tSapmAXODg_ur228lSMYmAURpO7i3oBo0Sup6PoqIliAUlRmCuvXGCQLu6ElDbaz0u-MC9F2wR=w432-h536-no "Processo do Markdown")
+![The Markdown Process](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/process.jpg "Processo do Markdown")
 
 Para resumir, este é um processo de quatro partes:
 
@@ -225,7 +225,7 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
         </tr>
         <tr>
             <td><span class="td-info">Elemento</span> <a title="Imagem" href="#image">Imagem</a></td>
-            <td><span class="td-info">Sintaxe de Markdown</span> <code><img alt="Logo da Agência Sumô" title="Logo da Agência Sumô" src="{{site.url}}/img/favicon/favicon-48x48.png" class="m-0 shadow-0"></code>
+            <td><span class="td-info">Sintaxe de Markdown</span> <code><img alt="Logo da Agência Sumô" title="Logo da Agência Sumô" src="https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/favicon-48x48.png" class="m-0 shadow-0"></code>
             </td>
         </tr>
     </tbody>
@@ -854,7 +854,7 @@ A renderização é essa:
 1. Abra o arquivo que contém o mascote do Linux.
 2. Maravilhe-se com sua beleza.
 
-   ![Tux, O mascote Linux](https://lh3.googleusercontent.com/pw/ACtC-3drDR1IW2PCA5hz-Ieu83yQovD0UYPePQNkyXRFutqrrlXj7G65IqfYMdV7LrewxBjD4yG_H62-u11nsZh2cri9e65iuKgE6O-eHA7U9x7wfKkluACdD_U6Febrp4ghD1V_Jdf2vyUByZo4M2GDJ5cy=s120-no?authuser=0 "Mascote do Linux")
+   ![Tux, O mascote Linux](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/tux.png "Mascote do Linux")
 
 3. Fechar o arquivo
 
@@ -1105,7 +1105,7 @@ Para adicionar uma imagem, adicione um ponto de exclamação (`!`), seguido pelo
 
 A renderização é essa:
 
-![Jardins Mágicos da Filadélfia. Este lugar é tão legal!](https://lh3.googleusercontent.com/pw/ACtC-3fhee9Fj-WpufUYEHdMQ8V8iBufosc7xuXPJ-T_B0DsUBssefIAMY2iDJZxSX9ccD6u0ENOK5DhUaK1WnhWFE5ROwecFRJVTAoEy7Xcroqeye8sH7Qr_DYP62rhqva1xJgV9hNtkhEKYXWkzd0aQmeQ=w847-h635-no "Jardins Mágicos da Filadélfia")
+![Jardins Mágicos da Filadélfia. Este lugar é tão legal!](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/philly-magic-garden.jpg "Jardins Mágicos da Filadélfia")
 
 #### Imagens com links {#linking-images}
 
@@ -1115,7 +1115,7 @@ Para adicionar um link a uma imagem, coloque o Markdown da imagem entre colchete
 
 A renderização é essa:
 
-[![Uma pedra antiga no deserto](https://lh3.googleusercontent.com/pw/ACtC-3e9-X9Pgqya79d5eThcGA7xsA1T6C4oBfiMbbXozWTHICWLX1Ud3R-xxUiQBDKBEE3z18E9rIhTFVzdiRPyX1BzOFBwSSEUiU-XVtDcE8qqdcrps5h32xzaKhy-6gmUTTxQBwKZRpWboj1PH3cE0nbf=w847-h566-no "Shiprock, Novo México por Beau Rogers")](http://flic.kr/p/Qv3rFw)
+[![Uma pedra antiga no deserto](https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/shiprock.jpg "Shiprock, Novo México por Beau Rogers")](http://flic.kr/p/Qv3rFw)
 
 ### Exibir caracteres de formatação {#escaping}
 
