@@ -4,7 +4,7 @@ title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
 summary: "Todos os detalhes da construção e as impressões do que rolou na competição"
 categories: blog
 comments: true
-image: https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-demoday.jpg
+image: https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-demoday.jpg
 legend: Recorte da sabatina de perguntas após a apresentação do pitch do projeto.
 description: "Como conseguimos chegar em 2º lugar na competição"
 alt: Recorte da sabatina de perguntas após a apresentação do pitch do projeto
@@ -28,7 +28,7 @@ Vou tentar detalhar todo o processo nos textos abaixo.
 
 # O Hackathon
 
-[![imagem da fachada de um prédio ao fundo com diversos pontos por cima. Texto: Enap Convida. CNJ Inova. Ciência de dados e Inteligência Artificial. Abertura das inscrições: sexta, 11 de setembro, as 10h. [www.youtube.com/user/CanalENAP](http://www.youtube.com/user/CanalENAP). Live. CNJ. Pátria Amada Brasil Governo Federal.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-facebook.png "Clique na imagem para visualizar a publicação original no Facebook")](https://www.facebook.com/cnj.oficial/photos/4446714988734560)
+[![imagem da fachada de um prédio ao fundo com diversos pontos por cima. Texto: Enap Convida. CNJ Inova. Ciência de dados e Inteligência Artificial. Abertura das inscrições: sexta, 11 de setembro, as 10h. [www.youtube.com/user/CanalENAP](http://www.youtube.com/user/CanalENAP). Live. CNJ. Pátria Amada Brasil Governo Federal.](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-facebook.png "Clique na imagem para visualizar a publicação original no Facebook")](https://www.facebook.com/cnj.oficial/photos/4446714988734560)
 
 ## Release
 
@@ -39,7 +39,7 @@ Vou tentar detalhar todo o processo nos textos abaixo.
 >
 > **Inconsistências de Dados nos Sistemas Jurídicos**: identificar e corrigir as inconsistências nos metadados dos processos em tramitação nos sistemas dos tribunais.
 
-[![ao fundo fotografia de um grupo de pessoas ao redor de uma mesa escrevendo. Texto: Números Desafio CNJ Inova. 522 inscritos no CNJ Inova. 66 times em 2 desafios. Desafio 1: 43 times. Desafio 2: 23 times. 263 horários disponíveis para mentoria. CNJ Inova. Ciência de dados e Inteligência artificial. Enap. Lab Griô. Shawee. CNJ. Pátria amada Brasil. Governo Federal.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-resultado-dos-inscritos.jpg "Cique na imagem para visualizar a publicação original do CNJ no Instagram")](https://www.instagram.com/p/CGXvY4RBLOs)
+[![ao fundo fotografia de um grupo de pessoas ao redor de uma mesa escrevendo. Texto: Números Desafio CNJ Inova. 522 inscritos no CNJ Inova. 66 times em 2 desafios. Desafio 1: 43 times. Desafio 2: 23 times. 263 horários disponíveis para mentoria. CNJ Inova. Ciência de dados e Inteligência artificial. Enap. Lab Griô. Shawee. CNJ. Pátria amada Brasil. Governo Federal.](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-resultado-dos-inscritos.jpg "Cique na imagem para visualizar a publicação original do CNJ no Instagram")](https://www.instagram.com/p/CGXvY4RBLOs)
 
 Conseguimos ganhar dos 43 times que estavam concorrendo na primeira etapa, já na segunda a disputa estava entre os 3 melhores do primeiro desafio.
 
@@ -52,9 +52,15 @@ Conseguimos ganhar dos 43 times que estavam concorrendo na primeira etapa, já n
 
 ## Documentos do CNJ
 
-<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-1-edital.pdf" download class="documento">CNJ Inova: Edital <small>250 KB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-1-edital.pdf" download class="documento">CNJ Inova: Edital <small>250 KB</small></a>
 
-<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf" download class="documento">CNJ Inova: Briefing <small>3 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf" download class="documento">CNJ Inova: Briefing <small>3 MB</small></a>
+
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/cb96872ad9e128040499f910d1e8a8247f8ff533/cnj-inova-4-informacoes-complementares.pdf" download class="documento">CNJ Inova: Informações complementares <small>1.45 MB</small></a>
+
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/cb96872ad9e128040499f910d1e8a8247f8ff533/cnj-inova-resultado-final-fase-1.pdf" download class="documento">🥉 Resultado da fase 1 <small>209 KB</small></a>
+
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/cb96872ad9e128040499f910d1e8a8247f8ff533/cnj-inova-resultado-final-fase-2.pdf" download class="documento">🥈 Resultado da fase 2 <small>102 KB</small></a>
 
 # O desafio
 
@@ -99,11 +105,23 @@ O processo ocorreu de maneira como tínhamos previsto, algumas dúvidas nós [j�
 Com o final das equipes do segundo desafio, o resultado foi dito!  
 🏆 Ficamos com o segundo lugar.
 
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/cb96872ad9e128040499f910d1e8a8247f8ff533/cnj-inova-demoday-apresentacao.pdf" download class="documento">Slide de apresentação do Pitch <small>1.01 MB</small></a>
+
+### A apresentação no Demoday [Panorama]
+
+O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar as apresentações completas, acesse o [perfil do CNJ no Youtube][demoday-final].
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GfGHxTlJRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+---
+
 Tentarei trazer do processo de Design que desenvolvi junto com a equipe, mesmo com o pouco tempo para desenvolver e imergir no problema.
 
 # A solução - Panorama
 
-![Logo da Solução - Panorama](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/logo-panorama.svg)
+![Logo da Solução - Panorama](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/logo-panorama.svg)
 
 ## Personas
 
@@ -116,14 +134,14 @@ Para primeira fase, a organização nos forneceu 4 perfis do público-alvo:
 
 Vendo o tanto que esses perfis poderiam trazer de ganhos reais e rápidos para o ambiente jurídico e o tanto que precisaríamos trabalhar para sanar suas dores de maneira eficiente, decidimos escolher apenas o juiz. Sendo ele, o topo da cadeia jurídica, seu trabalho é decisório para o processo. Embora o cidadão comum ter sido cogitado, não iríamos agregar ganhos significativos quanto o juiz.
 
-[![(Personas) Casos e Relatos: Relato 01 - Juiz - Desembargador "Após a digitalização dos processos, gostaria de ter um sistema que me auxilie a identificar os problemas da minha unidade a fim de consertá-los e aumentar a produtividade da vara..." Logo do CNJ Inova, do Conselho Nacional de Justiça e do Brasil.](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-resumo-da-persona.jpg "Clique para visualizar a publicação original do para Lab Griô no Instagram")](ttps://www.instagram.com/p/CFzfi32ne4i)
+[![(Personas) Casos e Relatos: Relato 01 - Juiz - Desembargador "Após a digitalização dos processos, gostaria de ter um sistema que me auxilie a identificar os problemas da minha unidade a fim de consertá-los e aumentar a produtividade da vara..." Logo do CNJ Inova, do Conselho Nacional de Justiça e do Brasil.](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-resumo-da-persona.jpg "Clique para visualizar a publicação original do para Lab Griô no Instagram")](ttps://www.instagram.com/p/CFzfi32ne4i)
 
 O CNJ forneceu algumas fichas das personas que você poderá conferir abaixo:  
-<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf" download class="documento">CNJ Inova - Casos e Relatos (Personas) <small>1 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf" download class="documento">CNJ Inova - Casos e Relatos (Personas) <small>1 MB</small></a>
 
 ### Análise da Persona: O Juiz
 
-Analisando os documentos disponibilizados pelo Hackathon: [**CNJ Inova: Briefing**][briefing] e [**CNJ Inova - Casos e Relatos (Personas)**](https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf) pudemos entender melhor o contexto geral do problema e as necessidades dos principais <em lang="en">Stakeholders<em> envolvidos. Decidimos restringir o escopo do projeto para atender essencialmente as necessidades identificadas da **persona do JUIZ/DESEMBARGADOR**, que:
+Analisando os documentos disponibilizados pelo Hackathon: [**CNJ Inova: Briefing**][briefing] e [**CNJ Inova - Casos e Relatos (Personas)**](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-3-casos-e-relatos-personas.pdf) pudemos entender melhor o contexto geral do problema e as necessidades dos principais <em lang="en">Stakeholders<em> envolvidos. Decidimos restringir o escopo do projeto para atender essencialmente as necessidades identificadas da **persona do JUIZ/DESEMBARGADOR**, que:
 
 > Cuida, atualmente, de uma vara com 80.000 processos, sendo a maioria físicos, sente que sua equipe está motivada e quer gerar resultados, mas diante da quantidade de processos pendentes de julgamento e da administração da sua unidade judiciária, vê-se absolutamente sem tempo.
 
@@ -164,7 +182,7 @@ Falando de maneira mais clara (para quem não é da área jurídica), a Panorama
 Algumas características foram pensadas para guiar nossa solução, organizamos em 10 etapas. Elas serviram como guias para a tomada de decisões.
 
 <figure>
-   <img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-etapas.svg" alt="1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despacho; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Trânsito em Julgado; 10 - Arquivamento;">
+   <img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-etapas.svg" alt="1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despacho; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Trânsito em Julgado; 10 - Arquivamento;">
    <figcaption>1 - Distribuição; 2 - Conclusão; 3 - Liminar; 4 - Despacho; 5 - Citação; 6 - Audiência; 7 - Decisão; 8 - Julgamento; 9 - Trânsito em Julgado; 10 - Arquivamento;</figcaption>
 </figure>
 
@@ -172,15 +190,15 @@ Algumas características foram pensadas para guiar nossa solução, organizamos 
 
 A panorama vai além do ranqueamento. Essas funcionalidades foram as apresentadas na 2ª fase da competição.
 
-<figure><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg" alt="1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;"><figcaption>1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;</figcaption></figure>
+<figure><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg" alt="1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;"><figcaption>1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;</figcaption></figure>
 
 ### Funcionalidades principais
 
-<figure class="w-75 h-auto mx-auto d-block"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg" alt="Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;"><figcaption>Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;</figcaption></figure>
+<figure class="w-75 h-auto mx-auto d-block"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg" alt="Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;"><figcaption>Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;</figcaption></figure>
 
 ### As tecnologias utilizadas
 
-<figure><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg" alt="Ícones representando as tecnoligias: HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker;"><figcaption>HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker</figcaption></figure>
+<figure><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg" alt="Ícones representando as tecnoligias: HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker;"><figcaption>HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker</figcaption></figure>
 
 Não irei detalhar aspectos de back-end, tais como: fluxos e manipulação de dados, arquitetura do sistema.  
 Maiores detalhes podem ser acessados no [GitHub do projeto][github-front-2].
@@ -191,9 +209,9 @@ Inicialmente o Diogo Lages construiu uma versão preliminar, porém já muito co
 
 O material apresentando abaixo - versão "zero", foi idealizado por Diego, porém reorganizado por mim. Os arquivos podem ser acessados através dos links abaixo, porém só estão navegáveis se o `.pdf` for aberto no navegador. Não é facilmente compreendido por usuários que não estão familiarizados com as terminologias jurídicas e de análise de dados.
 
-<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/e38a0f6a5243ed970126ea47e3d2161285050907/hackathon/0-cnj-inova-wireframe-diego.pdf" class="documento">Versão preliminar construída por Diogo <small>2.42 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/1e60349a3c9f150a5001787dadb9055aee14b5d1/0-cnj-inova-wireframe-diego.pdf" class="documento">Versão preliminar construída por Diogo <small>2.42 MB</small></a>
 
-<a href="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/e38a0f6a5243ed970126ea47e3d2161285050907/hackathon/1-cnj-inova-wireframe-diego.pdf" class="documento">Versão "Zero" refeita<small>1.11 MB</small></a>
+<a href="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/e38a0f6a5243ed970126ea47e3d2161285050907/hackathon/1-cnj-inova-wireframe-diego.pdf" class="documento">Versão "Zero" refeita <small>1.11 MB</small></a>
 
 ### Fase 1
 
@@ -214,15 +232,15 @@ As funcionalidades dessa primeira entrega foram:
 **Wireframe**
 
 <div class="row">
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-4" title="Clique para abrir a imagem maior" alt="Página inicial da Panorama da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"><figcaption>Página inicial da Panorama da fase 1 do Hackathon</figcaption></figure></div>
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-5" title="Clique para abrir a imagem maior" alt="Página de detalhes da Panorama da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"><figcaption>Página de detalhes da Panorama da fase 1 do Hackathon</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-4" title="Clique para abrir a imagem maior" alt="Página inicial da Panorama da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"><figcaption>Página inicial da Panorama da fase 1 do Hackathon</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-5" title="Clique para abrir a imagem maior" alt="Página de detalhes da Panorama da fase 1 do Hackathon" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"><figcaption>Página de detalhes da Panorama da fase 1 do Hackathon</figcaption></figure></div>
 </div>
 
 ### Fase 1 e ½
 
 Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo e fizemos algumas seções de _brainstorm_, infelizmente a versão não foi desenvolvida, apenas desenhada, coloquei o nome dessa versão de "fase 1 e ½".
 
-<figure><img alt="Página inicial da Panorama da fase 1 e ½ do Hackathon" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
+<figure><img alt="Página inicial da Panorama da fase 1 e ½ do Hackathon" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
 
 1. Região que exibe qual é a posição da unidade jurídica no ranking com as demais com mesmo tipo;
 2. Espaço destinado ao usuário filtrar as informações da tela;
@@ -251,9 +269,9 @@ Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo e fizemos algumas se
 Na fase 2, a mentoria na segunda fase [**sugeriu** mudássemos](#2ª-etapa) a persona, com isso, precisamos mudar alguns contextos apresentados anteriormente. Aproveitamos parte da etapa 1 e da 1 e ½. Aqui, o filtro passou a considerar além da justiça e o grau, o grupo. O sistema parou de usar grafos, passou a focar nos alertas e a possibilidade de o CNJ mandar mensagens para as UJs sobre as atividades fora do esperado ou enviar elogios para as UJs que superaram as expectativas. Consideramos mostrar a tela de login e assim mostrar que o sistema está interessado com o uso das boas práticas do CNJ.
 
 <div class="row">
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
 </div>
 
 # Pitch da Panorama
@@ -289,29 +307,22 @@ Para antecipar as dúvidas, elaboramos algumas perguntas e respostas, a fim de a
 <details><summary>7. Como você acha que essa solução resolve o problema?</summary><p>Nossa solução permite a celeridade e compartilhamento de boas práticas através do agrupamento de UJs semelhantes, geração de alertas de desempenho, identificação dos marcos processuais e principalmente através da identificação de onde estão os gargalos processuais colocando pra conversar quem se parece comigo e que consequentemente tem dores semelhantes às minhas.</p></details>
 <details><summary>8. O que você acha que fará com que os juízes queiram comentar sobre as transições?</summary><p>A própria curiosidade. Como essa UJ vizinha consegue esse resultado? Como eles gastam tão pouco tempo no “Julgamento”? Além disso, implementar gamificação está no nosso roadmap e acreditamos que também impulsionará a colaboração.</p></details>
 
-O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar as apresentações completas, acesse o [perfil do CNJ no Youtube][demoday-final].
-
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GfGHxTlJRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-# Links do projeto:
+# Links do projeto
 
 ❗ Como o projeto foi construído exclusivamente para o hackathon e não foi feito nenhum investimento por isso utilizamos o Heroku, então navegação pode sofrer instabilidade.
 
 - Aplicação final: [**http://panorama-fase2.herokuapp.com/index.html**][panorama-final]
 - Repositório front-end: [https://github.com/lfvvercosa/fase2_desafio_cnj][github-front-2]
-- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj][github-back-2]
+- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj][github-back-2]  
 
-## Aviso!
-Alguns trechos do material apresentando aqui foram extraídos da comunicação oficial do CNJ e do repositório no GitHub do projeto.
+<p><br><strong>Aviso!</strong><br>Alguns trechos do material apresentando aqui foram extraídos da comunicação oficial do CNJ e do repositório no GitHub do projeto.</p>
 
-<div title="Clique para fechar a janela" class="modal fade" id="cnj-1" tabindex="-1" role="dialog" aria-labelledby="cnj-1" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"></div></div>
-<div title="Clique para fechar a janela" class="modal fade" id="cnj-2" tabindex="-1" role="dialog" aria-labelledby="cnj-2" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"></div></div>
-<div title="Clique para fechar a janela" class="modal fade" id="cnj-3" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-1" tabindex="-1" role="dialog" aria-labelledby="cnj-1" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-2" tabindex="-1" role="dialog" aria-labelledby="cnj-2" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-3" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"></div></div>
 
-<div title="Clique para fechar a janela" class="modal fade" id="cnj-4" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"></div></div>
-<div title="Clique para fechar a janela" class="modal fade" id="cnj-5" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-4" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-1-home.png"></div></div>
+<div title="Clique para fechar a janela" class="modal fade" id="cnj-5" tabindex="-1" role="dialog" aria-labelledby="cnj-3" aria-hidden="true"><div class="modal-dialog modal-image" title="clique para fechar" role="document"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/2-cnj-inova-wireframe-2-detalhes.png"></div></div>
 
 [^1]: Formação de conjuntos de dados que ‘se assemelham’ de alguma forma - independentemente de classes predefinidas.
 
@@ -319,4 +330,4 @@ Alguns trechos do material apresentando aqui foram extraídos da comunicação o
 [github-front-2]: https://github.com/lfvvercosa/fase2_desafio_cnj
 [github-back-2]: https://github.com/gabriel-bandeira/backend-desafio-cnj
 [demoday-final]: https://www.youtube.com/watch?v=2-9nHdoP_-Y
-[briefing]: https://bitbucket.org/wagnerbeethoven/agenciasumo/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf
+[briefing]: https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/15a857406571d7f9e08f873923b0fba4431577db/hackathon/cnj-inova-2-briefing.pdf
