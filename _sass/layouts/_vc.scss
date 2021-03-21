@@ -11,7 +11,7 @@
     @extend .px-3;
     color: #fff;
     background: #333;
-    @extend .text-center;
+    text-align: center;
     h1 {
       @extend .display-4;
     }
@@ -19,9 +19,9 @@
       @extend .lead;
     }
     img {
-      @extend .d-block;
-      @extend .mx-auto;
-      @extend .rounded-circle;
+    display: block;
+     margin-left: auto; margin-right: auto;
+       border-radius: 50%;
     }
   }
 }

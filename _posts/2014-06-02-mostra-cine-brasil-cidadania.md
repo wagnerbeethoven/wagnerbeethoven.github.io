@@ -72,7 +72,8 @@ Aplicação do cartaz no metrô da cidade
 
 Confira os vídeos do evento
 
-<div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube.com/embed/sKei6VnNhVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="iframe-container">
+  <iframe src="https://www.youtube.com/embed/sKei6VnNhVg"></iframe></div>
 
 ### Fotos
 

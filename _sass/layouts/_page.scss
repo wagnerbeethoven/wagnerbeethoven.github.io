@@ -1,52 +1,56 @@
 .page {
   &-banner {
     img {
-      @extend .w-100;
-      @extend .img-fluid;
-      @extend .rounded;
-      @extend .shadow-sm;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
     }
 
     figcaption {
-      @extend .text-center;
-      @extend .small;
-      @extend .p-2;
+      text-align: center;
       opacity: 0.5;
+      padding: 0.5rem;
+      font-size: 0.875em;
     }
   }
 
   &-title {
-    @extend .display-4;
-    @extend .text-center;
-    @extend .py-4;
-    @extend .h2;
-    @extend .font-weight-light;
-    @extend .mb-0;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    padding: 1.5rem 0;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0;
   }
 
   &-summary {
     @extend .lead;
-    @extend .font-italic;
-    @extend .text-center;
+    font-style: italic;
+    text-align: center;
     height: auto;
-    @extend .mx-auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
     @extend .col-12;
     @extend .col-md-10;
     @extend .mb-5;
   }
 
-  &__content {
-    &--blog {
+  &_content {
+    &-blog {
       ul {
-        @extend .list-unstyled;
+        padding-left: 0;
+        list-style: none;
 
         li {
           @extend .col-12;
-          @extend .pb-4;
+          padding-bottom: 1.5rem;
 
           p {
-            @extend .mb-0;
-            @extend .text-muted;
+            margin-bottom: 0;
+            color: #6c757d;
             font-size: 0.825rem;
           }
 
@@ -58,21 +62,23 @@
     }
   }
   &-archive {
-    @extend .pt-0;
+    padding-top: 0;
     h3 {
-      @extend .font-weight-light;
+      font-weight: lighter;
       @extend .text-capitalize;
       @extend .mt-4;
-      @extend .mb-2;
+          margin-bottom: .5rem;
     }
 
     ul {
-      @extend .list-unstyled;
+      padding-left: 0;
+      list-style: none;
 
       li {
-        @extend .w-100;
-        @extend .pb-2;
-        @extend .px-0;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
 
         a {
           strong {
@@ -82,14 +88,18 @@
       }
     }
   }
-  &-list {
-    @extend .pt-0;
-    @extend .list-inline;
-    a {
-      @extend .mr-md-3;
-      @extend .mr-0;
-      @extend .d-block;
-      @extend .d-md-inline-block;
+}
+
+.arquivos {
+  .nav-pages {
+    li {
+      display: inline;
+      margin-right: 1rem;
     }
+  }
+  .page-list,
+  .nav-pages {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

@@ -155,7 +155,7 @@ Um dos aspectos mais confusos do uso do Markdown é que praticamente todo aplica
 
 Para entender o conceito de sabores de Markdown, pode ser útil pensar neles como dialetos de linguagem. As pessoas em Ciudad Juárez falam espanhol da mesma forma que as pessoas em Barcelona, ​​mas existem diferenças substanciais entre os dialetos usados ​​nas duas cidades. O mesmo é verdadeiro para pessoas que usam diferentes aplicativos Markdown. Usar [Dillinger][dillinger] para escrever com Markdown é uma experiência muito diferente do que usar [Ulysses](http://ulysses.app/).
 
-Em termos práticos, isso significa que você nunca sabe exatamente o que uma empresa quer dizer quando afirma que apoia o “Markdown”. Eles estão falando apenas sobre os elementos básicos da sintaxe ou todos os [elementos básicos](#basic-syntax) e [estendidos](#extended-syntax) da sintaxe combinados ou ainda alguma combinação arbitrária de elementos da sintaxe? Você não saberá até ler a documentação ou começar a usar o aplicativo.
+Em termos práticos, isso significa que você nunca sabe exatamente o que uma empresa quer dizer quando afirma que apoia o “Markdown”. Eles estão falando apenas sobre os elementos básicos da sintaxe ou todos os [elementos básicos](#basic-syntax "elementos básicos") e [estendidos](#extended-syntax "estendidos") da sintaxe combinados ou ainda alguma combinação arbitrária de elementos da sintaxe? Você não saberá até ler a documentação ou começar a usar o aplicativo.
 
 Se você está apenas começando, o melhor conselho que posso dar é escolher um aplicativo Markdown com um bom suporte de Markdown. Isso ajudará muito a manter a portabilidade de seus arquivos Markdown. Você pode querer armazenar e usar seus arquivos Markdown em outros aplicativos e, para isso, precisa iniciar com um aplicativo que forneça um bom suporte. Você pode usar o [diretório de ferramentas](http://markdownguide.org/tools/) para encontrar um aplicativo que se encaixe na conta.
 
@@ -979,7 +979,7 @@ Para compatibilidade, coloque linhas em branco antes e depois das régua horizon
 
 ### Links {#links}
 
-Para criar um link, coloque o texto do link entre colchetes (por exemplo, `[Duck Duck Go]`) e siga-o imediatamente com o URL entre parênteses (por exemplo, `(duckduckgo.com)`).
+Para criar um link, coloque o texto do link entre colchetes (por exemplo, `[Duck Duck Go]`) e siga-o imediatamente com o URL entre parênteses (por exemplo, <code>(duckduckgo.com )<code>).
 
 `Meu mecanismo de pesquisa favorito é [Duck Duck Go](duckduckgo.com).`
 
@@ -1001,7 +1001,7 @@ Meu mecanismo de pesquisa favorito é [Duck Duck Go](http://duckduckgo.com "O me
 
 Para transformar rapidamente um URL ou endereço de e-mail em um link, coloque-o entre colchetes angulares.
 
-`<http://markdownguide.org>` ou `<email-falso@exemplo.com>`
+`<markdownguide.org>` ou `<email-falso@exemplo.com>`
 
 A renderização é essa:
 
@@ -1009,10 +1009,10 @@ A renderização é essa:
 
 #### Formatação dos links {#formatting-links}
 
-Para [enfatizar os links](#emphasis), adicione asteriscos antes e depois dos colchetes e parênteses. Para exibir links como [código](#code), adicione crases entre colchetes.
+Para [enfatizar os links "enfatizar os links"](#emphasis), adicione asteriscos antes e depois dos colchetes e parênteses. Para exibir links como [código "código"](#code), adicione crases entre colchetes.
 
-`Eu amo apoiar a **[EFF](http://eff.org)**.` <br>
-`Este é o * [Guia de marcação](http://markdownguide.org) *.` <br>
+`Eu amo apoiar a **[EFF](`http://eff.org`)**.` <br>
+`Este é o * [Guia de marcação](`http://markdownguide.org`) *.` <br>
 ` Veja a seção em [`código`] (# código). `
 
 A renderização é essa:

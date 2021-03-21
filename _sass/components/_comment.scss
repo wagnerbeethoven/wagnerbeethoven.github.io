@@ -4,23 +4,32 @@
 
 .comment {
   &-area {
+    position: relative;
     @extend .my-4;
   }
   &-button {
-    @extend .btn;
-    @extend .px-4;
-    @extend .py-2;
+    padding: 8px 24px;
     border-width: 0;
-    @extend .rounded-pill;
     background: #f1f1f1;
+    @extend .btn;
+    border-width: 0;
+        border-radius: 50rem;
+    background: #f1f1f1;
+  }
+  &-input[type="checkbox"] {
+    display: none;
+  }
+  &-list {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out;
+  }
+  &-input:checked + &-button {
+    background: $main-color;
+    color: #fff;
+  }
 
-    &:focus {
-      box-shadow: none;
-    }
-
-    &[aria-expanded="true"] {
-      background: $main-color;
-      color: #fff;
-    }
+  &-input:checked + &-button + &-list {
+    max-height: none;
   }
 }

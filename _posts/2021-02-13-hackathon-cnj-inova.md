@@ -100,7 +100,7 @@ Na segunda etapa, a mentoria foi feita com os envolvidos diretamente com o CNJ. 
 
 A apresentação final da solução proposta foi feita no sábado (28/12/2020) pela manhã através de vídeo conferência. Os avaliadores foram Carl Smith (Secretaria de Programas, Pesquisas e Gestão Estratégica), Thiago Vieira (Gestor de Sistemas Corporativos do CNJ) e Fábio Porto (Magistrado) e tivemos exatamente 5 minutos para apresentação e mais 5 minutos perguntas dos jurados.
 
-O processo ocorreu de maneira como tínhamos previsto, algumas dúvidas nós [já tínhamos mapeado](#possíveis-perguntas) e isso foi bom, já que as nossas respostas foram mais diretas e assertivas. Após todas as equipes do primeiro desafio se apresentarem, pediram que escolhêssemos 1 membro para participar sozinho de uma sabatina de perguntas sobre o processo de construção da solução e funcionamento da ferramenta durante 30 minutos.
+O processo ocorreu de maneira como tínhamos previsto, algumas dúvidas nós [já tínhamos mapeado](#possíveis-perguntas "Possíveis perguntas") e isso foi bom, já que as nossas respostas foram mais diretas e assertivas. Após todas as equipes do primeiro desafio se apresentarem, pediram que escolhêssemos 1 membro para participar sozinho de uma sabatina de perguntas sobre o processo de construção da solução e funcionamento da ferramenta durante 30 minutos.
 
 Com o final das equipes do segundo desafio, o resultado foi dito!  
 🏆 Ficamos com o segundo lugar.
@@ -111,8 +111,8 @@ Com o final das equipes do segundo desafio, o resultado foi dito!
 
 O vídeo abaixo é um recorte da apresentação da minha equipe. Para visualizar as apresentações completas, acesse o [perfil do CNJ no Youtube][demoday-final].
 
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GfGHxTlJRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container">
+  <iframe src="https://www.youtube.com/embed/3GfGHxTlJRE"></iframe>
 </div>
 
 ---
@@ -121,7 +121,7 @@ Tentarei trazer do processo de Design que desenvolvi junto com a equipe, mesmo c
 
 # A solução - Panorama
 
-![Logo da Solução - Panorama](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/logo-panorama.svg)
+![Logo da Solução - Panorama](https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/logo-panorama.svg "Logo Panorama")
 
 ## Personas
 
@@ -190,15 +190,15 @@ Algumas características foram pensadas para guiar nossa solução, organizamos 
 
 A panorama vai além do ranqueamento. Essas funcionalidades foram as apresentadas na 2ª fase da competição.
 
-<figure><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg" alt="1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;"><figcaption>1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;</figcaption></figure>
+<figure><img title="Principais características da solução" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/principais-caracteristicas.svg" alt="1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;"><figcaption>1 - Simplicidade; 2 - Objetividade; 3 - Rapidez; 4 - Qualidade; 5 - Foco no problema; 6 - Encontrar soluções; 7 - Associados as Boas Práticas do CNJ; 8 - Interatividade; 9 - Avisos e Alertas de situações em crise; 10 - Sugere melhorias baseadas em inteligência artificial;</figcaption></figure>
 
 ### Funcionalidades principais
 
-<figure class="w-75 h-auto mx-auto d-block"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg" alt="Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;"><figcaption>Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;</figcaption></figure>
+<figure class="Funcionalidades principais" class="w-75 h-auto mx-auto d-block"><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/macro-funcionalidade.svg" alt="Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;"><figcaption>Grupo de UJs simulares; Alertas de movimentos anormais; Ranking de UJs; Notificações de UJ; Compartilhamento de boas práticas; Suporte a decisões;</figcaption></figure>
 
 ### As tecnologias utilizadas
 
-<figure><img src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg" alt="Ícones representando as tecnoligias: HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker;"><figcaption>HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker</figcaption></figure>
+<figure><img title="As tecnologias utilizadas" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/tecnologias.svg" alt="Ícones representando as tecnoligias: HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker;"><figcaption>HTML; CSS; JS; Phython; Bootstrap; Mongo; Heroku; Sass; Docker</figcaption></figure>
 
 Não irei detalhar aspectos de back-end, tais como: fluxos e manipulação de dados, arquitetura do sistema.  
 Maiores detalhes podem ser acessados no [GitHub do projeto][github-front-2].
@@ -240,7 +240,7 @@ As funcionalidades dessa primeira entrega foram:
 
 Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo e fizemos algumas seções de _brainstorm_, infelizmente a versão não foi desenvolvida, apenas desenhada, coloquei o nome dessa versão de "fase 1 e ½".
 
-<figure><img alt="Página inicial da Panorama da fase 1 e ½ do Hackathon" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
+<figure><img title="Tela inicial" alt="Página inicial da Panorama da fase 1 e ½ do Hackathon" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-wireframe-apontamento.png"><figcaption>Tela inicial</figcaption></figure>
 
 1. Região que exibe qual é a posição da unidade jurídica no ranking com as demais com mesmo tipo;
 2. Espaço destinado ao usuário filtrar as informações da tela;
@@ -266,12 +266,12 @@ Entre as fases 1 e 2 e das mentorias, nós tivemos um tempo e fizemos algumas se
 
 ### Fase 2
 
-Na fase 2, a mentoria na segunda fase [**sugeriu** mudássemos](#2ª-etapa) a persona, com isso, precisamos mudar alguns contextos apresentados anteriormente. Aproveitamos parte da etapa 1 e da 1 e ½. Aqui, o filtro passou a considerar além da justiça e o grau, o grupo. O sistema parou de usar grafos, passou a focar nos alertas e a possibilidade de o CNJ mandar mensagens para as UJs sobre as atividades fora do esperado ou enviar elogios para as UJs que superaram as expectativas. Consideramos mostrar a tela de login e assim mostrar que o sistema está interessado com o uso das boas práticas do CNJ.
+Na fase 2, a mentoria na segunda fase [**sugeriu** mudássemos](#2ª-etapa "ir para o trecho sobre a 2ª etapa") a persona, com isso, precisamos mudar alguns contextos apresentados anteriormente. Aproveitamos parte da etapa 1 e da 1 e ½. Aqui, o filtro passou a considerar além da justiça e o grau, o grupo. O sistema parou de usar grafos, passou a focar nos alertas e a possibilidade de o CNJ mandar mensagens para as UJs sobre as atividades fora do esperado ou enviar elogios para as UJs que superaram as expectativas. Consideramos mostrar a tela de login e assim mostrar que o sistema está interessado com o uso das boas práticas do CNJ.
 
 <div class="row">
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
-<div class="col-12 col-md"><figure><img class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img title="Página inicial" class="rounded" data-toggle="modal" data-target="#cnj-1" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-home.png"><figcaption>Página inicial</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img title="Tela de detalhes - Destaques" class="rounded" data-toggle="modal" data-target="#cnj-2" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-destaques.png"><figcaption>Tela de detalhes - Destaques</figcaption></figure></div>
+<div class="col-12 col-md"><figure><img title="Tela de detalhes - Gargalos" class="rounded" data-toggle="modal" data-target="#cnj-3" title="Clique para abrir a imagem maior" src="https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/3-cnj-inova-detalhes-gargalo.png"><figcaption>Tela de detalhes - Gargalos</figcaption></figure></div>
 </div>
 
 # Pitch da Panorama
@@ -313,7 +313,7 @@ Para antecipar as dúvidas, elaboramos algumas perguntas e respostas, a fim de a
 
 - Aplicação final: [**http://panorama-fase2.herokuapp.com/index.html**][panorama-final]
 - Repositório front-end: [https://github.com/lfvvercosa/fase2_desafio_cnj][github-front-2]
-- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj][github-back-2]  
+- Repositório back-end: [https://github.com/gabriel-bandeira/backend-desafio-cnj][github-back-2]
 
 <p><br><strong>Aviso!</strong><br>Alguns trechos do material apresentando aqui foram extraídos da comunicação oficial do CNJ e do repositório no GitHub do projeto.</p>
 

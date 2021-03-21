@@ -6,7 +6,7 @@ layout: default
 <section itemscope itemtype="http://schema.org/NewsArticle">
     {% if page.image %}
     <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page-banner">
-        <img src="{{page.image}}" title="{{page.title}} | {{ page.legend }}" alt="{{page.alt}}">
+        <img src="{{page.image}}" title="{{page.title}} {{ page.legend }}" alt="{{page.alt}}">
         <meta itemprop="url" content="{{page.image}}">
         {% if page.legend %}
         <figcaption>
@@ -16,25 +16,23 @@ layout: default
         {% endif %}
     </figure>
     {% endif%}
-
-    <article itemprop="articleBody" class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
+    <header class="article-header">
         <h2 class="page-title" itemprop="headline">{{ page.title }}</h2>
         <p class="page-summary" itemprop="description">{{page.summary}}</p>
-        <div class="post-meta">
+        <div class="post-meta {% if page.categories contains 'portfolio' %}post-meta-portfolio{% endif %}">
             <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture" title="Conteúdo produzido por {{site.about-name}}" alt="{{site.about-altavatar}}" src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75">
+            {% if page.categories contains "blog" %}
             <div class="post-meta-time">
-                {% if page.categories contains "blog" %}
                 {% include post/post-date.html %}
-
                 {% include post/post-read.html %}
-                {% else%}
-                {% endif %}
             </div>
+            {% endif %}
         </div>
 
-        <section class="toc">
-            <nav id="toc"></nav>
-        </section>
+        <nav id="toc" class="toc"></nav>
+    </header>
+    <article itemprop="articleBody" class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
+
 
         {{ content }}
     </article>

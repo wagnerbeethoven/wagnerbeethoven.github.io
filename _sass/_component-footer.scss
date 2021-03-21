@@ -1,0 +1,57 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+.top {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  img {
+    width: 1rem;
+  }
+  &:hover {
+    img {
+      animation: bounce infinite 1s alternate linear;
+    }
+  }
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  margin: 3rem 0 0;
+  font-size: 0.875em;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    p:first-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .love {
+    animation: pulse 1s infinite alternate;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  > p {
+    margin: 0;
+  }
+}

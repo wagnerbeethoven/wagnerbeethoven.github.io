@@ -1,11 +1,5 @@
 // ADICIONAR MARCAÇÃO DO MENU
 
-$("#menu ul li a").each(function () {
-  //console.log($(this).attr('href'));
-  if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
-    $(this).parent().addClass('active');
-  }
-});
 
 // COMENTÁRIO
 var disqus_shortname = 'wagnerbeethoven';
@@ -24,9 +18,7 @@ $(document).ready(function () {
   $('#toc').toc({
     classes: {
       list: 'toc-container',
-      item: 'toc-item',
-      noBackToTopLinks: true,
-      showEffect: 'slideDown'
+      item: 'toc-item'
     }
   });
 });
@@ -34,18 +26,17 @@ $(document).ready(function () {
 // ADICIONA _BLANK E NO OPENER E REFERRER
 
 function targetBlank() {
-  // remove subdomain of current site's url and setup regex
   var internal = location.host.replace("www.", "");
   internal = new RegExp(internal, "i");
 
-  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  var a = document.getElementsByTagName('a');
   for (var i = 0; i < a.length; i++) {
-    var href = a[i].host; // set the host of each link
-    if (!internal.test(href)) { // make sure the href doesn't contain current site's host
-      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
-      a[i].setAttribute('rel', 'noopener noreferrer'); // if it doesn't, set attributes
-      // a[i].setAttribute('data-toggle', 'tooltip'); // if it doesn't, set attributes
-      a[i].setAttribute('title', 'Este link irá abrir uma nova aba do navegador'); // if it doesn't, set attributes
+    var href = a[i].host;
+    if (!internal.test(href)) {
+      a[i].setAttribute('target', '_blank');
+      a[i].setAttribute('rel', 'noopener noreferrer');
+      // a[i].setAttribute('data-toggle', 'tooltip');
+      a[i].setAttribute('title', 'Este link irá abrir uma nova aba do navegador');
 
     }
   }

@@ -1,51 +1,37 @@
-.toc {
+nav.toc {
   @extend .col-12;
-  @extend .mx-auto;
-  @extend .py-3;
-  @extend .px-0;
-  box-shadow: none;
-  nav {
-    @extend .rounded;
-    @extend .border;
-    @extend .border;
-    @extend .p-3;
-    i {
-      font-style: initial;
-      font-size: 2rem;
-      @extend .font-weight-lighter;
-      @extend .d-block;
-      @extend .mt-2;
-      @extend .pb-2;
-    }
-    ul,
-    ol {
-      @extend .px-0;
-      @extend .pl-4;
-      @extend .mb-0;
-      @extend .col-12;
-      list-style: decimal;
-      @extend .mb-0;
-      @extend .pb-0;
-      li {
-        @extend .w-100;
-        a {
-          @extend .font-weight-normal;
-        }
+  padding: 1rem;
+  margin: 0 auto 1rem;
 
-        & > ol {
-          list-style: lower-alpha;
-          & > li > ol {
-            list-style: lower-roman;
-          }
+  box-shadow: none;
+  border-radius: 0.25rem;
+  border: 1px solid #dee2e6;
+  i {
+    font-style: initial;
+    font-size: 2rem;
+    font-weight: lighter;
+    display: block;
+  }
+  ul,
+  ol {
+    @extend .col-12;
+    padding: 0 0 0 24px !important;
+    margin-bottom: 0;
+    list-style: decimal;
+    li {
+      width: 100%;
+      margin: 0;
+      a {
+        font-weight: normal;
+      }
+
+      & > ol {
+        padding-top: 0;
+        list-style: lower-alpha;
+        & > li > ol {
+          list-style: lower-roman;
         }
       }
     }
-  }
-}
-
-.portfolio-article {
-  .toc {
-    @extend .col-md-8;
-    @extend .px-3;
   }
 }

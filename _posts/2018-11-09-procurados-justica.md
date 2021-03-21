@@ -86,7 +86,9 @@ Eu, como usuário quero alertar as autoridades responsáveis do local em que me 
 
 Assista o vídeo ou acesse: <https://xd.adobe.com/view/c25a7bd9-8c4a-4769-6537-776a37a9b0c3-b46b/?fullscreen>
 
-<iframe class="mx-auto d-block" width="320" height="640" src="https://www.youtube.com/embed/K5YpUi56uN0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container">
+  <iframe  src="https://www.youtube.com/embed/K5YpUi56uN0?controls=0"></iframe>
+</div>
 
 # Elementos da interface
 

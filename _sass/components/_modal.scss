@@ -3,10 +3,11 @@
 
   &.modal-image {
     img {
-      @extend .img-fluid;
-      @extend .rounded;
-      @extend .d-block;
-      @extend .mx-auto;
+     max-width: 100%;
+    height: auto;
+         border-radius: .25rem;
+    display: block;
+     margin-left: auto; margin-right: auto;
     }
   }
 }

@@ -1,11 +1,6 @@
 {% if post.url %}
-<div class="portfolio-item">
-    <a  title="Confira maiores detalhes do projeto: {{ post.title }}" href="{{ post.url }}">
-        <img class="portfolio-image" src="{{ post.image }}" title="{{ post.title }}" alt="{{ post.title }}">
-
-        <p class="portfolio-name">
-            {{ post.title }}
-        </p>
-    </a>
-</div>
+<a class="portfolio-item" href="{{ post.url }}" title="Confira maiores detalhes do projeto: {{ post.title }}">
+    <img class="portfolio-image" src="{{ post.image }}" title="{{ post.title }}" alt="Banner do {{ post.title }}">
+    <p class="portfolio-name">{{ post.title }}</p>
+</a>
 {% endif %}

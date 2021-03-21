@@ -1,12 +1,8 @@
 <li>
     {% if post.url %}
-        <a title="{{ post.title }}"  href="{{ post.url }}">
-            <strong>
-                {{ post.title }}
-            </strong>
-        </a>
-        <p>
-            {{ post.summary }}
-        </p>
+    <div>
+        <a title="{{ post.title }}" href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+        <p>{{ post.summary }}</p>
+    </div>
 </li>
 {% endif %}

@@ -1,9 +1,0 @@
-<ol class="breadcrumb" aria-label="breadcrumb">
-    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %} <li class="breadcrumb-item">Página inicial
-    </li>
-    {% for crumb in crumbs offset: 1 %}{% if forloop.last %}<li class="breadcrumb-item active" aria-current="page">
-        {{ page.title }}</li>{% else %}
-    <li class="breadcrumb-item">
-        {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
-    </li> {% endif %} {% endfor %}
-</ol>

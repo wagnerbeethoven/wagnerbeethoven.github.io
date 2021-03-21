@@ -1,7 +1,3 @@
-// @mixin respond-above($breakpoint) {
-// @mixin respond-below($breakpoint) {
-// @mixin respond-between($lower, $upper) {
-
 .portfolio {
   &-container {
     @extend .row;
@@ -12,23 +8,25 @@
     @extend .col-12;
     @extend .col-sm-6;
     @extend .col-md-4;
-    @extend .mb-4;
+    margin-bottom: 1.5rem;
 
     &:last-of-type {
-      @extend .mb-0;
+      margin-bottom: 0;
     }
   }
   &-name {
-    @extend .text-center;
-    @extend .p-2;
-    @extend .d-block;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    display: block;
   }
   &-image {
-    @extend .card;
+    border-radius: 0.25rem;
+    max-width: 100%;
     height: 350px;
     width: 100%;
     object-fit: cover;
-    @extend .mb-0;
+    margin-bottom: 0;
+    transition: box-shaow linear 1s;
     &:hover,
     &:focus {
       filter: grayscale(0.9);
@@ -52,12 +50,6 @@
 
   // PORTFOLIO ITEM
   &-article {
-    .post-meta,
-    .toc {
-      @extend .col-md-8;
-      @extend .px-3;
-    }
-    
     p,
     ul,
     ol,
@@ -69,8 +61,10 @@
     h6 {
       @extend .col-12;
       @extend .col-md-8;
-      @extend .mx-auto;
-      @extend .px-0;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
     }
     h1,
     h2,
@@ -79,21 +73,20 @@
     h5,
     h6 {
       @extend .col-12;
-      @extend .font-weight-lighter;
-      @extend .pt-5;
-      @extend .pb-3;
+      font-weight: lighter;
+      padding: 3rem 0 1rem;
     }
     ul,
     ol {
-      @extend .pb-3;
-      padding-left: 40px;
+      padding: 0 0 1rem 40px;
       li {
-        @extend .w-100;
+        width: 100%;
       }
     }
 
     img {
-      @extend .mx-auto;
+      margin-left: auto;
+      margin-right: auto;
       box-shadow: none !important;
     }
   }

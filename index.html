@@ -3,34 +3,38 @@ layout: default
 title: Página inicial
 ---
 
+<section class="section-about">
+    <div class="section-about-info">
+        <h2>Olá, me chamo Wagner e sou UX/UI Designer</h2>
+        <p>Há mais de dez construo e planejo coisas úteis para as pessoas. Tenho experiência em usabilidade e sou entusiasta da acessibilidade e de tecnologia assistivas</p>
+        <a class="section-link" title="Confira todas as publicações" href="{{site.url}}/sobre">Conheça minha trajetória</a>
+    </div>
+    <figure class="section-about-picture">
+        <img title="Wagner Beethoven" alt="Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul" src='{{site.url}}/img/page/avatar.jpg' />
+    </figure>
+</section>
+
 <section class="section-portfolio">
-    <header class="section-header">
-        <h2 class="section-name">
-            <a title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">
-                Portfólio
-            </a>
-        </h2>
-        <p class="section-description">
-            Confira os trabalhos mais recentes
-        </p>
-    </header>
+    <h2 class="section-title">
+        Portfólio
+    </h2>
+    <p class="section-description">
+        Confira os meus trabalhos mais recentes
+        <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Veja o portfólio</a>
+    </p>
     <div class="portfolio-container">
         {% for post in site.categories.portfolio limit:3%}
         {% include portfolio/portfolio-list.html %}
         {% endfor %}
     </div>
 </section>
+
 <section class="section-blog">
-    <header class="section-header">
-        <h2 class="section-name">
-            <a title="Ir para a página do meu blog" href="{{site.url}}/blog">
-                Blog
-            </a>
-        </h2>
-        <p class="section-description">
-            Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
-        </p>
-    </header>
+    <h2 class="section-title">Blog</h2>
+    <p class="section-description">
+        Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
+        <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Confira todas as publicações</a>
+    </p>
     <div class="post-container">
         <ul>
             {% for post in site.categories.blog limit:6 %}
@@ -39,5 +43,4 @@ title: Página inicial
         </ul>
     </div>
 </section>
-<script
-    type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>
+<script type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>

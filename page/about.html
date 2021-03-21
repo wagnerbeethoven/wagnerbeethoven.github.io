@@ -1,0 +1,100 @@
+---
+layout: page
+title: Sobre
+permalink: sobre
+image: "img/page/portfolio.jpg"
+alt: "Wagner está sentando com as duas mãos na mesa olhando para uma tela de laptop. Na mesa está um caso de plantas e um fone. Acima de sua cabeça há uma luminária. Toda a foto é preta e branca, exceto pelas flores do vaso e a parte interna da luminária que são amarelas."
+legend: "Olinda / 9 de setembro de 2018"
+---
+<section class="about-container">
+    <span class="about-name" itemprop="name">{{site.about-name}}</span>
+    <span class="about-title">{{site.about-title}}</span>
+    <span class="about-contact"><a href="mailto:{{site.about-email}}">{{site.about-email}}</a> | <a href="tel:+5581986496080">{{site.about-phone}}</a></span>
+    <div class="links-social">
+        <a class="links-social-item links-social-linkedin" href="http://linkedin.com/in/wagnerbeethoven"> <span class="sr-only">LinkedIn: wagnerbeethoven</span> </a>
+        <a class="links-social-item links-social-skype" href="skype:wagnerbeethoven?chat"> <span class="sr-only">Skype: wagnerbeethoven</span> </a>
+        <a class="links-social-item links-social-github" href="http://github.com/wagnerbeethoven"> <span class="sr-only">Github: wagnerbeethoven</span> </a>
+        <a class="links-social-item links-social-behance" href="http://behance.net/wagnerbeethoven"> <span class="sr-only">Behance: wagnerbeethoven</span> </a>
+    </div>
+    <div class="about-info">
+        <p>Me chamo {{site.about-name}} (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/is-it-just-a-hello-world.html" title="Confira algumas explicações sobre meu portfólio">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos, atualmente trabalho na <strong>{{ site.data.about.experience[0].name }}</strong> como <strong>{{ site.data.about.experience[0].activity }}</strong>.<br><br>Resido em <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span>, <span itemprop="addressRegion">{{site.about-state}}.</p>
+        <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
+        <p>Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para desktops, celulares, tablet e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educacional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
+        <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Sobre meus trabalho, você pode <a title="Confira parte dos meus trabalhos" href="{{site.url}}/portfolio">visualizar na seção portfólio</a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade e sigilo) e <a title="Algumas publicações" href="{{site.url}}/blog">alguns textos estão disponíveis no meu blog</a>.</p>
+    </div>
+</section>
+
+<section class="career-container job-container">
+    <h2 class="section-title">Experiência Profissional</h2>
+    <div class="career-list">
+        {% for company in site.data.about.experience %}
+        <div class="career-item" id="{{company.name|slugify}}">
+            <figure class="career-logo">
+                <img src="{{site.url}}/{{company.logo}}" title="Logo - {{company.name}}" alt="Logo {{experience.name}}">
+            </figure>
+            <div class="career-detail">
+                {% if company.activity %}<strong class="career-activity">{{company.activity}}</strong>{% endif %}
+                {% if company.name %}<span class="career-name">{{company.name}}</span>{% endif %}
+                {% if company.duration %}<small class="career-duration">{{company.duration}}</small>{% endif %}
+                {% if company.description %}<p class="career-description">{{company.description}}</p>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="career-container education-container">
+    <h2 class="section-title">Educação</h2>
+    <div class="career-list">
+        {% for learn in site.data.about.education %}
+        <div class="career-item" id="{{learn.name|slugify}}">
+            <figure class="career-logo">
+                <img src="{{site.url}}/{{learn.logo}}" title="Logo - {{learn.name}}" alt="Logo {{learn.name}}">
+            </figure>
+            <div class="career-detail">
+                {% if learn.activity %}<strong class="career-activity">{{learn.activity}}</strong>{% endif %}
+                {% if learn.name %}<span class="career-name">{{learn.name}}</span>{% endif %}
+                {% if learn.duration %}<small class="career-duration">{{learn.duration}}</small>{% endif %}
+                {% if learn.description %}<p class="career-description">{{learn.description}}</p>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="career-container certificate-container">
+    <h2 class="section-title">Certificação</h2>
+    <div class="career-list">
+        {% for certificate in site.data.about.certificate %}
+        <div class="career-item" id="{{certificate.name|slugify}}">
+            <figure class="career-logo">
+                <img src="{{site.url}}/{{certificate.logo}}" title="Logo - {{certificate.name}}" alt="Logo {{certificate.name}}">
+            </figure>
+            <div class="career-detail">
+                <div class="career-detail">
+                    {% if certificate.activity %}<strong class="career-activity">{{certificate.activity}}</strong>{% endif %}
+                    {% if certificate.name %}<span class="career-name">{{certificate.name}}</span>{% endif %}
+                    {% if certificate.duration %}<small class="career-duration">{{certificate.duration}}</small>{% endif %}
+                    {% if certificate.description %}<p class="career-description">{{certificate.description}}</p>{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="career-container course-container">
+    <h2 class="section-title">Cursos</h2>
+    {% for course in site.data.about.course %}
+    <div class="career-item" id="{{course.name|slugify}}">
+        <div class="career-detail">
+            {% if course.activity %}<strong class="career-activity">{{course.activity}}</strong>{% endif %}
+            {% if course.name %}<span class="career-name">{{course.name}}</span>{% endif %}
+            {% if course.duration %}<small class="career-duration">{{course.duration}}</small>{% endif %}
+            {% if course.description %}<p class="career-description">{{course.description}}</p>{% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<script type="application/ld+json">{"@context": "http://schema.org/","@type": "Person","name": "{{site.about-name}}","jobTitle": "{{site.about-title}}","address": {"@type": "PostalAddress","addressLocality": "{{site.about-city}}","addressRegion": "{{site.about-state}}"}}</script>

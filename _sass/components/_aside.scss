@@ -2,97 +2,17 @@
   &-sidebar {
     @extend .col-12;
     @extend .col-md-8;
-    @extend .mx-auto;
-    @extend .mt-5;
-    @extend .pt-5;
-    @extend .px-0;
+    margin: 3rem auto 0;
+    padding: 3rem 0 0 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    img {
-      width: 18px;
-      @extend .mr-3;
-      color: $main-color;
-    }
-
-    li {
-      @extend .breadcrumb-item;
-
-      &:nth-child(2) {
-        &:before {
-          @extend .d-none;
-        }
-      }
-    }
   }
 }
 
 .aside {
-  &-section {
-    @extend .text-capitalize;
-    @extend .breadcrumb;
-    @extend .p-0;
-    @extend .mb-3;
-    @extend .mx-0;
-    background: transparent;
-
-    &--related {
-      @extend .mt-5;
-      @extend .mb-0;
-      @extend .pt-3;
-      position: relative;
-      @extend .list-unstyled;
-
-      li {
-        list-style: square;
-        @extend .mb-1;
-        margin-left: 25px;
-        @extend .w-100;
-        @extend .pl-0;
-
-        &:last-of-type {
-          &:before {
-            @extend .d-none;
-          }
-        }
-      }
-
-      a {
-        @extend .mb-3;
-        @extend .px-0;
-
-        a {
-          font-weight: 500;
-        }
-      }
-
-      &:before,
-      &:after {
-        position: absolute;
-      }
-
-      &:before {
-        @extend .d-block;
-        top: -1rem;
-        width: 18px;
-        height: 18px;
-        content: " ";
-        background: transparent url("../img/icones/relacionados.svg");
-      }
-
-      &:after {
-        top: -1.25rem;
-        left: calc(18px + 15px);
-        content: "Textos relacionados";
-
-        font-weight: 600;
-      }
-    }
-  }
-
   &-portfolio {
     @extend .col-12;
     @extend .col-md-8;
-    @extend .mx-auto;
-    @extend .mt-5;
+    margin: 3rem auto 0;
 
     &:before {
       background: none;
@@ -108,13 +28,11 @@
     }
 
     ul {
-      @extend .list-inline;
-
       li {
-        @extend .d-inline;
+        display: inline;
 
         &:first-child {
-          @extend .font-weight-bold;
+          font-weight: 700;
         }
       }
     }
@@ -122,8 +40,7 @@
 
   &-tools {
     li {
-      @extend .mr-2;
-
+      margin-right: 0.5rem;
       img {
         width: 24px;
         height: 24px;

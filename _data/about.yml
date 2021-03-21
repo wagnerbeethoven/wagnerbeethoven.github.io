@@ -1,0 +1,341 @@
+certificate:
+  - name: Scrum Fundamentals Certified (SFC)
+    company: SCRUMstudy
+    duration: Março/2020
+    logo: img/cv/scrumstudy.jpg
+    description: '<a rel="noreferrer" href="http://81cd1176253f3f59d435-ac22991740ab4ff17e21daf2ed577041.r77.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-WagnerBeethovenMartinsViana-762336.pdf" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank" >Visualizar certificado</a>.'
+
+education:
+  - name: Design de Web Apps com Tecnologia Front-End
+    company: Fundação de Ensino Superior de Olinda - FUNESO
+    duration: 2015 - 2017 (Concluído)
+    logo: img/cv/unibratec.png
+    description: Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.
+
+
+  - name: Sistemas para Internet
+    company: Centro Universitário Maurício de Nassau - Uninassau
+    duration: 2010 - 2012 (Concluído)
+    logo: img/cv/uninassau.jpg
+    description: Graduação
+
+  - name: Licenciatura Plena em Ciências - Habilitação em Biologia
+    company: Fundação de Ensino Superior de Olinda - FUNESO
+    duration: 2005 - 2008 (Concluído)
+    logo: img/cv/funeso.jpg
+    description: Graduação
+
+course:
+  - name: 'Web Typography for Designers & Developers'
+    company: Udemy
+    duration: Agosto/2020 - 6.5h
+    logo: img/cv/arquivo-livros-uff.jpg
+    duration: 'Curso ministrador por Rob Sutcliffe. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOka1QBLn_cVmQXHaJIw?e=RsdwFH">Visualizar certificado</a>'
+  
+  - name: 'Design Editorial de Livros: Teoria e Prática de Diagramação'
+    company: Arquivo dos Livros (UFF) e Laboratório de Publicações Lima Barreto (UERJ)
+    duration: Julho/2020 - 2h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Ronald Monteiro. <a href="https: //1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea">Visualizar certificado</a>'
+  
+  - name: Introdução ao Design do Dia a Dia
+    company: Udacity
+    duration: Julho/2020
+    logo: img/cv/udacity.jpg
+    duration: 'Curso ministrador por Don Norman, Kristian Simsarian e Chelsey Glasson.'
+
+  - name: Construa seu site em WordPress de forma simples e rápida
+    company: Udemy
+    duration: Maio/2020 - 44min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Roncalli Daniel Bitencourt.'
+
+  - name: How to Design & Prototype in Adobe XD
+    company: Udemy
+    duration: Maio/2020 - 1h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Daniel White.'
+
+  - name: UX/UI Design for Beginners
+    company: Udemy
+    duration: Maio/2020 - 2h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Antony Conboy.'
+
+  - name: Design de Interface na Prática (UI Design)
+    company: Udemy
+    duration: Maio/2020 - 38min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Mônica Mesquita. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>'
+
+  - name: 'Adobe XD: UI Design do básico aos protótipos'
+    company: Udemy
+    duration: Maio/2020 - 5h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>.'
+
+  - name: Hello Design Thinking
+    company: IDEO U
+    duration: Maio/2020
+    logo: img/cv/ideou.png
+    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYVT4CXvNjbu2MDKNA?e=42oRov">Visualizar certificado.</a>'
+
+  - name: UX Design Masterclass
+    company: UXDMC
+    duration: Abril/2020 - 8h 42min
+    logo: img/cv/uxdmc.jpg
+    duration: 
+
+  - name: 'Product Mastery: 20 Video Lessons'
+    company: Product School
+    duration: Abril/202
+    logo: img/cv/product-school.png
+    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQR_bgdOG7YR53a0Q?e=YKN7k5">Visualizar certificado</a>.'
+
+  - name: 'Product Masterclass: How to Build Digital Products'
+    company: Product School
+    duration: Abril/2020
+    logo: img/cv/product-school.png
+    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQSnU6N2NRKxdG_KA?e=SDzc0U">Visualizar certificado</a>.'
+
+  - name: 'UX & Design Thinking: Experiência do Usuário nos negócios'
+    company: Udemy
+    duration: Abril/2020 - 11h 30min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
+
+  - name: Fundamentos do Kanban
+    company: Treinaweb
+    duration: Março/2020 - 4h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/POASJ4A90KES">Visualizar certificado</a>.'
+
+  - name: Design Thinking
+    company: Treinaweb
+    duration: Março/2020 - 6h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/BRY2UGBYOJSO">Visualizar certificado</a>.'
+
+  - name: Usando Kanban com Scrum
+    company: Treinaweb
+    duration: Março/2020 - 4h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/5PNBXHCV7FKG">Visualizar certificado</a>.'
+
+  - name: User Experience / User Interface
+    company: Treinaweb
+    duration: Março/2020 - 10h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/ULEYUJEJ389C">Visualizar certificado</a>.'
+
+  - name: Scrum - Planejamento e Desenvolvimento Ágeis
+    company: Treinaweb
+    duration: Março/2020 - 8h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/8LZB6U1XYYEA">Visualizar certificado</a>.'
+
+  - name: 'Lettering Básico / Avançado'
+    company: Faber-Castell
+    duration: Março/2020 (1h 30min /  1h 30min)
+    logo: img/cv/faber-castell.jpg
+    duration: <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766">Visualizar certificado do curso básico</a> e do <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776">curso avançado</a>'
+
+
+  - name: Prototipação Rápida
+    company: Treinaweb
+    duration: Março/2020 - 2h  
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/1L2YBCP2CRXH">Visualizar certificado</a>.'
+
+  - name: Introdução à Acessibilidade
+    company: Treinaweb
+    duration: Março/2020 - 10h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/CRFH2FQIRJA7">Visualizar certificado</a>.'
+
+  - name: 'Figma: Design colaborativo do básico ao protótipo responsivo'
+    company: Udemy
+    duration: Março/2020 - 6h 30min 
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
+
+  - name:  HTML5 para quem não sabe nada de HTML5
+    company: Udemy
+    duration: Março/2020 - 6h 10min 
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Paulo Andrade. <a rel="noreferrer" href="http://ude.my/UC-ea0d259d-fe64-4fe7-9854-b91981e188a6">Visualizar certificado</a>.'
+
+  - name: XML Completo
+    company: Treinaweb
+    duration: Março/2020 - 18h
+    logo: img/cv/treinaweb.png
+    duration: '<a href="https://www.treinaweb.com.br/certificado/BFVG42Q4FLMD">Visualizar certificado</a>.'
+
+  - name: 'UX Design de A à Z: tudo sobre experiência do usuário'
+    company: Udemy
+    duration: Março/2020 - 11h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso Ministrado por Chaiane Thiesen Bitelo e Bruna Ruschel Moreira. <a rel="noreferrer" href="http://ude.my/UC-967ee31c-e1c6-4be9-a276-8592f43bbccf">Visualizar certificado</a>'
+
+  - name: Criando sites estáticos com Jekyll
+    company: Udemy
+    duration: Fevereiro - 2h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Wilian Justen.'
+
+  - name:  Introdução à linguagem CSS
+    company: Udemy
+    duration: Fevereiro/2020 - 1h 50min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Diego Mariano.'
+
+  - name: Introdução à Linguagem HTML
+    company: Udemy
+    duration: Fevereiro/2020- 1h
+    logo: img/cv/udemy.jpg
+    duration: Curso ministrador por Diego Mariano.
+
+  - name: Criando Páginas Web com o GitHub Pages
+    company: Udemy
+    duration: Fevereiro/2020- 30min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Marcos Castro.'
+
+  - name: Aprenda Markdown
+    company: Udemy
+    duration: Fevereiro/2020 - 35min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Roberto Achar.'
+    
+  - name: Git e contribuições para projetos Open Source
+    company: Udemy
+    duration: Fevereiro/2020 - 3h 30min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Bruno Orlandi.'
+
+  - name: Git e Github para iniciantes
+    company: Udemy
+    duration: Fevereiro/2020 - 2h 5min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Wilian Justen.'
+
+  - name: Imersão em UX Design
+    company: Design Culture
+    duration: Janeiro/2020 - 8h
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Leo Macedo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkLw_eFplf5lKzyBnfw">Visualizar certificado</a>.'
+
+  - name: 'UX: Experiência do Usuário'
+    company: DesignThinkers Academy
+    duration: Março/2017 - 12h
+    logo: img/cv/dta.jpg
+    duration: 'Curso ministrador por Tássia Spinelli. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkP4QlDlIZjxPTK58LA">Visualizar certificado</a>.'
+
+  - name: 'Programando com Acessibilidade: TA/TI no contexto da acessibilidade computacional'
+    company: Universidade Federal de Santa Maria
+    duration: Maio/2016 - 4h
+    logo: img/cv/ufsm.png
+    duration: 'Curso ministrador por Bruno Hipólito. <a rel="noreferrer" href="http://www.ufsm.br/autenticacao/index.html?hash=13E6.A53E.B723.AFAF.E7F9.E48D.6087.035E">Visualizar certificado</a>.'
+
+  - name: UX Weekend/ UX Design
+    company: Mergo
+    duration: Agosto/2014 - 14h
+    logo: img/cv/mergo.jpg
+    duration: 'Curso ministrador por Edu Agni. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQlyo1H2FmflVVrq">Visualizar certificado</a>.'
+
+  - name: Arquitetura de CSS/Sass
+    company: Hello Bits
+    duration: Agosto/2014 - 8h
+    logo: img/cv/hello-bits.png
+    duration: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_">Visualizar certificado</a>.'
+
+  - name: Curso Web - Foco na Certificação Microsoft 70-480&:colon Programming in HTML5 with JavaScript & CSS3
+    company: Qualiti Innovative Learning
+    duration: Fevereiro/2013 — Agosto/2013 - 88h
+    logo: img/cv/qualiti.png
+    duration: 'Curso ministrador por Thiago Burgo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQh8Jwk0WB8j0TW3">Visualizar certificado</a>.'
+
+  - name: Formação Pedagógica para Professores
+    company: Microcamp Internacional
+    duration: Maio/2010 - 24h
+    logo: img/cv/microcamp.png
+    duration: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'
+
+experience:
+  - activity: UI/UX Designer
+    name: Procenge Tecnologia
+    duration: Outurbo/2020 até o momento
+    logo: img/cv/procenge.png
+    description: Desenvolvimento das melhorias das interfaces do software através do Design Thinking atuando em todos os aspectos do produto\:\ layout, navegação, usabilidade e performance - nas versões web e mobile, além da concepção da arquitetura da informação, fluxos do sistema, protótipos em alta fidelidade (Adobe XD), teste do usuário e desenvolvimento da documentação dos componentes e funcionalidades da aplicação (Design System).
+
+  - activity: UX Designer
+    name: Eu Médico Residente
+    duration: Maio/2020 - Outurbo/2020 (6 meses)
+    logo: img/cv/emr.jpg
+    description: Criação de fluxo, wireframes e interfaces de aplicações web, tablet e mobile (Android e iOS). Estudo, análise e teste das interfaces já construídas para propor melhorias baseadas nos usuários da plataforma.
+
+  - activity: UI/UX Designer
+    name: TrueChange
+    duration: Fevereiro/2019 - Janeiro/2020 (11 meses)
+    logo: img/cv/truechange.jpg
+    description: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop), construção de interfaces baseadas nos componentes disponíveis na OutSystems Platform 9-11 além do planejamento para a definição de novos componentes a serem utilizados pelo time de desenvolvimento.
+
+  - activity: UI/UX Designer e Front-End
+    name: Audio Description Worldwide Consortium
+    duration: Abril/2016 - até o momento
+    logo: img/cv/adww.jpg
+    description: Projeto executados&#58; Audio Description Worldwide Consortium, Revista Brasileira de Tradução Visual, Snapsects e Laboratory of Artificial Intelligence and Machine Aid.
+
+  - activity: UI/UX Designer e Front-End
+    name: QS Intelligence
+    duration: Julho/2015 - Janeiro/2019 (3 anos e 7 meses)
+    logo: img/cv/qsi.png
+    description: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop). Elaboração, concepção e codificação de layouts para desktop, dispositivos móveis e TV (HTML, CSS/Sass e Angular).
+
+  - activity: UI/UX Designer e Front-End
+    name: Provider Tecnologia de Sistemas (Grupo Provider)
+    duration: Janeiro/2014 - Maio/2015 (1 ano e 5 meses)
+    logo: img/cv/provider.jpg
+    description: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop). Elaboração, concepção e codificação de layouts para desktop, dispositivos móveis e TV (HTML, CSS/Sass), além da aplicação de questionários para avaliação de funcionalidades e interfaces com os usuários das aplicações finais.
+
+  - activity: Designer e Front-End
+    name: BVR Negócios e Consultória
+    duration: Julho/2010 - Outubro/2013 (3 ano e 4 meses)
+    logo: img/cv/bvr.jpg
+    description: Criação de protótipos navegáveis de alta/baixa fidelidade (Mockup Balsamiq/ Photoshop). Construção de layouts de sistemas, sites e aplicativos móveis (HTML, CSS, Wordpress, Joomla, HTML, CSS, Zend Framework). Participação de reuniões de ideação e alinhamento de requisitos com o cliente e ministrar treinamentos internos e externos.
+
+  - activity: UI Designer, Front-End e Designer Gráfico
+    name: Revista Žena
+    duration: Setembro/2009 - Fevereiro/2013 (3 anos e 6 meses)
+    logo: img/cv/zena.jpg
+    description: Trabalhos desenvolvidos&#58; Zine Žena (<a rel="noreferrer" href="http://sumo.pe/portfolio/zine-zena.html">Processo de criação</a> e <a rel="noreferrer" href="http://revistazena.com.br/revistazena/zine/zine-zena-1/" target="_blank" title="Este link irá abrir uma nova aba">Releade do lançamento</a>).<br>Site da Revista&#58; <a rel="noreferrer" href="http://revistazena.com.br" target="_blank" title="Este link irá abrir uma nova aba">revistazena.com.br</a>
+
+  - activity: Professor de Ciências e Matemática
+    name: Secretaria de Educação do Estado de Pernambuco
+    duration: Agosto/2009 - Dezembro/2009 (5 meses)
+    logo: img/cv/governope.png
+    description: Professor das disciplina de Ciências no ensino fundamental II (5ª - 8ª série) com 150 h/a na Escola Profª Maria Alves Machado. <br>Professor das disciplinas de Ciências e Biologia para alunos do ensino fundamental II (de 5ª - 8ª série) e ensino médio (1º - 3º ano) com 200h/a mês na Escola Tome Gibson.
+
+  - activity: Instrutor de Informática Básica e Web Designer
+    name: Provider Tecnologia de Sistemas (Grupo Provider)
+    duration: Setembro/2008 - Maio/2010 (1 ano e 9 meses)
+    logo: img/cv/microcamp.png
+    description: Ministrar aulas nos cursos de Web Design (HTML, CSS, Corel Draw, Dreamweaver, Fireworks, Photoshop, Flash) e de Informática básica.
+
+  - activity: Professor de Ciências e Matemática
+    name: Prefeitura da Cidade do Recife
+    duration: Setembro/2006 - Setembro/2008 (2 anos e 1 mês)
+    logo: img/cv/governope.png
+    description: Estágiario </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
+
+  - activity: Auxiliar de Biblioteca
+    name: Britanic Ensino de Idiomas
+    duration: Março/2005 - Março/2007 (2 anos e 1 mês)
+    logo: img/cv/britanic.png
+    description: Aprendiz
+
+  - activity: Webmaster
+    name: Revista O Grito!
+    duration: Janeiro/2005 - Dezembro/2009 (5 anos)
+    logo: img/cv/ogrito.gif
+    description: Atualização, publicação e editoração semanal de conteúdo.
