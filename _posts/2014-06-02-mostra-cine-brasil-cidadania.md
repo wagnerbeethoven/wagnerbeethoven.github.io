@@ -3,24 +3,25 @@ layout: post
 title: "Mostra Cine Brasil Cidadania"
 date: 2011-11-23
 categories: portfolio
-image: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/44442918087715.596663f147e6e.jpg
+image: https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-4.jpg
 description: "Criação e concepção da identidade visual, logotipo e papelaria para a Mostra Cine Brasil Cidadania"
 summary: "Criação e concepção da identidade visual, logotipo e papelaria para a Mostra Cine Brasil Cidadania"
 tags:
-- Cinema
-- Seriado
-- Artes
-- Entretenimento
-- 7ª arte
+  - Cinema
+  - Seriado
+  - Artes
+  - Entretenimento
+  - 7ª arte
 areas:
- - Identidade visual
- - Material gráfico
- - Material digital
+  - Identidade visual
+  - Material gráfico
+  - Material digital
 tools:
-- adobe photoshop
-- adobe fireworks
-- adobe illustrator
+  - adobe photoshop
+  - adobe fireworks
+  - adobe illustrator
 ---
+
 ## Sobre o projeto
 
 André Azenha é parceiro de longa data e a Mostra Cine Brasil Cidadania foi um excelente desafio. O evento foi idealizado para trazer longas inéditos, workshops e debates com os diretores para a cidade de Santos, São Paulo. Foi desenvolvido para o projeto a identidade visual e a criação de material gráfico impresso e digital, utilizando o Adobe Illustrador e o Adobe Photoshop.
@@ -33,38 +34,39 @@ André Azenha é parceiro de longa data e a Mostra Cine Brasil Cidadania foi um 
 
 A identidade do projeto foi criada a partir da paixão do site pela 7ª arte. O símbolo da Mostra foi desenvolvido a partir da junção de uma câmera de vídeo e um coração.
 
-
 ### Logo
 
-Formação do ícone
+**Formação do ícone**
 
-![Formação do ícone utilizando pela logo](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0f815f18087715.5634f94e1d5a7.jpg)
+![Formação do ícone utilizando pela logo](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-formacao-do-icone-utilizando-pela-logo.jpg)
 
-Logo final
+**Logo final**
 
-![Logo desenvolvida para o projeto](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8e707018087715.5634f95e30bd8.jpg)
+![Logo desenvolvida para o projeto](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-logo-desenvolvida-para-o-projeto.jpg)
 
 As peças abaixo não foram produzidas, mas são sugestões de panfletos que seriam distribuídos semanas antes do evento na região do SESC Santos e na entrada dos cinemas da região. Impresso em A6 (Couché fosco 160g).
 
 ### Folheto
+
 Cada filme teria seu panfleto e atrás dos folhetos, a sinopse e informações de contato e horário.
-![Folheto dos eventos](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2ffc6d18087715.5634f951b9608.jpg)
+
+![Folheto dos eventos](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-folheto-dos-eventos.jpg)
 
 ### Crachá
 
 Modelo de crachá utilizado na identificação dos participantes dos Workshops
 
-![Crachá](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f067f518087715.5634f95c0a51a.jpg)
+![Crachá](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-cracha.jpg)
 
 ### Cartaz do evento
 
-<figure><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/cbd05d18087715.5634f98ddaff7.jpg"></figure>
+![Cartaz do Evento](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/c6752bf0a86b8df877a94f7c11b7326e0746d819/mostra-cine-brasil-cidadania-poster.jpg)
 
 ### Aplicação
 
 Aplicação do cartaz no metrô da cidade
 
-![Aplicação do cartaz no metrô da cidade](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/08065a18087715.562c3ac2e9e06.jpg)
+![Aplicação do cartaz no metrô da cidade](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-aplicacao-do-cartaz-no-metro-da-cidade.jpg)
 
 ## O Evento
 
@@ -72,37 +74,17 @@ Aplicação do cartaz no metrô da cidade
 
 Confira os vídeos do evento
 
-<div class="iframe-container">
-  <iframe src="https://www.youtube.com/embed/sKei6VnNhVg"></iframe></div>
+<div class="iframe-container"><iframe src="https://www.youtube.com/embed/sKei6VnNhVg"></iframe></div>
 
 ### Fotos
 
 Confira fotos do evento
 
-<div class="row">
-    <img data-toggle="modal" data-target="#mcbc-1" class="col-12 col-sm-6 col-md-3 rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6c7bc818087715.596663f1478e8.jpg" title="Clique para abrir a imagem maior">
-    <img data-toggle="modal" data-target="#mcbc-2" class="col-12 col-sm-6 col-md-3 rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f4d14f18087715.596663f147baf.jpg" title="Clique para abrir a imagem maior">
-    <img data-toggle="modal" data-target="#mcbc-3" class="col-12 col-sm-6 col-md-3 rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b3c40e18087715.596663f148566.jpg" title="Clique para abrir a imagem maior">
-    <img data-toggle="modal" data-target="#mcbc-4" class="col-12 col-sm-6 col-md-3 rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/44442918087715.596663f147e6e.jpg" title="Clique para abrir a imagem maior">
-</div>
-  
-<div title="Clique para fechar a janela" class="modal fade" id="mcbc-1" tabindex="-1" role="dialog" aria-labelledby="mcbc-1" aria-hidden="true">
-    <div class="modal-dialog modal-image" title="clique para fechar" role="document">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6c7bc818087715.596663f1478e8.jpg" class="d-block w-100" alt="...">
-    </div>
-</div>
-<div title="Clique para fechar a janela" class="modal fade" id="mcbc-2" tabindex="-1" role="dialog" aria-labelledby="mcbc-2" aria-hidden="true">
-    <div class="modal-dialog modal-image" title="clique para fechar" role="document">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f4d14f18087715.596663f147baf.jpg" class="d-block w-100" alt="...">
-    </div>
-</div>
-<div title="Clique para fechar a janela" class="modal fade" id="mcbc-3" tabindex="-1" role="dialog" aria-labelledby="mcbc-3" aria-hidden="true">
-    <div class="modal-dialog modal-image" title="clique para fechar" role="document">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b3c40e18087715.596663f148566.jpg" class="d-block w-100" alt="...">
-    </div>
-</div>
-<div title="Clique para fechar a janela" class="modal fade" id="mcbc-4" tabindex="-1" role="dialog" aria-labelledby="mcbc-4" aria-hidden="true">
-    <div class="modal-dialog modal-image" title="clique para fechar" role="document">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/44442918087715.596663f147e6e.jpg" class="d-block w-100" alt="...">
-    </div>
-</div>
+![imagens do evento](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-1.jpg)
+<br>
+![imagens do evento](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-2.jpg)
+<br>
+![imagens do evento](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-3.jpg)
+<br>
+![imagens do evento](https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-4.jpg)
+

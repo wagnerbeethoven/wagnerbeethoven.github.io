@@ -10,7 +10,7 @@ layout: compress
 
   <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <![endif]-->
 
   <meta charset="utf-8" />
   <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -58,7 +58,10 @@ layout: compress
 
   <link rel="manifest" href="{{site.url}}/manifest.json">
 
-  <style>{% capture critical %}{% include main.scss %}{% endcapture %}{{ critical | scssify }}</style>
+  <style>
+    {% capture critical %}{% include main.scss %}{% endcapture %}
+    {{critical | scssify}}
+  </style>
 </head>
 
 
@@ -109,9 +112,11 @@ layout: compress
       {% if forloop.last %}
       <span class="divider">/</span> <span title="{{ page.title }}" class="breadcrumb-current">{{ page.title }}</span>
       {% else %}
-      <span class="divider">/</span> <a title=" {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
+      <span class="divider">/</span><!-- <a title=" {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}"> -->
+      <span title="{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}">
         {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
-      </a>
+      </span>
+      <!-- </a> -->
       {% endif %}
       {% endfor %}
     </div>
