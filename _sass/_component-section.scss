@@ -6,7 +6,7 @@
   }
   &-about {
     @extend .row;
-    align-items: center;
+    @extend .align-items-center;
     &-info {
       @include media-breakpoint-down(md) {
         order: 2;
@@ -35,8 +35,8 @@
       }
       img {
         max-width: 100%;
-        border-radius: 0.25rem;
-        display: block;
+        @extend .rounded;
+        @extend .d-block;
         margin: 0 auto;
         &:hover,
         &:focus {
@@ -54,8 +54,8 @@
   &-description {
     color: #6c757d;
     font-size: 0.875em;
-    justify-content: space-between;
-    display: flex;
+    @extend .justify-content-between;
+    @extend .d-flex;
   }
 
   &-blog {

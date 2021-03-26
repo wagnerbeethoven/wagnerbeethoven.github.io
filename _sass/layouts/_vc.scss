@@ -11,7 +11,7 @@
     @extend .px-3;
     color: #fff;
     background: #333;
-    text-align: center;
+    @extend .text-center;
     h1 {
       @extend .display-4;
     }
@@ -19,8 +19,8 @@
       @extend .lead;
     }
     img {
-    display: block;
-     margin-left: auto; margin-right: auto;
+    @extend .d-block;
+     @extend .mx-auto; 
        border-radius: 50%;
     }
   }

@@ -1,5 +1,5 @@
 .menu {
-  display: flex;
+  @extend .d-flex;
   overflow-x: auto;
   width: 100%;
   justify-content: flex-end;
@@ -8,7 +8,7 @@
   }
   &-item {
     padding: 0.5rem;
-    text-align: center;
+    @extend .text-center;
     border-bottom: 1px solid transparent;
     &:hover {
       color: $main-color;

@@ -17,7 +17,7 @@
 }
 
 .top {
-  text-align: center;
+  @extend .text-center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   img {
@@ -31,13 +31,13 @@
 }
 
 .site-footer {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 3rem;
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .pt-3;
   margin: 3rem 0 0;
   font-size: 0.875em;
-  border-top: 1px solid #ddd;
-  text-align: center;
+  @extend .border-top;
+  @extend .text-center;
   @include media-breakpoint-down(md) {
     flex-direction: column;
     p:first-child {

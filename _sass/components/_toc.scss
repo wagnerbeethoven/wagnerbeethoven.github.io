@@ -4,13 +4,13 @@ nav.toc {
   margin: 0 auto 1rem;
 
   box-shadow: none;
-  border-radius: 0.25rem;
+  @extend .rounded;
   border: 1px solid #dee2e6;
   i {
     font-style: initial;
     font-size: 2rem;
     font-weight: lighter;
-    display: block;
+    @extend .d-block;
   }
   ul,
   ol {

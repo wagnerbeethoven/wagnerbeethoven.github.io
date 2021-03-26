@@ -22,9 +22,9 @@
       padding-left: 1em;
       width: 100%;
       content: "* * * ";
-      text-align: center;
+      @extend .text-center;
       padding: 3rem;
-      display: block;
+      @extend .d-block;
     }
 
     ul {

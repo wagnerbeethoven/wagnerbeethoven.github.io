@@ -18,8 +18,18 @@
 @import "page-about";
 @import "layouts/layout";
 @import "article";
+@import "layout-page";
+@import "layout-post";
 
 // @import "diagnostic";
 
 
 @import "layout-post";
+
+// body{
+//     @extend .p-1;
+//     @extend .p-2;
+//     @extend .p-3;
+//     @extend .p-4;
+//     @extend .p-5;
+// }

@@ -1,6 +1,6 @@
 .notfound {
   &-container {
-    text-align: center;
+    @extend .text-center;
     img {
      max-width: 100%;
     height: auto;
@@ -11,7 +11,7 @@
 
     a {
       display: inline-block;
-      border-radius: 0.25rem;
+      @extend .rounded;
       font-size: 16px;
       padding: 16px 32px;
       background: $main-color;
@@ -30,9 +30,9 @@
     }
 
     img {
-    display: block;
-      margin-left: auto;
-      margin-right: auto;
+    @extend .d-block;
+      @extend .mx-auto;
+      
       width: 300px;
     }
   }

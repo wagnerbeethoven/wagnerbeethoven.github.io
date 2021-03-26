@@ -2,8 +2,8 @@
   &-container {
     @extend .col-12;
     @extend .col-md-8;
-    margin-left: auto;
-    margin-right: auto;
+    @extend .mx-auto;
+    
     .section-title {
       margin-bottom: 3rem;
     }
@@ -20,7 +20,7 @@
   &-logo {
     @extend .col-md-3;
     img {
-      display: block !important;
+      @extend .d-block;
       margin: 0 auto 1rem !important;
       padding: 1rem !important;
       box-shadow: none !important;
@@ -35,7 +35,7 @@
   &-duration,
   &-description {
     width: 100%;
-    display: block;
+    @extend .d-block;
   }
 
   &-name,
@@ -47,7 +47,7 @@
   }
   &-description {
     padding-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+    @extend .border-bottom;
   }
 }
 .about {
@@ -63,8 +63,8 @@
   &-name,
   &-title,
   &-contact {
-    display: block;
-    text-align: center;
+    @extend .d-block;
+    @extend .text-center;
   }
   &-info {
     @extend .row;
@@ -100,7 +100,7 @@
 .links-social {
   width: 100%;
   padding: 1rem 0;
-  display: flex;
+  @extend .d-flex;
   justify-content: center;
   &-item {
     margin: 0 1rem;
@@ -108,7 +108,7 @@
     height: 27px;
     background: transparent no-repeat center;
     background-size: 100%;
-    display: block;
+    @extend .d-block;
   }
 
   &-skype {

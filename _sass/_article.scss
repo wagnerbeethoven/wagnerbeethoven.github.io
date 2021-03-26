@@ -1,46 +1,19 @@
 .post-content {
   img {
     max-width: 100%;
-    border-radius: 0.25rem;
+    @extend .rounded;
     display: block;
     &[src*="svg"] {
       box-shadow: none;
     }
   }
   table {
-    border: 1px solid #dee2e6;
-    vertical-align: top;
-    width: 100%;
-    td,
-    th {
-      padding: 0.5rem;
-    }
-    thead {
-      tr {
-        border: 2px solid #dee2e6;
-      }
-      th {
-        vertical-align: middle !important;
-      }
-    }
-
-    tbody {
-      & > tr {
-        border-bottom: 2.5px solid #dee2e6;
-
-        &:nth-of-type(odd) {
-          background-color: rgba(0, 0, 0, 0.01%);
-        }
-        &:last-of-type {
-          border-bottom: 0;
-        }
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.1%);
-        }
-      }
-    }
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-bordered;
+    @extend .table-hover;
+    @extend .table-sm;
   }
-
   .td-info {
     display: none;
     font-weight: 700;
@@ -49,44 +22,6 @@
     }
   }
 
-  @include media-breakpoint-down(md) {
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-      display: block;
-    }
-
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-
-    tr {
-      border-width: 0;
-      margin-bottom: 1rem;
-      border-width: 0 1px;
-    }
-
-    td {
-      border: 1px solid #dee2e6;
-      border-bottom-width: 0;
-
-      &:first-of-type {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-      }
-
-      &:last-of-type {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-bottom-width: 1px;
-      }
-    }
-  }
   figure {
     &,
     & img {
@@ -96,9 +31,8 @@
     figcaption {
       font-size: 80%;
       font-weight: 400;
-      text-align: center;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
+      @extend .text-center;
+      @extend .px-1;
 
       color: #6c757d;
     }
@@ -116,9 +50,7 @@
       }
     }
   }
-}
 
-.post-article {
   a {
     font-weight: 600;
     color: $main-color;
@@ -132,7 +64,7 @@
 
   dl {
     width: 100%;
-    display: flex;
+    @extend .d-flex;
     flex-wrap: wrap;
 
     & > * {
@@ -155,7 +87,7 @@
   }
 
   img {
-    border-radius: 0.25rem;
+    @extend .rounded;
     display: block;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08%);
     margin: 0;
@@ -172,8 +104,7 @@
     // border-width: 1px;
     // height: 1px;
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    @extend .mx-auto;
   }
 
   pre {
@@ -194,7 +125,7 @@
   }
   blockquote {
     display: block;
-    position: relative;
+    @extend .position-relative;
     font-size: 1rem;
     padding-left: 4rem;
     color: #6a737d;
@@ -207,7 +138,7 @@
       height: 4rem;
       font: 6em/1 serif;
       color: rgba(102, 102, 102, 0.85);
-      text-align: center;
+      @extend .text-center;
     }
     & blockquote {
       padding-left: 0;
@@ -261,7 +192,7 @@
   .footnote {
     font-size: 75%;
     line-height: 0;
-    position: relative;
+    @extend .position-relative;
     vertical-align: baseline;
 
     &s {
@@ -286,9 +217,53 @@
       bottom: -0.25em;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    table,
+    tr {
+      border-width: 0;
+    }
+    td {
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      margin-bottom: 1rem;
+    }
+
+    td {
+      border: 1px solid #dee2e6;
+      border-bottom-width: 0;
+
+      &:first-of-type {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-width: 1px;
+      }
+    }
+  }
 }
+
 .iframe-container {
-  position: relative;
+  @extend .position-relative;
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
