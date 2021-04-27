@@ -7,7 +7,7 @@ certificate:
 
 education:
   - name: Design de Web Apps com Tecnologia Front-End
-    company: Fundação de Ensino Superior de Olinda - FUNESO
+    company: IBRATEC – Instituto Brasileiro de Tecnologia
     duration: 2015 - 2017 (Concluído)
     logo: img/cv/unibratec.png
     description: Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.
@@ -26,11 +26,17 @@ education:
     description: Graduação
 
 course:
-  - name: 'Web Typography for Designers & Developers'
+  - name: 'Formação Online em Design System e Ops'
+    company: Meiuca Design
+    duration: Abri/2021 - 16h
+    logo: img/cv/meiuca.png
+    duration: 'Curso ministrador por Thiago Hassu. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkd1gJh_PuQyon2I9Lw/">Visualizar certificado</a>'
+  
+  - name: 'Web Typography fo  r Designers & Developers'
     company: Udemy
     duration: Agosto/2020 - 6.5h
     logo: img/cv/arquivo-livros-uff.jpg
-    duration: 'Curso ministrador por Rob Sutcliffe. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOka1QBLn_cVmQXHaJIw?e=RsdwFH">Visualizar certificado</a>'
+    duration: 'Curso ministrador por Rob Sutcliffe. <a href="https://ude.my/UC-97a3e062-f93c-4678-9530-9df2213754d4/  ">Visualizar certificado</a>'
   
   - name: 'Design Editorial de Livros: Teoria e Prática de Diagramação'
     company: Arquivo dos Livros (UFF) e Laboratório de Publicações Lima Barreto (UERJ)
@@ -262,12 +268,19 @@ course:
     duration: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'
 
 experience:
-  - activity: UI/UX Designer
+  - activity: Lead Design e UI/UX Designer
     name: Procenge Tecnologia
-    duration: Outurbo/2020 até o momento
+    duration: Abril/2021 | Outurbo/2020 até o momento
     logo: img/cv/procenge.png
-    description: Desenvolvimento das melhorias das interfaces do software através do Design Thinking atuando em todos os aspectos do produto\:\ layout, navegação, usabilidade e performance - nas versões web e mobile, além da concepção da arquitetura da informação, fluxos do sistema, protótipos em alta fidelidade (Adobe XD), teste do usuário e desenvolvimento da documentação dos componentes e funcionalidades da aplicação (Design System).
-
+    description: >
+      <strong>Como Lead Design:</strong><br>
+      Elaboração e divulgação de guias e práticas do Design, a fim de empoderar a equipe e a função dentro dos outros times e dentro da organização, ou seja, fazendo com que o Design seja visto de maneira mais estratégica no enfrentamento de problemas.<br><br>
+      Apoio, suporte, mentoria e desenvolvimento no colaboradores da Equipe de Design fazendo que a qualidade das entregas estejam sempre da melhor qualidade possível e fazer com que os propósitos da equipe e dos seus integrantes estejam sempre alinhados com a missão e os valores da Procenge.<br><br>
+      Ajudar na jornada de melhoria do time através de capacitação, workshops e experimentação de novas ferramentas, processos e modelos de trabalho para aumentar a entrega de valor a favor da Equipe.<br><br>
+      ***<br><br>
+      <strong>Como UI/UX Designer:</strong><br>
+      Desenvolvimento das melhorias das interfaces do software através do Design Thinking atuando em todos os aspectos do produto\:\ layout, navegação, usabilidade e performance - nas versões web e mobile, além da concepção da arquitetura da informação, fluxos do sistema, protótipos em alta fidelidade (Adobe XD), teste do usuário e desenvolvimento da documentação dos componentes e funcionalidades da aplicação (Design System).
+ 
   - activity: UX Designer
     name: Eu Médico Residente
     duration: Maio/2020 - Outurbo/2020 (6 meses)

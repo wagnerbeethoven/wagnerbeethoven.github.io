@@ -18,7 +18,7 @@ legend: "Olinda / 9 de setembro de 2018"
     </div>
     <div class="about-info">
         <p>Me chamo {{site.about-name}} (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/is-it-just-a-hello-world.html" title="Confira algumas explicações sobre meu portfólio">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos, atualmente trabalho na <strong>{{ site.data.about.experience[0].name }}</strong> como <strong>{{ site.data.about.experience[0].activity }}</strong>.<br><br>Resido em <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span>, <span itemprop="addressRegion">{{site.about-state}}.</p>
-        <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em Design Web Apps com Tecnologia Front-End.</p>
+        <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Atualmente sou pós-graduado em <strong>{{ site.data.about.education[0].name }}</strong> pela <strong>{{ site.data.about.education[0].company }}</strong>.</p>
         <p>Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para desktops, celulares, tablet e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educacional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
         <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Sobre meus trabalho, você pode <a title="Confira parte dos meus trabalhos" href="{{site.url}}/portfolio">visualizar na seção portfólio</a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade e sigilo) e <a title="Algumas publicações" href="{{site.url}}/blog">alguns textos estão disponíveis no meu blog</a>.</p>
     </div>
@@ -52,8 +52,8 @@ legend: "Olinda / 9 de setembro de 2018"
                 <img src="{{site.url}}/{{learn.logo}}" title="Logo - {{learn.name}}" alt="Logo {{learn.name}}">
             </figure>
             <div class="career-detail">
-                {% if learn.activity %}<strong class="career-activity">{{learn.activity}}</strong>{% endif %}
-                {% if learn.name %}<span class="career-name">{{learn.name}}</span>{% endif %}
+                {% if learn.name %}<strong class="career-name">{{learn.name}}</strong>{% endif %}
+                {% if learn.company %}<span class="career-activity">{{learn.company}}</span>{% endif %}
                 {% if learn.duration %}<small class="career-duration">{{learn.duration}}</small>{% endif %}
                 {% if learn.description %}<p class="career-description">{{learn.description}}</p>{% endif %}
             </div>
@@ -87,6 +87,7 @@ legend: "Olinda / 9 de setembro de 2018"
     <h2 class="section-title">Cursos</h2>
     {% for course in site.data.about.course %}
     <div class="career-item" id="{{course.name|slugify}}">
+
         <div class="career-detail">
             {% if course.activity %}<strong class="career-activity">{{course.activity}}</strong>{% endif %}
             {% if course.name %}<span class="career-name">{{course.name}}</span>{% endif %}
