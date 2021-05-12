@@ -1,0 +1,39 @@
+.notfound {
+  &-container {
+    @extend .text-center;
+    img {
+     max-width: 100%;
+    height: auto;
+    }
+    p {
+      @extend .my-4;
+    }
+
+    a {
+      display: inline-block;
+      @extend .rounded;
+      font-size: 16px;
+      padding: 16px 32px;
+      background: $main-color;
+      border: 2px solid $main-color;
+      color: #fff !important;
+
+      &:hover,
+      &:focus {
+        background: #fff;
+        color: $main-color !important;
+
+        &:after {
+          @extend .d-none;
+        }
+      }
+    }
+
+    img {
+    @extend .d-block;
+      @extend .mx-auto;
+      
+      width: 300px;
+    }
+  }
+}
