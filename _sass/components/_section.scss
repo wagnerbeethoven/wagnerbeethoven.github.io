@@ -57,7 +57,7 @@
     @extend .justify-content-between;
     @extend .d-flex;
   }
-
+  &-page,
   &-blog {
     li {
       padding-bottom: 2.5rem;

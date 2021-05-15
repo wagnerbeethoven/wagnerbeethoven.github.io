@@ -17,7 +17,7 @@
 }
 
 .top {
-  @extend .text-center;
+text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   img {
@@ -37,7 +37,7 @@
   margin: 3rem 0 0;
   font-size: 0.875em;
   @extend .border-top;
-  @extend .text-center;
+text-align: center;
   @include media-breakpoint-down(md) {
     flex-direction: column;
     p:first-child {

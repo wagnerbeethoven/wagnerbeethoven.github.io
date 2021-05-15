@@ -31,7 +31,7 @@
     figcaption {
       font-size: 80%;
       font-weight: 400;
-      @extend .text-center;
+    text-align: center;
       @extend .px-1;
 
       color: #6c757d;
@@ -104,7 +104,7 @@
     // border-width: 1px;
     // height: 1px;
     width: 50%;
-    @extend .mx-auto;
+    margin-left: auto; margin-right: auto;
   }
 
   pre {
@@ -138,7 +138,7 @@
       height: 4rem;
       font: 6em/1 serif;
       color: rgba(102, 102, 102, 0.85);
-      @extend .text-center;
+    text-align: center;
     }
     & blockquote {
       padding-left: 0;

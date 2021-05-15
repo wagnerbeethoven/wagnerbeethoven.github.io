@@ -7,7 +7,7 @@
     @extend .col-12;
     padding-left: 0;
     padding-right: 0;
-    @extend .mx-auto;
+    margin-left: auto; margin-right: auto;
     
     &-portfolio {
       margin-bottom: 1rem;
@@ -15,7 +15,7 @@
     &-time {
       @extend .d-flex;
       flex-direction: column;
-      @extend .text-center;
+    text-align: center;
       @extend .d-flex;
       @extend .justify-content-between;
       padding: 1rem 0;
@@ -56,7 +56,7 @@
 
   &-article {
     @extend .col-md-8;
-    @extend .mx-auto;
+    margin-left: auto; margin-right: auto;
     
     @extend .clearfix;
     padding-left: 0;
@@ -84,7 +84,7 @@
     ul,
     ol {
       padding-left: 40px !important;
-      @extend .mx-auto;
+      margin-left: auto; margin-right: auto;
       
 
       li {
@@ -99,7 +99,7 @@
     }
     img {
       @extend .my-0;
-      @extend .mx-auto;
+      margin-left: auto; margin-right: auto;
       
     }
   }

@@ -1,0 +1,139 @@
+.layout {
+  &-banner {
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      @extend .rounded;
+      @extend .shadow-sm;
+    }
+
+    figcaption {
+      text-align: center;
+      opacity: 0.5;
+      padding: 0.5rem;
+      font-size: 0.875em;
+    }
+  }
+  &-page {
+    li {
+      padding-bottom: 2.5rem;
+      P {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+//   // &-title,
+//   // &-summary {
+//   //   text-align: center;
+//   // }
+//   // &-title {
+//   //   font-size: 3.5rem;
+//   //   line-height: 1.2;
+//   //   padding: 1.5rem 0;
+//   //   font-weight: 300;
+//   //   margin-bottom: 0;
+//   // }
+
+//   // &-summary {
+//   //   @extend .lead;
+//   //   font-style: italic;
+//   //   height: auto;
+//   //   margin-left: auto;
+//   //   margin-right: auto;
+
+//   //   justify-content: center !important;
+//   //   @extend .col-12;
+//   //   @extend .col-md-10;
+//   //   @extend .mb-5;
+//   // }
+
+//   &_content {
+//     &-blog {
+//       ul {
+//         padding-left: 0;
+//         list-style: none;
+
+//         li {
+//           @extend .col-12;
+//           padding-bottom: 1.5rem;
+
+//           p {
+//             margin-bottom: 0;
+//             color: #6c757d;
+//             font-size: 0.825rem;
+//           }
+
+//           strong {
+//             font-weight: 600;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &-archive {
+//     padding-top: 0;
+//     h3 {
+//       font-weight: lighter;
+//       @extend .text-capitalize;
+//       @extend .mt-4;
+//       margin-bottom: 0.5rem;
+//     }
+
+//     ul {
+//       padding-left: 0;
+//       list-style: none;
+
+//       li {
+//         width: 100%;
+//         padding-bottom: 0.5rem;
+//         padding-left: 0;
+//         padding-right: 0;
+
+//         a {
+//           strong {
+//             font-weight: 600;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// // .layout {
+// //   &-page {
+// //     .post-content ul {
+// //       list-style: none;
+// //       padding-left: 0;
+// //       padding-right: 0;
+// //     }
+// //   }
+// // }
+.archive {
+  &-pages {
+    a {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+  }
+  &-list {
+    h3 {
+      padding-top: 5rem;
+      padding-bottom: 1.5rem;
+    }
+    ul {
+      li {
+        padding-bottom: 0.5rem;
+      }
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+}
+.page-list,
+.nav-pages {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

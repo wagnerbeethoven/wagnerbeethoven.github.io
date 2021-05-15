@@ -7,24 +7,38 @@ summary: "Todas as publicações"
 
 <h3>Páginas do site</h3>
 
-<ul class="nav-pages">
-    <li><a href="{{site.url}}/" title="Página inicial">Página inicial</a></li>
-    <li><a href="{{site.url}}/portfolio" title="Portfólio">Portfólio</a></li>
-    <li><a href="{{site.url}}/blog" title="Blog">Blog</a></li>
-    <li><a href="{{site.url}}/sobre" title="Sobre">Sobre</a></li>
-    <li><a href="{{site.url}}/contato" title="Contato">Contato</a></li>
-    <li><a href="{{site.url}}/regras" title="Regras do site">Regras do site</a></li>
-</ul>
-<section class="page-archive">
+<nav class="archive-pages">
+    <a href="{{site.url}}/" title="Página inicial">Página inicial</a>
+    <a href="{{site.url}}/portfolio" title="Portfólio">Portfólio</a>
+    <a href="{{site.url}}/blog" title="Blog">Blog</a>
+    <a href="{{site.url}}/sobre" title="Sobre">Sobre</a>
+    <a href="{{site.url}}/contato" title="Contato">Contato</a>
+    <a href="{{site.url}}/regras" title="Regras do site">Regras do site</a>
+</nav>
+<section class="archive-list">
     {% for category in site.categories %}
-    <h3>{{ category[0] }}</h3>
-    </h3>
-    <ul class="page-list">{% for post in category[1] %}<li>
-            {% assign m = post.date | date: "%-m" %}{{ post.date | date: "%-d" }}/{% case m %}{% when '1' %}01/{% when '2' %}02/{% when '3' %}03/{% when '4' %}04/{% when '5' %}05/{% when '6' %}06/{% when '7' %}07/{% when '8' %}08/{% when '9' %}09/{% when '10' %}10/{% when '11' %}11/{% when '12' %}12/{% endcase %}{{ post.date | date:"%Y" }}:
+    <h3>{{ category[0] | capitalize  }}</h3>
+    <ul>{% for post in category[1] %}
+        <li>
+            {% assign m = post.date | date: "%-m" %}
+            {{ post.date | date: "%-d" }}/
+            {% case m %}
+                {% when '1' %}01/
+                {% when '2' %}02/
+                {% when '3' %}03/
+                {% when '4' %}04/
+                {% when '5' %}05/
+                {% when '6' %}06/
+                {% when '7' %}07/
+                {% when '8' %}08/
+                {% when '9' %}09/
+                {% when '10' %}10/
+                {% when '11' %}11/
+                {% when '12' %}12/
+            {% endcase %}
+            {{ post.date | date:"%Y" }}:
             <a href="{{ post.url }}">
-                <strong>
-                    {{ post.title }}
-                </strong>
+                {{ post.title }}
             </a>
         </li>
         {% endfor %}

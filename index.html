@@ -15,13 +15,15 @@ title: Página inicial
 </section>
 
 <section class="section-portfolio">
-    <h2 class="section-title">
-        Portfólio
-    </h2>
-    <p class="section-description">
-        Confira os meus trabalhos mais recentes
-        <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Veja o portfólio</a>
-    </p>
+    <header class="header-section">
+        <h2 class="section-title">
+            Portfólio
+        </h2>
+        <p class="section-description">
+            Confira os meus trabalhos mais recentes
+            <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Veja o portfólio</a>
+        </p>
+    </header>
     <div class="portfolio-container">
         {% for post in site.categories.portfolio limit:3%}
         {% include portfolio/portfolio-list.html %}
@@ -30,17 +32,17 @@ title: Página inicial
 </section>
 
 <section class="section-blog">
-    <h2 class="section-title">Blog</h2>
-    <p class="section-description">
-        Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
-        <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Confira todas as publicações</a>
-    </p>
-    <div class="post-container">
-        <ul>
-            {% for post in site.categories.blog limit:6 %}
-            {% include post/post-list.html %}
-            {% endfor %}
-        </ul>
-    </div>
+    <header class="header-section">
+        <h2 class="section-title">Blog</h2>
+        <p class="section-description">
+            Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
+            <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Confira todas as publicações</a>
+        </p>
+    </header>
+    <ul>
+        {% for post in site.categories.blog limit:6 %}
+        {% include post/post-list.html %}
+        {% endfor %}
+    </ul>
 </section>
 <script type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>

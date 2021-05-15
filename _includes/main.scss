@@ -1,31 +1,11 @@
-@import "help-variables";
-@import "help-placeholders";
-@import "help-mixins";
-
+@import "helps/help";
 @import "libs/lib";
-
-@import "base-typo";
-@import "base-general";
-
-@import "component-header";
-@import "component-nav";
-@import "component-footer";
-@import "component-section";
-
+@import "bases/base";
 @import "components/component";
-
-@import "page-404";
-@import "page-about";
+@import "pages/page";
 @import "layouts/layout";
-@import "article";
-@import "layout-page";
-@import "layout-post";
 
 // @import "diagnostic";
-
-
-@import "layout-post";
-
 // body{
 //     @extend .p-1;
 //     @extend .p-2;

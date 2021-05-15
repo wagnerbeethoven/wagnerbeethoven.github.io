@@ -22,7 +22,7 @@
       padding-left: 1em;
       width: 100%;
       content: "* * * ";
-      @extend .text-center;
+    text-align: center;
       padding: 3rem;
       @extend .d-block;
     }

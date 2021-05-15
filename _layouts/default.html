@@ -63,10 +63,10 @@ layout: compress
     {{critical | scssify}}
   </style>
 </head>
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
-
-<body class="main-container {{page.permalink}}">
-
+<body class="{{ layout }}">
+ 
   <!-- GOOGLE ANALYTICS -->
   <script>
     window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -103,7 +103,7 @@ layout: compress
 
   </header>
   <!-- HEADER -->
-  <main class="main">
+  <main>
     <!-- BREADCRUMBS -->
     <div class="breadcrumbs">
       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}

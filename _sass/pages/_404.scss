@@ -1,6 +1,6 @@
 .notfound {
   &-container {
-    @extend .text-center;
+  text-align: center;
     img {
      max-width: 100%;
     height: auto;
@@ -31,7 +31,7 @@
 
     img {
     @extend .d-block;
-      @extend .mx-auto;
+      margin-left: auto; margin-right: auto;
       
       width: 300px;
     }
