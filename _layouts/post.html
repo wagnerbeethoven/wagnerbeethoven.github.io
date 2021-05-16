@@ -5,7 +5,7 @@ layout: default
 
 <section itemscope itemtype="http://schema.org/NewsArticle">
     {% if page.image %}
-    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="page-banner">
+    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="layout-banner">
         <img src="{{page.image}}" title="{{page.title}} {{ page.legend }}" alt="{{page.alt}}">
         <meta itemprop="url" content="{{page.image}}">
         {% if page.legend %}

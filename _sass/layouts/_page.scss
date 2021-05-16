@@ -1,11 +1,13 @@
 .layout {
   &-banner {
+    padding-bottom: 2.5rem;
     img {
       width: 100%;
       max-width: 100%;
       height: auto;
       @extend .rounded;
       @extend .shadow-sm;
+
     }
 
     figcaption {
