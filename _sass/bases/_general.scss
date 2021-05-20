@@ -35,7 +35,7 @@ section {
   padding: 0;
   padding-bottom: 8rem;
   &:first-of-type {
-    @extend .mt-3;
+    margin-top: 1rem;
   }
 }
 
@@ -45,7 +45,7 @@ section {
   display: table;
 }
 a {
-  @extend .position-relative;
+ position: relative;
   color: $text-dark;
 
   &:hover,

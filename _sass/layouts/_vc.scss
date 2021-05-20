@@ -1,27 +1,29 @@
 .main-container-links {
-  @extend .py-3;
-  .container {
-    @extend .shadow;
-    @extend .p-0;
-    background: #fff;
-  }
-  header {
- border-radius: 1rem 1rem 0 0;
-    @extend .py-5;
-    @extend .px-3;
-    color: #fff;
-    background: #333;
-  text-align: center;
-    h1 {
-      @extend .display-4;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .container {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        padding: 0;
+        background: #fff;
     }
-    p {
-      @extend .lead;
+    header {
+        border-radius: 1rem 1rem 0 0;
+        padding-top: calc(1rem * 3);
+        padding-bottom: calc(1rem * 3);
+        color: #fff;
+        background: #333;
+        text-align: center;
+        h1 {
+            @extend .display-4;
+        }
+        p {
+            @extend .lead;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+        }
     }
-    img {
-    @extend .d-block;
-     margin-left: auto; margin-right: auto; 
-       border-radius: 50%;
-    }
-  }
 }

@@ -1,5 +1,5 @@
 .menu {
-  @extend .d-flex;
+  display: flex;
   overflow-x: auto;
   width: 100%;
   justify-content: flex-end;

@@ -1,106 +1,109 @@
 .post {
-  &-meta {
-    @extend .d-flex;
-    flex-direction: column;
-    justify-content: center;
-    @extend .align-items-center;
-    @extend .col-12;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto; margin-right: auto;
-    
-    &-portfolio {
-      margin-bottom: 1rem;
-    }
-    &-time {
-      @extend .d-flex;
-      flex-direction: column;
-    text-align: center;
-      @extend .d-flex;
-      @extend .justify-content-between;
-      padding: 1rem 0;
-      margin: 3rem 0 1rem;
-      width: 100%;
-      border-top: 1px solid #dee2e6;
+    &-meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @extend .col-12;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
 
-      @include media-breakpoint-up(md) {
-        flex-direction: row;
-        text-align: left;
-      }
-    }
-    img {
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      @extend .d-block;
-      margin: 0 auto;
-      &:hover {
-        box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.5) !important;
-      }
-    }
-  }
-  &-container {
-    padding-left: 0;
-    list-style: none;
-  }
-  h1,
-  h2,
-  h4,
-  h5,
-  h6 {
-    font-weight: lighter;
-    &:not(:first-child) {
-      @extend .mt-3;
-    }
-  }
+        &-portfolio {
+            margin-bottom: 1rem;
+        }
+        &-time {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            margin: 3rem 0 1rem;
+            width: 100%;
+            border-top: 1px solid #dee2e6;
 
-  &-article {
-    @extend .col-md-8;
-    margin-left: auto; margin-right: auto;
-    
-    @extend .clearfix;
-    padding-left: 0;
-    padding-right: 0;
-
-    p {
-      padding-left: 0;
-      padding-right: 0;
-      @extend .col-12;
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                box-shadow: 0 0 0 10px rgba(20, 121, 121, 0.5) !important;
+            }
+        }
+    }
+    &-container {
+        padding-left: 0;
+        list-style: none;
     }
     h1,
     h2,
-    h3,
     h4,
     h5,
     h6 {
-      @extend .col-12;
-      @extend .p-0;
-      font-weight: lighter;
-      &:not(:first-child) {
-        @extend .mt-3;
-      }
+        font-weight: lighter;
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
     }
 
-    ul,
-    ol {
-      padding-left: 40px !important;
-      margin-left: auto; margin-right: auto;
-      
+    &-article {
+        @extend .col-md-8;
+        margin-left: auto;
+        margin-right: auto;
 
-      li {
-        width: 100%;
-      }
-    }
+        @extend .clearfix;
+        padding-left: 0;
+        padding-right: 0;
 
-    ul {
-      li {
-        list-style-type: square !important;
-      }
+        p {
+            padding-left: 0;
+            padding-right: 0;
+            @extend .col-12;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @extend .col-12;
+            padding: 0;
+            font-weight: lighter;
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+
+        ul,
+        ol {
+            padding-left: 40px !important;
+            margin-left: auto;
+            margin-right: auto;
+
+
+            li {
+                width: 100%;
+            }
+        }
+
+        ul {
+            li {
+                list-style-type: square !important;
+            }
+        }
+        img {
+            margin: 0 auto;
+
+        }
     }
-    img {
-      @extend .my-0;
-      margin-left: auto; margin-right: auto;
-      
-    }
-  }
 }
+

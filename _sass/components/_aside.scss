@@ -24,7 +24,7 @@
       content: "* * * ";
     text-align: center;
       padding: 3rem;
-      @extend .d-block;
+     display:block;
     }
 
     ul {

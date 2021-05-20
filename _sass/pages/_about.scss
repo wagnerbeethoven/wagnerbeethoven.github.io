@@ -20,7 +20,7 @@
   &-logo {
     @extend .col-md-3;
     img {
-      @extend .d-block;
+     display:block;
       margin: 0 auto 1rem !important;
       padding: 1rem !important;
       box-shadow: none !important;
@@ -35,7 +35,7 @@
   &-duration,
   &-description {
     width: 100%;
-    @extend .d-block;
+   display:block;
   }
 
   &-name,
@@ -47,7 +47,7 @@
   }
   &-description {
     padding-bottom: 1rem;
-    @extend .border-bottom;
+    border-bottom: 1px solid #dee2e6;
   }
 }
 .about {
@@ -63,7 +63,7 @@
   &-name,
   &-title,
   &-contact {
-    @extend .d-block;
+   display:block;
   text-align: center;
   }
   &-info {
@@ -100,7 +100,7 @@
 .links-social {
   width: 100%;
   padding: 1rem 0;
-  @extend .d-flex;
+  display: flex;
   justify-content: center;
   &-item {
     margin: 0 1rem;
@@ -108,7 +108,7 @@
     height: 27px;
     background: transparent no-repeat center;
     background-size: 100%;
-    @extend .d-block;
+   display:block;
   }
 
   &-skype {

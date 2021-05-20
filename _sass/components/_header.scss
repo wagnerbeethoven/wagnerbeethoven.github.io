@@ -1,18 +1,18 @@
 .site {
   &-header {
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-bottom: 3rem;
     margin-bottom: 3rem;
-    @extend .border-bottom;
+    border-bottom: 1px solid #dee2e6;
     @include media-breakpoint-down(md) {
       text-align: center;
       flex-direction: column;
     }
   }
   &-logo {
-    @extend .d-flex;
+    display: flex;
     margin: 0 1rem 0 0;
     svg,
     img {
@@ -36,7 +36,7 @@
     line-height: 1.2;
     font-size: 3.5rem;
     margin-bottom: 0;
-    @extend .d-flex;
+    display: flex;
     flex-direction: column;
     @include media-breakpoint-down(md) {
       font-size: 2rem;
@@ -45,7 +45,7 @@
   &-title {
     width: 365px;
     a {
-      @extend .d-flex;
+      display: flex;
       flex-direction: column;
     }
   }
