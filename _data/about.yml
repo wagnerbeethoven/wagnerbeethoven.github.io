@@ -12,7 +12,6 @@ education:
     logo: img/cv/unibratec.png
     description: Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.
 
-
   - name: Sistemas para Internet
     company: Centro Universitário Maurício de Nassau - Uninassau
     duration: 2010 - 2012 (Concluído)
@@ -26,13 +25,19 @@ education:
     description: Graduação
 
 course:
+  - name: 'Kanban: O Guia Completo'
+    company: Udemy
+    duration: Ago/2021 - 15h 30min
+    logo: img/cv/udemy.jpg
+    duration: 'Curso ministrador por Pilar Sanchez Albaladejo. <a href="https://www.udemy.com/certificate/UC-80edf06a-5814-4c02-8446-da2e6fd373a4/">Visualizar certificado</a>'
+  
   - name: 'Formação Online em Design System e Ops'
     company: Meiuca Design
     duration: Abri/2021 - 16h
     logo: img/cv/meiuca.png
     duration: 'Curso ministrador por Thiago Hassu. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkd1gJh_PuQyon2I9Lw/">Visualizar certificado</a>'
   
-  - name: 'Web Typography fo  r Designers & Developers'
+  - name: 'Web Typography for Designers & Developers'
     company: Udemy
     duration: Agosto/2020 - 6.5h
     logo: img/cv/arquivo-livros-uff.jpg
