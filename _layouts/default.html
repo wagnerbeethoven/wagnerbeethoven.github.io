@@ -3,14 +3,12 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="no-js">
 
 <head>
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
 
-  <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <meta charset="utf-8" />
   <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,9 +17,6 @@ layout: compress
 
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.meta-description }}{% endif %}">
 
-  <!-- GOOGLE -->
-  <meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
-  <meta name="google-site-verification" content="9z4BsJ2t-4IVNugACo-ycRyx39x5E5jSh-8Yme-xlX8" />
   <!-- FAVICON -->
   <link href="{{site.url}}/img/favicon/favicon-48x48.png" rel="apple-touch-icon-precomposed" sizes="48x48">
   <link href="{{site.url}}/img/favicon/favicon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
@@ -57,11 +52,8 @@ layout: compress
   <link rel="sitemap" type="application/xml" title="Sitemap" ref="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
 
   <link rel="manifest" href="{{site.url}}/manifest.json">
-
-  <style>
-    {% capture critical %}{% include main.scss %}{% endcapture %}
-    {{critical | scssify}}
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>{% capture critical %}{% include main.scss %}{% endcapture %}{{critical | scssify}} </style>
 </head>
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
@@ -112,7 +104,8 @@ layout: compress
 
     <div class="top">
       <a title="Ir para o início da página" href="#top">
-        <img title="Ir para o início da página" alt="Seta apontando para cima" src="{{site.url}}/img/icons/up.svg"></a></div>
+        <img title="Ir para o início da página" alt="Seta apontando para cima" src="{{site.url}}/img/icons/up.svg"></a>
+    </div>
     <footer class="site-footer">
       <p><a xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">{{site.name}}</a> é feito com <span class="love">💚</span> & ☕ em <a title="Cidade" href="https://goo.gl/maps/acnpMUs1ASaoUQwSA">Olinda</a> por <a title="Autor do site" xmlns:cc="http://creativecommons.org/ns#" href="{{site.url}}/" property="cc:attributionName" rel="cc:attributionURL">Wagner Beethoven</a>.</p>
       <p>Esta obra está em constante mudança. </p>
@@ -120,8 +113,8 @@ layout: compress
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js" integrity="sha512-53CQcu9ciJDlqhK7UD8dZZ+TF2PFGZrOngEYM/8qucuQba+a+BXOIRsp9PoMNJI3ZeLMVNIxIfZLbG/CdHI5PA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <script src="{{site.url}}/js/toc.js"></script>
     <script src="{{site.url}}/js/main.js"></script>
     <!-- FOOTER -->

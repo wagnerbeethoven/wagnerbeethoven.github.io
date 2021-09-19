@@ -28,15 +28,13 @@ layout: default
             </div>
             {% endif %}
         </div>
-
         <nav id="toc" class="toc"></nav>
     </header>
     <article itemprop="articleBody" class="post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
-
-
         {{ content }}
     </article>
     {% if page.categories contains "blog" %}
+    {% include post/post-aside.html %}
     {% else%}
     {% include portfolio/portfolio-aside.html %}
     {% endif %}

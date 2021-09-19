@@ -12,7 +12,6 @@ tags:
   - Novatec
   - Usabilidade
   - UX
-comments: true
 ---
 
 Mês passado eu comprei três livros de uma vez da [Novatec](http://www.novatec.com.br), mesmo com uns meses de gibis comprados e não lidos (verdão, sorry). O que me impulsionou mesmo foi um projeto chamando [@clubedosposts](ttps://twitter.com/ClubeDosPosts), não para comprar os livros, mas para escrever e manter um blog.

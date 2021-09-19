@@ -2,7 +2,6 @@
 layout: post
 title: "Is it just a hello world?"
 date: 2012-07-03
-comments: true
 categories: blog
 image: https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/c5c32157fb96f1eebe4354b7ede5a95478b800e7/the-day-never-get-between-a-sumo-wrestler-and-food-ilustracao-sean-fallon.jpg
 alt: "Ilustração com 4 lutadores de sumô lutando e ao centro um suhi"
@@ -17,7 +16,7 @@ tags:
 
 ## Mas vamos às apresentações.
 
-A **Agência Sumô** é uma agência [de um homem só, como o Nine Inch Nails][homem-sohomem-so]. Para entender melhor isso, este site é um portfólio de um designer. Nele, irei abordar informações sobre meus trabalhos, todo o processo, desde as dificuldades enfrentadas, dos objetivos alcançados, os parceiros envolvidos e o resultado final apresentado por mim e o desejado pelo cliente.
+A **Agência Sumô** é uma agência [de um homem só, como o Nine Inch Nails](https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/5578a39b1907e7a4542a1e25c5af4e32e0f69488/homem-so.jpg). Para entender melhor isso, este site é um portfólio de um designer. Nele, irei abordar informações sobre meus trabalhos, todo o processo, desde as dificuldades enfrentadas, dos objetivos alcançados, os parceiros envolvidos e o resultado final apresentado por mim e o desejado pelo cliente.
 
 O nome do site foi escolhido por que o meu nome é muito complexo e achei que não seria fácil das pessoas digitarem corretamente, então por causa da ilustração do Sean Fallon chamada "<em>The Day Never Get Between A Sumo Wrestler And Food</em>" o nome se tornou definitivo.
 
@@ -26,5 +25,3 @@ O domínio ``.pe`` é um sufixo peruano para domínios, como o ``.br``, mas no m
 Apenas alguns posts ficarão disponíveis para comentários. Qualquer interação comigo poderá ser feita através do do campo de comentário no final de cada publicação (quando estiver disponível), através do <{{site.about-email}}> ou pelo [Twitter](http://twitter.com/wagnerbeethoven).
 
 Espero que gostem =*)*.
-
-[homem-so]: https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/5578a39b1907e7a4542a1e25c5af4e32e0f69488/homem-so.jpg

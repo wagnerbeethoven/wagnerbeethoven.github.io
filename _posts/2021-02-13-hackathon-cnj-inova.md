@@ -3,7 +3,6 @@ layout: post
 title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
 summary: "Todos os detalhes da construção e as impressões do que rolou na competição"
 categories: blog
-comments: true
 image: https://bitbucket.org/wagnerbeethoven/2021-02-13-hackathon-cnj-inova/raw/fd40f3e50aa824a6e2781d4d7e54b9b9e8bebbb8/hackathon/cnj-inova-demoday.jpg
 legend: Recorte da sabatina de perguntas após a apresentação do pitch do projeto.
 description: "Como conseguimos chegar em 2º lugar na competição"

@@ -3,7 +3,6 @@ layout: post
 title: "Guia Markdown"
 summary: "Guia de referência escrito por Matt Cone traduzido para o português"
 categories: blog
-comments: true
 image: https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/atom.png
 legend: Print do Editor Atom
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
