@@ -5,7 +5,7 @@ summary: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile We
 categories: blog
 image: https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/2021-09-19-agilidade-e-sobre-fazer-rapido.jpg
 legend: Arte do Evento Procenge Agile Weeek
-description: "Como conseguimos chegar em 2º lugar na competição"
+description: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile Week"
 alt: Arte do Evento Procenge Agile Weeek. No meio "Agilidade é sobre fazer rápido? Como utilizar Agile UX e desenvfolver melhores produtos. Foto em circurlo do responsáveis pela fala, Wagner, Lidia, Pedro e Fernando."
 tags:
   - Agilidade
@@ -16,7 +16,7 @@ tags:
 
 O material escrito abaixo foi escrito por mim baseado em uma pesquisa para aprofundamento da apresentação no Procenge Agile Week.
 
-Também colaboraram Pedro Pereira, Lídia Cavalcante e Fernando Fernandes.
+Também colaboraram [Pedro Pereira](https://www.linkedin.com/in/pedropereiraa/), [Lídia Cavalcante](https://www.linkedin.com/in/lidiacavalcante/) e [Fernando Fernandes](https://www.linkedin.com/in/feof87/).
 
 # Definindo conceitos
 
