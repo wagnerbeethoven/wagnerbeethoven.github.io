@@ -25,47 +25,53 @@ education:
     description: Graduação
 
 course:
+  - name: 'Comunicação & Oratória'
+    company: Escola Conquer
+    duration: Ago/2021 - 15h
+    logo: img/cv/conquer.jpg
+    description: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkeNhchdx9BNcq0pWFA?e=58Oq2v">Visualizar certificado</a>'
+
   - name: 'Kanban: O Guia Completo'
     company: Udemy
     duration: Ago/2021 - 15h 30min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Pilar Sanchez Albaladejo. <a href="https://www.udemy.com/certificate/UC-80edf06a-5814-4c02-8446-da2e6fd373a4/">Visualizar certificado</a>'
-  
+    description: 'Curso ministrador por Pilar Sanchez Albaladejo. <a href="https://www.udemy.com/certificate/UC-80edf06a-5814-4c02-8446-da2e6fd373a4/">Visualizar certificado</a>'
+    
   - name: 'Formação Online em Design System e Ops'
     company: Meiuca Design
     duration: Abri/2021 - 16h
     logo: img/cv/meiuca.png
-    duration: 'Curso ministrador por Thiago Hassu. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkd1gJh_PuQyon2I9Lw/">Visualizar certificado</a>'
-  
+    description: 'Curso ministrador por Thiago Hassu. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkd1gJh_PuQyon2I9Lw/">Visualizar certificado</a>'
+
   - name: 'Web Typography for Designers & Developers'
     company: Udemy
     duration: Agosto/2020 - 6.5h
     logo: img/cv/arquivo-livros-uff.jpg
-    duration: 'Curso ministrador por Rob Sutcliffe. <a href="https://ude.my/UC-97a3e062-f93c-4678-9530-9df2213754d4/  ">Visualizar certificado</a>'
-  
+    description: 'Curso ministrador por Rob Sutcliffe. <a href="https://ude.my/UC-97a3e062-f93c-4678-9530-9df2213754d4/  ">Visualizar certificado</a>'
+
   - name: 'Design Editorial de Livros: Teoria e Prática de Diagramação'
     company: Arquivo dos Livros (UFF) e Laboratório de Publicações Lima Barreto (UERJ)
     duration: Julho/2020 - 2h
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Ronald Monteiro. <a href="https: //1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea">Visualizar certificado</a>'
-  
+    description: 'Curso ministrador por Ronald Monteiro. <a href="https: //1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea">Visualizar certificado</a>'
+
   - name: Introdução ao Design do Dia a Dia
     company: Udacity
     duration: Julho/2020
     logo: img/cv/udacity.jpg
-    duration: 'Curso ministrador por Don Norman, Kristian Simsarian e Chelsey Glasson.'
+    description: 'Curso ministrador por Don Norman, Kristian Simsarian e Chelsey Glasson.'
 
   - name: Construa seu site em WordPress de forma simples e rápida
     company: Udemy
     duration: Maio/2020 - 44min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Roncalli Daniel Bitencourt.'
+    description: 'Curso ministrador por Roncalli Daniel Bitencourt.'
 
   - name: How to Design & Prototype in Adobe XD
     company: Udemy
     duration: Maio/2020 - 1h
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Daniel White.'
+    description: 'Curso ministrador por Daniel White.'
 
   - name: UX/UI Design for Beginners
     company: Udemy
@@ -75,7 +81,7 @@ course:
 
   - name: Design de Interface na Prática (UI Design)
     company: Udemy
-    duration: Maio/2020 - 38min
+    description: Maio/2020 - 38min
     logo: img/cv/udemy.jpg
     duration: 'Curso ministrador por Mônica Mesquita. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>'
 
@@ -83,194 +89,193 @@ course:
     company: Udemy
     duration: Maio/2020 - 5h
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/">Visualizar certificado</a>.'
 
   - name: Hello Design Thinking
     company: IDEO U
     duration: Maio/2020
     logo: img/cv/ideou.png
-    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYVT4CXvNjbu2MDKNA?e=42oRov">Visualizar certificado.</a>'
+    description: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYVT4CXvNjbu2MDKNA?e=42oRov">Visualizar certificado.</a>'
 
   - name: UX Design Masterclass
     company: UXDMC
     duration: Abril/2020 - 8h 42min
     logo: img/cv/uxdmc.jpg
-    duration: 
+    description: 
 
   - name: 'Product Mastery: 20 Video Lessons'
     company: Product School
     duration: Abril/202
     logo: img/cv/product-school.png
-    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQR_bgdOG7YR53a0Q?e=YKN7k5">Visualizar certificado</a>.'
+    description: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQR_bgdOG7YR53a0Q?e=YKN7k5">Visualizar certificado</a>.'
 
   - name: 'Product Masterclass: How to Build Digital Products'
     company: Product School
     duration: Abril/2020
     logo: img/cv/product-school.png
-    duration: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQSnU6N2NRKxdG_KA?e=SDzc0U">Visualizar certificado</a>.'
+    description: '<a href="https://1drv.ms/b/s!AkkMpcXs4WkOkYQSnU6N2NRKxdG_KA?e=SDzc0U">Visualizar certificado</a>.'
 
   - name: 'UX & Design Thinking: Experiência do Usuário nos negócios'
     company: Udemy
     duration: Abril/2020 - 11h 30min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
 
   - name: Fundamentos do Kanban
     company: Treinaweb
     duration: Março/2020 - 4h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/POASJ4A90KES">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/POASJ4A90KES">Visualizar certificado</a>.'
 
   - name: Design Thinking
     company: Treinaweb
     duration: Março/2020 - 6h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/BRY2UGBYOJSO">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/BRY2UGBYOJSO">Visualizar certificado</a>.'
 
   - name: Usando Kanban com Scrum
     company: Treinaweb
     duration: Março/2020 - 4h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/5PNBXHCV7FKG">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/5PNBXHCV7FKG">Visualizar certificado</a>.'
 
   - name: User Experience / User Interface
     company: Treinaweb
     duration: Março/2020 - 10h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/ULEYUJEJ389C">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/ULEYUJEJ389C">Visualizar certificado</a>.'
 
   - name: Scrum - Planejamento e Desenvolvimento Ágeis
     company: Treinaweb
     duration: Março/2020 - 8h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/8LZB6U1XYYEA">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/8LZB6U1XYYEA">Visualizar certificado</a>.'
 
   - name: 'Lettering Básico / Avançado'
     company: Faber-Castell
     duration: Março/2020 (1h 30min /  1h 30min)
     logo: img/cv/faber-castell.jpg
-    duration: <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766">Visualizar certificado do curso básico</a> e do <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776">curso avançado</a>'
-
+    description: <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766">Visualizar certificado do curso básico</a> e do <a href="https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776">curso avançado</a>'
 
   - name: Prototipação Rápida
     company: Treinaweb
     duration: Março/2020 - 2h  
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/1L2YBCP2CRXH">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/1L2YBCP2CRXH">Visualizar certificado</a>.'
 
   - name: Introdução à Acessibilidade
     company: Treinaweb
     duration: Março/2020 - 10h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/CRFH2FQIRJA7">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/CRFH2FQIRJA7">Visualizar certificado</a>.'
 
   - name: 'Figma: Design colaborativo do básico ao protótipo responsivo'
     company: Udemy
     duration: Março/2020 - 6h 30min 
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Leandro Rezende. <a rel="noreferrer" href="http://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721">Visualizar certificado</a>.'
 
   - name:  HTML5 para quem não sabe nada de HTML5
     company: Udemy
     duration: Março/2020 - 6h 10min 
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Paulo Andrade. <a rel="noreferrer" href="http://ude.my/UC-ea0d259d-fe64-4fe7-9854-b91981e188a6">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Paulo Andrade. <a rel="noreferrer" href="http://ude.my/UC-ea0d259d-fe64-4fe7-9854-b91981e188a6">Visualizar certificado</a>.'
 
   - name: XML Completo
     company: Treinaweb
     duration: Março/2020 - 18h
     logo: img/cv/treinaweb.png
-    duration: '<a href="https://www.treinaweb.com.br/certificado/BFVG42Q4FLMD">Visualizar certificado</a>.'
+    description: '<a href="https://www.treinaweb.com.br/certificado/BFVG42Q4FLMD">Visualizar certificado</a>.'
 
   - name: 'UX Design de A à Z: tudo sobre experiência do usuário'
     company: Udemy
     duration: Março/2020 - 11h
     logo: img/cv/udemy.jpg
-    duration: 'Curso Ministrado por Chaiane Thiesen Bitelo e Bruna Ruschel Moreira. <a rel="noreferrer" href="http://ude.my/UC-967ee31c-e1c6-4be9-a276-8592f43bbccf">Visualizar certificado</a>'
+    description: 'Curso Ministrado por Chaiane Thiesen Bitelo e Bruna Ruschel Moreira. <a rel="noreferrer" href="http://ude.my/UC-967ee31c-e1c6-4be9-a276-8592f43bbccf">Visualizar certificado</a>'
 
   - name: Criando sites estáticos com Jekyll
     company: Udemy
     duration: Fevereiro - 2h
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Wilian Justen.'
+    description: 'Curso ministrador por Wilian Justen.'
 
   - name:  Introdução à linguagem CSS
     company: Udemy
     duration: Fevereiro/2020 - 1h 50min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Diego Mariano.'
+    description: 'Curso ministrador por Diego Mariano.'
 
   - name: Introdução à Linguagem HTML
     company: Udemy
     duration: Fevereiro/2020- 1h
     logo: img/cv/udemy.jpg
-    duration: Curso ministrador por Diego Mariano.
+    description: Curso ministrador por Diego Mariano.
 
   - name: Criando Páginas Web com o GitHub Pages
     company: Udemy
     duration: Fevereiro/2020- 30min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Marcos Castro.'
+    description: 'Curso ministrador por Marcos Castro.'
 
   - name: Aprenda Markdown
     company: Udemy
     duration: Fevereiro/2020 - 35min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Roberto Achar.'
+    description: 'Curso ministrador por Roberto Achar.'
     
   - name: Git e contribuições para projetos Open Source
     company: Udemy
     duration: Fevereiro/2020 - 3h 30min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Bruno Orlandi.'
+    description: 'Curso ministrador por Bruno Orlandi.'
 
   - name: Git e Github para iniciantes
     company: Udemy
     duration: Fevereiro/2020 - 2h 5min
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Wilian Justen.'
+    description: 'Curso ministrador por Wilian Justen.'
 
   - name: Imersão em UX Design
     company: Design Culture
     duration: Janeiro/2020 - 8h
     logo: img/cv/udemy.jpg
-    duration: 'Curso ministrador por Leo Macedo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkLw_eFplf5lKzyBnfw">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Leo Macedo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkLw_eFplf5lKzyBnfw">Visualizar certificado</a>.'
 
   - name: 'UX: Experiência do Usuário'
     company: DesignThinkers Academy
     duration: Março/2017 - 12h
     logo: img/cv/dta.jpg
-    duration: 'Curso ministrador por Tássia Spinelli. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkP4QlDlIZjxPTK58LA">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Tássia Spinelli. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkP4QlDlIZjxPTK58LA">Visualizar certificado</a>.'
 
   - name: 'Programando com Acessibilidade: TA/TI no contexto da acessibilidade computacional'
     company: Universidade Federal de Santa Maria
     duration: Maio/2016 - 4h
     logo: img/cv/ufsm.png
-    duration: 'Curso ministrador por Bruno Hipólito. <a rel="noreferrer" href="http://www.ufsm.br/autenticacao/index.html?hash=13E6.A53E.B723.AFAF.E7F9.E48D.6087.035E">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Bruno Hipólito. <a rel="noreferrer" href="http://www.ufsm.br/autenticacao/index.html?hash=13E6.A53E.B723.AFAF.E7F9.E48D.6087.035E">Visualizar certificado</a>.'
 
   - name: UX Weekend/ UX Design
     company: Mergo
     duration: Agosto/2014 - 14h
     logo: img/cv/mergo.jpg
-    duration: 'Curso ministrador por Edu Agni. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQlyo1H2FmflVVrq">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Edu Agni. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQlyo1H2FmflVVrq">Visualizar certificado</a>.'
 
   - name: Arquitetura de CSS/Sass
     company: Hello Bits
     duration: Agosto/2014 - 8h
     logo: img/cv/hello-bits.png
-    duration: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_">Visualizar certificado</a>.'
 
   - name: Curso Web - Foco na Certificação Microsoft 70-480&:colon Programming in HTML5 with JavaScript & CSS3
     company: Qualiti Innovative Learning
     duration: Fevereiro/2013 — Agosto/2013 - 88h
     logo: img/cv/qualiti.png
-    duration: 'Curso ministrador por Thiago Burgo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQh8Jwk0WB8j0TW3">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Thiago Burgo. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQh8Jwk0WB8j0TW3">Visualizar certificado</a>.'
 
   - name: Formação Pedagógica para Professores
     company: Microcamp Internacional
     duration: Maio/2010 - 24h
     logo: img/cv/microcamp.png
-    duration: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'
+    description: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'
 
 experience:
   - activity: Lead Design e UI/UX Designer

@@ -87,9 +87,8 @@ legend: "Olinda / 9 de setembro de 2018"
     <h2 class="section-title">Cursos</h2>
     {% for course in site.data.about.course %}
     <div class="career-item" id="{{course.name|slugify}}">
-
         <div class="career-detail">
-            {% if course.activity %}<strong class="career-activity">{{course.activity}}</strong>{% endif %}
+            {% if course.company %}<small class="career-activity">{{course.company}}</small>{% endif %}
             {% if course.name %}<span class="career-name">{{course.name}}</span>{% endif %}
             {% if course.duration %}<small class="career-duration">{{course.duration}}</small>{% endif %}
             {% if course.description %}<p class="career-description">{{course.description}}</p>{% endif %}

@@ -14,8 +14,7 @@ tags:
   - Lean UX
 ---
 
-O material escrito abaixo foi escrito por mim baseado em uma pesquisa para aprofundamento da apresentação no Procenge Agile Week.
-
+O material escrito abaixo foi elaborado por mim baseado em uma pesquisa de aprofundamento da apresentação no Procenge Agile Week.
 Também colaboraram [Pedro Pereira](https://www.linkedin.com/in/pedropereiraa/), [Lídia Cavalcante](https://www.linkedin.com/in/lidiacavalcante/) e [Fernando Fernandes](https://www.linkedin.com/in/feof87/).
 
 # Definindo conceitos
@@ -37,27 +36,27 @@ Trata-se de como o cliente interage com o seu produto ou serviço a partir dos e
 
 ### User Interface (Interface do Usuário)
 
-Trata-se de uma área voltada a criar interfaces mais fáceis e amigáveis. Interface pode ter diversas formas, tamanhos e  tipos, desde telas de site, aplicativos de celular,  botões do micro-ondas ou painel de carro.
+Trata-se de uma área voltada a criar interfaces mais fáceis e amigáveis. Interface pode ter diversas formas, tamanhos e tipos, desde telas de site, aplicativos de celular, botões do micro-ondas ou painel de carro.
 
 ### Diferenças entre Designer UX e UI
 
-<figure class="mt-5">
+<figure class="my-5">
 <img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/ux-ui.svg" alt="Do lado esquerdo: UX (pesquisa, protótipos, etnografia, personas, objetivos), no centro, uma representação do cerebro e do lado direito: UI (design visual, tipografia, cores, layouts, design system)">
-<figcaption>Representação "grosseira" da atuação e atividades de Designer UX e UX</figcaption></figure>
+<figcaption>Representação "grosseira" da atuação e atividades de Designer UX e UI</figcaption></figure>
 
 ## Atuação do Designer do desenvolvimento de soluções
 
-O designer tem preocupações durante todo o desenvolvimento de uma ideia, solução, produto. 
+O designer tem preocupações durante todo o desenvolvimento de uma ideia, solução e/ou produto. 
 
-<figure class="mt-5">
-<img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/atuacao-designer.svg" alt="Seta feitas em 3 etapas: Entendimento do problema, 2 Desenvolvimento da aplicação, 3 coleta de feedback. A seta aponta para o item Versão do aplicativo. Englobando tudo isso, Desenvolvimento da aplicação e a atuação do design">
+<figure class="my-5">
+<img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/atuacao-designer.svg" alt="Seta feitas em 3 etapas: 1. Entendimento do problema, 2. Desenvolvimento da aplicação, 3. coleta de feedback. A seta aponta para o item 'Versão do aplicativo'. Englobando tudo isso, Desenvolvimento da aplicação e a atuação do Designer">
 <figcaption>Representação gráfica da atuação do Designer do desenvolvimento da solução</figcaption></figure>
 
-
+Após as explicações preliminares sobre conceitos, atividade e atuações do designer, conceituo as metodologias ágeis.
 
 # Metodologias ágeis
 
-Escrito pela primeira em 2001 por 17 profissionais, o [Manifesto para Desenvolvimento Ágil de Software](http://agilemanifesto.org/) sempre foi flexível e colaborativo, construção através de validação contínua do cliente ao invés de focar apenas em requisitos técnicos. 
+Escrito pela primeira vez em 2001 por 17 profissionais, o [Manifesto para Desenvolvimento Ágil de Software](http://agilemanifesto.org/) sempre foi flexível e colaborativo. Baseado na construção através de validação contínua do cliente ao invés de focar apenas em requisitos técnicos. 
 
 > “A especialização não era o problema principal, mas a colaboração era. À medida que o movimento Ágil amadurecia, íamos adicionando especialistas à medida que aprendemos a integrá-los às equipes ágeis. Isso não quer dizer que ter um conjunto mais geral de habilidades não seja muito valioso, mas em nosso mundo complexo ainda há necessidade de especialização.
 > 
@@ -65,21 +64,21 @@ Escrito pela primeira em 2001 por 17 profissionais, o [Manifesto para Desenvolvi
 
 ## Conceito
 
-São metodologias cuja os processos se dão através de etapas de:
+São metodologias cuja os processos se dão através de:
 
-- desenvolvimento mais curtas;
+- etapas de desenvolvimento mais curtas;
 - objetivos claros e bem definidos;
-- foco na melhoria contínua dos processos;
+- foco na melhoria contínua dos processos, e;
 - alinhamento da equipe e feedback constante.
 
-Esses métodos buscam transformar os processos de trabalho engessados e garantir maior fluidez no desenvolvimento dos  projetos
+Esses métodos buscam transformar os processos de trabalho engessados e garantir maior fluidez no desenvolvimento dos projetos.
 
 ## Valores
 
-- Indivíduos e interações sobre processos e ferramentas
-- Software de trabalho sobre uma documentação abrangente
-- Colaboração de cliente pela negociação de contrato
-- Responder a mudar durante a seguir um plano
+- Indivíduos e interações sobre processos e ferramentas;
+- Software de trabalho sobre uma documentação abrangente;
+- Colaboração de cliente pela negociação de contrato, e;
+- Responder a mudar durante a seguir um plano.
 
 ## Objetivos
 
@@ -87,8 +86,8 @@ As metodologias que têm o objetivo de resolver:
 
 - Etapas de produção muito longas;
 - Problemas com definição de entregas;
-- Comunicação falha entre as equipes;
-- Desalinhamento de informações entre o time interno e os clientes
+- Comunicação falha entre as equipes, e;
+- Desalinhamento de informações entre o time interno e os clientes.
 
 ## Ciclos
 
@@ -96,14 +95,16 @@ Há diversas metodologias que pregam agilidade, há características comuns na m
 
 A imagem abaixo está representando 3 ciclos, todos eles formados por etapas incrementais e ordenadas em:
 
-1.	Análise e desenvolvimento de requisitos
-2.	Elaboração dos entregáveis de design
-3.	Codificação desses entregáveis
-4.	Testes a fim de identificação direcionamento corretos de acordo com os requisitos propostos na etapa 1
-5.	Implantação/integração da funcionalidade no ambiente de produção
-6.	Revisão/retrospectiva dos acontecimentos com o intuito de aprender com os erros e melhorar a assertividade nos ciclos futuros.
+1.	Análise e desenvolvimento de requisitos;
+2.	Elaboração dos entregáveis de design;
+3.	Codificação desses entregáveis;
+4.	Testes com o intuito de garantir que os requisitos foram desenvolvidos com sucesso;
+5.	Implantação/Integração da funcionalidade no ambiente de produção;
+6.	Revisão/Retrospectiva dos acontecimentos para aprender com os erros e melhorar a assertividade nos ciclos futuros.
 
 ![Representação de 3 ciclos ágeis](https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg)
+
+Com os conceitos declarados, vamos passar para o assunto principal.
 
 # Princípios do Agile UX
 
@@ -112,29 +113,29 @@ A imagem abaixo está representando 3 ciclos, todos eles formados por etapas inc
 
 ## 1. Experiência do Cliente (CX)
 
-O consumidor deve ser o guia para construção de regras de negócios, sendo assim, a experiência de um produto ou serviço deve ter o contexto associada ao cliente. Será dele resposta para um produto, assim, a experiência que os consumidores finais são mandatórias para definir um produto  de sucesso. 
+O consumidor deve ser o guia para construção de regras de negócios, sendo assim, a experiência de um produto ou serviço deve ter o contexto associada ao cliente. Será dele resposta para um produto, assim, a experiência que os consumidores finais são mandatórias para definir um produto de sucesso. 
 
 ## 2. Mudanças tecnológicas e sociais
 
-As tecnologias não devem definir o andamento dos projetos. A solução deve ter seu contexto sempre pautado nas mudanças sociais. Profissionais com papeis de UX deve sempre projetar levando em consideração mudanças e transformações nos comportamentos dos consumidores, projetar para se antecipar a novos contextos. 
+As tecnologias não devem definir o andamento dos projetos. A solução deve ter seu contexto sempre pautado nas mudanças sociais. Profissionais com papeis de UX devem sempre projetar levando em consideração mudanças e transformações nos comportamentos dos consumidores, projetar para se antecipar aos novos contextos. 
 
 ## 3. Entregas frequentes
 
-Entregas incrementais e assertivas, porém, não perfeitas. O perfeito é uma construção muito custosa e demorada, assim as entregas menores e com mais valor ao produto devem ser o foco da equipe.  As correções em pequenas entregas também são mais eficazes!
+Entregas incrementais e assertivas, porém, não perfeitas. O perfeito é uma construção muito custosa e demorada, assim as entregas menores e com mais valor ao produto devem ser o foco da equipe. As correções em pequenas entregas também são mais eficazes!
 
 A preocupação dessas pequenas entregas deve ser com foco em não comprometer os usuários e recursos, além do prazo.
 
 ## 4. Colaboração adaptativa
 
-A dinâmica de cada projeto é diferente, já que há fatores ambientais e mercadológicos envolvidos. Ao enfrentar um desafio, pode ser necessário a ação de um especialista, mas é comum que esse problema ser compartilhado e o grande grupo relacionando ao projeto se reúna a fim de identificar o erro, aprender com ele e corrigi-lo. 
+A dinâmica de cada projeto é diferente, já que há fatores ambientais e mercadológicos envolvidos. Ao enfrentar um desafio, pode ser necessário a ação de um especialista, mas é comum que esse problema seja compartilhado e o grande grupo relacionando ao projeto se reúna a fim de identificar o erro, aprender com ele e corrigí-lo. 
 
 Ainda sobre colaboração adaptativa, [Alexandros Paramythis e Susanne Loidl-Reisinger definiram como colaboração adaptativa](https://lume.ufrgs.br/bitstream/handle/10183/164318/001027120.pdf?sequence=1):
 
-> [...] processo de aprendizagem que envolva a comunicação entre várias pessoas (a interação social) e, potencialmente, à colaboração para objetivos comuns [...]
+> [...] processo de aprendizagem que envolva a comunicação entre várias pessoas (a interação social) e, potencialmente, à colaboração para **objetivos comuns** [...]
 
 ## 5. Construção de projetos em torno de indivíduos motivados
 
-A manutenção de estruturas com o intuito de motivas a equipe é de extrema importância. A organização deve manter esse esforço sempre financeiro, estrutural ou cultural mesmo após a identificação de alguma falha no processo, mas essas mudanças devem acompanhar o [ROI](https://endeavor.org.br/financas/roi/).
+A manutenção de estruturas com o intuito de motivar a equipe é de extrema importância. A organização deve manter o esforço financeiro, estrutural ou cultural mesmo após a identificação de alguma falha no processo, mas essas mudanças devem acompanhar o [ROI](https://endeavor.org.br/financas/roi/).
 
 ## 6. Comunicação assertiva
 
@@ -142,20 +143,21 @@ Utilizar ferramentas como Teams, Slack, Discord, Adobe XD ou Figma ajudam a cons
 
 ## 7. Excelência na experiência para o sucesso
 
-O consumidor final tem que entender o valor do seu produto, o "*wow moment*" tem que certeiro. Não dá para dar doses homeopáticas de boas experiências com o intuito do usuário do usuário compreender o valor da solução. Esse entendimento tem que ser nos primeiros momentos de uso, só assim, a solução está sendo direcionado ao sucesso. 
+O consumidor final tem que entender o valor do seu produto, o <em lang="en" class="fw-bold">wow moment</em>" tem que certeiro. Não dá para dar doses homeopáticas de boas experiências com o intuito do usuário do usuário compreender o valor da solução. Esse entendimento tem que ser nos primeiros momentos de uso, só assim, a solução está sendo direcionado ao sucesso. 
 
 ## 8. Desenvolvimento sustentável
 
-A atualização ao longo da vida de uma aplicação ou produto tem que ser balanceada para que usuários antigos sejam contemplados e os novos sejam surpreendidos. Os novos recursos deverão sempre aumentaram o engajamento no uso e consumo da aplicação, ou seja, o equilíbrio entre usuários existentes e novos deve ser um dos motores de novas funcionalidades
+A atualização ao longo da vida de uma aplicação ou produto tem que ser balanceada para que usuários antigos sejam contemplados e os novos sejam surpreendidos. Os novos recursos deverão sempre aumentaram o engajamento no uso e consumo da aplicação, ou seja, o equilíbrio entre usuários existentes e novos deve ser um dos motores de novas funcionalidades.
 
 ## 9. Excelência técnica é relativa
 
-Nem sempre soluções tecnicamente excelentes podem ser fundamentais para mercados onde soluções consideradas obsoletas são ruins e está tudo bem em usar soluções "defasadas". Exemplificando, pequenas empresas, instituições sem fins lucrativos ou instituições educacionais tem ou precisam de "melhores" requisitos técnicos para funcionamento do que multinacionais e está tudo bem por isso. 
+Nem sempre soluções tecnicamente excelentes podem ser fundamentais para mercados onde soluções consideradas obsoletas sejam utilizadas. Está tudo bem em usar soluções "defasadas".
+
+Exemplificando, pequenas empresas, instituições sem fins lucrativos ou instituições educacionais nem sempre precisam de "melhores" requisitos técnicos para funcionamento, porém multinacionais talvez precisem da melhor tecnologia disponível do mercado.
 
 ## 10. Simplicidade
 
-"~~Quanto menos, melhor~~", o famoso jargão não se aplica neste momento, novamente, deve ser levado em consideração, nem sempre o simples é a realidade do usuário, das organizações ou necessidades técnicas. A atenção deve ser em não esquecer as necessidades do projeto.
-
+"~~Quanto menos, melhor~~", o famoso jargão não se aplica neste momento, nem sempre o simples é a realidade do usuário, das organizações ou necessidades técnicas. A atenção deve ser em não esquecer as necessidades do projeto.
 ## 11. Time autogerenciado e multifuncionais
 
 As panelinhas prejudicam demais, especialistas precisam se comunicar, comunicação é tudo! Ela deve dever utilizada para que a assertividade e a agilidade aconteçam de maneira eficaz.
