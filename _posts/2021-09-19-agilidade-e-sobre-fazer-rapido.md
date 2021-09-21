@@ -4,9 +4,9 @@ title: "Agilidade é sobre fazer rápido? Como utilizar Agile UX e desenvolver m
 summary: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile Week."
 categories: blog
 image: https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/2021-09-19-agilidade-e-sobre-fazer-rapido.jpg
-legend: Arte do Evento Procenge Agile Weeek
+legend: Arte do Evento Procenge Agile Week
 description: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile Week"
-alt: Arte do Evento Procenge Agile Weeek. No meio "Agilidade é sobre fazer rápido? Como utilizar Agile UX e desenvfolver melhores produtos. Foto em circurlo do responsáveis pela fala, Wagner, Lidia, Pedro e Fernando."
+alt: Arte do Evento Procenge Agile Week. No meio "Agilidade é sobre fazer rápido? Como utilizar Agile UX e desenvfolver melhores produtos. Foto em circurlo do responsáveis pela fala, Wagner, Lidia, Pedro e Fernando."
 tags:
   - Agilidade
   - Metodologias ágeis
