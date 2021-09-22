@@ -97,9 +97,9 @@
   hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-width: 1px 0 0 0;
+    margin: 4rem auto;
     width: 50%;
   }
 
@@ -278,7 +278,9 @@ button.btn {
   flex-direction: column;
   align-items: center;
   .page-title {
+    text-align: center;
     @extend .section-title;
+    margin-bottom: 2rem !important;
   }
   .page-summary {
     @extend .section-description;

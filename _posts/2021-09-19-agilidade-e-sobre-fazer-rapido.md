@@ -17,6 +17,7 @@ tags:
 O material escrito abaixo foi elaborado por mim baseado em uma pesquisa de aprofundamento da apresentação no Procenge Agile Week.
 Também colaboraram [Pedro Pereira](https://www.linkedin.com/in/pedropereiraa/), [Lídia Cavalcante](https://www.linkedin.com/in/lidiacavalcante/) e [Fernando Fernandes](https://www.linkedin.com/in/feof87/).
 
+---
 # Definindo conceitos
 
 Antes de troca informações sobre o universo do Design que envolvam profissionais "não-designers" tento trazer uma visão geral. As definições prévias são:
@@ -54,6 +55,7 @@ O designer tem preocupações durante todo o desenvolvimento de uma ideia, solu�
 
 Após as explicações preliminares sobre conceitos, atividade e atuações do designer, conceituo as metodologias ágeis.
 
+---
 # Metodologias ágeis
 
 Escrito pela primeira vez em 2001 por 17 profissionais, o [Manifesto para Desenvolvimento Ágil de Software](http://agilemanifesto.org/) sempre foi flexível e colaborativo. Baseado na construção através de validação contínua do cliente ao invés de focar apenas em requisitos técnicos. 
@@ -91,7 +93,7 @@ As metodologias que têm o objetivo de resolver:
 
 ## Ciclos
 
-Há diversas metodologias que pregam agilidade, há características comuns na maioria delas. Ciclos constantes e etapas definidas garantes maiores resultados.
+Há diversas metodologias que pregam agilidade, há características comuns, na maioria delas há ciclos constantes e etapas definidas garantes maiores resultados.
 
 A imagem abaixo está representando 3 ciclos, todos eles formados por etapas incrementais e ordenadas em:
 
@@ -102,10 +104,14 @@ A imagem abaixo está representando 3 ciclos, todos eles formados por etapas inc
 5.	Implantação/Integração da funcionalidade no ambiente de produção;
 6.	Revisão/Retrospectiva dos acontecimentos para aprender com os erros e melhorar a assertividade nos ciclos futuros.
 
-![Representação de 3 ciclos ágeis](https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg)
+<figure class="my-5">
+<img alt="Representação de 3 ciclos ágeis" img="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg">
+<figcaption>Representação de 3 ciclos ágeis</figcaption>
+</figure>
 
 Com os conceitos declarados, vamos passar para o assunto principal.
 
+---
 # Princípios do Agile UX
 
 > “Agile UX ou UX Ágil é o processo de construção de produtos digitais em que o time de designers e desenvolvedores trabalham em paralelo”
