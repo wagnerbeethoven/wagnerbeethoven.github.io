@@ -105,7 +105,7 @@ A imagem abaixo está representando 3 ciclos, todos eles formados por etapas inc
 6.	Revisão/Retrospectiva dos acontecimentos para aprender com os erros e melhorar a assertividade nos ciclos futuros.
 
 <figure class="my-5">
-<img alt="Representação de 3 ciclos ágeis" img="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg">
+<img alt="Representação de 3 ciclos ágeis" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg">
 <figcaption>Representação de 3 ciclos ágeis</figcaption>
 </figure>
 
