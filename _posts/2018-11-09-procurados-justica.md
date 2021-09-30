@@ -62,7 +62,7 @@ Eu, como usuário quero alertar as autoridades responsáveis do local em que me 
 
 # Arquitetura da Informação
 
-<figure><img src="https://bitbucket.org/wagnerbeethoven/2018-11-09-procurados-justica/raw/1cd211260cc87df49a402ea58d5f3d12ce36a31d//procurados-fluxo" alt="Arquitetura da Informação"></figure>
+<figure><img src="https://bitbucket.org/wagnerbeethoven/2018-11-09-procurados-justica/raw/1cd211260cc87df49a402ea58d5f3d12ce36a31d//procurados-fluxo.png" alt="Arquitetura da Informação"></figure>
 
 # Wireframe
 
