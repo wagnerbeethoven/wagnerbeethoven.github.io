@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Mostra Cine Brasil Cidadania"
 date: 2011-11-23
-categories: portfolio
+title: "Mostra Cine Brasil Cidadania"
+category: portfolio
 image: https://bitbucket.org/wagnerbeethoven/2014-06-02-mostra-cine-brasil-cidadania/raw/24d78361d9d3a3e9066c95284ada41eccd96ea15/mostra-cine-brasil-cidadania-imagens-do-evento-4.jpg
 description: "Criação e concepção da identidade visual, logotipo e papelaria para a Mostra Cine Brasil Cidadania"
 summary: "Criação e concepção da identidade visual, logotipo e papelaria para a Mostra Cine Brasil Cidadania"

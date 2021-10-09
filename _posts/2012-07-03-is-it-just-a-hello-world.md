@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Is it just a hello world?"
 date: 2012-07-03
-categories: blog
+title: "Is it just a hello world?"
+category: blog
 image: https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/c5c32157fb96f1eebe4354b7ede5a95478b800e7/the-day-never-get-between-a-sumo-wrestler-and-food-ilustracao-sean-fallon.jpg
 alt: "Ilustração com 4 lutadores de sumô lutando e ao centro um suhi"
 legend: "&quot;The Day Never Get Between A Sumo Wrestler And Food&quot; (Ilustração&colon; Sean Fallon)"

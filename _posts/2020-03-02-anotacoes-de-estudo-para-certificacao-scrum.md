@@ -1,8 +1,8 @@
 ---
 layout: post
+date: 2020-03-02
 title: "Anotações de estudo para certificação SCRUM"
-date: 20200302 22:11
-categories: blog
+category: blog
 image: https://bitbucket.org/wagnerbeethoven/2020-03-02-anotacoes-certificacao-scrum/raw/da99c050da45c67518b23e6b2c951c562a28eff7/team-huddle-togetherness-foto-chris-reading-pixabay.jpg
 legend: "&quot;Team Huddle Togetherness&quot; (Foto&colon; <a href='https://www.instagram.com/chrisreadingfoto' target='_blank'>Chris Reading</a> / <a href='https://pixabay.com/' target='_blank'>Pixabay</a>)"
 alt: "Jogadores de rugby abraçados em circulo de costas com vestimentas típicas. A foto está em preto e branco"

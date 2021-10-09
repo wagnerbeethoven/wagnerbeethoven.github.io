@@ -1,22 +1,12 @@
-<style>
-    .share-button {
-        margin: 0px 0.5rem 0 0;
-        border: 1px solid #D3D6D2;
-        padding: 5px 10px 5px 10px;
-        opacity: 0.9;
-        font-family: "Nunito",sans-serif;
-        font-size: 12px;
-        border-radius: 4px;
-    }
-    .share-button:hover {opacity: 1;}
-    a.facebook {color: #3b5998; border-color: #3b5998;} .facebook-hover, .facebook:focus{ color: #fff; background-color:  #3b5998 !important}
-    a.linkedin {color: #0077b5; border-color: #0077b5;} .linkedin-hover, .linkedin:focus{ color: #fff; background-color:  #0077b5 !important}
-    a.email {color: #444444; border-color: #444444;} .email-hover, .email:focus{ color: #fff; background-color:  #444444 !important}
-    a.twitter {color: #4099FF; border-color: #4099FF;} .twitter-hover, .twitter:focus{ color: #fff; background-color:  #4099FF !important}
-    </style>
 <div id="share-box">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://sumo.pe{{ page.url }}" class="facebook share-button"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url=http://sumo.pe{{ page.url }}" class="twitter share-button"><i class="fab fa-twitter"></i> Twitter</a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sumo.pe{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source=webjeda" class="linkedin share-button"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-    <a href="mailto:?subject={{ page.title }}&amp;body=Para seu conhecimento: http://sumo.pe{{ page.url }}" class="email share-button"><i class="fas fa-at"></i> Email</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://sumo.pe{{ page.url }}" class="facebook share-button">
+        <img src="../../img/social/icone-facebook.svg" alt="Email"> Facebook</a>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url=http://sumo.pe{{ page.url }}" class="twitter share-button">
+        <img src="../../img/social/icone-twitter.svg" alt="Email"> Twitter</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sumo.pe{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source=webjeda" class="linkedin share-button">
+        <img src="../../img/social/icone-linkedin.svg" alt="Email"> LinkedIn
+    </a>
+    <a href="mailto:?subject={{ page.title }}&amp;body=Para seu conhecimento: http://sumo.pe{{ page.url }}" class="email share-button">
+        <img src="../../img/social/icone-arroba.svg" alt="Email"> Email
+    </a>
 </div>

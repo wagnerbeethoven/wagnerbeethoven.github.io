@@ -2,8 +2,9 @@
   &-container {
     @extend .col-12;
     @extend .col-md-8;
-    margin-left: auto; margin-right: auto;
-    
+    margin-left: auto;
+    margin-right: auto;
+
     .section-title {
       margin-bottom: 3rem;
     }
@@ -20,7 +21,7 @@
   &-logo {
     @extend .col-md-3;
     img {
-     display:block;
+      display: block;
       margin: 0 auto 1rem !important;
       padding: 1rem !important;
       box-shadow: none !important;
@@ -35,7 +36,7 @@
   &-duration,
   &-description {
     width: 100%;
-   display:block;
+    display: block;
   }
 
   &-name,
@@ -63,8 +64,8 @@
   &-name,
   &-title,
   &-contact {
-   display:block;
-  text-align: center;
+    display: block;
+    text-align: center;
   }
   &-info {
     @extend .row;
@@ -78,7 +79,6 @@
 .course,
 .education,
 .certificate {
-
   &-container {
     .career-name {
       font-weight: 700;
@@ -108,17 +108,7 @@
     height: 27px;
     background: transparent no-repeat center;
     background-size: 100%;
-   display:block;
-  }
-
-  &-skype {
-    background-image: url(img/social/skype.svg);
-  }
-  &-github {
-    background-image: url(img/social/github.svg);
-  }
-  &-behance {
-    background-image: url(img/social/behance.svg);
+    display: block;
   }
   &-linkedin {
     background-image: url(img/social/linkedin.svg);

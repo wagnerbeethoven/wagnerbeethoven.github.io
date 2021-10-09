@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
 date: 2014-10-17
-categories: blog
+title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
+category: blog
 image: https://bitbucket.org/wagnerbeethoven/2014-10-17-design-aplicativos-moveis-theresa/raw/c85a0c3596ffb3ef866786ae282e497db312571d/banner-design-aplicativos-moveis-theresa.jpg
 alt: "Numa mesa de madeira clara, do lado esquerdo um óculos de hastes abertas e de cabeça para baixo com a armação preta está.  Ao  centro, o livro resenhado neste texto e ao lado direito um vazo com plantas de tamanho pequeno."
 summary: "Catálogo poderoso de diversos padrões mobile"

@@ -1,9 +1,8 @@
 ---
 layout: post
+date: 2018-11-09
 title: Procurados da Justiça
-
-date: 20181109
-categories: portfolio
+category: portfolio
 image: "https://bitbucket.org/wagnerbeethoven/2018-11-09-procurados-justica/raw/1cd211260cc87df49a402ea58d5f3d12ce36a31d//procurados-behance.jpg"
 description: "Criação e concepção da arquitetura da informação, experiência do usuário, design system para o aplicativo mobile Procurados da Justiça"
 summary: "Criação e concepção da arquitetura da informação, experiência do usuário, design system para o aplicativo mobile"
