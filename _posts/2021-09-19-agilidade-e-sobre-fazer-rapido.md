@@ -19,13 +19,14 @@ O material escrito abaixo foi elaborado por mim baseado em uma pesquisa de aprof
 Também colaboraram [Pedro Pereira](https://www.linkedin.com/in/pedropereiraa/), [Lídia Cavalcante](https://www.linkedin.com/in/lidiacavalcante/) e [Fernando Fernandes](https://www.linkedin.com/in/feof87/).
 
 ---
+
 # Definindo conceitos
 
 Antes de troca informações sobre o universo do Design que envolvam profissionais "não-designers" tento trazer uma visão geral. As definições prévias são:
 
 ## O que é designer?
 
-Profissional que desempenha a atividade especializada de caráter técnico-científico, criativo e/ou artístico para elaboração de projetos passíveis de serialização ou industrialização o e que atendam, tanto no aspecto de uso quanto no aspecto de percepção, a necessidades materiais e 
+Profissional que desempenha a atividade especializada de caráter técnico-científico, criativo e/ou artístico para elaboração de projetos passíveis de serialização ou industrialização o e que atendam, tanto no aspecto de uso quanto no aspecto de percepção, a necessidades materiais e
 de informação visual.
 
 > É um agente que "especifica as propriedades estruturais de um objeto de design". Profissional que trabalha na criação esquemática de um produto.
@@ -42,27 +43,24 @@ Trata-se de uma área voltada a criar interfaces mais fáceis e amigáveis. Inte
 
 ### Diferenças entre Designer UX e UI
 
-<figure class="my-5">
-<img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/ux-ui.svg" alt="Do lado esquerdo: UX (pesquisa, protótipos, etnografia, personas, objetivos), no centro, uma representação do cerebro e do lado direito: UI (design visual, tipografia, cores, layouts, design system)">
-<figcaption>Representação "grosseira" da atuação e atividades de Designer UX e UI</figcaption></figure>
+<figure class="my-5"><img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/ux-ui.svg" alt="Do lado esquerdo: UX (pesquisa, protótipos, etnografia, personas, objetivos), no centro, uma representação do cerebro e do lado direito: UI (design visual, tipografia, cores, layouts, design system)"><figcaption>Representação "grosseira" da atuação e atividades de Designer UX e UI</figcaption></figure>
 
 ## Atuação do Designer do desenvolvimento de soluções
 
-O designer tem preocupações durante todo o desenvolvimento de uma ideia, solução e/ou produto. 
+O designer tem preocupações durante todo o desenvolvimento de uma ideia, solução e/ou produto.
 
-<figure class="my-5">
-<img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/atuacao-designer.svg" alt="Seta feitas em 3 etapas: 1. Entendimento do problema, 2. Desenvolvimento da aplicação, 3. coleta de feedback. A seta aponta para o item 'Versão do aplicativo'. Englobando tudo isso, Desenvolvimento da aplicação e a atuação do Designer">
-<figcaption>Representação gráfica da atuação do Designer do desenvolvimento da solução</figcaption></figure>
+<figure class="my-5"><img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/atuacao-designer.svg" alt="Seta feitas em 3 etapas: 1. Entendimento do problema, 2. Desenvolvimento da aplicação, 3. coleta de feedback. A seta aponta para o item 'Versão do aplicativo'. Englobando tudo isso, Desenvolvimento da aplicação e a atuação do Designer"><figcaption>Representação gráfica da atuação do Designer do desenvolvimento da solução</figcaption></figure>
 
 Após as explicações preliminares sobre conceitos, atividade e atuações do designer, conceituo as metodologias ágeis.
 
 ---
+
 # Metodologias ágeis
 
-Escrito pela primeira vez em 2001 por 17 profissionais, o [Manifesto para Desenvolvimento Ágil de Software](http://agilemanifesto.org/) sempre foi flexível e colaborativo. Baseado na construção através de validação contínua do cliente ao invés de focar apenas em requisitos técnicos. 
+Escrito pela primeira vez em 2001 por 17 profissionais, o [Manifesto para Desenvolvimento Ágil de Software](http://agilemanifesto.org/) sempre foi flexível e colaborativo. Baseado na construção através de validação contínua do cliente ao invés de focar apenas em requisitos técnicos.
 
 > “A especialização não era o problema principal, mas a colaboração era. À medida que o movimento Ágil amadurecia, íamos adicionando especialistas à medida que aprendemos a integrá-los às equipes ágeis. Isso não quer dizer que ter um conjunto mais geral de habilidades não seja muito valioso, mas em nosso mundo complexo ainda há necessidade de especialização.
-> 
+>
 > ‎— Jim Highsmith, um dos autores originais do ‎‎Manifesto, ‎‎no prefácio para o livro Agile Experience Design: A Digital Designer's Guide to Agile, Lean, and Continuous‎‎.
 
 ## Conceito
@@ -98,12 +96,12 @@ Há diversas metodologias que pregam agilidade, há características comuns, na 
 
 A imagem abaixo está representando 3 ciclos, todos eles formados por etapas incrementais e ordenadas em:
 
-1.	Análise e desenvolvimento de requisitos;
-2.	Elaboração dos entregáveis de design;
-3.	Codificação desses entregáveis;
-4.	Testes com o intuito de garantir que os requisitos foram desenvolvidos com sucesso;
-5.	Implantação/Integração da funcionalidade no ambiente de produção;
-6.	Revisão/Retrospectiva dos acontecimentos para aprender com os erros e melhorar a assertividade nos ciclos futuros.
+1. Análise e desenvolvimento de requisitos;
+2. Elaboração dos entregáveis de design;
+3. Codificação desses entregáveis;
+4. Testes com o intuito de garantir que os requisitos foram desenvolvidos com sucesso;
+5. Implantação/Integração da funcionalidade no ambiente de produção;
+6. Revisão/Retrospectiva dos acontecimentos para aprender com os erros e melhorar a assertividade nos ciclos futuros.
 
 <figure class="my-5">
 <img alt="Representação de 3 ciclos ágeis" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/sprint.svg">
@@ -113,18 +111,19 @@ A imagem abaixo está representando 3 ciclos, todos eles formados por etapas inc
 Com os conceitos declarados, vamos passar para o assunto principal.
 
 ---
+
 # Princípios do Agile UX
 
 > “Agile UX ou UX Ágil é o processo de construção de produtos digitais em que o time de designers e desenvolvedores trabalham em paralelo”
-— Flavio Santana em [10 princípios do Agile UX](https://coletivoux.com/12-princ%C3%ADpios-do-agile-ux-32c29d69af28)
+> — Flavio Santana em [10 princípios do Agile UX](https://coletivoux.com/12-princ%C3%ADpios-do-agile-ux-32c29d69af28)
 
 ## 1. Experiência do Cliente (CX)
 
-O consumidor deve ser o guia para construção de regras de negócios, sendo assim, a experiência de um produto ou serviço deve ter o contexto associada ao cliente. Será dele resposta para um produto, assim, a experiência que os consumidores finais são mandatórias para definir um produto de sucesso. 
+O consumidor deve ser o guia para construção de regras de negócios, sendo assim, a experiência de um produto ou serviço deve ter o contexto associada ao cliente. Será dele resposta para um produto, assim, a experiência que os consumidores finais são mandatórias para definir um produto de sucesso.
 
 ## 2. Mudanças tecnológicas e sociais
 
-As tecnologias não devem definir o andamento dos projetos. A solução deve ter seu contexto sempre pautado nas mudanças sociais. Profissionais com papeis de UX devem sempre projetar levando em consideração mudanças e transformações nos comportamentos dos consumidores, projetar para se antecipar aos novos contextos. 
+As tecnologias não devem definir o andamento dos projetos. A solução deve ter seu contexto sempre pautado nas mudanças sociais. Profissionais com papeis de UX devem sempre projetar levando em consideração mudanças e transformações nos comportamentos dos consumidores, projetar para se antecipar aos novos contextos.
 
 ## 3. Entregas frequentes
 
@@ -134,7 +133,7 @@ A preocupação dessas pequenas entregas deve ser com foco em não comprometer o
 
 ## 4. Colaboração adaptativa
 
-A dinâmica de cada projeto é diferente, já que há fatores ambientais e mercadológicos envolvidos. Ao enfrentar um desafio, pode ser necessário a ação de um especialista, mas é comum que esse problema seja compartilhado e o grande grupo relacionando ao projeto se reúna a fim de identificar o erro, aprender com ele e corrigí-lo. 
+A dinâmica de cada projeto é diferente, já que há fatores ambientais e mercadológicos envolvidos. Ao enfrentar um desafio, pode ser necessário a ação de um especialista, mas é comum que esse problema seja compartilhado e o grande grupo relacionando ao projeto se reúna a fim de identificar o erro, aprender com ele e corrigí-lo.
 
 Ainda sobre colaboração adaptativa, [Alexandros Paramythis e Susanne Loidl-Reisinger definiram como colaboração adaptativa](https://lume.ufrgs.br/bitstream/handle/10183/164318/001027120.pdf?sequence=1):
 
@@ -150,7 +149,7 @@ Utilizar ferramentas como Teams, Slack, Discord, Adobe XD ou Figma ajudam a cons
 
 ## 7. Excelência na experiência para o sucesso
 
-O consumidor final tem que entender o valor do seu produto, o <em lang="en" class="fw-bold">wow moment</em>" tem que certeiro. Não dá para dar doses homeopáticas de boas experiências com o intuito do usuário do usuário compreender o valor da solução. Esse entendimento tem que ser nos primeiros momentos de uso, só assim, a solução está sendo direcionado ao sucesso. 
+O consumidor final tem que entender o valor do seu produto, o <em lang="en" class="fw-bold">wow moment</em>" tem que certeiro. Não dá para dar doses homeopáticas de boas experiências com o intuito do usuário do usuário compreender o valor da solução. Esse entendimento tem que ser nos primeiros momentos de uso, só assim, a solução está sendo direcionado ao sucesso.
 
 ## 8. Desenvolvimento sustentável
 
@@ -165,15 +164,16 @@ Exemplificando, pequenas empresas, instituições sem fins lucrativos ou institu
 ## 10. Simplicidade
 
 "~~Quanto menos, melhor~~", o famoso jargão não se aplica neste momento, nem sempre o simples é a realidade do usuário, das organizações ou necessidades técnicas. A atenção deve ser em não esquecer as necessidades do projeto.
+
 ## 11. Time autogerenciado e multifuncionais
 
 As panelinhas prejudicam demais, especialistas precisam se comunicar, comunicação é tudo! Ela deve dever utilizada para que a assertividade e a agilidade aconteçam de maneira eficaz.
 
-A motivação profissional é o princípio para o autogerenciamento, assim além de indivíduos autogerenciáveis, deve existir um ambiente e o suporte necessário para desenvolver as atividades, além de existir confiança na qualidade e responsabilidade individual dos integrantes do time. 
+A motivação profissional é o princípio para o autogerenciamento, assim além de indivíduos autogerenciáveis, deve existir um ambiente e o suporte necessário para desenvolver as atividades, além de existir confiança na qualidade e responsabilidade individual dos integrantes do time.
 
 ## 12. Equipes adaptáveis e flexíveis
 
-Aprender o que os consumidores necessitam e quais tecnologias exigem são os motores para o desenvolvimento de soluções longevas. 
+Aprender o que os consumidores necessitam e quais tecnologias exigem são os motores para o desenvolvimento de soluções longevas.
 
 ---
 
@@ -181,18 +181,16 @@ As necessidades do cliente nunca se baseiam em uma única abordagem, sempre deve
 
 # A diferença entre o Lean UX e Agile UX
 
-Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixeira](https://brasil.uxdesign.cc/a-diferen%C3%A7a-entre-lean-ux-e-agile-ux-e-a-import%C3%A2ncia-dos-prot%C3%B3tipos-no-design-85607e43a882) traz muita clareza na diferenciação entre os conceitos. Utilizando o gráfico abaixo, disponibilizado no [DesignModo por Jerry Cao](https://designmodo.com/wireframing-prototyping/) e traduzido por mim de maneira livre, há uma representação do uso de Design Thinking, Agile e Lean UX. 
+Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixeira](https://brasil.uxdesign.cc/a-diferen%C3%A7a-entre-lean-ux-e-agile-ux-e-a-import%C3%A2ncia-dos-prot%C3%B3tipos-no-design-85607e43a882) traz muita clareza na diferenciação entre os conceitos. Utilizando o gráfico abaixo, disponibilizado no [DesignModo por Jerry Cao](https://designmodo.com/wireframing-prototyping/) e traduzido por mim de maneira livre, há uma representação do uso de Design Thinking, Agile e Lean UX.
 
 <figure class="mt-5">
 <img class="mb-3" src="https://bitbucket.org/wagnerbeethoven/2021-09-19-agilidade-e-sobre-fazer-rapido/raw/0ed13ed6a68633cb629121b98c1308a0c1e60950/divisao-agile.svg" alt="Seta feitas em 3 etapas: Entendimento do problema, 2 Desenvolvimento da aplicação, 3 coleta de feedback. A seta aponta para o item Versão do aplicativo. Englobando tudo isso, Desenvolvimento da aplicação e a atuação do design">
 <figcaption>Representação gráfica da atuação do Designer do desenvolvimento da solução</figcaption></figure>
 
-> **Lean UX**
-> [...] um processo iterativo de construir algo, receber feedback sobre o que foi construído e na sequência pensar novas ideias que incorporarão o feedback recebido no produto.
-> 
-> **Agile UX**
-> [...] mistura de métodos ágeis e UX, onde UX Designers e Desenvolvedores trabalham lado a lado para fazer o protótipo do produto tomar forma.
-> 
+> **Lean UX** > [...] um processo iterativo de construir algo, receber feedback sobre o que foi construído e na sequência pensar novas ideias que incorporarão o feedback recebido no produto.
+>
+> **Agile UX** > [...] mistura de métodos ágeis e UX, onde UX Designers e Desenvolvedores trabalham lado a lado para fazer o protótipo do produto tomar forma.
+>
 > — Fabrício Teixeira, "[A diferença entre Lean UX e Agile UX (e a importância dos protótipos no design)](https://brasil.uxdesign.cc/a-diferen%C3%A7a-entre-lean-ux-e-agile-ux-e-a-import%C3%A2ncia-dos-prot%C3%B3tipos-no-design-85607e43a882)"
 
 ## Lean UX
@@ -214,6 +212,7 @@ Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixe
 # Referências do texto
 
 **Links**
+
 - [Wireframing & Prototyping: The Past, Present, and Future, Jerry Cao](https://designmodo.com/wireframing-prototyping/)
 - [Facilidade de uso na prática - Desenvolvimento ágil de UX, Charles B. Kreitzberg e Ambrose Little](https://docs.microsoft.com/pt-br/archive/msdn-magazine/2009/june/usability-in-practice-agile-ux-development)
 - [A diferença entre Lean UX e Agile UX (e a importância dos protótipos no design](https://brasil.uxdesign.cc/a-diferen%C3%A7a-entre-lean-ux-e-agile-ux-e-a-import%C3%A2ncia-dos-prot%C3%B3tipos-no-design-85607e43a882) e [Lean UX: método de trabalho ágil para User Experience Design](https://brasil.uxdesign.cc/lean-ux-m%C3%A9todo-de-trabalho-%C3%A1gil-para-user-experience-design-cc494059f4f8), Fabrício Teixeira
@@ -226,7 +225,8 @@ Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixe
 <br>
 
 **Livros**:
-- [Lean UX, Jeff Gothelf; Josh Seiden](https://www.amazon.com.br/Lean-UX-Applying-Principles-Experience/dp/1449311652), 
+
+- [Lean UX, Jeff Gothelf; Josh Seiden](https://www.amazon.com.br/Lean-UX-Applying-Principles-Experience/dp/1449311652),
 - [Sprint, Jake Knapp; John Zeratsky; Braden Kowitz](https://www.amazon.com.br/Sprint-Jake-Knapp-ebook/dp/B06XPPS4JW/ref=sr_1_2_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=sprint+%5Bjake+knapp%3B+john+zeratsky%3B+braden+kollwitz&qid=1632084081&s=books&sr=1-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExR0VLTldQNDRQWldQJmVuY3J5cHRlZElkPUEwODMwMjM5OEVEVFBFRTU1OE85JmVuY3J5cHRlZEFkSWQ9QTAwMzI4NTkyRTFZREVZR0VCS0xHJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
 - [Não Me Faça Pensar, Steve Krug](https://www.amazon.com.br/N%C3%A3o-fa%C3%A7a-pensar-Steve-Krug/dp/8576088509/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=N%C3%A3o+Me+Fa%C3%A7a+Pensar&qid=1632084108&s=books&sr=1-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9)
 - [O Design do Dia a Dia, Donald A. Normam](https://www.amazon.com.br/design-do-dia-ebook/dp/B07C4F61QR/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=O+Design+do+Dia+a+Dia+%5BDonald+A.+Normam%5D&qid=1632084122&s=books&sr=1-1).
@@ -234,6 +234,7 @@ Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixe
 <br>
 
 **Canais do Youtube:**
+
 - [Andriele Ribeiro](https://www.youtube.com/channel/UCu8WMGtHrGgTjz1m7rg_oew)
 - [André Gomes](https://www.youtube.com/c/Andr%C3%A9Gomesagil)
 - [Nielsen Norman Group](https://www.youtube.com/c/NNgroup)
@@ -243,8 +244,9 @@ Existe uma mistura dos conceitos entre Lean e Agile. O [texto do Fabrício Teixe
 <br>
 
 **Podcast**
+
 - [NN/g UX Podcast](https://www.nngroup.com/podcast)
-- [Conversa Ágil](https://conversaagil.com.br), 
+- [Conversa Ágil](https://conversaagil.com.br),
 - [99% Invisible](https://99percentinvisible.org/),
 - [Movimento UX](https://movimentoux.com/)
 - [Design Better](https://www.designbetter.co/podcast).

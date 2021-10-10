@@ -119,20 +119,7 @@
       width: 100%;
     }
   }
-  blockquote {
-    display: block;
-    position: relative;
-    font-size: 1rem;
-    padding-left: 1rem;
-    border-left: 5px solid #333;
-    color: #6a737d;
-    margin: 1.5rem 0;
-    p {
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
+ 
 
   .img {
     &-right {
