@@ -6,6 +6,12 @@ certificate:
     description: '<a rel="noreferrer" href="http://81cd1176253f3f59d435-ac22991740ab4ff17e21daf2ed577041.r77.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-WagnerBeethovenMartinsViana-762336.pdf" title="Visualizar certificado [O link irá abrir uma nova aba]" target="_blank" >Visualizar certificado</a>.'
 
 education:
+  - name: Design de Interação para Artefatos Digitais
+    company: Cesar School
+    duration: 2021 - em andamento
+    logo: img/cv/cesar-shool.png
+#     description: Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.
+
   - name: Design de Web Apps com Tecnologia Front-End
     company: IBRATEC – Instituto Brasileiro de Tecnologia
     duration: 2015 - 2017 (Concluído)
