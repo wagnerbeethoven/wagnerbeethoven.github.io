@@ -3,14 +3,22 @@ description: Portfólio do designer Wagner Beethoven!
 meta-description: "Portfólio de Wagner Beethoven, designer com experiência na concepção, criação de artefatos digitas, entusiasta da acessibilidade e tecnologia assistivas"
 image-default: "img/image-default.jpg"
 
+cta-header: "Olá, me chamo Wagner e sou UX/UI Designer"
+cta-description: "Há mais de dez construo e projeto coisas úteis para as pessoas. Tenho experiência em usabilidade, sou entusiasta da acessibilidade e da tecnologia assistiva"
+cta-link: "Conheça minha trajetória"
 
 # url: "http://sumo.pe"
 # baseurl: "/"
 permalink: /:categories/:title.html
 
 sass:
+  input_file: sass/main.scss
+  output_file: css/main.css
   sass_dir: _sass
-  style:    compressed
+  style: compressed
+  indentWidth: 2
+  outputStyle: nested
+  precision: 10
 
 about-name: Wagner Beethoven
 about-title: UX/UI Designer

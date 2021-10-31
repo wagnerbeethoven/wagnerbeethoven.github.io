@@ -5,9 +5,9 @@ title: Página inicial
 
 <section class="section-about">
     <div class="section-about-info">
-        <h2>Olá, me chamo Wagner e sou UX/UI Designer</h2>
-        <p>Há mais de dez construo e planejo coisas úteis para as pessoas. Tenho experiência em usabilidade e sou entusiasta da acessibilidade e de tecnologia assistivas</p>
-        <a class="section-link" title="Confira todas as publicações" href="{{site.url}}/sobre">Conheça minha trajetória</a>
+        <h2>{{site.cta-header}}</h2>
+        <p>{{site.cta-description}}</p>
+        <a class="section-link" title="Confira todas as publicações" href="{{site.url}}/sobre">{{site.cta-link}}</a>
     </div>
     <figure class="section-about-picture">
         <img title="Wagner Beethoven" alt="Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul" src='{{site.url}}/img/page/avatar.jpg' />
@@ -26,7 +26,7 @@ title: Página inicial
     </header>
     <div class="portfolio-container">
         {% for post in site.categories.portfolio limit:3%}
-        {% include portfolio/portfolio-list.html %}
+        {% include portfolio-list.html %}
         {% endfor %}
     </div>
 </section>
@@ -41,8 +41,22 @@ title: Página inicial
     </header>
     <ul>
         {% for post in site.categories.blog limit:6 %}
-        {% include post/post-list.html %}
+        {% include post-list.html %}
         {% endfor %}
     </ul>
 </section>
-<script type="application/ld+json">{ "@context": "http://schema.org/", "@type": "Organization", "name": "Agência Sumô", "address": { "@type": "PostalAddress", "streetAddress": "Jardim Atlântico", "addressLocality": "Olinda", "addressRegion": "Pernambuco", "postalCode": "50050-120" }, "telephone": "+5581986496080" }</script>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Organization",
+        "name": "Agência Sumô",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jardim Atlântico",
+            "addressLocality": "Olinda",
+            "addressRegion": "Pernambuco",
+            "postalCode": "50050-120"
+        },
+        "telephone": "+5581986496080"
+    }
+</script>
