@@ -15,7 +15,7 @@ tags:
 
 _O texto abaixo foi escrito para o Blog da [Procenge](https://procenge.com.br/acessibilidade-e-usabilidade-sucesso-no-uso-de-softwares-de-gestao/) e foi publicado também no [TI Bahia](http://tibahia.com/artigos/o-que-acessibilidade-e-a-usabilidade-tem-a-ver-com-sucesso-no-uso-de-softwares-de-gestao/). É o primeiro texto assinado como assinado como Líder de Design._ 😇
 
-<img class="float-left me-2 img-thumbnail d-inline" alt="Homem de braços cruzados, camisa azul, usa óculos e sorri. Seus cabelos e barba são castanho escuro" style="float: left" width="320px" src="https://bitbucket.org/wagnerbeethoven/2021-11-09-acessibilidade-usabilidade/raw/71df1b16e814acc54e472782ef9809dedacdaa9e/wagner-beethoven-procenge-770.jpg">
+<img class="float-left me-md-2 me-0 mb-2 mb-md-0 col-12 col-md-6 img-thumbnail d-inline" alt="Homem de braços cruzados, camisa azul, usa óculos e sorri. Seus cabelos e barba são castanho escuro" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-11-09-acessibilidade-usabilidade/raw/71df1b16e814acc54e472782ef9809dedacdaa9e/wagner-beethoven-procenge-770.jpg">
 
 Hoje no Brasil, **10,53% da população está acima dos 65 anos**[^1] e cerca de **24% dos brasileiros são pessoas com deficiência (PCD)**[^2], independente do grau. É ingênuo imaginar que essa parcela da população é incapaz de trabalhar e atuar profissionalmente, inclusive utilizando algum sistema. Com a **Convenção Internacional sobre os Direitos das Pessoas com Deficiência, aprovada pela ONU** em agosto de 2009, o mundo passou a levar em consideração as demandas desses públicos também, incluindo a construção de softwares.
 
