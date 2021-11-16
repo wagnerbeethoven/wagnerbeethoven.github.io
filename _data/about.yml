@@ -10,13 +10,17 @@ education:
     company: Cesar School
     duration: 2021 - em andamento
     logo: img/cv/cesar-school.png
-    description: 'Tem como objetivo formar e aprimorar o conhecimento de estudantes e profissionais que atuam no campo de design de artefatos digitais, setor de TIC – Tecnologia da Informação e Comunicação além de áreas de atuação diretamente correlatas, sobre processos de desenvolvimento de interfaces interativas dentro dos novos desafios de novas tecnologias, complexidades do mundo atual e sobre a perspectiva de inovação.'
+    description: >
+      Pós-graduação com objetivo formar e aprimorar o conhecimento de estudantes e profissionais que atuam no campo de design de artefatos digitais, setor de TIC – Tecnologia da Informação e Comunicação além de áreas de atuação diretamente correlatas, sobre processos de desenvolvimento de interfaces interativas dentro dos novos desafios de novas tecnologias, complexidades do mundo atual e sobre a perspectiva de inovação.
 
   - name: Design de Web Apps com Tecnologia Front-End
     company: IBRATEC – Instituto Brasileiro de Tecnologia
     duration: 2015 - 2017 (Concluído)
     logo: img/cv/unibratec.png
-    description: 'Pós-graduação com foco em como construir aplicações (Desktop, Mobile/RWA) com as melhores técnicas de Front-End (HTML, CSS e JavaScript) para garantir melhores índices de usabilidade, acessibilidade e performance. <br><br>Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.'
+    description: >
+      Pós-graduação com foco em como construir aplicações (Desktop, Mobile/RWA) com as melhores técnicas de Front-End (HTML, CSS e JavaScript) para garantir melhores índices de usabilidade, acessibilidade e performance.
+      <br><br>
+      Pós-Graduação/Especialização<br>Projeto final&#58; <a href="https://www.slideshare.net/WAGNERBEETHOVEN/apresentao-final-deo-projeto-heygo/" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://www.slideshare.net/WAGNERBEETHOVEN/unibratec-heygo-aplicaes-hbridas-com-ionic-2" target="_blank" title="Banner [Este link irá abrir uma nova janela]">Banner</a>.
 
   - name: Sistemas para Internet
     company: Centro Universitário Maurício de Nassau - Uninassau
