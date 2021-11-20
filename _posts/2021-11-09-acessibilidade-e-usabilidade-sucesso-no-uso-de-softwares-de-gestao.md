@@ -5,7 +5,7 @@ title: "O que acessibilidade e a usabilidade tem a ver com sucesso no uso de sof
 summary: 'Confira o meu primeiro texto "público" sobre acessibilidade e com visibilidade fora do da minha bolha'
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2021-11-09-acessibilidade-usabilidade/raw/45e3807581a2f18a51fe4fe556b29770ef3e2a76/acessibilidade-usabilidade.jpg
-description: "Confira minha primeira produção publicada no "
+description: "Confira minha primeira produção publicada no blog da Procenge/TI Bahia"
 alt: Imagem mostra homem usando computador
 tags:
   - Acessibilidade
