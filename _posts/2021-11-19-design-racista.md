@@ -488,7 +488,7 @@ Entretenimento é uma das maneiras mais fáceis de entender o cenário, então v
 
 Esse material foi apresentado internamente para o encontro de Designers e profissionais de outras áreas da Procenge e teve e tem a intenção levantar o tema, de iniciar o debate. O mundo tende a ficar cada vez mais conectado e dependente da tecnologia e dos aparelhos inteligentes, assim nada mais horizontal em atacar os profissionais que produzem essas tecnologias. 
 
-Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, não consigo imaginar o que uma pessoa negra (não-branca) sofre. Nós tempos sempre ser inquietos e lutar por espaços mais plurais e mais inclusivos.
+Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, não consigo imaginar o que uma pessoa negra (não-branca) sofre. Nós temos sempre ser inquietos e lutar por espaços mais plurais e mais inclusivos.
 
 ![Gif animado de homens negros com marca no rosto escrita "Our Lives Matter"](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/292bc13eca21309f41acc673e4341d8eba310c82/our-lives-matters.gif)
 
