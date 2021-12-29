@@ -2,10 +2,10 @@
 layout: post
 date: 2021-11-19
 title: "Design Racista"
-summary: 'Reprodução da pesquisa feita na Procenge para o encontro o 1º Design Talk - workshop periódico da equipe de Design'
+summary: 'Reprodução da pesquisa feita para o encontro o 1º Design Talk - workshop periódico da equipe de Design'
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/young-boy-shouting-megaphone-protest.jpg
-description: 'Reprodução da pesquisa feita na Procenge para o encontro o 1º Design Talk - workshop periódico da equipe de Design'
+description: 'Reprodução da pesquisa feita para o encontro o 1º Design Talk - workshop periódico da equipe de Design'
 alt: Crianças negras gritando e um deles está com um megafone
 tags:
   - Racismo
@@ -24,25 +24,33 @@ O texto abaixo contém diversos gatilhos, mas serve como retrato de uma sociedad
 
 <img alt="Ilustração de um homem com corpo pintado de preto, veste chapéu, camisa azul, gravata vermelha e calça amarela" class="float-left me-md-2 me-0 mb-2 mb-md-0 col-12 col-md-4 img-thumbnail d-inline" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/jim-crow-1820.jpg" alt="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/jim-crow-1820.jpg">
 
-O comediante norte americano Thomas Rice nos anos 1820, criou o **[Jim Crow](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/jim-crow-1820.jpg)**, personagem estereotipado que era utilizado nas pelas de teatro. O nome do personagem foi trazido por causa do apelido dado aos negros do sul do EUA, “Crow”. O nome batizou uma série de leis racistas que aumentavam a segregação racial do país. A empresa de sabão Fairy Soap nos anos 1875 vinculou lamentavelmente a cor negra a sujeira. “**[Por que sua mãe não lava você com o sabonete Fairy?](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/fairy-soap-1875.jpg)**” e seguindo a mesma linha de pensamento, a Ellitt White (1930), “**[Veja como cobrir o preto](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/ellitt-white-1930.png)**”.
+O comediante norte americano Thomas Rice nos anos 1820, criou o **[Jim Crow](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/jim-crow-1820.jpg)**, personagem estereotipado que era utilizado nas suas peças de teatro. O nome do personagem foi trazido por causa do apelido dado aos negros do sul do EUA, "Crow". O nome batizou uma série de leis racistas que aumentavam a segregação racial do país.
 
-Plymouth (1940) trazia a imagem do negro servente— carros de luxos, o privilégio reservado as pessoas brancas, “**[Todos dizem que Plymouth é a beleza de 1940! A América está animada para um carro de luxo!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/plymouth-1940.jpg)**”, simplesmente lamentável. A gigantesca General Eletric (1949) também vinculou o negro ao trabalho doméstico, ao servir, “**[Com certeza tenho um bom trabalho agora!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/general-eletric-1949.jpg)**”. A frase era associada a uma mulher negra que estava sendo utilizada pelo branco, como o acessório para limpeza.
+A empresa de sabão Fairy Soap nos anos 1875 vinculou lamentavelmente a cor negra a sujeira. "**[Por que sua mãe não lava você com o sabonete Fairy?](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/fairy-soap-1875.jpg)**" e seguindo a mesma linha de pensamento, a Ellitt White (1930), "**[Veja como cobrir o preto](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/ellitt-white-1930.png)**".
 
-A marca de hidratante Nadinola (1959) trouxe para o mercado o clareador de pele e para alavancar as vendas, uma mulher negra “brincando”, removia as pétalas da margarida “bem me quer, mal me quer” e a chamada “**[Depende da margarida? Certifique-se de ter uma pele clara e brilhante!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/nadinola-1959.jpg)**”.  Infelizmente que essas associações as pessoas pretas não é antiga, nos anos 2000, tivemos uma coleção de barbáries.
+Plymouth (1940) trazia a imagem do negro servente— carros de luxos, o privilégio reservado as pessoas brancas, "**[Todos dizem que Plymouth é a beleza de 1940! A América está animada para um carro de luxo!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/plymouth-1940.jpg)**", simplesmente lamentável.
 
-![Anúncio holandês da Sony (2016)](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/sony-psp-2006.jpg)
+A gigantesca General Eletric (1949) também vinculou o negro ao trabalho doméstico, ao servir, "**[Com certeza tenho um bom trabalho agora!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/general-eletric-1949.jpg)**". A frase era associada a uma mulher negra que estava sendo utilizada pelo branco, como o acessório para limpeza.
 
-Anúncio holandês da Sony (2016)
+A marca de hidratante Nadinola (1959) trouxe para o mercado o clareador de pele e para alavancar as vendas, uma mulher negra "brincando", removia as pétalas da margarida "bem me quer, mal me quer" e a chamada "**[Depende da margarida? Certifique-se de ter uma pele clara e brilhante!](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/nadinola-1959.jpg)**".  Infelizmente que essas associações as pessoas pretas não é antiga, nos anos 2000, tivemos uma coleção de barbáries.
 
-A Sony (2006) vinculou na Holanda um **[anuncio do PSP White](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/sony-psp-2006.jpg)** que trazia uma mulher branca segurando uma pessoa negra e passando uma ideia de branco dominando o negro. A Intel (2007) trouxe para o mercado os novos processadores, “**[Multiplique o desempenho do computador e maximize o poder de seus funcionários](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/intel-2007.png)**”. O cartaz trouxe um homem branco rodeado de velocistas negros. A figura do negro mais uma vez representada na posição de servidão e “reverenciando” o homem branco, mas reconheceu: *Infelizmente, nossa execução não entregou nossa mensagem pretendida e na verdade provou ser insensível e insultante.* 
+<figure class="mb-2">
+  <img alt="Mulher branca segura mulher negra pela mandibula" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/sony-psp-2006.jpg">
+  <figcaption>Anúncio holandês da Sony (2016)</figcaption>
+</figure>
+
+A Sony (2006) vinculou na Holanda um anuncio do PSP White (reproduzido acima) que trazia uma mulher branca segurando uma pessoa negra e passando uma ideia de branco dominando o negro.
+
+A Intel (2007) trouxe para o mercado os novos processadores, "**[Multiplique o desempenho do computador e maximize o poder de seus funcionários](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/intel-2007.png)**". O cartaz trouxe um homem branco rodeado de velocistas negros. A figura do negro mais uma vez representada na posição de servidão e "reverenciando" o homem branco, mas reconheceu: *Infelizmente, nossa execução não entregou nossa mensagem pretendida e na verdade provou ser insensível e insultante.* 
 
 <div class="iframe-container mb-2">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A9Nu1uAKWXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div> 
 
-A Nivea (2011) trouxe o homem negro como uma figura não civilizada, intitulada “**[Re-Civilize Yourself](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/nivea-2011.jpg)**” a campanha publicitária homem negro com cabelos cortados e barba aparada, está em movimento de arremesso de um objeto, uma máscara de um rosto negro com barba grande e cabelo black power. Associando o Black Power, ícone da cultura negra, a uma coisa descuidada. No mesmo ano a outra marca de cosméticos. Dove associado a pele negra ao descuido e a pele branca ao cuidado, a frase “**[pele visivelmente mais bonita do lugar mais inesperado - seu chuveiro](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/dove-2011.jpeg)**” arrematava o anúncio, em 2017 numa publicidade vinculada no Facebook, a marca foi racista novamente.
+A Nivea (2011) trouxe o homem negro como uma figura não civilizada, intitulada "**[Re-Civilize Yourself](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/nivea-2011.jpg)**" na campanha publicitária, um homem negro com cabelos cortados e barba aparada está em movimento de arremesso de um objeto, uma máscara de um rosto negro com barba grande e cabelo black power. Associando o Black Power, ícone da cultura negra, a uma coisa descuidada. No mesmo ano a outra marca de cosméticos, a Dove associava a pele negra ao descuido e a pele branca ao cuidado, a frase "**[pele visivelmente mais bonita do lugar mais inesperado - seu chuveiro](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/dove-2011.jpeg)**" arrematava o anúncio eem 2017 numa publicidade vinculada no Facebook, a marca foi racista novamente.
 
 Outra propaganda problemática foi a da chinesa Qiobi (2016) na campanha de detergente em pó para maquinas de lavar.
+Mas o por porta-voz da Qiaobi, Xu Chunyan, não achou nada de errado: "*Nós fizemos isso por um efeito sensacional*", disse na época. "*Se nós apenas mostrarmos a roupa como todos os outros anúncios, o nosso não vai se destacar*". Infelizmente orientais ainda não conseguem entender o problema dessa propaganda.
 
 <div class="iframe-container mb-2">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Few8kJ0zfnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -58,9 +66,9 @@ Em resposta a uma usuária no Facebook a marca trouxe o seguinte argumento:
 
 > A Maria Filó esclarece que a estampa em questão buscou inspiração na obra de Debret. Em nenhum momento houve a intenção de ofender. A marca pede desculpas e informa que já está tomando providências para que a estampa seja retirada das lojas.
 
-Ninguém teve a sensibilidade que trazer essa estampa que seja inspirada no Debret ou no Picasso ou no escambal não é saudável? Mas é só um retrato de falta de representatividade, provavelmente na produção, no marketing ou em todo processo não tem negros (ou se tem, eles não tem voz).
+Ninguém teve a sensibilidade que trazer essa estampa, seja inspirada no Debret ou no Picasso ou no escambal não é saudável? Mas é só um retrato de falta de representatividade, provavelmente na produção, no marketing ou até em todo processo de concepção e produção não tinha negros (ou se teve, eles não tiveram voz).
 
-Infelizmente o Brasil ainda “romantiza” a escravidão, esse período cruel da histórico de nosso país é levando até para o turismo.
+Infelizmente o Brasil ainda "romantiza" a escravidão, esse período cruel da histórico de nosso país é levando até para o turismo.
 
 <figure class="mb-2">
 <img alt="Print da matéria 'Turistas podem ser escravocratas em fazenda sem racismo' do site The Intercept" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/turistas-podem-ser-escravocratas-por-um-dia-em-fazenda-sem-racismo.png">
@@ -69,7 +77,11 @@ Leia a matéria original acessando o link do <a href="https://theintercept.com/2
 </figcaption>
 </figure>
 
-No Brasil, a cerveja Devassa (2013), objetificou o corpo negro, “**[Pelo corpo que se conhece a verdadeira negra](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/33330dfcb074aec52f2d8332272772295d667830/devassa-2013.jpeg)**” e ainda trazia o texto para acrescentar ao show de racismo: “Devassa Negra. Encorpada. Estilo Dark Ale. De Alta fermentação. Cremosa e com aroma de malte torrado”. A Bombril comercializou por 70 anos a esponja de aço com o nome **[Krespinha](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-1950.jpg)**, ficou dos anos 1950 até os **[anos 2020](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-2020.jpg)**. A Globo, no seu projeto Criança Esperança (2016), vinculou na TV um vídeo cruel demais para as crianças negras que participaram, elas foram colocadas para lerem frases racistas para uma mulher negra a gente (eu) se emociona pelas frases, pelas situações vivenciadas pelas crianças, mas a gravação em si é um gatilho desnecessário para essas crianças.
+No Brasil, a cerveja Devassa (2013), objetificou o corpo negro, "**[Pelo corpo que se conhece a verdadeira negra](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/33330dfcb074aec52f2d8332272772295d667830/devassa-2013.jpeg)**" e ainda trazia o texto para acrescentar ao show de racismo: "Devassa Negra. Encorpada. Estilo Dark Ale. De Alta fermentação. Cremosa e com aroma de malte torrado".
+
+A Bombril comercializou por 70 anos a esponja de aço com o nome **[Krespinha](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-1950.jpg)**, ficou dos anos 1950 até os **[anos 2020](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-2020.jpg)**.
+
+A Globo, no seu projeto Criança Esperança (2016), vinculou na TV um vídeo cruel demais para as crianças negras que participaram, elas foram colocadas para lerem frases racistas para uma mulher negra. A gente (eu, pelo menos) se emocionou pelas frases, pelas situações vividas, a gravação em si é um gatilho desnecessário para essas crianças.
 
 <div class="iframe-container mb-2">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kaWUyiMSrV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -98,43 +110,42 @@ Ele foi autuado em flagrante por tráfico de drogas e porte ilegal de arma."](ht
 
 [![Print da matéria G1 "Polícia prende jovens de classe média com 300 kg de maconha no Rio - Eles foram presos num estacionamento de um prédio na Tijuca. Delegado tenta identificar outros integrantes da quadrilha"](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3caf8d65f090f4fa654aa3cb52240e8998d25f9a/policia-prende-jovens-de-classe-media-com-300-kg-de-maconha-no-rio.png)](http://g1.globo.com/rio-de-janeiro/noticia/2015/03/policia-prende-jovens-de-classe-media-com-300-kg-de-maconha-no-rio.html)
 
-### **“Escala” de racismos no Brasil**
+### **"Escala" de racismos no Brasil**
 
-![https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/escala-cores-g1.svg](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/escala-cores-g1.svg)
+<img alt="7 quadrados com graduações de cores, do marrom claro para o escuro" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/escala-cores-g1.svg" class="mx-auto w-50">
 
 <iframe width="916" height="566" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe>
 
-Fonte: [Negros são mais condenados por tráfico e com menos drogas em SP (smokebuddies.com.br)](https://www.smokebuddies.com.br/negros-sao-mais-condenados-por-trafico-e-com-menos-drogas-em-sp/)
+Adaptação do gráfico disponível na página "[Negros são mais condenados por tráfico e com menos drogas em SP](https://www.smokebuddies.com.br/negros-sao-mais-condenados-por-trafico-e-com-menos-drogas-em-sp/)"
 
 ### Dados do Racismo no Brasil
 
 ![https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/ibge-desigualdades-sociais-por-cor-ou-raca-no-brasil.jpg](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/ibge-desigualdades-sociais-por-cor-ou-raca-no-brasil.jpg)
 
-[https://twitter.com/QuebrandoOTabu/status/1109945486952271872?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=notion%3A%2F%2Fwww.notion.so%2Fwagnerbeethoven%2FDesign-Racista-8f4f0486780d4443863670e55b046e79](https://twitter.com/QuebrandoOTabu/status/1109945486952271872?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=notion%3A%2F%2Fwww.notion.so%2Fwagnerbeethoven%2FDesign-Racista-8f4f0486780d4443863670e55b046e79)
-
-A série Broken Nine-Nine trouxe uma realidade americana que é viva por muito brasileiros, o abuso policial, só que no episódio 16 da 4º temporada, o também sargento da polícia Terry sobre uma abordagem violenta e desnecessária apenas por ser negro.
+A série [Broken Nine-Nine trouxe uma realidade americana](https://twitter.com/QuebrandoOTabu/status/1109945486952271872) que é vivida por muito brasileiros — o abuso policial, só que no episódio 16 da 4º temporada, o também sargento da polícia Terry sofreu uma abordagem violenta e desnecessária apenas por ser negro.
 
 # **Racismo na Tecnologia**
 
 As tecnologias podem ser racistas?
 
-<img style="box-shadow: none !important" alt="3 Cartões com imagens de mulhers brancas" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/b82340a878b6c987570dc3e38496742d98721c3d/shirley-cards-kodak-1960.jpg">
+<figure class="mb-2">
+    <img class="mx-auto mb-2" style="box-shadow: none" alt="3 Cartões com imagens de mulhers brancas" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/b82340a878b6c987570dc3e38496742d98721c3d/shirley-cards-kodak-1960.jpg">
+    <figcaption>Fonte: Eastman Kodak Company (James Ollinger/ 1960)</figcaption>
+</figure>
 
 ## Cartões **Shirley (Kodak / 1960)**
 
-Nos anos 1940, a Kodak produziu os cartões “Shirley”. Eles eram utilizados para padronização de cores e tons de pele de impressões fotográficas nos laboratórios. Esses cartões, conhecidos como "As Shirleys", eles eram compostos por mulheres brancas, a falta de diversidade nesses cartões, causava dificuldade nos ajustes dos retratos de pessoas de tons de pele variados
-
-Foto: Eastman Kodak Company  (James Ollinger/ 1960)
+Nos anos 1940, a Kodak produziu os cartões "Shirley". Eles eram utilizados para padronização de cores e tons de pele de impressões fotográficas nos laboratórios. Esses cartões, conhecidos como "As Shirleys", eles eram compostos por mulheres brancas, a falta de diversidade nesses cartões, causava dificuldade nos ajustes dos retratos de pessoas de tons de pele variados
 
 ## Xbox Kinect (Microsoft, 2010)
 
-Quando a [Microsoft lançou o Kinect](https://www.pcworld.com/article/504514/is_microsoft_kinect_racist.html), gadget do Xbox, trouxe alguns problemas de reconhecimento de pessoas negras.
+Quando a [Microsoft lançou o Kinect](https://www.pcworld.com/article/504514/is_microsoft_kinect_racist.html), trouxe alguns problemas de reconhecimento de pessoas negras.
 
 ## S630 (Nikon, 2009)
 
 ![Mulher asiatica sendo mostrada através da tela de uma camera digital](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/b82340a878b6c987570dc3e38496742d98721c3d/s630-nikon-2009.jpg)
 
-A Nikon teve problemas em reconhecer as pessoas asiáticas. A câmara "reconhecia" pessoas com olhos fechados. Quem relatou foi a [JozJozJoz](https://www.flickr.com/photos/jozjozjoz/) relatou o problema na sua conta do Flickr.
+A Nikon teve problemas em reconhecer as pessoas asiáticas. A câmara "reconhecia" pessoas com olhos fechados. Quem relatou foi a [JozJozJoz](https://www.flickr.com/photos/jozjozjoz/), ela relatou o problema na sua conta do Flickr.
 
 > Nós presenteamos nossa mãe com a câmera digital Nikon S630 nos Dia das Mães. Eu estava brincando com camera durante o jogo dos Angels no domingo. Enquanto eu tirava fotos da minha família, ele ficava perguntando "Alguém piscou?" mesmo que nossos olhos estivessem sempre abertos.
 (Tradução livre - Fonte: [Racist Camera! No, I did not blink... I'm just Asian! | Flickr](https://www.flickr.com/photos/jozjozjoz/3529106844))
@@ -143,22 +154,22 @@ A Nikon teve problemas em reconhecer as pessoas asiáticas. A câmara "reconheci
 
 O Google utiliza IA para criar álbuns automáticos, juntou irmãos negros num álbum chamado "Gorilas".
 
-![Resultados do Google Photos à busca por “gorilas” do usuário que fez a denúncia **@JACKYALCINE**](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-gorilas-2015-1.png)
+<figure class="mb-2 col-12 col-md">
+    <img class="mx-auto mb-2" style="box-shadow: none" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-gorilas-2015-1.png">
+    <figcaption>Resultados do Google Photos após busca por “gorilas”. Denúncia feita pelo <strong><a href="http://twitter.com/jackyalcine">@Jackyalcine</a></strong></figcaption>
+</figure>
 
-Resultados do Google Photos após busca por “gorilas”. Denúncia feita pelo **[@JACKYALCINE](http://twitter.com/jackyalcine)**
-
-A maneira como Google resolveu o problema foi apagando o problema, inviabilizando a pesquisa com as palavras chaves problemáticas.
-
-<figure class="mb-2">
+<figure class="mb-2 col-12 col-md">
     <img class="mx-auto mb-2" style="box-shadow: none" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-gorilas-2015-2.png" alt="Print do Google Photos">
     <figcaption>
         Fonte: <a href="https://twitter.com/ndagijerichie/status/1270337376276054021">Twitter</a>
     </figcaption>
 </figure>
 
+A maneira como Google resolveu o problema foi apagando o problema, inviabilizando a pesquisa com as palavras chaves problemáticas.
 ## #TayTweets (Microsoft, 2016)
 
-Tay, uma inteligência artificial — robô da Microsoft criada para interagir no Twitter virou uma figura racista e nazista em menos de 24hs na internet ao conversar com criminosos amigavelmente chamados de *trolls*. Essas figuras criminosas e racistas são apenas recorte da sociedade doente ao qual vivemos. Os tweets são muito chocantes. Abaixo reproduzo alguns exemplos, mas traduzidos livremente e nas legendas das imagens a estão a reprodução no idioma original.
+Tay, uma inteligência artificial — robô da Microsoft criada para interagir no Twitter virou uma figura racista e nazista em menos de 24hs na internet ao conversar com criminosos amigavelmente chamados de *trolls*. Essas figuras criminosas e racistas são apenas recorte da sociedade doente ao qual vivemos. Os tweets são muito chocantes. Abaixo reproduzo alguns exemplos traduzidos livremente e legendas das imagens estão os textos no idioma original.
 
 <div class="row">
 <figure class="col-12 col-md-6 mb-3"><img class="mx-auto mb-2" style="box-shadow: none" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/tay-tweets-2016-1.png" alt="Print do Twitter"><figcaption>Chris Pur - @crisprtk: we must secure the existence of our people and a future for white children<br>TayTweets - @tayandyou: could not agree more. i wish there were more people articulating lanting this kind of thing...</figcaption></figure>
@@ -179,7 +190,7 @@ A HP lançou uma câmera que "acompanhava" o usuário, mas só funcionava em pes
 
 ## iPhone X (Apple, 2017)
 
-A grande inovação do aparelho era o reconhecimento facial para a liberação do uso do dispositivo, mas novamente, [pessoas preta enfrentando problemas](https://www.wired.com/story/can-apples-iphone-x-beat-facial-recognitions-bias-problem/), felizmente a Apple ainda tem a fama de ser uma empresa muito inclusiva. Logo após a polêmica, deu a seguinte declaração:
+A grande inovação do aparelho era o reconhecimento facial para a liberação do uso do dispositivo, mas novamente, [pessoas pretas enfrentando problemas](https://www.wired.com/story/can-apples-iphone-x-beat-facial-recognitions-bias-problem/), felizmente a Apple ainda tem a fama de ser uma empresa muito inclusiva, já que falta de inclusão e acessibilidade está intimamente ligada a ganhos financeiros. Logo após a polêmica, deu a seguinte declaração:
 
 > A acessibilidade do produto a pessoas de diversas raças e etnias foi muito importante para nós. O Face ID utiliza redes neurais de combinação facial que desenvolvemos utilizando mais de um bilhão de imagens, incluindo infravermelho e imagens com profundidade coletadas em estudos conduzidos com o consentimento informado dos participantes.
 >
@@ -200,27 +211,27 @@ Vídeo acima foi originalmente publicado no [tweet](https://twitter.com/nke_ise/
 Um caso muito racista foi visto no dispenser de sabão inteligente, infelizmente não consegui identificar a empresa. No vídeo, o homem preto só consegui acesso ao produto depois que segura um papel branco —  sabão cai quase que instantaneamente. 
 ## Algoritmos ~~preconceituosos~~ enviesados
 
-Agora vamos passar para a etapa dos Algoritmo ~~preconceituoso~~ enviesados, a meu ver, o impacto é muito maior e o recorte vai além da população preta.
+Agora vamos passar para a etapa dos algoritmos ~~preconceituoso~~ enviesados, a meu ver, o impacto é muito maior e o recorte vai além da população preta.
 
 **Google (2016):** Quando boas intenções são combinadas com falta de conhecimento e expectativas ingênuas. [Homens tinham mais acesso a vaga com altos salários do que mulheres](https://www.theguardian.com/technology/2015/jul/08/women-less-likely-ads-high-paid-jobs-google-study). Um experimento mostrou que o Google exibiu anúncios para um serviço de *coaching* de carreira para trabalhos executivos 1.852 vezes para o grupo masculino e apenas 318 vezes para o grupo feminino. 
 
-**Facebook (2016)**: Como as pessoas não questionam decisões de um algoritmo "neutro", essa credibilidade pode ser questionada. [Ex-funcionários do Facebook: Nós rotineiramente suprimimos notícias conservadoras.](https://gizmodo.com/former-facebook-workers-we-routinely-suppressed-conser-1775461006) Não estou julgando valor, mas se eles pendem para um dos lados, quem julga o que é o "correto"?
+**Facebook (2016)**: Como as pessoas não questionam decisões de um algoritmo "neutro", essa credibilidade pode ser questionada. [Ex-funcionários do Facebook: *Nós rotineiramente suprimimos notícias conservadoras*.](https://gizmodo.com/former-facebook-workers-we-routinely-suppressed-conser-1775461006) Não estou julgando valor, mas se eles pendem para um dos lados, quem julga o que é o "correto"?
 
-**Compas** é um programa utilizado nos tribunais dos EUA para avaliar os riscos de um réu, mas claro que a população preta sobre, [sempre tendencioso para penas maiores contra negros](https://apublica.org/2016/06/software-que-avalia-reus-americanos-cria-injusticas-na-vida-real/) e negras - só que o objetivo da aplicação é fazer com que o sistema criminal seja mais "justo" e sem preconceito humano, assim falharam miseravelmente. 
+**Compas** é um programa utilizado nos tribunais do EUA para avaliar os riscos de um réu, mas claro que a população preta sobre, [sempre tendencioso para penas maiores contra negros e negras](https://apublica.org/2016/06/software-que-avalia-reus-americanos-cria-injusticas-na-vida-real/) - só que o objetivo da aplicação é fazer com que o sistema criminal seja mais "justo" e sem preconceito humano, assim falharam miseravelmente. 
 
 <div class="row">
   <figure class="col-12 col-md mb-2">
     <a href="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-2021-cabelos-bonitos.png">
       <img alt="Print da pesquisa do Google Imagem" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-2021-cabelos-bonitos.png">
     </a>
-    <figcaption class="mt-2">Pesquisa feita no dia 12/11/2021: “<a href="https://www.google.com.br/search?q=cabelos+bonitos&tbm=isch&ved=2ahUKEwj0nvPxvP30AhVjNLkGHXMOBUsQ2-cCegQIABAA&oq=cabelos+bonitos&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEO8DECdQoQJYoQJgowZoAHAAeACAAf8BiAH3A5IBAzItMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=ZkjGYfTTGePo5OUP85yU2AQ&authuser=2&bih=1009&biw=2495">cabelos bonitos</a>”</figcaption>
+    <figcaption class="mt-2">Pesquisa feita no dia 12/11/2021: "<a href="https://www.google.com.br/search?q=cabelos+bonitos&tbm=isch&ved=2ahUKEwj0nvPxvP30AhVjNLkGHXMOBUsQ2-cCegQIABAA&oq=cabelos+bonitos&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEO8DECdQoQJYoQJgowZoAHAAeACAAf8BiAH3A5IBAzItMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=ZkjGYfTTGePo5OUP85yU2AQ&authuser=2&bih=1009&biw=2495">cabelos bonitos</a>"</figcaption>
   </figure>
   
   <figure class="col-12 col-md mb-2">
     <a href="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-2021-cabelos-feios.png">
       <img alt="Print da pesquisa do Google Imagem" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/ab9dadbd08603a7928fca2c88efe754791bc1945/google-2021-cabelos-feios.png">
     </a>
-    <figcaption class="mt-2">Pesquisa feita no dia 12/11/2021: “<a href="https://www.google.com.br/search?q=cabelos+feios&tbm=isch&ved=2ahUKEwjuvpL6vP30AhXSHrkGHY5vCFkQ2-cCegQIABAA&oq=cabelos+feios&gs_lcp=CgNpbWcQAzIICAAQgAQQsQMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEO8DECdQsANY1Ahg1wpoAHAAeACAAZgDiAG-DJIBBzItMi4yLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=d0jGYa6nK9K95OUPjt-hyAU&authuser=2&bih=1009&biw=2495">cabelos feios</a>”</figcaption>
+    <figcaption class="mt-2">Pesquisa feita no dia 12/11/2021: "<a href="https://www.google.com.br/search?q=cabelos+feios&tbm=isch&ved=2ahUKEwjuvpL6vP30AhXSHrkGHY5vCFkQ2-cCegQIABAA&oq=cabelos+feios&gs_lcp=CgNpbWcQAzIICAAQgAQQsQMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEO8DECdQsANY1Ahg1wpoAHAAeACAAZgDiAG-DJIBBzItMi4yLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=d0jGYa6nK9K95OUPjt-hyAU&authuser=2&bih=1009&biw=2495">cabelos feios</a>"</figcaption>
   </figure>
 </div>
 
@@ -246,7 +257,7 @@ Em 2017 o pessoal do Trampos junto com o coletivo Afroguerrilha iniciou o mapeam
 **Na universidade:**
 
 - 62% não teve professores negros na sua formação profissional;
-- 97% dos estudantes não conheceram nenhuma teórica negra
+- 97% dos estudantes não conheceram nenhuma teórica(o) negra(o).
 
 **Na vida profissional:**
 
@@ -308,10 +319,10 @@ O Fred Hampton foi líder dos Panteras Negras, movimento que combatia a desigual
 
 O que podemos fazer para reduzir o racismo e melhorar o cenário?
 
-De acordo com a organização [MathWashing](https://www.mathwashing.com) que trabalha pela neutralidade computacionais, nos tempos que os seguintes pontos:
-- Exija transparência algorítmica
-- Compare o uso de algoritmos com a aplicação das leis
-- Pense criticamente
+De acordo com a organização [MathWashing](https://www.mathwashing.com) que trabalha pela neutralidade computacional, nós temos os seguintes pontos:
+- Exigir transparência algorítmica
+- Comparar o uso de algoritmos com a aplicação das leis
+- Pensar criticamente
   
 Já a design [Ovetta Sampson](http://www.ovetta-sampson.com/) levanta outros pontos interessantíssimos:
 - Tenha times diversos
@@ -320,7 +331,7 @@ Já a design [Ovetta Sampson](http://www.ovetta-sampson.com/) levanta outros pon
   
 A [Sara Wachter-Boettcher](https://www.sarawb.com/) que é uma autora de alguns livros sobre tecnologia e algoritmos, considerada uma especialista em [FemTech](https://exame.com/pme/fenomeno-femtech-startups-com-solucoes-para-mulheres-ganham-mercado/), traz os seguintes pontos sobre a diversidade:
 - Certificar-se de que as pessoas diversas também estão atingindo os níveis superiores de uma empresa e se sentindo empoderadas para falar.
-- A indústria precisa de "pessoas que entendam as pessoas". Cientistas da computação são "apenas uma peça do que é necessário para construir tecnologias”
+- A indústria precisa de "pessoas que entendam as pessoas". Cientistas da computação são "apenas uma peça do que é necessário para construir tecnologias"
 
 E tem o coletivo que visa fazer a inteligência artificial mais justa e responsável: [Algorithmic Justice League](https://www.ajl.org).
 
@@ -328,9 +339,7 @@ E tem o coletivo que visa fazer a inteligência artificial mais justa e respons�
 
 ## Autodeclaração dos colaboradores
 
-Os dados foram retirados das respostas dos colaboradores na pesquisa do GPTW de 2021 e nos mostras os seguintes dados: 52% - Branca; 34% - Parda; 9% - Preta; 2% - Amarela; 2% - Prefiro não responder; 1% - Não Identificado.
-
-Assim, temos 52% de colaboradores se autodeclaram brancos, 43% pretos e 5% outros ou não identificados. 
+Os dados foram retirados das respostas dos colaboradores na pesquisa do GPTW de 2021 e nos mostras os seguintes dados: 52% - Branca; 34% - Parda; 9% - Preta; 2% - Amarela; 2% - Prefiro não responder; 1% - Não Identificado. Assim, temos 52% de colaboradores se autodeclaram brancos, 43% pretos e 5% outros ou não identificados. 
 
 No Dia da Consciência Negra foi compartilhado nas redes sociais da [Procenge](http://procenge.com.br) algumas coisas que gosta de compartilhar aqui:
 
@@ -344,11 +353,12 @@ No Dia da Consciência Negra foi compartilhado nas redes sociais da [Procenge](h
 
 # Informação
 
-Outra coisa que tempos sempre que trazer para as pautas de discussão é a informação. Só consegue combater o racismo com estudo, informação e aprendizado. 
+Temos sempre que trazer para as rodas de conversa e debates, a diversidade humana nas empresas de TI por isso informação é fundamental. Só conseguimos combater o racismo com estudo, informação e aprendizado. 
 
 ## Ações
 
-As ações que acontecem no país para enaltecer e reduzir essa falta de protagonismo da população preta são: (quem tiver mais outra iniciativa, me manda mensagem que eu acrescento no texto 🤗)
+Algumas ações que acontecem no país para enaltecer e reduzir essa falta de protagonismo da população preta.  
+📢 Quem tiver outras iniciativas, me manda mensagem que eu acrescento no texto 🤗
 
 <img style="width: 250px" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/6e2445eb15db2e37b7b564073a633dce71334272/acoes-design-opressao.svg" alt="Logo Design & Operassão">
 
@@ -364,7 +374,7 @@ As ações que acontecem no país para enaltecer e reduzir essa falta de protago
 
 ## Filmes e Séries
 
-Entretenimento é uma das maneiras mais fáceis de entender o cenário, então vou compartilhar uma lista “boa”. Para acessar os trailers, só clicar nos links.
+Entretenimento é uma das maneiras mais fáceis de entender o cenário, então vou compartilhar uma lista "boa". Para acessar os trailers, só clicar nos links.
 
 - [Todo Mundo Odeia o Chris](https://www.imdb.com/video/vi4278238745?playlistId=tt0460637&ref_=tt_ov_vi)
 - [Infiltrado na Klan](https://www.instagram.com/blackkklansman/)
@@ -392,17 +402,29 @@ Entretenimento é uma das maneiras mais fáceis de entender o cenário, então v
 ## Literatura
 
 <div class="row">
-<figure class="col-6 col-md mb-2"><img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-estrutural-silvo-almeida.jpg" alt="Capa do Livro"><figcaption>Racismo Estrutural <br /> Silvo Almeida<br />(Jandaíra, 2019)</figcaption></figure>
-<figure class="col-6 col-md mb-2"><img class="mb2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-sexismo-e-sigualda-no-brasil-sueli-carneiro.jpg" alt="Capa do Livro"><figcaption>Racismo, Sexismo e esigualdade no Brasil <br /> Sueli Carneiro<br />(Selo Negro, 2011)</figcaption></figure>
-<figure class="col-6 col-md mb-2"> <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-lugar-fala-e-pequeno-manual-antirracista-djamila-ribeiro.jpg" alt="Capa do Livro"> <figcaption>Lugar de Fala e Pequeno Manual Antirracista <br /> Djamila Ribeiro<br />(Companhia das Letras, 2019)</figcaption> </figure>
-<figure class="col-6 col-md mb-2"> <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-nem-preto-nem-branco-muito-pelo-contrario-lilia-moritz-schwarcz.jpg" alt="Capa do Livro"> <figcaption>Nem preto nem branco, muito pelo contrário <br /> Lilia Moritz Schwarcz<br />(Clara Enigma, 2013)</figcaption> </figure>
+    <figure class="col-6 col-md mb-2">
+      <img  style="height: 285px; width: 100%" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-estrutural-silvo-almeida.jpg" alt="Capa do Livro">
+      <figcaption>Racismo Estrutural <br /> Silvo Almeida<br />(Jandaíra, 2019)</figcaption>
+    </figure>
+    <figure class="col-6 col-md mb-2">
+      <img  style="height: 285px; width: 100%" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-sexismo-e-sigualda-no-brasil-sueli-carneiro.jpg" alt="Capa do Livro">
+      <figcaption>Racismo, Sexismo e esigualdade no Brasil <br /> Sueli Carneiro<br />(Selo Negro, 2011)</figcaption>
+    </figure>
+    <figure class="col-6 col-md mb-2">
+      <img style="height: 285px; width: 100%"  class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-lugar-fala-e-pequeno-manual-antirracista-djamila-ribeiro.jpg" alt="Capa do Livro">
+      <figcaption>Lugar de Fala e Pequeno Manual Antirracista <br /> Djamila Ribeiro<br />(Companhia das Letras, 2019)</figcaption>
+    </figure>
+    <figure class="col-6 col-md mb-2">
+      <img style="height: 285px; width: 100%"  class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-nem-preto-nem-branco-muito-pelo-contrario-lilia-moritz-schwarcz.jpg" alt="Capa do Livro">
+      <figcaption>Nem preto nem branco, muito pelo contrário <br /> Lilia Moritz Schwarcz<br />(Clara Enigma, 2013)</figcaption>
+    </figure>
 </div>
 
 ## Estudiosos
 
 <img  class="me-2 mb-2" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/estudiosos-djamila-ribeiro.jpg" alt="Foto da Djamila - Mulher negra com cabelo de trança amarrada">
 
-[**Djamila Ribeiro**](https://www.instagram.com/djamilaribeiro1/) é mestra em filosofia política pela USP e autora de diversos livros sobre aspectos da população preta, é coordenadora do “[Selo Sueli Carneiro](https://editorajandaira.com.br/collections/selo-sueli-carneiro)” e da “[Coleção Feminismos Plurais](https://feminismosplurais.com.br/)”, [colunista do jornal Folha de S. Paulo](https://www1.folha.uol.com.br/autores/djamila-ribeiro.shtml) e considerada pela [BBC uma das 100 mulheres mais influentes do planeta](https://www.bbc.com/portuguese/brasil-52922015).
+[**Djamila Ribeiro**](https://www.instagram.com/djamilaribeiro1/) é mestra em filosofia política pela USP e autora de diversos livros sobre aspectos da população preta, é coordenadora do "[Selo Sueli Carneiro](https://editorajandaira.com.br/collections/selo-sueli-carneiro)" e da "[Coleção Feminismos Plurais](https://feminismosplurais.com.br/)", [colunista do jornal Folha de S. Paulo](https://www1.folha.uol.com.br/autores/djamila-ribeiro.shtml) e considerada pela [BBC uma das 100 mulheres mais influentes do planeta](https://www.bbc.com/portuguese/brasil-52922015).
 <hr class="dropdown-divider my-2 p-0 w-100">
 <img  class="me-2 mb-2" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/estudiosos-ronilso-pacheco.jpg" alt="Foto da Ronilso - Homem negro de camisa jeans">
 
@@ -410,7 +432,7 @@ Entretenimento é uma das maneiras mais fáceis de entender o cenário, então v
 <hr class="dropdown-divider my-2 p-0 w-100">
 <img  class="me-2 mb-2" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/estudiosos-silvio-almeida.jpg" alt="Foto do Silvio - Homem negro de terno, careca.">
 
-**[Silvio Almeida](https://www.youtube.com/user/silviovlq1)** é advogado, filosofo, professor universitário em doutor em Filosofia e Direito, seu trabalho tem foto nas minorias e na desigualdade sobre uma perspectiva jurídica. É autor dos livros "Racismo Estrutural" (Polén, 2019), "Sartre: Direito e Política" (Boitempo, 2016) e "O Direito no Jovem Lukács: A Filosofia do Direito em História e Consciência" (Alfa-Ômega, 2006). Também preside o Instituto Luiz Gama.
+**[Silvio Almeida](https://www.youtube.com/user/silviovlq1)** é advogado, filosofo, professor universitário e doutor em Filosofia e Direito. Seu trabalho tem foto nas minorias e na desigualdade sobre uma perspectiva jurídica. É autor dos livros "Racismo Estrutural" (Polén, 2019), "Sartre: Direito e Política" (Boitempo, 2016) e "O Direito no Jovem Lukács: A Filosofia do Direito em História e Consciência" (Alfa-Ômega, 2006). Também preside o Instituto Luiz Gama.
 <hr class="dropdown-divider my-2 p-0 w-100">
 <img  class="me-2 mb-2" style="float: left" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/estudiosos-sueli-carneiro.jpg" alt="Foto da Sueli - Mulher negra com cabelo de tranças">
 
@@ -464,9 +486,9 @@ Entretenimento é uma das maneiras mais fáceis de entender o cenário, então v
 
 # Conclusão
 
-Esse material foi apresentado internamente para o encontro de Designers e profissionais de outras áreas da Procenge e teve e tem a intenção levantar o tema de iniciar o debate. O mundo tende a ficar cada vez mais conectado e dependente da tecnologia e dos aparelhos inteligentes, assim nada mais horizontal em atacar os profissionais que produzem essas tecnologias. 
+Esse material foi apresentado internamente para o encontro de Designers e profissionais de outras áreas da Procenge e teve e tem a intenção levantar o tema, de iniciar o debate. O mundo tende a ficar cada vez mais conectado e dependente da tecnologia e dos aparelhos inteligentes, assim nada mais horizontal em atacar os profissionais que produzem essas tecnologias. 
 
-Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, não consigo imaginar o que uma pessoa negra (não-branca) sofre. Nos tempos sempre ser inquietos e lutar por espaços mais plurais e mais inclusivos.
+Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, não consigo imaginar o que uma pessoa negra (não-branca) sofre. Nós tempos sempre ser inquietos e lutar por espaços mais plurais e mais inclusivos.
 
 ![Gif animado de homens negros com marca no rosto escrita "Our Lives Matter"](https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/292bc13eca21309f41acc673e4341d8eba310c82/our-lives-matters.gif)
 
@@ -513,7 +535,7 @@ Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, n
 39. [Fenômeno 'femtech': startups com soluções para mulheres ganham mercado - Farah Nayeri - Exame](https://exame.com/pme/fenomeno-femtech-startups-com-solucoes-para-mulheres-ganham-mercado/)
 40. [Former Facebook Workers: We Routinely Suppressed Conservative News (gizmodo.com)](https://gizmodo.com/former-facebook-workers-we-routinely-suppressed-conser-1775461006)
 41. [Galeria de arte virtual expõe monumentos de racistas homenageados no Brasil - Update Or Die](https://www.updateordie.com/2020/12/21/galeria-de-arte-virtual-expoe-monumentos-de-racistas-homenageados-no-brasil/)
-42. [Google conserta seu algoritmo “racista” apagando os gorilas - Javier Salas - EL PAÍS Brasil](https://brasil.elpais.com/brasil/2018/01/14/tecnologia/1515955554_803955.html)
+42. [Google conserta seu algoritmo "racista" apagando os gorilas - Javier Salas - EL PAÍS Brasil](https://brasil.elpais.com/brasil/2018/01/14/tecnologia/1515955554_803955.html)
 43. [HP computers are racist - YouTube](https://www.youtube.com/watch?v=t4DT3tQqgRM)
 44. [Is Microsoft’s Kinect Racist? - PC World](https://www.pcworld.com/article/504514/is_microsoft_kinect_racist.html)
 45. [Kinect has problems recognizing dark-skinned users? - GameSpot](https://www.gamespot.com/articles/kinect-has-problems-recognizing-dark-skinned-users/1100-6283514/)
@@ -541,7 +563,7 @@ Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, n
 67. [Questão de pele: Os cartões Shirley e os padrões raciais que regem a indústria visual - Geledés](https://www.geledes.org.br/questao-de-pele-os-cartoes-shirley-e-os-padroes-raciais-que-regem-industria-visual/)
 68. [Racismo - UX Collective](https://brasil.uxdesign.cc/tagged/racismo)
 69. [Racismo algorítmico: quando o preconceito chega pela internet - Humanista](https://www.ufrgs.br/humanista/2020/11/17/racismo-algoritmico-quando-o-preconceito-chega-pela-internet/)
-70. [Racismo anti-asiático: a constante adjetivação dos “povos amarelos” - Lab de Jo - Medium](https://medium.com/@labdejo2018/racismo-anti-asi%C3%A1tico-a-constante-adjetiva%C3%A7%C3%A3o-dos-povos-amarelos-1e460b390b1f)
+70. [Racismo anti-asiático: a constante adjetivação dos "povos amarelos" - Lab de Jo - Medium](https://medium.com/@labdejo2018/racismo-anti-asi%C3%A1tico-a-constante-adjetiva%C3%A7%C3%A3o-dos-povos-amarelos-1e460b390b1f)
 71. [Racist Camera! No, I did not blink... I'm just Asian! - Flickr](https://www.flickr.com/photos/jozjozjoz/3529106844/)
 72. [Reconhecendo Racismo Anti-Oriental Através de Estereótipos Orientalistas - Nó de Oito](http://nodeoito.com/estereotipos-orientalistas/)
 73. [Reconhecida pela Women in Tech, Nina Silva exalta o potencial do Brasil na tecnologia - MSN](https://www.msn.com/pt-br/dinheiro/other/reconhecida-pela-women-in-tech-nina-silva-exalta-o-potencial-do-brasil-na-tecnologia/ar-AAQrHyv?ocid=uxbndlbing)
@@ -557,7 +579,7 @@ Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, n
 83. [Sueli Carneiro - Geledés](https://www.geledes.org.br/tag/sueli-carneiro/)
 84. [Tecnologia e Viés de Raça - Gabriel Barreto - SlideShare](https://www.slideshare.net/thisgb/tecnologia-e-vis-de-raa)
 85. [Tecnologia para filtros em redes sociais reforça padrão racista - UOL](https://www1.folha.uol.com.br/cotidiano/2021/08/tecnologia-para-filtros-em-redes-sociais-reforca-padrao-racista.shtml)
-86. [Turistas podem ser escravocratas em fazenda “sem racismo” - The Intercept](https://theintercept.com/2016/12/06/turistas-podem-ser-escravocratas-por-um-dia-em-fazenda-sem-racismo/)
+86. [Turistas podem ser escravocratas em fazenda "sem racismo" - The Intercept](https://theintercept.com/2016/12/06/turistas-podem-ser-escravocratas-por-um-dia-em-fazenda-sem-racismo/)
 87. [Um ensaio sobre Design e Raça. Ou em busca de uma universalidade… - Mateus J. J. Paulo Filho - UX Collective](https://brasil.uxdesign.cc/um-ensaio-sobre-design-e-ra%C3%A7a-c7372b61c647)
 88. [Um pecado de omissão — desequilíbrio imoral - Guilherme Ribeiro - UX Collective](https://brasil.uxdesign.cc/um-pecado-de-omiss%C3%A3o-desequil%C3%ADbrio-imoral-c354bf4ee0c3?ref=newletter)
 89. [WATDB: Where are the Black Designers? - Site](https://www.watbd.org/)
