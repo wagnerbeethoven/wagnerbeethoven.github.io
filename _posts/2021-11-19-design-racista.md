@@ -403,19 +403,19 @@ Entretenimento é uma das maneiras mais fáceis de entender o cenário, então v
 
 <div class="row">
     <figure class="col-6 col-md mb-2">
-      <img  style="height: 285px; width: 100%" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-estrutural-silvo-almeida.jpg" alt="Capa do Livro">
+      <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-estrutural-silvo-almeida.jpg" alt="Capa do Livro">
       <figcaption>Racismo Estrutural <br /> Silvo Almeida<br />(Jandaíra, 2019)</figcaption>
     </figure>
     <figure class="col-6 col-md mb-2">
-      <img  style="height: 285px; width: 100%" class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-sexismo-e-sigualda-no-brasil-sueli-carneiro.jpg" alt="Capa do Livro">
+      <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-racismo-sexismo-e-sigualda-no-brasil-sueli-carneiro.jpg" alt="Capa do Livro">
       <figcaption>Racismo, Sexismo e esigualdade no Brasil <br /> Sueli Carneiro<br />(Selo Negro, 2011)</figcaption>
     </figure>
     <figure class="col-6 col-md mb-2">
-      <img style="height: 285px; width: 100%"  class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-lugar-fala-e-pequeno-manual-antirracista-djamila-ribeiro.jpg" alt="Capa do Livro">
+      <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-lugar-fala-e-pequeno-manual-antirracista-djamila-ribeiro.jpg" alt="Capa do Livro">
       <figcaption>Lugar de Fala e Pequeno Manual Antirracista <br /> Djamila Ribeiro<br />(Companhia das Letras, 2019)</figcaption>
     </figure>
     <figure class="col-6 col-md mb-2">
-      <img style="height: 285px; width: 100%"  class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-nem-preto-nem-branco-muito-pelo-contrario-lilia-moritz-schwarcz.jpg" alt="Capa do Livro">
+      <img class="mb-2" src="https://bitbucket.org/wagnerbeethoven/2021-01-19-design-racista/raw/3efbbdccbe92180a31e54de8526820f572cbc842/livros-nem-preto-nem-branco-muito-pelo-contrario-lilia-moritz-schwarcz.jpg" alt="Capa do Livro">
       <figcaption>Nem preto nem branco, muito pelo contrário <br /> Lilia Moritz Schwarcz<br />(Clara Enigma, 2013)</figcaption>
     </figure>
 </div>
