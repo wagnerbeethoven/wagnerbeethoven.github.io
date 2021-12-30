@@ -82,12 +82,15 @@
         margin-top: 1rem;
       }
     }
-
+a{
+text-decoration: underline;
+}
     ul,
     ol {
       padding-left: 40px !important;
       margin-left: auto;
       margin-right: auto;
+      @extend .my-3;
 
       li {
         width: 100%;
