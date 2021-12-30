@@ -39,12 +39,6 @@ Ainda na mesma matéria, o movimento negro costuma considerar a soma de pretos e
 
 <img alt="7 quadrados com graduações de cores, do marrom claro para o escuro" src="https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/escala-cores-g1.svg" class="mx-auto w-50">
 
-<iframe width="916" height="566" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe>
-
-Adaptação do gráfico disponível na página "[Negros são mais condenados por tráfico e com menos drogas em SP](https://www.smokebuddies.com.br/negros-sao-mais-condenados-por-trafico-e-com-menos-drogas-em-sp/)"
-
-## Racismos no Brasil
-
 [![Print da matéria G1 "Polícia prende traficante com 10 quilos de maconha em Fortaleza - Polícia encontrou R$ 10 mil em cédulas de R$ 2 e uma pistola 380.
 Ele foi autuado em flagrante por tráfico de drogas e porte ilegal de arma."](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/3caf8d65f090f4fa654aa3cb52240e8998d25f9a/policia-prende-traficante-com-10-quilos-de-maconha-em-fortaleza.png)](http://g1.globo.com/ceara/noticia/2015/03/policia-prende-traficante-com-10-quilos-de-maconha-em-fortaleza.html)
 
@@ -53,6 +47,10 @@ Ele foi autuado em flagrante por tráfico de drogas e porte ilegal de arma."](ht
 ## Dados do Racismo no Brasil
 
 ![https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/ibge-desigualdades-sociais-por-cor-ou-raca-no-brasil.jpg](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/7ec2465a53af73cb3d70c529c1c6d4186d88dde4/ibge-desigualdades-sociais-por-cor-ou-raca-no-brasil.jpg)
+
+<iframe width="916" height="566" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe>
+
+Adaptação do gráfico disponível na página "[Negros são mais condenados por tráfico e com menos drogas em SP](https://www.smokebuddies.com.br/negros-sao-mais-condenados-por-trafico-e-com-menos-drogas-em-sp/)"
 
 A série [Broken Nine-Nine trouxe uma realidade americana](https://twitter.com/QuebrandoOTabu/status/1109945486952271872) que é vivida por muito brasileiros — o abuso policial, só que no episódio 16 da 4º temporada, o também sargento da polícia Terry sofreu uma abordagem violenta e desnecessária apenas por ser negro.
 
