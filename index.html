@@ -13,7 +13,6 @@ title: Página inicial
         <img title="Wagner Beethoven" alt="Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul" src='{{site.url}}/img/page/avatar.jpg' />
     </figure>
 </section>
-
 <section class="section-portfolio">
     <header class="header-section">
         <h2 class="section-title">
@@ -21,12 +20,12 @@ title: Página inicial
         </h2>
         <p class="section-description">
             Confira os meus trabalhos mais recentes
-            <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Veja o portfólio</a>
+            <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Portfólio</a>
         </p>
     </header>
     <div class="portfolio-container">
         {% for post in site.categories.portfolio limit:3%}
-        {% include portfolio-list.html %}
+        {% include post-list.html %}
         {% endfor %}
     </div>
 </section>
@@ -35,15 +34,15 @@ title: Página inicial
     <header class="header-section">
         <h2 class="section-title">Blog</h2>
         <p class="section-description">
-            Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama.
-            <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Confira todas as publicações</a>
+            Meu dia-a-dia como designer.
+            <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Publicações</a>
         </p>
     </header>
-    <ul>
+    <div class="row">
         {% for post in site.categories.blog limit:6 %}
         {% include post-list.html %}
         {% endfor %}
-    </ul>
+    </div>
 </section>
 <script type="application/ld+json">
     {
