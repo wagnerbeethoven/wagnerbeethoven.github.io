@@ -337,7 +337,7 @@ experience:
     name: Revista Žena
     duration: Setembro/2009 - Fevereiro/2013 (3 anos e 6 meses)
     logo: img/cv/zena.jpg
-    description: Trabalhos desenvolvidos&#58; Zine Žena (<a rel="noreferrer" href="http://sumo.pe/portfolio/zine-zena.html">Processo de criação</a> e <a rel="noreferrer" href="http://revistazena.com.br/revistazena/zine/zine-zena-1/" target="_blank" title="Este link irá abrir uma nova aba">Releade do lançamento</a>).<br>Site da Revista&#58; <a rel="noreferrer" href="http://revistazena.com.br" target="_blank" title="Este link irá abrir uma nova aba">revistazena.com.br</a>
+    description: Trabalhos desenvolvidos&#58; Zine Žena (<a rel="noreferrer" href="http://sumo.pe/portfolio/zine-zena.html">Processo de criação</a> e <a rel="noreferrer" href="https://revistazena.github.io/revistazena/zine/zine-zena-1/" target="_blank" title="Este link irá abrir uma nova aba">Releade do lançamento</a>).<br>Site da Revista&#58; <a rel="noreferrer" href="https://revistazena.github.io/" target="_blank" title="Este link irá abrir uma nova aba">revistazena.com.br</a>
 
   - activity: Professor de Ciências e Matemática
     name: Secretaria de Educação do Estado de Pernambuco
@@ -354,7 +354,7 @@ experience:
   - activity: Professor de Ciências e Matemática
     name: Prefeitura da Cidade do Recife
     duration: Setembro/2006 - Setembro/2008 (2 anos e 1 mês)
-    logo: img/cv/governope.png
+    logo: img/cv/prefeitura-recife.png
     description: Estágiario </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
 
   - activity: Auxiliar de Biblioteca
