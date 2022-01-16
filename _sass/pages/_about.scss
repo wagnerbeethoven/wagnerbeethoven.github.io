@@ -88,12 +88,14 @@
 }
 .course-container {
   .career-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
+    padding-bottom: 0 !important;
   }
   .career-duration {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   .career-detail {
+    padding-bottom: 0 !important;
     @extend .col-12;
   }
 }
