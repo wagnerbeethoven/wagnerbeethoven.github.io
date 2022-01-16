@@ -32,9 +32,16 @@ education:
     company: Fundação de Ensino Superior de Olinda - FUNESO
     duration: 2005 - 2008 (Concluído)
     logo: img/cv/funeso.jpg
-    description: Graduação
+    description: Licenciatura Plena em Ciências com Habilitação em Biologia tem como objetivo principal formar professores para atuarem no magistério de Ciências e Biologia no Ensino Fundamental e Médio e visa, também, formar profissionais para atuarem nos vários setores da Biologia; profissionais estes, conscientes e comprometidos com a realidade democrática que possam atuar como agentes de transformação da Região.
 
 course:
+
+  - name: 'Design System Specialist'
+    company: Meiuca Design
+    duration: Novembro/2021 - 16h
+    logo: img/cv/meiuca.png
+    description: ' <a href="https://1drv.ms/b/s!AkkMpcXs4WkOkeVmA4-_55Fh60V9-A?e=2ldmyI">Visualizar certificado</a>'
+
   - name: 'Comunicação & Oratória'
     company: Escola Conquer
     duration: Ago/2021 - 15h
@@ -287,10 +294,29 @@ course:
     logo: img/cv/microcamp.png
     description: 'Curso ministrador por Francisco B. da Silva. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQpxefXTCwQzftTX">Visualizar certificado</a>.'
 
+voluntier:
+  - activity: UI/UX Designer e Front-End
+    name: Audio Description Worldwide Consortium
+    duration: Abril/2016 - até o momento
+    logo: img/cv/adww.jpg
+    description: Projeto executados&#58; <a href='https://adww.online'>Audio Description Worldwide Consortium</a>, <a href='https://adww.online/rbt'>Revista Brasileira de Tradução Visual</a>, <a href='http://www.snapsects.com/'>Snapsects</a> e <a href='http://laima.pro'>Laboratory of Artificial Intelligence and Machine Aid</a>.
+
+  - activity: UI Designer, Front-End e Designer Gráfico
+    name: Revista Žena
+    duration: Setembro/2009 - Fevereiro/2013 (3 anos e 6 meses)
+    logo: img/cv/zena.jpg
+    description: Trabalhos desenvolvidos&#58; Zine Žena (<a rel="noreferrer" href="http://sumo.pe/portfolio/zine-zena.html">Processo de criação</a> e <a rel="noreferrer" href="https://revistazena.github.io/revistazena/zine/zine-zena-1/" target="_blank" title="Este link irá abrir uma nova aba">Releade do lançamento</a>).<br>Site da Revista&#58; <a rel="noreferrer" href="https://revistazena.github.io/" target="_blank" title="Este link irá abrir uma nova aba">https://revistazena.github.io/</a>
+
+  - activity: Webmaster
+    name: Revista O Grito!
+    duration: Janeiro/2005 - Dezembro/2009 (5 anos)
+    logo: img/cv/ogrito.gif
+    description: Atualização, publicação e editoração semanal de conteúdo.
+
 experience:
   - activity: Lead Design e UI/UX Designer
     name: Procenge Tecnologia
-    duration: Abril/2021 | Outurbo/2020 até o momento
+    duration: Abril/2021 | Outubro/2020 até o momento
     logo: img/cv/procenge.png
     description: >
       <strong>Como Lead Design</strong>: Elaboração e divulgação de guias e práticas do Design, a fim de empoderar a equipe e a função dentro da organização, fazendo com que o Design seja visto de maneira mais estratégica no enfrentamento de problemas. Apoio, suporte, mentoria, desenvolvimento e acompanhamento do time de Design através de capacitação, workshops, experimentação de novas ferramentas, processos e modelos de trabalho, tendo como foco a melhoria da qualidade dos entregáveis e o alinhamento dos propósitos da equipe com a missão e os valores da Procenge.<br><br>
@@ -299,7 +325,7 @@ experience:
  
   - activity: UX Designer
     name: Eu Médico Residente
-    duration: Maio/2020 - Outurbo/2020 (6 meses)
+    duration: Maio/2020 - Outubro/2020 (6 meses)
     logo: img/cv/emr.jpg
     description: Criação de fluxo, wireframes e interfaces de aplicações web, tablet e mobile (Android e iOS). Estudo, análise e teste das interfaces já construídas para propor melhorias baseadas nos usuários da plataforma.
 
@@ -308,12 +334,6 @@ experience:
     duration: Fevereiro/2019 - Janeiro/2020 (11 meses)
     logo: img/cv/truechange.jpg
     description: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop), construção de interfaces baseadas nos componentes disponíveis na OutSystems Platform 9-11 além do planejamento para a definição de novos componentes a serem utilizados pelo time de desenvolvimento.
-
-  - activity: UI/UX Designer e Front-End
-    name: Audio Description Worldwide Consortium
-    duration: Abril/2016 - até o momento
-    logo: img/cv/adww.jpg
-    description: Projeto executados&#58; <a href='https://adww.online'>Audio Description Worldwide Consortium</a>, <a href='https://adww.online/rbt'>Revista Brasileira de Tradução Visual</a>, <a href='http://www.snapsects.com/'>Snapsects</a> e <a href='http://laima.pro'>Laboratory of Artificial Intelligence and Machine Aid</a>.
 
   - activity: UI/UX Designer e Front-End
     name: QS Intelligence
@@ -328,16 +348,10 @@ experience:
     description: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop). Elaboração, concepção e codificação de layouts para desktop, dispositivos móveis e TV (HTML, CSS/Sass), além da aplicação de questionários para avaliação de funcionalidades e interfaces com os usuários das aplicações finais.
 
   - activity: Designer e Front-End
-    name: BVR Negócios e Consultória
+    name: BVR Negócios e Consultoria 
     duration: Julho/2010 - Outubro/2013 (3 ano e 4 meses)
     logo: img/cv/bvr.jpg
     description: Criação de protótipos navegáveis de alta/baixa fidelidade (Mockup Balsamiq/ Photoshop). Construção de layouts de sistemas, sites e aplicativos móveis (HTML, CSS, Wordpress, Joomla, HTML, CSS, Zend Framework). Participação de reuniões de ideação e alinhamento de requisitos com o cliente e ministrar treinamentos internos e externos.
-
-  - activity: UI Designer, Front-End e Designer Gráfico
-    name: Revista Žena
-    duration: Setembro/2009 - Fevereiro/2013 (3 anos e 6 meses)
-    logo: img/cv/zena.jpg
-    description: Trabalhos desenvolvidos&#58; Zine Žena (<a rel="noreferrer" href="http://sumo.pe/portfolio/zine-zena.html">Processo de criação</a> e <a rel="noreferrer" href="https://revistazena.github.io/revistazena/zine/zine-zena-1/" target="_blank" title="Este link irá abrir uma nova aba">Releade do lançamento</a>).<br>Site da Revista&#58; <a rel="noreferrer" href="https://revistazena.github.io/" target="_blank" title="Este link irá abrir uma nova aba">revistazena.com.br</a>
 
   - activity: Professor de Ciências e Matemática
     name: Secretaria de Educação do Estado de Pernambuco
@@ -363,8 +377,3 @@ experience:
     logo: img/cv/britanic.png
     description: Aprendiz
 
-  - activity: Webmaster
-    name: Revista O Grito!
-    duration: Janeiro/2005 - Dezembro/2009 (5 anos)
-    logo: img/cv/ogrito.gif
-    description: Atualização, publicação e editoração semanal de conteúdo.

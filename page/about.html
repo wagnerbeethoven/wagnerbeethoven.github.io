@@ -42,6 +42,7 @@ legend: "Olinda / 9 de setembro de 2018"
     </div>
 </section>
 
+
 <section class="career-container education-container">
     <h2 class="section-title">Educação</h2>
     <div class="career-list">
@@ -94,6 +95,25 @@ legend: "Olinda / 9 de setembro de 2018"
         </div>
     </div>
     {% endfor %}
+</section>
+
+<section class="career-container job-container">
+    <h2 class="section-title">Experiência como Voluntário</h2>
+    <div class="career-list">
+        {% for volunteering in site.data.about.voluntier %}
+        <div class="career-item" id="{{company.name|slugify}}">
+            <div class="career-logo">
+                <img src="{{site.url}}/{{volunteering.logo}}" title="Logo - {{volunteering.name}}" alt="Logo {{volunteering.name}}">
+            </div>
+            <div class="career-detail">
+                {% if volunteering.activity %}<strong class="career-activity">{{volunteering.activity}}</strong>{% endif %}
+                {% if volunteering.name %}<span class="career-name">{{volunteering.name}}</span>{% endif %}
+                {% if volunteering.duration %}<small class="career-duration">{{volunteering.duration}}</small>{% endif %}
+                {% if volunteering.description %}<p class="career-description">{{volunteering.description}}</p>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 
 <script type="application/ld+json">
