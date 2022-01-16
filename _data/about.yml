@@ -275,7 +275,7 @@ course:
     logo: img/cv/hello-bits.png
     description: 'Curso ministrador por Fernando Vieira. <a href="https://1drv.ms/b/s!AkkMpcXs4WkOmQWOGYa6Mh2fS1h_">Visualizar certificado</a>.'
 
-  - name: Curso Web - Foco na Certificação Microsoft 70-480&:colon Programming in HTML5 with JavaScript & CSS3
+  - name: "Curso Web - Foco na Certificação Microsoft 70-480 'Programming in HTML5 with JavaScript & CSS3'"
     company: Qualiti Innovative Learning
     duration: Fevereiro/2013 — Agosto/2013 - 88h
     logo: img/cv/qualiti.png
@@ -313,7 +313,7 @@ experience:
     name: Audio Description Worldwide Consortium
     duration: Abril/2016 - até o momento
     logo: img/cv/adww.jpg
-    description: Projeto executados&#58; Audio Description Worldwide Consortium, Revista Brasileira de Tradução Visual, Snapsects e Laboratory of Artificial Intelligence and Machine Aid.
+    description: Projeto executados&#58; <a href='https://adww.online'>Audio Description Worldwide Consortium</a>, <a href='https://adww.online/rbt'>Revista Brasileira de Tradução Visual</a>, <a href='http://www.snapsects.com/'>Snapsects</a> e <a href='http://laima.pro'>Laboratory of Artificial Intelligence and Machine Aid</a>.
 
   - activity: UI/UX Designer e Front-End
     name: QS Intelligence
@@ -355,7 +355,7 @@ experience:
     name: Prefeitura da Cidade do Recife
     duration: Setembro/2006 - Setembro/2008 (2 anos e 1 mês)
     logo: img/cv/prefeitura-recife.png
-    description: Estágiario </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
+    description: Estagiário </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
 
   - activity: Auxiliar de Biblioteca
     name: Britanic Ensino de Idiomas
