@@ -57,43 +57,39 @@
     justify-content: space-between;
     display: flex;
   }
-  &-page,
-  &-blog {
-    div {
-      padding-bottom: 2.5rem;
-
-      p {
-        margin-bottom: 0;
-        color: #6c757d;
-        font-size: 0.825rem;
-      }
-
-      strong {
-        font-weight: 600;
-      }
-    }
-  }
 }
-
 .post-link {
+  padding-bottom: 2.5rem;
   position: relative;
-  & > div {
+  display: block;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+  &-titulo {
+    @extend .card-title;
+  }
+  &-descricao {
+    @extend .card-text;
+    margin-bottom: 0;
+    color: #6c757d;
+    font-size: 0.825rem;
+  }
+  &-img {
+    @extend .rounded;
+    @extend .mb-3;
     height: 200px;
     background-size: cover !important;
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
   }
-  a {
-    display: block;
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      content: "";
-      width: 100%;
-      height: 100%;
-    }
+  strong {
+    font-weight: 600;
   }
 }

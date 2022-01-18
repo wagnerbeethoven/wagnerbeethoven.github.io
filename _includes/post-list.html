@@ -1,6 +1,6 @@
 <div style="cursor: pointer" class="col-12 col-md-4 post-link mb-4" onClick="window.open( '{{ post.url }}','_top' ); return false" title="Clique para acessar o texto '{{ post.title }}'">
-    <div style="background-image: url({{ post.image }})" class="rounded mb-3"></div>
-    <h5 class="card-title">{{ post.title }}</h5>
-    <p class="card-text">{{ post.summary }}</p>
+    <div style="background-image: url({{ post.image }})" class="post-link-img"></div>
+    <h5 class="post-link-titulo">{{ post.title }}</h5>
+    <p class="post-link-descricao">{{ post.summary }}</p>
     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
 </div>

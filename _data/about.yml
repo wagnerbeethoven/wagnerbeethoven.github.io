@@ -35,7 +35,6 @@ education:
     description: Licenciatura Plena em Ciências com Habilitação em Biologia tem como objetivo principal formar professores para atuarem no magistério de Ciências e Biologia no Ensino Fundamental e Médio e visa, também, formar profissionais para atuarem nos vários setores da Biologia; profissionais estes, conscientes e comprometidos com a realidade democrática que possam atuar como agentes de transformação da Região.
 
 course:
-
   - name: 'Design System Specialist'
     company: Meiuca Design
     duration: Novembro/2021 - 16h
@@ -299,7 +298,7 @@ voluntier:
     name: Audio Description Worldwide Consortium
     duration: Abril/2016 - até o momento
     logo: img/cv/adww.jpg
-    description: Projeto executados&#58; <a href='https://adww.online'>Audio Description Worldwide Consortium</a>, <a href='https://adww.online/rbt'>Revista Brasileira de Tradução Visual</a>, <a href='http://www.snapsects.com/'>Snapsects</a> e <a href='http://laima.pro'>Laboratory of Artificial Intelligence and Machine Aid</a>.
+    description: Projeto executados&#58; <a href='https://adww.online'>Audio Description Worldwide Consortium</a>, <a href='https://adww.online/revista-brasileira-de-traducao-visual/'>Revista Brasileira de Tradução Visual</a>, <a href='http://www.snapsects.com/'>Snapsects</a> e <a href='http://laima.pro'>Laboratory of Artificial Intelligence and Machine Aid</a>.
 
   - activity: UI Designer, Front-End e Designer Gráfico
     name: Revista Žena
@@ -314,12 +313,12 @@ voluntier:
     description: Atualização, publicação e editoração semanal de conteúdo.
 
 experience:
-  - activity: Lead Design e UI/UX Designer
+  - activity: Líder de Design e UI/UX Designer
     name: Procenge Tecnologia
     duration: Abril/2021 | Outubro/2020 até o momento
     logo: img/cv/procenge.png
     description: >
-      <strong>Como Lead Design</strong>: Elaboração e divulgação de guias e práticas do Design, a fim de empoderar a equipe e a função dentro da organização, fazendo com que o Design seja visto de maneira mais estratégica no enfrentamento de problemas. Apoio, suporte, mentoria, desenvolvimento e acompanhamento do time de Design através de capacitação, workshops, experimentação de novas ferramentas, processos e modelos de trabalho, tendo como foco a melhoria da qualidade dos entregáveis e o alinhamento dos propósitos da equipe com a missão e os valores da Procenge.<br><br>
+      <strong>Como Lead Design</strong>: Elaboro e divulgo guias e práticas do Design, a fim de empoderar a equipe e a função dentro da organização, fazendo com que o Design seja visto de maneira mais estratégica no enfrentamento de problemas. Dou apoio, suporte, mentoria, e acompanhamento do time de Design através de capacitação, workshops, experimentação de novas ferramentas, processos e modelos de trabalho, tendo como foco a melhoria da qualidade dos entregáveis e o alinhamento dos propósitos da equipe com a missão e os valores da Procenge. Construo programas de inovação e participo de recrutamento e seleção de novos colaboradores e constantemente dou feedback aos liderados.<br><br>
       ***<br><br>
       <strong>Como UI/UX Designer</strong>: Desenvolvimento das melhorias das interfaces do software através do Design Thinking atuando em todos os aspectos do produto: layout, navegação, usabilidade e performance - nas versões web e mobile, além da concepção da arquitetura da informação, fluxos do sistema, protótipos em alta fidelidade (Adobe XD), teste do usuário e desenvolvimento da documentação dos componentes e funcionalidades da aplicação (Design System).
  

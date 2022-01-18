@@ -8,12 +8,16 @@ legend: "Olinda / 9 de setembro de 2018"
 ---
 <section class="about-container">
     <span class="about-name" itemprop="name">{{site.about-name}}</span>
-    <span class="about-title">{{site.about-title}}</span>
-    <span class="about-contact"><a href="mailto:{{site.about-email}}">{{site.about-email}}</a> | <a href="tel:+5581986496080">{{site.about-phone}}</a></span>
+    <span class="about-title">{{ site.data.about.experience[0].activity }}</span>
+    <div class="about-contact">
+        <a href="mailto:{{site.about-email}}">{{site.about-email}}</a>
+         | <a href="tel:+5581986496080">{{site.about-phone}}</a>
+         | <a title="Faça o download do meu currículo em pdf (65k KB) - Este link irá abrir uma nota aba" href="{{site.url}}/doc/curriculo_profissional_wagner_beethovenv2.pdf">Currículo</a>
+    </div>
     <div class="links-social">
-        <a class="links-social-item links-social-linkedin" alt="Logo do LinkedIn" href="http://linkedin.com/in/wagnerbeethoven"><img src="../img/social/linkedin.svg"></a>
-        <a class="links-social-item" alt="Logo do Github" href="http://github.com/wagnerbeethoven"><img src="../img/social/github.svg"></a>
-        <a class="links-social-item" alt="Logo do Behance" href="http://behance.net/wagnerbeethoven"><img src="../img/social/behance.svg"></a>
+        <a class="links-social-item links-social-linkedin" href="http://linkedin.com/in/wagnerbeethoven"><img alt="Logo do LinkedIn" src="../img/social/linkedin.svg"></a>
+        <a class="links-social-item" href="http://github.com/wagnerbeethoven"><img alt="Logo do Github"  src="../img/social/github.svg"></a>
+        <a class="links-social-item" href="http://behance.net/wagnerbeethoven"><img alt="Logo do Behance"  src="../img/social/behance.svg"></a>
     </div>
     <div class="about-info">
         <p>Me chamo <strong>{{site.about-name}}</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/blog/is-it-just-a-hello-world.html" title="Confira algumas explicações sobre meu portfólio">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos, atualmente trabalho na <strong>{{ site.data.about.experience[0].name }}</strong> como <strong>{{ site.data.about.experience[0].activity }}</strong>.<br><br>Resido em <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{site.about-city}}</span>, <span itemprop="addressRegion">{{site.about-state}}.</p>
