@@ -41,4 +41,5 @@ compress_html:
 
 plugins:
   - jekyll-feed
+  - jekyll-admin
   

@@ -1,0 +1,64 @@
+atividades:
+  - nome: Líder de Design e UI/UX Designer
+    empresa: Procenge Tecnologia
+    periodo: Abril/2021 | Outubro/2020 até o momento
+    logo: img/cv/procenge.png
+    descricao: >
+      <strong>Como Lead Design</strong>: Elaboro e divulgo guias e práticas do Design, a fim de empoderar a equipe e a função dentro da organização, fazendo com que o Design seja visto de maneira mais estratégica no enfrentamento de problemas. Dou apoio, suporte, mentoria, e acompanhamento do time de Design através de capacitação, workshops, experimentação de novas ferramentas, processos e modelos de trabalho, tendo como foco a melhoria da qualidade dos entregáveis e o alinhamento dos propósitos da equipe com a missão e os valores da Procenge. Construo programas de inovação e participo de recrutamento e seleção de novos colaboradores e constantemente dou feedback aos liderados.<br><br>
+      ***<br><br>
+      <strong>Como UI/UX Designer</strong>: Desenvolvimento das melhorias das interfaces do software através do Design Thinking atuando em todos os aspectos do produto: layout, navegação, usabilidade e performance - nas versões web e mobile, além da concepção da arquitetura da informação, fluxos do sistema, protótipos em alta fidelidade (Adobe XD), teste do usuário e desenvolvimento da documentação dos componentes e funcionalidades da aplicação (Design System).
+ 
+  - nome: UX Designer
+    empresa: Eu Médico Residente
+    periodo: Maio/2020 - Outubro/2020 (6 meses)
+    logo: img/cv/emr.jpg
+    descricao: Criação de fluxo, wireframes e interfaces de aplicações web, tablet e mobile (Android e iOS). Estudo, análise e teste das interfaces já construídas para propor melhorias baseadas nos usuários da plataforma.
+
+  - nome: UI/UX Designer
+    empresa: TrueChange
+    periodo: Fevereiro/2019 - Janeiro/2020 (11 meses)
+    logo: img/cv/truechange.jpg
+    descricao: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop), construção de interfaces baseadas nos componentes disponíveis na OutSystems Platform 9-11 além do planejamento para a definição de novos componentes a serem utilizados pelo time de desenvolvimento.
+
+  - nome: UI/UX Designer e Front-End
+    empresa: QS Intelligence
+    periodo: Julho/2015 - Janeiro/2019 (3 anos e 7 meses)
+    logo: img/cv/qsi.png
+    descricao: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop). Elaboração, concepção e codificação de layouts para desktop, dispositivos móveis e TV (HTML, CSS/Sass e Angular).
+
+  - nome: UI/UX Designer e Front-End
+    empresa: Provider Tecnologia de Sistemas (Grupo Provider)
+    periodo: Janeiro/2014 - Maio/2015 (1 ano e 5 meses)
+    logo: img/cv/provider.jpg
+    descricao: Criação de protótipos navegáveis de alta/baixa fidelidade (Adobe XD, Illustrator e Photoshop). Elaboração, concepção e codificação de layouts para desktop, dispositivos móveis e TV (HTML, CSS/Sass), além da aplicação de questionários para avaliação de funcionalidades e interfaces com os usuários das aplicações finais.
+
+  - nome: Designer e Front-End
+    empresa: BVR Negócios e Consultoria 
+    periodo: Julho/2010 - Outubro/2013 (3 ano e 4 meses)
+    logo: img/cv/bvr.jpg
+    descricao: Criação de protótipos navegáveis de alta/baixa fidelidade (Mockup Balsamiq/ Photoshop). Construção de layouts de sistemas, sites e aplicativos móveis (HTML, CSS, Wordpress, Joomla, HTML, CSS, Zend Framework). Participação de reuniões de ideação e alinhamento de requisitos com o cliente e ministrar treinamentos internos e externos.
+
+  - nome: Professor de Ciências e Matemática
+    empresa: Secretaria de Educação do Estado de Pernambuco
+    periodo: Agosto/2009 - Dezembro/2009 (5 meses)
+    logo: img/cv/governope.png
+    descricao: Professor das disciplina de Ciências no ensino fundamental II (5ª - 8ª série) com 150 h/a na Escola Profª Maria Alves Machado. <br>Professor das disciplinas de Ciências e Biologia para alunos do ensino fundamental II (de 5ª - 8ª série) e ensino médio (1º - 3º ano) com 200h/a mês na Escola Tome Gibson.
+
+  - nome: Instrutor de Informática Básica e Web Designer
+    empresa: Microcamp Tecnologia
+    periodo: Setembro/2008 - Maio/2010 (1 ano e 9 meses)
+    logo: img/cv/microcamp.png
+    descricao: Ministrar aulas nos cursos de Web Design (HTML, CSS, Corel Draw, Dreamweaver, Fireworks, Photoshop, Flash) e de Informática básica.
+
+  - nome: Professor de Ciências e Matemática
+    empresa: Prefeitura da Cidade do Recife
+    periodo: Setembro/2006 - Setembro/2008 (2 anos e 1 mês)
+    logo: img/cv/prefeitura-recife.png
+    descricao: Estagiário </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
+
+  - nome: Auxiliar de Biblioteca
+    empresa: Britanic Ensino de Idiomas
+    periodo: Março/2005 - Março/2007 (2 anos e 1 mês)
+    logo: img/cv/britanic.png
+    descricao: Aprendiz
+

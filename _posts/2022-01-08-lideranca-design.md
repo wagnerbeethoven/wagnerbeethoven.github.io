@@ -1,32 +1,29 @@
 ---
-published: false
+title: Liderança em Design
 layout: post
-date: 2022-01-08
-title: "Liderança em Design"
-summary: 'O que eu aprendi atuando como líder após nove meses de trabalho e estudo?'
+date: '2022-01-08'
+summary: O que eu aprendi atuando como líder após nove meses de trabalho e estudo?
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2022-01-08-lideranca-design/raw/fbbe0e835fd3807fa4a927f93d3787effb280af3/pexels-miguel-a-padrian-194094.jpg
-legend: "Foto&colon; <a href='https://www.pexels.com/photo/paper-boats-on-solid-surface-194094/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>Miguel Á. Padriñán / Pexels</a>"
-description: 'O que eu aprendi atuando como líder após nove meses de trabalho e estudo?'
-alt: barcos de papel, um na cor vermelha posicionado na frente e 4 barcos atrás, onde 2 são com tom de azul claro e 2 são com tom verde claro
+legend: Foto&colon; <a href='https://www.pexels.com/photo/paper-boats-on-solid-surface-194094/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>Miguel
+  Á. Padriñán / Pexels</a>
+description: O que eu aprendi atuando como líder após nove meses de trabalho e estudo?
+alt: barcos de papel, um na cor vermelha posicionado na frente e 4 barcos atrás, onde
+  2 são com tom de azul claro e 2 são com tom verde claro
 tags:
-  - Liderança em Design
-  - Design Estratégico
-  - Time de Design
+- Liderança em Design
+- Design Estratégico
+- Time de Design
 ---
 
-No momento que comecei na Procenge, estava passando por uma rotatividade enorme de profissionais com perfil de Designer, o time tinha 4 pessoas e em menos de 6 meses, 5 membros mudaram, fui o único que fiquei. A empresa estava no momento delicado, momento que a saída de um membro do time fazia o produzo ter um atraso nas entregas incalculável, alguma precisava ser feita!
+No momento que comecei na Procenge, a empresa passava por uma rotatividade enorme de profissionais com perfil de Designer. A empresa estava no momento delicado, momento que a saída de um membro do time fazia o produto ter um atraso nas entregas incalculável, alguma precisava ser feita!
 
-A liderança não chegou em mim por acaso, tive destaque no time - mesmo que sozinho - contribui com colaborações positivas ao logo da minha jornada. Eu fui o Designer que ficou, a direção identificou em mim, além do excelente trabalho como Designer, um perfil de líder e foi dessa forma que fui convidado para montar um *dreamtime* e liderar essas pessoas.
+A liderança não chegou em mim por acaso, tive destaque no time e a direção o perfil de líder e foi dessa forma que fui convidado para montar um *dreamtime*. **Juntos, mostramos os ganhos que uma equipe de design pode trazer quando é utilizado de maneira estratégica**. 
 
-**Juntos, mostramos os ganhos que uma equipe de design pode trazer quando é utilizado de maneira estratégica**. 
-
-# Os Desafios
-
-São inúmeros desafios, eles foram identificados, a batalha ainda não terminou, mas está bem perto de ser vencida 😊
+#  Os Desafios
 
 ## Atividade do Designer
-A empresa com cerca de 50 anos e apenas 3 de presença de profissionais com perfil de UX Designers, mas a rotatividade era enorme e fazia com que nosso papel se resumisse em apenas converter um software desktop para uma versão web, ou seja, tela tela tela. Precisa ser feito mais, ter mais foco para que os talentos na equipe não se resumissem em telas.
+A empresa com cerca de 50 anos e apenas 3 de presença de profissionais com perfil de UX Designers, mas a rotatividade era enorme e fazia com que nosso papel se resumisse em apenas converter um software desktop para uma versão web, ou seja, tela tela tela. Precisa ser feito mais, ter mais foco para que os talentos na equipe não se resumissem em telas, então adicionar outras atividades, focar em pesquisa, em experimentações e principalmente em contato com o usuário.
 
 ## Comunicação entre Designers e os demais envolvidos
 Precisávamos criar um fluxo de comunicação eficaz e amarrar todos os nós desatados. Fazer com que nossos entregáveis fossem além de um link no Adobe XD. Utilizei o [Bookstack](https://www.bookstackapp.com) para escrever e explicar interfaces, funcionalidade, componentes, além de documentar informações sobre a equipe, seus rituais e práticas (iremos falar mais sobre isso ao logo desse documento).
@@ -139,7 +136,7 @@ Para que o time fique ciente dos seus poderes e suas responsabilidades, eu escre
 7. Perfil do profissional da equipe, quais as competências básicas, quais as soft skills e quais as hard skills.
 8. Rituais
 
-### Rituais do Time
+**Rituais do Time**
 
 Esses encontros fixos são essenciais para alinhar necessidades, dores e principalmente entender a evolução do time. Foi mapeado os seguintes encontros:
 
@@ -154,4 +151,4 @@ O manual foi feito primordialmente por mim, mas a construção e melhoria contí
 
 # Próximos passos
 
-Montar um time e manter ele eficaz num cenário onde precisa de constante validação de valor é um desafio muito grande, mas não é impossível de vencer. Os estudos e as práticas na liderança e na melhoria do time ainda continuará.  
+Montar um time e manter ele eficaz num cenário onde precisa de constante validação de valor é um desafio muito grande, mas não é impossível de vencer. Os estudos e as práticas na liderança e na melhoria do time ainda continuará.
