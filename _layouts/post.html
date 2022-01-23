@@ -3,77 +3,75 @@ layout: default
 ---
 
 <section itemscope itemtype="http://schema.org/NewsArticle">
-    {% if page.image %}
-    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="layout-banner">
-        <img src="{{page.image}}" title="{{page.title}} {{ page.legend }}" alt="{{page.alt}}" />
-        <meta itemprop="url" content="{{page.image}}" /> {% if page.legend %}
-        <figcaption>{{page.legend}}</figcaption>
-        {% else %} {% endif %}
-    </figure>
-    {% endif%}
-    <header class="article-header">
-        <h2 class="page-title" itemprop="headline">{{ page.title }}</h2>
-        <p class="page-summary" itemprop="description">{{page.summary}}</p>
-        <div class=" post-meta {% if page.categories contains 'portfolio' %}post-meta-portfolio{% endif %} ">
-            <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture" title="Conteúdo produzido por {{site.about-name}}" alt="{{site.about-altavatar}}" src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75" />
-            {% if page.categories contains "blog" %}
-            <div class="post-meta-time">
-                <time itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d %H:%M'}}" datetime="{{ page.date | date: '%Y-%m-%d %H:%M'}}">
-                    {{ page.date | date: "%d" }} de {% assign m = page.date | date: "%-m" %} {% case m %} {% when '1' %} janeiro {% when '2' %} fevereiro {% when '3' %} mar&ccedil;o {% when '4' %} abril {% when '5' %} maio {% when '6' %} junho {% when '7' %} julho {% when '8' %} agosto {% when '9' %} setembro {% when '10' %} outubro {% when '11' %} novembro {% when '12' %} dezembro {% endcase %} de {{ page.date | date: "%Y" }}
-                </time>
-                <span class="reading-time" title="Tempo espimado de leitura">
-                    {% assign words = content | number_of_words %} {% if words < 360 %} 1 minuto {% else %} {{ words | divided_by:180 }} minutos {% endif %} de leitura
-                </span>
-            </div>
-            {% endif %}
-        </div>
-        <nav id="toc" class="toc"></nav>
-      </header>
-      <article itemprop="articleBody" class=" post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
-        {{ content }}
-      </article>
-      {% if page.categories contains "portfolio" %}
-      <aside class="aside-portfolio">
-          <ul class="aside-areas">
-              <li>Campos de criação:</li>
-              {% if post %}{% assign areas = post.areas %}{% else %}{% assign areas = page.areas %}{% endif %}{% for areas in areas %}
-              <li>{{areas }}</li>{% unless forloop.last %}{% endunless %}{% endfor %}{% for tag in page.areas %}{% endfor %}
-          </ul>
-          <ul class="aside-tools">
-              <li>Ferramentas utilzadas:</li>
-              {% if post %}{% assign tools = post.tools %}{% else %}{% assign tools = page.tools %}{% endif %}{% for tools in tools %}
-              <li><img src="{{site.url}}/img/tools/{{tools}}.svg" alt="Ferramenta: {{tools | upcase }}"
-                      title=" {{tools | upcase }}"></li> {% unless forloop.last %}{% endunless %}{% endfor %}
-              {% for tag in page.tools %} {% endfor %}
-          </ul>
-      </aside>
+  {% if page.image %}
+  <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="layout-banner">
+    <img src="{{page.image}}" title="{{page.title}} {{ page.legend }}" alt="{{page.alt}}" />
+    <meta itemprop="url" content="{{page.image}}" /> {% if page.legend %}
+    <figcaption>{{page.legend}}</figcaption>
+    {% else %} {% endif %}
+  </figure>
+  {% endif%}
+  <header class="article-header">
+    <h2 class="page-title" itemprop="headline">{{ page.title }}</h2>
+    <p class="page-summary" itemprop="description">{{page.summary}}</p>
+    <div class=" post-meta {% if page.categories contains 'portfolio' %}post-meta-portfolio{% endif %} ">
+      <img itemprop="creator" itemscope itemtype="http://schema.org/Person" class="author-picture" title="Conteúdo produzido por {{site.about-name}}" alt="{{site.about-altavatar}}" src="https://s.gravatar.com/avatar/299f64695797b6afe2d7e2405bd7c860?s=75" />
+      {% if page.categories contains "blog" %}
+      <div class="post-meta-time">
+        <time itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d %H:%M'}}" datetime="{{ page.date | date: '%Y-%m-%d %H:%M'}}">
+          {{ page.date | date: "%d" }} de {% assign m = page.date | date: "%-m" %} {% case m %} {% when '1' %} janeiro {% when '2' %} fevereiro {% when '3' %} mar&ccedil;o {% when '4' %} abril {% when '5' %} maio {% when '6' %} junho {% when '7' %} julho {% when '8' %} agosto {% when '9' %} setembro {% when '10' %} outubro {% when '11' %} novembro {% when '12' %} dezembro {% endcase %} de {{ page.date | date: "%Y" }}
+        </time>
+        <span class="reading-time" title="Tempo espimado de leitura">
+          {% assign words = content | number_of_words %} {% if words < 360 %} 1 minuto {% else %} {{ words | divided_by:180 }} minutos {% endif %} de leitura </span>
+      </div>
       {% endif %}
-      <div class="post-sidebar col-12 col-md-8 mx-auto">
-      
-        <p class="comment_area">Gostou? Compartilhe para mais pessoas! 😉</p>
-        <div class="share" id="share-box">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://sumo.pe{{ page.url }}" class="facebook share-button">
-              <svg class="svg-inline--fa fa-facebook-f fa-w-10" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
-                <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-              </svg>
-              Facebook</a>
-            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url=http://sumo.pe{{ page.url }}" class="twitter share-button">
-              <svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-              </svg>
-              Twitter</a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sumo.pe{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source=webjeda" class="linkedin share-button">
-              <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-linkedin-in fa-w-14">
-                <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" class=""></path>
-              </svg>
-              LinkedIn
-            </a>
-            <a href="mailto:?subject={{ page.title }}&amp;body=Para seu conhecimento: http://sumo.pe{{ page.url }}" class="email share-button">
-              <svg class="svg-inline--fa fa-at fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                <path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
-              </svg>
-              Email
-            </a>
-          </div>
     </div>
+    <nav id="toc" class="toc"></nav>
+  </header>
+  <article itemprop="articleBody" class=" post-content {% if page.categories contains 'blog' %}post-article{% else%}portfolio-article{% endif %}">
+    {{ content }}
+  </article>
+
+  {% if page.categories contains "portfolio" %}
+  <aside class="aside-portfolio">
+    <ul class="aside-areas">
+      <li>Campos de criação:</li>
+      {% if post %}{% assign areas = post.areas %}{% else %}{% assign areas = page.areas %}{% endif %}{% for areas in areas %}
+      <li>{{areas }}</li>{% unless forloop.last %}{% endunless %}{% endfor %}{% for tag in page.areas %}{% endfor %}
+    </ul>
+    <ul class="aside-tools">
+      <li>Ferramentas utilzadas:</li>
+      {% if post %}{% assign tools = post.tools %}{% else %}{% assign tools = page.tools %}{% endif %}{% for tools in tools %}
+      <li><img src="{{site.url}}/img/tools/{{tools}}.svg" alt="Ferramenta: {{tools | upcase }}" title=" {{tools | upcase }}"></li> {% unless forloop.last %}{% endunless %}{% endfor %}
+      {% for tag in page.tools %} {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+  <div class="post-sidebar col-12 col-md-8 mx-auto">
+    <p class="comment_area">{% if page.categories contains "blog" %}Se você leu até aqui, meu muito obrigado 🤘🏼💝{% endif %}. Gostou? Compartilhe para mais pessoas! 😉</p>
+    <div class="share" id="share-box">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://sumo.pe{{ page.url }}" class="facebook share-button">
+        <svg class="svg-inline--fa fa-facebook-f fa-w-10" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+          <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+        </svg>
+        Facebook</a>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url=http://sumo.pe{{ page.url }}" class="twitter share-button">
+        <svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+        </svg>
+        Twitter</a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sumo.pe{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source=webjeda" class="linkedin share-button">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-linkedin-in fa-w-14">
+          <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" class=""></path>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="mailto:?subject={{ page.title }}&amp;body=Para seu conhecimento: http://sumo.pe{{ page.url }}" class="email share-button">
+        <svg class="svg-inline--fa fa-at fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
+        </svg>
+        Email
+      </a>
+    </div>
+  </div>
 </section>

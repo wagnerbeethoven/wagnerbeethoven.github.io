@@ -82,9 +82,10 @@
         margin-top: 1rem;
       }
     }
-a{
-text-decoration: underline;
-}
+    a {
+      text-decoration: underline;
+      display: inline-block;
+    }
     ul,
     ol {
       padding-left: 40px !important;
