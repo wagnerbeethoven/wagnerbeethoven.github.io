@@ -17,7 +17,7 @@ tags:
 ---
 # Liderança em Design
 
-No momento que comecei na Procenge, a empresa passava por uma rotatividade enorme de profissionais com perfil de Designer. A empresa estava no momento delicado, momento que a saída de um membro do time fazia o produto ter um atraso nas entregas incalculável, alguma precisava ser feita!
+Quando comecei na [Procenge](http://procenge.com.br), a empresa passava por uma rotatividade enorme de profissionais com perfil de Designer. A empresa estava no momento delicado, a saída de um membro do time fazia o produto ter um atraso nas entregas incalculável, alguma precisava ser feita!
 
 A liderança não chegou em mim por acaso, o convite veio junto com um desafio gigantesco, fazer com que uma empresa de meio século mudança a mentalidade, ou <em land="en">mindset</em> como dizem por aí 😊, e passassem a utilizar designers e o design **de maneira estratégica**.
 
@@ -29,10 +29,10 @@ Eu não sei se você já sabe a diferença, mas é importante pontuar que eu já
 
 Abaixo, algumas diferenças para você entender o espírito envolvendo cada perfil.
 
-**Chefe**: desmoraliza, , procura culpados, , manda, , diz: eu, , diz: vá, fiscaliza.  
+**Chefe**: desmoraliza, procura culpados, manda, diz: eu, diz: vá, fiscaliza.  
 **Líder**: assume responsabilidades, acompanha, orienta, diz: nós, diz: vamos, confia.
 
-Eu sou uma pessoa muito direta, sempre precisava medir as palavras neste momento para que não houvesse uma interpretação errada na comunicação, pensar como a pessoa que vai receber e entender a mensagem é muito importante, então a vigilância deve ser constante.
+Eu sou uma pessoa muito direta, sempre precisei medir as palavras e neste momento para que não houvesse uma interpretação errada na comunicação, pensar como a pessoa que vai receber e entender a mensagem é muito importante, então a vigilância é constante.
 
 A **[Ana Cantarelli](https://anacantarelli.com.br/)** e seu Programa de Desenvolvimento de Líderes teve um papel muito importante nesse meu momento e na construção do que sou hoje como profissional. Outro ponto importante após o convite da empresa para atuar como líder, foi analisar os exemplos de comportamento dos líderes que tive, tentar aplicar bons exemplos e não repetir os maus e fazer com que liderados nunca precisassem experimentar as situações traumatizantes que passei e tentar ser o líder que gostaria de ter, além de fazer o PDL e analisar minhas experiencia passada com uma nova perspectiva, procurar literatura sobre o assunto trouxe bastante lucidez.
 
@@ -57,7 +57,7 @@ Assim, um líder ele tem que:
 
 ## Liderança Situacional
 
-O grande nome para a liderança situacional é o jogo de cintura, não existe um roteiro, temos que ser líderes cada liderado e para situação, agindo de acordo com o ambiente. O disc é uma ferramenta importante neste momento, porque através deles se sabe a personalidade de cada liderado, assim, nós saberemos como agir com cada pessoa.
+O grande nome para a liderança situacional é o jogo de cintura, não existe um roteiro, temos que ser líderes cada liderado e para situação, agindo de acordo com o ambiente. O disc é uma ferramenta importante, porque através deles se sabe a personalidade de cada liderado, assim, nós saberemos como agir com cada pessoa.
 
 Esse jogo de cintura tem que levar em conta a maturidade profissional e emocional de cada integrante do time. O processo **é de mobilizar e engajar pessoas em uma determinada direção para atingir um resultado esperado**. Essa frase é a grande jornada do líder, mas não é uma coisa fácil de ser fazer.
 
@@ -81,9 +81,9 @@ Tive que entender que dar pedido um desafio maior do que o seu parceiro consegue
 
 Esse termo deveria ser trocado para Conversa sobre Desenvolvimento 😊, porque feedback é nada mais do que uma troca de impressões e desejos para o desenvolvimento do liderado ser melhor dia a dia, mas isso tem que ter uma data fixa, ser constante e sempre tem que ter um plano de ação para que se crie condições para esse desenvolvimento.
 
-É um momento muito delicado esse de feedback, justamente porque o traz a mensagem de ser algo negativo, mas é completamente diferente, o momento é para aprender com erros e evitá-los futuramente, além do reconhecimento de boas ações.
+É um momento muito delicado esse de feedback, justamente porque o traz a mensagem de ser algo negativo, mas é completamente diferente, é para aprender com erros e evitá-los futuramente, além do reconhecimento de boas ações.
 
-O feedback é composto por 3 momentos:
+O feedback é composto por 3 etapas:
 
 1. **Introdução**: “momento de acolhimento”.
 2. **Desenvolvimento**: conversar sobre pontos forte e sobre pontos a desenvolver; incentivar a assumir o protagonismo; ajudar a ver alternativas de ação.
@@ -110,7 +110,7 @@ O grande calo das organizações, pelo menos as que eu passei, esse plano tem qu
 
 ## Habilidade técnica
 
-Um dos pontos mais interessantes que entendi desse processo, me tornei líder pelo destaque técnico como designer, sendo assim, o líder tem que entender profundamente dos entregáveis da equipe, porém é o momento de fazer com que os liderados se destaquem neste ponto e até consigam ter mais habilidades técnicas que o líder, já que a preocupação dele é outro neste momento, é a de guiar e fazer com que a equipe cresça junta.
+Um dos pontos mais interessantes que entendi desse processo, me tornei líder pelo destaque técnico como designer, sendo assim, o líder tem que entender profundamente dos entregáveis da equipe, porém é a hora de fazer com que os liderados se destaquem neste ponto e até consigam ter mais habilidades técnicas que o líder, já que a preocupação dele é outro neste momento, é a de guiar e fazer com que a equipe cresça junta.
 
 
 # Empoderamento do time
@@ -133,7 +133,7 @@ Esses encontros fixos são essenciais para alinhar necessidades, dores e princip
 - **Reuniões associais ao scrum: d**iárias, revisão e retrospectivas
 - **Design Talk**: encontro dos designers para os colaboradores dos outros times, mas com assuntos sempre do mundo do Design e é facilitado pela equipe
 - **Design Expo**: encontro para que seja tratado a parte técnica entre designers e desenvolvedores ou qualquer outro envolvido sobre o assunto.
-- **Design Critiqué**: momento para debater e criticar entregáveis da equipe, coletar novas perspectivas, buscando desenvolver mais a cultura da inovação.
+- **Design Critiqué**: encontro para debater e criticar entregáveis da equipe, coletar novas perspectivas, buscando desenvolver mais a cultura da inovação.
 - **Feedback Design**: feedback 360 de todo o time - a participação aqui é voluntária.
 - **Produto e Design** e **Feedback Time**: encontro entre o líder do time e o gestor, para que seja coletado dois aspectos do time, o primeiro sobre suas escolhas, seus entregáveis e o segundo é para falar sobre os profissionais do time.
 
