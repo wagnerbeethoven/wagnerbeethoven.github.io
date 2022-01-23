@@ -2,12 +2,12 @@
 title: Liderança em Design
 layout: post
 date: '2022-01-08'
-summary: O que eu aprendi atuando como líder após nove meses de trabalho e estudo?
+summary: Principais aprendizados depois meses atuando como Líder de Design
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2022-01-08-lideranca-design/raw/fbbe0e835fd3807fa4a927f93d3787effb280af3/pexels-miguel-a-padrian-194094.jpg
 legend: Foto&colon; <a href='https://www.pexels.com/photo/paper-boats-on-solid-surface-194094/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>Miguel
   Á. Padriñán / Pexels</a>
-description: O que eu aprendi atuando como líder após nove meses de trabalho e estudo?
+description: Principais aprendizados depois meses atuando como Líder de Design
 alt: barcos de papel, um na cor vermelha posicionado na frente e 4 barcos atrás, onde
   2 são com tom de azul claro e 2 são com tom verde claro
 tags:
