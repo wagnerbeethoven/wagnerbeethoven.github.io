@@ -15,7 +15,6 @@ tags:
 - Design Estratégico
 - Time de Design
 ---
-# Liderança em Design
 
 Quando comecei na [Procenge](http://procenge.com.br), a empresa passava por uma rotatividade enorme de profissionais com perfil de Designer. A empresa estava no momento delicado, a saída de um membro do time fazia o produto ter um atraso nas entregas incalculável, alguma precisava ser feita!
 
