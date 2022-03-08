@@ -25,6 +25,7 @@ layout: compress
   <link rel="sitemap" type="application/xml" title="Sitemap" ref="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="manifest" href="{{site.url}}/manifest.json">
   <style>{% capture critical %} {% include main.scss %} {% endcapture %}   {{ critical | scssify }}</style>
+  <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
 </head>
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{ layout }}">
