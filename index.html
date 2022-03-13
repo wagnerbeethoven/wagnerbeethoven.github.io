@@ -1,61 +1,52 @@
 ---
 layout: default
 title: Página inicial
+permalink: index
+description: "Olá, obrigado pela vista. Espero que goste :)"
 ---
-
-<section class="section-about">
-    <div class="section-about-info">
-        <h2>{{site.cta-header}}</h2>
-        <p>{{site.cta-description}}</p>
-        <a class="section-link" title="Confira todas as publicações" href="{{site.url}}/sobre">{{site.cta-link}}</a>
-    </div>
-    <figure class="section-about-picture">
-        <img title="Wagner Beethoven" alt="Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul" src='{{site.url}}/img/page/avatar.jpg' />
+<section class="intro" id="intro">
+    <figure class="picture">
+        <img id="figcaption" title="{{site.author}}" src="{{site.avatar}}" alt="{{site.alt}}">
     </figure>
+    <div class="info">
+        <div>
+            <h2 class="section-title">Olá, sou <span>Wagner Beethoven</span></h2>
+            <p>Designer há mais de dez contruíndo e projetando soluções úteis para as pessoas, com vasta experiência em usabilidade, entusiasta da acessibilidade e da tecnologia assistiva</p>
+            <a title="Saiba mais sobre mim" href="{{site.url}}/about">Conheça minha trajetória</a>
+        </div>
+
+        <ul class="social">
+            <li><a target="_blank" title="LinkedIn" href="{{site.linkedin}}"><img alt="LinkedIn" title="LinkedIn ({{site.warning}})" src="{{site.url}}/img/social/symbol-linkedin.svg"></a></li>
+            <li><a target="_blank" title="Behance" href="{{site.behance}}"><img alt="Behance" title="Behance ({{site.warning}})" src="{{site.url}}/img/social/symbol-behance.svg"></a></li>
+            <li><a target="_blank" title="Github" href="{{site.github}}"><img alt="Github" title="Github ({{site.warning}})" src="{{site.url}}/img/social/symbol-github.svg"></a></li>
+            <li><a target="_blank" title="Medium" href="{{site.medium}}"><img alt="Medium" title="Medium ({{site.warning}})" src="{{site.url}}/img/social/symbol-medium.svg"></a></li>
+        </ul>
+    </div>
+
 </section>
-<section class="section-portfolio">
-    <header class="header-section">
-        <h2 class="section-title">
+
+<section class="portfolio" id="portfolio">
+    <h2 class="section-title">
+        <a title="Acesse todas as publicações" href="{{site.url}}/portfolio">
             Portfólio
-        </h2>
-        <p class="section-description">
-            Confira os meus trabalhos mais recentes
-            <a class="section-link" title="Visualize todos os meus trabalhos" href="{{site.url}}/portfolio">Portfólio</a>
-        </p>
-    </header>
-    <div class="portfolio-container">
-        {% for post in site.categories.portfolio limit:3%}
+        </a>
+    </h2>
+    <div class="post-list">
+        {% for post in site.categories.portfolio limit:6%}
         {% include post-list.html %}
         {% endfor %}
     </div>
 </section>
 
-<section class="section-blog">
-    <header class="header-section">
-        <h2 class="section-title">Blog</h2>
-        <p class="section-description">
-            Meu dia-a-dia como designer.
-            <a class="section-link" title="Ir para a página do meu blog" href="{{site.url}}/blog">Publicações</a>
-        </p>
-    </header>
-    <div class="row">
-        {% for post in site.categories.blog limit:6 %}
+<section class="blog" id="blog">
+    <h2 class="section-title">
+        <a title="Acesse todas as publicações" href="{{site.url}}/blog">
+            Blog
+        </a>
+    </h2>
+    <div class="post-list">
+        {% for post in site.categories.blog limit:6%}
         {% include post-list.html %}
         {% endfor %}
     </div>
 </section>
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org/",
-        "@type": "Organization",
-        "name": "Agência Sumô",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jardim Atlântico",
-            "addressLocality": "Olinda",
-            "addressRegion": "Pernambuco",
-            "postalCode": "50050-120"
-        },
-        "telephone": "+5581986496080"
-    }
-</script>

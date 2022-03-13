@@ -1,14 +1,15 @@
 ---
-layout: page
+layout: default
 title: Portfólio
 permalink: portfolio
-image: "img/page/portfolio.jpg"
-alt: "Wagner está sentando com as duas mãos na mesa olhando para uma tela de laptop. Na mesa está um caso de plantas e um fone. Acima de sua cabeça há uma luminária. Toda a foto é preta e branca, exceto pelas flores do vaso e a parte interna da luminária que são amarelas."
-legend: "Olinda / 9 de setembro de 2018"
-summary: Confira todos meus meus trabalhos
+description: 'Entenda o processo de concepção do Designer'
 ---
-<section class="portfolio-container">
-    {% for post in site.categories.portfolio%}
-    {% include post-list.html %}
-    {% endfor %}
+
+<section class="portfolio" id="portfolio">
+    <h2 class="section-title">Portfólio</h2>
+    <div class="post-list">
+        {% for post in site.categories.portfolio%}
+        {% include post-list.html %}
+        {% endfor %}
+    </div>
 </section>

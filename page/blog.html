@@ -1,15 +1,16 @@
 ---
-layout: page
-permalink: blog
+layout: default
 title: Blog
-image: img/page/blog.jpg
-summary: Impressões extremamente pessoais do dia-a-dia de um Designer apaixonado por gibis, folk e drama
-legend: "Playtown - Oficina Lambe Lambe. Av. Rio Branco, Recife Antigo / 24 de abril de 2016 "
-alt: "Em uma rua, várias pessoas com idades variadas de 3 a 17 anos estão sentadas no chão sob uma loma com a atenção voltada para os seus próprios desenhos, no centro, Wagner encontra-se em pé atrás de uma mesa, usa barba e óculos, de cabelo e barbas castanho escuro, veste camisa branca, bermuda e tênis e está pitando de preto um desenho com pincel"
+permalink: blog
+description: 'Acesse leia o material compartilhado pelo Designer sobre seu processo de construção de produtos e suas impressões do dia a dia do profissional'
 ---
 
-<div class="row">
-    {% for post in site.categories.blog%}
-    {% include post-list.html %}
-    {% endfor %}
-</div>
+
+<section class="blog" id="blog">
+    <h2 class="section-title">Blog</h2>
+    <div class="post-list">
+        {% for post in site.categories.blog%}
+        {% include post-list.html %}
+        {% endfor %}
+    </div>
+</section>

@@ -1,6 +1,17 @@
-<div style="cursor: pointer" class="col-12 col-md-4 post-link mb-4" onClick="window.open( '{{ post.url }}','_top' ); return false" title="Clique para acessar o texto '{{ post.title }}'">
-    <div style="background-image: url({{ post.image }})" class="post-link-img"></div>
-    <h5 class="post-link-titulo">{{ post.title }}</h5>
-    <p class="post-link-descricao">{{ post.summary }}</p>
-    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-</div>
+<article id="{{post.title | slugify}}">
+    <div class="post-container">
+        <a target="_blank" href="{{ post.link }}" class="post-picture" title="{{site.warning}}" style="background-image:url({{ post.banner }})">
+        </a>
+        <header>
+            <h3 class="post-title">
+                <a target="_blank" href="{{ post.link }}" title="{{site.warning}}">
+                    {{ post.title }}
+                </a>
+            </h3>
+        </header>
+        <span>{{ post.postdate }}<br> &mdash;</span>
+        <p class="post-description">
+            {{ post.summary }}
+        </p>
+    </div>
+</article>

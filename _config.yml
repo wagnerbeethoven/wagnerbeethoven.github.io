@@ -1,34 +1,18 @@
-name: Agência Sumô
-description: Portfólio do designer Wagner Beethoven!
-meta-description: "Portfólio de Wagner Beethoven, designer com experiência na concepção, criação de artefatos digitas, entusiasta da acessibilidade e tecnologia assistivas"
-image-default: "img/image-default.jpg"
-
-cta-header: "Olá, me chamo Wagner e sou UX/UI Designer"
-cta-description: "Há mais de dez construo e projeto coisas úteis para as pessoas. Tenho experiência em usabilidade, sou entusiasta da acessibilidade e da tecnologia assistiva"
-cta-link: "Conheça minha trajetória"
+name: "Agência Sumô"
+author: "Wagner Beethoven"
+description: "Portfólio de Wagner Beethoven, designer com experiência na concepção, criação de artefatos digitas, entusiasta da acessibilidade e tecnologia assistivas"
+email: "<a href='mailto:contato@sumo.pe' title='Mande um oi ☺️'><strong>contato@sumo.pe</strong></a>"
+warning: abrirá nova aba
+avatar: "http://sumo.pe/img/page/avatar.jpg"
+alt: "Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul"
+medium: "https://wagnerbeethoven.medium.com/"
+behance: "https://www.behance.net/wagnerbeethoven/"
+github: "https://www.github.com/wagnerbeethoven/"
+linkedin: "https://www.linkedin.com/in/wagnerbeethoven/"
 
 # url: "http://sumo.pe"
 # baseurl: "/"
-permalink: /:categories/:title.html
-
-sass:
-  input_file: sass/main.scss
-  output_file: css/main.css
-  sass_dir: _sass
-  style: compressed
-  indentWidth: 2
-  outputStyle: nested
-  precision: 10
-
-about-name: Wagner Beethoven
-about-title: UX/UI Designer
-about-email: contato@sumo.pe
-about-phone: +55 81 986 496 080
-about-neighborhood: Jardim Atlântico
-about-city: Olinda
-about-state: Pernambuco
-about-altavatar: "Wagner tem pele branca, cabelos e barba curtos e pretos, tem alargador na orelha esquerda prateado, veste camisa cinza, usa relógio preto e aliança dourada, está batebdo palmas"
-
+permalink: /:categories/:title
 
 compress_html:
   clippings: []
@@ -41,5 +25,3 @@ compress_html:
 
 plugins:
   - jekyll-feed
-  - jekyll-admin
-  
