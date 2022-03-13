@@ -2,9 +2,65 @@
 layout: compress
 ---
 
+<<<<<<< HEAD
 {% include head.html %}
 {% include header.html %}
 <main>
     {{content}}
 </main>
 {% include footer.html %}
+=======
+<!doctype html>
+<html lang="pt-br" class="no-js">
+
+<head>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.meta-description }}{% endif %}"> <!-- FAVICON -->
+  <link href="{{site.url}}/img/favicon/favicon-48x48.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+  <link href="{{site.url}}/img/favicon/favicon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+  <link href="{{site.url}}/img/favicon/favicon-96x96.png" rel="apple-touch-icon-precomposed" sizes="96x96">
+  <link href="{{site.url}}/img/favicon/favicon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+  <link href="{{site.url}}/img/favicon/favicon-168x168.png" rel="apple-touch-icon-precomposed" sizes="168x168">
+  <link href="{{site.url}}/img/favicon/favicon-192x192.png" rel="apple-touch-icon-precomposed" sizes="192x192">
+  <link rel="shortcut icon" href="{{site.url}}/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{'/feed.xml'| prepend: site.baseurl | prepend: site.url }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" ref="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="manifest" href="{{site.url}}/manifest.json">
+  <style>{% capture critical %} {% include main.scss %} {% endcapture %}   {{ critical | scssify }}</style>
+  <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
+</head>
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+<body class="{{ layout }}">
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <h1 class="site-logo">
+      <figure><img src="{{ site.url }}/img/logo.svg" alt="Logo {{site.name}}" title="Logo {{site.name}}" class="svg" alt="Desenho de um lutador de sumô, de pele clara, cabelo escuro e vestindo uma mawashi, a cuequinha do lutador na cor verde" /></figure>
+      <h1 class="site-name"> <a title="Página inicial" href="{{ site.baseurl }}/" class="site-title">{{ site.name }}</a> <span class="site-description">{{ site.description }}</span> </h1> <!-- MENU --> {% assign current = page.url | downcase | split: '/' %} <nav class="menu" id="menu">
+        <!-- <a title="Página inicial" href='{{site.url}}' {% if current[1]=='/' %}class='active' {% endif %}>Página inicial</a> --> <a {% if current[1]=='portfolio' %}class='menu-item menu-item-active' {% else %} class='menu-item' {% endif %} title="Portfolio" href='{{site.url}}/portfolio'>Portfolio</a> <a {% if current[1]=='blog' %}class='menu-item menu-item-active' {% else %} class='menu-item' {% endif %} title="Blog" href='{{site.url}}/blog'>Blog</a> <a {% if current[1]=='sobre' %}class='menu-item menu-item-active' {% else %} class='menu-item' {% endif %} title="Sobre" href='{{site.url}}/sobre'>Sobre</a> <a {% if current[1]=='contato' %}class='menu-item menu-item-active' {% else %} class='menu-item' {% endif %} title="Contato" href='{{site.url}}/contato'>Contato</a>
+      </nav> <!-- MENU -->
+  </header> <!-- HEADER -->
+  <main>
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumbs"> {% assign crumbs = page.url | remove:'/index.html' | split: '/' %} <a title="Página inicial" href="/">Página inicial</a> {% for crumb in crumbs offset: 1 %} {% if forloop.last %} <span class="divider">/</span> <span title="{{ page.title }}" class="breadcrumb-current">{{ page.title }}</span> {% else %} <span class="divider">/</span><!-- <a title=" {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}"> --> <span title="{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}"> {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }} </span> <!-- </a> --> {% endif %} {% endfor %} </div> <!-- BREADCRUMBS --> {{ content }}
+    <!-- FOOTER -->
+    <div class="top"> <a title="Ir para o início da página" href="#top"> <img title="Ir para o início da página" alt="Seta apontando para cima" src="{{site.url}}/img/icons/up.svg"></a> </div>
+    <footer class="site-footer">
+      <p><a xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">{{site.name}}</a> é feito com <span class="love">💚</span> & ☕ em <a title="Cidade" href="https://goo.gl/maps/acnpMUs1ASaoUQwSA">Olinda</a> por <a title="Autor do site" xmlns:cc="http://creativecommons.org/ns#" href="{{site.url}}/" property="cc:attributionName" rel="cc:attributionURL">Wagner Beethoven</a>.</p>
+      <p>Esta obra está em constante mudança. </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="{{site.url}}/js/toc.js"></script>
+    <script src="{{site.url}}/js/main.js"></script> <!-- FOOTER -->
+  </main>
+</body>
+
+</html>
+>>>>>>> 302b98eb010532adb2414f85d29485efed0b5bce
