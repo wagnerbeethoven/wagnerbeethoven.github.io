@@ -423,6 +423,10 @@ footer p:first-child {
 .column-nav figure img {
   width: 100%;
   transform: rotateY(180deg);
+  border-radius: 100%;
+}
+.column-nav figure img:hover{
+  box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
 figcaption {
   display: none;
