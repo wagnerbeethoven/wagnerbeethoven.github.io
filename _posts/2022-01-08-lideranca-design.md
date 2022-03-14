@@ -1,5 +1,5 @@
 ---
-title: Liderança em Design
+layout: post
 category: blog
 title: "Liderança em Design"
 link: "https://wagnerbeethoven.medium.com/lideran%C3%A7a-em-design-ag%C3%AAncia-sum%C3%B4-1f0b33f1c24e"
