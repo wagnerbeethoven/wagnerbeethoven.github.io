@@ -117,9 +117,12 @@ section {
   flex-direction: column;
   text-align: center;
 }
-.container-hi main a,
+.container-talk main a,
 .container-about main a {
   text-decoration: underline;
+}
+.container-talk .social {
+  margin-top: 1rem;
 }
 main p a[href*="https"]:before {
   content: "";
@@ -425,7 +428,7 @@ footer p:first-child {
   transform: rotateY(180deg);
   border-radius: 100%;
 }
-.column-nav figure img:hover{
+.column-nav figure img:hover {
   box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
 figcaption {
