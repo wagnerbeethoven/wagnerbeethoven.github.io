@@ -282,7 +282,7 @@ footer p:first-child {
 
 .post-picture {
   width: 100%;
-  height: 10rem;
+  height: 20rem;
   display: block;
   background-size: cover;
   background-position: center;
@@ -292,9 +292,6 @@ footer p:first-child {
   border-radius: var(--border-radius);
 }
 
-.portfolio .post-picture {
-  height: 20rem;
-}
 .post-picture:before,
 .post-picture:after {
   display: block;
