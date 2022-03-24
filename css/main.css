@@ -225,18 +225,18 @@ main p a[href*="https"]:before {
   padding-left: 0;
 }
 
-.social li {
+.social a {
   height: 24px;
   width: 24px;
   display: inline-block;
   margin-right: 2rem;
 }
 
-.social li:first-of-type {
+.social a:first-of-type {
   width: 75px;
 }
 
-.social li img {
+.social a img {
   max-width: 100%;
 }
 
