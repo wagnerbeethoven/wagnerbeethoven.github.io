@@ -12,15 +12,15 @@ description: 'Conheça todo o background do Designer'
                 <img title="Wagner Beethoven" src="{{site.url}}/{{site.avatar}}" alt="{{site.alt}}">
                 <figcaption>Wagner Beethoven</figcaption>
             </figure>
-            <ul>
-                <li><a name="anchor" title="ir para a introdução" href="#intro">{{page.title}}</a></li>
-                <li><a name="anchor" title="ir para os detalhes pessoais" href="#detail">Detalhes pessoais</a></li>
-                <li><a name="anchor" title="ir para as experiência profissional" href="#experience">Experiência Profissional</a></li>
-                <li><a name="anchor" title="ir para os trabalhos voluntários" href="#voluntary">Trabalhos voluntários</a></li>
-                <li><a name="anchor" title="ir para a escolaridade" href="#education">Escolaridade</a></li>
-                <li><a name="anchor" title="ir para as certificações" href="#certification">Certificações</a></li>
-                <li><a name="anchor" title="ir para os cursos" href="#course">Cursos</a></li>
-            </ul>
+            <nav>
+                <a accesskey="5" title="ir para a introdução" href="#intro">{{page.title}}</a>
+                <a accesskey="6" title="ir para os detalhes pessoais" href="#detail">Detalhes pessoais</a>
+                <a accesskey="7" title="ir para as experiência profissional" href="#experience">Experiência Profissional</a>
+                <a title="ir para os trabalhos voluntários" href="#voluntary">Trabalhos voluntários</a>
+                <a accesskey="8" title="ir para a escolaridade" href="#education">Escolaridade</a>
+                <a accesskey="9" title="ir para as certificações" href="#certification">Certificações</a>
+                <a accesskey="0" title="ir para os cursos" href="#course">Cursos</a>
+            </nav>
         </div>
     </div>
     <div class="column-content">
@@ -52,8 +52,8 @@ description: 'Conheça todo o background do Designer'
                         <img src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}">
                     </div>
                     <div class="career-detail">
-                        {% if experience.name %}<h5 class="career-activity">{{experience.name}}</h5>{% endif %}
-                        {% if experience.company %}<h6 class="career-company">{{experience.company}}</h6>{% endif %}
+                        {% if experience.name %}<h3 class="career-activity">{{experience.name}}</h3>{% endif %}
+                        {% if experience.company %}<h4 class="career-company">{{experience.company}}</h4>{% endif %}
                         {% if experience.date %}<small class="career-date">{{experience.date}}</small>{% endif %}
                         {% if experience.description %}<p class="career-description">{{experience.description}}</p>{% endif %}
                     </div>
@@ -70,8 +70,8 @@ description: 'Conheça todo o background do Designer'
                         <img src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}">
                     </div>
                     <div class="career-detail">
-                        {% if experience.name %}<h5 class="career-activity">{{experience.name}}</h5>{% endif %}
-                        {% if experience.company %}<h6 class="career-company">{{experience.company}}</h6>{% endif %}
+                        {% if experience.name %}<h3 class="career-activity">{{experience.name}}</h3>{% endif %}
+                        {% if experience.company %}<h4 class="career-company">{{experience.company}}</h4>{% endif %}
                         {% if experience.date %}<small class="career-date">{{experience.date}}</small>{% endif %}
                         {% if experience.description %}<p class="career-description">{{experience.description}}</p>{% endif %}
                     </div>
@@ -90,8 +90,8 @@ description: 'Conheça todo o background do Designer'
                         <img src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}">
                     </div>
                     <div class="career-detail">
-                        {% if education.name %}<h5 class="career-activity">{{education.name}}</h5>{% endif %}
-                        {% if education.company %}<h6 class="career-company">{{education.company}}</h6>{% endif %}
+                        {% if education.name %}<h3 class="career-activity">{{education.name}}</h3>{% endif %}
+                        {% if education.company %}<h4 class="career-company">{{education.company}}</h4>{% endif %}
                         {% if education.date %}<small class="career-date">{{education.date}}</small>{% endif %}
                         {% if education.description %}<p class="career-description">{{education.description}}</p>{% endif %}
                     </div>
@@ -109,8 +109,8 @@ description: 'Conheça todo o background do Designer'
                         <img src="{{site.url}}/{{certification.logo}}" title="{{certification.company}}" alt="Logo {{certification.name}}">
                     </div>
                     <div class="career-detail">
-                        {% if certification.name %}<h5 class="career-activity">{{certification.name}}</h5>{% endif %}
-                        {% if certification.company %}<h6 class="career-company">{{certification.company}}</h6>{% endif %}
+                        {% if certification.name %}<h3 class="career-activity">{{certification.name}}</h3>{% endif %}
+                        {% if certification.company %}<h4 class="career-company">{{certification.company}}</h4>{% endif %}
                         {% if certification.date %}<small class="career-date">{{certification.date}}</small>{% endif %}
                         {% if certification.description %}<p class="career-description">{{certification.description}}</p>{% endif %}
                     </div>
