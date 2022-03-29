@@ -8,11 +8,8 @@ description: 'Conheça todo o background do Designer'
 <div class="column-container">
     <div class="column-nav">
         <div>
-            <figure>
-                <img title="Wagner Beethoven" src="{{site.url}}/{{site.avatar}}" alt="{{site.alt}}">
-                <figcaption>Wagner Beethoven</figcaption>
-            </figure>
-            <nav>
+            <img title="Wagner Beethoven" src="{{site.url}}/{{site.avatar}}" alt="{{site.alt}}">
+            <nav aria-labelledby="anchor-menu">
                 <a accesskey="5" title="ir para a introdução" href="#intro">{{page.title}}</a>
                 <a accesskey="6" title="ir para os detalhes pessoais" href="#detail">Detalhes pessoais</a>
                 <a accesskey="7" title="ir para as experiência profissional" href="#experience">Experiência Profissional</a>
@@ -23,7 +20,7 @@ description: 'Conheça todo o background do Designer'
             </nav>
         </div>
     </div>
-    <div class="column-content">
+    <div class="column-content" id="anchor-menu">
         <section id="intro" class="section-intro">
             <h2 class="section-title">{{page.title}}</h2>
             <p> Me chamo <strong>Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="https://wagnerbeethoven.medium.com/refiz-meu-portfolio-mais-uma-vez-f3caadb61052#0c65" title="{{site.warning}}" target="_blank">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos trintas anos, atualmente trabalho na <strong>{{ site.data.experience.experience[0].company }}</strong> como <strong>{{ site.data.experience.experience[0].name }}</strong>.</p>

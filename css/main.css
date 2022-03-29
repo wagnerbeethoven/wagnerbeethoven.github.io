@@ -21,10 +21,17 @@
   color: #fff;
 }
 
+html,
 body {
   margin: 0 auto;
   color: var(--color-text);
-  font: 16px/1.5 "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+
   padding: 3rem 1rem;
 }
 
@@ -201,10 +208,6 @@ main p a[href*="https"]:before {
   background: var(--color-primary);
 }
 
-.section-title span:last-of-type:after {
-  background: yellow;
-}
-
 .section-title,
 .section-title h2 * {
   font-weight: 600;
@@ -321,7 +324,8 @@ footer p:first-child {
 }
 
 .post-description {
-  color: #6c757d;
+  color: #333;
+  ;
   font-size: medium;
 }
 
@@ -424,7 +428,6 @@ footer p:first-child {
 
 .career-date {
   margin-bottom: 2rem;
-  opacity: 0.7;
   font-size: 0.875em;
 }
 
@@ -484,23 +487,16 @@ footer p:first-child {
   top: -1px;
 }
 
-.column-nav figure {
-  margin: 0;
-}
-
-.column-nav figure img {
+.column-nav img {
   width: 100%;
   transform: rotateY(180deg);
   border-radius: 100%;
 }
 
-.column-nav figure img:hover {
+.column-nav img:hover {
   box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
 
-figcaption {
-  display: none;
-}
 
 .column-container {
   display: flex;
@@ -575,7 +571,7 @@ figcaption {
     margin-right: 2rem;
   }
 
-  .logo{
+  .logo {
     display: flex;
     align-items: flex-end;
     text-align: left;
