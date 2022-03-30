@@ -229,19 +229,18 @@ main p a[href*="https"]:before {
 }
 
 .social a {
-  height: 24px;
-  width: 24px;
   display: inline-block;
   margin-right: 2rem;
 }
 
-.social a:first-of-type {
+.social a img {
+  width: 24px;
+  height: 24px;
+}
+.social a:first-of-type img{
   width: 75px;
 }
 
-.social a img {
-  max-width: 100%;
-}
 
 /* Animation */
 @keyframes bounce {
