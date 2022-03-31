@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 category: blog
 title: "Liderança em Design"
