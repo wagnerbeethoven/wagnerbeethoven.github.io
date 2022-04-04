@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 category: blog
 title: "Lições ao me tornar líder de um time de design"
