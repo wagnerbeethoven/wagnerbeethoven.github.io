@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: "Design Racista"
+title: "Recorte de uma produção tecnológica racista"
 link: "https://wagnerbeethoven.medium.com/design-racista-79435622854c"
 date: "2021-11-18"
 postdate: "Novembro/ 2021"
