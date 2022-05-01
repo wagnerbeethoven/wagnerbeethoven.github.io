@@ -7,26 +7,36 @@ description: 'Página com todos os links do site'
 
 <header class="archive" id="archive">
     <h2 class="section-title">{{page.title}}</h2>
-<p>
-    Navegue pelas seções:
-    <a href="#portfolio"><strong>Portfólio</strong></a> &bull; <a href="#blog"><strong>Blog</strong></a>
-</p>
+    <p>
+        Navegue pelas seções:
+        <a title="Acesse o portfólio" href="#portfolio"><strong>Portfólio</strong></a> &bull; <a title="Acesse o blog" href="#blog"><strong>Blog</strong></a>
+    </p>
 </header>
 <hr>
 <section class="portfolio" id="portfolio">
     <h3 class="section-title">Portfólio</h3>
-    <div class="post-list">
+    <ul>
         {% for post in site.categories.portfolio%}
-        {% include post-list.html %}
+        <li id="{{post.title | slugify}}">
+            <a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
+                {{ post.title }}
+            </a>
+
+        </li>
         {% endfor %}
-    </div>
+    </ul>
 </section>
 <hr>
 <section class="blog" id="blog">
     <h3 class="section-title">Blog</h3>
-    <div class="post-list">
+    <ul>
         {% for post in site.categories.blog%}
-        {% include post-list.html %}
+        <li id="{{post.title | slugify}}">
+            <a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
+                {{ post.title }}
+            </a>
+
+        </li>
         {% endfor %}
-    </div>
+    </ul>
 </section>
