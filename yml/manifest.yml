@@ -16,7 +16,7 @@ permalink: manifest.json
   "url": "https://sumo.pe",
   "scope": "/",
   "icons": [
-    {"src":"http://sumo.pe/img/apple-touch-icon-precomposed.png.png",  "sizes":  "192x192",  "type": "image/png"}
+    {"src":"http://sumo.pe/img/apple-touch-icon-precomposed.png",  "sizes":  "192x192",  "type": "image/png"}
     ],
   "screenshots": []
   }
