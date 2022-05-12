@@ -1,4 +1,4 @@
-/* VARIABLES */
+/* Variables */
 :root {
   --color-primary: #147979;
   --color-border: #dee2e6;
@@ -6,7 +6,7 @@
   --border-radius: 0.25rem;
 }
 
-/* GENERAL */
+/* General */
 * {
   transition: background-color 0.5s ease-out !important;
 }
@@ -394,7 +394,6 @@ footer p:first-child {
 }
 
 .career-logo {
-  /* min-width: calc(100px + 2rem); */
   margin-bottom: 1rem;
 }
 
