@@ -1,4 +1,4 @@
-/* VARIABLES */
+/* Variables */
 :root {
   --color-primary: #147979;
   --color-border: #dee2e6;
@@ -6,7 +6,7 @@
   --border-radius: 0.25rem;
 }
 
-/* GENERAL */
+/* General */
 * {
     transition: background-color 0.5s ease-out !important;
 }
@@ -96,8 +96,7 @@ hr:after {
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
+  margin: 0;
 }
 
 .site-header {
@@ -311,6 +310,7 @@ footer p:first-child {
   display: grid;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .post-picture {
@@ -395,7 +395,6 @@ footer p:first-child {
 }
 
 .career-logo {
-  /* min-width: calc(100px + 2rem); */
   margin-bottom: 1rem;
 }
 
@@ -606,7 +605,7 @@ footer p:first-child {
   }
 
   .post-list {
-    grid-template-columns: repeat(3, 1fr);
+   
   }
 
   .column-container {
