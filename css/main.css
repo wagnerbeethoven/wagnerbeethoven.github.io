@@ -376,6 +376,11 @@ footer p:first-child {
   background: url(../img/social/logo-behance.svg) 20px 20px no-repeat;
 }
 
+.portfolio .post-picture-drive:hover:before{
+  background: url(../img/social/logo-drive.svg) 20px 20px no-repeat;
+
+}
+
 .container-about section {
   min-height: auto;
 }
