@@ -368,17 +368,16 @@ footer p:first-child {
   transition: opacity 0.25s linear;
 }
 
-.blog .post-picture:hover:before {
-  background: url(../img/social/logo-medium.svg) 20px 20px no-repeat;
-}
-
 .portfolio .post-picture:hover:before {
   background: url(../img/social/logo-behance.svg) 20px 20px no-repeat;
 }
 
-.portfolio .post-picture-drive:hover:before{
-  background: url(../img/social/logo-drive.svg) 20px 20px no-repeat;
+.blog .post-picture:hover:before {
+  background: url(../img/social/logo-medium.svg) 20px 20px no-repeat;
+}
 
+.blog .post-picture-drive:hover:before {
+  background: url(../img/social/logo-drive.svg) 20px 20px no-repeat;
 }
 
 .container-about section {
