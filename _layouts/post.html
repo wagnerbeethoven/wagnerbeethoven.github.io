@@ -3,10 +3,45 @@ layout: default
 ---
 
 <head>
-  <meta http-equiv="refresh" content="5; URL='{{page.link}}'" />
+  <meta http-equiv="refresh" content="3; URL='{{page.link}}'" />
 </head>
 
 <body>
   <p>Esta página tem num novo endereço.</p>
   <p>Se você não for encaminhado automaticamente, <a href="{{page.link}}">clique aqui</a>.</p>
 </body>
+
+<!-- 
+<figure class="article-banner">
+  <img src="{{ page.banner }}" alt="{{ page.banner-alt }}">
+  <figcaption>{{ page.banner-caption }}</figcaption>
+</figure>
+<header class="article-header">
+  <h1 class="article-title">{{page.title}}</h1>
+  <div class="article-summary">{{page.summary}}</div>
+</header>
+<article class="article-section">
+
+  <article class="article-content">
+    {{content}}
+
+    {% include rights.html %}
+  </article>
+  <aside class="article-aside">
+
+    <details>
+      <summary class="toc-title">Índice da página</summary>
+      <div id="toc"></div>
+    </details>
+  </aside>
+</article>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{site.url}}/toc.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#toc').toc();
+  });
+</script>
+-->
