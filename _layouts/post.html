@@ -11,29 +11,31 @@ layout: default
   <p>Se você não for encaminhado automaticamente, <a href="{{page.link}}">clique aqui</a>.</p>
 </body>
 
+
 <!-- 
-<figure class="article-banner">
-  <img src="{{ page.banner }}" alt="{{ page.banner-alt }}">
-  <figcaption>{{ page.banner-caption }}</figcaption>
-</figure>
-<header class="article-header">
-  <h1 class="article-title">{{page.title}}</h1>
-  <div class="article-summary">{{page.summary}}</div>
-</header>
-<article class="article-section">
+<article class='{% if page.setup == "hide" %}index-hide{% elsif page.setup == null %}{% endif %}' id="article-intro">
 
-  <article class="article-content">
-    {{content}}
+  <figure class="article-banner">
+    <img src="{{ page.banner }}" alt="{{ page.banner-alt }}">
+    <figcaption>{{ page.banner-caption }}</figcaption>
+  </figure>
+  <header class="article-header">
+    <h1 class="article-title">{{page.title}}</h1>
+    <div class="article-summary">{{page.summary}}</div>
+  </header>
+  <div class="article-section">
 
-    {% include rights.html %}
-  </article>
-  <aside class="article-aside">
+    <div class="article-content">
+      {{content}}
 
-    <details>
-      <summary class="toc-title">Índice da página</summary>
-      <div id="toc"></div>
-    </details>
-  </aside>
+      {% include rights.html %}
+    </div>
+
+    <aside class="article-aside">
+
+        <details id="toc"></details>
+    </aside>
+  </div>
 </article>
 
 
@@ -43,5 +45,4 @@ layout: default
   $(document).ready(function () {
     $('#toc').toc();
   });
-</script>
--->
+</script>-->

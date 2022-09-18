@@ -972,7 +972,7 @@ Para compatibilidade, coloque linhas em branco antes e depois das régua horizon
   </thead>
   <tbody>
     <tr>
-      <td><span class="td-info">✅ Faça isso<br></span><code>Tente colocar uma linha em branco antes de ...<br><br>---<br><br>... e depois de uma regra horizontal <code>&lt;hr&gt;</code>.</code></td>
+      <td><span class="td-info">✅ Faça isso<br></span><code>Tente colocar uma linha em branco antes de...<br><br>---<br><br>... e depois de uma regra horizontal <code>&lt;hr&gt;</code>.</code></td>
       <td><span class="td-info">❌ Não faça isso<br></span><code>Sem linhas em branco, isso seria um título.<br>--- <br>Não faça isso!</code></td>
     </tr>
   </tbody>
@@ -1182,7 +1182,7 @@ Você pode usar uma barra invertida para exibir os caracteres a seguir:
       <td><span class="td-info">Nome </span>Sinal de menos (hífen)</td>
     </tr>
     <tr>
-      <td><span class="td-info">Caractere</span> .</td>
+      <td><span class="td-info">Caractere</span>.</td>
       <td><span class="td-info">Nome </span>Ponto</td>
     </tr>
     <tr>

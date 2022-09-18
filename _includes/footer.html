@@ -1,10 +1,21 @@
 <footer class="site-footer">
-    <a class="top" title="Ir para o início da página" href="#top"><img title="Ir para o início da página" alt="Seta apontando para cima" src="{{site.url}}/img/top.svg"></a>
+    <a class="top" title="Ir para o início da página" href="#top"><img title="Ir para o início da página"
+            alt="Seta apontando para cima" src="{{site.url}}/img/top.svg"></a>
     <p>{{site.name}} é feito com <span class="love">💚</span> & ☕ em Olinda por <span>{{site.author}}</span>.</p>
-    <p>Esta obra está em constante mudança. &mdash; <a title="Acesse todo o conteúdo do site" href="{{site.url}}/archive">Todas as publicações do site</a></p>
+    <p>Esta obra está em constante mudança. &mdash; <a title="Acesse todo o conteúdo do site"
+            href="{{site.url}}/archive">Todas as publicações do site</a></p>
 </footer>
 
+<script>
 
+    (() => {
+        (document.querySelectorAll('a')).forEach(link => {
+            link.hostname !== location.hostname && link.setAttribute('target', '_blank');
+            link.hostname !== location.hostname && link.setAttribute('title', 'O link irá abrir uma nova aba');
+            link.hostname !== location.hostname && link.setAttribute('rel', 'noopener noreferrer');
+        })
+    })();
+</script>
 </body>
 
 </html>

@@ -2,13 +2,13 @@
 (function($){
     $.fn.toc = function(options) {
       var defaults = {
-        noBackToTopLinks: true,
-        title: '',
+        noBackToTopLinks: false,
+        title: '<summary class="toc-title">Índice da página</summary>',
         minimumHeaders: 6,
         headers: 'h1, h2, h3, h4, h5, h6',
         listType: 'ol', // values: [ol|ul]
-        showEffect: 'none', // values: [show|slideDown|fadeIn|none]
-        showSpeed: '0', // set to 0 to deactivate effect
+        showEffect: 'show', // values: [show|slideDown|fadeIn|none]
+        showSpeed: '', // set to 0 to deactivate effect
         classes: { list: 'toc-list',
                    item: 'toc-item',
                    link: 'toc-anchor'
@@ -57,7 +57,7 @@
   
       var level = get_level(headers[0]),
         this_level,
-        html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
+        html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\"> <li class='toc-item'><a class='toc-anchor' title='Definição' href='#article-intro'>Início</a></li>";
       headers.on('click', function() {
         if (!settings.noBackToTopLinks) {
           window.location.hash = this.id;

@@ -623,10 +623,14 @@ footer p:first-child {
   position: sticky;
   top: 10xpx;
   order: 1;
-  border: 1px solid var(--color-border);
-  padding: 0.5rem;
+width: 100%;
   font-size: 0.8rem;
 
+}
+
+.article-aside details {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
 }
 
 .article-aside .toc-title {
@@ -694,8 +698,15 @@ footer p:first-child {
   margin-right: 0.5rem;
 }
 
+.index-hide .article-content {
+  max-width: 100%;
+  padding: 0;
+}
 
-
+.index-hide .article-aside {
+  display: none;
+  overflow: hidden;
+}
 
 
 .article-content h1,

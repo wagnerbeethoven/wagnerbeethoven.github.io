@@ -22,7 +22,7 @@ banner-alt: "Crianças negras gritando e um deles está com um megafone"
 
 ## Raça e Cor
 
-**Só existe raça humana!** . A afirmação é chocante, mas biologicamente não existe essa diferenciação. O geneticista frances André Langaney afirma que:
+**Só existe raça humana!**. A afirmação é chocante, mas biologicamente não existe essa diferenciação. O geneticista frances André Langaney afirma que:
 
 > “ No início das pesquisas em genética, os cientistas, que tinham em mente as classificações raciais herdadas do século passado, pensavam que iriam encontrar os genes dos Amarelos, dos Negros, dos Brancos… Pois bem, nada disso, não foram encontrados. Em todos os sistemas genéticos humanos conhecidos, os repertórios de genes são os mesmos
 
@@ -54,7 +54,7 @@ Fonte: IBGE, Diretoria de Pesquisas, Coordenação de População e Indicadores 
 
 # Distribuição de sentenças por cor do réu
 
-<div class="container-iframe"><iframe width="100%" height="566" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe></div>
+<div class="container-iframe"><iframe  seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe></div>
 
 Adaptação do gráfico disponível na página “[Negros são mais condenados por tráfico e com menos drogas em SP](https://www.smokebuddies.com.br/negros-sao-mais-condenados-por-trafico-e-com-menos-drogas-em-sp/)”.
 
@@ -94,7 +94,7 @@ Outra propaganda problemática foi a da chinesa Qiobi (2016) na campanha de dete
 
 <div class="container-iframe"><iframe src="https://www.youtube.com/embed/Few8kJ0zfnY" title="Racism in a Chinese laundry detergent advertisement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-A moda não podia passar sem cometer atos racistas, o movimento que só é um espelho da sociedade trouxe a e a . Ambas as marcas trouxeram características do corpo negro, como se fosse algum acessório — literalmente.
+A moda não podia passar sem cometer atos racistas, o movimento que só é um espelho da sociedade trouxe a e a. Ambas as marcas trouxeram características do corpo negro, como se fosse algum acessório — literalmente.
 
 ![Estampa racista da grife Maria Filó](https://miro.medium.com/max/700/0*4dZmdB_GfxB4G9sx.png "Estampa racista da grife Maria Filó")
 
@@ -112,7 +112,7 @@ Leia a matéria original acessando o link do [The Intercept](https://theintercep
 
 No Brasil, a cerveja Devassa (2013), objetificou o corpo negro, “[Pelo corpo que se conhece a verdadeira negra](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/33330dfcb074aec52f2d8332272772295d667830/devassa-2013.jpeg)” e ainda trazia o texto para acrescentar ao show de racismo: “Devassa Negra. Encorpada. Estilo Dark Ale. De Alta fermentação. Cremosa e com aroma de malte torrado”.
 
-A Bombril comercializou por 70 anos a esponja de aço com o nome , ficou dos anos 1950 até os [anos 2020](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-2020.jpg).
+A Bombril comercializou por 70 anos a esponja de aço com o nome, ficou dos anos 1950 até os [anos 2020](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/3deae2e851ec835fe10454caabb7e711a694959a/krespinha-2020.jpg).
 
 A Globo, no seu projeto Criança Esperança (2016), vinculou na TV um vídeo cruel demais para as crianças negras que participaram, elas foram colocadas para lerem frases racistas para uma mulher negra. A gente (eu, pelo menos) se emocionou pelas frases, pelas situações vividas, a gravação em si é um gatilho desnecessário para essas crianças.
 
@@ -238,9 +238,9 @@ Google: fiz uma pesquisa utilizado as palavras-chaves “cabelos bonitos” e �
 
 # População preta X Mercado de TI
 
-[…] Na sede do Facebook (Califórnia, EUA) 33% dos funcionários são mulheres e apenas 2% são negros . No Google, cerca de 30% são mulheres e também 2% são negros . No Brasil, uma mulher negra ganha 60% que um homem branco.
+[…] Na sede do Facebook (Califórnia, EUA) 33% dos funcionários são mulheres e apenas 2% são negros. No Google, cerca de 30% são mulheres e também 2% são negros. No Brasil, uma mulher negra ganha 60% que um homem branco.
 
-De acordo com o IPEA (Instituto de Pesquisa Econômica Aplicada), em 2015, a média salarial dos homens brancos era de R$ 2.509,7 , enquanto a mulher negra, atrás da mulher branca e homem negro, ganhou uma média de R$ 1.027,5 .
+De acordo com o IPEA (Instituto de Pesquisa Econômica Aplicada), em 2015, a média salarial dos homens brancos era de R$ 2.509,7, enquanto a mulher negra, atrás da mulher branca e homem negro, ganhou uma média de R$ 1.027,5.
 
 Fonte: [Geledés](https://www.geledes.org.br/conheca-infopreta-primeira-e-unica-empresa-de-tecnologia-criada-por-mulheres-negras-e-lgbts/)
 
@@ -267,7 +267,7 @@ Em 2020, O [Panorama UX revelou o resultado da pesquisa com 1210 profissionais](
 
 # E as mulheres negras na tecnologia?
 
-Segundo o INEP, dos **7.339 formados em ciências da computação em 2010 , apenas 1091 (14,8%)** eram mulheres programadoras. A pesquisa Nacional por Amostra de Domicílios (PNAD), indicou que dos mais de **580 mil profissionais de TI** (Tecnologia da Informação) que atuam no Brasil, apenas **20% são do sexo feminino**.
+Segundo o INEP, dos **7.339 formados em ciências da computação em 2010, apenas 1091 (14,8%)** eram mulheres programadoras. A pesquisa Nacional por Amostra de Domicílios (PNAD), indicou que dos mais de **580 mil profissionais de TI** (Tecnologia da Informação) que atuam no Brasil, apenas **20% são do sexo feminino**.
 
 > Em 2015, 74,2% dos ingressantes do curso de Computação da USP eram brancos e apenas **38 das 330 pessoas matriculadas eram mulheres** e apenas 25.6% dos bolsistas do CNPq se declararam pretos ou pardos.
 > 
