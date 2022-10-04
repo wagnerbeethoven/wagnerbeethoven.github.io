@@ -3,7 +3,7 @@ published: false
 layout: post
 date: 2020-09-23
 title: "Guia Markdown"
-summary: "Guia de referência escrito por Matt Cone traduzido para o português"
+description: "Guia de referência escrito por Matt Cone traduzido para o português"
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/atom.png
 legend: Print do Editor Atom
@@ -178,7 +178,7 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
 ## Sintaxe Básica {#basic-syntax}
 
 <div class="table-responsive">
-<table summary="Sintaxe básica">
+<table description="Sintaxe básica">
     <thead>
         <tr>
             <th>Elemento</th>
@@ -236,7 +236,7 @@ Esses são os elementos descritos no documento do John Gruber. Todos os aplicati
 
 Para criar um título, adicione sinais numéricos (`#`) na frente de uma palavra ou frase. O número de sinais numéricos que você usa deve corresponder ao nível do título. Por exemplo, para criar um título de nível três (`<h3>`), use três sinais numéricos (por exemplo, `### Meu cabeçalho`).
 
-<div class="table-responsive"><table summary="Formatação de títulos">
+<div class="table-responsive"><table description="Formatação de títulos">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -282,7 +282,7 @@ Para criar um título, adicione sinais numéricos (`#`) na frente de uma palavra
 
 Como alternativa, na linha abaixo do texto, adicione qualquer número de `==` caracteres para o título de nível 1 ou `--` caracteres para o título de nível 2.
 
-<div class="table-responsive"><table summary="Sintase alternativas de formatação de títulos">
+<div class="table-responsive"><table description="Sintase alternativas de formatação de títulos">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -308,7 +308,7 @@ Como alternativa, na linha abaixo do texto, adicione qualquer número de `==` ca
 
 Os aplicativos Markdown não concordam sobre como lidar com a falta de espaço entre os sinais numéricos (`#`) e o nome do título. Para compatibilidade, sempre coloque um espaço entre os sinais numéricos e o nome do título.
 
-<div class="table-responsive"><table summary="Práticas recomendadas do uso de Títulos">
+<div class="table-responsive"><table description="Práticas recomendadas do uso de Títulos">
     <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -332,7 +332,7 @@ Os aplicativos Markdown não concordam sobre como lidar com a falta de espaço e
 Para criar parágrafos, use uma linha em branco para separar uma ou mais linhas de texto.
 
 <div class="table-responsive">
-    <table summary="Parágrafo">
+    <table description="Parágrafo">
         <thead>
             <tr>
                 <th>Markdown</th>
@@ -354,7 +354,7 @@ Para criar parágrafos, use uma linha em branco para separar uma ou mais linhas 
 
 A menos que o [parágrafo esteja em uma lista](#paragraph-list "Paragrafo dentro de listas"), não avance as linhas dos parágrafos com espaços ou tabulações.
 
-<div class="table-responsive"><table summary="Práticas recomendadas do uso de parágrafos">
+<div class="table-responsive"><table description="Práticas recomendadas do uso de parágrafos">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -380,7 +380,7 @@ A menos que o [parágrafo esteja em uma lista](#paragraph-list "Paragrafo dentro
 
 Para criar uma quebra de linha (`<br>`), termine uma linha com dois ou mais espaços e retorne a digitar.
 
-<div class="table-responsive"><table summary="Quebra de linha">
+<div class="table-responsive"><table description="Quebra de linha">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -407,7 +407,7 @@ Para compatibilidade, use um espaço em branco à direita ou a tag `<br>` HTML n
 
 Existem duas outras opções que não recomendo usar. [CommonMark][commonmark] e algumas outras linguagens de marcação leves permitem que você digite uma barra invertida (`\`) no final da linha, mas nem todos os aplicativos Markdown suportam isso, então não é uma ótima opção de uma perspectiva de compatibilidade. E pelo menos algumas linguagens de marcação leves não exigem nada no final da linha - basta voltar a digitar e elas criarão uma quebra de linha
 
-<div class="table-responsive"><table  summary="Práticas recomendadas do uso de quebras de linha">
+<div class="table-responsive"><table  description="Práticas recomendadas do uso de quebras de linha">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -435,7 +435,7 @@ Você pode adicionar ênfase colocando o texto em negrito ou itálico.
 
 Para texto em negrito, adicione dois asteriscos ou sublinhados antes e depois de uma palavra ou frase. Para colocar em negrito no meio de uma palavra para dar ênfase, adicione dois asteriscos sem espaços ao redor das letras.
 
-<div class="table-responsive"><table summary="Negrito">
+<div class="table-responsive"><table description="Negrito">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -466,7 +466,7 @@ Para texto em negrito, adicione dois asteriscos ou sublinhados antes e depois de
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em negrito o meio de uma palavra para dar ênfase.
 
-<div class="table-responsive"><table summary="Práticas recomendadas do uso de negrito">
+<div class="table-responsive"><table description="Práticas recomendadas do uso de negrito">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -485,7 +485,7 @@ Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no me
 
 Para colocar o texto em itálico, adicione um asterisco ou sublinhado antes e depois de uma palavra ou frase. Para colocar em itálico o meio de uma palavra para dar ênfase, adicione um asterisco sem espaços ao redor das letras.
 
-<div class="table-responsive"><table summary="Itálico">
+<div class="table-responsive"><table description="Itálico">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -516,7 +516,7 @@ Para colocar o texto em itálico, adicione um asterisco ou sublinhado antes e de
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em itálico uma letra no meio de uma palavra.
 
-<div class="table-responsive"><table summary="Práticas recomendadas do uso de itálico">
+<div class="table-responsive"><table description="Práticas recomendadas do uso de itálico">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -536,7 +536,7 @@ Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no me
 
 Para enfatizar o texto com negrito e itálico ao mesmo tempo, adicione três asteriscos ou sublinhados antes e depois de uma palavra ou frase. Para colocar em negrito e itálico no meio de uma palavra para dar ênfase, adicione três asteriscos sem espaços ao redor das letras.
 
-<div class="table-responsive"><table summary="Negrito e Itálico">
+<div class="table-responsive"><table description="Negrito e Itálico">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -577,7 +577,7 @@ Para enfatizar o texto com negrito e itálico ao mesmo tempo, adicione três ast
 
 Os aplicativos de Markdown não concordam sobre como lidar com sublinhados no meio de uma palavra. Para compatibilidade, use asteriscos para colocar em negrito e itálico no meio de uma palavra para dar ênfase.
 
-<div class="table-responsive"><table summary="Práticas recomendadas do uso de itálico e negrito">
+<div class="table-responsive"><table description="Práticas recomendadas do uso de itálico e negrito">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -672,7 +672,7 @@ Você pode organizar itens em listas ordenadas e não ordenadas.
 
 Para criar uma lista ordenada, adicione itens de linha com números seguidos de pontos. Os números não precisam estar em ordem numérica, mas a lista deve começar com o número um.
 
-<div class="table-responsive"><table summary="Listas ordenadas">
+<div class="table-responsive"><table description="Listas ordenadas">
 <thead>
         <tr>
             <th>Markdown</th>
@@ -709,7 +709,7 @@ Para criar uma lista ordenada, adicione itens de linha com números seguidos de 
 CommonMark e algumas outras linguagens de marcação leves permitem que você use um parêntese (`)`) como um delimitador (por exemplo, `1) Primeiro item`), mas nem todos os aplicativos Markdown suportam isso, então não é uma ótima opção de uma perspectiva de compatibilidade. Para compatibilidade, use apenas ponto (`.`).
 
 <div class="table-responsive">
-<table  summary="Práticas recomendadas do uso de listas ordenadas">
+<table  description="Práticas recomendadas do uso de listas ordenadas">
 <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -733,7 +733,7 @@ Para criar uma lista não ordenada, adicione travessões (`-`), asteriscos (`*`)
 Os aplicativos de Markdown não concordam sobre como lidar com diferentes delimitadores na mesma lista. Para compatibilidade, não misture e combine delimitadores na mesma lista - escolha um e fique com ele.
 
 <div class="table-responsive">
-<table summary="Práticas recomendadas do uso de listas não ordenadas">
+<table description="Práticas recomendadas do uso de listas não ordenadas">
     <thead>
         <tr>
             <th>✅ Faça isso</th>
@@ -886,7 +886,7 @@ A renderização é essa:
 Para denotar uma palavra ou frase como código, coloque-a entre crases (<code> ` </code>).
 
 <div class="table-responsive">
-<table summary="Código">
+<table description="Código">
 <thead>
       <tr>
         <th>Markdown</th>
@@ -907,7 +907,7 @@ Para denotar uma palavra ou frase como código, coloque-a entre crases (<code> `
 
 Se a palavra ou frase que você deseja exibir como código inclui um ou mais crases, você pode fazer o escape colocando a palavra ou frase entre crases duplos (<code> `</code>)
 
-<div class="table-responsive"><table summary="Crase">
+<div class="table-responsive"><table description="Crase">
 <thead>
       <tr>
         <th>Markdown</th>
@@ -963,7 +963,7 @@ A renderização é essa:
 Para compatibilidade, coloque linhas em branco antes e depois das régua horizontal <code>&lt;hr&gt;</code>.
 
 <div class="table-responsive">
-<table summary="Práticas recomendadas do uso de régua horizontal">
+<table description="Práticas recomendadas do uso de régua horizontal">
   <thead>
     <tr>
       <th>✅ Faça isso</th>
@@ -1083,7 +1083,7 @@ e o HTML para o link seria:
 
 Os aplicativos de Markdown não concordam sobre como lidar com espaços no meio de uma URL. Para compatibilidade, tente codificar em URL quaisquer espaços com `%20`.
 
-<div class="table-responsive"><table  summary="Práticas recomendadas do uso de links">
+<div class="table-responsive"><table  description="Práticas recomendadas do uso de links">
   <thead>
     <tr>
       <th>✅ Faça isso</th>
@@ -1132,7 +1132,7 @@ A saída renderizada é semelhante a esta:
 
 Você pode usar uma barra invertida para exibir os caracteres a seguir:
 
-<div class="table-responsive"><table summary="Barra invertida">
+<div class="table-responsive"><table description="Barra invertida">
   <thead>
     <tr>
       <th>Caractere</th>
@@ -1222,7 +1222,7 @@ Você não pode usar a sintaxe Markdown dentro de tags HTML de nível de bloco. 
 
 Esses elementos estendem a sintaxe básica, adicionando recursos adicionais. Nem todos os aplicativos Markdown suportam esses elementos.
 
-<div class="table-responsive"><table summary="Síntaxe avançada de Markdown">
+<div class="table-responsive"><table description="Síntaxe avançada de Markdown">
 <thead>
         <tr>
             <th>Elemento</th>
@@ -1460,7 +1460,7 @@ A renderização é essa:
 
 Você pode vincular títulos com IDs personalizados no arquivo criando um [link padrão](#links) com um sinal de número (`#`) seguido pelo ID do cabeçalho personalizado.
 
-<div class="table-responsive"><table summary="Links âncoras">
+<div class="table-responsive"><table description="Links âncoras">
   <thead>
     <tr>
       <th>Markdown</th>

@@ -2,11 +2,11 @@
 layout: post
 category: blog
 title: "Recorte de uma produção tecnológica racista"
-link: "https://wagnerbeethoven.medium.com/design-racista-79435622854c"
+link: "http://wagnerbeethoven.medium.com/design-racista-79435622854c"
 date: "2021-11-18"
 postdate: "Novembro/ 2021"
 banner: "https://miro.medium.com/max/700/1*9Zfc4-c7akNGpFbEunrc_g.jpeg"
-summary: "Reprodução da pesquisa feita para o encontro o 1º Design Talk — workshop periódico da equipe de Designy"
+description: "Reprodução da pesquisa feita para o encontro o 1º Design Talk — workshop periódico da equipe de Designy"
 banner-alt: "Crianças negras gritando e um deles está com um megafone"
 ---
 

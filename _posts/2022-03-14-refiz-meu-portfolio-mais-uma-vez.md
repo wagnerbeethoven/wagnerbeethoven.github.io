@@ -6,7 +6,7 @@ link: "https://wagnerbeethoven.medium.com/refiz-meu-portfolio-mais-uma-vez-f3caa
 date: "2022-03-14"
 postdate: "Março/ 2022"
 banner: "https://miro.medium.com/max/1400/1*GqXZOCOSwWELp-FteFXKPw.jpeg"
-summary: "Analise da minha presença na internet e como eu mostro meu trabalho — esse texto é um relato"
+description: "Analise da minha presença na internet e como eu mostro meu trabalho — esse texto é um relato"
 banner-alt: 'Ilustrações de 4 lutadores de sumo lutando e no centro um sushi'
 banner-caption: '“The Day Never Get Between A Sumo Wrestler And Food” (Ilustração: Sean Fallon)'
 ---

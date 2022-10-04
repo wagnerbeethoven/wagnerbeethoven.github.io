@@ -28,7 +28,7 @@ body {
   color: var(--color-text);
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -91,6 +91,23 @@ hr:after {
   left: 32px;
 }
 
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  opacity: 0;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
 .container {
   margin: 0 auto;
   /* width: 100%; */
@@ -103,8 +120,8 @@ hr:after {
   border-bottom: 1px solid var(----color-border);
 }
 
-.logo h1 {
-  font-size: 2rem;
+.logo .site-name {
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
 }
@@ -123,6 +140,18 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+nav h2 {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* for Internet Explorer */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 nav a {
@@ -185,26 +214,11 @@ main p a[href*="https"]:after {
   box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
 
-.section-title span {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-}
 
-.section-title span:after {
-  content: " ";
-  position: absolute;
-  display: block;
-  z-index: -1;
-  opacity: 0.2;
-  height: 1.3rem;
-  width: 95%;
-  bottom: 10px;
-  left: 0;
-}
 
-.section-title span:first-of-type:after {
+.section-title mark {
   background: var(--color-primary);
+  color: #fff
 }
 
 .section-title,
@@ -623,7 +637,7 @@ footer p:first-child {
   position: sticky;
   top: 10xpx;
   order: 1;
-width: 100%;
+  width: 100%;
   font-size: 0.8rem;
 
 }
@@ -635,6 +649,7 @@ width: 100%;
 
 .article-aside .toc-title {
   font-weight: bold;
+
 }
 
 .article-aside .toc-list {
@@ -796,7 +811,7 @@ width: 100%;
     max-width: 960px;
   }
 
-  .logo span {
+  .logo .site-description {
     margin: 0;
   }
 

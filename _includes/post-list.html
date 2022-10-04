@@ -1,15 +1,17 @@
-<article id="{{post.title | slugify}}">
+<article id="{{post.title | slugify}}"title="Você irá abrir '{{ post.title }}' em uma {{site.warning}}">
     <div class="post-container">
-        <a target="_blank" href="{{ post.link }}" class="post-picture {% if post.servico %}post-picture-{{post.servico}}{% endif %}" title="Você irá abrir '{{ post.title }}' em uma {{site.warning}}" style="background-image:url({{ post.banner }})">
-        </a>
+        <a target="_blank" href="{{ post.link }}" >
+            <div class="post-picture {% if post.servico %}post-picture-{{post.servico}}{% endif %}"
+                style="background-image:url({{ post.banner }})"></div>
             <h3 class="post-title">
-                <a target="_blank" href="{{ post.link }}" title="Você irá abrir '{{ post.title }}' em uma {{site.warning}}">
-                    {{ post.title }}
-                </a>
+
+                {{ post.title }}
+
             </h3>
-        <span>{{ post.postdate }}<br> &mdash;</span>
-        <p class="post-description">
-            {{ post.summary }}
-        </p>
+            <span>{{ post.postdate }}<br> &mdash;</span>
+            <p class="post-description">
+                {{ post.description }}
+            </p>
+        </a>
     </div>
 </article>

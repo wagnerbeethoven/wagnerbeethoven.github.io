@@ -2,11 +2,11 @@
 layout: post
 category: blog
 title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
-link: "https://wagnerbeethoven.medium.com/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece-d59bdb47a2a9"
+link: "http://wagnerbeethoven.medium.com/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece-d59bdb47a2a9"
 date: "2021-02-12"
 postdate: "Fevereiro/ 2021"
 banner: "https://miro.medium.com/max/700/1*Qcttxr7-pLCfRupUuOFg6w.jpeg"
-summary: "Todos os detalhes da construção e as impressões do que rolou na competição"
+description: "Todos os detalhes da construção e as impressões do que rolou na competição"
 banner-caption: "Recorte da sabatina de perguntas após a apresentação do pitch do projeto."
 banner=alt: "Print do vídeo, grade com 9 retângulos. na parte superior, 3 homens associados aos CNJ e as 6 a seguir 6 homens que fazem parte da equipe"
 ---

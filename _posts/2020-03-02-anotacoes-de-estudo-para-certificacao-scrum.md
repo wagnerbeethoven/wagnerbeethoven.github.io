@@ -2,11 +2,11 @@
 layout: post
 category: blog
 title: "Anotações de estudo para certificação SCRUM"
-link: "https://wagnerbeethoven.medium.com/anota%C3%A7%C3%B5es-de-estudo-para-certifica%C3%A7%C3%A3o-scrum-5bf2877bdfeb"
+link: "http://wagnerbeethoven.medium.com/anota%C3%A7%C3%B5es-de-estudo-para-certifica%C3%A7%C3%A3o-scrum-5bf2877bdfeb"
 date: "2020-03-01"
 postdate: "Março/ 2020"
 banner: "https://miro.medium.com/max/1400/0*uhU4SNMo13gynXQe.jpg"
-summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
+description: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 ---
 
 Certificar o conhecimento para uma pessoa tão inquieta como eu é sim um desafio, porque sempre busquei conhecimento de maneira independente, ser autodidata para mim é um estilo de vida, mas sei da importância em obter um certificado sobre um determinado assunto, além de aumentar o nível do currículo, reforça os conceitos e os conhecimentos sobre o assunto.

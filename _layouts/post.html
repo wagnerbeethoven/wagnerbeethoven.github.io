@@ -11,8 +11,8 @@ layout: default
   <p>Se você não for encaminhado automaticamente, <a href="{{page.link}}">clique aqui</a>.</p>
 </body>
 
-
 <!-- 
+
 <article class='{% if page.setup == "hide" %}index-hide{% elsif page.setup == null %}{% endif %}' id="article-intro">
 
   <figure class="article-banner">
@@ -21,7 +21,7 @@ layout: default
   </figure>
   <header class="article-header">
     <h1 class="article-title">{{page.title}}</h1>
-    <div class="article-summary">{{page.summary}}</div>
+    <div class="article-description">{{page.description}}</div>
   </header>
   <div class="article-section">
 
@@ -31,18 +31,30 @@ layout: default
       {% include rights.html %}
     </div>
 
-    <aside class="article-aside">
+    <aside role="complementary" aria-labelledby="article-intro" class="article-aside">
 
-        <details id="toc"></details>
+      <details id="toc"></details>
     </aside>
   </div>
 </article>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+  integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{site.url}}/toc.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
     $('#toc').toc();
   });
+
+
+
+  (() => {
+    (document.querySelectorAll('a')).forEach(link => {
+      link.hostname !== location.hostname && link.setAttribute('target', '_blank');
+      link.hostname !== location.hostname && link.setAttribute('title', 'O link irá abrir uma nova aba');
+      link.hostname !== location.hostname && link.setAttribute('rel', 'noopener noreferrer');
+    })
+  })();
 </script>-->

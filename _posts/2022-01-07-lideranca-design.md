@@ -2,11 +2,11 @@
 layout: post
 category: blog
 title: "Lições ao me tornar líder de um time de design"
-link: "https://medium.com/p/b7cb8c79077f"
+link: "http://medium.com/p/b7cb8c79077f"
 date: "2022-01-07"
 postdate: "Janeiro/ 2022"
 banner: "https://miro.medium.com/max/700/1*YAetsso_yLvHpWIut_MF4g.jpeg"
-summary: "Como a liderança de design pode mudar o cenário do design no momento de fragilidade, virando o jogo e trazendo o Design para o centro das decisões"
+description: "Como a liderança de design pode mudar o cenário do design no momento de fragilidade, virando o jogo e trazendo o Design para o centro das decisões"
 banner-alt: 'Barcos de papel, um na cor vermelha posicionado na frente e 4 barcos atrás, onde 2 são com tom de azul claro e 2 são com tom verde claro'
 banner-caption: '<a href="https://www.pexels.com/photo/paper-boats-on-solid-surface-194094/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels" rel="noopener ugc nofollow" target="_blank">Miguel Á. Padriñán / Pexels</a>'
 ---

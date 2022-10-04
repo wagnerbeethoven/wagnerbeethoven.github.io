@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ page.title }} &middot; {{ site.name }} | {{ site.author }}</title>
+    <title>{% if page.title %}{{ page.title }} &bull; {% else %}{% endif %}{{ site.name }} | {{ site.author }}</title>
+    
     <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
     <meta name="author" content="Wagner Beethoven">
     <meta name="copyright" content="Wagner Beethoven">
@@ -28,9 +29,9 @@
     <!--  Open Graph -->
     <meta property="og:locale" content="pt-br">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ page.title }} &middot; {{  site.name }} | {{  site.author }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} &bull; {% else %}{% endif %}{{ site.name }} | {{ site.author }}">
     <meta property="og:url" content="{{site.url}}/{{ page.url }}">
-    <meta property="og:image" content="{{site.url}}/img/image-default.jpg" />
+    <meta property="og:image" content="{% if page.banner %}{{ page.banner}}{% else %}{{site.url}}/img/image-default.jpg{% endif %}" />
     <meta property="og:site_name" content="{{site.name}}">
     <meta property="article:publisher" content="http://www.facebook.com/wagnerbeethoven" />
     <meta property="article:author" content="https://www.facebook.com/wagnerbeethoven" />
@@ -39,17 +40,23 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{site.title-deafault}}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} &bull; {% else %}{% endif %}{{ site.name }} | {{ site.author }}">
     <meta name="twitter:site" content="@wagnerbeethoven">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}">
-    <meta name="twitter:image" content="{{site.url}}/img/image-default.jpg">
-    <meta name="twitter:image:alt" content="{{site.opengraph-alt}}">
+    <meta name="twitter:image" content="{% if page.banner %}{{ page.banner}}{% else %}{{site.url}}/img/image-default.jpg{% endif %}">
+    <meta name="twitter:image:alt" content="{% if page.banner %}{{ page.banner-alt}}{% else %}{{site.opengraph-alt}}{% endif %}">
+
+
+
+    
+
+
 
     <title>{{site.title-deafault}}</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="{{site.url}}/css/main.css" type="text/css" rel="stylesheet">
 
     <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
@@ -57,3 +64,4 @@
 </head>
 
 <body class="container container-{{page.permalink | slugify}}">
+<a href="#main" class="skip-to-main-content-link">Skip to main content</a>

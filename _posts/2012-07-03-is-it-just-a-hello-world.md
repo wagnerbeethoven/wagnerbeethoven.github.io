@@ -8,7 +8,7 @@ image: https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world
 alt: "Ilustração com 4 lutadores de sumô lutando e ao centro um suhi"
 legend: "&quot;The Day Never Get Between A Sumo Wrestler And Food&quot; (Ilustração&colon; Sean Fallon)"
 description: "Como começou o meu site e o por que das escolhas feitas para construção dele"
-summary: "Os porquês do meu portfólio"
+description: "Os porquês do meu portfólio"
 tags: 
  - Blog
 ---

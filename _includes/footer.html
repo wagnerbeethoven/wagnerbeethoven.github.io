@@ -5,17 +5,6 @@
     <p>Esta obra está em constante mudança. &mdash; <a title="Acesse todo o conteúdo do site"
             href="{{site.url}}/archive">Todas as publicações do site</a></p>
 </footer>
-
-<script>
-
-    (() => {
-        (document.querySelectorAll('a')).forEach(link => {
-            link.hostname !== location.hostname && link.setAttribute('target', '_blank');
-            link.hostname !== location.hostname && link.setAttribute('title', 'O link irá abrir uma nova aba');
-            link.hostname !== location.hostname && link.setAttribute('rel', 'noopener noreferrer');
-        })
-    })();
-</script>
 </body>
 
 </html>
