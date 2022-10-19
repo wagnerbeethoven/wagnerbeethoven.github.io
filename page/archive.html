@@ -9,7 +9,8 @@ description: 'Página com todos os links do site'
     <h2 class="section-title">{{page.title}}</h2>
     <p>
         Navegue pelas seções:
-        <a title="Acesse o portfólio" href="#portfolio"><strong>Portfólio</strong></a> &bull; <a title="Acesse o blog" href="#blog"><strong>Blog</strong></a>
+        <a title="Acesse o portfólio" href="#portfolio"><strong>Portfólio</strong></a> &bull; <a title="Acesse o blog"
+            href="#blog"><strong>Blog</strong></a>
     </p>
 </header>
 <hr>
@@ -18,9 +19,9 @@ description: 'Página com todos os links do site'
     <ul>
         {% for post in site.categories.portfolio%}
         <li id="{{post.title | slugify}}">
-            <a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
-                {{ post.title }}
-            </a>
+            <h4><a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
+                    {{ post.title }}
+                </a></h4>
 
         </li>
         {% endfor %}
@@ -32,9 +33,11 @@ description: 'Página com todos os links do site'
     <ul>
         {% for post in site.categories.blog%}
         <li id="{{post.title | slugify}}">
-            <a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
-                {{ post.title }}
-            </a>
+            <h4>
+                <a target="_blank" href="{{ post.link }}" title="{{site.warning}}" class="post-title">
+                    {{ post.title }}
+                </a>
+            </h4>
 
         </li>
         {% endfor %}

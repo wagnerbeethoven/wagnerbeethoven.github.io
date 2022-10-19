@@ -23,30 +23,28 @@ O primeiro post será um review sobre um dos livros da [Theresa Neil](https://tw
 
 ## Sobre a autora
 
-Theresa atua há mais de dez anos como designer e com desenvolvimento de interfaces para usuários, trabalhou como líder de usabilidade da <a href="https://www.sabre.com/insights/categories/airlines/" title="Sabre Airlines [o link irá abrir uma nova aba]">Sabre Airlines</a> e mantém <a href="http://theresaneil.wordpress.com/" title="blog da Theresa Neil [o link irá abrir uma nova aba]">um blog muito bom</a> sobre <em lang="en">mobile</em>, usabilidade e experiência de usuário.
+Theresa atua há mais de dez anos como designer e com desenvolvimento de interfaces para usuários, trabalhou como líder de usabilidade da [Sabre Airlines](https://www.sabre.com/insights/categories/airlines/ "Sabre Airlines - o link irá abrir uma nova aba") e mantém [um blog muito bom](http://theresaneil.wordpress.com/ "blog da Theresa Neil - o link irá abrir uma nova aba") sobre *mobile*, usabilidade e experiência de usuário.
 
 ## Sobre o livro
 
 O livro é fininho, 208 páginas e antigo, lançado uns dois anos atrás. Ele é abarrotado de informações interessantes, ainda mais quando se é um UX Design em início de carreira como eu.
 
-O livro é um poderoso catálogo de padrões utilizados em dispositivos <em lang="en">mobile</em>, são referenciados 70 padrões e uns 500 <em lang="en">screenshots</em> dos sistemas operacionais do: iOS, Android, BlackBarry, Windows Mobile e outros.
+O livro é um poderoso catálogo de padrões utilizados em dispositivos *mobile*, são referenciados 70 padrões e uns 500 *screenshots* dos sistemas operacionais do: iOS, Android, BlackBarry, Windows Mobile e outros.
 
 A apresentação do livro é muito pessoal, escrito pela Jenifer Tidewell e antecipa muita coisa boa.
 
-Mesmo que você já use <em lang="en">smartphones</em> há muito tempo, eu garanto que não saberá ou terá ideia de como ela conseguiu categorizar todos os padrões descritos no livro, são mais de dez categorias: navegação, formulários, tabelas, listas, buscas, organizações, filtros, ferramentas, gráfico, convites, feedback e affordance e ajuda.
+Mesmo que você já use *smartphones* há muito tempo, eu garanto que não saberá ou terá ideia de como ela conseguiu categorizar todos os padrões descritos no livro, são mais de dez categorias: navegação, formulários, tabelas, listas, buscas, organizações, filtros, ferramentas, gráfico, convites, feedback e affordance e ajuda.
 
-Algumas dicas ultrapassam o <em lang="en">mobile</em> e ajudam o designer e o programador. No capítulo 8, sobre <strong>Feedback e Affordance</strong>, Theresa reduz o todo o capitulo no seguinte excerto:
+Algumas dicas ultrapassam o *mobile* e ajudam o designer e o programador. No capítulo 8, sobre **Feedback e Affordance**, Theresa reduz o todo o capitulo no seguinte excerto:
 
-<blockquote>
-    <p>Fornecer feedback apropriado, claro e na hora certa para o usuário de modo que ele veja os resultados das suas ações e saiba o que está acontecendo com o sistema.</p>
-    <footer>Theresa Neil em <cite title="Título da fonte">Padrões de Design para Aplicativos Móveis</cite></footer>
-</blockquote>
+> Fornecer feedback apropriado, claro e na hora certa para o usuário de modo que ele veja os resultados das suas ações e saiba o que está acontecendo com o sistema.
+> — Theresa Neil em "*Padrões de Design para Aplicativos Móveis*"
 
-Quando estava lendo o índice, o capítulo 10 foi o que me chamou mais atenção, por causa do nome: &quot;Antipadrões&quot;, aproximadamente vinte páginas do que não se deve fazer nas aplicações <em lang="en">mobile</em>, mas que podem ser transportadas para todas as aplicações web já que em qualquer aplicação, nós temos problemas como: ideias inovadores, discrepância de metáfora e caixa idiota, para citar alguns problemas elencados livro.
+Quando estava lendo o índice, o capítulo 10 foi o que me chamou mais atenção, por causa do nome: &quot;Antipadrões&quot;, aproximadamente vinte páginas do que não se deve fazer nas aplicações *mobile*, mas que podem ser transportadas para todas as aplicações web já que em qualquer aplicação, nós temos problemas como: ideias inovadores, discrepância de metáfora e caixa idiota, para citar alguns problemas elencados livro.
 
-Os exemplos em preto e branco prejudicaram a visualização de alguns <em lang="en">screenshots</em>, se fossem colorido (pelo menos as telas dos aplicativos utilizados nos exemplo) talvez o processo de imersão fosse maior. Outra coisa que me deixou triste foi a utilizando de alguns termos talvez colocados pela autora ou pela tradução para o português, soassem estranho, por exemplo, &quot;menu de opções&quot;, em português ou inglês há menu sem opções?
+Os exemplos em preto e branco prejudicaram a visualização de alguns *screenshots*, se fossem colorido (pelo menos as telas dos aplicativos utilizados nos exemplo) talvez o processo de imersão fosse maior. Outra coisa que me deixou triste foi a utilizando de alguns termos talvez colocados pela autora ou pela tradução para o português, soassem estranho, por exemplo, &quot;menu de opções&quot;, em português ou inglês há menu sem opções?
 
-O apêndice traz um apanhado de tudo foi descrito nos capítulos anteriores com telas de <em lang="en">wireframes</em>. O formato utilizando no livro é muito propício para uma uma pesquisa mais profunda sobre o tema.
+O apêndice traz um apanhado de tudo foi descrito nos capítulos anteriores com telas de *wireframes*. O formato utilizando no livro é muito propício para uma uma pesquisa mais profunda sobre o tema.
 
 O livro é muito indicado para qualquer profissional envolvido com o desenvolvimento de software.
 

@@ -188,6 +188,8 @@ Estudar, trocar feedbacks e desenvolver o espírito de liderança nos liderados 
 ---
 
 ### Referências
+
 - Preciso saber se estou indo bem! do Richard L Williams (Editora Sextante)
 - Liderança em Design do [Victor Zanini](https://medium.com/u/ba98f45f876a?source=post_page-----b7cb8c79077f--------------------------------) (Casa do Código)
 - PDL da Ana Cantarelli
+  

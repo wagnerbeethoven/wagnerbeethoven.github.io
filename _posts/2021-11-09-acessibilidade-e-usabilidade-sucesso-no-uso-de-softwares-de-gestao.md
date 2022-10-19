@@ -11,9 +11,7 @@ banner-alt: "Imagem mostra homem usando computador"
 setup: hide
 ---
 
-**Confira o meu primeiro texto “público” sobre acessibilidade e com visibilidade fora do da minha bolha**
-
-*O texto abaixo foi escrito para o Blog da [Procenge](https://procenge.com.br/acessibilidade-e-usabilidade-sucesso-no-uso-de-softwares-de-gestao/)e foi publicado também no [TI Bahia](https://tibahia.com/artigos/o-que-acessibilidade-e-a-usabilidade-tem-a-ver-com-sucesso-no-uso-de-softwares-de-gestao/). É o primeiro texto assinado como assinado como Líder de Design.* 😇
+**Confira o meu primeiro texto “público” sobre acessibilidade e com visibilidade fora do da minha bolha**  *O texto abaixo foi escrito para o Blog da [Procenge](https://procenge.com.br/acessibilidade-e-usabilidade-sucesso-no-uso-de-softwares-de-gestao/)e foi publicado também no [TI Bahia](https://tibahia.com/artigos/o-que-acessibilidade-e-a-usabilidade-tem-a-ver-com-sucesso-no-uso-de-softwares-de-gestao/). É o primeiro texto assinado como assinado como Líder de Design.* 😇
 
 ---
 
@@ -38,7 +36,6 @@ Antes de fazer alguma mudança ou lançar alguma funcionalidade, a equipe de tes
 
 Ainda existem empresas que ainda não levam em conta a usabilidade para desenvolver seus produtos e serviços. Um dos principais resultados dessa falta de consideração por algo tão fundamental é o prejuízo financeiro, fora atraso nas entregas, dificuldade de resolução de problemas por parte do usuário, entre outros. Produtos e serviços são feitos para serem utilizados por usuários reais, por pessoas comuns, com habilidades distintas e limitações de toda ordem. **A falta de usabilidade causa desinteresse e, principalmente, desistência de uso do sistema, sem falar da reputação negativa que pode causar para a empresa junto ao mercado**.
 
-**Notas de rodapé**
-
+**Notas de rodapé**  
 [^1]: [FGV Social divulga perfil da população idosa do Brasil / Agência Brasil](https://agenciabrasil.ebc.com.br/saude/noticia/2020-04/brasileiros-com-65-anos-ou-mais-sao-10-53-da-populacao-diz-FGV)
 [^2]: [Pessoas com deficiência / Educa / Jovens — IBGE](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/20551-pessoas-com-deficiencia.html)

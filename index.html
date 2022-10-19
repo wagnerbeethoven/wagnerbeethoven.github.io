@@ -26,11 +26,11 @@ description: "Designer contruíndo e projetando soluções para pessoas! com exp
             Portfólio
         </a>
     </h2>
-    <div class="post-list">
+    <ul class="post-list">
         {% for post in site.categories.portfolio limit:6%}
         {% include post-list.html %}
         {% endfor %}
-    </div>
+    </ul>
 </section>
 
 <section class="blog" id="blog">
@@ -39,9 +39,9 @@ description: "Designer contruíndo e projetando soluções para pessoas! com exp
             Blog
         </a>
     </h2>
-    <div class="post-list">
+    <ul class="post-list">
         {% for post in site.categories.blog limit:6%}
         {% include post-list.html %}
         {% endfor %}
-    </div>
+    </ul>
 </section>

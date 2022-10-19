@@ -14,7 +14,7 @@ banner-alt: "Crianças negras gritando e um deles está com um megafone"
 
 ---
 
-# O que é racismo?
+## O que é racismo?
 
 > Racismo consiste no preconceito e na discriminação com base em percepções sociais baseadas em diferenças biológicas entre os povos. Muitas vezes toma a forma de ações sociais, práticas ou crenças, ou sistemas políticos que consideram que diferentes raças devem ser classificadas como inerentemente superiores ou inferiores com base em características, habilidades ou qualidades comuns herdadas. Também pode afirmar que os membros de diferentes raças devem ser tratados de forma distinta.
 >  
@@ -34,25 +34,25 @@ De acordo com o IBGE em uma matéria para o jornal [A Gazeta](https://www.agazet
 
 Ainda na mesma matéria, o movimento negro costuma considerar a soma de pretos e pardos de acordo com a classificação do IBGE.
 
-## “Escala” de racismos no Brasil
+### “Escala” de racismos no Brasil
 
 ![7 quadrados com graduações de cores, do marrom claro para o escuro](https://miro.medium.com/max/700/1*DHfiZcsnu1a1VtG-ypS7_g.jpeg)
 
-### G1 Ceará
+#### G1 Ceará
 
 [![17/03/2015 08h58 - Atualizado em 17/03/2015 08h58. Polícia prende traficante com 10 quilos de maconha em Fortaleza. Polícia encontrou R$ 10 mil em cédulas de R$ 2 e uma pistola 380. Ele foi autuado em flagrante por tráfico de drogas e porte ilegal de arma.](https://miro.medium.com/max/664/0*RfmG1xBOgOEikgtn.png "Acesse a matéria original clicando na imagem")](http://g1.globo.com/ceara/noticia/2015/03/policia-prende-traficante-com-10-quilos-de-maconha-em-fortaleza.html)
 
-### G1 Rio
+#### G1 Rio
 
 [![27/03/2015 10h21 - Atualizado em 27/03/2015 20h29. Polícia prende jovens de classe média com 300 kg de maconha no Rio. Eles foram presos num estacionamento de um prédio na Tijuca. Delegado tenta identificar outros integrantes da quadrilha.](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/3caf8d65f090f4fa654aa3cb52240e8998d25f9a/policia-prende-jovens-de-classe-media-com-300-kg-de-maconha-no-rio.png "Acesse a matéria original clicando na imagem")](http://g1.globo.com/rio-de-janeiro/noticia/2015/03/policia-prende-jovens-de-classe-media-com-300-kg-de-maconha-no-rio.html)
 
-# Dados do Racismo no Brasil
+### Dados do Racismo no Brasil
 
 ![Dados do Racismo no Brasil](https://miro.medium.com/max/700/0*Brg66qo6Z4dClVwZ.jpg "Fonte: IBGE, Diretoria de Pesquisas, Coordenação de População e Indicadores Sociais.")
 
 Fonte: IBGE, Diretoria de Pesquisas, Coordenação de População e Indicadores Sociais.
 
-# Distribuição de sentenças por cor do réu
+### Distribuição de sentenças por cor do réu
 
 <div class="container-iframe"><iframe  seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNd9UI1ULnFaOlT-0s1GMAEMrc-cf97Z-ChG0_JIrTC1gnbs3pEct6etUE0nsauFHgKmYOOn1_eQVC/pubchart?oid=1254265813&amp;format=interactive"></iframe></div>
 
@@ -64,7 +64,7 @@ A série [Broken Nine-Nine trouxe uma realidade americana](https://twitter.com/Q
 
 ---
 
-# O Racismo na Publicidade
+## O Racismo na Publicidade
 
 ![Ilustração do Jim Crow — Homem de “pele” preta, usa chapéu, blazer azul, camisa marrom e gravata vermelha, calca amarela e sapatos.](https://bitbucket.org/wagnerbeethoven/2021-11-19-design-racista/raw/81cb24164f80c7c0d9c524fc6dcba04c3783ed7f/jim-crow-1820.jpg)
 
@@ -122,21 +122,21 @@ E até hoje a Casa do Homem Preto carrega na logo esse signo do homem preto que 
 
 ---
 
-# Racismo na Tecnologia
+## Racismo na Tecnologia
 
 ***As tecnologias podem ser racistas?***
 
 ![3 Cartões com imagens de mulhers brancas](https://miro.medium.com/max/700/0*m6zDE11RIkyQ6xAg.jpg "Fonte: Eastman Kodak Company (James Ollinger/ 1960)")
 
-## Cartões Shirley (Kodak / 1960)
+### Cartões Shirley (Kodak / 1960)
 
 Nos anos 1940, a Kodak produziu os cartões “Shirley”. Eles eram utilizados para padronização de cores e tons de pele de impressões fotográficas nos laboratórios. Esses cartões, conhecidos como “As Shirleys”, eles eram compostos por mulheres brancas, a falta de diversidade nesses cartões, causava dificuldade nos ajustes dos retratos de pessoas de tons de pele variados
 
-## Xbox Kinect (Microsoft, 2010)
+### Xbox Kinect (Microsoft, 2010)
 
 Quando a [Microsoft lançou o Kinect](https://www.pcworld.com/article/504514/is_microsoft_kinect_racist.html), trouxe alguns problemas de reconhecimento de pessoas negras.
 
-## S630 (Nikon, 2009)
+### S630 (Nikon, 2009)
 
 ![Mulher asiatica sendo mostrada através da tela de uma camera digital](https://miro.medium.com/max/700/0*7m58CDl1UFy4P7Br.jpg)
 
@@ -146,7 +146,7 @@ A Nikon teve problemas em reconhecer as pessoas asiáticas. A câmara “reconhe
 >  
 > Fonte: [Racist Camera! No, I did not blink… I’m just Asian! / Flickr](https://www.flickr.com/photos/jozjozjoz/3529106844)
 
-## Photos (Google, 2015)
+### Photos (Google, 2015)
 
 O Google utiliza IA para criar álbuns automáticos, juntou irmãos negros num álbum chamado “Gorilas”.
 
@@ -156,7 +156,7 @@ O Google utiliza IA para criar álbuns automáticos, juntou irmãos negros num �
 
 A maneira como Google resolveu o problema foi apagando o problema, inviabilizando a pesquisa com as palavras chaves problemáticas.
 
-## #TayTweets (Microsoft, 2016)
+### #TayTweets (Microsoft, 2016)
 
 Tay, uma inteligência artificial — robô da Microsoft criada para interagir no Twitter virou uma figura racista e nazista em menos de 24hs na internet ao conversar com criminosos amigavelmente chamados de trolls. Essas figuras criminosas e racistas são apenas recorte da sociedade doente ao qual vivemos. Os tweets são muito chocantes.  
 Abaixo reproduzo alguns exemplos traduzidos livremente e legendas das imagens estão os textos no idioma original.
@@ -201,11 +201,8 @@ A HP lançou uma câmera que “acompanhava” o usuário, mas só funcionava em
 A grande inovação do aparelho era o reconhecimento facial para a liberação do uso do dispositivo, mas novamente, [pessoas pretas enfrentando problemas](https://www.wired.com/story/can-apples-iphone-x-beat-facial-recognitions-bias-problem/), felizmente a Apple ainda tem a fama de ser uma empresa muito inclusiva, já que falta de inclusão e acessibilidade está intimamente ligada a ganhos financeiros. Logo após a polêmica, deu a seguinte declaração:
 
 > A acessibilidade do produto a pessoas de diversas raças e etnias foi muito importante para nós. O Face ID utiliza redes neurais de combinação facial que desenvolvemos utilizando mais de um bilhão de imagens, incluindo infravermelho e imagens com profundidade coletadas em estudos conduzidos com o consentimento informado dos participantes.
-> 
 > Trabalhamos com os participantes de todo o mundo para incluir um grupo representativo de pessoas levando em consideração o gênero, idade, etnia e outros fatores.
-> 
 > Ampliamos os estudos conforme o necessário para oferecer um maior grau de precisão para um leque diverso de usuários. Além disso, uma rede neural que é treinada para detectar e resistir a tentativas de desbloquear seu telefone com fotos ou máscaras.
-> 
 > Fonte: [Gizmodo](https://gizmodo.uol.com.br/face-id-evitar-racismo)
 
 ## Dispenser de sabão “inteligente”
@@ -244,7 +241,7 @@ De acordo com o IPEA (Instituto de Pesquisa Econômica Aplicada), em 2015, a mé
 
 Fonte: [Geledés](https://www.geledes.org.br/conheca-infopreta-primeira-e-unica-empresa-de-tecnologia-criada-por-mulheres-negras-e-lgbts/)
 
-# Negros Mercado de Trabalho em TI
+## Negros Mercado de Trabalho em TI
 
 Em 2017 o pessoal do Trampos junto com o coletivo Afroguerrilha iniciou o mapeamento de Designers Negros/Negras. Os resultados são alarmantes.  
 Na universidade:
@@ -265,7 +262,7 @@ Em 2020, O [Panorama UX revelou o resultado da pesquisa com 1210 profissionais](
 
 ![A maioria, 73%, se identifica como branco, 15% como pardo, 5% negro e 3% asiático. Uma representatividade de raças bem diferente da distribuição demográfica brasileira.](https://miro.medium.com/max/700/0*lWcU2vNUD1NJF9CG.png "A maioria, 73%, se identifica como branco, 15% como pardo, 5% negro e 3% asiático. Uma representatividade de raças bem diferente da distribuição demográfica brasileira.")
 
-# E as mulheres negras na tecnologia?
+## E as mulheres negras na tecnologia?
 
 Segundo o INEP, dos **7.339 formados em ciências da computação em 2010, apenas 1091 (14,8%)** eram mulheres programadoras. A pesquisa Nacional por Amostra de Domicílios (PNAD), indicou que dos mais de **580 mil profissionais de TI** (Tecnologia da Informação) que atuam no Brasil, apenas **20% são do sexo feminino**.
 
@@ -277,10 +274,10 @@ Segundo o [ProjectDiane](https://www.projectdiane.com/), os números de startups
 
 Em 2018 foram 334 startups, onde 40% essas empresas foram lideradas por mulheres negras e em 2020 foram mais de 650 startups registradas e 57% lideradas por negras.
 
-> # Ovetta Sampson 
+> ## Ovetta Sampson 
 > Produtos tecnológicos são desenvolvidos por humanos. E não importa quão boas são nossas intenções, ainda podemos permitir que as qualidades humanas mais indesejáveis possam entrar em nossa vida tecnológica. 
 
-# Viés
+## Viés
 
 * … do inconsciente : em entrevista com o usuário
 * … da afinidade : é a tendência de avaliar melhor aqueles que se parecem conosco
@@ -296,7 +293,7 @@ Em 2018 foram 334 startups, onde 40% essas empresas foram lideradas por mulheres
 
 O Fred Hampton foi líder dos Panteras Negras, movimento que combatia a desigualdade contra os negros norte-americanos nos anos 1960. Ele foi assassinado em 1969 pelo FBI.
 
-# Medidas preventivas
+## Medidas preventivas
 
 O que podemos fazer para reduzir o racismo e melhorar o cenário?
 
@@ -319,7 +316,7 @@ A [Sara Wachter-Boettcher](https://www.sarawb.com/) que é uma autora de alguns 
 
 E tem o coletivo que visa fazer a inteligência artificial mais justa e responsável: [Algorithmic Justice League](https://www.ajl.org/).
 
-# Ações contra o racismo
+## Ações contra o racismo
 
 Temos sempre que trazer para as rodas de conversa e debates, a diversidade humana nas empresas de TI por isso informação é fundamental. Só conseguimos combater o racismo com estudo, informação e aprendizado.
 
@@ -342,12 +339,12 @@ Algumas ações que acontecem no país para enaltecer e reduzir essa falta de pr
 * [UX das Minhas Pretas](https://www.linkedin.com/company/uxparaminaspretas/)
 * [AfrOya Tech Hub](https://www.linkedin.com/company/afroya/)
 
-> # Angela Davis
+> ## Angela Davis
 > Numa sociedade racista, não basta não ser racista. É necessário ser antirracista.
 
-# Dicas
+## Dicas
 
-## Filmes e Séries
+### Filmes e Séries
 
 Entretenimento é uma das maneiras mais fáceis de entender o cenário, então vou compartilhar uma lista “boa”. Para acessar os trailers, só clicar nos links.
 
@@ -372,20 +369,20 @@ E queria destacar o documento da Netflix, [Coded Bias](https://www.netflix.com/b
 
 <div class="container-iframe"><iframe  src="https://www.youtube.com/embed/jZl55PsfZJQ" title="Coded Bias | Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-## Literatura
+### Literatura
 
-- [Racismo Estrutural — Silvo Almeida (Jandaíra, 2019)]
-- Racismo, Sexismo e Desigualdade no Brasil — Sueli Carneiro (Selo Negro, 2011)
-- Lugar de Fala e Pequeno Manual Antirracista — Djamila Ribeiro (Companhia das Letras, 2019)
-- Nem preto nem branco, muito pelo contrário — Lilia Moritz Schwarcz (Clara Enigma, 2013)
+* [Racismo Estrutural — Silvo Almeida (Jandaíra, 2019)]
+* Racismo, Sexismo e Desigualdade no Brasil — Sueli Carneiro (Selo Negro, 2011)
+* Lugar de Fala e Pequeno Manual Antirracista — Djamila Ribeiro (Companhia das Letras, 2019)
+* Nem preto nem branco, muito pelo contrário — Lilia Moritz Schwarcz (Clara Enigma, 2013)
 
-## Estudiosos
+### Estudiosos
 
-### Lélia Gonzalez
+#### Lélia Gonzalez
 
 Foi ativista e intelectual negra, com forte atenção no racismo e sexismo como violência na vida das mulhres negras. Historiadora, geógrafa, mestre em comunicação e doutora em antropologia política. Criou o primeiro curso de Cultura Negra do país. Foi fundadora do movimento conhecido atualmente como [Movimento Negro Unificado](https://mnu.org.br/), além de ter publicado um dos mais importantes livros da sua carreira, Lugar de Negro. Suas obras mudaram o ponto de vista da mulher negra na sociedade.
 
-### Milton Santos
+#### Milton Santos
 
 É considerado um dos mais renomados intelectuais do Brasil no século XX, foi geógrafo, escritor, cientista, jornalista, advogado e professor universitário. Sua obra caracterizou-se por apresentar um posicionamento crítico ao sistema capitalista e seus pressupostos teóricos dominantes na geografia de seu tempo, escrevendo mais de 40 livros, publicados Brasil, França, Reino Unido, Portugal, Japão e Espanha. Recebeu diversos títulos acadêmicos e honrarias, além de ter feito parte da [Organização Internacional do Trabalho](https://www.ilo.org/), da [Organização dos Estados Americanos](https://www.oas.org/) e da [UNESCO](http://www.unesco.org/).
 
@@ -393,17 +390,19 @@ Foi ativista e intelectual negra, com forte atenção no racismo e sexismo como 
 
 Mestra em filosofia política pela USP e autora de diversos livros sobre aspectos da população preta, é coordenadora do “ [Selo Sueli Carneiro][8]” e da “ [Coleção Feminismos Plurais][9]”, [colunista do jornal Folha de S. Paulo][10] e considerada pela [BBC uma das 100 mulheres mais influentes do planeta][11].
 
-### [Ronilso Pacheco](https://www.instagram.com/ronilsopacheco/)
+#### [Ronilso Pacheco](https://www.instagram.com/ronilsopacheco/)
+
 Teólogo pela PUC-Rio e mestre pela Universidade da Columbia-NY, pastor na Comunidade Batista em São Gonçalo e autor de “Ocupa, Resistir, Subverter” (2016) e “Teologia Negra: O sopro antirracista do Espírito” (2019).
 
-### [Silvio Almeida](https://www.youtube.com/user/silviovlq1)
+#### [Silvio Almeida](https://www.youtube.com/user/silviovlq1)
+
 Advogado, filosofo, professor universitário e doutor em Filosofia e Direito. Seu trabalho tem foto nas minorias e na desigualdade sobre uma perspectiva jurídica. É autor dos livros “Racismo Estrutural” (Polén, 2019), “Sartre: Direito e Política” (Boitempo, 2016) e “O Direito no Jovem Lukács: A Filosofia do Direito em História e Consciência” (Alfa-Ômega, 2006). Também preside o Instituto Luiz Gama.
 
-### [Sueli Carneiro](https://www.geledes.org.br/sueli-carneiro-coordenadora-de-difusao-e-gestao-da-memoria-institucional/)
+#### [Sueli Carneiro](https://www.geledes.org.br/sueli-carneiro-coordenadora-de-difusao-e-gestao-da-memoria-institucional/)
 
 Filósofa, escritora, doutora em Educação pela USP e fundadora e atual diretora do [Geledés — Instituto da Mulher Negra](https://www.geledes.org.br/), autora dos livros: “Escritos de uma vida” (Editora Letramento, 2018), “Racismo, Sexismo e Desigualdade no Brasil” (Selo Negro, 2011), Mulher negra: Política governamental e a mulher (1985) e “A construção do outro como não-ser como fundamento do ser” (USP, 2005), além de ser considerada uma das principais autoras do feminismo negro no Brasil.
 
-## Influenciadores Digitais / Artistas
+### Influenciadores Digitais / Artistas
 
 1. [Murilo Araújo (@muropequeno)](https://www.instagram.com/muropequeno/)
 2. [Marias do Brejo (@mariasdobrejo)](https://www.instagram.com/mariasdobrejo/)
@@ -431,7 +430,7 @@ Filósofa, escritora, doutora em Educação pela USP e fundadora e atual diretor
 24. [Rodrigo França (@rodrigofranca)](https://www.instagram.com/rodrigofranca/)
 25. [Linn da Quebrada (@linndaquebrada)](https://www.instagram.com/linndaquebrada/)
 
-# Conclusão
+## Conclusão
 
 Esse material foi apresentado internamente para o encontro de Designers e profissionais de outras áreas da Procenge e teve e tem a intenção levantar o tema, de iniciar o debate. O mundo tende a ficar cada vez mais conectado e dependente da tecnologia e dos aparelhos inteligentes, assim nada mais horizontal em atacar os profissionais que produzem essas tecnologias.
 
@@ -439,7 +438,7 @@ Essa pesquisa foi um enorme gatilho para mim que me considero um homem branco, n
 
 ![Ilustração de rostos de homens negros com uma mascara cobrindo o nariz e a boca na cor branca. Na mascará está escrito em maúsculo "Our Lives Matter"](https://miro.medium.com/max/480/0*xreeKbHInsVwTN59.gif)
 
-# Referências
+## Referências
 
 1. [10 filmes e séries para aprender e entender os protestos contra o racismo — UOL][0]
 2. [10 séries, filmes e documentários na Netflix que abordam raça e racismo — Abril][1]
