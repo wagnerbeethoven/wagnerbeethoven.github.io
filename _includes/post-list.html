@@ -2,8 +2,10 @@
     <article id="{{post.title | slugify}}"title="Você irá abrir '{{ post.title }}' em uma {{site.warning}}">
         <div class="post-container">
             <a target="_blank" href="{{ post.link }}" >
-                <div class="post-picture {% if post.servico %}post-picture-{{post.servico}}{% endif %}"
-                    style="background-image:url({{ post.banner }})"></div>
+                <!--<div class="post-picture {% if post.servico %}post-picture-{{post.servico}}{% endif %}" style="background-image:url({{ post.banner }})"></div> -->
+                
+                <img src="{{ post.banner }}" class="post-picture" alt="{{ post.banner-alt }}">
+                
                 <h3 class="post-title">
     
                     {{ post.title }}
