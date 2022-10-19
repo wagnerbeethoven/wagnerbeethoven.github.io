@@ -2,7 +2,7 @@
 layout: presentation
 title: "Aula sobre Desenvolvimento de Aplicações Acessíveis" 
 categories: blog
-link: "https://docs.google.com/uc?id=1Mnlt2SxdQez3cTwHuHvFHDpyKB4r3mBT"
+link: "http://sumo.pe/blog/desenvolvimento-de-aplicacoes-acessiveis"
 date: "2022-10-18"
 postdate: "Outubro/ 2022"
 banner: "https://bitbucket.org/wagnerbeethoven/2022-10-18-desenvolvimento-de-aplicacoes-acessiveis.md/raw/e9f60f5842b33e72c5f34feb1e7e6111bc9c578d/close-up-blind-man-holding-smartphone_23-2148884021.jpg"
