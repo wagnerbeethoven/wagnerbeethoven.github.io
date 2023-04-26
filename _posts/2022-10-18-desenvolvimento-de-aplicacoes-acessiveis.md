@@ -1,14 +1,13 @@
 ---
 layout: presentation
-title: "Aula sobre Desenvolvimento de Aplicações Acessíveis" 
+title: "Desenvolvimento de Aplicações Acessíveis" 
 categories: blog
-link: "http://sumo.pe/blog/desenvolvimento-de-aplicacoes-acessiveis"
 date: "2022-10-18"
 postdate: "Outubro/ 2022"
-banner: "https://bitbucket.org/wagnerbeethoven/2022-10-18-desenvolvimento-de-aplicacoes-acessiveis.md/raw/e9f60f5842b33e72c5f34feb1e7e6111bc9c578d/close-up-blind-man-holding-smartphone_23-2148884021.jpg"
+banner: "https://bitbucket.org/wagnerbeethoven/2022-10-18-desenvolvimento-de-aplicacoes-acessiveis.md/raw/5c2f78749efc47a4bb8d90b37af2a1bf41376f7f/2022-10-18-desenvolvimento-de-aplicacoes-acessiveis.jpg"
+banner-alt: 'Mulher de pele amarela, sorri e está sentanda numa cadeira adaptada para pessoas tetraplégica'
 description: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
 servico: drive
-banner-alt: 'Homem cego e negro cegurando celular'
 banner-caption: ''
 setup: presentarion
 ---

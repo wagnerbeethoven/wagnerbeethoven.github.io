@@ -32,7 +32,6 @@ body {
 }
 
 body {
-
   padding: 3rem 1rem;
 }
 
@@ -51,7 +50,6 @@ a:hover {
   text-decoration: underline;
   color: var(--color-primary);
 }
-
 
 details summary {
   font-weight: bold;
@@ -187,7 +185,7 @@ main p a[href*="https"]:after {
   width: 12px;
   height: 12px;
   margin-left: 0.25rem;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .info,
@@ -214,11 +212,9 @@ main p a[href*="https"]:after {
   box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
 
-
-
 .section-title mark {
   background: var(--color-primary);
-  color: #fff
+  color: #fff;
 }
 
 .section-title,
@@ -254,7 +250,6 @@ main p a[href*="https"]:after {
 .social a:first-of-type img {
   width: 75px;
 }
-
 
 /* Animation */
 @keyframes bounce {
@@ -325,7 +320,7 @@ footer p:first-child {
   grid-row-gap: 2rem;
   list-style: none;
 }
-.post-list li a:hover{
+.post-list li a:hover {
   text-decoration: none;
 }
 .post-picture {
@@ -501,7 +496,7 @@ footer p:first-child {
   border-bottom-right-radius: var(--border-radius);
 }
 
-.column-nav>div {
+.column-nav > div {
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
@@ -516,7 +511,6 @@ footer p:first-child {
 .column-nav img:hover {
   box-shadow: 0 0 2.5px 10px var(--color-primary);
 }
-
 
 .column-container {
   display: flex;
@@ -620,7 +614,7 @@ footer p:first-child {
 }
 
 .article-summary {
-  color: var(--color-summary)
+  color: var(--color-summary);
 }
 
 .article-meta {
@@ -643,7 +637,6 @@ footer p:first-child {
   order: 1;
   width: 100%;
   font-size: 0.8rem;
-
 }
 
 .article-aside details {
@@ -653,7 +646,6 @@ footer p:first-child {
 
 .article-aside .toc-title {
   font-weight: bold;
-
 }
 
 .article-aside .toc-list {
@@ -676,7 +668,7 @@ text-overflow: ellipsis;
 */
 .article-aside .toc-anchor:hover {
   font-weight: bold;
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 .article-content {
@@ -704,14 +696,11 @@ text-overflow: ellipsis;
   margin-right: auto;
 }
 
-
-
 .article-content blockquote {
   border-left: 3px solid var(--color-text);
   padding: 0 0.5em 0 2rem;
   margin: 0;
 }
-
 
 .article-content p a[href*="https"]:after {
   margin-right: 0.5rem;
@@ -727,7 +716,6 @@ text-overflow: ellipsis;
   overflow: hidden;
 }
 
-
 .article-content h1,
 .article-content h2,
 .article-content h3,
@@ -737,39 +725,39 @@ text-overflow: ellipsis;
   line-height: 1.2;
   margin-top: 1em;
   margin-bottom: 16px;
-  color: #000
+  color: #000;
 }
 
 .article-content h1 {
   font-size: 2.25em;
   font-weight: 300;
-  padding-bottom: .3em
+  padding-bottom: 0.3em;
 }
 
 .article-content h2 {
   font-size: 1.75em;
   font-weight: 400;
-  padding-bottom: .3em
+  padding-bottom: 0.3em;
 }
 
 .article-content h3 {
   font-size: 1.5em;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .article-content h4 {
   font-size: 1.25em;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .article-content h5 {
   font-size: 1.1em;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .article-content h6 {
   font-size: 1em;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .article-content h1,
@@ -777,15 +765,15 @@ text-overflow: ellipsis;
 .article-content h3,
 .article-content h4,
 .article-content h5 {
-  font-weight: 600
+  font-weight: 600;
 }
 
 .article-content h5 {
-  font-size: 1em
+  font-size: 1em;
 }
 
 .article-content h6 {
-  color: #5c5c5c
+  color: #5c5c5c;
 }
 
 /* COPYRIGHT */
@@ -800,13 +788,13 @@ text-overflow: ellipsis;
   margin-bottom: 1rem !important;
 }
 
-.rights>div {
+.rights > div {
   align-items: center;
   display: flex;
 }
 
 .rights svg {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 /* Media */
@@ -861,16 +849,16 @@ text-overflow: ellipsis;
 
   .post-list li {
     transition: transform 5s ease-in-out;
+    border: 1px solid transparent;
   }
-  
+
   .post-list li:hover {
-    transform: scale(1.05);
     z-index: 2;
     position: relative;
     background: #fff;
-    box-shadow: 0.5rem 0.5rem 1rem var(--color-border);
-    border: 1px solid var(--color-border);;
-    padding: .5rem;
+    box-shadow: 0 0 0 5px var(--color-border);
+    border-color: var(--color-border);
+    padding: 0.5rem;
     border-radius: var(--border-radius);
     margin: -0.5rem;
   }
