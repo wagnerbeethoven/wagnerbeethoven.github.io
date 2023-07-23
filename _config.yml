@@ -25,5 +25,12 @@ compress_html:
   ignore:
     envs: []
 
+brotli:
+  extensions:
+    - '.html'
+    - '.css'
+    - '.js'
+
 plugins:
   - jekyll-feed
+  - jekyll-brotli
