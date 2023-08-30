@@ -1,7 +1,17 @@
 <li>
-    <article id="{{post.title | slugify}}" title="Você irá abrir '{{ post.title }}' em uma {{site.warning}}">
+    <article id="{{post.title | slugify}}"
+    
+    {% if post.link %}title="'{{ post.title }}' {{site.warning}}"{% else %}title="Clique para ler o conteúdo"{% endif %}
+    
+    >
         <div class="post-container">
-            <a href="{% if post.link %}{{ post.link }}{% else %}{{post.url}}{% endif %}">
+            <a href="{% if post.link %}{{ post.link }}{% else %}{{post.url}}{% endif %}"
+            
+            {% if post.link %}target='blank'{% else %}{% endif %}
+            
+            
+            
+            >
                 <!--<div class="post-picture {% if post.servico %}post-picture-{{post.servico}}{% endif %}" style="background-image:url({{ post.banner }})"></div> -->
                 
                 <img src="{{ post.banner }}" class="post-picture" alt="{{ post.banner-alt }}">
