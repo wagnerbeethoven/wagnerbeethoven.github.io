@@ -12,13 +12,13 @@ description: 'Conheça todo o background do Designer'
                 <img title="Wagner Beethoven" src="{{site.url}}/{{site.avatar}}" alt="{{site.alt}}">
             </div>
             <nav aria-labelledby="anchor-menu">
-                <a accesskey="5" title="ir para a introdução" href="#intro">{{page.title}}</a>
-                <a accesskey="6" title="ir para os detalhes pessoais" href="#detail">Detalhes pessoais</a>
-                <a accesskey="7" title="ir para as experiência profissional" href="#experience">Experiência Profissional</a>
-                <a title="ir para os trabalhos voluntários" href="#voluntary">Trabalhos voluntários</a>
+                <a accesskey="7" title="ir para a introdução" href="#intro">{{page.title}}</a>
                 <a accesskey="8" title="ir para a escolaridade" href="#education">Escolaridade</a>
-                <a accesskey="9" title="ir para as certificações" href="#certification">Certificações</a>
-                <a accesskey="0" title="ir para os cursos" href="#course">Cursos</a>
+                <a title="ir para os detalhes pessoais" href="#detail">Detalhes pessoais</a>
+                <a accesskey="9"  title="ir para as experiência profissional" href="#experience">Experiência Profissional</a>
+                <a title="ir para os trabalhos voluntários" href="#voluntary">Trabalhos voluntários</a>
+                <a accesskey="0"title="ir para as certificações" href="#certification">Certificações</a>
+                <a  title="ir para os cursos" href="#course">Cursos</a>
             </nav>
         </div>
     </div>
@@ -40,6 +40,25 @@ description: 'Conheça todo o background do Designer'
                 <li>Telefone:&nbsp;&nbsp; {{site.tel}}</li>
                 <li>Localidade:&nbsp;<strong>Olinda &mdash; PE &bull; Brasil</strong></li>
                 <li>Links:&nbsp;<a title="Acesse meu LinkedIn" href="{{site.linkedin}}" target="_blank"><strong>LinkedIn</strong></a>&nbsp;/&nbsp;<a title="Acesse meu Behance" href="{{site.behance}}" target="_blank"><strong>Behance</strong></a>&nbsp;/&nbsp;<a title="Acesse meu Github" href="{{site.github}}" target="_blank"><strong>Github</strong></a>&nbsp;/&nbsp;<a title="Acesse meu Medium" href="{{site.medium}}" target="_blank"><strong>Medium</strong></a></li>
+            </ul>
+        </section>
+        
+        <section id="education" class="section-education">
+            <h2 class="section-title">Escolaridade</h2>
+            <ul class="about-list">
+                {% for education in site.data.education.education %}
+                <li id="{{education.name|slugify}}">
+                    <div class="career-logo">
+                        <img src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}">
+                    </div>
+                    <div class="career-detail">
+                        {% if education.name %}<h3 class="career-activity">{{education.name}}</h3>{% endif %}
+                        {% if education.company %}<h4 class="career-company">{{education.company}}</h4>{% endif %}
+                        {% if education.date %}<small class="career-date">{{education.date}}</small>{% endif %}
+                        {% if education.description %}<p class="career-description">{{education.description}}</p>{% endif %}
+                    </div>
+                </li>
+                {% endfor %}
             </ul>
         </section>
 
@@ -81,25 +100,7 @@ description: 'Conheça todo o background do Designer'
 
         </section>
 
-        <section id="education" class="section-education">
-            <h2 class="section-title">Escolaridade</h2>
-            <ul class="about-list">
-                {% for education in site.data.education.education %}
-                <li id="{{education.name|slugify}}">
-                    <div class="career-logo">
-                        <img src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}">
-                    </div>
-                    <div class="career-detail">
-                        {% if education.name %}<h3 class="career-activity">{{education.name}}</h3>{% endif %}
-                        {% if education.company %}<h4 class="career-company">{{education.company}}</h4>{% endif %}
-                        {% if education.date %}<small class="career-date">{{education.date}}</small>{% endif %}
-                        {% if education.description %}<p class="career-description">{{education.description}}</p>{% endif %}
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-
+       
         <section id="certification" class="section-certification">
             <h2 class="section-title">Certificações</h2>
             <ul class="about-list">

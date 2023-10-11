@@ -3,7 +3,8 @@ education:
     company: Cesar School
     date: 2021 - 2023 (Concluído)
     logo: img/cv/cesar-school.png
-    description: 'Pós-graduação com objetivo formar e aprimorar o conhecimento de estudantes e profissionais que atuam no campo de design de artefatos digitais, setor de TIC – Tecnologia da Informação e Comunicação além de áreas de atuação diretamente correlatas, sobre processos de desenvolvimento de interfaces interativas dentro dos novos desafios de novas tecnologias, complexidades do mundo atual e sobre a perspectiva de inovação.<br><br>Projeto final<br><i>Foco Acessível &mdash; A promoção da acessibilidade no mercado da tecnologia através do podcast</i>&#58; <a href="https://docs.google.com/presentation/d/1JZ2bvnRnatJg24l7FvCGEjNzO5f-xDE4" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://focoacessivel.github.io" target="_blank" title="Site [Este link irá abrir uma nova janela]">Site</a>.'
+    description: >
+      Pós-graduação com objetivo formar e aprimorar o conhecimento de estudantes e profissionais que atuam no campo de design de artefatos digitais, setor de TIC – Tecnologia da Informação e Comunicação além de áreas de atuação diretamente correlatas, sobre processos de desenvolvimento de interfaces interativas dentro dos novos desafios de novas tecnologias, complexidades do mundo atual e sobre a perspectiva de inovação.<br><br>Projeto final<br><strong>Foco Acessível &mdash; A promoção da acessibilidade no mercado da tecnologia através do podcast</strong><br> <a href="https://docs.google.com/presentation/d/1JZ2bvnRnatJg24l7FvCGEjNzO5f-xDE4" target="_blank" title="Apresentação [Este link irá abrir uma nova janela]">Apresentação</a> e <a href="https://focoacessivel.github.io" target="_blank" title="Site [Este link irá abrir uma nova janela]">Site</a>.'
 
   - name: Design de Web Apps com Tecnologia Front-End
     company: IBRATEC – Instituto Brasileiro de Tecnologia
