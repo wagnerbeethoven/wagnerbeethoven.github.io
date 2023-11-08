@@ -10,6 +10,5 @@ servico: drive
 banner-alt: 'Foto da vista superior de um grupo de pessoas usando um macbook durante uma discussão'
 banner-caption: ''
 setup: presentarion
+link-presentation: https://docs.google.com/presentation/d/e/2PACX-1vT58Eo2ihR77AozVBDO3-Q2cUiwf4DebpaOWpntJaFFJLzqg-66dmbBdN085xdy_7T5cyLqahOMSjik/embed?start=false&loop=true&delayms=3000
 ---
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT58Eo2ihR77AozVBDO3-Q2cUiwf4DebpaOWpntJaFFJLzqg-66dmbBdN085xdy_7T5cyLqahOMSjik/embed?start=false&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

@@ -10,6 +10,5 @@ description: "Aula sobre Acessibilidade ministrada para os alunos do 2º períod
 servico: drive
 banner-caption: ''
 setup: presentarion
+link-presentation: https://docs.google.com/presentation/d/e/2PACX-1vRMO9Y6EpfGQ2PVFY9nwdN0MWGrfvTcizk8LRucu1AvsY6_RLnTz-_YhZxIwFzGbfAIhn2GAqkU-kjx/embed?start=false&loop=false&delayms=3000
 ---
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRMO9Y6EpfGQ2PVFY9nwdN0MWGrfvTcizk8LRucu1AvsY6_RLnTz-_YhZxIwFzGbfAIhn2GAqkU-kjx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

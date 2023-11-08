@@ -10,6 +10,5 @@ servico: drive
 banner-alt: 'Homem branco, tem cabelos curtos e cavanhaque grisalhos, veste uma camisa preta e óculos de armação preto'
 banner-caption: ''
 setup: presentarion
+link-presentation: https://docs.google.com/presentation/d/e/2PACX-1vT9PFX5XrrMa0UGvc24IgM59cCqnSv5QtbQSus2tq8ThfS1J7hqu6CNCBJKgSs9cOwI8d3KjWLpUj4Y/embed?start=false&loop=false&delayms=3000
 ---
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT9PFX5XrrMa0UGvc24IgM59cCqnSv5QtbQSus2tq8ThfS1J7hqu6CNCBJKgSs9cOwI8d3KjWLpUj4Y/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
