@@ -96,7 +96,7 @@ hr:after {
   padding: 1em;
   opacity: 0;
   border-radius: var(--border-radius);
-  background-color: var(--color-primary);
+  background-color:#fff;
   color: #fff;
 }
 
