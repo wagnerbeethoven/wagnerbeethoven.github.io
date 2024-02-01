@@ -96,7 +96,7 @@ hr:after {
   padding: 1em;
   opacity: 0;
   border-radius: var(--border-radius);
-  background-color:#fff;
+  background-color: #fff;
   color: #fff;
 }
 
@@ -938,4 +938,26 @@ text-overflow: ellipsis;
   color: #005757;
   border-color: #005757;
   text-decoration: none;
+}
+
+
+
+
+.courses-name {
+  font-weight: bold;
+}
+
+.list-courses {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-courses p {
+  padding-bottom: 1rem;
+}
+
+.list-courses p small {
+  opacity: 0.8;
+  font-size: 14px;
+  display: block;
 }

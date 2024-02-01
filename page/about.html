@@ -122,8 +122,8 @@ description: 'Conheça todo o background do Designer'
 
         <section id="course" class="section-course">
             <h2 class="section-title">Cursos</h2>
-            <div class="about list">
-                {% include course.html %}
+            <div class="about list list-courses">{% for curso in site.data.curso.curso | sort:"{{curso.company}" %}
+                    <p id="{{curso.name|slugify}}-{{curso.company|slugify}}">{% if curso.link %}<a rel="noopener" title="Visualizar certificado ({{site. warning }})" target="_blank" href="{{curso.link}}">{% endif %}<span class="courses-name">{{curso.name}}</span>{% if curso.link %}</a>{% endif %}<small>{{curso.company}} ({{curso.date}}{% if curso.duration %}, {{curso.duration}}{% endif %})</small></p>{% endfor %}
             </div>
         </section>
     </div>
