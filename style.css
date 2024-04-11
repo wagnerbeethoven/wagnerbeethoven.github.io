@@ -6,6 +6,8 @@
 body {
     padding: 5rem 1rem;
     font-family: "Open Sans", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.5;
 }
 
 mark {
@@ -25,6 +27,7 @@ a {
 a[href*="https"]:after {
     content: " ↗";
     text-decoration: none;
+    font-size: 85%;
 }
 
 b, strong {
@@ -66,12 +69,14 @@ b, strong {
     font-size: 2rem;
     margin: 4.625rem 0 2.25rem;
 }
-.podcast p:last-of-type{
+
+.podcast p:last-of-type {
     font-size: small;
 }
 .podcast iframe {
     border-radius: 1rem;
 }
+
 .career-list p {
     font-size: 0.875rem;
 }
