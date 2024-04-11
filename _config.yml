@@ -1,19 +1,14 @@
-name: "Agência Sumô"
-author: "Wagner Beethoven"
-description: "Portfólio de Wagner Beethoven, designer com experiência na concepção, criação de artefatos digitas, entusiasta da acessibilidade e tecnologia assistivas"
-email: "<a href='mailto:contato@sumo.pe' title='Mande um oi ☺️'><strong>contato@sumo.pe</strong></a>"
-tel: "<a href='tel:+5581986496080' title='Me liga 🤗'><strong>81 986 496 080</strong></a>"
-warning: abrirá nova aba
+name: Wagner Beethoven
+description: Designer e entusiasta da Acessibilidade
+email: contato@sumo.pe
 avatar: "img/avatar.jpg"
-alt: "Wagner tem pele branca, possui cabelos e barba curtas e pretas, usa óculos, está olhando para camera e sorri, veste camisa azul"
-opengraph-alt: 'Em cima de uma mesa de madeira, há do laddo esquerdo um pote branco com lápis e caneta diversas. No centro um computador reproduzido link do Portfólio de Wagner e do lado direito um pequeno vaso com flores amarelas e um mouse'
+alt: "Homem branco de cabelos e barba curtas e pretas. Veste óculos, camisa vermelha e sorri"
+tel: 81986496080
 medium: "https://wagnerbeethoven.medium.com/"
 behance: "https://www.behance.net/wagnerbeethoven/"
 github: "https://www.github.com/wagnerbeethoven/"
 linkedin: "https://www.linkedin.com/in/wagnerbeethoven/"
-
 url: "//sumo.pe"
-# baseurl: "/"
 permalink: /:categories/:title
 
 compress_html:
@@ -24,13 +19,5 @@ compress_html:
   blanklines: false
   ignore:
     envs: []
-
-brotli:
-  extensions:
-    - '.html'
-    - '.css'
-    - '.js'
-
 plugins:
   - jekyll-feed
-  - jekyll-brotli

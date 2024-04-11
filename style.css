@@ -1,0 +1,139 @@
+::root {
+    --color-primary: #147979;
+    --color-github: #333;
+}
+
+body {
+    padding: 5rem 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+mark {
+    padding: 0;
+    background: teal;
+}
+
+main {
+    margin: 3.25rem 0 5.25rem;
+
+}
+
+a {
+    color: var(--bs-body-color);
+}
+
+a[href*="https"]:after {
+    content: " ↗";
+    text-decoration: none;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin: 3.25rem 0;
+    font-weight: 600;
+}
+
+.page-title mark {
+    color: var(--bs-body-bg);
+}
+
+.social {
+    margin: 2.75rem 0 4.625rem;
+}
+
+.social a {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+}
+
+.social a img {
+    height: 24px;
+    width: 100%;
+    display: block;
+}
+
+.social-linkedin a {
+    width: 5rem;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 4.625rem 0 2.25rem;
+}
+.podcast p:last-of-type{
+    font-size: small;
+}
+.podcast iframe {
+    border-radius: 1rem;
+}
+.career-list p {
+    font-size: 0.875rem;
+}
+
+footer {
+    padding-top: 6.875rem;
+    font-size: .825rem;
+}
+
+.podcast a:after,
+.a11y-webring-club a:after {
+    content: "";
+}
+
+.badge {
+    font-weight: 400;
+}
+
+.badge {
+    text-transform: lowercase;
+
+}
+
+.badge-aula {
+    background: var(--bs-indigo);
+}
+
+.badge-evento {
+    background: var(--bs-teal);
+    color: var(--bs-black)
+}
+
+.badge-ux-collective {
+    background: var(--bs-blue);
+}
+
+/* 404 */
+#error {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.fof {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fof h1 {
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}
+
+@keyframes type {
+    from {
+        box-shadow: inset -3px 0px 0px #888;
+    }
+
+    to {
+        box-shadow: inset -3px 0px 0px transparent;
+    }
+}

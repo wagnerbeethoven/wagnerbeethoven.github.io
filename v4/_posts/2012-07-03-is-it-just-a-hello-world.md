@@ -1,6 +1,6 @@
 ---
-# published: false
-layout: default
+published: false
+layout: post
 date: 2012-07-03
 title: "Is it just a hello world?"
 category: blog
