@@ -10,9 +10,20 @@ body {
     line-height: 1.5;
 }
 
+html[data-bs-theme=light] {
+    mark {
+        background: #005757;
+    }
+}
+
+html[data-bs-theme=dark] {
+    mark {
+        background: #FFE500
+    }
+}
+
 mark {
     padding: 0;
-    background: teal;
 }
 
 main {
@@ -73,6 +84,7 @@ b, strong {
 .podcast p:last-of-type {
     font-size: small;
 }
+
 .podcast iframe {
     border-radius: 1rem;
 }
@@ -97,21 +109,22 @@ footer {
 
 .badge {
     text-transform: lowercase;
-
+    color: var(--bs-black);
 }
 
 .badge-aula {
-    background: var(--bs-indigo);
+    background: var(--bs-orange);
 }
 
 .badge-evento {
     background: var(--bs-teal);
-    color: var(--bs-black)
 }
 
 .badge-ux-collective {
-    background: var(--bs-blue);
+    background: #01ccff
 }
+
+;
 
 /* 404 */
 #error {
