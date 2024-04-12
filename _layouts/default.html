@@ -7,7 +7,7 @@ layout: default
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}} Wagner Beethoven • Designer e entusiasta da Acessibilidade</title>
+    <title>{{page.title}} • Designer e entusiasta da Acessibilidade</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@ layout: default
         </div>
     </header>
     <h1 class="page-title">
-        {{page.title}}
+        {{page.pagetitle}}
     </h1>
 
     <main>
@@ -92,20 +92,7 @@ layout: default
                 updateTheme()
             }
         })()
-        //
-        // Only trigger if service workers are supported in browser.
-if ('serviceWorker' in navigator) {
-  // Wait until window is loaded before registering.
-  window.addEventListener('load', () => {
-    // Register the service worker with "/" as it's scope.
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-      // Output success/failure of registration.
-      .then(() => console.log('SW registered'))
-      .catch(() => console.error('SW registration failed'));
-  });
-}
-        
-        </script>
+    </script>
 </body>
 
 </html>
