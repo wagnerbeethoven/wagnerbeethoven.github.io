@@ -2,80 +2,104 @@ posts:
   - title: "Práticas recomendadas de UX: humanizando softwares de gestão com uma experiência inovadora"
     date: 2024-04-10
     link: "http://wagnerbeethoven.medium.com/praticas-recomendadas-de-ux-humanizando-softwares-de-gestao-com-uma-experiencia-inovadora-ff0a5d6690d9"
+    summary: "Texto produzido para o blog da Procenge sobre a humanizando ao de ERPs e inovação"
   - title: "Quais as melhores práticas para montar um portfólio de UX Design?"
     type: UX Collective
     date: 2023-11-13
     link: "http://brasil.uxdesign.cc/quais-as-melhores-praticas-para-montar-um-portfolio-3cecabd98b8b"
+    summary: "Planejar e ter um portfólio estratégico é a melhor forma de desenvolver uma imagem forte como Designer."
   - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
     type: Evento
     date: 2023-10-18
     link: "http://docs.google.com/presentation/d/e/2PACX-1vRwW_vSAT_-U6tWZLtw9PusctepcCobZb0CKkMSh6XAEElo-A-nrQzgb7rb5MIVLg/embed?start=false&loop=false&delayms=3000"
+    summary: "Apresentação feita no Rec N'Play 2023 sobre a experiência com o desenvolvimento de um hackathon interno, onde colaboradores de diversas áreas se uniram em um ambiente de criatividade e cooperação."
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
     date: 2023-04-24
     link: "http://docs.google.com/presentation/d/e/2PACX-1vT58Eo2ihR77AozVBDO3-Q2cUiwf4DebpaOWpntJaFFJLzqg-66dmbBdN085xdy_7T5cyLqahOMSjik/embed?start=false&loop=true&delayms=3000"
+    summary: "Aula sobre a importância do UI/UX nos times ágeis no contexto de das construções de aplicações digitais ministrada para os alunos do 1º período do curso de Sistema da Informação da Uninassau"
   - title: "Desenvolvimento de Aplicações Acessíveis"
     type: Aula
     date:  2022-10-18
     link: "http://docs.google.com/presentation/d/e/2PACX-1vRMO9Y6EpfGQ2PVFY9nwdN0MWGrfvTcizk8LRucu1AvsY6_RLnTz-_YhZxIwFzGbfAIhn2GAqkU-kjx/embed?start=false&loop=false&delayms=3000"
+    summary: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
   - title: "Introdução ao Manifesto Ágil e ao Framework Scrum"
     date: 2022-10-03
     link: "http://wagnerbeethoven.medium.com/introdu%C3%A7%C3%A3o-ao-manifesto-%C3%A1gil-e-ao-framework-scrum-caeece0e4672"
+    summary: "Texto retirado da apresentação feita para novas estagiárias da equipe de Design da Procenge"
   - title: "Experiência do Usuário e Design Thinking"
     type: Aula
     date: 2022-03-29
     link: "http://docs.google.com/presentation/d/e/2PACX-1vT9PFX5XrrMa0UGvc24IgM59cCqnSv5QtbQSus2tq8ThfS1J7hqu6CNCBJKgSs9cOwI8d3KjWLpUj4Y/embed?start=false&loop=false&delayms=3000"
+    summary: "Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau"
   - title: "Refiz meu portfolio mais uma vez"
     date: 2022-03-14
     link: "http://wagnerbeethoven.medium.com/refiz-meu-portfolio-mais-uma-vez-f3caadb61052"
+    summary: "Analise da minha presença na internet e como eu mostro meu trabalho — esse texto é um relato"
   - title: "Lições ao me tornar líder de um time de design"
     type: UX Collective
     date: 2022-01-07
     link: "http://medium.com/p/b7cb8c79077f"
+    summary: "Como a liderança de design pode mudar o cenário do design no momento de fragilidade, virando o jogo e trazendo o Design para o centro das decisões"
   - title: "Recorte de uma produção tecnológica racista"
     date: 2021-11-19
     link: "http://wagnerbeethoven.medium.com/design-racista-79435622854c"
+    summary: "Reprodução da pesquisa feita para o encontro o 1º Design Talk — workshop periódico da equipe de Design da Procenge"
   - title: "O que acessibilidade e a usabilidade tem a ver com sucesso no uso de softwares de gestão"
     date: 2021-11-09
     link: "http://wagnerbeethoven.medium.com/o-que-acessibilidade-e-a-usabilidade-tem-a-ver-com-sucesso-no-uso-de-softwares-de-gest%C3%A3o-e28d13435751"
+    summary: "Confira o meu primeiro texto “público” sobre acessibilidade e com visibilidade fora do da minha bolha"
   - title: "Agilidade é sobre fazer rápido? Como utilizar Agile UX e desenvolver melhores produtos"
     date: 2021-09-19
     link: "http://wagnerbeethoven.medium.com/agilidade-%C3%A9-sobre-fazer-r%C3%A1pido-como-utilizar-agile-ux-e-desenvolver-melhores-produtos-2ed9e9b4f1fa"
+    summary: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile Week."
   - title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
     date: 2021-02-13
     link: "http://wagnerbeethoven.medium.com/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece-d59bdb47a2a9"
+    summary: "Todos os detalhes da construção e as impressões do que rolou na competição" 
   - title: "Anotações de estudo para certificação SCRUM"
     date: 2020-03-02
     link: "http://wagnerbeethoven.medium.com/anota%C3%A7%C3%B5es-de-estudo-para-certifica%C3%A7%C3%A3o-scrum-5bf2877bdfeb"
+    summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
 
 portfolio:
   - title: "Vandinho - o trabalhador do seu jardim"
     date: 2023-01-12
     link: "http://www.behance.net/gallery/161132415/Vandinho-o-trabalhador-do-seu-jardim"
+    summary: "Projeto conceitual construído no curso de pós-graduação de Design de Interação para Artefatos Digitais da Cesar School"
   - title: "Capybem"
     date: 2020-08-23
     link: "http://www.behance.net/gallery/109241647/Capybem"
+    summary: "Projeto conceitual/aplicação mobile que irá ajudar o meio ambiente"
   - title: "Namastu"
     date: 2018-12-20
     link: "http://www.behance.net/gallery/73988441/Namastu"
+    summary: "Arquitetura da informação, experiência do usuário, concepção/interface e integração com Wordpress"
   - title: "Procurados da Justiça"
     date: 2018-11-09
     link: "http://www.behance.net/gallery/92763985/Procurados-pela-Justica"
+    summary: "Criação e concepção da arquitetura da informação, experiência do usuário, design system para o aplicativo mobile"
   - title: "Instituto Muviar – Museu Virtual de Arte de Rua"
     date: 2014-10-17
     link: "http://www.behance.net/gallery/71406589/Instituto-Muviar-Museu-Virtual-de-Arte-de-Rua"
+    summary: "Arquitetura da informação, experiência do usuário, concepção/interface e integração com Wordpress"
   - title: "Coegemas"
     date: 2017-06-21
     link: "http://www.behance.net/gallery/54997927/Coegemas"
+    summary: "Arquitetura da informação, criação de layout e desenvolvimento do site"
   - title: "CFC Ativa"
     date: 2015-05-10
-    link: "http://www.behance.net/gallery/26099437/Ativa-CFC#"
+    link: "http://www.behance.net/gallery/26099437/Ativa-CFC"
+    summary: "Criação de identidade visual, logotipo e papelaria. Planejamento, criação, concepção do design do site em WordPress para autoescola"
   - title: "Mostra Cine Brasil Cidadania"
     date: 2014-06-02
     link: "http://www.behance.net/gallery/18087715/Mostra-Cine-Brasil-Cidadania"
+    summary: "Criação e concepção da identidade visual, logotipo e papelaria para a Mostra Cine Brasil Cidadania"
   - title: "Zine Zena #1"
     date: 2012-11-16
     link: "http://www.behance.net/gallery/10946053/Zine-Zena-1"
+    summary: "Design e diagração do zine utilizando Scribus"
   - title: "CineZen Cultural"
     date: 2011-11-23
     link: "http://www.behance.net/gallery/13024685/CineZen-Cultural"
+    summary: "Arquitetura da informação, experiência do usuário, concepção de interface e integração com Wordpress"
