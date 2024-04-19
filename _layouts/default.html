@@ -13,11 +13,9 @@ layout: default
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{site.url}}/style.css">
 
-
     <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-16x16.png" sizes="16x16" />
     <link rel="shortcut icon" href="{{site.url}}/favicon.ico" type="image/x-icon">
-
 
     <meta property="og:url" content="{{site.url}}">
     <meta property="og:type" content="website">
@@ -31,8 +29,10 @@ layout: default
     <meta name="twitter:title" content="{{page.title}} • Designer e entusiasta da Acessibilidade">
     <meta name="twitter:description" content="Portfólio do Designer.">
     <meta name="twitter:image" content="{{site.url}}/img/image-default.png">
-    <link rel="alternate" href="{{site.url}}/feed-portofolio.xml" type="application/rss+xml" title="RSS">
-    <link rel="alternate" href="{{site.url}}/feed-blog.xml" type="application/rss+xml" title="RSS">
+
+    <link rel="alternate" type="application/rss+xml" title="Medium" href="http://wagnerbeethoven.medium.com/feed"/>
+    <link rel="alternate" type="application/rss+xml" title="Behance" href="https://www.behance.net/feeds/user?username=wagnerbeethoven"/>
+
     <link rel="manifest" href="{{site.url}}/manifest.json" />
 
     <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
@@ -42,9 +42,9 @@ layout: default
 <body class="col-12 col-md-10 col-lg-7 mx-auto">
     <header class="top">
         <div class="col-6 col-md-4 col-lg-3">
-            <a href="{{site.url}}" title="{{page.title | strip_html }}">
+            <a href="http://sumo.peoo/" title="{{page.title | strip_html }}">
             <figure class="ratio ratio-1x1">
-                <img title="Olá, sou Wagner 😉" src="http://sumo.pe/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+                <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
             </figure>
             </a>
         </div>
@@ -62,14 +62,14 @@ layout: default
         <p>Feito com <span title="amor">💚</span> & <span title="café">☕</span> em Olinda no Jekyll e no Github. <br> Esta obra está em constante mudança.</p> 
         <p>Feed/RSS:
             <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba" href="http://wagnerbeethoven.medium.com/feed"><i class="bi bi-medium ms-3 me-1 "></i>Medium</a>
-            <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba"  href="http://behance.net/wagnerbeethoven/" ><i class="bi bi-behance ms-3 me-1"></i>Behance</a></p>
+            <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba"  href="https://www.behance.net/feeds/user?username=wagnerbeethoven" ><i class="bi bi-behance ms-3 me-1"></i>Behance</a></p>
         <nav class="a11y-webring-club text-center">
-                <p class="mb-1">
-                    Este site é membro do <a rel="external" title="Este link irá abrir em uma nova aba" href="https://a11y-webring.club/">a11y-webring.club</a>.
-                </p>
-                <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O site anterior irá abrir em uma nova aba"     href="https://a11y-webring.club/prev"   class="text-decoration-none"> ← Site anterior</a>
-                <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="Um site aleatório irá abrir em uma nova aba"   href="https://a11y-webring.club/random" class="text-decoration-none mx-3">Site aleatório</a>
-                <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O próximo site irá abrir em uma nova aba"      href="https://a11y-webring.club/next"   class="text-decoration-none">Próximo site →</a>
+            <p class="mb-2">
+                Este site é membro do <a rel="external" title="Este link irá abrir em uma nova aba" href="https://a11y-webring.club/">a11y-webring.club</a>.
+            </p>
+            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O site anterior irá abrir em uma nova aba" href="https://a11y-webring.club/prev"> ← Site anterior</a>
+            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="Um site aleatório irá abrir em uma nova aba" href="https://a11y-webring.club/random" class=" mx-3">Site aleatório</a>
+            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O próximo site irá abrir em uma nova aba" href="https://a11y-webring.club/next">Próximo site →</a>
         </nav>
     </footer>
 
@@ -89,5 +89,4 @@ layout: default
         })()
     </script>
 </body>
-
 </html>

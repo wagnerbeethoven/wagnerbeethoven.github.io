@@ -16,7 +16,6 @@ pagetitle: 'Olá, sou <mark>Wagner</mark>'
         <li class="list-group-item d-flex justify-content-between align-items-center postition-relative px-0 " id="portfolio-{{post.title|slugify}}">
             <a href="{{post.link}}" title="{{post.date   | date: '%d/%m/%Y'}} - &quot;{{post.title}}&quot; irá abrir o Behance em uma nova aba"  rel="no-referrer noopener" target="_blank"  class="text-decoration-none stretched-link">{{post.title}}</a>
             <time  datetime="{{post.date}}"class="text-end text-uppercase col-3">{{post.date   | date: '%m/%Y'}}</time>
-            
         </li>
     {% endfor %}
     </ul>
