@@ -1,10 +1,13 @@
 ---
 layout: default
-title: "Ops, página não encontrada."
+title: "Página não encontrada"
 ---
 
 <div id="error">
     <div class="fof">
-        <h1>Error 404</h1>
+        <h1>{{page.title}}</h1>
     </div>
 </div>
+
+<a class="mt-5 d-inline-block text-decoration-none btn" href="{{site.url}}">
+<i class="bi bi-arrow-bar-left me-1"></i>Página inicial</a>
