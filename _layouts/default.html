@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: compress
 ---
 <!doctype html>
 <html lang="pt-br" data-bs-theme="auto">
@@ -44,7 +44,7 @@ layout: default
         <div class="col-6 col-md-4 col-lg-3">
             <a href="{{site.url}}" title="{{page.title | strip_html }}">
             <figure class="ratio ratio-1x1">
-                <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+                <img title="Olá, sou Wagner 😉" src="http://sumo.pe/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
             </figure>
             </a>
         </div>
@@ -60,6 +60,7 @@ layout: default
     {% include podcast.html %}
     <footer class="text-center">
         <p>Feito com <span title="amor">💚</span> & <span title="café">☕</span> em Olinda no Jekyll e no Github. <br> Esta obra está em constante mudança.</p> 
+        <p>Feed/RSS: <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba" href="http://wagnerbeethoven.medium.com/feed"><i class="bi bi-medium ms-3 me-1 "></i>Medium</a><a href="http://behance.net/wagnerbeethoven/" target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba" ><i class="bi bi-behance ms-3 me-1"></i>Behance</a></p>
         <nav class="a11y-webring-club text-center">
                 <p class="mb-1">
                     Este site é membro do <a rel="external" title="Este link irá abrir em uma nova aba" href="https://a11y-webring.club/">a11y-webring.club</a>.
