@@ -11,17 +11,21 @@ posts:
   - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
     type: Evento
     date: 2023-10-18
-    link: "http://docs.google.com/presentation/d/e/2PACX-1vRwW_vSAT_-U6tWZLtw9PusctepcCobZb0CKkMSh6XAEElo-A-nrQzgb7rb5MIVLg/embed?start=false&loop=false&delayms=3000"
-    summary: "Apresentação feita no Rec N'Play 2023 sobre a experiência com o desenvolvimento de um hackathon interno, onde colaboradores de diversas áreas se uniram em um ambiente de criatividade e cooperação."
+    link: "http://speakerdeck.com/wagnerbeethoven/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
+  - title: "Criando um portfólio competitivo: orientação na prática para UX Designers"
+    type: Evento
+    date: 2023-10-18
+    link: "hhttp://speakerdeck.com/wagnerbeethoven/criando-um-portfolio-competitivo-orientacao-na-pratica-para-ux-designers"
+    summary: "Apresentação feita no Rec N'Play 2023 com orientações para UX Design construirem portfólio de maneira mais estratégica"
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
     date: 2023-04-24
-    link: "http://docs.google.com/presentation/d/e/2PACX-1vT58Eo2ihR77AozVBDO3-Q2cUiwf4DebpaOWpntJaFFJLzqg-66dmbBdN085xdy_7T5cyLqahOMSjik/embed?start=false&loop=true&delayms=3000"
+    link: "http://speakerdeck.com/wagnerbeethoven/ux-nos-times-ageis-nas-construcoes-de-produtos-digitais"
     summary: "Aula sobre a importância do UI/UX nos times ágeis no contexto de das construções de aplicações digitais ministrada para os alunos do 1º período do curso de Sistema da Informação da Uninassau"
   - title: "Desenvolvimento de Aplicações Acessíveis"
     type: Aula
     date:  2022-10-18
-    link: "http://docs.google.com/presentation/d/e/2PACX-1vRMO9Y6EpfGQ2PVFY9nwdN0MWGrfvTcizk8LRucu1AvsY6_RLnTz-_YhZxIwFzGbfAIhn2GAqkU-kjx/embed?start=false&loop=false&delayms=3000"
+    link: "http://speakerdeck.com/wagnerbeethoven/design-x-acessibilidade"
     summary: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
   - title: "Introdução ao Manifesto Ágil e ao Framework Scrum"
     date: 2022-10-03
@@ -30,7 +34,7 @@ posts:
   - title: "Experiência do Usuário e Design Thinking"
     type: Aula
     date: 2022-03-29
-    link: "http://docs.google.com/presentation/d/e/2PACX-1vT9PFX5XrrMa0UGvc24IgM59cCqnSv5QtbQSus2tq8ThfS1J7hqu6CNCBJKgSs9cOwI8d3KjWLpUj4Y/embed?start=false&loop=false&delayms=3000"
+    link: "http://speakerdeck.com/wagnerbeethoven/design-thinking"
     summary: "Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau"
   - title: "Refiz meu portfolio mais uma vez"
     date: 2022-03-14

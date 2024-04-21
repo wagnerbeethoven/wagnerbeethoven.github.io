@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 date: 2012-07-03
 pagetitle: "Is it just a hello world?"
 category: blog

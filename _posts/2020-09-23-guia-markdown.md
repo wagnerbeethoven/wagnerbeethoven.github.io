@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 date: 2020-09-23
 title: "Guia Markdown"
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
@@ -12,6 +12,7 @@ tags:
   - Material de apoio
   - Markdown
   - Traduação
+  - Estudo
 toc: true
 ---
 

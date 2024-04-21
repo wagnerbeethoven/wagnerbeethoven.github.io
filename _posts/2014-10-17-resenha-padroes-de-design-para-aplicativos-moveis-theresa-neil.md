@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 date: 2014-10-17
 title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
 category: blog
@@ -12,6 +12,8 @@ tags:
   - Novatec
   - Usabilidade
   - UX
+  - Literatura
+  - Estudo
 toc: true
 ---
 

@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<div class="row">
+    <aside class="col-12 col-md-4">
+        <header class="mb-4">
+            <div class="col-8">
+            <a href="{{site.url}}" title="{{page.title | strip_html }}">
+                <figure class="ratio ratio-1x1">
+                    <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+                </figure>
+                </a>
+            </div>
+        <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
+            <p class="mb-4">{{site.description}}</p>
+        </header>
+
+        {% if page.toc==true %}
+        <div class="position-relative">
+            <div class="toc my-5 sticky-top">
+                <h2 class="fst-italic mb-3 h4">Índice da página</h2>
+                {% include toc.html html=content %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="my-5">
+            <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
+            <nav>
+                <a class="mb-3 d-block text-decoration-none" href="{{site.url}}/portfolio"><i class="bi bi-bullseye me-2"></i>Acesse meus projetos</a>
+                <a class="mb-3 d-block text-decoration-none" href="{{site.url}}/blog"><i class="bi bi-body-text me-2"></i>Leia meus textos</a>
+                <a class="mb-3 d-block text-decoration-none" href="{{site.url}}/about"><i class="bi bi-file-person me-2"></i>Conheça minha trajetória</a>
+                <a class="mb-3 d-block text-decoration-none" href="{{site.url}}/about#detail"><i class="bi bi-send-fill me-2"></i>Fale comigo</a>
+                <a class="mb-3 d-block text-decoration-none" href="#podcast"><i class="bi bi-mic-fill me-2"></i>Podcast: <strong>Foco Acessível</strong></a>
+            </nav>
+        </div>
+    </aside>
+    <article class="col-12 col-md-8" id="content">
+        {% if page.medium %}
+        <p class="alert alert-info alert-dismissible fade show" role="alert">
+            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a target="_blank" rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{post.medium}}" class="alert-link">acesse aqui</a>.
+            <button type="button" class="btn-close" title="Fechar aviso" data-bs-dismiss="alert" aria-label="Close"></button>    
+        </p>
+        {% endif %}
+
+
+        <h1 class="page-title post-title fw-semibold mt-0 mb-2">
+        {{page.title}}
+        </h1>
+
+        <div class="d-flex align-items-center mb-4 text-muted author-info">
+            <span><i class="bi bi-calendar-event me-2 " title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</span>
+            <span><i class="bi bi-stopwatch ms-4 me-2 " title="Duração de leitura"></i>{% include reading_time.html %}</span>
+        </div>
+
+
+        {% if page.image %}
+        <figure class="figure w-100">
+            <img src="{{page.image}}" class="figure-img img-fluid rounded w-100" alt="{{page.alt}}">
+            <figcaption class="figure-caption">{{page.legend}}</figcaption>
+        </figure>
+        {% endif %}
+
+        {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>: {{page.summary}}</p>{%else%}{% endif %}
+
+        {{content}}
+
+        <p>Se você leu até aqui, meu muito obrigado 🤘🏼💝. <br> Gostou? Compartilhe para mais pessoas! 😉</p>
+    
+        <div class="mt-5 pt-5 border-top">
+            <div class="category">
+                <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
+                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category |slugify }}{% endfor %}">
+                    {% for category in page.categories %}{{ category }}{% endfor %}
+                </span>
+            </div>
+            <div class="my-4 tags">
+                <i class="bi bi-bookmark-fill me-2" title="Assuntos da página"></i>
+                {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
+                <span class="tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include related.html %}
+
+
+        <div class="row">
+            {% if page.previous.url %}
+            <a class="text-decoration-none col-12 col-md text-center text-md-start" href="{{page.previous.url}}" title="Leia a publicação &quot;{{page.previous.title}}&quot;">
+                <small class="mb-2 d-block opacity-75">Publiação anterior</small>
+                <div class="d-flex  justify-content-center justify-content-md-start"><i class="bi bi-arrow-left-square me-3"></i><span class="d-inline-block">{{page.previous.title}}</span></div>
+            </a>
+            {% endif %}
+
+            {% if page.next.url %}
+            <a class="text-decoration-none col-12 col-md text-center text-md-end" href="{{page.next.url}}" title="Leia a publicação &quot;{{page.next.title}}&quot;">
+                <small class="mb-2 d-block">Próximo publicação</small>
+                <div class="d-flex  justify-content-center justify-content-md-end"><span class="d-inline-block">{{page.next.title}}</span><i class="bi bi-arrow-right-square ms-3"></i></div>
+            </a>
+            {% endif %}
+        </div>
+    </article>
+</div>
