@@ -1,21 +1,21 @@
 ---
-published: false
-layout: post
+layout: page
 date: 2014-10-17
 title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2014-10-17-design-aplicativos-moveis-theresa/raw/c85a0c3596ffb3ef866786ae282e497db312571d/banner-design-aplicativos-moveis-theresa.jpg
 alt: "Numa mesa de madeira clara, do lado esquerdo um óculos de hastes abertas e de cabeça para baixo com a armação preta está.  Ao  centro, o livro resenhado neste texto e ao lado direito um vazo com plantas de tamanho pequeno."
 description: "Catálogo poderoso de diversos padrões mobile"
-description: 'Impressões da leitura do livro "Padrões de Design para Aplicativos Móveis" da Theresa Neil'
+summary: 'impressões da leitura do livro "Padrões de Design para Aplicativos Móveis" da Theresa Neil'
 tags:
   - Mobile
   - Novatec
   - Usabilidade
   - UX
+toc: true
 ---
 
-Mês passado eu comprei três livros de uma vez da [Novatec](http://www.novatec.com.br), mesmo com uns meses de gibis comprados e não lidos (verdão, sorry). O que me impulsionou mesmo foi um projeto chamando [@clubedosposts](ttps://twitter.com/ClubeDosPosts), não para comprar os livros, mas para escrever e manter um blog.
+Mês passado eu comprei três livros de uma vez da [Novatec](http://www.novatec.com.br), mesmo com uns meses de gibis comprados e não lidos (verdão, sorry). O que me impulsionou mesmo foi um projeto chamando [@clubedosposts](https://twitter.com/ClubeDosPosts), não para comprar os livros, mas para escrever e manter um blog.
 
 O conteúdo do blog que tentarei manter não será sobre sobre desenvolvimento front-end (não é a intenção pelo menos), mas sobre minhas impressões sobre minha rotina como designer, ux, front-end e o escambal a quatro.
 

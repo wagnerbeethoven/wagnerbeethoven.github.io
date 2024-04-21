@@ -1,18 +1,18 @@
 ---
-published: false
-layout: post
+layout: page
 date: 2020-09-23
 title: "Guia Markdown"
 description: "Guia de referência escrito por Matt Cone traduzido para o português"
 category: blog
 image: https://bitbucket.org/wagnerbeethoven/2020-09-23-guia-markdown/raw/b504d6ed386a401897e7e2379e5cf572c06d3522/atom.png
 legend: Print do Editor Atom
-description: "Guia de referência escrito por Matt Cone traduzido para o português"
+summary: "este texto é um guia de referência escrito por Matt Cone traduzido para o português"
 alt: Print do Editor Atom representando um texto formatado em Markdown
 tags:
   - Material de apoio
   - Markdown
   - Traduação
+toc: true
 ---
 
 Quando comecei a pesquisar sobre o [Jekyll][jekyll] e sobre a construção de página com geradores de HTML estático sempre ouvi falar sobre Markdown. Essa informação martelou na minha cabeça, mas buscava informações de maneiras esporádicas, à medida que ia sentido a necessidade de uma <span lang="en">tag</span> ia na internet e pesquisava, mas essa busca ficava cada vez mais cansativa, já que minha preocupação maior é deixar o mais semântico e mais acessível possível.

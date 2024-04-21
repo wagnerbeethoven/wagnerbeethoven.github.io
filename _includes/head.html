@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="pt-br" data-bs-theme="auto">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title  | strip_html %} {{page.title | strip_html }} &bull; {{site.name | strip_html }} {% else %} {{site.name | strip_html }} {% endif %}&nbsp;&mdash;&nbsp;{{site.description}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{site.url}}/style.css">
+
+    <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="{{site.url}}/favicon.ico" type="image/x-icon">
+
+    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="Portfólio do Designer.">
+    <meta property="og:image" content="{{site.url}}/img/image-default.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{page.title}} • Designer e entusiasta da Acessibilidade">
+    <meta property="twitter:url" content="{{site.url}}">
+    <meta name="twitter:title" content="{{page.title}} • Designer e entusiasta da Acessibilidade">
+    <meta name="twitter:description" content="Portfólio do Designer.">
+    <meta name="twitter:image" content="{{site.url}}/img/image-default.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Medium" href="http://wagnerbeethoven.medium.com/feed"/>
+    <link rel="alternate" type="application/rss+xml" title="Behance" href="https://www.behance.net/feeds/user?username=wagnerbeethoven"/>
+
+    <link rel="manifest" href="{{site.url}}/manifest.json" />
+
+    <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
+
+</head>

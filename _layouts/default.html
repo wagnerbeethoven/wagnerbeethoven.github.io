@@ -1,92 +1,16 @@
 ---
 layout: default
 ---
-<!doctype html>
-<html lang="pt-br" data-bs-theme="auto">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}} • Designer e entusiasta da Acessibilidade</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{site.url}}/style.css">
-
-    <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-16x16.png" sizes="16x16" />
-    <link rel="shortcut icon" href="{{site.url}}/favicon.ico" type="image/x-icon">
-
-    <meta property="og:url" content="{{site.url}}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{page.title}}">
-    <meta property="og:description" content="Portfólio do Designer.">
-    <meta property="og:image" content="{{site.url}}/img/image-default.png">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="{{page.title}} • Designer e entusiasta da Acessibilidade">
-    <meta property="twitter:url" content="{{site.url}}">
-    <meta name="twitter:title" content="{{page.title}} • Designer e entusiasta da Acessibilidade">
-    <meta name="twitter:description" content="Portfólio do Designer.">
-    <meta name="twitter:image" content="{{site.url}}/img/image-default.png">
-
-    <link rel="alternate" type="application/rss+xml" title="Medium" href="http://wagnerbeethoven.medium.com/feed"/>
-    <link rel="alternate" type="application/rss+xml" title="Behance" href="https://www.behance.net/feeds/user?username=wagnerbeethoven"/>
-
-    <link rel="manifest" href="{{site.url}}/manifest.json" />
-
-    <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
-
-</head>
+{% include head.html %}
 
 <body class="col-12 col-md-10 col-lg-7 mx-auto">
-    <header class="top">
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="http://sumo.peoo/" title="{{page.title | strip_html }}">
-            <figure class="ratio ratio-1x1">
-                <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
-            </figure>
-            </a>
-        </div>
-    </header>
-    <h1 class="page-title">
-        {{page.pagetitle}}
-    </h1>
-
+    {% include header.html %}
     <main>
         {{content}}
     </main>
-
+    
     {% include podcast.html %}
-    <footer class="text-center">
-        <p>Feito com <span title="amor">💚</span> & <span title="café">☕</span> em Olinda no Jekyll e no Github. <br> Esta obra está em constante mudança.</p> 
-        <p>Feed/RSS:
-            <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba" href="http://wagnerbeethoven.medium.com/feed"><i class="bi bi-medium ms-3 me-1 "></i>Medium</a>
-            <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba"  href="https://www.behance.net/feeds/user?username=wagnerbeethoven" ><i class="bi bi-behance ms-3 me-1"></i>Behance</a></p>
-        <nav class="a11y-webring-club text-center">
-            <p class="mb-2">
-                Este site é membro do <a rel="external" title="Este link irá abrir em uma nova aba" href="https://a11y-webring.club/">a11y-webring.club</a>.
-            </p>
-            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O site anterior irá abrir em uma nova aba" href="https://a11y-webring.club/prev"> ← Site anterior</a>
-            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="Um site aleatório irá abrir em uma nova aba" href="https://a11y-webring.club/random" class=" mx-3">Site aleatório</a>
-            <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O próximo site irá abrir em uma nova aba" href="https://a11y-webring.club/next">Próximo site →</a>
-        </nav>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script>
-    ; (function () {
-            const htmlElement = document.querySelector("html")
-            if (htmlElement.getAttribute("data-bs-theme") === 'auto') {
-                function updateTheme() {
-                    document.querySelector("html").setAttribute("data-bs-theme",
-                        window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-                }
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme)
-                updateTheme()
-            }
-        })()
-    </script>
+    
+    {% include footer.html %}
 </body>
 </html>

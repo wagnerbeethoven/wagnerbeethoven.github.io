@@ -1,0 +1,33 @@
+---
+layout: default
+title: Arquivo
+---
+
+
+<h2>Navegue pelas categorias</h3>
+<nav>
+    <ul class="nav"> {% for category in site.categories %}
+        
+            <li class="nav-item">
+            <a  class="text-capitalize nav-link ps-0 " href="#{{ category | first | remove:' ' }}">
+                {{ category | first }}
+            </a>
+        </li>
+        {% if forloop.last %}{% else %}{% endif %}{% endfor %}
+    </ul>
+</nav>
+
+{% for category in site.categories %}
+<div class="pt-5 mt-5" id="{{ category | first | remove:' ' }}">
+    <h2 class="text-capitalize">
+        {{ category | first }}
+    </h3>
+    <ul class="list-group list-group-flush">{% for posts in category %}{% for post in posts %}{% if post.url %}
+        <li class="px-0 list-group-item position-relative">
+            <time class="text-body-tertiary" datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: "%d/%m/%Y" }}</time>: <a class="text-decoration-none stretched-link fw-bold" href="{{ post.url }}">{{ post.title }}</a>
+            <small class="d-block text-secondary">{{post.excerpt}}</small>
+        </li>
+        {% endif %}{% endfor %}{% endfor %}
+    </ul>
+</div>
+{% endfor %}

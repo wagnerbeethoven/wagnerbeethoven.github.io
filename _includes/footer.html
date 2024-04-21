@@ -1,0 +1,38 @@
+<footer class="text-center">
+    <p>Feito com <span title="amor">💚</span> & <span title="café">☕</span> em Olinda no Jekyll e no Github. <br> Esta obra está em constante mudança.</p> 
+    <p>
+        <a href="{{site.url}}/feed.xml"><i class="bi bi-rss-fill me-2"></i>RSS</a>
+        <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba" class="mx-3" href="http://wagnerbeethoven.medium.com/feed"><i class="bi bi-medium me-1 "></i>Medium</a>
+        <a target="_blank" rel="external noopener" title="O site anterior irá abrir em uma nova aba"  href="https://www.behance.net/feeds/user?username=wagnerbeethoven" ><i class="bi bi-behance me-1"></i>Behance</a></p>
+    <nav class="a11y-webring-club text-center">
+        <p class="mb-2">
+            Este site é membro do <a rel="external" title="Este link irá abrir em uma nova aba" href="https://a11y-webring.club/">a11y-webring.club</a>.
+        </p>
+        <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O site anterior irá abrir em uma nova aba" href="https://a11y-webring.club/prev"> ← Site anterior</a>
+        <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="Um site aleatório irá abrir em uma nova aba" href="https://a11y-webring.club/random" class=" mx-3">Site aleatório</a>
+        <a rel="external noopener" target="_blank" referrerpolicy="strict-origin" title="O próximo site irá abrir em uma nova aba" href="https://a11y-webring.club/next">Próximo site →</a>
+    </nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{site.url}}/main.js"></script>
+<script type="text/javascript">
+
+    ; (function () {
+        const htmlElement = document.querySelector("html")
+        if (htmlElement.getAttribute("data-bs-theme") === 'auto') {
+            function updateTheme() {
+                document.querySelector("html").setAttribute("data-bs-theme",
+                    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme)
+            updateTheme()
+        }
+    })();
+
+    $(document).ready(function () {
+        $('#toc').toc({ noBackToTopLinks: true });
+    });
+</script>

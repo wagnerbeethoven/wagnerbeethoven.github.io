@@ -173,3 +173,33 @@ footer {
         box-shadow: inset -3px 0px 0px transparent;
     }
 }
+
+/* TOC */
+markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+
+/* Using numbers instead of bullets for listing */
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+}
+
+/* Tags */
+.tags .tag-item {display: inline; text-transform: lowercase;}
+.tags .tag-item:before{content: ','; display: inline; margin: 0 4px 0 -4px;}
+.tags .tag-item:first-of-type:before{display: none;}
+.tags .tag-item:last-of-type:before{content: " e "; margin: 0;}
+.tags .tag-item:last-of-type:after{content: "."}
+
+/* Articles */
+article h1, article h2, article h3, article h4, article h5, article h6{margin-top: 3rem;}
+article img {max-width: 100%;}
