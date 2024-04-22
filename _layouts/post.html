@@ -38,7 +38,7 @@ layout: default
     <article class="col-12 col-md-8" id="content">
         {% if page.medium %}
         <p class="alert alert-info alert-dismissible fade show" role="alert">
-            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a target="_blank" rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{post.medium}}" class="alert-link">acesse aqui</a>.
+            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a target="_blank" rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{page.medium}}" class="alert-link">acesse aqui</a>.
             <button type="button" class="btn-close" title="Fechar aviso" data-bs-dismiss="alert" aria-label="Close"></button>    
         </p>
         {% endif %}
@@ -64,8 +64,8 @@ layout: default
         {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>: {{page.summary}}</p>{%else%}{% endif %}
 
         {{content}}
-
-        <p>Se você leu até aqui, meu muito obrigado 🤘🏼💝. <br> Gostou? Compartilhe para mais pessoas! 😉</p>
+<hr class="mx-auto w-50 my-5">
+        <p>Se você leu até aqui, meu muito obrigado 🤘🏼💝. Gostou? Compartilhe para mais pessoas! 😉</p>
     
         <div class="mt-5 pt-5 border-top">
             <div class="category">

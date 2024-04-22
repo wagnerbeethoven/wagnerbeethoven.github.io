@@ -35,4 +35,6 @@
 
     <!-- search console --><meta name="google-site-verification" content="oCjByAJleRcJe17mFJgrTVrmRmDAnZTNrEQmxMyXGWo" />
 
+    <link rel="canonical" href="{% if page.medium %} {{page.medium}} {% else %} {{site.url}}/{{page.url }} {% endif %}">
+
 </head>
