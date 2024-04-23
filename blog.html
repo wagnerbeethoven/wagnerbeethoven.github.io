@@ -3,13 +3,8 @@ layout: default
 title: Blog
 ---
 
-
-
-    <ul class="list-group list-group-flush">{% for post in site.posts %} 
-        {% if post.category == "blog" %}
-        <li class="px-0 list-group-item position-relative">
-            <span class="text-body-tertiary"><time datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: "%d/%m/%Y" }}</time>:</span> <a class="text-decoration-none stretched-link fw-bold" href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-       {% endif %}
-  {% endfor %}
-    </ul>
+<ul class="list-group list-group-flush">
+    {% for post in site.data.content.posts %}
+    {% include loop.html %}
+    {% endfor %}
+</ul>

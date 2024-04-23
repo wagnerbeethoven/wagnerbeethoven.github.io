@@ -15,7 +15,7 @@ posts:
   - title: "Criando um portfólio competitivo: orientação na prática para UX Designers"
     type: Evento
     date: 2023-10-18
-    link: "hhttp://speakerdeck.com/wagnerbeethoven/criando-um-portfolio-competitivo-orientacao-na-pratica-para-ux-designers"
+    link: "http://speakerdeck.com/wagnerbeethoven/criando-um-portfolio-competitivo-orientacao-na-pratica-para-ux-designers"
     summary: "Apresentação feita no Rec N'Play 2023 com orientações para UX Design construirem portfólio de maneira mais estratégica"
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
@@ -61,10 +61,22 @@ posts:
     date: 2021-02-13
     link: "http://wagnerbeethoven.medium.com/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece-d59bdb47a2a9"
     summary: "Todos os detalhes da construção e as impressões do que rolou na competição" 
+  - title: "Guia Markdown"
+    date: "2020-09-23"
+    link: "/blog/guia-markdown"
+    summary: "Texto é um guia de referência escrito por Matt Cone traduzido para o português"
   - title: "Anotações de estudo para certificação SCRUM"
     date: 2020-03-02
     link: "http://wagnerbeethoven.medium.com/anota%C3%A7%C3%B5es-de-estudo-para-certifica%C3%A7%C3%A3o-scrum-5bf2877bdfeb"
     summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
+  - title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
+    date: 2014-10-17
+    link: blog/resenha-padroes-de-design-para-aplicativos-moveis-theresa-neil
+    summary: "Impressões da leitura do livro da Theresa Neil"
+  - title: "Is It Just A Hello World"
+    date: 2022-07-03
+    link: /blog/is-it-just-a-hello-world
+    summary: "Relato de como comecei meu site e o porquê das escolhas feitas para construção dele"
 
 portfolio:
   - title: "Vandinho - o trabalhador do seu jardim"

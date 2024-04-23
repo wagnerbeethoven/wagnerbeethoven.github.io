@@ -41,7 +41,6 @@ a[href*="https"]:after {
     text-decoration: none;
     font-size: 85%;
 }
-
 b,
 strong {
     font-weight: 600;
@@ -86,13 +85,15 @@ strong {
 
 
 html[data-bs-theme=dark] {
+
     .social a.medium,
     .social a.github,
     .social a.linkedin,
-    .social a.behance{
+    .social a.behance {
         color: var(--bs-body-color);
     }
 }
+
 .section-title {
     font-weight: 600;
     font-size: 2rem;
@@ -116,10 +117,6 @@ footer {
     font-size: .825rem;
 }
 
-.podcast a:after,
-.a11y-webring-club a:after {
-    content: "";
-}
 
 .badge {
     font-weight: 400;
@@ -174,32 +171,37 @@ footer {
     }
 }
 
-/* TOC */
-markdown-toc::before {
-    content: "Contents";
-    font-weight: bold;
-}
-
-
-/* Using numbers instead of bullets for listing */
-#markdown-toc ul {
-    list-style: decimal;
-}
-
-#markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}
 
 /* Tags */
-.tags .tag-item {display: inline; text-transform: lowercase;}
-.tags .tag-item:before{content: ','; display: inline; margin: 0 4px 0 -4px;}
-.tags .tag-item:first-of-type:before{display: none;}
-.tags .tag-item:last-of-type:before{content: " e "; margin: 0;}
-.tags .tag-item:last-of-type:after{content: "."}
+.tags .tag-item {
+    display: inline;
+    text-transform: lowercase;
+}
+
+.tags .tag-item:before {
+    content: ',';
+    display: inline;
+    margin: 0 4px 0 -4px;
+}
+
+.tags .tag-item:first-of-type:before {
+    display: none;
+}
+
+.tags .tag-item:last-of-type:before {
+    content: " e ";
+    margin: 0;
+}
+
+.tags .tag-item:last-of-type:after {
+    content: "."
+}
 
 /* Articles */
-article h1, article h2, article h3, article h4, article h5, article h6{margin-top: 3rem;}
-article img {max-width: 100%;}
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-top: 3rem;
+}
+
+article img {
+    max-width: 100%;
+}

@@ -10,13 +10,10 @@ title: 'Olá, sou <mark>Wagner</mark>'
     <div class="section-title">
         Portfólio no <a href="{{site.behance}}" target="_blank" title="Behance irá abrir em uma nova aba">Behance</a>
     </div>
-    <ul class="list-group list-group-flush">
-    {% for post in site.data.content.portfolio %}
-        <li class="list-group-item d-flex justify-content-between align-items-center postition-relative px-0 " id="portfolio-{{post.title|slugify}}">
-            <a href="{{post.link}}" title="{{post.date   | date: '%d/%m/%Y'}} - &quot;{{post.title}}&quot; irá abrir o Behance em uma nova aba"  rel="no-referrer noopener" target="_blank"  class="text-decoration-none stretched-link">{{post.title}}</a>
-            <time  datetime="{{post.date}}"class="text-end text-uppercase col-3">{{post.date   | date: '%d/%m/%Y'}}</time>
-        </li>
-    {% endfor %}
+    <ul class="list-group list-group-flush">{% for post in site.data.content.portfolio %}
+        {% include loop.html %}
+        
+        {% endfor %}
     </ul>
 </section>
 
@@ -24,15 +21,10 @@ title: 'Olá, sou <mark>Wagner</mark>'
     <div class="section-title">
         Texto no <a href="{{site.medium}}" target="_blank" title="Medium irá abrir em uma nova aba">Medium</a>
     </div>
+    
     <ul class="list-group list-group-flush">
-    {% for post in site.data.content.posts %}
-        <li class="list-group-item d-flex justify-content-between align-items-start postition-relative px-0 " id="posts-{{post.title|slugify}}">
-            <a href="{{post.link}}" title="{{post.date   | date: '%d/%m/%Y'}} - &quot;{{post.title}}&quot; irá abrir em uma nova aba"  rel="no-referrer noopener" target="_blank"  class="text-decoration-none stretched-link">
-                {% if post.type %} <small class="badge badge-{{post.type | slugify}}">{{post.type}}</small>{% endif %}
-                {{post.title}}
-            </a>
-            <time  datetime="{{post.date}}"class="text-end text-uppercase col-3">{{post.date   | date: '%d/%m/%Y'}}</time>
-        </li>
-    {% endfor %}
+        {% for post in site.data.content.posts %}
+        {% include loop.html %}
+        {% endfor %}
     </ul>
 </section>

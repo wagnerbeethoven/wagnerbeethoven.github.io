@@ -1,0 +1,15 @@
+<li class="px-0 list-group-item position-relative" id="posts-{{post.title|slugify}}">
+    <span class="text-body-tertiary">
+        <time datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: "%d/%m/%Y" }}</time>:
+    </span>
+    <a
+        class="text-decoration-none stretched-link fw-semibold"
+        title="{{post.date | date: '%d/%m/%Y'}} - &quot;{{post.title}}&quot; irá abrir em uma nova aba"
+        rel="no-referrer noopener"
+        target="_blank"
+        href="{{post.link}}"
+    >
+        {{ post.title }}
+    </a>
+    {% if post.type %} <small class="ms-2 badge badge-{{post.type | slugify}}">{{post.type}}</small>{% endif %}
+</li>
