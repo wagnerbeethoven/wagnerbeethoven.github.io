@@ -16,7 +16,7 @@ sitemap:
             {% endif %}
         </url>
     {% endfor %}
-    {% for post in site.data.content.post%}
+    {% for post in site.data.content.posts %}
         <url>
             <loc>{{ post.link }}</loc>
             <lastmod>{{ post.date }}</lastmod>
