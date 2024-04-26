@@ -1,25 +1,20 @@
-<!-- DESIGNER PICTURE -->
 {% if page.path contains '_posts' %}
 {% else %}
+<!-- DESIGNER PICTURE -->
 <header class="top">
     <div class="col-6 col-md-4 col-lg-3">
-        <a href="http://sumo.pe" title="{{page.title | strip_html }}">
-        <figure class="ratio ratio-1x1">
-            <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
-        </figure>
+        <a href="{{site.url}}" title="{{page.title | strip_html }}">
+            <figure class="ratio ratio-1x1">
+                <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+            </figure>
         </a>
     </div>
 </header>
 {% endif %}
-
-
-
-<!-- PAGE TITLE POSITION -->
 {% if page.path contains '_posts' %}
 {% else %}
-    <h1 class="page-title">
-        {{page.title}}
-    </h1>
+<!-- PAGE TITLE POSITION -->
+<h1 class="page-title">
+    {{page.title}}
+</h1>
 {% endif %}
-
-

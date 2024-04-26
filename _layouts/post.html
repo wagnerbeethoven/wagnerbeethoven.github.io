@@ -6,7 +6,7 @@ layout: default
     <aside class="col-12 col-md-4">
         <header class="mb-4">
             <div class="col-8">
-            <a href="http://sumo.pe" title="{{page.title | strip_html }}">
+            <a href="{{site.url}}" title="{{page.title | strip_html }}">
                 <figure class="ratio ratio-1x1">
                     <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
                 </figure>
@@ -27,18 +27,14 @@ layout: default
         <div class="my-5">
             <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
             <nav>
-                <a class="mb-3 d-block text-decoration-none" href="http://sumo.pe/portfolio"><i class="bi bi-bullseye me-2"></i>Acesse meus projetos</a>
-                <a class="mb-3 d-block text-decoration-none" href="http://sumo.pe/blog"><i class="bi bi-body-text me-2"></i>Leia meus textos</a>
-                <a class="mb-3 d-block text-decoration-none" href="http://sumo.pe/about"><i class="bi bi-file-person me-2"></i>Conheça minha trajetória</a>
-                <a class="mb-3 d-block text-decoration-none" href="http://sumo.pe/about#detail"><i class="bi bi-send-fill me-2"></i>Fale comigo</a>
-                <a class="mb-3 d-block text-decoration-none" href="#podcast"><i class="bi bi-mic-fill me-2"></i>Podcast: <strong>Foco Acessível</strong></a>
+                {% include menu.html %}
             </nav>
         </div>
     </aside>
     <article class="col-12 col-md-8" id="content">
         {% if page.medium %}
         <p class="alert alert-info alert-dismissible fade show" role="alert">
-            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a target="_blank" rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{page.medium}}" class="alert-link">acesse aqui</a>.
+            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a  rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{page.medium}}" class="alert-link">acesse aqui</a>.
             <button type="button" class="btn-close" title="Fechar aviso" data-bs-dismiss="alert" aria-label="Close"></button>    
         </p>
         {% endif %}
@@ -70,7 +66,7 @@ layout: default
         <div class="mt-5 pt-5 border-top">
             <div class="category">
                 <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
-                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category |slugify }}{% endfor %}">
+                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category  | slugify }}{% endfor %}">
                     {% for category in page.categories %}{{ category }}{% endfor %}
                 </span>
             </div>

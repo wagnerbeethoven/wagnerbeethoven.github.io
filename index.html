@@ -7,24 +7,32 @@ title: 'Olá, sou <mark>Wagner</mark>'
 {% include social.html %}
 
 <section>
-    <div class="section-title">
-        Portfólio no <a href="{{site.behance}}" target="_blank" title="Behance irá abrir em uma nova aba">Behance</a>
-    </div>
-    <ul class="list-group list-group-flush">{% for post in site.data.content.portfolio %}
-        {% include loop.html %}
-        
-        {% endfor %}
-    </ul>
-</section>
-
-<section>
-    <div class="section-title">
-        Texto no <a href="{{site.medium}}" target="_blank" title="Medium irá abrir em uma nova aba">Medium</a>
-    </div>
-    
+    <h2 class="section-title">
+        Portfólio no <a href="{{site.behance}}"  title="Behance irá abrir em uma nova aba">Behance</a>
+    </h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.posts %}
-        {% include loop.html %}
+        {% for post in site.data.content.portfolio limit: 8 %}
+            {% include loop.html %}
         {% endfor %}
     </ul>
+    <footer class="mt-3">
+        <a class="btn btn-ouline-link text-decoration-none" href="{{site.url}}/portfolio">
+            <i class="bi bi-bullseye me-2"></i>Acesse todos os projetos
+        </a>
+    </footer>
+</section>
+<section>
+    <h2 class="section-title">
+        Texto no <a href="{{site.medium}}"  title="Medium irá abrir em uma nova aba">Medium</a>
+    </h2>
+    <ul class="list-group list-group-flush">
+        {% for post in site.data.content.posts limit: 8 %}
+            {% include loop.html %}
+        {% endfor %}
+    </ul>
+    <footer class="mt-3">
+        <a class="btn btn-ouline-link text-decoration-none" href="{{site.url}}/blog">
+            <i class="bi bi-body-text me-2"></i>Leia os textos do blog
+        </a>
+    </footer>
 </section>

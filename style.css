@@ -32,15 +32,22 @@ main {
 
 }
 
+.btn-ouline-link {
+    border: 1px solid var(--bs-body-color);
+}
+
+.btn-ouline-link:hover,
+.btn-ouline-link:active,
+.btn-ouline-link:focus {
+    background-color: var(--bs-body-color);
+    color: var(--bs-body-bg);
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, .25)
+}
+
 a {
     color: var(--bs-body-color);
 }
 
-a[href*="https"]:after {
-    content: " ↗";
-    text-decoration: none;
-    font-size: 85%;
-}
 b,
 strong {
     font-weight: 600;
@@ -112,7 +119,7 @@ html[data-bs-theme=dark] {
     font-size: 0.875rem;
 }
 
-footer {
+.footer {
     padding-top: 6.875rem;
     font-size: .825rem;
 }
@@ -204,4 +211,15 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 
 article img {
     max-width: 100%;
+}
+
+article a[href^="http://"]:not([href^="http://localhost:4000"])::after,
+article a[href^="https://"]:not([href^="https://localhost:4000"]):after,
+
+.loop a[href^="http://"]:not([href^="http://localhost:4000"])::after,
+.loop a[href^="https://"]:not([href^="https://localhost:4000"]):after {
+    content: " ↗";
+    text-decoration: none;
+    font-size: 85%;
+    font-weight: 300;
 }
