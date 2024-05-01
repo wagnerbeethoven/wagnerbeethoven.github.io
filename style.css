@@ -239,11 +239,11 @@ article img {
   max-width: 100%;
 }
 
-article a[href^="http://"]:not([href^="http://localhost:4000"])::after,
-article a[href^="https://"]:not([href^="https://localhost:4000"]):after,
+article a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+article a[href^="https://"]:not([href^="https://sumo.pe"]):after,
 
-.loop a[href^="http://"]:not([href^="http://localhost:4000"])::after,
-.loop a[href^="https://"]:not([href^="https://localhost:4000"]):after
+.loop a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+.loop a[href^="https://"]:not([href^="https://sumo.pe"]):after
 {
   content: " ↗";
   text-decoration: none;
