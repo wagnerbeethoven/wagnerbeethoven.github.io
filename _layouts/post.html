@@ -6,42 +6,40 @@ layout: default
     <aside class="col-12 col-md-4">
         <header class="mb-4">
             <div class="col-8">
-            <a href="{{site.url}}" title="{{page.title | strip_html }}">
-                <figure class="ratio ratio-1x1">
-                    <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
-                </figure>
+                <a href="{{site.url}}" title="{{page.title | strip_html }}">
+                    <figure class="ratio ratio-1x1">
+                        <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+                    </figure>
                 </a>
             </div>
-        <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
+            <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
             <p class="mb-4">{{site.description}}</p>
         </header>
 
-        {% if page.toc==true %}
-        <div class="position-relative">
-            <div class="toc my-5 sticky-top">
-                <h2 class="fst-italic mb-3 h4">Índice da página</h2>
-                {% include toc.html html=content %}
-            </div>
+    {% if page.toc==true %}
+    <div class="position-relative">
+        <div class="toc my-5 sticky-top">
+            <h2 class="fst-italic mb-3 h4">Índice da página</h2>
+            {% include toc.html html=content %}
         </div>
-        {% endif %}
-        <div class="my-5">
-            <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
+    </div>
+    {% endif %}
+    <div class="my-5">
+        <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
             <nav>
                 {% include menu.html %}
             </nav>
-        </div>
+    </div>
     </aside>
     <article class="col-12 col-md-8" id="content">
-        {% if page.medium %}
-        <p class="alert alert-info alert-dismissible fade show" role="alert">
-            <i class="bi bi-megaphone-fill me-3"></i>Este texto foi publicado originalmente no medium, <a  rel="no-referrer" title="O Medium irá abrir em uma noba aba" href="{{page.medium}}" class="alert-link">acesse aqui</a>.
-            <button type="button" class="btn-close" title="Fechar aviso" data-bs-dismiss="alert" aria-label="Close"></button>    
+        {% if page.link %}
+        <p class="alert alert-info" role="alert">
+            <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a>.
         </p>
         {% endif %}
 
-
         <h1 class="page-title post-title fw-semibold mt-0 mb-2">
-        {{page.title}}
+            {{page.title}}
         </h1>
 
         <div class="d-flex align-items-center mb-4 text-muted author-info">
@@ -60,41 +58,23 @@ layout: default
         {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>: {{page.summary}}</p>{%else%}{% endif %}
 
         {{content}}
-        <hr class="mx-auto w-50 my-5">
-        <p>Se você leu até aqui, meu muito obrigado 🤘🏼💝. Gostou? Compartilhe para mais pessoas! 😉</p>
-    
+        <p class="mx-auto pt-5 my-5">Obrigado por ler até aqui</p>
+
         <div class="mt-5 pt-5 border-top">
             <div class="category">
                 <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
-                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category  | slugify }}{% endfor %}">
+                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
                     {% for category in page.categories %}{{ category }}{% endfor %}
                 </span>
             </div>
             <div class="my-4 tags">
                 <i class="bi bi-bookmark-fill me-2" title="Assuntos da página"></i>
                 {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
-                <span class="tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
+                    <span class="tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
                 {% endfor %}
             </div>
         </div>
 
         {% include related.html %}
-
-
-        <!-- <div class="row">
-            {% if page.previous.url %}
-            <a class="text-decoration-none col-12 col-md text-center text-md-start" href="{{page.previous.url}}" title="Leia a publicação &quot;{{page.previous.title}}&quot;">
-                <small class="mb-2 d-block opacity-75">Publiação anterior</small>
-                <div class="d-flex  justify-content-center justify-content-md-start"><i class="bi bi-arrow-left-square me-3"></i><span class="d-inline-block">{{page.previous.title}}</span></div>
-            </a>
-            {% endif %}
-
-            {% if page.next.url %}
-            <a class="text-decoration-none col-12 col-md text-center text-md-end" href="{{page.next.url}}" title="Leia a publicação &quot;{{page.next.title}}&quot;">
-                <small class="mb-2 d-block">Próximo publicação</small>
-                <div class="d-flex  justify-content-center justify-content-md-end"><span class="d-inline-block">{{page.next.title}}</span><i class="bi bi-arrow-right-square ms-3"></i></div>
-            </a>
-            {% endif %}
-        </div> -->
     </article>
 </div>

@@ -1,22 +1,17 @@
 posts:
   - title: "Práticas recomendadas de UX: humanizando softwares de gestão com uma experiência inovadora"
     date: 2024-04-10
-    link: "https://wagnerbeethoven.medium.com/praticas-recomendadas-de-ux-humanizando-softwares-de-gestao-com-uma-experiencia-inovadora-ff0a5d6690d9"
+    link: "/blog/praticas-recomendadas-de-ux-humanizando-softwares-de-gestao-com-uma-experiencia-inovadora"
     summary: "Texto produzido para o blog da Procenge sobre a humanizando ao de ERPs e inovação"
   - title: "Quais as melhores práticas para montar um portfólio de UX Design?"
     type: UX Collective
     date: 2023-11-13
-    link: "https://brasil.uxdesign.cc/quais-as-melhores-praticas-para-montar-um-portfolio-3cecabd98b8b"
+    link: "/blog/quais-as-melhores-praticas-para-montar-um-portfolio"
     summary: "Planejar e ter um portfólio estratégico é a melhor forma de desenvolver uma imagem forte como Designer."
   - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
     type: Evento
     date: 2023-10-18
     link: "https://speakerdeck.com/wagnerbeethoven/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
-  - title: "Criando um portfólio competitivo: orientação na prática para UX Designers"
-    type: Evento
-    date: 2023-10-18
-    link: "https://speakerdeck.com/wagnerbeethoven/criando-um-portfolio-competitivo-orientacao-na-pratica-para-ux-designers"
-    summary: "Apresentação feita no Rec N'Play 2023 com orientações para UX Design construirem portfólio de maneira mais estratégica"
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
     date: 2023-04-24
@@ -29,7 +24,7 @@ posts:
     summary: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
   - title: "Introdução ao Manifesto Ágil e ao Framework Scrum"
     date: 2022-10-03
-    link: "https://wagnerbeethoven.medium.com/introdu%C3%A7%C3%A3o-ao-manifesto-%C3%A1gil-e-ao-framework-scrum-caeece0e4672"
+    link: "/blog/introducao-ao-manifesto-agil-e-ao-framework-scrum"
     summary: "Texto retirado da apresentação feita para novas estagiárias da equipe de Design da Procenge"
   - title: "Experiência do Usuário e Design Thinking"
     type: Aula
