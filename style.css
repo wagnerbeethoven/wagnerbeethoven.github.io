@@ -57,10 +57,12 @@ strong {
   margin: 3.25rem 0;
   font-weight: 600;
 }
+
 .post-title {
   font-size: 2.488rem;
   margin: 0;
 }
+
 .page-title mark {
   color: var(--bs-body-bg);
 }
@@ -92,6 +94,7 @@ strong {
 }
 
 html[data-bs-theme="dark"] {
+
   .social a.medium,
   .social a.github,
   .social a.linkedin,
@@ -243,10 +246,44 @@ article a[href^="http://"]:not([href^="http://sumo.pe"])::after,
 article a[href^="https://"]:not([href^="https://sumo.pe"]):after,
 
 .loop a[href^="http://"]:not([href^="http://sumo.pe"])::after,
-.loop a[href^="https://"]:not([href^="https://sumo.pe"]):after
-{
+.loop a[href^="https://"]:not([href^="https://sumo.pe"]):after {
   content: " ↗";
   text-decoration: none;
   font-size: 85%;
   font-weight: 300;
+}
+
+/* Contato */
+.green-light {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  float: left;
+}
+
+.green-light:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: var(--bs-success);
+  border-radius: 100%;
+  animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 1px var(--bs-success);
+  }
+
+  50% {
+    box-shadow: 0 0 0 2px var(--bs-success);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1px var(--bs-success);
+    
+  }
 }
