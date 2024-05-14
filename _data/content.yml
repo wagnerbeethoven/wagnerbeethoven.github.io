@@ -33,7 +33,7 @@ posts:
     summary: "Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau"
   - title: "Refiz meu portfolio mais uma vez"
     date: 2022-03-14
-    link: "https://wagnerbeethoven.medium.com/refiz-meu-portfolio-mais-uma-vez-f3caadb61052"
+    link: "/blog/refiz-meu-portfolio-mais-uma-vez"
     summary: "Analise da minha presença na internet e como eu mostro meu trabalho — esse texto é um relato"
   - title: "Lições ao me tornar líder de um time de design"
     type: UX Collective
@@ -62,7 +62,7 @@ posts:
     summary: "Texto é um guia de referência escrito por Matt Cone traduzido para o português"
   - title: "Anotações de estudo para certificação SCRUM"
     date: 2020-03-02
-    link: "https://wagnerbeethoven.medium.com/anota%C3%A7%C3%B5es-de-estudo-para-certifica%C3%A7%C3%A3o-scrum-5bf2877bdfeb"
+    link: "/blog/anotacoes-de-estudo-para-certificacao-scrum"
     summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
   - title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
     date: 2014-10-17
@@ -70,7 +70,7 @@ posts:
     summary: "Impressões da leitura do livro da Theresa Neil"
   - title: "Is It Just A Hello World"
     date: 2022-07-03
-    link: /blog/is-it-just-a-hello-world
+    link: "/blog/is-it-just-a-hello-world"
     summary: "Relato de como comecei meu site e o porquê das escolhas feitas para construção dele"
 
 portfolio:
