@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+
+
+<div class="row">
+    <aside class="col-12 col-md-4">
+        <header class="mb-4">
+            <div class="col-8">
+                <a href="{{site.url}}" title="{{page.title | strip_html }}">
+                    <figure class="ratio ratio-1x1">
+                        <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
+                    </figure>
+                </a>
+            </div>
+            <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
+            <p class="mb-4">{{site.description}}</p>
+        </header>
+
+    
+    <div class="my-5">
+        <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
+            <nav>
+                {% include menu.html %}
+            </nav>
+    </div>
+    </aside>
+    <article class="col-12 col-md-8" id="content">
+        {% if page.link %}
+        <p class="alert alert-info" role="alert">
+            <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a>.
+        </p>
+        {% endif %}
+
+        <h1 class="page-title post-title fw-semibold mt-0 mb-2">
+            {{page.title}}
+        </h1>
+
+        <div class="d-flex align-items-center mb-4 text-muted author-info">
+            <time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 " title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time>
+        </div>
+
+
+        <iframe class="speakerdeck-iframe" frameborder="0" src="{{page.iframe}}" title="Hackathon como ferramenta de desenvolvimento e integração de times" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+
+        <div class="mt-5">
+            {{content}}
+        </div>
+        <p class="mx-auto pt-5 my-5">Obrigado por ler até aqui</p>
+
+        <div class="mt-5 pt-5 border-top">
+            <div class="category">
+                <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
+                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
+                    {% for category in page.categories %}{{ category }}{% endfor %}
+                </span>
+            </div>
+            <div class="my-4 tags">
+                <i class="bi bi-bookmark-fill me-2" title="Assuntos da página"></i>
+                {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
+                    <span class="tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include related.html %}
+    </article>
+</div>

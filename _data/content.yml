@@ -11,7 +11,7 @@ posts:
   - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
     type: Evento
     date: 2023-10-18
-    link: "https://speakerdeck.com/wagnerbeethoven/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
+    link: "/blog/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
     date: 2023-04-24
