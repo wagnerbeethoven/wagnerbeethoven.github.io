@@ -9,4 +9,4 @@ behance: "https://www.behance.net/wagnerbeethoven/"
 github: "https://www.github.com/wagnerbeethoven/"
 linkedin: "https://www.linkedin.com/in/wagnerbeethoven/"
 url: "https://sumo.pe"
-permalink: /:categories/:title
+permalink: /:title

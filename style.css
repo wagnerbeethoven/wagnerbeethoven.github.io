@@ -176,28 +176,27 @@ html[data-bs-theme="dark"] {
 }
 
 /* Tags */
-.tags .tag-item {
+.meta-list .meta-list-item {
   display: inline;
-  text-transform: lowercase;
 }
 
-.tags .tag-item:before {
+.meta-list .meta-list-item:after {
   content: ",";
   display: inline;
-  margin: 0 4px 0 -4px;
+  margin: 0 4px 0 0;
 }
 
-.tags .tag-item:first-of-type:before {
-  display: none;
-}
+.meta-list .meta-list-item:nth-last-child(-n+2):after{
+display: none;}
 
-.tags .tag-item:last-of-type:before {
+.meta-list .meta-list-item:last-of-type:before {
   content: " e ";
   margin: 0;
 }
 
-.tags .tag-item:last-of-type:after {
+.meta-list .meta-list-item:last-of-type:after {
   content: ".";
+  display: inline; 
 }
 
 /* Articles */

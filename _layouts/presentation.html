@@ -50,20 +50,8 @@ layout: default
         </div>
         <p class="mx-auto pt-5 my-5">Obrigado por ler até aqui</p>
 
-        <div class="mt-5 pt-5 border-top">
-            <div class="category">
-                <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
-                <span class="text-capitalize category-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
-                    {% for category in page.categories %}{{ category }}{% endfor %}
-                </span>
-            </div>
-            <div class="my-4 tags">
-                <i class="bi bi-bookmark-fill me-2" title="Assuntos da página"></i>
-                {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
-                    <span class="tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
-                {% endfor %}
-            </div>
-        </div>
+        {% include footer-content.html %}
+
 
         {% include related.html %}
     </article>

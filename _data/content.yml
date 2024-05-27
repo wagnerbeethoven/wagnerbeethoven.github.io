@@ -1,30 +1,30 @@
 posts:
   - title: "Práticas recomendadas de UX: humanizando softwares de gestão com uma experiência inovadora"
     date: 2024-04-10
-    link: "/blog/praticas-recomendadas-de-ux-humanizando-softwares-de-gestao-com-uma-experiencia-inovadora"
+    link: "/praticas-recomendadas-de-ux-humanizando-softwares-de-gestao-com-uma-experiencia-inovadora"
     summary: "Texto produzido para o blog da Procenge sobre a humanizando ao de ERPs e inovação"
   - title: "Quais as melhores práticas para montar um portfólio de UX Design?"
     type: UX Collective
     date: 2023-11-13
-    link: "/blog/quais-as-melhores-praticas-para-montar-um-portfolio"
+    link: "/quais-as-melhores-praticas-para-montar-um-portfolio"
     summary: "Planejar e ter um portfólio estratégico é a melhor forma de desenvolver uma imagem forte como Designer."
   - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
     type: Evento
     date: 2023-10-18
-    link: "/blog/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
+    link: "/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
   - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
     type: Aula
     date: 2023-04-24
-    link: "https://speakerdeck.com/wagnerbeethoven/ux-nos-times-ageis-nas-construcoes-de-produtos-digitais"
+    link: "/o-papel-do-uiux-nos-times-ageis-nas-construcoes-de-produtos-digitais"
     summary: "Aula sobre a importância do UI/UX nos times ágeis no contexto de das construções de aplicações digitais ministrada para os alunos do 1º período do curso de Sistema da Informação da Uninassau"
   - title: "Desenvolvimento de Aplicações Acessíveis"
     type: Aula
     date:  2022-10-18
-    link: "https://speakerdeck.com/wagnerbeethoven/design-x-acessibilidade"
+    link: "/desenvolvimento-de-aplicacoes-acessiveis"
     summary: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
   - title: "Introdução ao Manifesto Ágil e ao Framework Scrum"
     date: 2022-10-03
-    link: "/blog/introducao-ao-manifesto-agil-e-ao-framework-scrum"
+    link: "/introducao-ao-manifesto-agil-e-ao-framework-scrum"
     summary: "Texto retirado da apresentação feita para novas estagiárias da equipe de Design da Procenge"
   - title: "Experiência do Usuário e Design Thinking"
     type: Aula
@@ -33,7 +33,7 @@ posts:
     summary: "Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau"
   - title: "Refiz meu portfolio mais uma vez"
     date: 2022-03-14
-    link: "/blog/refiz-meu-portfolio-mais-uma-vez"
+    link: "/refiz-meu-portfolio-mais-uma-vez"
     summary: "Analise da minha presença na internet e como eu mostro meu trabalho — esse texto é um relato"
   - title: "Lições ao me tornar líder de um time de design"
     type: UX Collective
@@ -58,11 +58,11 @@ posts:
     summary: "Todos os detalhes da construção e as impressões do que rolou na competição" 
   - title: "Guia Markdown"
     date: "2020-09-23"
-    link: "/blog/guia-markdown"
+    link: "/guia-markdown"
     summary: "Texto é um guia de referência escrito por Matt Cone traduzido para o português"
   - title: "Anotações de estudo para certificação SCRUM"
     date: 2020-03-02
-    link: "/blog/anotacoes-de-estudo-para-certificacao-scrum"
+    link: "/anotacoes-de-estudo-para-certificacao-scrum"
     summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
   - title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
     date: 2014-10-17
@@ -70,7 +70,7 @@ posts:
     summary: "Impressões da leitura do livro da Theresa Neil"
   - title: "Is It Just A Hello World"
     date: 2022-07-03
-    link: "/blog/is-it-just-a-hello-world"
+    link: "/is-it-just-a-hello-world"
     summary: "Relato de como comecei meu site e o porquê das escolhas feitas para construção dele"
 
 portfolio:
