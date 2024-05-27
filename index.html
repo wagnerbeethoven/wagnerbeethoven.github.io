@@ -11,7 +11,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
         Portfólio no <a href="{{site.behance}}"  title="Behance irá abrir em uma nova aba">Behance</a>
     </h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.portfolio limit: 8 %}
+        {% for post in site.data.content.portfolio limit: 10 %}
             {% include loop.html %}
         {% endfor %}
     </ul>
@@ -23,10 +23,11 @@ title: 'Olá, sou <mark>Wagner</mark>'
 </section>
 <section>
     <h2 class="section-title">
-        Texto no <a href="{{site.medium}}"  title="Medium irá abrir em uma nova aba">Medium</a>
+        Texto do blog
+        <!-- no <a href="{{site.medium}}"  title="Medium irá abrir em uma nova aba">Medium</a> -->
     </h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.posts limit: 8 %}
+        {% for post in site.data.content.posts limit: 10 %}
             {% include loop.html %}
         {% endfor %}
     </ul>
