@@ -198,7 +198,10 @@ display: none;}
   content: ".";
   display: inline; 
 }
-
+.meta-list .meta-list-item.category-item-blog:only-of-type:after,
+.meta-list .meta-list-item.category-item-blog:only-of-type:before{
+  display: none;
+}
 /* Articles */
 
 article h1,

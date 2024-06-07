@@ -4,7 +4,7 @@ date: 2012-07-03
 pagetitle: "Is it just a hello world?"
 category: Blog
 image: https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/c5c32157fb96f1eebe4354b7ede5a95478b800e7/the-day-never-get-between-a-sumo-wrestler-and-food-ilustracao-sean-fallon.jpg
-alt: "Ilustração com 4 lutadores de sumô lutando e ao centro um suhi"
+alt: "Ilustração com 4 lutadores de sumô lutando e ao centro um sushi"
 legend: "&quot;The Day Never Get Between A Sumo Wrestler And Food&quot; (Ilustração&colon; Sean Fallon)"
 summary: "conto como comecei meu site e o porquê das escolhas feitas para construção dele"
 tags: [Construção de sites, Portfólio]
