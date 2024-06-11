@@ -8,29 +8,10 @@ posts:
     date: 2023-11-13
     link: "/quais-as-melhores-praticas-para-montar-um-portfolio"
     summary: "Planejar e ter um portfólio estratégico é a melhor forma de desenvolver uma imagem forte como Designer."
-  - title: "Hackathon como ferramenta de desenvolvimento e integração de times"
-    type: Evento
-    date: 2023-10-18
-    link: "/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
-  - title: "O papel do UI/UX nos times ágeis nas construções de produtos digitais"
-    type: Aula
-    date: 2023-04-24
-    link: "/o-papel-do-uiux-nos-times-ageis-nas-construcoes-de-produtos-digitais"
-    summary: "Aula sobre a importância do UI/UX nos times ágeis no contexto de das construções de aplicações digitais ministrada para os alunos do 1º período do curso de Sistema da Informação da Uninassau"
-  - title: "Desenvolvimento de Aplicações Acessíveis"
-    type: Aula
-    date:  2022-10-18
-    link: "/desenvolvimento-de-aplicacoes-acessiveis"
-    summary: "Aula sobre Acessibilidade ministrada para os alunos do 2º período do curso de Sistema da Informação da Uninassau"
   - title: "Introdução ao Manifesto Ágil e ao Framework Scrum"
     date: 2022-10-03
     link: "/introducao-ao-manifesto-agil-e-ao-framework-scrum"
     summary: "Texto retirado da apresentação feita para novas estagiárias da equipe de Design da Procenge"
-  - title: "Experiência do Usuário e Design Thinking"
-    type: Aula
-    date: 2022-03-29
-    link: "https://speakerdeck.com/wagnerbeethoven/design-thinking"
-    summary: "Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau"
   - title: "Refiz meu portfolio mais uma vez"
     date: 2022-03-14
     link: "/refiz-meu-portfolio-mais-uma-vez"
@@ -66,7 +47,7 @@ posts:
     summary: "Resumo das anotações que fiz estudando para tirar a certificação SFC da SCRUMstudy"
   - title: "Resenha: Padrões de Design para Aplicativos Móveis, Theresa Neil"
     date: 2014-10-17
-    link: blog/resenha-padroes-de-design-para-aplicativos-moveis-theresa-neil
+    link: resenha-padroes-de-design-para-aplicativos-moveis-theresa-neil
     summary: "Impressões da leitura do livro da Theresa Neil"
   - title: "Is It Just A Hello World"
     date: 2022-07-03

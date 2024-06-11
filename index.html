@@ -6,34 +6,42 @@ title: 'Olá, sou <mark>Wagner</mark>'
 {% include description.html %}
 {% include social.html %}
 
-<section>
-    <h2 class="section-title">
-        Portfólio no <a href="{{site.behance}}"  title="Behance irá abrir em uma nova aba">Behance</a>
-    </h2>
+<section id="portfolio">
+    <h2 class="section-title">Acesse meus <a href="{{site.url}}/projetos"
+            title="Acesse todos os trabalhos do portfólio">projetos</a></h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.portfolio limit: 10 %}
-            {% include loop.html %}
-        {% endfor %}
+        {% for post in site.data.content.portfolio %}{% include loop.html %}{% endfor %}
     </ul>
-    <footer class="mt-3">
-        <a class="btn btn-ouline-link text-decoration-none" href="{{site.url}}/portfolio">
-            <i class="bi bi-bullseye me-2"></i>Acesse todos os projetos
-        </a>
-    </footer>
 </section>
-<section>
-    <h2 class="section-title">
-        Publicações do blog
-        <!-- no <a href="{{site.medium}}"  title="Medium irá abrir em uma nova aba">Medium</a> -->
+<section id="blog">
+    <h2 class="section-title">Leia meus <a href="{{site.url}}/textos" title="Acesse todos os textos do blog">textos</a>
     </h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.posts limit: 10 %}
-            {% include loop.html %}
+        {% for post in site.data.content.posts %}{% include loop.html %}{% endfor %}
+    </ul>
+</section>
+<section id="palestras">
+    <h2 class="section-title">Confira minhas <a href="{{site.url}}/palestras"
+            title="Acesse todos os textos do blog">palestras</a></h2>
+    <ul class="list-group list-group-flush">
+        {% for post in site.posts %}
+            {% if post.categories contains 'Palestra' %}
+            <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
+                <span class="text-body-tertiary">
+                    <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
+                        {{ post.date | date: "%d/%m/%Y" }}
+                    </time>:
+                </span>
+                <a class="text-decoration-none fw-semibold" href="{{post.url}}">
+                    {{ post.title }}
+                </a>
+                {% if post.type %}
+                <small class="ms-2 badge badge-{{post.type | slugify}}">
+                    {{post.type}}
+                </small>
+                {% endif %}
+            </li>
+            {% endif %}
         {% endfor %}
     </ul>
-    <footer class="mt-3">
-        <a class="btn btn-ouline-link text-decoration-none" href="{{site.url}}/blog">
-            <i class="bi bi-body-text me-2"></i>Leia os textos do blog
-        </a>
-    </footer>
 </section>

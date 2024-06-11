@@ -1,8 +1,8 @@
 ---
 layout: presentation
-date: 2022-03-12
+date: 2023-09-08
 title: "Hackathon como ferramenta de desenvolvimento e integração de times"
-category: Apresentações
+category: Palestra
 iframe: "https://speakerdeck.com/player/8499169618874c34b0378f59f4b949b0" 
 link: "https://speakerdeck.com/wagnerbeethoven/hackathon-como-ferramenta-de-desenvolvimento-e-integracao-de-times"
 link-name: Speaker Deck
