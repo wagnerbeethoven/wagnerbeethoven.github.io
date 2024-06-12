@@ -2,7 +2,7 @@
 layout: default
 title: Sobre
 ---
-<div class="sticky-top">
+<div class=" d-print-none sticky-top">
     <nav class="navbar navbar-expand-md bg-body-tertiary px-3" aria-label="Second navbar example">
         <a class="navbar-brand" title="Volte para a página inicial para ter acesso a meu portfólio e meu blog" href="{{site.url}}">Página inicial</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-about"
@@ -12,87 +12,89 @@ title: Sobre
         <div class="collapse navbar-collapse" id="menu-about">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a title="Sobre mim" class="nav-link" href="#intro">Apresentação</a></li>
-                <li class="nav-item"><a title="Conheça a minha formações acadêmicas" class="nav-link" href="#education">Escolaridade</a></li>
                 <li class="nav-item"><a title="Entenda sobre minhas experiências profissionais" class="nav-link" href="#jobs">Experiências</a></li>
+                <li class="nav-item"><a title="Conheça a minha formações acadêmicas" class="nav-link" href="#education">Escolaridade</a></li>
                 <li class="nav-item"><a title="Saiba sobre minhas certificações" class="nav-link" href="#certificate">Certificações</a></li>
                 <li class="nav-item"><a title="Todos os cursos que fiz" class="nav-link" href="#course">Cursos</a></li>
             </ul>
         </div>
     </nav>
 </div>
-<section id="intro">
-    <div class="py-5"> </div>
+<section class=" d-print-none" id="intro">
+    <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Apresentação</h2>
-    <p> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a rel="no-referrer noopener"  href="https://wagnerbeethoven.medium.com/refiz-meu-portfolio-mais-uma-vez-f3caadb61052#0c65" title="O link irá abrir o Medium em uma nova aba" >maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
+    <p> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a class="fw-bold" href="{{site.url}}/refiz-meu-portfolio-mais-uma-vez#e-esse-endereco">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
     <p>Resido em Olinda, Pernambuco.</p>
     <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Sou tecnólogo em <strong>Sistemas para Internet</strong> pela Uninassau, especialista em <strong>Design de Web Apps com Tecnologia Front-End</strong> (Unibratec) e em <strong>Design de Interação para Artefatos Digitais</strong> (Cesar School).</p>
     <p> Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para <span lang="en">desktop</span>, celulares, <span lang="en">tablet</span> e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educacional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
-    <p>Abaixo você terá mais detalhes sobre meu background e minha carreira. Você pode visualizar <a rel="no-referrer noopener"  title="O Behance irá abrir em uma nova aba" href="https//be.net/wagnerbeethoven"><strong>meu portfólio no Behance</strong></a> (não estarão todos já que a maioria foi construído através de contrato confidencialidade e sigilo) e meus <a rel="no-referrer noopener"  title="O Medium irá abrir em uma nova aba" href="{{site.medium}}"><strong>textos disponíveis no Medium</strong></a>.</p>
-    <div class="py-5"> </div>
-    <h3 class="section-title" id="detail">Detalhes pessoais</h3>
+    <p>Abaixo você terá mais detalhes sobre meu background e minha carreira.</p>
+    <p>Você pode visualizar meu <a href="{{site.url}}/projetos" class="fw-bold">meus projetos</a> (não estarão todos, já que a maioria foi construído através de contrato confidencialidade e sigilo), ler meus <a class="fw-bold" href="{{site.url}}/textos">textos do blog</a> e também  ouvir meu podcast, o <strong>Foco Acessível</strong>, que fala sobre acessibilidade, inclusão e diversidade na tecnologia, acesse: <a class="fw-bold" href="https://focoacessivel.com.br">focoacessivel.com.br</a></p>
+    <button class="mt-5 btn btn-outline-primary d-print-none" onclick="imprimirPagina()"><i class="bi bi-printer me-3"></i> Imprimir meu currículo</button>
+    
+    <div class="d-print-none py-5"> </div>
+</section>
+<h1 class="d-none d-print-block text-center page-title">{{site.name}}</h1>
+<section id="detail">
+    <h3 class="section-title d-print-none">Detalhes pessoais</h3>
     <ul class="list-unstyled">
-        <li>Email: <a title="Pode enviar email para mim 🥰" href="mailto:{{site.email}}">{{site.email}}</a></li>
-        <li>Telefone:&nbsp; <a title="Este número é WhatsApp, então, me escreve" href="tel:+55{{site.tel}}">{{site.tel}}</a></li>
-        <li>Localidade:&nbsp;<strong>Olinda &mdash; PE &bull; Brasil</strong></li>
-        {% include social.html %}
+        <li class="d-print-inline"><span class="d-print-none me-2">Email:</span><a title="Pode enviar email para mim 🥰" href="mailto:{{site.email}}">{{site.email}}</a></li>
+        <li class="d-print-inline"><span class="d-print-none me-2">Telefone:</span><a title="Este número é WhatsApp, então, me escreve" href="tel:+55{{site.tel}}">{{site.tel}}</a></li>
+        <li class="d-print-inline"><span class="d-print-none me-2">Localidade:</span><strong>Olinda &mdash; PE &bull; Brasil</strong></li>
+    </ul>
+    {% include social.html %}
+</section>
+<section id="jobs">
+    <div class="d-print-none py-5"> </div>
+    <h2 class="section-title">Experiências</h2>
+    <ul class="career-list list-group list-group-flush">
+        {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
+            <div class="row g-0">
+                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
+            </div>
+        </li>{% endfor %}
+    </ul>
+    <h3 class="d-print-none section-title">Colaboração</h3>
+    <ul class="d-print-none career-list list-group list-group-flush">
+        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
+            <div class="row g-0">
+                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
+            </div>
+        </li>{% endfor %}
     </ul>
 </section>
-
 <section id="education">
-    <div class="py-5"> </div>
+    <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for education in site.data.about.education %}<li class="list-group-item px-0 mb-3" id="{{education.name | slugify}}">
+        {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify}}">
             <div class="row g-0">
-                <div class="px-0 col-md-3"><img class="img-fluid p-3 mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
+                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
                 <div class="px-0 col"> <h3  class="fs-5">{{education.name}}</h3> <h4 class="fs-6">{{education.company}}</h4> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
 </section>
-<section id="jobs">
-    <div class="py-5"> </div>
-    <h2 class="section-title">Experiências</h2>
-    <ul class="career-list list-group list-group-flush">
-        {% for experience in site.data.about.job %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3"><img class="img-fluid p-3 mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
-            </div>
-        </li>{% endfor %}
-    </ul>
-    <h3 class="section-title">Colaboração</h3>
-    <ul class="career-list list-group list-group-flush">
-        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3"><img class="img-fluid p-3 mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
-            </div>
-        </li>{% endfor %}
-    </ul>
-</section>
+
 <section id="certificate">
-    <div class="py-5"> </div>
+    <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
         {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify}}">
             <div class="row g-0">
-                <div class="px-0 col-md-3"><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
+                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
                 <div class="px-0 col"> <h3  class="fs-5">{{certificate.name}}</h3> <h4 class="fs-6">{{certificate.company}}</h4> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
 </section>
 <section id="course">
-    <div class="py-5"> </div>
+    <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Cursos</h2>
     <ul class="list-group list-group-flush">{% for course in site.data.about.course %}
-        <li class="px-0 border-0 list-group-item" id="{{course.name | slugify}}-{{course.company | slugify}}">
-            {% if course.link %}<a rel="noopener" title="O link irá abrir o certificado &quot;{{course.name | strip_html}}&quot; em uma nova aba"  href="{{course.link}}">{% endif %}
-                <span class="fw-semibold">{{course.name}}</span>
-                {% if course.link %}</a>{% endif %}
-            <small class="d-block">{{course.company}} ({{course.date}}{% if course.duration %}, {{course.duration}}{% endif %})</small>{% endfor %}
+        <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify}}-{{course.company | slugify}}">
+            {% if course.link %}<a rel="noopener" title="O link irá abrir o certificado &quot;{{course.name | strip_html}}&quot; em uma nova aba"  href="{{course.link}}">{% endif %}<span class="fw-semibold">{{course.name}}</span>{% if course.link %}</a>{% endif %}<small class="d-block">{{course.company}} ({{course.date}}{% if course.duration %}, {{course.duration}}{% endif %})</small>{% endfor %}
         </li>
-            
     </ul>
 </section>

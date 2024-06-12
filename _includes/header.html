@@ -1,7 +1,7 @@
 {% if page.path contains '_posts' %}
 {% else %}
 <!-- DESIGNER PICTURE -->
-<header class="top">
+<header class="top d-print-none">
     <div class="col-6 col-md-4 col-lg-3">
         <a href="{{site.url}}" title="{{page.title | strip_html }}">
             <figure class="ratio ratio-1x1">
@@ -14,7 +14,7 @@
 {% if page.path contains '_posts' %}
 {% else %}
 <!-- PAGE TITLE POSITION -->
-<h1 class="page-title">
+<h1 class="page-title d-print-none">
     {{page.title}}
 </h1>
 {% endif %}

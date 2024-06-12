@@ -186,8 +186,9 @@ html[data-bs-theme="dark"] {
   margin: 0 4px 0 0;
 }
 
-.meta-list .meta-list-item:nth-last-child(-n+2):after{
-display: none;}
+.meta-list .meta-list-item:nth-last-child(-n+2):after {
+  display: none;
+}
 
 .meta-list .meta-list-item:last-of-type:before {
   content: " e ";
@@ -196,12 +197,14 @@ display: none;}
 
 .meta-list .meta-list-item:last-of-type:after {
   content: ".";
-  display: inline; 
+  display: inline;
 }
+
 .meta-list .meta-list-item.category-item-blog:only-of-type:after,
-.meta-list .meta-list-item.category-item-blog:only-of-type:before{
+.meta-list .meta-list-item.category-item-blog:only-of-type:before {
   display: none;
 }
+
 /* Articles */
 
 article h1,
@@ -284,6 +287,87 @@ article a[href^="https://"]:not([href^="https://sumo.pe"]):after,
 
   100% {
     box-shadow: 0 0 0 1px var(--bs-success);
-    
+
+  }
+}
+
+
+
+@media print {
+  * {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12px !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    line-height: 1.45 !important;
+    font-family: sans-serif !important;
+    color: #000 !important;
+    background: none !important;
+  }
+
+  .section-title {
+    margin: 2rem 0 1rem !important;
+  }
+
+  #detail ul li {
+    margin-right: .5rem !important;
+  }
+
+  .social {
+    margin: 0 !important;
+  }
+
+  .social li {
+    display: inline !important;
+  }
+
+  .page-title {
+    font-size: 2.488rem !important;
+  }
+
+  .section-title {
+    font-size: 16px !important;
+    margin: 1rem 0 .5rem !important;
+  }
+
+  #detail ul {
+    text-align: center !important;
+  }
+
+  .career-list li {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .career-list li h3,
+  .career-list li h4 {
+    display: inline !important;
+    font-size: 14px !important;
+  }
+
+  .career-list li h4:before {
+    content: " / "
+  }
+
+  .career-list li small {
+    display: block !important;
+  }
+
+
+  #course ul li small:before {
+    content: " • " !important;
+  }
+
+  #course ul li span+small,
+  #course ul li a+small {
+    display: inline !important;
   }
 }
