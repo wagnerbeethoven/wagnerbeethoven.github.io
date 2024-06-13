@@ -147,6 +147,11 @@ html[data-bs-theme="dark"] {
   background: #01ccff;
 }
 
+.logo {
+  width: 13rem;
+  height: 13rem;
+}
+
 /* 404 */
 #error {
   display: table;
@@ -175,34 +180,12 @@ html[data-bs-theme="dark"] {
   }
 }
 
-/* Tags */
-.meta-list .meta-list-item {
+.tag-item:after {
+  content: ", ";
   display: inline;
 }
-
-.meta-list .meta-list-item:after {
-  content: ",";
-  display: inline;
-  margin: 0 4px 0 0;
-}
-
-.meta-list .meta-list-item:nth-last-child(-n+2):after {
-  display: none;
-}
-
-.meta-list .meta-list-item:last-of-type:before {
-  content: " e ";
-  margin: 0;
-}
-
-.meta-list .meta-list-item:last-of-type:after {
+.tag-item:last-child:after {
   content: ".";
-  display: inline;
-}
-
-.meta-list .meta-list-item.category-item-blog:only-of-type:after,
-.meta-list .meta-list-item.category-item-blog:only-of-type:before {
-  display: none;
 }
 
 /* Articles */

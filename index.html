@@ -14,7 +14,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
     </ul>
 </section>
 <section id="blog">
-    <h2 class="section-title">Leia meus <a href="{{site.url}}/textos" title="Acesse todos os textos do blog">textos</a>
+    <h2 class="section-title">Leia meus <a href="{{site.url}}/blog" title="Acesse todos os textos do blog">textos</a> do blog
     </h2>
     <ul class="list-group list-group-flush">
         {% for post in site.data.content.posts %}{% include loop.html %}{% endfor %}
@@ -22,7 +22,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
 </section>
 <section id="palestras">
     <h2 class="section-title">Confira minhas <a href="{{site.url}}/palestras"
-            title="Acesse todos os textos do blog">palestras</a></h2>
+            title="Acesse todos as minhas palestras">palestras</a></h2>
     <ul class="list-group list-group-flush">
         {% for post in site.posts %}
             {% if post.categories contains 'Palestra' %}

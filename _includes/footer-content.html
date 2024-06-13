@@ -1,19 +1,16 @@
-<div class="mt-5 pt-5 border-top text-lowercase">
+<p class="mx-auto pt-5 my-5">Obrigado por chegar até aqui 🤗</p>
+
+<div class="mt-5 pt-5 border-top">
     <div class="meta-list category">
         <i class="bi bi-archive-fill me-2" title="Seção do conteúdo"></i>
-        <ul class="d-inline list-inline">{% for category in page.categories %}
-            <li
-                class="meta-list-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
-                {{ category }}
-            </li>
-            {% endfor %}
-        </ul>
+        {% for category in page.categories %}
+            <a href='{{site.url}}/{% if page.categories contains "Palestra" %}palestras{% endif %}{% if page.categories contains "Projeto" %}projetos{% endif %}{% if page.categories contains "Blog" %}blog{% endif %}' class="meta-list-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
+                {{ category }}</a>{% endfor %}.
     </div>
-    <div class="my-4 meta-list tags">
+    <div class="my-4 meta-list tags text-lowercase">
         <i class="bi bi-bookmark-fill me-2" title="Assuntos da página"></i>
-        <ul class="d-inline list-inline">{% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
-            <li class="meta-list-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</li>
-            {% endfor %}
-        </ul>
+        {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
+            <span class="meta-list-item tag-item tag-item-{{ tag_name | slugify }}">{{ tag_name }}</span>
+        {% endfor %}
     </div>
 </div>

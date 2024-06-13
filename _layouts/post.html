@@ -7,9 +7,7 @@ layout: default
         <header class="mb-4">
             <div class="col-8">
                 <a href="{{site.url}}" title="{{page.title | strip_html }}">
-                    <figure class="ratio ratio-1x1">
-                        <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
-                    </figure>
+                    {% include logo.html %}
                 </a>
             </div>
             <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
@@ -58,7 +56,6 @@ layout: default
         {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>: {{page.summary}}</p>{%else%}{% endif %}
 
         {{content}}
-        <p class="mx-auto pt-5 my-5">Obrigado por ler até aqui</p>
 
        {% include footer-content.html %}
 
