@@ -139,6 +139,11 @@ html[data-bs-theme="dark"] {
   background: var(--bs-orange);
 }
 
+.badge-mentoria {
+  background: #FF56AA;
+}
+
+.badge-rec-n-play,
 .badge-evento {
   background: var(--bs-teal);
 }
