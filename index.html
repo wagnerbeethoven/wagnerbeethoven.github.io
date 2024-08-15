@@ -14,10 +14,15 @@ title: 'Olá, sou <mark>Wagner</mark>'
     </ul>
 </section>
 <section id="blog">
-    <h2 class="section-title">Leia meus <a href="{{site.url}}/blog" title="Acesse todos os textos do blog">textos</a> do blog
+    <h2 class="section-title">Leia meus <a href="{{site.url}}/blog" title="Acesse todos os textos do blog">textos</a> do
+        blog
     </h2>
     <ul class="list-group list-group-flush">
-        {% for post in site.data.content.posts %}{% include loop.html %}{% endfor %}
+        {% for post in site.posts %}
+        {% if post.categories contains 'Blog' %}
+        {% include loop2.html %}
+        {% endif %}
+        {% endfor %}
     </ul>
 </section>
 <section id="palestras">
@@ -25,23 +30,9 @@ title: 'Olá, sou <mark>Wagner</mark>'
             title="Acesse todos as minhas palestras">palestras</a></h2>
     <ul class="list-group list-group-flush">
         {% for post in site.posts %}
-            {% if post.categories contains 'Palestra' %}
-            <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
-                <span class="text-body-tertiary">
-                    <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
-                        {{ post.date | date: "%d/%m/%Y" }}
-                    </time>:
-                </span>
-                <a class="text-decoration-none fw-semibold" href="{{post.url}}">
-                    {{ post.title }}
-                </a>
-                {% if post.type %}
-                <small class="ms-2 badge badge-{{post.type | slugify}}">
-                    {{post.type}}
-                </small>
-                {% endif %}
-            </li>
-            {% endif %}
+        {% if post.categories contains 'Palestra' %}
+        {% include loop2.html %}
+        {% endif %}
         {% endfor %}
     </ul>
 </section>

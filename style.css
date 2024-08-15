@@ -152,7 +152,7 @@ html[data-bs-theme="dark"] {
 }
 
 .logo {
-  width: 13rem;
+  width: 13rem !important;
   height: 13rem;
 }
 
