@@ -19,11 +19,3 @@ tags:
 ---
 
 Aula sobre Design Thinking ministrada para os alunos do 7º período do curso de Sistema da Informação da Uninassau
-
-
-
-
-
-
-
-

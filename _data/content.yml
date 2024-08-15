@@ -35,7 +35,7 @@ posts:
     summary: "Pesquisa sobre Agilidade, Lean e Agile UX para o 1º Procenge Agile Week."
   - title: "Hackathon CNJ Inova ou o primeiro Hackathon a gente nunca esquece"
     date: 2021-02-13
-    link: "https://wagnerbeethoven.medium.com/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece-d59bdb47a2a9"
+    link: "/hackathon-cnj-inova-ou-o-primeiro-hackathon-a-gente-nunca-esquece"
     summary: "Todos os detalhes da construção e as impressões do que rolou na competição" 
   - title: "Guia Markdown"
     date: "2020-09-23"
