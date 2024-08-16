@@ -375,3 +375,17 @@ figure img {
   height: auto;
   width: 100% !important;
 }
+
+.speakerdeck-icon {
+  width: 54px;
+  height: 54px;
+  margin-top: -7px;
+}
+
+html[data-bs-theme="light"] svg.speakerdeck-icon path {
+  fill: #009287;
+}
+
+html[data-bs-theme="dark"] svg.speakerdeck-icon path {
+  fill: var(--bs-body-color);
+}

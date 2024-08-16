@@ -14,38 +14,22 @@ layout: default
             <p class="mb-4">{{site.description}}</p>
         </header>
 
-    {% if page.toc==true %}
-    <div class="position-relative">
-        <div class="toc my-5 sticky-top">
-            <h2 class="fst-italic mb-3 h4">Índice da página</h2>
-            {% include toc.html html=content %}
+        {% if page.toc==true %}
+        <div class="position-relative">
+            <div class="toc my-5 sticky-top">
+                <h2 class="fst-italic mb-3 h4">Índice da página</h2>
+                {% include toc.html html=content %}
+            </div>
         </div>
-    </div>
-    {% endif %}
-    <div class="my-5">
-        <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
+        {% endif %}
+        <div class="my-5">
+            <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
             <nav>
                 {% include menu.html %}
             </nav>
-    </div>
+        </div>
     </aside>
     <article class="col-12 col-md-8" id="content">
-        {% if page.link %}
-        <p class="alert alert-info" role="alert">
-            <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a>.
-        </p>
-        {% endif %}
-
-        <h1 class="page-title post-title fw-semibold mt-0 mb-2">
-            {{page.title}}
-        </h1>
-
-        <div class="d-flex align-items-center mb-4 text-muted author-info">
-            <time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 " title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time>
-            <span><i class="bi bi-stopwatch ms-4 me-2 " title="Duração de leitura"></i>{% include reading_time.html %}</span>
-        </div>
-
-
         {% if page.image %}
         <figure class="figure w-100">
             <img src="{{page.image}}" class="figure-img img-fluid rounded w-100" alt="{{page.alt}}">
@@ -53,11 +37,40 @@ layout: default
         </figure>
         {% endif %}
 
-        {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>: {{page.summary}}</p>{%else%}{% endif %}
+
+        {% if page.link %}
+        <p class="alert alert-info" role="alert">
+            <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer"
+                title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}"
+                class="alert-link">{{page.link-name}}</a>.
+        </p>
+        {% endif %}
+
+
+        <h1 class="page-title post-title fw-semibold mt-0 mb-2">
+            {{page.title}}
+        </h1>
+
+        <div class="d-flex align-items-center mb-4 text-muted author-info">
+            <time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 "
+                    title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time>
+            <span><i class="bi bi-stopwatch ms-4 me-2 " title="Duração de leitura"></i>{% include reading_time.html
+                %}</span>
+        </div>
+
+
+
+
+
+
+
+
+        {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
+            {{page.summary}}</p>{%else%}{% endif %}
 
         {{content}}
 
-       {% include footer-content.html %}
+        {% include footer-content.html %}
 
         {% include related.html %}
     </article>
