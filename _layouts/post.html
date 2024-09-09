@@ -37,16 +37,6 @@ layout: default
         </figure>
         {% endif %}
 
-
-        {% if page.link %}
-        <p class="alert alert-info" role="alert">
-            <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer"
-                title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}"
-                class="alert-link">{{page.link-name}}</a>.
-        </p>
-        {% endif %}
-
-
         <h1 class="page-title post-title fw-semibold mt-0 mb-2">
             {{page.title}}
         </h1>
@@ -56,6 +46,16 @@ layout: default
                     title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time>
             <span><i class="bi bi-stopwatch ms-4 me-2 " title="Duração de leitura"></i>{% include reading_time.html
                 %}</span>
+
+
+
+                {% if page.link %}
+                <span>
+                    <i class="bi bi-megaphone-fill  ms-4 me-2"></i>Publicado no <a rel="no-referrer"
+                        title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}"
+                        class="alert-link">{{page.link-name}}</a>.
+                </span>
+                {% endif %}
         </div>
 
 
