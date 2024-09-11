@@ -2,12 +2,16 @@
 layout: default
 ---
 {% include head.html %}
+
 <body class="col-12 col-md-10 col-lg-10 col-xl-8 mx-auto">
-{% include header.html %}
-  <main>
+  <div class="container">
+    {% include header.html %}
+    <main>
       {{content}}
-  </main>
-{% include podcast.html %}
-{% include footer.html %}
+    </main>
+    {% include podcast.html %}
+    {% include footer.html %}
+  </div>
 </body>
+
 </html>

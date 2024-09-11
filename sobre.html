@@ -23,13 +23,13 @@ title: Sobre
 <section class=" d-print-none" id="intro">
     <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Apresentação</h2>
-    <p> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a class="fw-bold" href="{{site.url}}/refiz-meu-portfolio-mais-uma-vez#e-esse-endereco">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
+    <p class="lead fw-semibold"> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/refiz-meu-portfolio-mais-uma-vez#e-esse-endereco">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
     <p>Resido em Olinda, Pernambuco.</p>
     <p>A carreira começou ainda em 2005 quando comecei um projeto junto com um amigo sobre música, foram madrugadas sem dormir estudando HTML, CSS e padrões Web. Depois de cursar Ciências Biológicas, abandonei tudo e resolvi fazer o que todos os amigos falavam para eu fazer: Design. Sou tecnólogo em <strong>Sistemas para Internet</strong> pela Uninassau, especialista em <strong>Design de Web Apps com Tecnologia Front-End</strong> (Unibratec) e em <strong>Design de Interação para Artefatos Digitais</strong> (Cesar School).</p>
     <p> Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para <span lang="en">desktop</span>, celulares, <span lang="en">tablet</span> e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educacional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
     <p>Abaixo você terá mais detalhes sobre meu background e minha carreira.</p>
     <p>Você pode visualizar meu <a href="{{site.url}}/projetos" class="fw-bold">meus projetos</a> (não estarão todos, já que a maioria foi construído através de contrato confidencialidade e sigilo), ler meus <a class="fw-bold" href="{{site.url}}/blog">textos do blog</a> e também  ouvir meu podcast, o <strong>Foco Acessível</strong>, que fala sobre acessibilidade, inclusão e diversidade na tecnologia, acesse: <a class="fw-bold" href="https://focoacessivel.com.br">focoacessivel.com.br</a></p>
-    <button class="mt-5 btn btn-outline-primary d-print-none" onclick="imprimirPagina()"><i class="bi bi-printer me-3"></i> Imprimir meu currículo</button>
+    <a class="mt-5 btn btn-outline-primary d-print-none" href="https://1drv.ms/b/s!AkkMpcXs4WkOloMQ9cV1Zda1jaAxmg?e=IqfOSi"><i class="bi bi-printer me-3"></i>Meu currículo</a>
     
     <div class="d-print-none py-5"> </div>
 </section>
@@ -48,30 +48,64 @@ title: Sobre
     <h2 class="section-title">Experiências</h2>
     <ul class="career-list list-group list-group-flush">
         {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
+            <div class="d-flex">
+                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
     <h3 class="d-print-none section-title">Colaboração</h3>
     <ul class="d-print-none career-list list-group list-group-flush">
         {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
+            <div class="d-flex">
+                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
+
+    <h3 class="d-print-none section-title">Depoimentos</h3>
+
+
+    <div class=" d-print-none fw-semibold mb-3">
+        Aqui você vai encontrar as palavras de pessoas com quem tive a oportunidade de trabalhar, seja em projetos, no dia a dia ou em colaborações mais pontuais.
+      </div>
+      <p>
+        Esses depoimentos foram retirados do meu perfil no <a href="{{site.linkedin}}">LinkedIn</a> e refletem as experiências de quem pôde acompanhar de perto o meu jeito de trabalhar e as contribuições que busco oferecer. É uma alegria compartilhar essas histórias, que mostram como fui parte de diferentes jornadas profissionais. Espero que esses relatos ajudem você a me conhecer um pouco melhor e entender como posso ajudar em novos projetos e desafios.
+      </p>
+
+
+    <div class=" d-print-none accordion accordion-flush" id="accordionDepoimentos">
+
+        {% assign sorted_items = site.data.depoimentos.depoimento | sort: "nome" %}
+        {% for item in sorted_items %}
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{item.nome | slugify}}" aria-expanded="false" aria-controls="{{item.nome | slugify}}">
+                {% if item.img %}<img style="height: 3rem;" class="rounded-circle me-2 float-left" src="data:image/jpeg;base64,{{item.img}}" alt="Foto de {{item.nome}}"/>{%else%}{%endif%}
+                <span><strong>{{item.nome}}</strong> <br> <small>{{item.cargo}} &bull; {{item.empresa}}</small></span>            </button>
+            </h2>
+            <div id="{{item.nome | slugify}}" class="accordion-collapse collapse" data-bs-parent="#accordionDepoimentos">
+            <div class="accordion-body">
+                {{item.texto}}
+            </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
 </section>
 <section id="education">
     <div class="d-print-none py-5"> </div>
     <h2 class="section-title">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
         {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{education.name}}</h3> <h4 class="fs-6">{{education.company}}</h4> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
+            <div class="d-flex">
+                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
+                <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{education.name}}</h3> <h4 class="fs-6">{{education.company}}</h4> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
@@ -82,9 +116,9 @@ title: Sobre
     <h2 class="section-title">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
         {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify}}">
-            <div class="row g-0">
-                <div class="px-0 col-md-3 d-print-none"><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
-                <div class="px-0 col"> <h3  class="fs-5">{{certificate.name}}</h3> <h4 class="fs-6">{{certificate.company}}</h4> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
+            <div class="d-flex">
+                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
+                <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{certificate.name}}</h3> <h4 class="fs-6">{{certificate.company}}</h4> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
@@ -98,3 +132,5 @@ title: Sobre
         </li>
     </ul>
 </section>
+
+
