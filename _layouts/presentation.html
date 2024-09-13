@@ -12,27 +12,18 @@ layout: default
     <p class="mb-4">{{site.description}}</p>
 </header>
 <article id="content">
-    {% if page.link %}
-    <p class="alert alert-info" role="alert">
-        <i class="bi bi-megaphone-fill me-2"></i>Originalmente publicado no <a rel="no-referrer"
-            title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}"
-            class="alert-link">{{page.link-name}}</a>.
-    </p>
-    {% endif %}
-
     <h1 class="page-title post-title fw-semibold mt-0 mb-2">
         {{page.title}}
     </h1>
 
-    <div class="d-flex align-items-center mb-4 text-muted author-info">
-        <time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 "
-                title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time>
+    <div class="row mb-4 text-muted author-info">
+        <div class="col-12 col-md"><time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 " title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time></div>
+        <div class="col-12 col-md"></div>
+        <div class="col-12 col-md">{% if page.link %}<span> <i class="bi bi-megaphone-fill  me-2"></i>Publicado no <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a></span>{% endif %}</div>
+
     </div>
 
-    <iframe class="speakerdeck-iframe" frameborder="0" src="{{page.iframe}}"
-        title="Hackathon como ferramenta de desenvolvimento e integração de times" allowfullscreen="true"
-        style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
-        data-ratio="1.7777777777777777"></iframe>
+    <iframe class="speakerdeck-iframe" frameborder="0" src="{{page.iframe}}" title="Hackathon como ferramenta de desenvolvimento e integração de times" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
 
     <div class="mt-5">
         {{content}}

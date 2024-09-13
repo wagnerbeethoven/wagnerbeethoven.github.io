@@ -34,7 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// TRADUÇÃO DO SITE
 
-function imprimirPagina() {
-  window.print();
-}
+document.addEventListener('DOMContentLoaded', function () {
+  // Função para redirecionar para a URL de tradução do Google
+  function translatePage(languageCode) {
+      var currentURL = window.location.href;
+      var translateURL = 'https://translate.google.com/translate?hl=' + languageCode + '&sl=auto&tl=' + languageCode + '&u=' + encodeURIComponent(currentURL);
+      window.location.href = translateURL;
+  }
+
+  // Adiciona eventos de clique para os links de tradução
+  var translateLinks = document.querySelectorAll('.translate-options a');
+  translateLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+          event.preventDefault(); // Evita o comportamento padrão do link
+          var lang = this.getAttribute('data-lang');
+          translatePage(lang); // Chama a função de tradução com o código de idioma
+      });
+  });
+});

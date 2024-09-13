@@ -75,3 +75,7 @@ depoimento:
     cargo: 'Java Software Engineer'
     empresa: 'Airtopsoft SA'
     texto: '<p>Wagner é um profissional compromissado e criativo que veste a camisa da equipe, na qual está trabalhando.</p>'
+  - nome: 'Lídia Cavalcante'
+    empresa: 'Jüssi'
+    cargo: 'Product Designer'
+    texto: '<p>Wagner é um excelente profissional! Tive a oportunidade de conhecê-lo em minha primeira experiência como designer e trabalhar ao seu lado foi fundamental para o meu desenvolvimento.</p><p>Possui conhecimento vasto não só em design mas também em áreas envolvidas no processo de design, o que colabora para uma visão macro sobre o próprio trabalho. É excelente tecnicamente e é fera conduzindo qualquer projeto que se propõe a tocar!</p><p>Além disso, também está sempre aberto a trocas, tem um carisma gigante e busca construir um ambiente de trabalho agradável para todos.</p><p>É um verdadeiro líder, que naturalmente te inspira a crescer e dar o seu melhor no trabalho. Agradeço demais a todos os aprendizados e trocas.</p>'
