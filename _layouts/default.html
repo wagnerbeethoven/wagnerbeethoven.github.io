@@ -4,9 +4,13 @@ layout: default
 {% include head.html %}
 
 <body class="col-12 col-md-10 col-lg-10 col-xl-8 mx-auto">
+  
+  <div class="skippy visually-hidden-focusable overflow-hidden">
+      <a class="d-inline-flex p-2 m-1" href="#conteudo">Saltar para o conteúdo</a>
+  </div>
   <div class="container">
     {% include header.html %}
-    <main>
+    <main id="conteudo">
       {{content}}
     </main>
     {% include podcast.html %}

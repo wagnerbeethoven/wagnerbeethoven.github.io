@@ -10,20 +10,20 @@ layout: default
                     {% include logo.html %}
                 </a>
             </div>
-            <h1 class="mb-1 mb-lg-2 f1 fw-600">{{site.name}}</h1>
+            <div class="h1 mb-1 mb-lg-2 f1 fw-600">{{site.name}}</div>
             <p class="mb-4">{{site.description}}</p>
         </header>
 
         {% if page.toc==true %}
         <div class="position-relative">
             <div class="toc my-5 sticky-top">
-                <h2 class="fst-italic mb-3 h4">Índice da página</h2>
+                <div class="fst-italic mb-3 h4">Índice da página</div>
                 {% include toc.html html=content %}
             </div>
         </div>
         {% endif %}
         <div class="my-5">
-            <h2 class="fst-italic mb-3 h4">Páginas do site</h2>
+            <div class="fst-italic mb-3 h4">Páginas do site</div>
             <nav>
                 {% include menu.html %}
             </nav>
