@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Blog
+permalink: palestras
+title: Palestras
 ---
 
 <ul class="list-group list-group-flush">
     {% for post in site.posts %}
-    {% if post.categories contains 'Blog' %}
+    {% if post.categories contains 'Palestra' %}
     <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
         <span class="text-body-tertiary">
             <time datetime="{{ post.date | date: '%Y-%m-%d'}}">

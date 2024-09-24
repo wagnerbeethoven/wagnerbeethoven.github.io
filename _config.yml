@@ -10,3 +10,14 @@ github: "https://www.github.com/wagnerbeethoven/"
 linkedin: "https://www.linkedin.com/in/wagnerbeethoven/"
 url: "https://sumo.pe"
 permalink: /:title
+
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  # profile: true
+  startings: [html, head, body]

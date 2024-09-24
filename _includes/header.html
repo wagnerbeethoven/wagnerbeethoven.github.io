@@ -1,17 +1,16 @@
 {% if page.path contains '_posts' %}
-{% else %}
-<!-- DESIGNER PICTURE -->
-<header class="top d-print-none">
-    <div class="col-6 col-md-4 col-lg-3">
-        {% include logo.html %}
+    <div class="d-flex flex-column flex-md-row z-3 " style=" margin-bottom: -6rem;">
+        <div class="flex-shrink-0">
+            {% include logo.html %}
+        </div>
+        <div class="flex-grow-1 mt-3 mt-md-0 ms-md-3">
+            <div class="h2">{{site.name}}</div>
+            {% include menu.html %}
+        </div>
     </div>
-</header>
+    {% else %}
+    {% include logo.html %}
+    <h1 class="page-title ">
+        {{page.title}}
+    </h1>
 {% endif %}
-{% if page.path contains '_posts' %}
-{% else %}
-<!-- PAGE TITLE POSITION -->
-<h1 class="page-title d-print-none">
-    {{page.title}}
-</h1>
-{% endif %}
-

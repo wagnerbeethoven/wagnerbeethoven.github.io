@@ -1,0 +1,6 @@
+{% if page.image %}
+    <figure class="ratio banner ratio-21x9">
+        <img src="{{page.image}}" class="rounded object-fit-cover" alt="{{page.alt}}">
+        {% if page.legend  %}<figcaption class="figure-caption">{{page.legend}}</figcaption>{% endif %}
+    </figure>
+{% endif %}

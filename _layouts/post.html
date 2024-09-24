@@ -1,59 +1,23 @@
 ---
 layout: default
 ---
+{% include banner.html %}
 
-<div class="row">
-    <aside class="col-12 col-md-4">
-        <header class="mb-4">
-            <div class="col-8">
-                <a href="{{site.url}}" title="{{page.title | strip_html }}">
-                    {% include logo.html %}
-                </a>
-            </div>
-            <div class="h1 mb-1 mb-lg-2 f1 fw-600">{{site.name}}</div>
-            <p class="mb-4">{{site.description}}</p>
-        </header>
-
-        {% if page.toc==true %}
-        <div class="position-relative">
-            <div class="toc my-5 sticky-top">
-                <div class="fst-italic mb-3 h4">Índice da página</div>
-                {% include toc.html html=content %}
-            </div>
-        </div>
-        {% endif %}
-        <div class="my-5">
-            <div class="fst-italic mb-3 h4">Páginas do site</div>
-            <nav>
-                {% include menu.html %}
-            </nav>
-        </div>
+       
+<div class="row mt-5">    
+    {% if page.toc  %}
+    <aside class="col-12 col-md-3 toc sticky-top">
+        <div class="fst-italic mb-3 h4">Índice da página</div>
+        {% include toc.html html=content %}
     </aside>
-    <article class="col-12 col-md-8" id="content">
-        {% if page.image %}
-        <figure class="figure w-100">
-            <img src="{{page.image}}" class="figure-img img-fluid rounded w-100" alt="{{page.alt}}">
-            <figcaption class="figure-caption">{{page.legend}}</figcaption>
-        </figure>
-        {% endif %}
+    {% endif %} 
 
-        <h1 class="page-title post-title fw-semibold mt-0 mb-2">
+    <article class="col-12 col-md-9{% if page.toc  %}{%else%} mx-auto{% endif %} " id="content">
+        <h1 class="page-title post-title fw-semibold mb-5">
             {{page.title}}
         </h1>
 
-        <div class="row mb-4 text-muted author-info">
-            <div class="col-12 col-md"><time datetime="{{ page.date | date: '%Y-%m-%d'}}"><i class="bi bi-calendar-event me-2 " title="Data de publicação"></i> {{page.date | date: "%d/%m/%Y"}}</time></div>
-            <div class="col-12 col-md"><span><i class="bi bi-stopwatch me-2 " title="Duração de leitura"></i>{% include reading_time.html %}</span></div>
-            <div class="col-12 col-md">{% if page.link %}<span> <i class="bi bi-megaphone-fill  me-2"></i>Publicado no <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a></span>{% endif %}</div>
-        </div>
-
-
-
-
-
-
-
-
+        {% include meta.html %}
         {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
             {{page.summary}}</p>{%else%}{% endif %}
 

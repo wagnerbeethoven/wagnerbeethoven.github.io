@@ -1,11 +1,6 @@
-{% if page.path contains '_posts' %}
-<a class="mb-3 d-block text-decoration-none" href="{{site.url}}/projetos"><i class="bi bi-bullseye me-2"></i>Acesse meus projetos</a>
-<a class="mb-3 d-block text-decoration-none" href="{{site.url}}/blog"><i class="bi bi-body-text me-2"></i>Leia meus textos</a>
-<a class="mb-3 d-block text-decoration-none" href="{{site.url}}/palestras"><i class="bi bi-easel me-2"></i>Confira minhas palestras</a>
-<a class="mb-3 d-block text-decoration-none" href="{{site.url}}/sobre"><i class="bi bi-file-person me-2"></i>Conheça minha trajetória</a>
-<a class="mb-3 d-block text-decoration-none" href="{{site.url}}/contato"><i class="bi bi-send-fill me-2"></i>Fale comigo</a>
-<a class="mb-3 d-block text-decoration-none" href="#podcast"><i class="bi bi-mic-fill me-2"></i>Podcast: <strong>Foco Acessível</strong></a>
-{% else %}
-<p><a href="/sobre" title="Experiências profissionais, acadêmicas" class="fw-semibold">Conheça minha trajetória</a> &bull; <a href="/contato" title="Fale comigo por email, telefone e nas redes socias" class="fw-semibold">Fale comigo</a>. <br></p>
-<p>Ouça meu <a href="#podcast" title="Podcast sobre acessibilidade, inclusão e diversidade na tecnologia" class="fw-semibold">podcast</a>.</p   >
-{% endif %}
+<p>
+        <a href="/sobre" title="Experiências profissionais, acadêmicas" class="fw-semibold">Conheça minha trajetória</a>
+        &bull; <a href="/contato" title="Fale comigo por email, telefone e nas redes socias" class="fw-semibold">Fale comigo</a>.
+        {% if page.path contains '_posts' %}<br>Acesse meus <a class="  fw-semibold" href="{{site.url}}/projetos">projetos</a>, leia meus <a class=" fw-semibold " href="{{site.url}}/blog">textos</a> e confira minhas <a class=" fw-semibold" href="{{site.url}}/palestras">palestras</a>.{% else %}{% endif %}
+</p>
+<p>Ouça meu <a href="#podcast" title="Podcast sobre acessibilidade, inclusão e diversidade na tecnologia" class="fw-semibold ">podcast</a>.</p>

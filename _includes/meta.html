@@ -1,0 +1,5 @@
+<ul class="list-unstyled row text-muted author-info mb-0">
+    <li class="col-12 col-md-3"><time datetime="{{ page.date | date: '%Y-%m-%d'}}"><span class="bi bi-calendar-event me-2 " title="Data de publicação"></span> {{page.date | date: "%d/%m/%Y"}}</time></li>
+    <li class="col-12 col-md-3 my-2 my-md-0"><span><span class="bi bi-stopwatch me-2 " title="Duração de leitura"></span>{% include reading_time.html %}</span></li>
+    {% if page.link %}<li class="col-12 col-md"><span> <span class="bi bi-megaphone-fill  me-2"></span>Publicado: <a rel="no-referrer" title="O {{page.link-name}} irá abrir em uma noba aba" href="{{page.link}}" class="alert-link">{{page.link-name}}</a></span></li>{% endif %}
+</ul>

@@ -166,6 +166,9 @@ html[data-bs-theme="dark"] {
 .logo {
   width: 13rem !important;
   height: 13rem;
+
+  box-shadow: 0 0 0 10px #fff;
+
 }
 
 /* 404 */
@@ -308,7 +311,8 @@ article a[href^="https://"]:not([href^="https://sumo.pe"]):after,
     line-height: 1.45 !important;
     font-family: sans-serif !important;
     color: #000 !important;
-    background: none !important;
+    background: #fff !important;
+    
   }
 
   .section-title {
@@ -374,7 +378,15 @@ blockquote {
   font-size: 1rem !important;
   font-weight: 300;
 }
-
+.banner figcaption{
+  position: relative;
+  display: inline;
+  padding: .5rem;
+  background: white;
+  border-radius: .25rem;
+  border-top-left-radius: 0;
+  margin: 0;
+}
 figure {
   width: 100% !important;
   display: inline-block;
@@ -387,7 +399,12 @@ figure img {
   height: auto;
   width: 100% !important;
 }
-
+#content figcaption{
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #777;
+}
 .speakerdeck-icon {
   width: 54px;
   height: 54px;
