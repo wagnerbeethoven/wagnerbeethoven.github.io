@@ -4,37 +4,31 @@ layout: default
 {% include banner.html %}
 
 {% if page.toc %}
-<div class="sticky-top">
-    <nav class="navbar bg-white px-3" aria-label="Second navbar example">
-        <a class="navbar-brand" title="Visualizar todos os projetos"
-            href="{{site.url}}/projetos"><i class="bi bi-chevron-left me-1"></i>Todos os projetos</a>
+    <div class="sticky-top mb-5">
+        <nav class="navbar bg-white px-3" aria-label="Second navbar example">
+            <a class="navbar-brand" title="Visualizar todos os projetos" href="{{site.url}}/projetos"><i class="bi bi-chevron-left me-1"></i>Todos os projetos</a>
             <div class="dropdown">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Índice da página
+                    Índice da página
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end m-0 px-3" style="max-height: 50vh; overflow-y: auto;">
                     {% include toc.html html=content %}
                 </ul>
-              </div>
-    </nav>
-</div>
-
-<div class="my-5"></div>
+            </div>
+        </nav>
+    </div>
 {% endif %}
 
-
-<article class="col-12 {% if page.toc %}{%else%} mx-auto{% endif %} " id="content">
-    <h1 class="page-title post-title fw-semibold mb-5">
+<article class="col-12 {% if page.toc %}thfdgc{%else%} mx-auto{% endif %} " id="content">
+    <h1 class="col-12 col-md-9 mx-auto page-title post-title fw-semibold mb-5">
     {{page.title}}
     </h1>
-   
-    {% include meta.html %}
+   <div class="col-12 col-md-9 mx-auto">
+        {% include meta.html %}
+    </div>
     {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
     {{page.summary}}</p>{%else%}{% endif %}
-   
     {{content}}
-   
     {% include footer-content.html %}
-   
     {% include related.html %}
-    </article>
+</article>

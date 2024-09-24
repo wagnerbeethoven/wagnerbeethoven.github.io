@@ -14,6 +14,16 @@
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="{{site.url}}/js/main.js"></script>
 
+{% if page.toc %}
+<script>
+  
+  $(document).ready(function () {
+            $('#toc').toc({ noBackToTopLinks: true });
+          });
+</script>
+{% endif %}
+
+
 
 <!-- Modal do Bootstrap -->
 <div class="modal fade" id="translateModal" tabindex="-1" aria-labelledby="translateModalLabel" aria-hidden="true">

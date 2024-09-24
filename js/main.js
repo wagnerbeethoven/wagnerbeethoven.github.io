@@ -13,9 +13,7 @@
 // })();
 
 // toc
-$(document).ready(function () {
-  $('#toc').toc({ noBackToTopLinks: true });
-});
+
 
 
 // adiciona _blank e diversos

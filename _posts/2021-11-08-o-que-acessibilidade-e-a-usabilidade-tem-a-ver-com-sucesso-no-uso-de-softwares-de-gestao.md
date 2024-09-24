@@ -12,7 +12,6 @@ tags:
     - Software de gestão
     - Experiência do usuário
     - Desenvolvimento de software
-toc: true
 link: http://tibahia.com/artigos/o-que-acessibilidade-e-a-usabilidade-tem-a-ver-com-sucesso-no-uso-de-softwares-de-gestao/
 link-name: TI Bahia
 ---

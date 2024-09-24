@@ -11,7 +11,6 @@ linkedin: "https://www.linkedin.com/in/wagnerbeethoven/"
 url: "https://sumo.pe"
 permalink: /:title
 
-
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
