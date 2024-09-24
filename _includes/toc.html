@@ -133,7 +133,7 @@
                 {% capture anchorAttributes %}{{ anchorAttributes }} class="{{ include.anchor_class | split: '.' | join: ' ' }}"{% endcapture %}
             {% endif %}
 
-            {% capture listItem %}<a class="text-decoration-none d-block" {{ anchorAttributes }}>{{ anchorBody }}</a>{% endcapture %}
+            {% capture listItem %}<a class="text-decoration-none d-block text-truncate" title="{{ anchorBody }}" {{ anchorAttributes }}>{{ anchorBody }}</a>{% endcapture %}
         {% elsif skipNoIDs == true %}
             {% continue %}
         {% else %}

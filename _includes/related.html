@@ -5,14 +5,14 @@
     {% if page.previous.url %}
     <a class="text-decoration-none col-12 col-md text-center text-md-start" href="{{page.previous.url}}" title="Leia a publicação &quot;{{page.previous.title}}&quot;">
         <small class="mb-4 d-block opacity-75">Publiação anterior</small>
-        <div class="d-flex justify-content-center justify-content-md-start"><i class="bi bi-arrow-left-square me-3"></i><span class="d-inline-block">{{page.previous.title}}</span></div>
+        <div class="d-flex justify-content-center justify-content-md-start"><span class="bi bi-arrow-left-square me-3"></span><span class="d-inline-block">{{page.previous.title}}</span></div>
     </a>
     {% endif %}
 
     {% if page.next.url %}
     <a class="text-decoration-none col-12 col-md text-center text-md-end" href="{{page.next.url}}" title="Leia a publicação &quot;{{page.next.title}}&quot;">
         <small class="mb-4 d-block opacity-75">Próximo publicação</small>
-        <div class="d-flex justify-content-center justify-content-md-end"><span class="d-inline-block">{{page.next.title}}</span><i class="bi bi-arrow-right-square ms-3"></i></div>
+        <div class="d-flex justify-content-center justify-content-md-end"><span class="d-inline-block">{{page.next.title}}</span><span class="bi bi-arrow-right-square ms-3"></span></div>
     </a>
     {% endif %}
 </div>

@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Sobre
+permalink: sobre
 ---
-<div class=" d-print-none sticky-top">
+<div class="sticky-top">
     <nav class="navbar navbar-expand-md bg-body-tertiary px-3" aria-label="Second navbar example">
         <a class="navbar-brand" title="Volte para a página inicial para ter acesso a meu portfólio e meu blog" href="{{site.url}}">Página inicial</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-about"
@@ -20,8 +21,8 @@ title: Sobre
         </div>
     </nav>
 </div>
-<section class=" d-print-none" id="intro">
-    <div class="d-print-none py-5"> </div>
+<section class=" " id="intro">
+    <div class=" py-5"> </div>
     <h2 class="section-title">Apresentação</h2>
     <p class="lead fw-semibold"> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/refiz-meu-portfolio-mais-uma-vez#e-esse-endereco">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
     <p>Resido em Olinda, Pernambuco.</p>
@@ -29,45 +30,45 @@ title: Sobre
     <p> Tenho aproximadamente 10 anos desenvolvendo aplicativos, sites e sistemas para <span lang="en">desktop</span>, celulares, <span lang="en">tablet</span> e televisores que ajudaram empresas de porte e seguimentos diversos, onde posso destacar Carrefour, Light, Grupo Ser Educacional, Unimed (diversos estados), Banco Itaú, Celpe, Cemig.</p>
     <p>Abaixo você terá mais detalhes sobre meu background e minha carreira.</p>
     <p>Você pode visualizar meu <a href="{{site.url}}/projetos" class="fw-bold">meus projetos</a> (não estarão todos, já que a maioria foi construído através de contrato confidencialidade e sigilo), ler meus <a class="fw-bold" href="{{site.url}}/blog">textos do blog</a> e também  ouvir meu podcast, o <strong>Foco Acessível</strong>, que fala sobre acessibilidade, inclusão e diversidade na tecnologia, acesse: <a class="fw-bold" href="https://focoacessivel.com.br">focoacessivel.com.br</a></p>
-    <a class="mt-5 btn btn-outline-primary d-print-none" href="https://1drv.ms/b/s!AkkMpcXs4WkOloMQ9cV1Zda1jaAxmg?e=IqfOSi"><i class="bi bi-printer me-3"></i>Meu currículo</a>
+    <a class="mt-5 btn btn-outline-primary " href="https://1drv.ms/b/s!AkkMpcXs4WkOloMQ9cV1Zda1jaAxmg?e=IqfOSi"><span class="bi bi-printer me-3"></span>Meu currículo</a>
     
-    <div class="d-print-none py-5"> </div>
+    <div class=" py-5"> </div>
 </section>
 <h1 class="d-none d-print-block text-center page-title">{{site.name}}</h1>
 <section id="detail">
-    <h3 class="section-title d-print-none">Detalhes pessoais</h3>
+    <h3 class="section-title ">Detalhes pessoais</h3>
     <ul class="list-unstyled">
-        <li class="d-print-inline"><span class="d-print-none me-2">Email:</span><a title="Pode enviar email para mim 🥰" href="mailto:{{site.email}}">{{site.email}}</a></li>
-        <li class="d-print-inline"><span class="d-print-none me-2">Telefone:</span><a title="Este número é WhatsApp, então, me escreve" href="tel:+55{{site.tel}}">{{site.tel}}</a></li>
-        <li class="d-print-inline"><span class="d-print-none me-2">Localidade:</span><strong>Olinda &mdash; PE &bull; Brasil</strong></li>
+        <li class="d-print-inline"><span class=" me-2">Email:</span><a title="Pode enviar email para mim 🥰" href="mailto:{{site.email}}">{{site.email}}</a></li>
+        <li class="d-print-inline"><span class=" me-2">Telefone:</span><a title="Este número é WhatsApp, então, me escreve" href="tel:+55{{site.tel}}">{{site.tel}}</a></li>
+        <li class="d-print-inline"><span class=" me-2">Localidade:</span><strong>Olinda &mdash; PE &bull; Brasil</strong></li>
     </ul>
     {% include social.html %}
 </section>
 <section id="jobs">
-    <div class="d-print-none py-5"> </div>
+    <div class=" py-5"> </div>
     <h2 class="section-title">Experiências</h2>
     <ul class="career-list list-group list-group-flush">
         {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
             <div class="d-flex">
-                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
-    <h3 class="d-print-none section-title">Colaboração</h3>
-    <ul class="d-print-none career-list list-group list-group-flush">
+    <h3 class=" section-title">Colaboração</h3>
+    <ul class=" career-list list-group list-group-flush">
         {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
             <div class="d-flex">
-                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
+                <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
 
-    <h3 class="d-print-none section-title">Depoimentos</h3>
+    <h3 class=" section-title">Depoimentos</h3>
 
 
-    <div class=" d-print-none fw-semibold mb-3">
+    <div class="  fw-semibold mb-3">
         Aqui você vai encontrar as palavras de pessoas com quem tive a oportunidade de trabalhar, seja em projetos, no dia a dia ou em colaborações mais pontuais.
       </div>
       <p>
@@ -75,7 +76,7 @@ title: Sobre
       </p>
 
 
-    <div class=" d-print-none accordion accordion-flush" id="accordionDepoimentos">
+    <div class="  accordion accordion-flush" id="accordionDepoimentos">
 
         {% assign sorted_items = site.data.depoimentos.depoimento | sort: "nome" %}
         {% for item in sorted_items %}
@@ -99,12 +100,12 @@ title: Sobre
     </div>
 </section>
 <section id="education">
-    <div class="d-print-none py-5"> </div>
+    <div class=" py-5"> </div>
     <h2 class="section-title">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
         {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify}}">
             <div class="d-flex">
-                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
+                <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{education.name}}</h3> <h4 class="fs-6">{{education.company}}</h4> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
             </div>
         </li>{% endfor %}
@@ -112,19 +113,19 @@ title: Sobre
 </section>
 
 <section id="certificate">
-    <div class="d-print-none py-5"> </div>
+    <div class=" py-5"> </div>
     <h2 class="section-title">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
         {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify}}">
             <div class="d-flex">
-                <div class="flex-shrink-0 d-print-none"><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
+                <div class="flex-shrink-0 "><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{certificate.name}}</h3> <h4 class="fs-6">{{certificate.company}}</h4> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
             </div>
         </li>{% endfor %}
     </ul>
 </section>
 <section id="course">
-    <div class="d-print-none py-5"> </div>
+    <div class=" py-5"> </div>
     <h2 class="section-title">Cursos</h2>
     <ul class="list-group list-group-flush">{% for course in site.data.about.course %}
         <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify}}-{{course.company | slugify}}">
