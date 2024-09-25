@@ -260,7 +260,7 @@ blockquote {
   font-weight: 300;
 }
 
-/* Figuras */
+/* Imagens */
 figure {
   width: 100% !important;
   display: inline-block;
@@ -299,6 +299,10 @@ figure img {
   margin-top: -7px;
 }
 
+/* Índice da página */
+.dropdown-menu.show {
+  max-width: 80vw;
+}
 /* Contato */
 .green-light {
   position: relative;

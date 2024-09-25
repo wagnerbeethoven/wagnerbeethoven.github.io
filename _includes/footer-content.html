@@ -1,10 +1,10 @@
-<p class="mx-auto pt-5 my-5">Obrigado por chegar até aqui 🤗</p>
+<p class="pt-5 my-5">Obrigado por chegar até aqui 🤗</p>
 
-<div class="mt-5 pt-5 border-top">
+<div class=" mt-5 pt-5 border-top">
     <div class="meta-list category">
         <span class="bi bi-archive-fill me-2" title="Seção do conteúdo"></span>
         {% for category in page.categories %}
-            <a href='{{site.url}}/{% if page.categories contains "Palestra" %}palestras{% endif %}{% if page.categories contains "Projeto" %}projetos{% endif %}{% if page.categories contains "Blog" %}blog{% endif %}' class="meta-list-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
+            <a href='{{site.url}}/{% if page.categories contains "Palestras" %}palestras{% endif %}{% if page.categories contains "Projeto" %}projetos{% endif %}{% if page.categories contains "Blog" %}blog{% endif %}' class="meta-list-item {% for category in page.categories %} category-item-{{ category | slugify }}{% endfor %}">
                 {{ category }}</a>{% endfor %}.
     </div>
     <div class="my-4 meta-list tags text-lowercase">

@@ -12,7 +12,7 @@ tags: [Construção de sites, Portfólio]
 
 É sempre uma incógnita de quanto tempo irá durar este site, tudo por causa da minha indecisão sobre aspectos visuais do meu espaço virtual, mas partir para o mais simple é a forma mais rápida de me agradar. Eram as dúvidas nos elementos como: formas, cores e tipografia, etc.
 
-## Mas vamos às apresentações
+## Mas vamos às palestras
 
 A **Agência Sumô** é uma agência [de um homem só, como o Nine Inch Nails](https://bitbucket.org/wagnerbeethoven/2012-07-03-is-it-just-a-hello-world/raw/5578a39b1907e7a4542a1e25c5af4e32e0f69488/homem-so.jpg). Para entender melhor isso, este site é um portfólio de um designer. Nele, irei abordar informações sobre meus trabalhos, todo o processo, desde as dificuldades enfrentadas, dos objetivos alcançados, os parceiros envolvidos e o resultado final apresentado por mim e o desejado pelo cliente.
 
