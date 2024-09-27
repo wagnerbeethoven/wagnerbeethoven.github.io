@@ -1,12 +1,17 @@
 ---
-layout: default
-permalink: palestras
-title: Palestras
+layout: page
+permalink: projetos
+title: Projetos
 ---
+
+<!-- <ul class="list-group list-group-flush">
+    
+</ul> -->
+
 
 <ul class="list-group list-group-flush">
     {% for post in site.posts %}
-    {% if post.categories contains 'Palestra' %}
+    {% if post.categories contains 'Projetos' %}
     <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
         <span class="text-body-tertiary">
             <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
@@ -24,4 +29,5 @@ title: Palestras
     </li>
     {% endif %}
 {% endfor %}
+    {% for post in site.data.content.portfolio %}{% include loop2.html %}{% endfor %}
 </ul>

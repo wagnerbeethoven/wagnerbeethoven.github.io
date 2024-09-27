@@ -35,10 +35,8 @@ mark {
 }
 
 /* Títulos */
-.page-title,
-.post-title {
+.page-title{
   font-size: 2.488rem;
-  margin: 3.25rem 0;
   font-weight: 600;
 }
 
@@ -89,6 +87,7 @@ mark {
 }
 
 /* Redes sociais */
+
 .social {
   margin: 2.75rem 0 4.625rem;
 }
@@ -132,9 +131,19 @@ mark {
 /* Rodapé */
 .footer {
   padding-top: 6.875rem;
-  font-size: 0.825rem;
 }
-
+.social-footer p{
+  margin-bottom: 0;
+}
+.social-footer .social {
+  margin: 0;
+}
+.social-footer .social a{
+  font-size: 2rem;
+}
+.social-footer .social svg{
+  width: 2rem;
+}
 /* Badges */
 .badge {
   font-weight: 400;
@@ -165,6 +174,10 @@ mark {
   height: 13rem;
   box-shadow: 0 0 0 10px #fff;
 }
+
+/* Header */
+/* .pagina-interna{border: 5px solid blue} */
+
 
 /* Página 404 */
 #error {
@@ -209,34 +222,31 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  margin-top: 3rem;
+  margin: 4rem 0 1rem;
   font-weight: 400;
 }
 
-article h1 {
-  font-size: 2.488rem;
+article h1 {font-size: 2.488rem;}
+article h2 {font-size: 2.074rem;}
+article h3 {font-size: 1.728rem;}
+article h4 {font-size: 1.528rem;}
+article h5 {font-size: 1.34rem;}
+article h6 {font-size: 1.2rem;}
+
+
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.65rem; }
+  h3 { font-size: 1.02rem; }
+  h4 { font-size: 0.63rem; }
+  h5 { font-size: 0.39rem; }
+  h6 { font-size: 0.24rem; }
 }
 
-article h2 {
-  font-size: 2.074rem;
-}
 
-article h3 {
-  font-size: 1.728rem;
-}
-
-article h4 {
-  font-size: 1.528rem;
-}
-
-article h5 {
-  font-size: 1.34rem;
-}
-
-article h6 {
-  font-size: 1.2rem;
-}
-
+/* Artigos */
 article img {
   max-width: 100%;
 }
@@ -303,6 +313,41 @@ figure img {
 .dropdown-menu.show {
   max-width: 80vw;
 }
+/* Compartilhar */
+.compartilhar li {
+  display: inline;
+}
+.compartilhar li > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+.compartilhar li > a::after {
+  display: none;
+}
+.compartilhar li > a.facebook {
+  background-color: #3b5998;
+}
+.compartilhar li > a.twitter {
+  background-color: #55acee;
+}
+.compartilhar li > a.linkedin {
+  background-color: #0077b5;
+}
+.compartilhar li > a.pinterest {
+  background-color: #cb2027;
+}
+.compartilhar li > a.mail {
+  background-color: #444;
+}
+.compartilhar li > a:hover {
+  border-color: var(--color-primary);
+  background: #fff;
+  color: var(--bs-body-color);
+}
 /* Contato */
 .green-light {
   position: relative;
@@ -335,3 +380,4 @@ figure img {
     box-shadow: 0 0 0 1px var(--bs-success);
   }
 }
+
