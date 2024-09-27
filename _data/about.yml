@@ -9,7 +9,7 @@ education:
     company: IBRATEC – Instituto Brasileiro de Tecnologia
     date: 2015 - 2017 (Concluído)
     logo: img/cv/unibratec.png
-    description: 'Pós-graduação com foco em como construir aplicações (Desktop, Mobile/RWA) com as melhores técnicas de Front-End (HTML, CSS e JavaScript) para garantir melhores índices de usabilidade, acessibilidade e performance.<br><br><brPós-Graduação/Especialização<br>Projeto final&#58; <a href="https://speakerdeck.com/wagnerbeethoven/unibratec-apresentacao-final-do-projet-heygo">Apresentação</a> e <a href="https://speakerdeck.com/wagnerbeethoven/heygo-aplicacoes-hibridas-com-ionic-2">Banner</a>.'
+    description: 'Pós-graduação com foco em como construir aplicações (Desktop, Mobile/RWA) com as melhores técnicas de Front-End (HTML, CSS e JavaScript) para garantir melhores índices de usabilidade, acessibilidade e performance.<br><br><brPós-Graduação/Especialização<br>Projeto final&#58; <a href="https://speakerdeck.com/wagnerbeethoven/unibratec-palestras-final-do-projet-heygo">Apresentação</a> e <a href="https://speakerdeck.com/wagnerbeethoven/heygo-aplicacoes-hibridas-com-ionic-2">Banner</a>.'
 
   - name: Sistemas para Internet
     company: Centro Universitário Maurício de Nassau - Uninassau
@@ -22,7 +22,7 @@ education:
     date: 2005 - 2008 (Concluído)
     logo: img/cv/funeso.jpg
     description: 'Licenciatura Plena em Ciências com Habilitação em Biologia tem como objetivo principal formar professores para atuarem no magistério de Ciências e Biologia no Ensino Fundamental e Médio e visa, também, formar profissionais para atuarem nos vários setores da Biologia; profissionais estes, conscientes e comprometidos com a realidade democrática que possam atuar como agentes de transformação da Região.'
-    class: 'd-print-none'
+    class: ''
 
 job:
   - name: Líder de Design e UI/UX Designer
@@ -68,28 +68,28 @@ job:
     date: Agosto/2009 - Dezembro/2009 (5 meses)
     logo: img/cv/governope.png
     description: Professor das disciplina de Ciências no ensino fundamental II (5ª - 8ª série) com 150 h/a na Escola Profª Maria Alves Machado. <br>Professor das disciplinas de Ciências e Biologia para alunos do ensino fundamental II (de 5ª - 8ª série) e ensino médio (1º - 3º ano) com 200h/a mês na Escola Tome Gibson.
-    class: 'd-print-none'
+    class: ''
 
   - name: Instrutor de Informática Básica e Web Designer
     company: Microcamp Tecnologia
     date: Setembro/2008 - Maio/2010 (1 ano e 9 meses)
     logo: img/cv/microcamp.png
     description: Ministrar aulas nos cursos de Web Design (HTML, CSS, Corel Draw, Dreamweaver, Fireworks, Photoshop, Flash) e de Informática básica.
-    class: 'd-print-none'
+    class: ''
 
   - name: Professor de Ciências e Matemática
     company: Prefeitura da Cidade do Recife
     date: Setembro/2006 - Setembro/2008 (2 anos e 1 mês)
     logo: img/cv/prefeitura-recife.png
     description: Estagiário </br>Professor regente de turmas do 3º e 4º ciclos (de 5ª a 8ª do ensino fundamental regular) nas disciplinas de ciências e matemática com carga horária de 95h/a mês na Escola Municipal Professor Antônio de Brito Alves.
-    class: 'd-print-none'
+    class: ''
 
   - name: Auxiliar de Biblioteca
     company: Britanic Ensino de Idiomas
     date: Março/2005 - Março/2007 (2 anos e 1 mês)
     logo: img/cv/britanic.png
     description: Aprendiz
-    class: 'd-print-none'
+    class: ''
 
 course:
   - name: 'Digital Product Leadership'
@@ -105,7 +105,7 @@ course:
   - name: 'Design Editorial de Livros: Teoria e Prática de Diagramação'
     company: 'Arquivo dos Livros (UFF) e Laboratório de Publicações Lima Barreto (UERJ)'
     date: 'Julho/2020'
-    class: 'd-print-none'
+    class: ''
     duration: '2h'
     link: 'https://%20//1drv.ms/b/s!AkkMpcXs4WkOkZpbrn9VZHIrr1T_fA?e=pW9hea'
   - name: 'Imersão em UX Design'
@@ -120,12 +120,12 @@ course:
     company: 'Escola Conquer'
   - name: Lettering Básico
     company: 'Faber-Castell'
-    class: 'd-print-none'
+    class: ''
     link: 'https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1766'
     date: 'Março/2020'
     duration: '1h 30min'
   - name: Lettering Avançado
-    class: 'd-print-none'
+    class: ''
     company: 'Faber-Castell'
     link: 'https://cursos.faber-castell.com.br/certificates/5e78be92455644ea8c9f1776'
     date: 'Março/2020'
@@ -216,27 +216,27 @@ course:
     company: 'Treinaweb'
   - name: 'Introdução ao Design do Dia a Dia'
     date: 'Julho/2020'
-    class: 'd-print-none'
+    class: ''
     company: 'Udacity'
   - name: 'Adobe XD: UI Design do básico aos protótipos'
     date: 'Maio/2020'
     duration: '5h'
-    class: 'd-print-none'
+    class: ''
     link: 'https://ude.my/UC-ccbda641-68ef-43c6-9f95-298fd1738c82/'
     company: ''
   - name: 'UI Design: Design de Interface na Prática'
     date: 'Maio/2020'
     duration: '1h'
-    class: 'd-print-none'
+    class: ''
     link: 'https://www.udemy.com/certificate/UC-2abaf0c1-8b91-40c1-a9d3-b4ef6f3581bd/'
     company: 'Udemy'
   - name: 'How to Design &amp; Prototype in Adobe XD'
     date: 'Maio/2020'
     duration: '1h'
-    class: 'd-print-none'
+    class: ''
     company: 'Udemy'
   - name: 'Construa seu site em WordPress de forma simples e rápida'
-    class: 'd-print-none'
+    class: ''
     date: 'Maio/2020'
     duration: '44min'
     company: 'Udemy'
@@ -249,29 +249,29 @@ course:
     date: 'Fevereiro/2020'
     duration: '3h 30min'
     company: 'Udemy'
-    class: 'd-print-none'
+    class: ''
   - name: ' Aprenda Markdown'
     date: 'Fevereiro/2020'
     duration: '35min'
     company: 'Udemy'
-    class: 'd-print-none'
+    class: ''
   - name: 'Criando sites estáticos com Jekyll'
     date: 'Fevereiro/ 2018'
     duration: '2h'
     company: 'Udemy'
-    class: 'd-print-none'
+    class: ''
   - name: 'Figma: Design colaborativo do básico ao protótipo responsivo'
     date: 'Março/2020'
     duration: '6h 30min'
     link: 'https://ude.my/UC-9ae2145e-36e7-4c61-85a4-5692ffdce721'
     company: 'Udemy'
   - name: 'Introdução à Linguagem HTML'
-    class: 'd-print-none'
+    class: ''
     date: 'Fevereiro/2020'
     duration: '1h'
     company: 'Udemy'
   - name: 'Introdução à linguagem CSS'
-    class: 'd-print-none'
+    class: ''
     date: 'Fevereiro/2020'
     duration: '1h 50min'
     company: 'Udemy'
@@ -304,7 +304,7 @@ course:
     date: 'Abril/2020'
     duration: '8h 42min'
     company: 'UXDMC'
-    class: 'd-print-none'
+    class: ''
 
 colaboration:
   - name: Pesquisador / Designer e Front-End

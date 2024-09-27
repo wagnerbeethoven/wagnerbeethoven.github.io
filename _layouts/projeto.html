@@ -6,7 +6,7 @@ layout: default
 {% if page.toc %}
     <div class="sticky-top mb-5">
         <nav class="navbar bg-white px-3" aria-label="Second navbar example">
-            <a class="navbar-brand" title="Visualizar todos os projetos" href="{{site.url}}/blog"><i class="bi bi-chevron-left me-1"></i>Todos os textos</a>
+            <a class="navbar-brand" title="Visualizar todos os projetos" href="{{site.url}}/projetos"><i class="bi bi-chevron-left me-1"></i>Todos os projetos</a>
             <div class="dropdown">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Índice
@@ -19,14 +19,14 @@ layout: default
     </div>
 {% endif %}
 
-<article id="content">
-    <h1 class=" page-title post-title fw-semibold mb-5">
+<article class="col-12 {% if page.toc %}thfdgc{%else%} mx-auto{% endif %} " id="content">
+    <h1 class="page-title post-title fw-semibold mb-5">
     {{page.title}}
     </h1>
         {% include meta.html %}
-        {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
-            {{page.summary}}</p>{%else%}{% endif %}
-            {{content}}
-        {% include footer-content.html %}
-        {% include related.html %}
+    {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
+    {{page.summary}}</p>{%else%}{% endif %}
+    {{content}}
+    {% include footer-content.html %}
+    {% include related.html %}
 </article>

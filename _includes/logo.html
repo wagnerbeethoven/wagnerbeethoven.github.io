@@ -1,11 +1,11 @@
-<div class="position-relative">
+<div class="position-relative z-3">
     <a href="{{site.url}}">
-        <figure class="ratio ratio-1x1 logo" title="{{page.title | strip_html }}">
+        <figure class="ratio ratio-1x1 logo rounded-circle" title="{{page.title | strip_html }}">
             <img title="Olá, sou Wagner 😉" src="{{site.url}}/{{site.avatar}}" class="object-fit-cover border rounded-circle" alt="{{site.alt}}">
         </figure>
     </a>
 
     <a style="left: 3rem !important;" title="Traduzir o site / Translate site / Traduire le site / Traducir sitio / Website übersetzen / Traduci sito / サイトを翻訳 / 翻译网站" class="position-absolute border shadow-sm bottom-0  translate-middle bg-white py-1 px-2 border border-light rounded-circle" data-bs-toggle="modal" data-bs-target="#translateModal" tabindex="0" role="button">
-        <i class="bi bi-translate"></i>
+        <span class="bi bi-translate"></span>
     </a>
 </div>

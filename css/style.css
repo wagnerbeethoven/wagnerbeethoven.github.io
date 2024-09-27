@@ -1,0 +1,337 @@
+/* Variáveis */
+:root {
+  --color-primary: #147979;
+  --color-github: #333;
+  --bs-primary-bg-subtle: var(--color-primary);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(20, 121, 121, 0.25);
+}
+
+/* Estilos gerais */
+body {
+  padding: 5rem 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+main {
+  margin: 3.25rem 0 5.25rem;
+}
+
+a {
+  color: var(--bs-body-color);
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+mark {
+  background: #005757;
+  color: #fff;
+  padding: 0;
+  font-weight: 900;
+}
+
+/* Títulos */
+.page-title,
+.post-title {
+  font-size: 2.488rem;
+  margin: 3.25rem 0;
+  font-weight: 600;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 4.625rem 0 2.25rem;
+}
+
+/* Accordion */
+.accordion-collapse {
+  background: var(--color-primary);
+}
+
+.accordion-button {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "Fechar";
+  transform: none;
+}
+
+.accordion-button::after {
+  content: "Visualizar";
+  text-transform: uppercase;
+  font-size: 0.825em;
+  transform: none;
+  background: none !important;
+  width: auto;
+}
+
+/* Botões */
+.btn-outline-link {
+  border: 1px solid var(--bs-body-color);
+}
+
+.btn-outline-link:hover,
+.btn-outline-link:active,
+.btn-outline-link:focus {
+  background-color: var(--bs-body-color);
+  color: var(--bs-body-bg);
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+/* Redes sociais */
+.social {
+  margin: 2.75rem 0 4.625rem;
+}
+
+.social a {
+  font-size: 2.5rem;
+  color: var(--bs-body-color);
+  margin-right: 1rem;
+}
+
+.social a.linkedin {
+  color: #0073b0;
+}
+
+.social a.behance {
+  color: #1769ff;
+}
+
+.social a.medium {
+  color: #000;
+}
+
+.social a.github {
+  color: var(--color-github);
+}
+
+/* Podcast */
+.podcast p:last-of-type {
+  font-size: small;
+}
+
+.podcast iframe {
+  border-radius: 1rem;
+}
+
+/* Listas de carreira */
+.career-list p {
+  font-size: 0.875rem;
+}
+
+/* Rodapé */
+.footer {
+  padding-top: 6.875rem;
+  font-size: 0.825rem;
+}
+
+/* Badges */
+.badge {
+  font-weight: 400;
+  text-transform: lowercase;
+  color: var(--bs-black);
+}
+
+.badge-aula {
+  background: var(--bs-orange);
+}
+
+.badge-mentoria {
+  background: #ff56aa;
+}
+
+.badge-rec-n-play,
+.badge-evento {
+  background: var(--bs-teal);
+}
+
+.badge-ux-collective {
+  background: #01ccff;
+}
+
+/* Logo */
+.logo {
+  width: 13rem !important;
+  height: 13rem;
+  box-shadow: 0 0 0 10px #fff;
+}
+
+/* Página 404 */
+#error {
+  display: table;
+  text-align: center;
+}
+
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  font-size: 50px;
+  display: inline-block;
+  padding-right: 12px;
+  animation: type 0.5s alternate infinite;
+}
+
+@keyframes type {
+  from {
+    box-shadow: inset -3px 0 0 #888;
+  }
+  to {
+    box-shadow: inset -3px 0 0 transparent;
+  }
+}
+
+/* Tags */
+.tag-item::after {
+  content: ", ";
+}
+
+.tag-item:last-child::after {
+  content: ".";
+}
+
+/* Artigos */
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-top: 3rem;
+  font-weight: 400;
+}
+
+article h1 {
+  font-size: 2.488rem;
+}
+
+article h2 {
+  font-size: 2.074rem;
+}
+
+article h3 {
+  font-size: 1.728rem;
+}
+
+article h4 {
+  font-size: 1.528rem;
+}
+
+article h5 {
+  font-size: 1.34rem;
+}
+
+article h6 {
+  font-size: 1.2rem;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+article a[href^="https://"]:not([href^="https://sumo.pe"])::after,
+.loop a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+.loop a[href^="https://"]:not([href^="https://sumo.pe"])::after
+{
+  content: " ↗";
+  text-decoration: none;
+  font-size: 85%;
+  font-weight: 300;
+}
+
+/* Citação */
+blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid;
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+/* Imagens */
+figure {
+  width: 100% !important;
+  display: inline-block;
+}
+
+figure img {
+  border-radius: var(--bs-border-radius) !important;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  max-width: 100%;
+  height: auto;
+  width: 100% !important;
+}
+
+.banner figcaption {
+  position: relative;
+  display: inline;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  border-top-left-radius: 0;
+  margin: 0;
+}
+
+#content figcaption {
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #777;
+}
+
+/* Ícone Speakerdeck */
+.speakerdeck-icon {
+  width: 54px;
+  height: 54px;
+  margin-top: -7px;
+}
+
+/* Índice da página */
+.dropdown-menu.show {
+  max-width: 80vw;
+}
+/* Contato */
+.green-light {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  float: left;
+}
+
+.green-light::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--bs-success);
+  border-radius: 50%;
+  animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 1px var(--bs-success);
+  }
+  50% {
+    box-shadow: 0 0 0 2px var(--bs-success);
+  }
+  100% {
+    box-shadow: 0 0 0 1px var(--bs-success);
+  }
+}

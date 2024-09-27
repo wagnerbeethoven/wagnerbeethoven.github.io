@@ -2,9 +2,11 @@
 layout: default
 title: 'Olá, sou <mark>Wagner</mark>'
 ---
-
-{% include description.html %}
+<p class="lead">Designer há mais de dez anos construindo e projetando soluções úteis para as
+    pessoas, com vasta experiência em usabilidade, entusiasta da acessibilidade e da tecnologia assistiva.</p>
+{% include menu.html %}
 {% include social.html %}
+
 
 <section id="portfolio">
     <h2 class="section-title">Acesse meus <a href="{{site.url}}/projetos"
@@ -26,8 +28,8 @@ title: 'Olá, sou <mark>Wagner</mark>'
     </ul>
 </section>
 <section id="palestras">
-    <h2 class="section-title">Confira minhas <a href="{{site.url}}/palestras"
-            title="Acesse todos as minhas palestras">palestras</a></h2>
+    <h2 class="section-title">Confira minhas <a href="{{site.url}}/apresentacoes"
+            title="Acesse todos as minhas apresentacoes">palestras</a></h2>
     <ul class="list-group list-group-flush">
         {% for post in site.posts %}
         {% if post.categories contains 'Palestra' %}
