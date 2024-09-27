@@ -4,16 +4,35 @@ permalink: projetos
 title: Projetos
 ---
 
-<!-- <ul class="list-group list-group-flush">
-    {% for post in site.posts %}
-    {% if post.categories contains 'Projetos' %}
+<ul class="list-group list-group-flush">
+    <!-- {% for post in site.posts %}
+        {% if post.categories contains 'Projetos' %}
+        <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
+            <span class="text-body-tertiary">
+                <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
+                    {{ post.date | date: "%d/%m/%Y" }}
+                </time>:
+            </span>
+            <a class="text-decoration-none fw-semibold" href="{{post.url}}">
+                {{ post.title }}
+            </a>
+            {% if post.type %}
+            <small class="ms-2 badge badge-{{post.type | slugify}}">
+                {{post.type}}
+            </small>
+            {% endif %}
+        </li>
+        {% endif %}
+    {% endfor %} -->
+
+    {% for post in site.data.content.portfolio %}
     <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
         <span class="text-body-tertiary">
             <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
                 {{ post.date | date: "%d/%m/%Y" }}
             </time>:
         </span>
-        <a class="text-decoration-none fw-semibold" href="{{post.url}}">
+        <a class="text-decoration-none fw-semibold" href="{{post.link}}">
             {{ post.title }}
         </a>
         {% if post.type %}
@@ -22,11 +41,5 @@ title: Projetos
         </small>
         {% endif %}
     </li>
-    {% endif %}
-{% endfor %}
-</ul> -->
-
-
-<ul class="list-group list-group-flush">
-    {% for post in site.data.content.portfolio %}{% include loop2.html %}{% endfor %}
+    {% endfor %}
 </ul>

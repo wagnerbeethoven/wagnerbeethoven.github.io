@@ -5,7 +5,7 @@ portfolio:
     summary: "Projeto conceitual construído no curso de pós-graduação de Design de Interação para Artefatos Digitais da Cesar School"
   - title: "Capybem"
     date: 2020-08-23
-    link: "https://www.behance.net/gallery/109241647/Capybem"
+    link: "./capybem"
     summary: "Projeto conceitual/aplicação mobile que irá ajudar o meio ambiente"
   - title: "Namastu"
     date: 2018-12-20
@@ -16,7 +16,7 @@ portfolio:
     link: "https://www.behance.net/gallery/92763985/Procurados-pela-Justica"
     summary: "Criação e concepção da arquitetura da informação, experiência do usuário, design system para o aplicativo mobile"
   - title: "Instituto Muviar – Museu Virtual de Arte de Rua"
-    date: 2014-10-17
+    date: 2018-10-17
     link: "https://www.behance.net/gallery/71406589/Instituto-Muviar-Museu-Virtual-de-Arte-de-Rua"
     summary: "Arquitetura da informação, experiência do usuário, concepção/interface e integração com Wordpress"
   - title: "Coegemas"
