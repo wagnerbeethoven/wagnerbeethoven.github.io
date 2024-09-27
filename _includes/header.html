@@ -1,12 +1,13 @@
 <div class="  mt-5">
-{% if page.path contains '_posts' %}
-    <div class="d-flex flex-column flex-md-row z-3 " style=" margin-bottom: -6rem;">
+    {% if page.path contains '_posts' %}
+    <div class="pagina-interna d-flex flex-column flex-md-row z-3 " style=" margin-bottom: -6rem;">
         <div class="flex-shrink-0">
             {% include logo.html %}
         </div>
         <div class="flex-grow-1 mt-3 mt-md-0 ms-md-3">
             <div class="h2">{{site.name}}</div>
-            {% include menu.html %}
+
+            <div class="mt-5 mb-5">{% include menu.html %}</div>
         </div>
     </div>
     {% else %}
@@ -14,5 +15,5 @@
     <h1 class="page-title ">
         {{page.title}}
     </h1>
-{% endif %}
+    {% endif %}
 </div>

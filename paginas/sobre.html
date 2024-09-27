@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Sobre
 permalink: sobre
 ---
@@ -13,16 +13,16 @@ permalink: sobre
         <div class="collapse navbar-collapse" id="menu-about">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a title="Sobre mim" class="nav-link" href="#intro">Apresentação</a></li>
-                <li class="nav-item"><a title="Entenda sobre minhas experiências profissionais" class="nav-link" href="#jobs">Experiências</a></li>
-                <li class="nav-item"><a title="Conheça a minha formações acadêmicas" class="nav-link" href="#education">Escolaridade</a></li>
-                <li class="nav-item"><a title="Saiba sobre minhas certificações" class="nav-link" href="#certificate">Certificações</a></li>
-                <li class="nav-item"><a title="Todos os cursos que fiz" class="nav-link" href="#course">Cursos</a></li>
+                <li class="nav-item"><a title="Entenda sobre minhas experiências profissionais" class="nav-link" href="#experiencia">Experiências</a></li>
+                <li class="nav-item"><a title="Conheça a minha formações acadêmicas" class="nav-link" href="#escolaridade">Escolaridade</a></li>
+                <li class="nav-item"><a title="Saiba sobre minhas certificações" class="nav-link" href="#certificacoes">Certificações</a></li>
+                <li class="nav-item"><a title="Todos os cursos que fiz" class="nav-link" href="#cursos">Cursos</a></li>
             </ul>
         </div>
     </nav>
 </div>
-<section class=" " id="intro">
-    <div class=" py-5"> </div>
+<section id="intro">
+     <div class=" pt-5"> </div>
     <h2 class="section-title">Apresentação</h2>
     <p class="lead fw-semibold"> Me chamo Wagner Beethoven</strong> (de batismo) , um belo nome, mas muito extenso, por isso resolvi criar um site com o nome mais curto (<a href="{{site.url}}/refiz-meu-portfolio-mais-uma-vez#e-esse-endereco">maiores explicações</a>) e nele mostrar meu trabalho. Tenho por volta dos quarenta anos, atualmente trabalho na <strong>{{ site.data.about.job[0].company }}</strong> como <strong>{{ site.data.about.job[0].name }}</strong>.</p>
     <p>Resido em Olinda, Pernambuco.</p>
@@ -32,10 +32,9 @@ permalink: sobre
     <p>Você pode visualizar meu <a href="{{site.url}}/projetos" class="fw-bold">meus projetos</a> (não estarão todos, já que a maioria foi construído através de contrato confidencialidade e sigilo), ler meus <a class="fw-bold" href="{{site.url}}/blog">textos do blog</a> e também  ouvir meu podcast, o <strong>Foco Acessível</strong>, que fala sobre acessibilidade, inclusão e diversidade na tecnologia, acesse: <a class="fw-bold" href="https://focoacessivel.com.br">focoacessivel.com.br</a></p>
     <a class="mt-5 btn btn-outline-primary " href="https://1drv.ms/b/s!AkkMpcXs4WkOloMQ9cV1Zda1jaAxmg?e=IqfOSi"><span class="bi bi-printer me-3"></span>Meu currículo</a>
     
-    <div class=" py-5"> </div>
+     <div class=" pt-5"> </div>
 </section>
-<h1 class="d-none d-print-block text-center page-title">{{site.name}}</h1>
-<section id="detail">
+<section id="detalhes">
     <h3 class="section-title ">Detalhes pessoais</h3>
     <ul class="list-unstyled">
         <li class="d-print-inline"><span class=" me-2">Email:</span><a title="Pode enviar email para mim 🥰" href="mailto:{{site.email}}">{{site.email}}</a></li>
@@ -44,8 +43,8 @@ permalink: sobre
     </ul>
     {% include social.html %}
 </section>
-<section id="jobs">
-    <div class=" py-5"> </div>
+<section id="experiencia">
+     <div class=" pt-5"> </div>
     <h2 class="section-title">Experiências</h2>
     <ul class="career-list list-group list-group-flush">
         {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
@@ -99,8 +98,8 @@ permalink: sobre
 
     </div>
 </section>
-<section id="education">
-    <div class=" py-5"> </div>
+<section id="escolaridade">
+     <div class=" pt-5"> </div>
     <h2 class="section-title">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
         {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify}}">
@@ -112,8 +111,8 @@ permalink: sobre
     </ul>
 </section>
 
-<section id="certificate">
-    <div class=" py-5"> </div>
+<section id="certificacoes">
+     <div class=" pt-5"> </div>
     <h2 class="section-title">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
         {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify}}">
@@ -124,8 +123,8 @@ permalink: sobre
         </li>{% endfor %}
     </ul>
 </section>
-<section id="course">
-    <div class=" py-5"> </div>
+<section id="cursos">
+     <div class=" pt-5"> </div>
     <h2 class="section-title">Cursos</h2>
     <ul class="list-group list-group-flush">{% for course in site.data.about.course %}
         <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify}}-{{course.company | slugify}}">

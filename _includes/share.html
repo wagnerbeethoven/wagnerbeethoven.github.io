@@ -1,0 +1,14 @@
+{% if include.pageurl != nil and include.pageurl != '' %}
+{% assign pageurl = include.pageurl %}
+{% else %}
+{% assign pageurl = page.url %}
+{% endif %}
+
+<ul class="list-unstyled list-inline compartilhar">
+<li class="me-3">Compartilhe no:</li>
+<li class="me-3"><a class="facebook" title="Compartilhe no Facebook" href="http://www.facebook.com/share.php?u={{ site.url }}{{ pageurl }}"><span class="bi me-2 bi-facebook"></span>Facebook</a></li>
+<li class="me-3"><a class="twitter" title="Compartilhe no Twitter" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ pageurl }}"><span class="bi me-2 bi-twitter"></span>Twitter</a></li>
+<li class="me-3"><a class="linkedin" title="Compartilhe no Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ pageurl }}&title=&summary=&source="><span class="bi me-2 bi-linkedin"></span>linkedIn</a></li>
+{% if page.image %}<li class="me-3"><a class="pinterest" title="Compartilhe no Pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{ site.url }}{{ page.image }}&description="><span class="bi me-2 bi-pinterest"></span>Pinterest</a></li>{% endif %}
+<li><a class="mail" title="Compartilhe o texto por Email" href="mailto:?&body={{ site.url }}{{ pageurl }}"><span class="bi me-2 bi-envelope"></span>Email</a></li>
+</ul>
