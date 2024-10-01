@@ -7,7 +7,7 @@ title: Palestras
 <ul class="list-group list-group-flush">
     {% for post in site.posts %}
     {% if post.categories contains 'Palestra' %}
-    <li class="loop px-0 list-group-item position-relative" id="posts-{{post.title | slugify}}">
+    <li class="loop px-0 list-group-item position-relative">
         <span class="text-body-tertiary">
             <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
                 {{ post.date | date: "%d/%m/%Y" }}
@@ -17,7 +17,7 @@ title: Palestras
             {{ post.title }}
         </a>
         {% if post.type %}
-        <small class="ms-2 badge badge-{{post.type | slugify}}">
+        <small class="ms-2 badge badge-{{post.type | slugify: 'latin' }}">
             {{post.type}}
         </small>
         {% endif %}

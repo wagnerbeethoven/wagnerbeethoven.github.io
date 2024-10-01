@@ -1,19 +1,19 @@
-<div class="  mt-5">
-    {% if page.path contains '_posts' %}
-    <div class="pagina-interna d-flex flex-column flex-md-row z-3 " style=" margin-bottom: -6rem;">
-        <div class="flex-shrink-0">
-            {% include logo.html %}
-        </div>
-        <div class="flex-grow-1 mt-3 mt-md-0 ms-md-3">
-            <div class="h2">{{site.name}}</div>
-
-            <div class="mt-5 mb-5">{% include menu.html %}</div>
-        </div>
+{% if page.path contains '_posts' %}
+<header class="pagina-interna d-flex flex-column flex-md-row z-3 " style=" margin-bottom: -6rem;">
+    <div class="flex-shrink-0">
+        {% include logo.html %}
     </div>
-    {% else %}
+    <div class="flex-grow-1 mt-3 mt-md-0 ms-md-3">
+        <div class="h2">{{site.name}}</div>
+
+        <div class="mt-5 mb-5">{% include menu.html %}</div>
+    </div>
+</header>
+{% else %}
+<header>
     {% include logo.html %}
     <h1 class="page-title ">
         {{page.title}}
     </h1>
-    {% endif %}
-</div>
+</header>
+{% endif %}

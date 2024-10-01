@@ -47,7 +47,7 @@ permalink: sobre
      <div class=" pt-5"> </div>
     <h2 class="section-title">Experiências</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
+        {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify: 'latin' }}">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
@@ -56,7 +56,7 @@ permalink: sobre
     </ul>
     <h3 class=" section-title">Colaboração</h3>
     <ul class=" career-list list-group list-group-flush">
-        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify}}">
+        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify: 'latin' }}">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{experience.name}}</h3> <h4 class="fs-6">{{experience.company}}</h4> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
@@ -83,11 +83,11 @@ permalink: sobre
 
         <div class="accordion-item">
             <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{item.nome | slugify}}" aria-expanded="false" aria-controls="{{item.nome | slugify}}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{item.nome | slugify: 'latin' }}" aria-expanded="false" aria-controls="{{item.nome | slugify: 'latin' }}">
                 {% if item.img %}<img style="height: 3rem;" class="rounded-circle me-2 float-left" src="data:image/jpeg;base64,{{item.img}}" alt="Foto de {{item.nome}}"/>{%else%}{%endif%}
                 <span><strong>{{item.nome}}</strong> <br> <small>{{item.cargo}} &bull; {{item.empresa}}</small></span>            </button>
             </h2>
-            <div id="{{item.nome | slugify}}" class="accordion-collapse collapse" data-bs-parent="#accordionDepoimentos">
+            <div id="{{item.nome | slugify: 'latin' }}" class="accordion-collapse collapse" data-bs-parent="#accordionDepoimentos">
             <div class="accordion-body">
                 {{item.texto}}
             </div>
@@ -102,7 +102,7 @@ permalink: sobre
      <div class=" pt-5"> </div>
     <h2 class="section-title">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify}}">
+        {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify: 'latin' }}">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{education.name}}</h3> <h4 class="fs-6">{{education.company}}</h4> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
@@ -115,7 +115,7 @@ permalink: sobre
      <div class=" pt-5"> </div>
     <h2 class="section-title">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify}}">
+        {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify: 'latin' }}">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
                 <div class="flex-grow-1 ms-3"><h3  class="fs-5">{{certificate.name}}</h3> <h4 class="fs-6">{{certificate.company}}</h4> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
@@ -127,7 +127,7 @@ permalink: sobre
      <div class=" pt-5"> </div>
     <h2 class="section-title">Cursos</h2>
     <ul class="list-group list-group-flush">{% for course in site.data.about.course %}
-        <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify}}-{{course.company | slugify}}">
+        <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify: 'latin' }}-{{course.company | slugify: 'latin' }}">
             {% if course.link %}<a rel="noopener" title="O link irá abrir o certificado &quot;{{course.name | strip_html}}&quot; em uma nova aba"  href="{{course.link}}">{% endif %}<span class="fw-semibold">{{course.name}}</span>{% if course.link %}</a>{% endif %}<small class="d-block">{{course.company}} ({{course.date}}{% if course.duration %}, {{course.duration}}{% endif %})</small>{% endfor %}
         </li>
     </ul>

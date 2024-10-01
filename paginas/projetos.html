@@ -5,7 +5,11 @@ title: Projetos
 ---
 
 <p class="section-subtitle lead">Todos os links dos meus projetos levam para o Behance</p>
-
-<div class="row" data-masonry='{"percentPosition": true }'>
-    {% for post in site.data.content.portfolio %}{% include loop-projetos.html %}{% endfor %}
+<div class="row">
+    {% assign projetos = site.categories.Projetos %}
+    {% for post in projetos %}
+      {% if post.categories contains 'Projetos' %}
+        {% include loop-projetos.html %}
+    {% endif %}
+    {% endfor %}
 </div>
