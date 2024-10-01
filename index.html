@@ -2,19 +2,24 @@
 layout: default
 title: 'Olá, sou <mark>Wagner</mark>'
 ---
-        
-<p class="col-12 col-lg-8 col-xlg-6 lead">Designer há mais de dez anos construindo e projetando soluções úteis para as pessoas, com vasta experiência em usabilidade, entusiasta da acessibilidade e da tecnologia assistiva.</p>
+
+<p class="col-12 col-lg-8 col-xlg-6 lead">Designer há mais de dez anos construindo e projetando soluções úteis para as
+    pessoas, com vasta experiência em usabilidade, entusiasta da acessibilidade e da tecnologia assistiva.</p>
 
 {% include menu.html %}
 {% include social.html %}
 
 
 <section id="portfolio">
-    <h2 class="section-title">Acesse meus <a href="{{site.url}}/projetos"
-            title="Acesse todos os projetos">projetos</a></h2>
-    <ul class="list-group list-group-flush">
-        {% for post in site.data.content.portfolio %}{% include loop.html %}{% endfor %}
-    </ul>
+    <h2 class="section-title">Acesse meus <a href="{{site.url}}/projetos" title="Acesse todos os projetos">projetos</a>
+    </h2>
+    <p class="section-subtitle lead">Todos os links dos meus projetos levam para o Behance</p>
+    <div class="row" data-masonry='{"percentPosition": true }'>
+
+    <!-- <ul class="list-group list-group-flush"> -->
+        {% for post in site.data.content.portfolio %}{% include loop-projetos.html %}{% endfor %}
+    <!-- </ul> -->
+    </div>
 </section>
 <section id="blog">
     <h2 class="section-title">Leia meus <a href="{{site.url}}/blog" title="Acesse todos os textos do blog">textos</a> do
@@ -23,7 +28,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
     <ul class="list-group list-group-flush">
         {% for post in site.posts %}
         {% if post.categories contains 'Blog' %}
-        {% include loop2.html %}
+        {% include loop-post.html %}
         {% endif %}
         {% endfor %}
     </ul>
@@ -34,7 +39,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
     <ul class="list-group list-group-flush">
         {% for post in site.posts %}
         {% if post.categories contains 'Palestra' %}
-        {% include loop2.html %}
+        {% include loop-post.html %}
         {% endif %}
         {% endfor %}
     </ul>

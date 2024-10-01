@@ -1,0 +1,11 @@
+<div class="col-6 col-md-4 col-lg-4 mb-4 ">
+    <div class="shadow-sm card card-projeto card-{{post.categoria}}" id="card-{{ post.nome | slugify }}">
+        <div class="card-body d-flex justify-content-end align-items-start flex-column">
+            <div><span
+                class="d-flex align-items-center justify-content-center bi bi-{{post.icone}} d-inline-block p-1 border rounded-circle"></span>
+            <h2 class="card-title fw-bold m-0 fs-6"><a href="{{post.link}}" class="1stretched-link">{{ post.nome }}</a></h2></div>
+            <p class="card-text">{{post.resumo}}</p>
+
+        </div>
+    </div>
+</div>
