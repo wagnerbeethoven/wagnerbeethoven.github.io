@@ -103,6 +103,9 @@ mark {
   color: var(--bs-body-color);
   margin-right: 1rem;
 }
+.social a:after {
+  display: none;
+}
 
 .social a.linkedin {
   color: #0073b0;
@@ -439,4 +442,8 @@ figure img {
 .card-projeto .card-text {
   font-size: 0.825rem;
 }
-.tag-item{font-size: .85rem;text-transform: lowercase; opacity:.8;}
+.tag-item {
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  opacity: 0.8;
+}
