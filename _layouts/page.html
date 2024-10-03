@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
+{% if page.toc %}
+<div class="row">
+<aside class="col-12 col-md-3">
+<p class="h4 fts-italic pt-5"> Índice</p>{% include toc.html html=content %}</aside>
+{% endif %}
+    <article class="{% if page.toc %}col-12 col-md-9  pt-5 {% else %}mx-auto{%endif%}">
+        {{content}}
+    </article>
 
-<article class="pagina-{{page.title | slugify: 'latin'}}">
-   {{content}}
-</article>
+
+    {% if page.toc %}
+</div>
+
+{% endif %} <!-- pagina-{{page.title | slugify: 'latin'}} -->
+

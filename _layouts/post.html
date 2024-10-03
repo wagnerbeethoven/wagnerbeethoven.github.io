@@ -4,29 +4,25 @@ layout: default
 {% include banner.html %}
 
 {% if page.toc %}
-    <div class="sticky-top mb-5">
-        <nav class="navbar bg-white px-3" aria-label="Second navbar example">
-            <a class="navbar-brand" title="Visualizar todos os projetos" href="{{site.url}}/blog"><i class="bi bi-chevron-left me-1"></i>Todos os textos</a>
-            <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Índice
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end m-0 px-3" style="max-height: 50vh; overflow-y: auto;">
-                    {% include toc.html html=content %}
-                </ul>
-            </div>
-        </nav>
-    </div>
+<div class="row">
+<aside class="col-12 col-md-3">
+<p class="h4 fts-italic pt-5"> Índice</p>{% include toc.html html=content %}</aside>
 {% endif %}
-
-<article class="col-12 col-md-8 mx-auto">
-    <h1 class=" page-title fw-semibold mb-5">
-    {{page.title}}
-    </h1>
+    <article class="col-12 col-md-9  pt-5 {% if page.toc %}{% else %}mx-auto{%endif%}">
         {% include meta.html %}
         {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
             {{page.summary}}</p>{%else%}{% endif %}
-            {{content}}
+{{content}}
         {% include footer-content.html %}
         {% include related.html %}
-</article>
+    </article>
+
+
+    {% if page.toc %}
+</div>
+
+{% endif %} <!-- pagina-{{page.title | slugify: 'latin'}} -->
+
+
+
+        
