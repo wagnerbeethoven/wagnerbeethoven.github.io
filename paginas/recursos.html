@@ -1,37 +1,31 @@
 ---
-title: Recusos
+title: Recursos
 layout: page
 permalink: recursos
 ---
+<div class="col-12 col-md-8 mb-5">
+<p class="lead">Essa página é a tentativa de ser hub para guardar materiais úteis relacionados ao seu site ou projeto. Ela pode incluir:</p>
+<ul>
+  <li><strong>Links úteis</strong>: para sites, blogs, artigos ou documentos relevantes.</li>
+  <li><strong>Cursos recomendados</strong>: listas de cursos online ou presenciais que aprofundam o conhecimento em determinadas áreas.</li>
+  <li><strong>Ferramentas e utilitários</strong>: softwares, plugins ou aplicativos que auxiliam em tarefas específicas.</li>
+</ul>
+</div>
 
-
-{% for item in site.recursos %}
-
-<div class="modal fade" id="modal-{{ item.title | slugify: 'latin'  }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ item.title }}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            {{ item.content | markdownify }}
-        </div>
-        <div class="d-flex justify-content-between modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Acessar o link</button>
-        </div>
+<div class="row" data-masonry='{"percentPosition": true }'>
+  {% assign sorted = site.recursos | sort: 'title' %}
+  {% for item in site.recursos %}
+  <div class="card-resourses card-resourse-{{item.category | slugify: 'latin'  }} col-12 col-md-4">
+    <div class="card border-top-0 mb-4 card-{{item.category | slugify: 'latin'  }}" id="{{ item.title | slugify: 'latin'  }}">
+      <div class="card-body d-flex justify-content-around align-items-start flex-column">
+        <span class="mb-3 mt-5 card-resourses-category"><span class="bi bi-{{item.icon}} me-2"></span><span class="card-resource-category-text">{{item.category}}</span></span>
+        <h2 class="m-0 fw-bold h6 card-title">{{ item.title}}</h2>
+        <p class="card-text">{{ item.content | strip_html}}</p>
+      </div>
+      <div class="bg-white card-footer">
+        Acesse: <a href="https://www.{{item.link}}" class="text-truncate">{{item.link}}</a>
       </div>
     </div>
   </div>
-
-{% endfor %}
-
-
-
-{% for item in site.recursos %}
-<a href="#" data-bs-toggle="modal" data-bs-target="#modal-{{ item.title | slugify: 'latin'  }}">
-    {{ item.title}}
-  </a>
-
-{% endfor %}
+  {% endfor %}
+</div>

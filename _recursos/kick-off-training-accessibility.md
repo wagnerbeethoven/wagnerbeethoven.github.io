@@ -1,7 +1,8 @@
 ---
 title: Kick-off training accessibility
-category: curso
-link: https://www.abra.ac/courses/kick-off
+category: Curso
+link: abra.ac/courses/kick-off
 layout: post
+icon: mortarboard-fill
 ---
-O curso também aborda a acessibilidade em dispositivos móveis, sendo um recurso valioso para quem deseja aprender sobre o tema. Dura aproximadamente 45 minutos e oferece um certificado de conclusão.
+Aborda a acessibilidade em dispositivos móveis. Dura aproximadamente 45'' e oferece um certificado de conclusão.
