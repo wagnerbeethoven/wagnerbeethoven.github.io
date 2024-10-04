@@ -1,8 +1,8 @@
 ---
+layout: post
 title: Atkinson Hyperlegible Font
 category: Tipografia
-link: brailleinstitute.org/freefont/
-layout: post
+link: 'brailleinstitute.org/freefont/'
 icon: fonts
 ---
 

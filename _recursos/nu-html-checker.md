@@ -1,8 +1,8 @@
 ---
+layout: post
 title: Nu Html Checker
 category: Ferramentas
-link: validator.nu
-layout: post
+link: 'validator.nu'
 icon: tools
 ---
 

@@ -1,8 +1,8 @@
 ---
+layout: post
 title: Compute it
 category: Curso
-link: compute-it.toxicode.fr/
-layout: post
+link: 'compute-it.toxicode.fr/'
 icon: mortarboard-fill
 ---
 

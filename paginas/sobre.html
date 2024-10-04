@@ -1,27 +1,9 @@
 ---
 layout: page
-title: Sobre
-permalink: sobre
+title: 'Sobre'
+permalink: '/sobre/'
 toc: true
 ---
-<!-- <div class="sticky-top">
-    <nav class="navbar navbar-expand-md bg-body-tertiary px-3" aria-label="Second navbar example">
-        <a class="navbar-brand" title="Volte para a página inicial para ter acesso a meu portfólio e meu blog" href="{{site.url}}">Página inicial</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-about"
-            aria-controls="menu-about" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon">&nbsp; </span> <small>Seções</small></button>
-
-        <div class="collapse navbar-collapse" id="menu-about">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a title="Sobre mim" class="nav-link" href="#intro">Apresentação</a></li>
-                <li class="nav-item"><a title="Entenda sobre minhas experiências profissionais" class="nav-link" href="#experiencia">Experiências</a></li>
-                <li class="nav-item"><a title="Conheça a minha formações acadêmicas" class="nav-link" href="#escolaridade">Escolaridade</a></li>
-                <li class="nav-item"><a title="Saiba sobre minhas certificações" class="nav-link" href="#certificacoes">Certificações</a></li>
-                <li class="nav-item"><a title="Todos os cursos que fiz" class="nav-link" href="#cursos">Cursos</a></li>
-            </ul>
-        </div>
-    </nav>
-</div> -->
 
 <section>
     <h2 class="section-title mt-0" id="apresentacao">Apresentação</h2>
@@ -47,7 +29,7 @@ toc: true
 <section>
     <h2 class="section-title" id="experiencia">Experiências</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3" id="{{experience.name | slugify: 'latin' }}">
+        {% for experience in site.data.about.job %}<li class=" {{experience.class}} list-group-item px-0 mb-3">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded border shadow-sm "  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><p  class="fs-5 m-0 mb-2 h3">{{experience.name}}</p> <p class="h4 fs-6 m-0 mb-0">{{experience.company}}</p> <small>{{experience.date}}</small> <p class="pt-3">{{experience.description}}</p></div>
@@ -57,7 +39,7 @@ toc: true
     <div class=" pt-5"> </div>
     <h3 class=" section-title" id="colaboracao">Colaboração</h3>
     <ul class=" career-list list-group list-group-flush">
-        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3" id="{{experience.name | slugify: 'latin' }}">
+        {% for experience in site.data.about.colaboration %}<li class="list-group-item px-0 mb-3">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded  border shadow-sm"  width="132px" src="{{site.url}}/{{experience.logo}}" title="{{experience.company}}" alt="Logo {{experience.company}}"></div>
                 <div class="flex-grow-1 ms-3"><p class="fs-5 m-0 mb-2 h3">{{experience.name}}</p> <p class="h4 fs-6 m-0 mb-0">{{experience.company}}</p> <small>{{experience.date}}</small> <p>{{experience.description}}</p></div>
@@ -96,7 +78,7 @@ toc: true
     
     <h2 class="section-title" id="escolaridade">Escolaridade</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3" id="{{education.name | slugify: 'latin' }}">
+        {% for education in site.data.about.education %}<li class="{{education.class}} list-group-item px-0 mb-3">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3 mb-4 bg-white rounded "  width="132px" src="{{site.url}}/{{education.logo}}" title="{{education.company}}" alt="Logo {{education.company}}"></div>
                 <div class="flex-grow-1 ms-3"><p  class="h3 fs-5 m-0 mb-2">{{education.name}}</p> <p class="h4 fs-6 m-0 mb-0">{{education.company}}</p> <small>{{education.date}}</small> <p>{{education.description}}</p></div>
@@ -108,7 +90,7 @@ toc: true
 <section>
     <h2 class="section-title" id="certificacoes">Certificações</h2>
     <ul class="career-list list-group list-group-flush">
-        {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3" id="{{certificate.name | slugify: 'latin' }}">
+        {% for certificate in site.data.about.certificate %}<li class="list-group-item px-0 mb-3">
             <div class="d-flex">
                 <div class="flex-shrink-0 "><img class="img-fluid p-3  mb-4 bg-white rounded"  width="132px" src="{{site.url}}/{{certificate.logo}}" title="{{certificate.company}}" alt="Logo {{certificate.company}}"></div>
                 <div class="flex-grow-1 ms-3"><p  class="h3 fs-5 m-0 mb-2">{{certificate.name}}</p> <p class="h4 fs-6 m-0 mb-0">{{certificate.company}}</p> <small>{{certificate.date}}</small> <p>{{certificate.description}}</p></div>
@@ -120,7 +102,7 @@ toc: true
 <section>
     <h2 class="section-title" id="cursos">Cursos</h2>
     <ul class="list-group list-group-flush">{% for course in site.data.about.course %}
-        <li class="px-0 border-0 list-group-item {{course.class}}" id="{{course.name | slugify: 'latin' }}-{{course.company | slugify: 'latin' }}">
+        <li class="px-0 border-0 list-group-item {{course.class}}">
             {% if course.link %}<a rel="noopener" title="O link irá abrir o certificado &quot;{{course.name | strip_html}}&quot; em uma nova aba"  href="{{course.link}}">{% endif %}<span class="fw-semibold">{{course.name}}</span>{% if course.link %}</a>{% endif %}<small class="d-block">{{course.company}} ({{course.date}}{% if course.duration %}, {{course.duration}}{% endif %})</small>{% endfor %}
         </li>
     </ul>
