@@ -24,7 +24,7 @@ title: 'Olá, sou <mark>Wagner</mark>'
 
 <section id="blog">
     <h2 class="section-title">Leia meus <a href="{{site.url}}/blog" title="Acesse todos os textos do blog">textos</a> do blog</h2>
-    <ul class="list-group list-group-flush">
+    <ul class="loop-post">
         {% assign blog = site.categories.Blog %}
         {% for post in blog limit: 10 %}
           {% if post.categories contains 'Blog' %}

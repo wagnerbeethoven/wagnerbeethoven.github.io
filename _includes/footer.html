@@ -1,37 +1,46 @@
-<footer class="footer  text-center">
-    <div class="social-footer d-flex flex-column align-items-center flex-sm-row justify-content-between py-4 my-4 border-top">
-      <nav>
-        <ul class="nav justify-content-center">
-          <li class="nav-item"><a href="{{site.url}}/"  class="text-body-secondary nav-link">Página Inicial</a></li>
-          <li class="nav-item"><a href="{{site.url}}/projetos"  class="text-body-secondary nav-link">Projetos</a></li>
-          <li class="nav-item"><a href="{{site.url}}/blog"  class="text-body-secondary nav-link">Blog</a></li>
-          <li class="nav-item"><a href="{{site.url}}/palestras"  class="text-body-secondary nav-link">Palestras</a></li>
-          <li class="nav-item"><a href="{{site.url}}/sobre"  class="text-body-secondary nav-link">Sobre</a>
-          <li class="nav-item"><a href="{{site.url}}/sobre-site"  class="nav-link text-body-secondary ">Sobre o site</a></li>
-          <li class="nav-item"><a href="{{site.url}}/contato"  class="text-body-secondary nav-link">Contato</a></li>
-          <li class="nav-item"><a href="{{site.url}}/recursos"  class="text-body-secondary nav-link">Recursos</a></li>
-          <li class="nav-item"><a href="{{site.url}}/now"  class="text-body-secondary nav-link">Fazendo agora?</a></li>
-        </ul> 
-      </nav>
-      <div class="d-flex justify-content-between align-items-center">
-        {% include social.html %}
-        <a href="{{site.url}}/feed.xml" title="Assine o RSS"><span class="bi bi-rss-fill"></span></a>
-      </div>
-    </div>
+<footer class="footer-site">
+
+  <div class="footer-container social-footer">
+    <nav class="menu-footer-pages">
+      <ul>
+        <li><a href="{{site.url}}/">Página Inicial</a></li>
+        <li><a href="{{site.url}}/projetos">Projetos</a></li>
+        <li><a href="{{site.url}}/blog">Blog</a></li>
+        <li><a href="{{site.url}}/palestras">Palestras</a></li>
+        <li><a href="{{site.url}}/sobre">Sobre</a>
+        <li><a href="{{site.url}}/sobre-site">Sobre o site</a></li>
+        <li><a href="{{site.url}}/contato">Contato</a></li>
+        <li><a href="{{site.url}}/recursos">Recursos</a></li>
+        <li><a href="{{site.url}}/now">Fazendo agora?</a></li>
+      </ul>
+    </nav>
+    <nav class="menu-footer-social">
+      {% include social.html %}
+      <a href="{{site.url}}/feed.xml" class="rss-link" title="Assine o RSS"><span class="bi bi-rss-fill"></span></a>
+    </nav>
+  </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+  integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+  integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+  integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+  async></script>
 <script src="{{site.url}}/js/main.js"></script>
 
 {% if page.toc %}
 <script>
   $(document).ready(function () {
-    $('#toc').toc({ noBackToTopLinks: true });]
-    });
+    $('#toc').toc({ noBackToTopLinks: true });
+  });
 </script>
 {% endif %}
 
@@ -46,19 +55,23 @@
       <div class="modal-body">
         <div class="translate-options">
           <ul class="list-group list-group-flush">
-            <li class="px-0 list-group-item"><span class="me-2">🇺🇸</span> Select language: <a href="#" data-lang="en">English</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇫🇷</span> Sélectionnez la langue: <a href="#" data-lang="fr">Français</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇪🇸</span> Seleccione el idioma: <a href="#" data-lang="es">Español</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇩🇪</span> Sprache auswählen: <a href="#" data-lang="de">Deutsch</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇮🇹</span> Seleziona la lingua: <a href="#" data-lang="it">Italiano</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇯🇵</span> 言語を選択: <a href="#" data-lang="ja">日本語</a></li>
-            <li class="px-0 list-group-item"><span class="me-2">🇨🇳</span> 选择语言: <a href="#" data-lang="zh-CN">中文 (简体)</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇺🇸</span> Select language: <a href="#"
+                data-lang="en">English</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇫🇷</span> Sélectionnez la langue: <a href="#"
+                data-lang="fr">Français</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇪🇸</span> Seleccione el idioma: <a href="#"
+                data-lang="es">Español</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇩🇪</span> Sprache auswählen: <a href="#"
+                data-lang="de">Deutsch</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇮🇹</span> Seleziona la lingua: <a href="#"
+                data-lang="it">Italiano</a></li>
+            <li class="px-0 list-group-item"><span class="me-2">🇯🇵</span> 言語を選択: <a href="#" data-lang="ja">日本語</a>
+            </li>
+            <li class="px-0 list-group-item"><span class="me-2">🇨🇳</span> 选择语言: <a href="#" data-lang="zh-CN">中文
+                (简体)</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-

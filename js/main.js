@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Adiciona um title dinâmico se não estiver definido
         if (!link.hasAttribute('title')) {
-          link.setAttribute('title', `O link "${linkText}" irá abrir em uma nova aba`);
+          link.setAttribute('title', `${linkText} irá abrir nova aba`);
         }
 
         // Adiciona referrerpolicy se não estiver definido
@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  
   // Inicializa as funções
   addExternalLinkAttributes();
   addTranslationLinks();

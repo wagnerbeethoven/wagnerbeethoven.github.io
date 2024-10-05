@@ -1,4 +1,5 @@
 ---
+layout: project
 title: "Procurados da Justiça"
 date: 2018-11-09
 category: Projetos

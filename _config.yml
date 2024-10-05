@@ -14,8 +14,12 @@ url: 'https://sumo.pe'
 permalink: '/:title'
 
 collections:
-  recursos:
+  resources:
     output: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 compress_html:
   clippings: all

@@ -1,0 +1,80 @@
+.social {
+    &-list {
+        @extend .list-inline;
+        margin-bottom: 0;
+        margin: 2.75rem 0 4.625rem;
+
+        .speakerdeck-icon {
+            width: 3.375rem;
+            height: 3.375rem;
+            margin-top: -7px;
+        }
+
+        li {
+            @extend .list-inline-item;
+            padding-right: 1rem;
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+
+
+    }
+
+    &-item {
+        font-size: 2.5rem;
+        color: var(--bs-body-color);
+
+        a:after {
+            @extend .d-none;
+        }
+
+        &-linkedin {
+            color: #0073b0;
+        }
+
+        &-behance {
+            color: #1769ff;
+        }
+
+        &-medium {
+            color: #000;
+        }
+
+        &-github {
+            color: var(--color-github);
+        }
+    }
+
+
+}
+
+.menu-footer-social {
+    ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .speakerdeck-icon {
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-top: 0;
+    }
+
+
+
+    .social-item {
+        font-size: 0.85rem;
+
+    }
+}
+
+.rss-link {
+    padding-left: 1rem;
+
+    .bi-rss-fill {
+        color: #ea6121;
+    }
+}

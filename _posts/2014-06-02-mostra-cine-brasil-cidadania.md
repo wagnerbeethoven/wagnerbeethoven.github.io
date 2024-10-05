@@ -1,4 +1,5 @@
 ---
+layout: project
 title: "Mostra Cine Brasil Cidadania"
 date: 2014-06-02
 category: Projetos

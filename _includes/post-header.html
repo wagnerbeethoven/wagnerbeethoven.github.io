@@ -1,0 +1,21 @@
+<ul class="post-meta post-meta-header">
+    <li>
+        <time datetime="{{ page.date | date: '%Y-%m-%d'}}">
+            <span class="bi bi-calendar-event" title="Data de publicação"></span>
+            {{page.date | date: "%d/%m/%Y"}}
+        </time>
+    </li>
+    <li>
+        <span class="bi bi-stopwatch" title="Duração de leitura"></span>
+        {% include reading_time.html %}
+    </li>
+    {% if page.link %}
+    <li>
+        <span class="bi bi-megaphone-fill"></span>
+        Publicado:
+        <a href="{{page.link}}" class="alert-link">
+            {{page.link-name}}
+        </a>
+    </li>
+    {% endif %}
+</ul>

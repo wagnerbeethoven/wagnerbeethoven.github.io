@@ -3,16 +3,14 @@ layout: default
 ---
 {% if page.toc %}
 <div class="row">
-<aside class="col-12 col-md-3">
-<p class="h4 fts-italic pt-5"> Índice</p>{% include toc.html html=content %}</aside>
+    <aside class="aside">
+        <h2 class="aside-title">Índice</h2>
+        {% include toc.html html=content %}
+    </aside>
 {% endif %}
     <article class="{% if page.toc %}col-12 col-md-9  pt-5 {% else %}mx-auto{%endif%}">
         {{content}}
     </article>
-
-
-    {% if page.toc %}
+{% if page.toc %}
 </div>
-
 {% endif %}
-

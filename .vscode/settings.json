@@ -1,0 +1,8 @@
+{
+  "prettier.endOfLine": "auto",
+  "prettier.proseWrap": "never",
+  "prettier.quoteProps": "preserve",
+  "prettier.singleAttributePerLine": true,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": true
+}

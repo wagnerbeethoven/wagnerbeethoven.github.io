@@ -1,0 +1,19 @@
+<p class="page-thanks">Obrigado por chegar até aqui 🤗</p>
+
+{% include share.html %}
+
+<ul class="post-meta post-meta-footer">
+    <li class="post-category">
+        <span class="bi bi-archive-fill " title="Seção do conteúdo"></span>
+        {% for category in page.categories %}
+        <a
+            href='{{site.url}}/{% if page.categories contains "Palestras" %}palestras{% endif %}{% if page.categories contains "Projeto" %}projetos{% endif %}{% if page.categories contains "Blog" %}blog{% endif %}'>
+            {{ category }}</a>{% endfor %}.
+    </li>
+    <li class="post-tag">
+        <span class="bi bi-bookmark-fill " title="Assuntos da página"></span>
+        {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
+        <span class="post-tag-item">{{ tag_name }}</span>
+        {% endfor %}
+    </li>
+</ul>

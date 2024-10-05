@@ -1,0 +1,66 @@
+// /* Accordion */
+
+// /* Botões */
+// .btn-outline-link {
+//   border: 1px solid var(--bs-body-color);
+// }
+
+// .btn-outline-link:hover,
+// .btn-outline-link:active,
+// .btn-outline-link:focus {
+//   background-color: var(--bs-body-color);
+//   color: var(--bs-body-bg);
+//   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+// }
+
+
+
+// article a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+// article a[href^="https://"]:not([href^="https://sumo.pe"])::after,
+// .loop a[href^="http://"]:not([href^="http://sumo.pe"])::after,
+// .loop a[href^="https://"]:not([href^="https://sumo.pe"])::after {
+//   content: " ↗";
+//   text-decoration: none;
+//   font-size: 85%;
+//   font-weight: 300;
+// }
+/* Contato */
+
+
+// 
+// #ffb8b8
+// #ff3838
+// #fff200
+// 
+// #67e6dc
+// #17c0eb
+// #7158e2
+// #3d3d3d 
+
+.card-resourses .card-footer,
+.card-resourses .card-text {
+  margin: 0;
+}
+
+.card-resource-category-text,
+.card-resourses .card-footer,
+.card-resourses .card-text {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.card-resourses .card-text {
+  padding-top: 1rem;
+}
+
+.card-tipografia {
+  box-shadow: 0 -0.25rem 0px 0px #ff9f1a;
+}
+
+.card-curso {
+  box-shadow: 0 -0.25rem 0px 0px #c56cf0;
+}
+
+.card-ferramentas {
+  box-shadow: 0 -0.25rem 0px 0px #3ae374;
+}

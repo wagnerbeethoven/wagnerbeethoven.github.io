@@ -1,18 +1,24 @@
-
-
-
-<div class=" mt-5 row">
+<div class="related-post">
     {% if page.previous.url %}
-    <a class="text-decoration-none col-12 col-md text-center text-md-start" href="{{page.previous.url}}" title="Leia a publicação &quot;{{page.previous.title}}&quot;">
-        <small class="mb-4 d-block opacity-75">Publiação anterior</small>
-        <div class="d-flex justify-content-center justify-content-md-start"><span class="bi bi-arrow-left-square me-3"></span><span class="d-inline-block">{{page.previous.title}}</span></div>
+    <a class="related-post-prev" href="{{page.previous.url}}"
+        title="Leia a publicação &quot;{{page.previous.title}}&quot;">
+        <small>Publiação anterior</small>
+        <p>
+            <span class="bi bi-arrow-left-square"></span>
+            <span>
+                {{page.previous.title}}
+            </span>
+        </p>
     </a>
     {% endif %}
 
     {% if page.next.url %}
-    <a class="text-decoration-none col-12 col-md text-center text-md-end" href="{{page.next.url}}" title="Leia a publicação &quot;{{page.next.title}}&quot;">
-        <small class="mb-4 d-block opacity-75">Próximo publicação</small>
-        <div class="d-flex justify-content-center justify-content-md-end"><span class="d-inline-block">{{page.next.title}}</span><span class="bi bi-arrow-right-square ms-3"></span></div>
+    <a class="related-post-next" href="{{page.next.url}}" title="Leia a publicação &quot;{{page.next.title}}&quot;">
+        <small>Próximo publicação</small>
+        <p>
+            <span>{{page.next.title}}</span>
+            <span class="bi bi-arrow-right-square"></span>
+        </p>
     </a>
     {% endif %}
 </div>

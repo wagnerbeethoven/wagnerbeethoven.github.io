@@ -1,0 +1,35 @@
+/* Rodapé */
+.footer {
+  &-site {
+    padding-top: 6.875rem;
+    font-size: 0.85rem;
+  }
+
+  &-container {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .flex-sm-row;
+    @extend .justify-content-between;
+    @extend .py-4;
+    @extend .my-4;
+    @extend .border-top;
+  }
+}
+
+.podcast {
+  iframe {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  p {
+    @extend .py-0;
+    @extend .my-0;
+
+    &:last-of-type {
+      font-size: small;
+    }
+
+  }
+}

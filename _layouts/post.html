@@ -5,24 +5,33 @@ layout: default
 
 {% if page.toc %}
 <div class="row">
-<aside class="col-12 col-md-3">
-<p class="h4 fts-italic pt-5"> Índice</p>{% include toc.html html=content %}</aside>
+    <aside class="aside">
+        <p class="aside-title"> Índice</p>{% include toc.html html=content %}
+    </aside>
 {% endif %}
-    <article class="col-12 col-md-9  pt-5 {% if page.toc %}{% else %}mx-auto{%endif%}">
-        {% include meta.html %}
-        {% if page.summary %}<p class="my-3 border-top border-bottom py-2 "><strong>Neste página</strong>:
-            {{page.summary}}</p>{%else%}{% endif %}
-{{content}}
-        {% include footer-content.html %}
+    <article class="article article-page {% if page.toc %}{% else %}mx-auto{%endif%}">
+        <h1 class="page-title mb-4">
+            {{page.title}}
+        </h1>
+
+        {% include post-header.html %}
+        {% if page.summary %}
+            <p class="post-summary ">
+                <strong>Neste página</strong>:
+                {{page.summary}}
+            </p>
+        {%else%}
+        {% endif %}
+
+        <div class="article-content">
+            {{content}}
+        </div>
+        
+        {% include post-footer.html %}
         {% include related.html %}
     </article>
 
 
-    {% if page.toc %}
+{% if page.toc %}
 </div>
-
 {% endif %}
-
-
-
-        

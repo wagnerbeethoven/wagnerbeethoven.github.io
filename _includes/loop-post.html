@@ -1,16 +1,16 @@
-<li class="loop px-0 list-group-item position-relative">
-    <span class="text-body-tertiary">
+<li class="loop-post-item">
+    <span class="loop-post-date">
         <time datetime="{{ post.date | date: '%Y-%m-%d'}}">
             {{ post.date | date: "%d/%m/%Y" }}
         </time>:
     </span>
-    <h3 class="d-inline fs-6">
-        <a class="text-decoration-none fw-semibold" href="{{post.url}}">
+    <h3 class="loop-post-title">
+        <a href="{{post.url}}">
             {{ post.title }}
         </a>
     </h3>
     {% if post.type %}
-    <small class="ms-2 badge badge-{{post.type | slugify: 'latin' }}">
+    <small class="post-badge post-badge-{{post.type | slugify: 'latin' }}">
         {{post.type}}
     </small>
     {% endif %}

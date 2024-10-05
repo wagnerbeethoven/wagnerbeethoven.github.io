@@ -14,8 +14,8 @@ permalink: '/recursos/'
 </div>
 
 <div class="row" data-masonry='{"percentPosition": true }'>
-  {% assign sorted = site.recursos | sort: 'title' %}
-  {% for item in site.recursos %}
+  {% assign sorted = site.resources | sort: 'title' %}
+  {% for item in site.resources %}
   <div class="card-resourses card-resourse-{{item.category | slugify: 'latin'  }} col-12 col-md-4">
     <div class="card border-top-0 mb-4 card-{{item.category | slugify: 'latin'  }}">
       <div class="card-body d-flex justify-content-around align-items-start flex-column">
