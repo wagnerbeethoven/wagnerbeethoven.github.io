@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title  | strip_html %} {{page.title | strip_html }} &bull; {{site.name | strip_html }} {% else %} {{site.name | strip_html }} {% endif %}&nbsp;&mdash;&nbsp;{{site.description}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  type="text/css" href="{{ '/css/main.css' | relative_url }}">
+    <link rel="stylesheet"  type="text/css" href="{{site.url}}/css/main.css">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="{{site.url}}/img/ico/favicon-32x32.png" sizes="32x32" />
