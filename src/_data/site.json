@@ -1,12 +1,24 @@
 {
   "name": "Margem Viva",
   "description": "Margem Viva e um espaco pessoal onde Wagner Beethoven publica textos, notas e paginas mais duraveis, fora da logica de plataforma.",
-  "url": "https://margemviva.com.br",
+  "url": "https://margemviva.netlify.app",
   "author": "Wagner Beethoven",
-  "email": "wagner@wagnerbeethoven.com.br",
+  "email": "oi@wagnerbeethoven.com.br",
   "social": {
+    "siteoficial": "https://wagnerbeethoven.com.br",
+    "linkedin": "wagnerbeethoven",
     "github": "wagnerbeethoven",
-    "bluesky": "@wagnerbeethoven.com.br"
+    "bluesky": "wagnerbeethoven.com.br",
+    "linktree": "https://linktr.ee/wagnerbeethoven"
+  },
+  "focoAcessivel": {
+    "site": "https://focoacessivel.com.br",
+    "youtube": "https://youtube.com/@focoacessivel",
+    "spotify": "https://open.spotify.com/show/4D6HigcXDCdNuCXxrkStWL",
+    "deezer": "https://www.deezer.com/pt/show/6060897",
+    "apple": "https://podcasts.apple.com/us/podcast/foco-acess%C3%ADvel/id16902860337",
+    "amazon": "https://music.amazon.com.br/podcasts/9d5a371f-7ea8-4ba1-b558-416e4337591e/foco-acess%C3%ADvel",
+    "android": "https://www.subscribeonandroid.com/anchor.fm/s/e14f7d9c/podcast/rss"
   },
   "repo": {
     "url": "https://github.com/wagnerbeethoven/wagnerbeethoven.github.io",
@@ -16,22 +28,8 @@
     "short": "Textos, notas e paginas duraveis sobre internet, cultura e uma presenca mais humana na web.",
     "long": "A Margem Viva e um espaco pessoal onde Wagner Beethoven publica textos, notas e paginas mais duraveis, fora da logica de plataforma. Um lugar de presenca, arquivo e troca, com ritmo mais humano."
   },
-  "location": "Fortaleza, CE, Brasil",
+  "location": "Olinda, PE, Brasil",
   "timezone": "America/Fortaleza",
-  "newsletter": {
-    "enabled": false,
-    "provider": "",
-    "action": "",
-    "title": "",
-    "description": ""
-  },
-  "donate": {
-    "enabled": false,
-    "kofi": "",
-    "buymeacoffee": "",
-    "github": "",
-    "message": ""
-  },
   "analytics": {
     "enabled": false,
     "provider": "plausible",
@@ -42,28 +40,9 @@
     "enabled": true,
     "domain": ""
   },
-  "webring": {
-    "enabled": false,
-    "url": "https://indieweb.org/webring"
-  },
-  "lighthouse": {
-    "enabled": false,
-    "url": "https://pagespeed.web.dev/"
-  },
   "indieweb": {
     "h_card": true,
     "rel_me": true,
     "microformats": true
-  },
-  "sections": {
-    "notes": { "enabled": true, "title": "Notes", "path": "/notes/" },
-    "journal": { "enabled": true, "title": "Journal", "path": "/journal/" },
-    "poetry": { "enabled": true, "title": "Poetry", "path": "/poetry/" },
-    "portfolio": { "enabled": true, "title": "Portfolio", "path": "/portfolio/" },
-    "projects": { "enabled": true, "title": "Projects", "path": "/projects/" },
-    "resume": { "enabled": true, "title": "Curriculo", "path": "/resume/" },
-    "type": { "enabled": true, "title": "Type", "path": "/type/" },
-    "links": { "enabled": true, "title": "Links", "path": "/links/" },
-    "bookshelf": { "enabled": true, "title": "Bookshelf", "path": "/bookshelf/" }
   }
 }

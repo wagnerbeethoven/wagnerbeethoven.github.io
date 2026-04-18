@@ -3,42 +3,63 @@ layout: layouts/base.njk
 permalink: "/now/"
 title: Now
 ---
-<h1 class="text-2xl font-bold mb-6">No que estou agora</h1>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Ola, sou {{ site.author | replace(' Beethoven', '') }}!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="prose prose-lg dark:prose-invert max-w-none">
-  <p>
-    Esta e uma <a href="https://nownownow.com/about" target="_blank" rel="noopener">/now page</a>:
-    um retrato simples do que esta recebendo minha energia neste momento.
-  </p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Now"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">No que estou agora</h1>
+      <p class="entry-summary">Um retrato simples do que esta recebendo minha energia neste momento.</p>
+    </header>
 
-  <h2>No que estou colocando energia</h2>
-  <ul>
-    <li>dando forma a Margem Viva, ajustando visual, estrutura e jeito de publicar</li>
-    <li>mantendo este espaco leve, pessoal e fora da logica de plataforma</li>
-    <li>escrevendo sem pressa, mas com intencao de continuidade</li>
-  </ul>
+    <div class="prose">
+    <p>
+      Esta e uma <a href="https://nownownow.com/about" target="_blank" rel="noopener">/now page</a>:
+      um retrato simples do que esta recebendo minha energia neste momento.
+    </p>
 
-  <h2>No que estou pensando</h2>
-  <ul>
-    <li>como construir uma presenca mais calma na web</li>
-    <li>como separar melhor trabalho, experimento e vida pessoal</li>
-    <li>como fazer um site que pareca casa, nao vitrine</li>
-  </ul>
+    <h2>No que estou colocando energia</h2>
+    <ul>
+      <li>dando forma a Margem Viva, ajustando visual, estrutura e jeito de publicar</li>
+      <li>mantendo este espaco leve, pessoal e fora da logica de plataforma</li>
+      <li>escrevendo sem pressa, mas com intencao de continuidade</li>
+    </ul>
 
-  <h2>O que estou consumindo</h2>
-  <ul>
-    <li>blogs pessoais</li>
-    <li>feeds</li>
-  </ul>
+    <h2>No que estou pensando</h2>
+    <ul>
+      <li>como construir uma presenca mais calma na web</li>
+      <li>como separar melhor trabalho, experimento e vida pessoal</li>
+      <li>como fazer um site que pareca casa, nao vitrine</li>
+    </ul>
 
-  <h2>O que estou evitando</h2>
-  <ul>
-    <li>transformar tudo em projeto</li>
-    <li>misturar este espaco com obrigacao profissional</li>
-    <li>publicar so para manter frequencia</li>
-  </ul>
+    <h2>O que estou consumindo</h2>
+    <ul>
+      <li>blogs pessoais</li>
+      <li>feeds</li>
+    </ul>
 
-  <p class="text-sm text-gray-600 dark:text-gray-400 mt-8">
-    Ultima atualizacao: <time datetime="2026-04-18">18 de abril de 2026</time>
-  </p>
-</div>
+    <h2>O que estou evitando</h2>
+    <ul>
+      <li>transformar tudo em projeto</li>
+      <li>misturar este espaco com obrigacao profissional</li>
+      <li>publicar so para manter frequencia</li>
+    </ul>
+
+    <p class="text-sm text-[var(--text-secondary)] mt-8">
+      Ultima atualizacao: <time datetime="2026-04-18">18 de abril de 2026</time>
+    </p>
+    </div>
+  </div>
+</section>

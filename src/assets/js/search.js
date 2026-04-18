@@ -128,21 +128,12 @@
     }
 
     if (items.length === 0) {
-      searchResults.innerHTML = `
-        <div class="p-4 text-gray-500">
-          No results found for "${query}"
-        </div>
-      `;
+      searchResults.innerHTML = `<div class="search-result-empty">Nenhum resultado para "${query}"</div>`;
     } else {
       searchResults.innerHTML = items.map(item => `
-        <a href="${item.id}" class="block p-3 hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-700 last:border-b-0">
-          <div class="font-medium text-gray-900 dark:text-gray-100">${highlightMatch(item.title, query)}</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">${highlightMatch(item.description || item.content, query)}</div>
-          ${item.tags.length > 0 ? `
-            <div class="flex flex-wrap gap-1 mt-2">
-              ${item.tags.slice(0, 3).map(tag => `<span class="text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">#${tag}</span>`).join('')}
-            </div>
-          ` : ''}
+        <a href="${item.id}" class="search-result-item" role="option">
+          <div class="search-result-title">${highlightMatch(item.title, query)}</div>
+          ${item.description || item.content ? `<div class="search-result-desc">${highlightMatch((item.description || item.content || '').slice(0, 100), query)}</div>` : ''}
         </a>
       `).join('');
     }

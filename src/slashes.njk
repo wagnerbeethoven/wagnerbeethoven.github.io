@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+permalink: "/slashes/"
+title: Páginas do site
+description: Todas as páginas deste site com uma breve descrição do que você encontra em cada uma.
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Todas as páginas do site</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Páginas"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Páginas <span class="slash-title-slash">/</span></h1>
+      <p class="entry-summary">
+        Uma lista completa de tudo que existe neste site — atualizada automaticamente a cada publicação.
+        Inspirado na convenção <a href="https://slashpages.net/" target="_blank" rel="noopener">slashpages.net</a>.
+      </p>
+    </header>
+
+    {% for section in slashPages %}
+    <div class="slash-section">
+      <h2 class="slash-section-title">
+        <i class="fa-solid {{ section.icon }}" aria-hidden="true" style="color:{{ section.color }}"></i>
+        {{ section.group }}
+      </h2>
+      <div class="link-cards">
+        {% for item in section.items %}
+        <a href="{{ item.url }}" class="link-card">
+          <i class="fa-solid fa-arrow-right link-card-icon" aria-hidden="true" style="color:{{ section.color }}"></i>
+          <div class="link-card-body">
+            <p class="link-card-title">{{ item.title }}</p>
+            <p class="link-card-url">{{ item.url }}</p>
+            <p class="link-card-desc">{{ item.description }}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

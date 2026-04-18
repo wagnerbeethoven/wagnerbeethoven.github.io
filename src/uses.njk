@@ -3,38 +3,59 @@ layout: layouts/base.njk
 permalink: "/uses/"
 title: Usos
 ---
-<h1 class="text-2xl font-bold mb-6">Usos</h1>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Ola, sou {{ site.author | replace(' Beethoven', '') }}!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="prose prose-lg dark:prose-invert max-w-none">
-  <p>
-    Esta pagina existe para registrar, aos poucos, as ferramentas e referencias que sustentam meu trabalho
-    e minha rotina de escrita. Prefiro preencher isso com calma, conforme o uso real, em vez de publicar
-    uma lista generica de setup.
-  </p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "O que uso"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Ferramentas e referencias</h1>
+      <p class="entry-summary">Uma pagina para registrar o que sustenta meu trabalho, leitura e escrita.</p>
+    </header>
 
-  <h2>O que orienta minhas escolhas</h2>
-  <ul>
-    <li>ferramentas simples, estaveis e faceis de manter ao longo do tempo</li>
-    <li>interfaces claras, com pouca friccao e pouco ruido</li>
-    <li>software e fluxos que nao dependam de excesso de plataforma</li>
-    <li>um ambiente que favoreca leitura, escrita e organizacao</li>
-  </ul>
+    <div class="prose">
+    <p>
+      Esta pagina existe para registrar, aos poucos, as ferramentas e referencias que sustentam meu trabalho
+      e minha rotina de escrita. Prefiro preencher isso com calma, conforme o uso real, em vez de publicar
+      uma lista generica de setup.
+    </p>
 
-  <h2>Categorias que devo documentar aqui</h2>
-  <ul>
-    <li>ferramentas de escrita e notas</li>
-    <li>design e trabalho com produto digital</li>
-    <li>acessibilidade e revisao de interfaces</li>
-    <li>leitura via feeds, blogs e arquivo pessoal</li>
-    <li>setup de publicacao da Margem Viva</li>
-  </ul>
+    <h2>O que orienta minhas escolhas</h2>
+    <ul>
+      <li>ferramentas simples, estaveis e faceis de manter ao longo do tempo</li>
+      <li>interfaces claras, com pouca friccao e pouco ruido</li>
+      <li>software e fluxos que nao dependam de excesso de plataforma</li>
+      <li>um ambiente que favoreca leitura, escrita e organizacao</li>
+    </ul>
 
-  <p>
-    Quando esta pagina amadurecer, ela vai refletir melhor o que realmente uso e o que de fato continua fazendo sentido.
-  </p>
+    <h2>Categorias que devo documentar aqui</h2>
+    <ul>
+      <li>ferramentas de escrita e notas</li>
+      <li>design e trabalho com produto digital</li>
+      <li>acessibilidade e revisao de interfaces</li>
+      <li>leitura via feeds, blogs e arquivo pessoal</li>
+      <li>setup de publicacao da Margem Viva</li>
+    </ul>
 
-  <p class="text-sm text-gray-600 dark:text-gray-400">
-    Inspirada na ideia de <a href="https://uses.tech/" target="_blank" rel="noopener">uses.tech</a>,
-    mas sem pressa para ficar completa.
-  </p>
-</div>
+    <p>
+      Quando esta pagina amadurecer, ela vai refletir melhor o que realmente uso e o que de fato continua fazendo sentido.
+    </p>
+
+    <p class="text-sm text-[var(--text-secondary)]">
+      Inspirada na ideia de <a href="https://uses.tech/" target="_blank" rel="noopener">uses.tech</a>,
+      mas sem pressa para ficar completa.
+    </p>
+    </div>
+  </div>
+</section>

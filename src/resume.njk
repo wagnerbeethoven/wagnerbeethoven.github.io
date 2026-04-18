@@ -3,48 +3,64 @@ layout: layouts/base.njk
 title: Curriculo
 permalink: /resume/
 ---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Perfil profissional</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h1 class="text-2xl font-bold mb-4">Curriculo</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-  Uma versao resumida do meu perfil profissional. Prefiro manter aqui apenas o que faz sentido publicar de forma aberta.
-</p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Currículo"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Curriculo</h1>
+      <p class="entry-summary">Uma versao aberta do meu perfil — o que faz sentido publicar sem filtro de plataforma.</p>
+    </header>
 
-<div class="flex items-center gap-3 mb-8">
-  <a href="https://linktr.ee/wagnerbeethoven" target="_blank" rel="noopener" class="inline-flex items-center px-3 py-1.5 rounded bg-blue-600 text-white hover:bg-blue-700">
-    Ver links profissionais
-  </a>
-</div>
+    <div class="prose mb-8">
+      <h2>Resumo</h2>
+      <p>
+        Atuo com design de produto, experiencia digital e acessibilidade, principalmente em contextos complexos.
+        Meu interesse esta na estrutura que sustenta o produto: informacao bem organizada, clareza de uso,
+        reducao de friccao e consistencia ao longo do tempo.
+      </p>
 
-<section class="prose dark:prose-invert">
-  <h2>Resumo</h2>
-  <p>
-    Atuo com design de produto, experiencia digital e acessibilidade, principalmente em contextos complexos.
-    Meu interesse esta na estrutura que sustenta o produto: informacao bem organizada, clareza de uso,
-    reducao de friccao e consistencia ao longo do tempo.
-  </p>
+      <h2>Areas de atuacao</h2>
+      <ul>
+        <li>Design de produto para sistemas e jornadas complexas</li>
+        <li>Arquitetura da informacao e clareza de interface</li>
+        <li>Acessibilidade digital e qualidade de experiencia</li>
+        <li>Mentoria e troca com profissionais da area</li>
+      </ul>
 
-  <h2>Areas de atuacao</h2>
-  <ul>
-    <li>design de produto para sistemas e jornadas complexas</li>
-    <li>arquitetura da informacao e clareza de interface</li>
-    <li>acessibilidade digital e qualidade de experiencia</li>
-    <li>mentoria e troca com profissionais da area</li>
-  </ul>
+      <h2>Mentoria</h2>
+      <p>
+        Atuo como mentor no <a href="https://adplist.org/" target="_blank" rel="noopener">ADPList</a>,
+        compartilhando repertorio sobre produto, experiencia digital e estrutura de trabalho.
+      </p>
 
-  <h2>Mentoria</h2>
-  <p>
-    Atuo como mentor no ADPList, compartilhando repertorio sobre produto, experiencia digital e estrutura de trabalho.
-  </p>
+      <h2>Projetos paralelos</h2>
+      <p>
+        Mantenho o <strong>Foco Acessivel</strong>, projeto dedicado a acessibilidade digital com conteudos
+        publicados em multiplas plataformas de audio e video.
+      </p>
 
-  <h2>Projetos paralelos</h2>
-  <p>
-    Mantenho tambem o <strong>Foco Acessivel</strong>, projeto dedicado a acessibilidade digital com conteudos
-    publicados em multiplas plataformas.
-  </p>
+      <h2>Mais informacoes</h2>
+      <p>
+        Para referencias profissionais e outros perfis publicos, use os links em
+        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
+      </p>
+    </div>
 
-  <h2>Mais informacoes</h2>
-  <p>
-    Para referencias profissionais e outros perfis publicos, use os links reunidos em
-    <a href="https://linktr.ee/wagnerbeethoven" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
-  </p>
+    <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-button" style="width: auto; display: inline-flex;">
+      <i class="fa-brands fa-linktree" aria-hidden="true"></i> Ver links profissionais
+    </a>
+  </div>
 </section>

@@ -1,7 +1,46 @@
 ---
 layout: layouts/base.njk
 permalink: "/accessibility/"
-title: Accessibility
+title: Acessibilidade
 ---
-<h1 class="text-2xl font-bold mb-4">Accessibility</h1>
-<p>This site aims for WCAG 2.1 AA. Use the A11y menu in the header to adjust font size, contrast, and motion preferences. Preferences are saved in your browser.</p>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    {% set breadcrumb = [{label: "Acessibilidade"}] %}
+      {% include "partials/breadcrumb.njk" %}
+    <h1 class="page-title">Acessibilidade</h1>
+    <p class="page-subtitle">Como este site foi construido para ser acessivel a todos.</p>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <div class="prose">
+      <h2>Compromisso</h2>
+      <p>
+        Este site busca conformidade com WCAG 2.1 nivel AA. Toda decisao de design leva em conta
+        legibilidade, contraste, navegacao por teclado e compatibilidade com leitores de tela.
+      </p>
+
+      <h2>Recursos disponiveis</h2>
+      <ul>
+        <li>Ajuste de tamanho de fonte via menu A11y no cabecalho</li>
+        <li>Alternancia de contraste alto</li>
+        <li>Reducao de movimento para usuarios com preferencia <code>prefers-reduced-motion</code></li>
+        <li>Preferencias salvas no navegador via <code>localStorage</code></li>
+      </ul>
+
+      <h2>Estrutura semantica</h2>
+      <p>
+        Uso de HTML semantico (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+        <code>&lt;aside&gt;</code>), landmarks ARIA e microformatos h-card/h-entry para melhor
+        interoperabilidade com ferramentas assistivas e agregadores IndieWeb.
+      </p>
+
+      <h2>Problemas e sugestoes</h2>
+      <p>
+        Encontrou alguma barreira de acessibilidade? <a href="/contact/">Entre em contato</a> ou
+        mencione <strong>#MargemViva</strong> no Bluesky. Todo relato e levado a serio.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,8 +1,8 @@
 {
-  "name": "jamstack-blog-template",
-  "version": "0.1.0",
+  "name": "margem-viva",
+  "version": "1.0.0",
   "private": true,
-  "description": "JAMstack Blog Template: Eleventy + Tailwind with IndieWeb features",
+  "description": "Margem Viva — site pessoal de Wagner Beethoven",
   "scripts": {
     "dev": "run-p dev:*",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/build.css --watch",
@@ -11,15 +11,10 @@
     "build:icons": "node scripts/generate-icons.js",
     "build:assets": "node scripts/fetch-assets.js",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/build.css --minify",
-    "clean": "rimraf _site",
-    "test": "npm run test:build && npm run test:e2e",
-    "test:build": "node tests/build-test.js",
-    "test:e2e": "playwright test",
-    "test:install": "npx playwright install"
+    "clean": "rimraf _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@playwright/test": "^1.54.2",
     "autoprefixer": "^10.4.20",
     "flexsearch": "^0.7.43",
     "luxon": "^3.5.0",

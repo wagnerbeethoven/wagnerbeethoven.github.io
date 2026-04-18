@@ -1,141 +1,215 @@
-(function(){
-  // Progress bar - debounced to prevent layout thrashing
-  const bar = document.getElementById('progress-bar');
-  let scrollTimeout;
-  const onScroll = () => {
+(function () {
+  const root = document.documentElement;
+
+  const bar = document.getElementById("progress-bar");
+  const darkToggle = document.getElementById("dark-toggle");
+  const fontInc = document.getElementById("font-inc");
+  const fontDec = document.getElementById("font-dec");
+  const contrastToggle = document.getElementById("contrast-toggle");
+  const motionToggle = document.getElementById("motion-toggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function updateProgress() {
     if (!bar) return;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      bar.style.width = progress + '%';
-    }, 10);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + "%";
+  }
 
-  // Dark mode toggle
-  const darkToggle = document.getElementById('dark-toggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const setToggleUI = (isDark) => {
+  function setThemeLabel(isDark) {
     if (!darkToggle) return;
-    darkToggle.textContent = isDark ? '☀️' : '🌙';
-    darkToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    darkToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-  };
-  const applyTheme = (isDark) => {
-    document.documentElement.classList.toggle('dark', isDark);
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    setToggleUI(isDark);
-  };
-  const savedTheme = localStorage.getItem('theme');
-  const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
-  applyTheme(initialDark);
+    darkToggle.innerHTML = isDark
+      ? '<i class="fa-solid fa-sun" aria-hidden="true"></i> <span>Tema claro</span>'
+      : '<i class="fa-solid fa-moon" aria-hidden="true"></i> <span>Tema escuro</span>';
+    darkToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+    darkToggle.setAttribute("aria-label", isDark ? "Ativar tema claro" : "Ativar tema escuro");
+  }
+
+  function applyTheme(isDark) {
+    root.classList.toggle("dark", isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    setThemeLabel(isDark);
+  }
+
+  function applyAccessibility() {
+    const size = parseFloat(localStorage.getItem("fontScale") || "1");
+    const highContrast = localStorage.getItem("highContrast") === "1";
+    const reduceMotion = localStorage.getItem("reduceMotion") === "1";
+
+    root.style.setProperty("font-size", size * 100 + "%");
+    root.classList.toggle("contrast", highContrast);
+    root.classList.toggle("reduce-motion", reduceMotion);
+
+    if (contrastToggle) {
+      contrastToggle.innerHTML = highContrast
+        ? '<i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> <span>Contraste normal</span>'
+        : '<i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> <span>Mais contraste</span>';
+      contrastToggle.setAttribute("aria-pressed", highContrast ? "true" : "false");
+    }
+
+    if (motionToggle) {
+      motionToggle.innerHTML = reduceMotion
+        ? '<i class="fa-solid fa-wind" aria-hidden="true"></i> <span>Movimento normal</span>'
+        : '<i class="fa-solid fa-wind" aria-hidden="true"></i> <span>Reduzir movimento</span>';
+      motionToggle.setAttribute("aria-pressed", reduceMotion ? "true" : "false");
+    }
+  }
+
+  const savedTheme = localStorage.getItem("theme");
+  applyTheme(savedTheme ? savedTheme === "dark" : prefersDark.matches);
+  applyAccessibility();
+  updateProgress();
+
+  window.addEventListener("scroll", updateProgress, { passive: true });
+
   if (darkToggle) {
-    darkToggle.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('dark')));
-  }
-
-  // Accessibility controls
-  const fontInc = document.getElementById('font-inc');
-  const fontDec = document.getElementById('font-dec');
-  const contrastToggle = document.getElementById('contrast-toggle');
-  const motionToggle = document.getElementById('motion-toggle');
-
-  const applyA11y = () => {
-    const size = parseFloat(localStorage.getItem('fontScale') || '1');
-    const highContrast = localStorage.getItem('highContrast') === '1';
-    const reduceMotion = localStorage.getItem('reduceMotion') === '1';
-    
-    // Apply all changes in a single batch to prevent layout thrashing
-    requestAnimationFrame(() => {
-      document.documentElement.style.setProperty('font-size', (size * 100) + '%');
-      document.documentElement.classList.toggle('contrast', highContrast);
-      document.documentElement.classList.toggle('reduce-motion', reduceMotion);
-    });
-  };
-  applyA11y();
-
-  if (fontInc) fontInc.addEventListener('click', () => {
-    const size = Math.min(1.5, (parseFloat(localStorage.getItem('fontScale') || '1') + 0.1));
-    localStorage.setItem('fontScale', String(size));
-    applyA11y();
-  });
-  if (fontDec) fontDec.addEventListener('click', () => {
-    const size = Math.max(0.8, (parseFloat(localStorage.getItem('fontScale') || '1') - 0.1));
-    localStorage.setItem('fontScale', String(size));
-    applyA11y();
-  });
-  if (contrastToggle) contrastToggle.addEventListener('click', () => {
-    const v = localStorage.getItem('highContrast') === '1' ? '0' : '1';
-    localStorage.setItem('highContrast', v);
-    applyA11y();
-  });
-  if (motionToggle) motionToggle.addEventListener('click', () => {
-    const v = localStorage.getItem('reduceMotion') === '1' ? '0' : '1';
-    localStorage.setItem('reduceMotion', v);
-    applyA11y();
-  });
-
-  // Mobile navigation toggle
-  const hamburger = document.getElementById('hamburger');
-  const primaryNav = document.getElementById('primary-nav');
-  if (hamburger && primaryNav) {
-    // Ensure initial aria state
-    hamburger.setAttribute('aria-expanded', primaryNav.classList.contains('hidden') ? 'false' : 'true');
-    hamburger.addEventListener('click', () => {
-      const isHidden = primaryNav.classList.toggle('hidden');
-      hamburger.classList.toggle('open', !isHidden);
-      hamburger.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+    darkToggle.addEventListener("click", function () {
+      applyTheme(!root.classList.contains("dark"));
     });
   }
 
-  // A11y popover (button + menu)
-  const a11yToggle = document.getElementById('a11y-toggle');
-  const a11yMenu = document.getElementById('a11y-menu');
-  if (a11yToggle && a11yMenu) {
-    const closeMenu = () => {
-      a11yMenu.classList.add('hidden');
-      a11yToggle.setAttribute('aria-expanded', 'false');
-    };
-    const openMenu = () => {
-      a11yMenu.classList.remove('hidden');
-      a11yToggle.setAttribute('aria-expanded', 'true');
-    };
-    a11yToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isHidden = a11yMenu.classList.contains('hidden');
-      if (isHidden) openMenu(); else closeMenu();
-    });
-    document.addEventListener('click', (e) => {
-      if (!a11yMenu.classList.contains('hidden')) {
-        const within = a11yMenu.contains(e.target) || a11yToggle.contains(e.target);
-        if (!within) closeMenu();
-      }
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMenu();
+  if (fontInc) {
+    fontInc.addEventListener("click", function () {
+      const size = Math.min(1.5, parseFloat(localStorage.getItem("fontScale") || "1") + 0.1);
+      localStorage.setItem("fontScale", String(size));
+      applyAccessibility();
     });
   }
 
-  // Font toggle for footer
-  const fontToggle = document.getElementById('font-toggle');
-  if (fontToggle) {
-    const applyFontPref = (enabled) => {
-      document.documentElement.classList.toggle('system-fonts', enabled);
-      fontToggle.textContent = enabled ? 'Web Fonts' : 'System Fonts';
-      fontToggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-    };
-
-    fontToggle.addEventListener('click', () => {
-      const currentlyEnabled = document.documentElement.classList.contains('system-fonts');
-      const next = !currentlyEnabled;
-      applyFontPref(next);
-      localStorage.setItem('systemFonts', next ? '1' : '0');
+  if (fontDec) {
+    fontDec.addEventListener("click", function () {
+      const size = Math.max(0.8, parseFloat(localStorage.getItem("fontScale") || "1") - 0.1);
+      localStorage.setItem("fontScale", String(size));
+      applyAccessibility();
     });
-    
-    // Apply saved font preference
-    const savedFontPref = localStorage.getItem('systemFonts');
-    applyFontPref(savedFontPref === '1');
   }
+
+  const fontReset = document.getElementById("font-reset");
+  if (fontReset) {
+    fontReset.addEventListener("click", function () {
+      localStorage.setItem("fontScale", "1");
+      applyAccessibility();
+    });
+  }
+
+  if (contrastToggle) {
+    contrastToggle.addEventListener("click", function () {
+      const next = localStorage.getItem("highContrast") === "1" ? "0" : "1";
+      localStorage.setItem("highContrast", next);
+      applyAccessibility();
+    });
+  }
+
+  if (motionToggle) {
+    motionToggle.addEventListener("click", function () {
+      const next = localStorage.getItem("reduceMotion") === "1" ? "0" : "1";
+      localStorage.setItem("reduceMotion", next);
+      applyAccessibility();
+    });
+  }
+
+  // Search modal
+  const searchFab = document.getElementById("search-fab");
+  const searchBtnTopbar = document.getElementById("search-btn-topbar");
+  const searchModal = document.getElementById("search-modal");
+  const searchModalBackdrop = document.getElementById("search-modal-backdrop");
+  const searchClose = document.getElementById("search-close");
+
+  function openSearchModal() {
+    if (!searchModal) return;
+    searchModal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+    const q = document.getElementById("q");
+    if (q) setTimeout(() => q.focus(), 60);
+  }
+
+  function closeSearchModal() {
+    if (!searchModal) return;
+    searchModal.classList.add("hidden");
+    document.body.style.overflow = "";
+  }
+
+  [searchFab, searchBtnTopbar].forEach(function(btn) {
+    if (btn) btn.addEventListener("click", openSearchModal);
+  });
+  if (searchClose) searchClose.addEventListener("click", closeSearchModal);
+  if (searchModalBackdrop) searchModalBackdrop.addEventListener("click", closeSearchModal);
+
+  // keydown handled at bottom (lightbox + search)
+
+  // Mobile sidebar
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.querySelector(".site-sidebar");
+  const overlay = document.querySelector(".sidebar-overlay");
+
+  function openSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.add("sidebar-open");
+    if (hamburger) { hamburger.classList.add("open"); hamburger.setAttribute("aria-expanded", "true"); }
+    if (overlay) overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.remove("sidebar-open");
+    if (hamburger) { hamburger.classList.remove("open"); hamburger.setAttribute("aria-expanded", "false"); }
+    if (overlay) overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      sidebar && sidebar.classList.contains("sidebar-open") ? closeSidebar() : openSidebar();
+    });
+  }
+
+  if (overlay) overlay.addEventListener("click", closeSidebar);
+
+  if (sidebar) {
+    sidebar.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 980) closeSidebar();
+      });
+    });
+  }
+
+  // Lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const lightboxBackdrop = document.getElementById("lightbox-backdrop");
+  const lightboxCloseBtn = document.getElementById("lightbox-close-btn");
+
+  function openLightbox(src, alt, caption) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    if (lightboxCaption) lightboxCaption.textContent = caption || alt || "";
+    lightbox.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.add("hidden");
+    document.body.style.overflow = "";
+    if (lightboxImg) lightboxImg.src = "";
+  }
+
+  document.querySelectorAll("[data-lightbox]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      openLightbox(el.dataset.lightbox, el.dataset.alt, el.dataset.caption);
+    });
+  });
+
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { closeLightbox(); closeSearchModal(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === "k") { e.preventDefault(); openSearchModal(); }
+  });
 })();

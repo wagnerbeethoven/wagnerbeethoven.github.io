@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+permalink: "/why/"
+title: Por que este site existe
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Motivacao e intenção</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Por que este site existe"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Por que este site existe</h1>
+      <p class="entry-summary">Nao e um portfolio. Nao e um blog profissional. E uma casa na web.</p>
+    </header>
+
+    <div class="prose">
+      <p>
+        Por um longo tempo publiquei em plataformas. Twitter, Medium, LinkedIn — lugares onde o algoritmo
+        decide quem ve o que voce escreve, onde o formato e imposto e onde o historico some sem aviso.
+        Cansei disso.
+      </p>
+
+      <p>
+        A Margem Viva existe porque quero ter um lugar proprio na internet. Um espaco que eu controlo,
+        que dura mais do que uma timeline, que nao depende de nenhuma empresa continuar existindo.
+      </p>
+
+      <h2>O que esse espaco nao e</h2>
+      <ul>
+        <li>Nao e um portfolio de trabalho</li>
+        <li>Nao tem pressao de frequencia ou consistencia</li>
+        <li>Nao foi feito para ter audiencia</li>
+        <li>Nao vai virar produto, curso ou newsletter paga</li>
+      </ul>
+
+      <h2>O que esse espaco e</h2>
+      <ul>
+        <li>Um arquivo de textos e pensamentos que quero guardar</li>
+        <li>Um lugar para escrever sem otimizar para nada</li>
+        <li>Uma forma de participar da web de um jeito mais humano</li>
+        <li>Um experimento tecnico constante — Eleventy, feeds, webmentions, microformatos</li>
+        <li>Um espaco de presenca, nao de performance</li>
+      </ul>
+
+      <p>
+        Me interessa a ideia do <a href="https://indieweb.org/" target="_blank" rel="noopener">IndieWeb</a>:
+        publicar no proprio dominio, manter o arquivo, federar com outros sem depender de plataforma.
+        Este site e minha contribuicao pratica a essa ideia.
+      </p>
+    </div>
+  </div>
+</section>

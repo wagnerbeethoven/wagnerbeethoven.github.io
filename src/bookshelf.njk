@@ -1,33 +1,56 @@
 ---
 layout: layouts/base.njk
-title: Bookshelf
+title: Livros
 permalink: /bookshelf/
 ---
-
-<h1 class="text-2xl font-bold mb-4">Bookshelf</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-  Um espaco para registrar leituras, releituras e notas de percurso. Ainda esta em formacao.
-</p>
-
-<section class="grid md:grid-cols-3 gap-6">
-  <div class="bg-[var(--surface)] border rounded p-4">
-    <h2 class="font-semibold mb-2">Lendo</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400">
-      Esta secao vai reunir leituras em andamento, com notas curtas quando fizer sentido.
-    </p>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Leituras e referências</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="bg-[var(--surface)] border rounded p-4">
-    <h2 class="font-semibold mb-2">Lidos</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400">
-      Livros, ensaios e outros materiais que eu queira manter por perto como referencia.
-    </p>
-  </div>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Livros"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Livros</h1>
+      <p class="entry-summary">Um espaço para registrar leituras, releituras e notas de percurso.</p>
+    </header>
 
-  <div class="bg-[var(--surface)] border rounded p-4">
-    <h2 class="font-semibold mb-2">Para ler</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400">
-      Uma lista aberta de coisas que chamaram atencao e merecem voltar depois.
-    </p>
+    {% set allBooks = collections.books | default([]) %}
+    {% if allBooks | length > 0 %}
+    <div class="book-grid">
+      {% for item in allBooks %}
+      <div class="book-card">
+        <div class="book-cover-wrap">
+          {% if item.data.isbn %}
+          <img class="book-card-cover"
+            src="https://covers.openlibrary.org/b/isbn/{{ item.data.isbn }}-M.jpg"
+            alt="Capa de {{ item.data.title }}"
+            loading="lazy"
+            onerror="this.style.background='var(--bg-hero)';this.removeAttribute('src')" />
+          {% else %}
+          <div class="book-card-cover" style="background:var(--bg-hero);display:flex;align-items:center;justify-content:center;font-size:2rem;">📖</div>
+          {% endif %}
+          {% if item.data.status == 'reading' %}<span class="media-badge media-badge--watching">Lendo</span>
+          {% elif item.data.status == 'read' %}<span class="media-badge media-badge--done">Lido</span>
+          {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Para ler</span>
+          {% endif %}
+        </div>
+        <p class="book-card-title">{{ item.data.title }}</p>
+        <p class="book-card-author">{{ item.data.author }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Nenhum livro ainda.</div>
+    {% endif %}
   </div>
 </section>

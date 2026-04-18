@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Poetry
+title: Poesias
 pagination:
   data: collections.poetry
   size: 10
@@ -8,37 +8,56 @@ pagination:
   reverse: true
 permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
-
-<h1 class="text-2xl font-bold mb-4">Poetry</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">Textos curtos, fragmentos e poemas quando esse espaco pedir outra cadencia.</p>
-
-{% set items = items | default([]) %}
-{% if items | length == 0 %}
-  <p class="text-gray-500 dark:text-gray-400 italic">Ainda nao ha poemas publicados.</p>
-{% else %}
-<section class="space-y-6">
-  {% for item in items %}
-  <article class="border-b pb-4">
-    <h2 class="text-lg font-semibold"><a href="{{ item.url }}">{{ item.data.title or 'Untitled' }}</a></h2>
-    {% if item.date %}
-      <time class="text-xs text-gray-500" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
-    {% endif %}
-  </article>
-  {% endfor %}
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Textos em verso</p>
+      </div>
+    </div>
+  </div>
 </section>
-<nav class="mt-8 flex items-center justify-between" aria-label="Pagination">
-  {% if pagination.href.previous %}
-    <a class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200" href="{{ pagination.href.previous }}">Mais recentes</a>
-  {% else %}
-    <span class="px-4 py-2 text-gray-400">Mais recentes</span>
-  {% endif %}
 
-  <span class="text-sm text-gray-600 dark:text-gray-400">Pagina {{ pagination.pageNumber + 1 }} de {{ pagination.pages | length }}</span>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Poesias"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Poesias</h1>
+      <p class="entry-summary">Textos curtos, fragmentos e poemas quando esse espaço pedir outra cadência.</p>
+    </header>
 
-  {% if pagination.href.next %}
-    <a class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200" href="{{ pagination.href.next }}">Mais antigas</a>
-  {% else %}
-    <span class="px-4 py-2 text-gray-400">Mais antigas</span>
-  {% endif %}
-</nav>
-{% endif %}
+    {% set items = items | default([]) %}
+    {% if items | length > 0 %}
+    <div class="home-grid home-grid-2">
+      {% for item in items %}
+      <a href="{{ item.url }}" class="entry-card h-entry">
+        <p class="entry-card-title p-name">{{ item.data.title or 'Sem título' }}</p>
+        <p class="entry-card-meta">
+          {% if item.data.author %}<span>{{ item.data.author }}</span> · {% endif %}
+          {% if item.date %}<time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>{% endif %}
+        </p>
+        {% if item.templateContent %}
+        <p class="entry-card-body">{{ item.templateContent | striptags | truncate(160) }}</p>
+        {% elif item.data.description %}
+        <p class="entry-card-body">{{ item.data.description }}</p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Ainda não há poemas publicados.</div>
+    {% endif %}
+
+    <nav class="utility-row mt-4" aria-label="Paginação">
+      {% if pagination.href.previous %}
+      <a class="soft-link" href="{{ pagination.href.previous }}">Mais recentes</a>
+      {% else %}<span></span>{% endif %}
+      {% if pagination.href.next %}
+      <a class="soft-link" href="{{ pagination.href.next }}">Mais antigas</a>
+      {% endif %}
+    </nav>
+  </div>
+</section>

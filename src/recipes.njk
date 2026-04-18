@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+permalink: "/recipes/"
+title: Receitas
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">O que cozinho e aprendo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Receitas"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Receitas</h1>
+      <p class="entry-summary">O que cozinho, o que aprendi e o que vale a pena repetir.</p>
+    </header>
+
+    {% set allRecipes = collections.recipes | default([]) %}
+    {% if allRecipes | length > 0 %}
+    <div class="recipe-list">
+      {% for item in allRecipes %}
+      <a href="{{ item.url }}" class="recipe-card">
+        <div class="recipe-card-body">
+          <h2 class="recipe-card-title">{{ item.data.title }}</h2>
+          {% if item.data.description %}<p class="recipe-card-desc">{{ item.data.description }}</p>{% endif %}
+          <div class="recipe-card-meta">
+            {% if item.data.time %}<span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ item.data.time }} min</span>{% endif %}
+            {% if item.data.servings %}<span><i class="fa-solid fa-utensils" aria-hidden="true"></i> {{ item.data.servings }} porções</span>{% endif %}
+          </div>
+          {% if item.data.tags %}
+          <div class="recipe-tags">
+            {% for tag in item.data.tags %}<span class="pill">#{{ tag }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <span class="recipe-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Nenhuma receita ainda.</div>
+    {% endif %}
+  </div>
+</section>

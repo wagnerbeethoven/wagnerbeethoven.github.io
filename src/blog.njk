@@ -7,33 +7,56 @@ pagination:
 permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 title: Blog
 ---
-<div class="h-feed">
-  <h1 class="p-name text-2xl font-bold mb-6">Blog</h1>
-  <a class="u-url hidden" href="{{ site.url }}/blog/"></a>
-
-  <div class="space-y-8">
-    {% for post in posts %}
-      <article class="h-entry border-b pb-6">
-        <h2 class="p-name text-xl font-semibold"><a class="u-url" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-        <time class="dt-published text-sm text-gray-500 dark:text-gray-400" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-        <div class="p-summary mt-2 text-gray-700 dark:text-gray-300">{{ post.data.description or (post.templateContent | striptags | truncate(160)) }}</div>
-        <div class="mt-2 text-sm space-x-2">
-          {% for tag in post.data.tags %}
-            <a class="p-category px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800" href="/tags/{{ tag | slug }}/">#{{ tag }}</a>
-          {% endfor %}
-        </div>
-      </article>
-    {% endfor %}
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Textos e reflexões</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <nav class="mt-8 flex items-center justify-between" aria-label="Pagination">
-    {% if pagination.href.previous %}
-      <a class="px-3 py-2 border rounded" href="{{ pagination.href.previous }}">Newer</a>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Blog"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Blog</h1>
+      <p class="entry-summary">Leitura longa, notas duráveis e arquivo pessoal.</p>
+    </header>
+
+    {% if posts | length > 0 %}
+    <div class="home-grid home-grid-2 h-feed">
+      {% for post in posts %}
+      <a href="{{ post.url }}" class="entry-card h-entry">
+        {% if post.data.featuredImage %}
+        <img class="entry-card-thumb u-featured" src="{{ post.data.featuredImage }}" alt="Capa: {{ post.data.title }}" loading="lazy" />
+        {% endif %}
+        <p class="entry-card-title p-name">{{ post.data.title }}</p>
+        <p class="entry-card-meta">
+          <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+          · {{ post.templateContent | default('') | readingTime }} min
+        </p>
+        {% if post.data.description %}
+        <p class="entry-card-body p-summary">{{ post.data.description | truncate(160) }}</p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
     {% else %}
-      <span></span>
+    <div class="empty-card">Ainda não há artigos publicados.</div>
     {% endif %}
-    {% if pagination.href.next %}
-      <a class="px-3 py-2 border rounded" href="{{ pagination.href.next }}">Older</a>
-    {% endif %}
-  </nav>
-</div>
+
+    <nav class="utility-row mt-4" aria-label="Paginação">
+      {% if pagination.href.previous %}
+      <a class="soft-link" href="{{ pagination.href.previous }}">Mais recentes</a>
+      {% else %}<span></span>{% endif %}
+      {% if pagination.href.next %}
+      <a class="soft-link" href="{{ pagination.href.next }}">Mais antigos</a>
+      {% endif %}
+    </nav>
+  </div>
+</section>

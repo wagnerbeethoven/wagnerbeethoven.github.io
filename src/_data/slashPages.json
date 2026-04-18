@@ -1,0 +1,179 @@
+[
+  {
+    "group": "Pessoal",
+    "icon": "fa-user",
+    "color": "#5b8dd9",
+    "items": [
+      {
+        "url": "/about/",
+        "title": "Sobre",
+        "description": "Quem sou, o que faço e por onde ando."
+      },
+      {
+        "url": "/now/",
+        "title": "Now",
+        "description": "O que estou fazendo, lendo e pensando agora."
+      },
+      {
+        "url": "/why/",
+        "title": "Por que este site existe",
+        "description": "A motivação por trás de manter um espaço próprio na web."
+      },
+      {
+        "url": "/values/",
+        "title": "Valores",
+        "description": "Princípios que guiam meu trabalho e minha forma de estar no mundo."
+      },
+      {
+        "url": "/contact/",
+        "title": "Contato",
+        "description": "Como me encontrar e falar comigo."
+      }
+    ]
+  },
+  {
+    "group": "Conteúdo",
+    "icon": "fa-pen-nib",
+    "color": "#e07b54",
+    "items": [
+      {
+        "url": "/blog/",
+        "title": "Blog",
+        "description": "Textos longos, reflexões e leitura duradoura."
+      },
+      {
+        "url": "/notes/",
+        "title": "Notas",
+        "description": "Fragmentos, observações rápidas e ideias em rascunho."
+      },
+      {
+        "url": "/poetry/",
+        "title": "Poesias",
+        "description": "Textos em verso, poemas e experimentos com palavras."
+      },
+      {
+        "url": "/recipes/",
+        "title": "Receitas",
+        "description": "O que cozinho, o que aprendi e o que vale repetir."
+      }
+    ]
+  },
+  {
+    "group": "Coleções",
+    "icon": "fa-layer-group",
+    "color": "#7ab87a",
+    "items": [
+      {
+        "url": "/bookshelf/",
+        "title": "Livros",
+        "description": "Leituras concluídas, em andamento e lista de desejo."
+      },
+      {
+        "url": "/movies/",
+        "title": "Filmes",
+        "description": "Cinema: o que assisti, o que ficou, o que ainda quero ver."
+      },
+      {
+        "url": "/series/",
+        "title": "Séries",
+        "description": "Séries que acompanho ou já terminei."
+      },
+      {
+        "url": "/games/",
+        "title": "Jogos",
+        "description": "Jogos zerados, em andamento e na fila."
+      },
+      {
+        "url": "/comics/",
+        "title": "Quadrinhos",
+        "description": "Graphic novels, HQs e mangás lidos e em andamento."
+      },
+      {
+        "url": "/photos/",
+        "title": "Fotos",
+        "description": "Fotografia: imagens que quis guardar."
+      }
+    ]
+  },
+  {
+    "group": "Descoberta",
+    "icon": "fa-compass",
+    "color": "#c47db8",
+    "items": [
+      {
+        "url": "/tags/",
+        "title": "Tags",
+        "description": "Todos os assuntos e marcadores usados no site."
+      },
+      {
+        "url": "/archive/",
+        "title": "Arquivo",
+        "description": "Histórico cronológico de tudo o que publiquei."
+      }
+    ]
+  },
+  {
+    "group": "Sobre o site",
+    "icon": "fa-gear",
+    "color": "#f0c040",
+    "items": [
+      {
+        "url": "/uses/",
+        "title": "Usos",
+        "description": "Ferramentas, apps e configurações que uso no dia a dia."
+      },
+      {
+        "url": "/colophon/",
+        "title": "Colophon",
+        "description": "Como este site é feito: tecnologia, fontes, filosofia."
+      },
+      {
+        "url": "/links/",
+        "title": "Links",
+        "description": "Referências e lugares da web que valem revisitar."
+      },
+      {
+        "url": "/blogroll/",
+        "title": "Blogroll",
+        "description": "Blogs e sites que acompanho e recomendo."
+      },
+      {
+        "url": "/accessibility/",
+        "title": "Acessibilidade",
+        "description": "Compromissos e declaração de acessibilidade deste site."
+      },
+      {
+        "url": "/sitemap/",
+        "title": "Mapa do site",
+        "description": "Visão geral de todas as páginas e seções."
+      },
+      {
+        "url": "/changelog/",
+        "title": "Changelog",
+        "description": "Histórico de mudanças e melhorias no site."
+      }
+    ]
+  },
+  {
+    "group": "Trabalho",
+    "icon": "fa-briefcase",
+    "color": "#5bc4c4",
+    "items": [
+      {
+        "url": "/projects/",
+        "title": "Projetos",
+        "description": "Projetos pessoais, experimentos e trabalhos relevantes."
+      },
+      {
+        "url": "/resume/",
+        "title": "Currículo",
+        "description": "Experiência profissional e formação."
+      },
+      {
+        "url": "/portfolio/",
+        "title": "Portfólio",
+        "description": "Seleção de trabalhos de design e desenvolvimento."
+      }
+    ]
+  }
+]

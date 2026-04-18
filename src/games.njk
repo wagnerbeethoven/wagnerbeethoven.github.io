@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+permalink: "/games/"
+title: Jogos
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Jogos e o que jogou</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Jogos"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Jogos</h1>
+      <p class="entry-summary">Um registro do que jogou, do que está jogando e da lista de espera.</p>
+    </header>
+
+    {% set allGames = collections.games | default([]) %}
+    {% if allGames | length > 0 %}
+    <div class="media-grid">
+      {% for item in allGames %}
+      <div class="media-card">
+        <div class="media-card-poster">
+          {{ item.data.poster or '🎮' }}
+          {% if item.data.status == 'done' %}<span class="media-badge media-badge--done">Zerado</span>
+          {% elif item.data.status == 'playing' %}<span class="media-badge media-badge--playing">Jogando</span>
+          {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Quero jogar</span>
+          {% endif %}
+        </div>
+        <div class="media-card-body">
+          <p class="media-card-title">{{ item.data.title }}</p>
+          <p class="media-card-meta">{{ item.data.developer }} · {{ item.data.platform }}{% if item.data.year %} · {{ item.data.year }}{% endif %}</p>
+          {% if item.data.note %}<p class="media-card-note">{{ item.data.note }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Nenhum jogo ainda.</div>
+    {% endif %}
+  </div>
+</section>

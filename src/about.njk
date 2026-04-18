@@ -3,61 +3,168 @@ layout: layouts/base.njk
 permalink: "/about/"
 title: Sobre
 ---
-<div class="h-card">
-  <img class="u-photo w-24 h-24 rounded-full" src="/assets/profile.jpg" alt="{{ site.author }}" />
-  <h1 class="p-name text-2xl font-bold mt-2">Sobre mim</h1>
-  <p class="p-note mt-2">Meu nome e {{ site.author }}.</p>
-  <div class="contact-info mt-2 flex flex-wrap gap-3 items-center">
-    {% from "partials/icons.njk" import icon %}
-    <a class="u-url inline-flex items-center gap-1" href="{{ site.url }}" rel="me">
-      {{ icon('link','w-4 h-4') }} <span>{{ site.url | replace('https://', '') | replace('http://', '') }}</span>
-    </a>
-    <a class="u-email inline-flex items-center gap-1" href="mailto:{{ site.email }}">
-      {{ icon('mail','w-4 h-4') }} <span>{{ site.email }}</span>
-    </a>
-    {% if site.social.github %}
-    <a class="u-url inline-flex items-center gap-1" rel="me" href="https://github.com/{{ site.social.github }}">
-      {{ icon('github','w-4 h-4') }} <span>GitHub</span>
-    </a>
-    {% endif %}
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">{{ site.author }}</p>
+      </div>
+    </div>
   </div>
-  <p class="p-locality mt-2">Fortaleza</p>
-  <p class="p-country-name">Brasil</p>
-</div>
+</section>
 
-<div class="prose prose-lg dark:prose-invert max-w-none mt-8">
-  <p>
-    A Margem Viva e um espaco pessoal onde publico textos, notas e paginas mais duraveis,
-    fora da logica de plataforma. Aqui nao tem pressao de frequencia, algoritmo ou performance.
-  </p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Sobre"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Sobre mim</h1>
+      <p class="entry-summary">Quem escreve, o que sustenta este espaco e por que ele existe.</p>
+    </header>
 
-  <p>
-    Penso a internet como lugar de presenca, arquivo e troca. Este site nasce dessa vontade
-    de ter uma casa propria na web, com um ritmo mais humano. Escrita, leitura, cultura de internet,
-    filmes, series e ideias que ainda nao precisam virar projeto. Tenho interesse por sites simples,
-    com feeds, blogrolls e arquivos. Lugares que parecem feitos por gente.
-  </p>
+    <div class="h-card flex flex-col sm:flex-row gap-5 items-start mb-8">
+      <img class="u-photo w-28 h-28 rounded-full border border-[var(--border-subtle)] object-cover flex-shrink-0" src="/assets/profile.jpg" alt="{{ site.author }}" />
+      <div>
+        <h2 class="text-2xl font-extrabold mb-1 p-name">{{ site.author }}</h2>
+        <p class="text-sm text-[var(--text-secondary)] mb-3">
+          <span class="p-locality">Olinda</span>, <span class="p-region">PE</span>, <span class="p-country-name">Brasil</span>
+        </p>
+        <p class="p-note text-[var(--text-secondary)] mb-4">
+          Designer de produto, acessibilidade e experiencia digital. Escreve na web desde quando isso ainda parecia aventura.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <a class="pill" href="{{ site.url }}" rel="me u-url">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> {{ site.url | replace('https://', '') | replace('http://', '') }}
+          </a>
+          <a class="pill" href="mailto:{{ site.email }}" rel="me u-email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.email }}
+          </a>
+          {% if site.social.github %}
+          <a class="pill" rel="me" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> GitHub
+          </a>
+          {% endif %}
+          {% if site.social.bluesky %}
+          <a class="pill" rel="me" href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener">
+            <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
+          </a>
+          {% endif %}
+          {% if site.social.linktree %}
+          <a class="pill" href="{{ site.social.linktree }}" target="_blank" rel="noopener me">
+            <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> Linktree
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
 
-  <h2>Sobre este site</h2>
-  <p>
-    A Margem Viva funciona como laboratorio e arquivo. Um espaco para testar, organizar pensamento
-    e registrar percurso, sem misturar com o trabalho e sem depender de timeline.
-  </p>
+    <div class="prose mb-8">
+      <p>
+        A Margem Viva e um espaco pessoal onde publico textos, notas e paginas mais duraveis,
+        fora da logica de plataforma. Aqui nao tem pressao de frequencia, algoritmo ou performance.
+      </p>
 
-  <h2>No profissional</h2>
-  <p>
-    Trabalho com design de produto, experiencia digital e acessibilidade, principalmente em sistemas complexos.
-    Meu foco esta na estrutura: organizacao da informacao, clareza, reducao de friccao e consistencia ao longo do tempo.
-    Mais do que interface, me interessa o que sustenta o produto.
-  </p>
+      <p>
+        Penso a internet como lugar de presenca, arquivo e troca. Este site nasce dessa vontade
+        de ter uma casa propria na web, com um ritmo mais humano. Escrita, leitura, cultura de internet,
+        filmes, series e ideias que ainda nao precisam virar projeto. Tenho interesse por sites simples,
+        com feeds, blogrolls e arquivos. Lugares que parecem feitos por gente.
+      </p>
 
-  <p>
-    Atuo como mentor no ADPList, e meus links profissionais estao reunidos no
-    <a href="https://linktr.ee/wagnerbeethoven" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
-  </p>
+      <h2>Sobre este site</h2>
+      <p>
+        A Margem Viva funciona como laboratorio e arquivo. Um espaco para testar, organizar pensamento
+        e registrar percurso, sem misturar com o trabalho e sem depender de timeline.
+        Feito com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy</a>, com feeds RSS,
+        webmentions, microformatos e tudo que faz um site parecer um lar na web.
+      </p>
 
-  <p>
-    Tambem mantenho um projeto sobre acessibilidade digital chamado <strong>Foco Acessivel</strong>,
-    com material publicado no YouTube, no Spotify e em outras plataformas de streaming.
-  </p>
-</div>
+      <h2>No profissional</h2>
+      <p>
+        Trabalho com design de produto, experiencia digital e acessibilidade, principalmente em sistemas complexos.
+        Meu foco esta na estrutura: organizacao da informacao, clareza, reducao de friccao e consistencia ao longo do tempo.
+        Mais do que interface, me interessa o que sustenta o produto.
+      </p>
+      <p>
+        Atuo como mentor no ADPList e meus links profissionais estao reunidos no
+        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener">Linktree</a>.
+      </p>
+    </div>
+
+    <div class="border-t border-[var(--border-subtle)] pt-7 mb-8">
+      <h2 class="text-xl font-extrabold mb-1">Foco Acessivel</h2>
+      <p class="text-[var(--text-secondary)] text-sm mb-5">
+        Projeto sobre acessibilidade digital com episodios no YouTube e nas principais plataformas de podcast.
+      </p>
+      <div class="share-row flex-wrap">
+        {% if site.focoAcessivel.site %}
+        <a href="{{ site.focoAcessivel.site }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i> Site
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.youtube %}
+        <a href="{{ site.focoAcessivel.youtube }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube" style="color:#FF0000" aria-hidden="true"></i> YouTube
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.spotify %}
+        <a href="{{ site.focoAcessivel.spotify }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-spotify" style="color:#1DB954" aria-hidden="true"></i> Spotify
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.deezer %}
+        <a href="{{ site.focoAcessivel.deezer }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-deezer" style="color:#EF5466" aria-hidden="true"></i> Deezer
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.apple %}
+        <a href="{{ site.focoAcessivel.apple }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-apple" style="color:#872EC4" aria-hidden="true"></i> Apple Podcasts
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.amazon %}
+        <a href="{{ site.focoAcessivel.amazon }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-amazon" style="color:#FF9900" aria-hidden="true"></i> Amazon Music
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.android %}
+        <a href="{{ site.focoAcessivel.android }}" class="share-chip" target="_blank" rel="noopener">
+          <i class="fa-brands fa-android" style="color:#3DDC84" aria-hidden="true"></i> Android
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="border-t border-[var(--border-subtle)] pt-7">
+      <h2 class="text-xl font-extrabold mb-1">Presenca na web</h2>
+      <p class="text-[var(--text-secondary)] text-sm mb-5">
+        Links com <code rel="me">rel=me</code> para verificacao de identidade IndieWeb.
+      </p>
+      <div class="sidebar-list">
+        <a href="{{ site.url }}" rel="me u-url" class="sidebar-link">
+          <i class="fa-solid fa-house" aria-hidden="true"></i> {{ site.url | replace('https://', '') | replace('http://', '') }}
+        </a>
+        <a href="mailto:{{ site.email }}" rel="me u-email" class="sidebar-link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.email }}
+        </a>
+        {% if site.social.github %}
+        <a href="https://github.com/{{ site.social.github }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+          <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> github.com/{{ site.social.github }}
+        </a>
+        {% endif %}
+        {% if site.social.bluesky %}
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+          <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> @{{ site.social.bluesky }}
+        </a>
+        {% endif %}
+        {% if site.social.linktree %}
+        <a href="{{ site.social.linktree }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+          <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> linktr.ee/wagnerbeethoven
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
