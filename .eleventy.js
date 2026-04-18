@@ -11,9 +11,9 @@ module.exports = function(eleventyConfig) {
       return "null";
     }
   });
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
+  eleventyConfig.addFilter("readableDate", (dateObj, format = "LLLL dd, yyyy") => {
     try {
-      return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL d, yyyy");
+      return DateTime.fromJSDate(dateObj, { zone: "utc" }).setLocale("pt-BR").toFormat(format);
     } catch {
       return "";
     }
@@ -23,6 +23,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     try {
       return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+    } catch {
+      return "";
+    }
+  });
+
+  // Short date dd/mm/yy for compact displays
+  eleventyConfig.addFilter("shortDate", (dateObj) => {
+    try {
+      return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd/LL/yy");
     } catch {
       return "";
     }
@@ -125,11 +134,39 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => (a.date > b.date ? -1 : 1));
   });
 
-  eleventyConfig.addCollection("journal", (collectionApi) => {
-    return collectionApi
-      .getFilteredByGlob("src/journal/**/*.md")
-      .sort((a, b) => (a.date > b.date ? -1 : 1));
-  });
+  eleventyConfig.addCollection("movies", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/movies/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
+
+  eleventyConfig.addCollection("series", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/series/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
+
+  eleventyConfig.addCollection("games", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/games/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
+
+  eleventyConfig.addCollection("books", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/bookshelf/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
+
+  eleventyConfig.addCollection("photos", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/photos/**/*.md")
+  );
+
+  eleventyConfig.addCollection("comics", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/comics/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
+
+  eleventyConfig.addCollection("recipes", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/recipes/**/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
+  );
 
   // Unique list of tags used across posts
   eleventyConfig.addCollection("tagList", (collectionApi) => {
@@ -164,6 +201,69 @@ module.exports = function(eleventyConfig) {
       if (c) cats.add(c);
     });
     return Array.from(cats).sort((a, b) => a.localeCompare(b));
+  });
+
+  eleventyConfig.addCollection("tagMeta", (collectionApi) => {
+    const tagMap = new Map();
+    collectionApi
+      .getFilteredByGlob("src/blog/**/*.md")
+      .sort((a, b) => (a.date > b.date ? -1 : 1))
+      .forEach((item) => {
+        const tags = Array.isArray(item.data?.tags) ? item.data.tags : [];
+        tags.forEach((tag) => {
+          if (!tag) return;
+          if (!tagMap.has(tag)) tagMap.set(tag, { name: tag, count: 0, posts: [] });
+          const entry = tagMap.get(tag);
+          entry.count += 1;
+          entry.posts.push(item);
+        });
+      });
+
+    return Array.from(tagMap.values())
+      .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  });
+
+  eleventyConfig.addCollection("archiveTree", (collectionApi) => {
+    const posts = collectionApi
+      .getFilteredByGlob("src/blog/**/*.md")
+      .sort((a, b) => (a.date > b.date ? -1 : 1));
+
+    const years = new Map();
+
+    posts.forEach((post) => {
+      const dt = DateTime.fromJSDate(post.date, { zone: "utc" }).setLocale("pt-BR");
+      const year = dt.toFormat("yyyy");
+      const monthKey = dt.toFormat("MM");
+      const monthLabel = dt.toFormat("LLL. yyyy");
+      const monthUrl = `/archive/#${year}-${monthKey}`;
+
+      if (!years.has(year)) {
+        years.set(year, { year, count: 0, months: new Map() });
+      }
+
+      const yearGroup = years.get(year);
+      yearGroup.count += 1;
+
+      if (!yearGroup.months.has(monthKey)) {
+        yearGroup.months.set(monthKey, {
+          key: monthKey,
+          label: monthLabel,
+          url: monthUrl,
+          count: 0,
+          posts: [],
+        });
+      }
+
+      const monthGroup = yearGroup.months.get(monthKey);
+      monthGroup.count += 1;
+      monthGroup.posts.push(post);
+    });
+
+    return Array.from(years.values()).map((group) => ({
+      year: group.year,
+      count: group.count,
+      months: Array.from(group.months.values()),
+    }));
   });
 
   // Search index: lightweight documents for FlexSearch (client-side)

@@ -3,28 +3,92 @@ layout: layouts/base.njk
 title: Links
 permalink: /links/
 ---
-
-<h1 class="text-2xl font-bold mb-4">Links</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-  Uma pagina para reunir referencias, sites e lugares da web que valem ser guardados.
-  Vou preencher isso aos poucos, conforme o arquivo da Margem Viva crescer.
-</p>
-
-<section class="space-y-8">
-  <div>
-    <h2 class="text-lg font-semibold">O que deve aparecer aqui</h2>
-    <ul class="list-disc pl-6">
-      <li>blogs pessoais e sites com cara de casa</li>
-      <li>referencias sobre internet, escrita, cultura e arquivo</li>
-      <li>fontes sobre acessibilidade, design de produto e experiencia digital</li>
-      <li>coisas pequenas, uteis e boas de revisitar</li>
-    </ul>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Lugares da web que valem guardar</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="bg-[var(--surface)] border rounded p-4">
-    <p class="text-gray-700 dark:text-gray-300">
-      Em vez de publicar uma lista generica de favoritos, prefiro deixar esta pagina amadurecer
-      com o tempo e refletir o que de fato continua fazendo sentido.
-    </p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Links"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Links</h1>
+      <p class="entry-summary">Referencias, sites e lugares da web que valem revisitar.</p>
+    </header>
+
+    <div class="link-cards">
+
+      <a href="https://indieweb.org/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">IndieWeb</p>
+          <p class="link-card-url">indieweb.org</p>
+          <p class="link-card-desc">A web pessoal como alternativa as plataformas centralizadas. Publique no proprio dominio, possua seus dados.</p>
+        </div>
+      </a>
+
+      <a href="https://www.11ty.dev/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-code link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Eleventy</p>
+          <p class="link-card-url">11ty.dev</p>
+          <p class="link-card-desc">Gerador de sites estaticos simples e poderoso. O que faz este site funcionar.</p>
+        </div>
+      </a>
+
+      <a href="https://webaim.org/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-universal-access link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">WebAIM</p>
+          <p class="link-card-url">webaim.org</p>
+          <p class="link-card-desc">Recursos, artigos e ferramentas de referencia sobre acessibilidade digital.</p>
+        </div>
+      </a>
+
+      <a href="https://www.a11yproject.com/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-list-check link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">The A11Y Project</p>
+          <p class="link-card-url">a11yproject.com</p>
+          <p class="link-card-desc">Checklist e guias praticos de acessibilidade. Excelente ponto de partida.</p>
+        </div>
+      </a>
+
+      <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-lines link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">WCAG — W3C WAI</p>
+          <p class="link-card-url">w3.org/WAI</p>
+          <p class="link-card-desc">Diretrizes de acessibilidade para conteudo web. A referencia oficial.</p>
+        </div>
+      </a>
+
+      <a href="https://webmention.io/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-satellite-dish link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Webmention.io</p>
+          <p class="link-card-url">webmention.io</p>
+          <p class="link-card-desc">Servico para receber e processar webmentions. Parte da infraestrutura IndieWeb.</p>
+        </div>
+      </a>
+
+      <a href="https://microformats.org/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-code-branch link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Microformats</p>
+          <p class="link-card-url">microformats.org</p>
+          <p class="link-card-desc">Semantica para a web pessoal — h-card, h-entry e outros formatos de dados estruturados.</p>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>

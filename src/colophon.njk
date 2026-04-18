@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+permalink: "/colophon/"
+title: Colophon
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/sitemap/" class="editorial-back" aria-label="Voltar para mapa do site"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Como este site foi feito</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Colofão"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Colofao</h1>
+      <p class="entry-summary">Stack, ferramentas, fontes e decisoes tecnicas por tras deste site.</p>
+    </header>
+
+    <div class="prose">
+      <h2>Gerador</h2>
+      <p>
+        Este site e construido com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy 3.0+</a>,
+        um gerador de sites estaticos minimalista escrito em Node.js.
+        Templates em Nunjucks, sem framework de frontend.
+      </p>
+
+      <h2>Estilos</h2>
+      <p>
+        CSS escrito a mao com custom properties (variaveis CSS nativas).
+        Tailwind CSS e usado apenas como utilitario de layout — sem componentes de terceiro.
+        Sem CSS-in-JS, sem preprocessador obrigatorio.
+      </p>
+
+      <h2>Tipografia e iconografia</h2>
+      <p>
+        Fonte principal: <strong>Inter</strong> (Google Fonts).
+        Icones: <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome 7.0</a> via CDN.
+      </p>
+
+      <h2>IndieWeb</h2>
+      <ul>
+        <li><a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a> — recebe e processa webmentions</li>
+        <li>Microformatos h-card e h-entry em todas as paginas relevantes</li>
+        <li>Feed Atom em <a href="/feed.xml">/feed.xml</a></li>
+        <li>Links com <code>rel=me</code> para verificacao de identidade</li>
+      </ul>
+
+      <h2>Licenca</h2>
+      <p>
+        O codigo-fonte deste site e licenciado sob
+        <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.
+        Os textos e conteudos sao de autoria propria, salvo quando indicado.
+      </p>
+
+      <h2>Codigo-fonte</h2>
+      <p>
+        Disponivel no <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </div>
+  </div>
+</section>

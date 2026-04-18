@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/recipes/" class="editorial-back" aria-label="Voltar para receitas"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Receitas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Receitas", url: "/recipes/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">{{ title }}</h1>
+      {% if description %}<p class="entry-summary">{{ description }}</p>{% endif %}
+      <div class="recipe-header-meta">
+        {% if time %}<span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ time }} min</span>{% endif %}
+        {% if servings %}<span><i class="fa-solid fa-utensils" aria-hidden="true"></i> {{ servings }} porções</span>{% endif %}
+      </div>
+      {% if tags %}
+      <div class="recipe-tags" style="margin-top:0.75rem">
+        {% for tag in tags %}<span class="pill">#{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </header>
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>

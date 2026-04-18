@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+permalink: "/movies/"
+title: Filmes
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Cinema e o que fica</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Filmes"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Filmes</h1>
+      <p class="entry-summary">Um registro do que assisti, do que ficou e do que ainda quero ver.</p>
+    </header>
+
+    {% set allMovies = collections.movies | default([]) %}
+    {% if allMovies | length > 0 %}
+    <div class="media-grid">
+      {% for item in allMovies %}
+      <div class="media-card">
+        <div class="media-card-poster">
+          {{ item.data.poster or '🎬' }}
+          {% if item.data.status == 'done' %}<span class="media-badge media-badge--done">Assistido</span>
+          {% elif item.data.status == 'watching' %}<span class="media-badge media-badge--watching">Assistindo</span>
+          {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Quero ver</span>
+          {% endif %}
+        </div>
+        <div class="media-card-body">
+          <p class="media-card-title">{{ item.data.title }}</p>
+          <p class="media-card-meta">{{ item.data.director }} · {{ item.data.year }}{% if item.data.country %} · {{ item.data.country }}{% endif %}</p>
+          {% if item.data.note %}<p class="media-card-note">{{ item.data.note }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Nenhum filme ainda.</div>
+    {% endif %}
+  </div>
+</section>

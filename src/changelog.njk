@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+permalink: "/changelog/"
+title: Changelog
+description: Histórico de mudanças, melhorias e publicações neste site.
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Histórico de mudanças</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Changelog"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Changelog</h1>
+      <p class="entry-summary">
+        Registro automático de todas as mudanças e publicações feitas neste site,
+        gerado a partir do histórico do repositório git.
+      </p>
+    </header>
+
+    {% if changelog.byMonth | length > 0 %}
+    <div class="changelog-timeline">
+      {% for month in changelog.byMonth %}
+      <div class="changelog-month">
+        <h2 class="changelog-month-title">{{ month.label }}</h2>
+        <ul class="changelog-list">
+          {% for commit in month.commits %}
+          <li class="changelog-entry">
+            <time class="changelog-date" datetime="{{ commit.date }}">{{ commit.date }}</time>
+            <span class="changelog-message">{{ commit.message }}</span>
+            <code class="changelog-hash">{{ commit.hash }}</code>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">Histórico não disponível.</div>
+    {% endif %}
+  </div>
+</section>

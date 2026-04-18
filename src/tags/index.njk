@@ -3,23 +3,52 @@ layout: layouts/base.njk
 title: Tags
 permalink: /tags/
 ---
-<h1 class="text-2xl font-bold mb-6">Tags</h1>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Temas e marcadores</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% if collections.tagList and collections.tagList.length %}
-<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-  {% for t in collections.tagList %}
-    {% set count = 0 %}
-    {% for post in collections.posts %}
-      {% if post.data.tags and (t in post.data.tags) %}
-        {% set count = count + 1 %}
-      {% endif %}
-    {% endfor %}
-    <li class="border rounded p-3 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800">
-      <a class="font-medium hover:text-blue-600" href="/tags/{{ t | slug }}/">#{{ t }}</a>
-      <span class="text-xs text-gray-500">{{ count }} post{% if count != 1 %}s{% endif %}</span>
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-  <p class="text-gray-500">No tags yet.</p>
-{% endif %}
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Tags"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Tags</h1>
+      <p class="entry-summary">Todos os temas e assuntos usados para organizar os textos.</p>
+    </header>
+
+    {% if collections.tagMeta and collections.tagMeta.length %}
+    <div class="tag-index">
+      {% for tag in collections.tagMeta %}
+      <div class="tag-group" id="tag-{{ tag.name | slug }}">
+        <h2 class="tag-group-title">
+          <a href="/tags/{{ tag.name | slug }}/" class="tag-group-link">
+            <span class="pill">#{{ tag.name }}</span>
+          </a>
+          <span class="tag-group-count">{{ tag.count }} {% if tag.count == 1 %}post{% else %}posts{% endif %}</span>
+        </h2>
+        {% if tag.posts %}
+        <ul class="tag-post-list">
+          {% for post in tag.posts %}
+          <li class="tag-post-row">
+            <time class="tag-post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
+            <a class="tag-post-title" href="{{ post.url }}">{{ post.data.title or 'Sem título' }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-card">Ainda não há tags publicadas.</p>
+    {% endif %}
+  </div>
+</section>

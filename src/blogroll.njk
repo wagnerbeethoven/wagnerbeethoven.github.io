@@ -3,54 +3,91 @@ layout: layouts/base.njk
 permalink: "/blogroll/"
 title: Blogroll
 ---
-<h1 class="text-2xl font-bold mb-6">Blogroll</h1>
-
-<div class="prose prose-lg dark:prose-invert max-w-none">
-  <p>Here are some blogs and websites I follow and recommend. This is a curated list of quality content creators in the web development, design, and IndieWeb communities.</p>
-</div>
-
-<div class="mt-8 space-y-8">
-  <section>
-    <h2 class="text-xl font-semibold mb-4">Web Development</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-        <h3 class="font-semibold">
-          <a href="https://example.com" target="_blank" rel="noopener" class="hover:text-blue-600">Example Blog</a>
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Description of the blog and why you recommend it.</p>
-      </div>
-      <!-- Add more blogs here -->
-    </div>
-  </section>
-
-  <section>
-    <h2 class="text-xl font-semibold mb-4">Design & UX</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-        <h3 class="font-semibold">
-          <a href="https://example.com" target="_blank" rel="noopener" class="hover:text-blue-600">Design Blog</a>
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Great insights on design and user experience.</p>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Blogs e sites que acompanho</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2 class="text-xl font-semibold mb-4">IndieWeb & Personal Sites</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-        <h3 class="font-semibold">
-          <a href="https://example.com" target="_blank" rel="noopener" class="hover:text-blue-600">Personal Site</a>
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Excellent example of IndieWeb principles in action.</p>
-      </div>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Blogroll"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Blogroll</h1>
+      <p class="entry-summary">Uma lista curada de blogs, sites e feeds que leio e recomendo.</p>
+    </header>
+
+    <div class="prose mb-8">
+      <p>
+        Esta pagina e um espaco para guardar os lugares da web que valem a visita.
+        Prefiro preencher com calma, com o que realmente acompanho.
+        Quer ser adicionado? <a href="/contact/">Fale comigo</a>.
+      </p>
     </div>
-  </section>
-</div>
 
-<div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-  <p class="text-sm">
-    <strong>Want to be added?</strong> If you have a blog that fits these categories, feel free to 
-    <a href="/contact/" class="text-blue-600 hover:text-blue-800">reach out</a> and let me know!
-  </p>
-</div>
+    <div class="link-cards">
+
+      <a href="https://adactio.com/" class="link-card" target="_blank" rel="noopener me">
+        <i class="fa-solid fa-rss link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Jeremy Keith</p>
+          <p class="link-card-url">adactio.com</p>
+          <p class="link-card-desc">IndieWeb, web standards e design. Um dos mais influentes defensores da web pessoal.</p>
+        </div>
+      </a>
+
+      <a href="https://brunopulis.com/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-universal-access link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Bruno Pulis</p>
+          <p class="link-card-url">brunopulis.com</p>
+          <p class="link-card-desc">Acessibilidade digital e front-end com foco em inclusão.</p>
+        </div>
+      </a>
+
+      <a href="https://manuelmoreale.com/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-pen-nib link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Manu Moreale</p>
+          <p class="link-card-url">manuelmoreale.com</p>
+          <p class="link-card-desc">Web pessoal, escrita e IndieWeb. Reflexões honestas sobre a internet.</p>
+        </div>
+      </a>
+
+      <a href="https://sarasoueidan.com/blog/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-code link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Sara Soueidan</p>
+          <p class="link-card-url">sarasoueidan.com/blog</p>
+          <p class="link-card-desc">Acessibilidade, SVG e CSS. Referência técnica indispensável.</p>
+        </div>
+      </a>
+
+      <a href="https://www.zachleat.com/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-bolt link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Zach Leatherman</p>
+          <p class="link-card-url">zachleat.com</p>
+          <p class="link-card-desc">Criador do Eleventy. Escreve sobre performance, tipografia na web e ferramentas.</p>
+        </div>
+      </a>
+
+      <a href="https://heydonworks.com/" class="link-card" target="_blank" rel="noopener">
+        <i class="fa-solid fa-list-check link-card-icon" aria-hidden="true"></i>
+        <div class="link-card-body">
+          <p class="link-card-title">Heydon Pickering</p>
+          <p class="link-card-url">heydonworks.com</p>
+          <p class="link-card-desc">Acessibilidade e design inclusivo com uma abordagem direta e bem-humorada.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>

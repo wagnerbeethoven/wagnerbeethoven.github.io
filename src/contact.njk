@@ -1,57 +1,76 @@
 ---
 layout: layouts/base.njk
 permalink: "/contact/"
-title: Contact
+title: Contato
 ---
-<h1 class="text-2xl font-bold mb-6">Get in Touch</h1>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Entre em contato</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>I'd love to hear from you! Whether you have questions, feedback, or just want to say hello, 
-     feel free to reach out through any of the channels below.</p>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Contato"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Entre em contato</h1>
+      <p class="entry-summary">Se voce quiser conversar comigo ou me dar sugestoes, este e o lugar certo. Siga qualquer link abaixo para encontrar os lugares aonde costumo estar.</p>
+    </header>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-  <div>
-    <h2>Get in Touch</h2>
-    <ul class="space-y-3 mt-4">
-      <li class="flex items-center gap-3">
-        <span class="text-blue-600">📧</span>
-        <a href="mailto:{{ site.email }}" class="hover:text-blue-600">{{ site.email }}</a>
-      </li>
+    <div class="prose mb-6">
+      <blockquote><strong>A melhor forma de falar comigo e por e-mail.</strong></blockquote>
+    </div>
+
+    <h2 class="text-2xl font-extrabold mb-4">Redes sociais</h2>
+    <div class="sidebar-list mb-10">
+      <a href="mailto:{{ site.email }}" class="sidebar-link">
+        <i class="fa-solid fa-envelope" style="color:var(--accent)" aria-hidden="true"></i> {{ site.email }}
+      </a>
       {% if site.social.github %}
-      <li class="flex items-center gap-3">
-        <span class="text-blue-600">🐙</span>
-        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" class="hover:text-blue-600">GitHub</a>
-      </li>
+      <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" class="sidebar-link">
+        <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> GitHub <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
+      </a>
       {% endif %}
-      {% if site.social.mastodon %}
-      <li class="flex items-center gap-3">
-        <span class="text-blue-600">🐘</span>
-        <a href="{{ site.social.mastodon | replace('@', 'https://') | replace('@', '/') }}" target="_blank" rel="noopener" class="hover:text-blue-600">Mastodon</a>
-      </li>
+      {% if site.social.bluesky %}
+      <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener" class="sidebar-link">
+        <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
+      </a>
       {% endif %}
-    </ul>
-  </div>
+      {% if site.social.linktree %}
+      <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-link">
+        <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> Linktree <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
+      </a>
+      {% endif %}
+      {% if site.focoAcessivel and site.focoAcessivel.youtube %}
+      <a href="{{ site.focoAcessivel.youtube }}" target="_blank" rel="noopener" class="sidebar-link">
+        <i class="fa-brands fa-youtube" style="color:#FF0000" aria-hidden="true"></i> YouTube <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
+      </a>
+      {% endif %}
+    </div>
 
-  <div>
-    <h2 class="text-xl font-semibold mb-4">Quick Message</h2>
-    <form class="space-y-4" action="#" method="POST">
-      <div>
-        <label for="name" class="block text-sm font-medium mb-1">Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    <h2 class="text-2xl font-extrabold mb-4">Livro de visitas</h2>
+    <div class="prose mb-6">
+      <p>
+        Quer deixar uma mensagem, um ola ou um comentario? Me mencione no
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}">Bluesky</a>
+        com a hashtag <strong>#MargemViva</strong> ou mande um e-mail direto.
+        As melhores mensagens aparecem aqui.
+      </p>
+    </div>
+
+    <div class="feed-stack">
+      <div class="post-card">
+        <p class="post-card-excerpt">
+          <em>Ainda nao ha entradas no livro de visitas. Seja o primeiro a deixar uma mensagem!</em>
+        </p>
       </div>
-      <div>
-        <label for="email" class="block text-sm font-medium mb-1">Email</label>
-        <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </div>
-      <div>
-        <label for="message" class="block text-sm font-medium mb-1">Message</label>
-        <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        Send Message
-      </button>
-    </form>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-      Note: Configure with Netlify Forms or similar service for functionality.
-    </p>
+    </div>
   </div>
-</div>
+</section>

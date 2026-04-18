@@ -3,36 +3,63 @@ layout: layouts/base.njk
 title: Projetos
 permalink: /projects/
 ---
-
-<h1 class="text-2xl font-bold mb-4">Projetos</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-  Um espaco para reunir projetos pessoais, experimentos e coisas que merecem uma pagina propria.
-</p>
-
-<ul class="space-y-6">
-  <li class="border rounded p-4">
-    <h2 class="text-lg font-semibold">Margem Viva</h2>
-    <p class="text-gray-700 dark:text-gray-300">
-      Este site funciona como laboratorio e arquivo: um lugar para publicar com mais autonomia,
-      testar estrutura, organizar pensamento e manter um ritmo mais humano de presenca na web.
-    </p>
-    <div class="mt-2 text-xs space-x-2">
-      <span class="px-2 py-0.5 rounded bg-blue-600 text-white">escrita</span>
-      <span class="px-2 py-0.5 rounded bg-green-600 text-white">arquivo</span>
-      <span class="px-2 py-0.5 rounded bg-pink-600 text-white">indieweb</span>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Coisas que mantenho</p>
+      </div>
     </div>
-  </li>
+  </div>
+</section>
 
-  <li class="border rounded p-4">
-    <h2 class="text-lg font-semibold">Foco Acessivel</h2>
-    <p class="text-gray-700 dark:text-gray-300">
-      Projeto voltado a acessibilidade digital, com conteudos publicados em audio, video e outras plataformas.
-      E uma extensao do meu interesse por estrutura, clareza e experiencia digital mais inclusiva.
-    </p>
-    <div class="mt-2 text-xs space-x-2">
-      <span class="px-2 py-0.5 rounded bg-orange-600 text-white">acessibilidade</span>
-      <span class="px-2 py-0.5 rounded bg-purple-600 text-white">conteudo</span>
-      <span class="px-2 py-0.5 rounded bg-gray-600 text-white">educacao</span>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Projetos"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Projetos</h1>
+      <p class="entry-summary">Projetos pessoais, experimentos e coisas que merecem uma pagina propria.</p>
+    </header>
+
+    <div class="feed-stack">
+
+      <article class="post-card">
+        <h2 class="post-card-title"><a href="{{ site.url }}">Margem Viva</a></h2>
+        <p class="post-card-meta">Site pessoal · Em andamento</p>
+        <p class="post-card-excerpt">
+          Este site funciona como laboratorio e arquivo. Um lugar para publicar com autonomia,
+          testar estrutura e manter um ritmo mais humano de presenca na web.
+        </p>
+        <div class="post-card-footer">
+          <div class="inline-pills">
+            <span class="pill">#escrita</span>
+            <span class="pill">#arquivo</span>
+            <span class="pill">#indieweb</span>
+          </div>
+          <a href="{{ site.url }}" class="read-more" target="_blank" rel="noopener">Ver site</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <h2 class="post-card-title"><a href="{{ site.focoAcessivel.site }}" target="_blank" rel="noopener">Foco Acessivel</a></h2>
+        <p class="post-card-meta">Podcast e conteudo · Em andamento</p>
+        <p class="post-card-excerpt">
+          Projeto voltado a acessibilidade digital com conteudos publicados em audio, video e multiplas plataformas.
+          Uma extensao do meu interesse por estrutura, clareza e experiencia digital mais inclusiva.
+        </p>
+        <div class="post-card-footer">
+          <div class="inline-pills">
+            <span class="pill">#acessibilidade</span>
+            <span class="pill">#podcast</span>
+            <span class="pill">#educacao</span>
+          </div>
+          <a href="{{ site.focoAcessivel.site }}" class="read-more" target="_blank" rel="noopener">Ver projeto</a>
+        </div>
+      </article>
+
     </div>
-  </li>
-</ul>
+  </div>
+</section>
