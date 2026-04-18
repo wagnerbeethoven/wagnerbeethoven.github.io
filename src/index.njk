@@ -100,9 +100,27 @@ permalink: "/"
   {# ── Coleções ──────────────────────────────────────────── #}
   <div class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Coleções</h2>
+      <h2 class="home-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar</h2>
     </div>
     <div class="home-collections-grid">
+      <a href="/blog/" class="home-collection-card">
+        <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i>
+        <span>Blog</span>
+        {% set cnt = collections.posts | default([]) | length %}
+        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+      </a>
+      <a href="/notes/" class="home-collection-card">
+        <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i>
+        <span>Notas</span>
+        {% set cnt = collections.notes | default([]) | length %}
+        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+      </a>
+      <a href="/poetry/" class="home-collection-card">
+        <i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i>
+        <span>Poesias</span>
+        {% set cnt = collections.poetry | default([]) | length %}
+        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+      </a>
       <a href="/bookshelf/" class="home-collection-card">
         <i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i>
         <span>Livros</span>

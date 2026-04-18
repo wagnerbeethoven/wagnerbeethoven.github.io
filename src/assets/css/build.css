@@ -2587,3 +2587,31 @@ body                 { font-size: 1rem; }
   .home-collection-card  { padding: 0.65rem 0.25rem; }
   .home-collection-card span { font-size: 0.75rem; }
 }
+
+/* ── Collections grid: 5 colunas (2 linhas × 5) ─────────── */
+.home-collections-grid { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 700px) {
+  .home-collections-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 420px) {
+  .home-collections-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Webrings ──────────────────────────────────────────────── */
+.site-footer-webrings {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 0.5rem 1rem; margin-top: 0.75rem;
+  padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);
+}
+.webring-link {
+  font-size: 0.75rem; color: var(--text-secondary);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;
+  opacity: 0.7; transition: opacity 0.15s;
+}
+.webring-link:hover { opacity: 1; color: var(--accent); }
+.webring-nav { display: inline-flex; align-items: center; gap: 0.15rem; }
+.webring-nav a {
+  font-size: 0.7rem; color: var(--text-secondary); text-decoration: none;
+  padding: 0 0.15rem; opacity: 0.6; transition: opacity 0.15s;
+}
+.webring-nav a:hover { opacity: 1; color: var(--accent); }
