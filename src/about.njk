@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.njk
 permalink: "/about/"
-title: About
+title: Sobre
 ---
 <div class="h-card">
   <img class="u-photo w-24 h-24 rounded-full" src="/assets/profile.jpg" alt="{{ site.author }}" />
-  <h1 class="p-name text-2xl font-bold mt-2">{{ site.author }}</h1>
-  <p class="p-note mt-2">Your bio goes here. Describe yourself, your interests, and what you write about.</p>
+  <h1 class="p-name text-2xl font-bold mt-2">Sobre mim</h1>
+  <p class="p-note mt-2">Meu nome e {{ site.author }}.</p>
   <div class="contact-info mt-2 flex flex-wrap gap-3 items-center">
     {% from "partials/icons.njk" import icon %}
     <a class="u-url inline-flex items-center gap-1" href="{{ site.url }}" rel="me">
@@ -15,22 +15,49 @@ title: About
     <a class="u-email inline-flex items-center gap-1" href="mailto:{{ site.email }}">
       {{ icon('mail','w-4 h-4') }} <span>{{ site.email }}</span>
     </a>
-    {% if site.social.mastodon %}
-    <a class="u-url inline-flex items-center gap-1" rel="me" href="{{ site.social.mastodon | replace('@', 'https://') | replace('@', '/') }}">
-      {{ icon('mastodon','w-4 h-4') }} <span>Mastodon</span>
-    </a>
-    {% endif %}
     {% if site.social.github %}
     <a class="u-url inline-flex items-center gap-1" rel="me" href="https://github.com/{{ site.social.github }}">
       {{ icon('github','w-4 h-4') }} <span>GitHub</span>
     </a>
     {% endif %}
-    {% if site.social.twitter %}
-    <a class="u-url inline-flex items-center gap-1" rel="me" href="https://twitter.com/{{ site.social.twitter | replace('@','') }}">
-      {{ icon('x','w-4 h-4') }} <span>Twitter</span>
-    </a>
-    {% endif %}
   </div>
-  <p class="p-locality mt-2">Your City</p>
-  <p class="p-country-name">Your Country</p>
+  <p class="p-locality mt-2">Fortaleza</p>
+  <p class="p-country-name">Brasil</p>
+</div>
+
+<div class="prose prose-lg dark:prose-invert max-w-none mt-8">
+  <p>
+    A Margem Viva e um espaco pessoal onde publico textos, notas e paginas mais duraveis,
+    fora da logica de plataforma. Aqui nao tem pressao de frequencia, algoritmo ou performance.
+  </p>
+
+  <p>
+    Penso a internet como lugar de presenca, arquivo e troca. Este site nasce dessa vontade
+    de ter uma casa propria na web, com um ritmo mais humano. Escrita, leitura, cultura de internet,
+    filmes, series e ideias que ainda nao precisam virar projeto. Tenho interesse por sites simples,
+    com feeds, blogrolls e arquivos. Lugares que parecem feitos por gente.
+  </p>
+
+  <h2>Sobre este site</h2>
+  <p>
+    A Margem Viva funciona como laboratorio e arquivo. Um espaco para testar, organizar pensamento
+    e registrar percurso, sem misturar com o trabalho e sem depender de timeline.
+  </p>
+
+  <h2>No profissional</h2>
+  <p>
+    Trabalho com design de produto, experiencia digital e acessibilidade, principalmente em sistemas complexos.
+    Meu foco esta na estrutura: organizacao da informacao, clareza, reducao de friccao e consistencia ao longo do tempo.
+    Mais do que interface, me interessa o que sustenta o produto.
+  </p>
+
+  <p>
+    Atuo como mentor no ADPList, e meus links profissionais estao reunidos no
+    <a href="https://linktr.ee/wagnerbeethoven" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
+  </p>
+
+  <p>
+    Tambem mantenho um projeto sobre acessibilidade digital chamado <strong>Foco Acessivel</strong>,
+    com material publicado no YouTube, no Spotify e em outras plataformas de streaming.
+  </p>
 </div>

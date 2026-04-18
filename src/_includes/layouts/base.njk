@@ -271,12 +271,9 @@
             {% if site.repo and site.repo.url %}
               {% set editUrl = site.repo.url + '/edit/' + (site.repo.branch or 'main') + '/' + cleanedPath %}
               {% set guideUrl = site.repo.url + '/blob/' + (site.repo.branch or 'main') + '/GUIDE.md' %}
-            {% else %}
-              {% set editUrl = '#' %}
-              {% set guideUrl = '#' %}
+              <li><a href="{{ editUrl }}" class="hover:text-blue-600" target="_blank" rel="noopener">Edit This Page</a></li>
+              <li><a href="{{ guideUrl }}" class="hover:text-blue-600" target="_blank" rel="noopener">Project Guide</a></li>
             {% endif %}
-            <li><a href="{{ editUrl }}" class="hover:text-blue-600" target="_blank" rel="noopener">Edit This Page</a></li>
-            <li><a href="{{ guideUrl }}" class="hover:text-blue-600" target="_blank" rel="noopener">Project Guide</a></li>
           </ul>
         </div>
         <div>

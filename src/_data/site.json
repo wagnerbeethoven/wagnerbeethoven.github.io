@@ -1,37 +1,36 @@
 {
-  "name": "Indieweb Starter Blog",
-  "description": "Stop doomscrolling, start creating. Own a part of the Internet again.",
-  "url": "https://indieweb-template.netlify.app",
-  "author": "Your Name",
-  "email": "your@email.com",
+  "name": "Margem Viva",
+  "description": "Margem Viva e um espaco pessoal onde Wagner Beethoven publica textos, notas e paginas mais duraveis, fora da logica de plataforma.",
+  "url": "https://margemviva.com.br",
+  "author": "Wagner Beethoven",
+  "email": "wagner@wagnerbeethoven.com.br",
   "social": {
-    "github": "yourusername",
-    "mastodon": "@yourhandle@mastodon.social",
-    "twitter": "@yourhandle"
+    "github": "wagnerbeethoven",
+    "bluesky": "@wagnerbeethoven.com.br"
   },
   "repo": {
-    "url": "https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter",
+    "url": "https://github.com/wagnerbeethoven/wagnerbeethoven.github.io",
     "branch": "main"
   },
   "bio": {
-    "short": "Writer, thinker, and digital minimalist",
-    "long": "I'm passionate about thoughtful writing, meaningful connections, and building a more human web. This is my corner of the internet where I share ideas, experiences, and discoveries."
+    "short": "Textos, notas e paginas duraveis sobre internet, cultura e uma presenca mais humana na web.",
+    "long": "A Margem Viva e um espaco pessoal onde Wagner Beethoven publica textos, notas e paginas mais duraveis, fora da logica de plataforma. Um lugar de presenca, arquivo e troca, com ritmo mais humano."
   },
-  "location": "Your City, Country",
-  "timezone": "America/Los_Angeles",
+  "location": "Fortaleza, CE, Brasil",
+  "timezone": "America/Fortaleza",
   "newsletter": {
-    "enabled": true,
-    "provider": "buttondown",
-    "action": "https://buttondown.email/api/emails/embed-subscribe/yourusername",
-    "title": "Join the Newsletter",
-    "description": "Get thoughtful updates delivered to your inbox. No spam, just meaningful content."
+    "enabled": false,
+    "provider": "",
+    "action": "",
+    "title": "",
+    "description": ""
   },
   "donate": {
-    "enabled": true,
-    "kofi": "yourusername",
-    "buymeacoffee": "yourusername",
-    "github": "yourusername",
-    "message": "If you find value in my writing, consider supporting my work. Every contribution helps me continue creating thoughtful content."
+    "enabled": false,
+    "kofi": "",
+    "buymeacoffee": "",
+    "github": "",
+    "message": ""
   },
   "analytics": {
     "enabled": false,
@@ -62,7 +61,7 @@
     "poetry": { "enabled": true, "title": "Poetry", "path": "/poetry/" },
     "portfolio": { "enabled": true, "title": "Portfolio", "path": "/portfolio/" },
     "projects": { "enabled": true, "title": "Projects", "path": "/projects/" },
-    "resume": { "enabled": true, "title": "Résumé", "path": "/resume/" },
+    "resume": { "enabled": true, "title": "Curriculo", "path": "/resume/" },
     "type": { "enabled": true, "title": "Type", "path": "/type/" },
     "links": { "enabled": true, "title": "Links", "path": "/links/" },
     "bookshelf": { "enabled": true, "title": "Bookshelf", "path": "/bookshelf/" }
