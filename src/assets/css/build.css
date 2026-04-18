@@ -1840,6 +1840,30 @@ select:focus-visible {
   color: var(--text-primary);
 }
 
+.share-row-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.share-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.share-icon-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .sidebar-control-stack {
   display: grid;
   gap: 0.5rem;
@@ -2429,6 +2453,17 @@ select:focus-visible {
 
 .home-section {
   margin-bottom: 2.5rem;
+  background: color-mix(in srgb, var(--section-tint, var(--accent)) 8%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--section-tint, var(--accent)) 20%, var(--border-subtle));
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.home-section--plain {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .home-section-header {
@@ -4154,7 +4189,7 @@ body                 {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 0.25rem;
   margin-bottom: 0.5rem;
   border: 1px solid var(--border-subtle);
@@ -4169,6 +4204,32 @@ body                 {
 
 .entry-meta-source {
   font-size: .85rem
+}
+
+/* ── Post footer: localização + clima ───────────────────── */
+
+.post-geo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.post-geo-location,
+.post-geo-weather {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-geo-weather {
+  margin-left: auto;
 }
 
 /* ── Media pages (filmes, séries, jogos, livros, quadrinhos, álbuns) ── */
@@ -4222,11 +4283,7 @@ body                 {
   list-style: none;
 }
 
-.media-meta div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
+.media-meta div { display: flex; flex-direction: column; gap: 0.1rem; }
 
 .media-meta dt {
   font-size: 0.7rem;
@@ -4286,23 +4343,12 @@ body                 {
   transition: opacity 0.15s;
 }
 
-.media-stream-btn:hover {
-  opacity: 0.85;
-}
+.media-stream-btn:hover { opacity: 0.85; }
 
 @media (max-width: 540px) {
-  .media-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .media-poster, .media-poster-placeholder {
-    width: 140px;
-  }
-
-  .media-poster-placeholder {
-    height: 190px;
-  }
+  .media-card { flex-direction: column; align-items: center; }
+  .media-poster, .media-poster-placeholder { width: 140px; }
+  .media-poster-placeholder { height: 190px; }
 }
 
 /* ── Last.fm widget ─────────────────────────────────────── */
@@ -4325,14 +4371,10 @@ body                 {
   border-radius: 0.25rem;
   flex-shrink: 0;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
-.lfm-art--sm {
-  width: 40px;
-  height: 40px;
-}
+.lfm-art--sm { width: 40px; height: 40px; }
 
 .lfm-art--empty {
   background: var(--bg-card);
@@ -4397,13 +4439,9 @@ body                 {
   transition: background 0.12s;
 }
 
-.lfm-track:last-child {
-  border-bottom: none;
-}
+.lfm-track:last-child { border-bottom: none; }
 
-.lfm-track:hover {
-  background: var(--bg-main);
-}
+.lfm-track:hover { background: var(--bg-main); }
 
 .lfm-track-info {
   flex: 1;

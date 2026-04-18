@@ -1840,6 +1840,30 @@ select:focus-visible {
   color: var(--text-primary);
 }
 
+.share-row-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.share-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.share-icon-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .sidebar-control-stack {
   display: grid;
   gap: 0.5rem;
@@ -2429,6 +2453,17 @@ select:focus-visible {
 
 .home-section {
   margin-bottom: 2.5rem;
+  background: color-mix(in srgb, var(--section-tint, var(--accent)) 8%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--section-tint, var(--accent)) 20%, var(--border-subtle));
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.home-section--plain {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .home-section-header {
@@ -4169,6 +4204,32 @@ body                 {
 
 .entry-meta-source {
   font-size: .85rem
+}
+
+/* ── Post footer: localização + clima ───────────────────── */
+
+.post-geo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.post-geo-location,
+.post-geo-weather {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-geo-weather {
+  margin-left: auto;
 }
 
 /* ── Media pages (filmes, séries, jogos, livros, quadrinhos, álbuns) ── */
