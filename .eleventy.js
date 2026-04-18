@@ -37,6 +37,22 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  // Relative date: "há X dias/semanas/meses" for recent; dd/mm/yyyy for older
+  eleventyConfig.addFilter("relativeDate", (dateObj) => {
+    try {
+      const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+      const days = DateTime.now().diff(dt, "days").days;
+      if (days < 1)   return "hoje";
+      if (days < 2)   return "há 1 dia";
+      if (days < 7)   return `há ${Math.floor(days)} dias`;
+      if (days < 14)  return "há 1 semana";
+      if (days < 30)  return `há ${Math.floor(days / 7)} semanas`;
+      return dt.toFormat("dd/LL/yyyy");
+    } catch {
+      return "";
+    }
+  });
+
   // Approximate reading time in minutes
   eleventyConfig.addFilter("readingTime", (content) => {
     if (!content || typeof content !== "string") return 1;
@@ -168,6 +184,11 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "pt-BR"))
   );
 
+  eleventyConfig.addCollection("music", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/music/**/*.md")
+      .sort((a, b) => (a.date > b.date ? -1 : 1))
+  );
+
   // Unique list of tags used across posts
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const ignore = new Set(["all", "nav", "post", "posts"]);
@@ -205,8 +226,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagMeta", (collectionApi) => {
     const tagMap = new Map();
+    const globs = [
+      "src/blog/**/*.md",
+      "src/notes/**/*.md",
+      "src/poetry/**/*.md",
+      "src/recipes/**/*.md",
+    ];
     collectionApi
-      .getFilteredByGlob("src/blog/**/*.md")
+      .getFilteredByGlob(globs)
       .sort((a, b) => (a.date > b.date ? -1 : 1))
       .forEach((item) => {
         const tags = Array.isArray(item.data?.tags) ? item.data.tags : [];

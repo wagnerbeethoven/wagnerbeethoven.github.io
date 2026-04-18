@@ -1,1 +1,1 @@
-{"permalink": false}
+{"layout":"layouts/comic.njk","permalink":"/comics/{{ page.fileSlug }}/"}

@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/music/" class="editorial-back" aria-label="Voltar para música"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Música</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Música", url: "/music/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
+    </header>
+
+    <div class="media-card">
+      <div class="media-poster">
+        {% if image %}
+        <img src="{{ image }}" alt="Capa de {{ title }}" loading="lazy" />
+        {% else %}
+        <div class="media-poster-placeholder" aria-hidden="true">🎵</div>
+        {% endif %}
+      </div>
+
+      <div class="media-info">
+        <h1 class="entry-title">{{ title }}</h1>
+        <dl class="media-meta">
+          {% if artist %}<div><dt>Artista</dt><dd>{{ artist }}</dd></div>{% endif %}
+          {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
+          {% if label %}<div><dt>Gravadora</dt><dd>{{ label }}</dd></div>{% endif %}
+          {% if genres and genres.length %}<div><dt>Gêneros</dt><dd>{{ genres | join(", ") }}</dd></div>{% endif %}
+          {% if rating %}
+          {% set r = rating | int %}
+          <div>
+            <dt>Avaliação</dt>
+            <dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd>
+          </div>
+          {% endif %}
+        </dl>
+
+        {% if spotify or apple %}
+        <div class="media-stream-links">
+          {% if spotify %}
+          <a href="{{ spotify }}" class="media-stream-btn" style="background:#1DB954" target="_blank" rel="noopener" aria-label="Ouvir no Spotify">
+            <i class="fa-brands fa-spotify" aria-hidden="true"></i> Spotify
+          </a>
+          {% endif %}
+          {% if apple %}
+          <a href="{{ apple }}" class="media-stream-btn" style="background:#FA243C" target="_blank" rel="noopener" aria-label="Ouvir no Apple Music">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i> Apple Music
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if tags %}
+        <div class="inline-pills" style="margin-top:0.75rem">
+          {% for tag in tags %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">#{{ tag }}</a>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if trailer %}
+    <div class="media-trailer">
+      <iframe src="https://www.youtube.com/embed/{{ trailer }}"
+              title="Vídeo: {{ title }}"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    {% endif %}
+
+    {% if note or content %}
+    <div class="prose">
+      {% if note %}<p><em>{{ note }}</em></p>{% endif %}
+      {{ content | safe }}
+    </div>
+    {% endif %}
+
+    <div class="footer-meta">
+      {% include "partials/share-links.njk" %}
+    </div>
+  </div>
+</section>

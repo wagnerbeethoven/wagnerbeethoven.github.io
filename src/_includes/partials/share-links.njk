@@ -1,24 +1,27 @@
-<div class="flex items-center space-x-4 text-sm">
-  <span class="text-gray-600 dark:text-gray-400">Share:</span>
-  {% from "partials/icons.njk" import icon %}
-  <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ title | urlencode }}" 
-     target="_blank" rel="noopener" 
-     class="inline-flex items-center gap-1 text-blue-500 hover:text-blue-700">
-    {{ icon('x', 'w-4 h-4') }} <span>Twitter</span>
+<div class="share-row">
+  <span class="share-row-label">Compartilhar</span>
+  <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ title | urlencode }}"
+     target="_blank" rel="noopener"
+     class="share-icon-btn" aria-label="Compartilhar no X">
+    <i class="fa-brands fa-x-twitter" style="color:#000" aria-hidden="true"></i>
   </a>
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" 
-     target="_blank" rel="noopener" 
-     class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800">
-    {{ icon('linkedin', 'w-4 h-4') }} <span>LinkedIn</span>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+     target="_blank" rel="noopener"
+     class="share-icon-btn" aria-label="Compartilhar no LinkedIn">
+    <i class="fa-brands fa-linkedin" style="color:#0A66C2" aria-hidden="true"></i>
   </a>
-  <a href="https://mastodon.social/share?text={{ title | urlencode }}%20{{ site.url }}{{ page.url }}" 
-     target="_blank" rel="noopener" 
-     class="inline-flex items-center gap-1 text-purple-600 hover:text-purple-800">
-    {{ icon('mastodon', 'w-4 h-4') }} <span>Mastodon</span>
+  <a href="https://bsky.app/intent/compose?text={{ title | urlencode }}%20{{ site.url }}{{ page.url }}"
+     target="_blank" rel="noopener"
+     class="share-icon-btn" aria-label="Compartilhar no Bluesky">
+    <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i>
   </a>
-  <button onclick="navigator.share ? navigator.share({title: '{{ title }}', url: '{{ site.url }}{{ page.url }}'}) : navigator.clipboard.writeText('{{ site.url }}{{ page.url }}')" 
-          class="inline-flex items-center gap-1 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
-    {{ icon('copy', 'w-4 h-4') }} <span>Copy Link</span>
+  <a href="https://mastodon.social/share?text={{ title | urlencode }}%20{{ site.url }}{{ page.url }}"
+     target="_blank" rel="noopener"
+     class="share-icon-btn" aria-label="Compartilhar no Mastodon">
+    <i class="fa-brands fa-mastodon" style="color:#6364FF" aria-hidden="true"></i>
+  </a>
+  <button onclick="navigator.share ? navigator.share({title: '{{ title }}', url: '{{ site.url }}{{ page.url }}'}) : navigator.clipboard.writeText('{{ site.url }}{{ page.url }}')"
+          class="share-chip" aria-label="Copiar link">
+    <i class="fa-solid fa-link" style="color:var(--accent)" aria-hidden="true"></i> <span>Copiar link</span>
   </button>
 </div>
-

@@ -1,1 +1,1 @@
-{ "permalink": false }
+{"layout":"layouts/book.njk","permalink":"/bookshelf/{{ page.fileSlug }}/"}

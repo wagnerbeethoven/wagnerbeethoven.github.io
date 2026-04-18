@@ -14,7 +14,7 @@ permalink: "/"
   {# ── Blog — 1 por linha ────────────────────────────────── #}
   {% set recentPosts = collections.posts | default([]) | head(8) %}
   {% if recentPosts | length > 0 %}
-  <div class="home-section">
+  <div class="home-section" style="--section-tint:#e07b54">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</h2>
       <a href="/blog/" class="home-section-more">Ver todos →</a>
@@ -24,8 +24,7 @@ permalink: "/"
       <a href="{{ post.url }}" class="home-blog-row h-entry">
         <div class="home-blog-row-main">
           <span class="home-blog-row-title p-name">{{ post.data.title }}</span>
-          {% set desc = post.data.description or (post.templateContent | default('') | striptags | truncate(120)) %}
-          {% if desc %}<span class="home-blog-row-desc p-summary">{{ desc }}</span>{% endif %}
+            {% if post.data.description %}<span class="home-blog-row-desc p-summary">{{ post.data.description }}</span>{% endif %}
         </div>
         <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
       </a>
@@ -37,7 +36,7 @@ permalink: "/"
   {# ── Notas — 2 colunas ─────────────────────────────────── #}
   {% set recentNotes = collections.notes | default([]) | head(8) %}
   {% if recentNotes | length > 0 %}
-  <div class="home-section">
+  <div class="home-section" style="--section-tint:#f0c040">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</h2>
       <a href="/notes/" class="home-section-more">Ver todas →</a>
@@ -56,20 +55,17 @@ permalink: "/"
   {# ── Fotos ─────────────────────────────────────────────── #}
   {% set recentPhotos = collections.photos | default([]) | head(4) %}
   {% if recentPhotos | length > 0 %}
-  <div class="home-section">
+  <div class="home-section" style="--section-tint:#e05c7a">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</h2>
       <a href="/photos/" class="home-section-more">Ver todas →</a>
     </div>
-    <div class="photo-grid">
+    <div class="polaroid-grid">
       {% for photo in recentPhotos %}
-      <button class="photo-grid-item"
-        data-lightbox="{{ photo.data.src }}"
-        data-alt="{{ photo.data.alt or photo.data.caption }}"
-        data-caption="{{ photo.data.caption }}"
-        aria-label="Ver foto: {{ photo.data.caption or photo.data.alt }}">
+      <figure class="polaroid">
         <img src="{{ photo.data.src }}" alt="{{ photo.data.alt or photo.data.caption }}" loading="lazy" />
-      </button>
+        <figcaption class="polaroid-caption">{{ photo.data.caption or photo.data.alt }}</figcaption>
+      </figure>
       {% endfor %}
     </div>
   </div>
@@ -79,7 +75,7 @@ permalink: "/"
   {% set latestPoem = collections.poetry | default([]) | head(1) %}
   {% if latestPoem | length > 0 %}
   {% set poem = latestPoem[0] %}
-  <div class="home-section">
+  <div class="home-section" style="--section-tint:#c47db8">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesia</h2>
       <a href="/poetry/" class="home-section-more">Ver todas →</a>
@@ -98,7 +94,7 @@ permalink: "/"
   {% endif %}
 
   {# ── Coleções ──────────────────────────────────────────── #}
-  <div class="home-section">
+  <div class="home-section home-section--plain">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar</h2>
     </div>
@@ -161,6 +157,12 @@ permalink: "/"
         <i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i>
         <span>Fotos</span>
         {% set cnt = collections.photos | default([]) | length %}
+        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+      </a>
+      <a href="/music/" class="home-collection-card">
+        <i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i>
+        <span>Música</span>
+        {% set cnt = collections.music | default([]) | length %}
         {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
       </a>
     </div>

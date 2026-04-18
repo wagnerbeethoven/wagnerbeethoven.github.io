@@ -32,8 +32,9 @@ title: Blog
     <div class="home-grid home-grid-2 h-feed">
       {% for post in posts %}
       <a href="{{ post.url }}" class="entry-card h-entry">
-        {% if post.data.featuredImage %}
-        <img class="entry-card-thumb u-featured" src="{{ post.data.featuredImage }}" alt="Capa: {{ post.data.title }}" loading="lazy" />
+        {% set thumb = post.data.banner or post.data.featuredImage %}
+        {% if thumb %}
+        <img class="entry-card-thumb u-featured" src="{{ thumb }}" alt="{{ post.data.title }}" loading="lazy" />
         {% endif %}
         <p class="entry-card-title p-name">{{ post.data.title }}</p>
         <p class="entry-card-meta">

@@ -20,11 +20,11 @@ layout: layouts/base.njk
         {% set breadcrumb = [{label: "Poesias", url: "/poetry/"}, {label: title}] %}
         {% include "partials/breadcrumb.njk" %}
         <h1 class="entry-title p-name">{{ title }}</h1>
-        {% if page.date %}
-        <p class="entry-meta dt-published">
-          <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        <p class="entry-meta">
+          {% if author %}Autoria: <strong class="p-author">{{ author }}</strong>{% endif %}
+          {% if source %}<br><span class="entry-meta-source">Publicado originalmente em {{ source }}</span>{% endif %}
+          {% if page.date %}<br><time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | relativeDate }}</time>{% endif %}
         </p>
-        {% endif %}
         <a class="u-url hidden" href="{{ page.url }}">Permalink</a>
       </header>
       <div class="e-content prose">

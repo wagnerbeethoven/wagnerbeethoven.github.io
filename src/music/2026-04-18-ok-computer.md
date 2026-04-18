@@ -1,0 +1,21 @@
+---
+title: OK Computer
+artist: Radiohead
+year: 1997
+label: Parlophone / Capitol
+genres: [rock alternativo, art rock, post-britpop]
+rating: 5
+image: https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png
+spotify: https://open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE
+trailer: sSMEuJpFJvA
+note: Um disco que parece ter sido feito para soar como o fim do mundo, mas de um jeito que você quer ouvir repetindo.
+tags: [música, radiohead, anos-90]
+---
+
+Tem discos que você ouve uma vez e esquece. Tem discos que você ouve uma vez e nunca mais é o mesmo. *OK Computer* é do segundo tipo.
+
+Lançado em 1997, no auge da Britpop — mas completamente fora dela —, o álbum do Radiohead soa como um pesadelo lúcido sobre tecnologia, alienação e o fim da individualidade. Thom Yorke canta sobre carros, aviões, políticos e dinheiro com uma urgência que parecia distópica então e soa quase literal agora.
+
+**Paranoid Android** é o ponto de entrada óbvio: quase seis minutos em quatro movimentos, trocando de humor como quem não consegue se decidir entre o pânico e a resignação. **No Surprises** faz o oposto — embala o desespero numa caixinha de música. E **Exit Music (For a Film)** começa suave e termina como um colapso.
+
+O que impressiona, décadas depois, é que o disco não envelheceu. Ficou mais atual.

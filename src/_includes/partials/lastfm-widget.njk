@@ -1,0 +1,13 @@
+<div
+  id="lastfm-widget"
+  class="lastfm-widget"
+  data-lastfm-key="{{ site.lastfm.apiKey if site.lastfm.apiKey else '' }}"
+  aria-live="polite"
+  aria-label="Reproduções recentes no Last.fm"
+>
+  <div class="lastfm-loading" aria-hidden="false">
+    <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+    <span>Carregando...</span>
+  </div>
+</div>
+<script src="/assets/js/lastfm.js" defer></script>

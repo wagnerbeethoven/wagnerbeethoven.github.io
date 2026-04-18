@@ -21,8 +21,8 @@ layout: layouts/base.njk
         {% include "partials/breadcrumb.njk" %}
         <h1 class="entry-title p-name">{{ title }}</h1>
         {% if page.date %}
-        <p class="entry-meta dt-published">
-          <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        <p class="entry-meta">
+          <time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | relativeDate }}</time>
         </p>
         {% endif %}
         <a class="u-url hidden" href="{{ page.url }}">Permalink</a>
