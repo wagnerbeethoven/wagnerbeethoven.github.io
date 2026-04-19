@@ -3197,27 +3197,24 @@ select:focus-visible {
   align-items: center;
   gap: 0.4rem;
   padding: 0.45rem 0.85rem;
-  background: var(--bg-hero);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  border: 1.5px solid var(--accent);
   border-radius: 0.35rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--accent);
   cursor: pointer;
-  transition: background 0.12s, border-color 0.12s;
+  transition: background 0.12s, color 0.12s;
   width: 100%;
   justify-content: center;
 }
 
 .a11y-btn:hover {
-  background: color-mix(in srgb, var(--accent) 12%, var(--bg-hero));
-  border-color: var(--accent);
-  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
 .a11y-btn[aria-pressed="true"] {
   background: var(--accent);
-  border-color: var(--accent);
   color: #fff;
 }
 
@@ -3225,6 +3222,18 @@ select:focus-visible {
   width: auto;
   flex: 1;
   padding: 0.45rem 0.5rem;
+}
+
+.a11y-btn--reset {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.a11y-btn--reset:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--text-secondary) 8%, transparent);
 }
 
 .a11y-font-row {

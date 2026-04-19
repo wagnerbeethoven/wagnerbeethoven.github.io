@@ -93,6 +93,18 @@
     });
   }
 
+  const resetAll = document.getElementById("reset-all");
+  if (resetAll) {
+    resetAll.addEventListener("click", function () {
+      localStorage.removeItem("theme");
+      localStorage.removeItem("fontScale");
+      localStorage.removeItem("highContrast");
+      localStorage.removeItem("reduceMotion");
+      applyTheme(prefersDark.matches);
+      applyAccessibility();
+    });
+  }
+
   if (contrastToggle) {
     contrastToggle.addEventListener("click", function () {
       const next = localStorage.getItem("highContrast") === "1" ? "0" : "1";
