@@ -92,12 +92,13 @@
       <div class="sidebar-meta">{{ site.location }}</div>
 
       <section class="sidebar-section sidebar-accordions">
+
         <details class="sidebar-accordion" open>
           <summary class="sidebar-accordion-summary">
-            <span>Páginas</span>
+            <span><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Pessoal</span>
             <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
           </summary>
-          <nav class="sidebar-list sidebar-accordion-content" aria-label="Páginas">
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Pessoal">
             <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}"><i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial</a>
             <a href="/about/" class="sidebar-link{% if current == '/about/' %} active{% endif %}"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim</a>
             <a href="/now/" class="sidebar-link{% if current == '/now/' %} active{% endif %}"><i class="fa-solid fa-location-dot" style="color:#e05c7a" aria-hidden="true"></i> Now</a>
@@ -107,36 +108,68 @@
 
         <details class="sidebar-accordion">
           <summary class="sidebar-accordion-summary">
-            <span>Coleções</span>
+            <span><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Conteúdo</span>
             <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
           </summary>
-          <nav class="sidebar-list sidebar-accordion-content" aria-label="Coleções">
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Conteúdo">
             <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>
             <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>
             <a href="/poetry/" class="sidebar-link{% if current | slice(0,8) == '/poetry/' %} active{% endif %}"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>
+            <a href="/recipes/" class="sidebar-link{% if current | slice(0,9) == '/recipes/' %} active{% endif %}"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
+          </nav>
+        </details>
+
+        <details class="sidebar-accordion">
+          <summary class="sidebar-accordion-summary">
+            <span><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Coleções</span>
+            <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
+          </summary>
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Coleções">
             <a href="/bookshelf/" class="sidebar-link{% if current == '/bookshelf/' %} active{% endif %}"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>
             <a href="/movies/" class="sidebar-link{% if current == '/movies/' %} active{% endif %}"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>
             <a href="/series/" class="sidebar-link{% if current == '/series/' %} active{% endif %}"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>
             <a href="/games/" class="sidebar-link{% if current == '/games/' %} active{% endif %}"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>
             <a href="/comics/" class="sidebar-link{% if current == '/comics/' %} active{% endif %}"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
             <a href="/photos/" class="sidebar-link{% if current == '/photos/' %} active{% endif %}"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
-            <a href="/recipes/" class="sidebar-link{% if current | slice(0,9) == '/recipes/' %} active{% endif %}"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
-            <a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-music" style="color:#d51007" aria-hidden="true"></i> Música</a>
+            <a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
           </nav>
         </details>
 
         <details class="sidebar-accordion">
           <summary class="sidebar-accordion-summary">
-            <span>Outros</span>
+            <span><i class="fa-solid fa-compass" style="color:#c47db8" aria-hidden="true"></i> Descoberta</span>
             <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
           </summary>
-          <nav class="sidebar-list sidebar-accordion-content" aria-label="Outros">
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Descoberta">
             <a href="/links/" class="sidebar-link{% if current == '/links/' %} active{% endif %}"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Links</a>
             <a href="/blogroll/" class="sidebar-link{% if current == '/blogroll/' %} active{% endif %}"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blogroll</a>
             <a href="/archive/" class="sidebar-link{% if current == '/archive/' %} active{% endif %}"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Arquivo</a>
             <a href="/tags/" class="sidebar-link{% if current | slice(0,6) == '/tags/' %} active{% endif %}"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</a>
-            <a href="/changelog/" class="sidebar-link{% if current == '/changelog/' %} active{% endif %}"><i class="fa-solid fa-clock-rotate-left" style="color:#7ab87a" aria-hidden="true"></i> Changelog</a>
+          </nav>
+        </details>
+
+        <details class="sidebar-accordion">
+          <summary class="sidebar-accordion-summary">
+            <span><i class="fa-solid fa-gear" style="color:#f0c040" aria-hidden="true"></i> Sobre o site</span>
+            <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
+          </summary>
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Sobre o site">
             <a href="/slashes/" class="sidebar-link{% if current == '/slashes/' %} active{% endif %}"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Páginas</a>
+            <a href="/changelog/" class="sidebar-link{% if current == '/changelog/' %} active{% endif %}"><i class="fa-solid fa-clock-rotate-left" style="color:#7ab87a" aria-hidden="true"></i> Changelog</a>
+            <a href="/accessibility/" class="sidebar-link{% if current == '/accessibility/' %} active{% endif %}"><i class="fa-solid fa-universal-access" style="color:#5b8dd9" aria-hidden="true"></i> Acessibilidade</a>
+            <a href="/sitemap/" class="sidebar-link{% if current == '/sitemap/' %} active{% endif %}"><i class="fa-solid fa-map" style="color:#7ab87a" aria-hidden="true"></i> Mapa do site</a>
+          </nav>
+        </details>
+
+        <details class="sidebar-accordion">
+          <summary class="sidebar-accordion-summary">
+            <span><i class="fa-solid fa-briefcase" style="color:#5bc4c4" aria-hidden="true"></i> Trabalho</span>
+            <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
+          </summary>
+          <nav class="sidebar-list sidebar-accordion-content" aria-label="Trabalho">
+            <a href="/portfolio/" class="sidebar-link{% if current == '/portfolio/' %} active{% endif %}"><i class="fa-solid fa-diagram-project" style="color:#5bc4c4" aria-hidden="true"></i> Portfólio</a>
+            <a href="/resume/" class="sidebar-link{% if current == '/resume/' %} active{% endif %}"><i class="fa-solid fa-file-lines" style="color:#888" aria-hidden="true"></i> Currículo</a>
+            <a href="/uses/" class="sidebar-link{% if current == '/uses/' %} active{% endif %}"><i class="fa-solid fa-laptop" style="color:#888" aria-hidden="true"></i> O que uso</a>
           </nav>
         </details>
 
