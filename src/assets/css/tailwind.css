@@ -3209,11 +3209,6 @@ select:focus-visible {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
-  transition: border-color 0.12s;
-}
-
-.uses-card:hover {
-  border-color: var(--accent);
 }
 
 .uses-card-icon {
