@@ -1,9 +1,0 @@
----
-title: Nota de exemplo
-date: 2026-04-18
-description: Uma nota curta para demonstrar o layout da secao de notas.
----
-
-Esta e uma nota de exemplo. Pode ser uma observacao rapida, um fragmento de ideia ou um pensamento que nao cabe em outro lugar.
-
-Notas sao curtas por natureza — sem introducao, sem conclusao obrigatoria.
