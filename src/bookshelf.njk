@@ -46,6 +46,10 @@ permalink: /bookshelf/
         </div>
         <p class="book-card-title">{{ item.data.title }}</p>
         <p class="book-card-author">{{ item.data.author }}</p>
+        {% if item.data.rating %}
+        {% set r = item.data.rating | int %}
+        <p class="book-card-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</p>
+        {% endif %}
       </a>
       {% endfor %}
     </div>
