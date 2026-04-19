@@ -251,13 +251,25 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("archiveTree", (collectionApi) => {
-    const posts = collectionApi
-      .getFilteredByGlob("src/blog/**/*.md")
-      .sort((a, b) => (a.date > b.date ? -1 : 1));
+    const toArchiveItem = (item, archiveType) => ({
+      url: item.url,
+      date: item.date,
+      data: {
+        ...(item.data || {}),
+        archiveType,
+      },
+    });
+
+    const archiveItems = [
+      ...collectionApi.getFilteredByGlob("src/blog/**/*.md").map((item) => toArchiveItem(item, "Blog")),
+      ...collectionApi.getFilteredByGlob("src/notes/**/*.md").map((item) => toArchiveItem(item, "Notas")),
+      ...collectionApi.getFilteredByGlob("src/poetry/**/*.md").map((item) => toArchiveItem(item, "Poesias")),
+      ...collectionApi.getFilteredByGlob("src/recipes/**/*.md").map((item) => toArchiveItem(item, "Receitas")),
+    ].sort((a, b) => (a.date > b.date ? -1 : 1));
 
     const years = new Map();
 
-    posts.forEach((post) => {
+    archiveItems.forEach((post) => {
       const dt = DateTime.fromJSDate(post.date, { zone: "utc" }).setLocale("pt-BR");
       const year = dt.toFormat("yyyy");
       const monthKey = dt.toFormat("MM");

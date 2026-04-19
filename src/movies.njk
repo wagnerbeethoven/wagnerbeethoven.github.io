@@ -30,7 +30,7 @@ title: Filmes
       {% for item in allMovies %}
       <div class="media-card">
         <div class="media-card-poster">
-          {{ item.data.poster or '🎬' }}
+          <img src="{{ item.data.poster }}" alt="{{ item.data.title }}">
           {% if item.data.status == 'done' %}<span class="media-badge media-badge--done">Assistido</span>
           {% elif item.data.status == 'watching' %}<span class="media-badge media-badge--watching">Assistindo</span>
           {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Quero ver</span>

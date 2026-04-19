@@ -1,44 +1,107 @@
 ---
 layout: layouts/base.njk
-title: Portfolio
+title: Portfólio
 permalink: /portfolio/
 ---
-
-<h1 class="text-2xl font-bold mb-4">Portfolio</h1>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-  Esta pagina reune, de forma resumida, os temas e frentes em que atuo profissionalmente.
-</p>
-
-<section class="space-y-8">
-  <div>
-    <h2 class="text-xl font-semibold">Design de produto</h2>
-    <p class="text-gray-700 dark:text-gray-300">
-      Trabalho com experiencia digital e design de produto, principalmente em sistemas complexos,
-      olhando para estrutura, consistencia e tomada de decisao ao longo do tempo.
-    </p>
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Trabalho profissional</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div>
-    <h2 class="text-xl font-semibold">Arquitetura da informacao e clareza</h2>
-    <p class="text-gray-700 dark:text-gray-300">
-      Meu foco costuma estar menos no efeito visual isolado e mais no que sustenta o produto:
-      organizacao da informacao, reducao de friccao, legibilidade e coerencia entre partes.
-    </p>
-  </div>
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Portfólio"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Portfólio</h1>
+      <p class="entry-summary">Uma visão geral das frentes em que atuo — design de produto, acessibilidade e arquitetura da informação.</p>
+    </header>
 
-  <div>
-    <h2 class="text-xl font-semibold">Acessibilidade</h2>
-    <p class="text-gray-700 dark:text-gray-300">
-      Acessibilidade faz parte do meu trabalho e tambem dos meus estudos e projetos paralelos.
-      Tenho interesse em tornar sistemas digitais mais compreensiveis, robustos e inclusivos.
-    </p>
-  </div>
+    {# ── Sobre o trabalho ─────────────────────────────────── #}
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-diagram-project" style="color:#5bc4c4" aria-hidden="true"></i> Design de produto</h2>
+      <div class="prose">
+        <p>
+          Trabalho com experiência digital e design de produto, principalmente em sistemas complexos,
+          olhando para estrutura, consistência e tomada de decisão ao longo do tempo.
+        </p>
+      </div>
+    </div>
 
-  <div class="bg-[var(--surface)] border rounded p-4">
-    <p class="font-medium">Links profissionais</p>
-    <p class="text-sm text-gray-600 dark:text-gray-400">
-      Para contatos e referencias profissionais, os links estao reunidos em
-      <a href="https://linktr.ee/wagnerbeethoven" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
-    </p>
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-sitemap" style="color:#5b8dd9" aria-hidden="true"></i> Arquitetura da informação</h2>
+      <div class="prose">
+        <p>
+          Meu foco costuma estar menos no efeito visual isolado e mais no que sustenta o produto:
+          organização da informação, redução de fricção, legibilidade e coerência entre partes.
+        </p>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-magnifying-glass-chart" style="color:#c47db8" aria-hidden="true"></i> UX Research</h2>
+      <div class="prose">
+        <p>
+          Pesquisa faz parte do processo. Trabalho com entrevistas, testes de usabilidade,
+          análise de comportamento e síntese de dados para embasar decisões de design — com atenção especial
+          para contextos onde os usuários têm menos familiaridade com tecnologia ou enfrentam barreiras de acesso.
+        </p>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-hand-pointer" style="color:#e0a050" aria-hidden="true"></i> Usabilidade</h2>
+      <div class="prose">
+        <p>
+          Avalio e melhoro a qualidade de uso de interfaces — heurísticas, testes com usuários, análise de fluxos
+          e identificação de pontos de fricção. O objetivo é sempre reduzir o esforço cognitivo e tornar a
+          experiência mais direta, independente do perfil do usuário.
+        </p>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-universal-access" style="color:#7ab87a" aria-hidden="true"></i> Acessibilidade</h2>
+      <div class="prose">
+        <p>
+          Acessibilidade faz parte do meu trabalho e também dos meus estudos e projetos paralelos.
+          Tenho interesse em tornar sistemas digitais mais compreensíveis, robustos e inclusivos.
+        </p>
+      </div>
+    </div>
+
+    {# ── Ver projetos ─────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-folder-open" style="color:#f0c040" aria-hidden="true"></i> Ver projetos</h2>
+      <p class="uses-section-desc">Os projetos estão publicados no meu site pessoal e no Behance.</p>
+      <div class="uses-grid">
+        <a href="https://wagnerbeethoven.com.br/section/project/" target="_blank" rel="noopener" class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+            <i class="fa-solid fa-globe" style="color:#e07b54" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Site pessoal</p>
+            <p class="uses-card-desc">Projetos de design de produto, UX e acessibilidade.</p>
+          </div>
+        </a>
+        <a href="https://behance.net/wagnerbeethoven" target="_blank" rel="noopener" class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#1769ff 12%,var(--bg-card))">
+            <i class="fa-brands fa-behance" style="color:#1769ff" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Behance</p>
+            <p class="uses-card-desc">Casos visuais e estudos de interface.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>

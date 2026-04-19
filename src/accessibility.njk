@@ -22,7 +22,7 @@ title: Acessibilidade
       {% set breadcrumb = [{label: "Acessibilidade"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Acessibilidade</h1>
-      <p class="entry-summary">Ferramentas de personalização e compromisso com um site acessível a todos.</p>
+      <p class="entry-summary">Estado atual de acessibilidade do site, recursos de leitura e marcações semânticas publicadas.</p>
     </header>
 
     <section class="a11y-controls-section">
@@ -94,17 +94,54 @@ title: Acessibilidade
     </section>
 
     <div class="prose">
-      <h2>Compromisso</h2>
+      <h2>Varredura atual</h2>
       <p>
-        Este site busca conformidade com WCAG 2.1 nível AA. Toda decisão de design leva em conta
-        legibilidade, contraste, navegação por teclado e compatibilidade com leitores de tela.
+        Esta página descreve o estado real do site em abril de 2026. A revisão foi feita sobre a estrutura
+        atual da <em>Margem Viva</em>, olhando landmarks, navegação por teclado, foco visível, contraste,
+        personalização de leitura e marcações semânticas voltadas à IndieWeb.
       </p>
 
-      <h2>Estrutura semântica</h2>
+      <h2>O que já está implementado</h2>
+      <ul>
+        <li>Link “Pular para o conteúdo” no início da página, apontando para o conteúdo principal.</li>
+        <li>Landmarks semânticos com <code>aside</code>, <code>main</code>, <code>nav</code>, <code>article</code> e <code>footer</code>.</li>
+        <li>Estados de foco visíveis nos controles e navegação utilizável por teclado.</li>
+        <li>Controles de leitura para tema claro/escuro, tamanho do texto, contraste e redução de movimento.</li>
+        <li>Layout responsivo com reflow em telas menores, sem depender de gesto ou hover para navegação principal.</li>
+        <li>Ícones decorativos marcados com <code>aria-hidden="true"</code> quando não carregam significado próprio.</li>
+      </ul>
+
+      <h2>Pontos observados nesta revisão</h2>
+      <ul>
+        <li>O destino do skip link foi corrigido para um <code>main</code> real com <code>id="main-content"</code>.</li>
+        <li>Links de identidade com <code>rel="me"</code> foram normalizados para evitar atributos duplicados.</li>
+        <li>Breadcrumbs e alguns textos utilitários foram saneados para evitar caracteres quebrados na interface.</li>
+        <li>Os posts já expõem uma base consistente de metadados e categorias com microformatos.</li>
+      </ul>
+
+      <h2>IndieWeb e microformatos</h2>
       <p>
-        Uso de HTML semântico (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
-        <code>&lt;aside&gt;</code>), landmarks ARIA e microformatos h-card/h-entry para melhor
-        interoperabilidade com ferramentas assistivas e agregadores IndieWeb.
+        O site publica uma base consistente de tags e endpoints IndieWeb:
+      </p>
+      <ul>
+        <li><code>rel="webmention"</code> e <code>rel="pingback"</code> no <code>&lt;head&gt;</code>.</li>
+        <li><code>h-card</code> na identidade do autor, com <code>p-name</code>, <code>u-photo</code>, <code>u-url</code>, <code>u-email</code> e <code>p-note</code>.</li>
+        <li><code>rel="me"</code> nos links de identidade pública, como GitHub, Bluesky e Linktree.</li>
+        <li><code>h-entry</code> nos posts, com <code>p-name</code>, <code>p-author</code>, <code>dt-published</code>, <code>u-photo</code> e <code>p-category</code>.</li>
+      </ul>
+
+      <h2>O que ainda merece atenção</h2>
+      <ul>
+        <li>Falta uma auditoria automatizada complementar com Axe ou Lighthouse para fechar contraste e ordem de foco em todas as páginas.</li>
+        <li>Ainda vale revisar conteúdo antigo importado para garantir acentuação, alt text e consistência de headings em todos os posts.</li>
+        <li>Imagens editoriais dependem do preenchimento correto de <code>alt</code> no conteúdo de cada entrada.</li>
+      </ul>
+
+      <h2>Compromisso</h2>
+      <p>
+        O objetivo do site continua sendo manter uma experiência legível, simples e utilizável com teclado,
+        zoom, leitor de tela e preferências pessoais de leitura. Acessibilidade aqui não é acabamento:
+        é parte da estrutura editorial.
       </p>
 
       <h2>Problemas e sugestões</h2>

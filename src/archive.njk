@@ -3,44 +3,68 @@ layout: layouts/base.njk
 permalink: "/archive/"
 title: Arquivo
 ---
+{% set monthNames = {
+  "01": "janeiro",
+  "02": "fevereiro",
+  "03": "março",
+  "04": "abril",
+  "05": "maio",
+  "06": "junho",
+  "07": "julho",
+  "08": "agosto",
+  "09": "setembro",
+  "10": "outubro",
+  "11": "novembro",
+  "12": "dezembro"
+} %}
 <section class="page-hero">
-  <div class="page-hero-inner">
-    {% set breadcrumb = [{label: "Arquivo"}] %}
-      {% include "partials/breadcrumb.njk" %}
-    <h1 class="page-title">Arquivo do blog</h1>
-    <p class="page-subtitle">
-      {% set total = collections.posts | default([]) | length %}
-      {{ total }} post{% if total != 1 %}s{% endif %} publicado{% if total != 1 %}s{% endif %}, organizados por ano e mes.
-    </p>
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Arquivo do site</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="content-frame">
   <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Arquivo"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Arquivo</h1>
+      <p class="entry-summary">
+      {% set total = (collections.posts | default([]) | length) + (collections.notes | default([]) | length) + (collections.poetry | default([]) | length) + (collections.recipes | default([]) | length) %}
+      {{ total }} item{% if total != 1 %}s{% endif %} publicado{% if total != 1 %}s{% endif %}, organizados por ano e mês.
+      </p>
+    </header>
 
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}
 
       {% for year in collections.archiveTree %}
-      <section class="{% if not loop.first %}mt-10 pt-8 border-t border-[var(--border-subtle)]{% endif %}">
+      <section class="{% if not loop.first %}mt-10 pt-8 border-t border-[var(--border-subtle)]{% endif %}" aria-labelledby="archive-year-{{ year.year }}">
         <div class="flex items-baseline justify-between mb-5">
-          <h2 class="text-2xl font-extrabold">{{ year.year }}</h2>
-          <span class="sidebar-count">{{ year.count }} post{% if year.count != 1 %}s{% endif %}</span>
+          <h2 class="text-2xl font-extrabold" id="archive-year-{{ year.year }}">{{ year.year }}</h2>
+          <span class="sidebar-count">{{ year.count }} item{% if year.count != 1 %}s{% endif %}</span>
         </div>
 
         {% for month in year.months %}
         <div class="mb-7" id="{{ year.year }}-{{ month.key }}">
           <h3 class="text-sm font-bold text-[var(--text-secondary)] uppercase tracking-widest mb-3">
-            <a href="#{{ year.year }}-{{ month.key }}" class="hover:text-[var(--accent)]">{{ month.label }}</a>
+            <a href="#{{ year.year }}-{{ month.key }}" class="hover:text-[var(--accent)]">{{ monthNames[month.key] or month.label }}/{{ year.year }}</a>
           </h3>
-          <div class="sidebar-list pl-3 border-l-2 border-[var(--border-subtle)]">
+          <div class="home-blog-list">
             {% for post in month.posts %}
-            <a href="{{ post.url }}" class="sidebar-link">
-              {{ post.data.title }}
-              {% if post.data.tags and post.data.tags.length > 0 %}
-              <span class="sidebar-count">
-                {% for tag in post.data.tags %}#{{ tag }} {% endfor %}
-              </span>
-              {% endif %}
+            <a href="{{ post.url }}" class="home-blog-row h-entry">
+              <div class="home-blog-row-main">
+                <span class="home-blog-row-title p-name">
+                  <span class="home-blog-row-desc p-summary">{{ post.data.archiveType or "Conteúdo" }}:</span>
+                  {{ post.data.title }}
+                </span>
+              </div>
+              <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
             </a>
             {% endfor %}
           </div>
@@ -50,7 +74,7 @@ title: Arquivo
       {% endfor %}
 
     {% else %}
-      <p class="text-[var(--text-secondary)]">Ainda nao ha posts no arquivo.</p>
+      <div class="empty-card">Ainda não há conteúdos no arquivo.</div>
     {% endif %}
 
   </div>

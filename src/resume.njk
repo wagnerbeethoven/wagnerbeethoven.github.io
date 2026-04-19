@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Curriculo
+title: Currículo
 permalink: /resume/
 ---
 <section class="page-hero">
@@ -20,47 +20,127 @@ permalink: /resume/
     <header class="entry-header-card">
       {% set breadcrumb = [{label: "Currículo"}] %}
       {% include "partials/breadcrumb.njk" %}
-      <h1 class="entry-title">Curriculo</h1>
-      <p class="entry-summary">Uma versao aberta do meu perfil — o que faz sentido publicar sem filtro de plataforma.</p>
+      <h1 class="entry-title">Currículo</h1>
+      <p class="entry-summary">Uma versão aberta do meu perfil — o que faz sentido publicar sem filtro de plataforma.</p>
     </header>
 
-    <div class="prose mb-8">
-      <h2>Resumo</h2>
-      <p>
-        Atuo com design de produto, experiencia digital e acessibilidade, principalmente em contextos complexos.
-        Meu interesse esta na estrutura que sustenta o produto: informacao bem organizada, clareza de uso,
-        reducao de friccao e consistencia ao longo do tempo.
-      </p>
-
-      <h2>Areas de atuacao</h2>
-      <ul>
-        <li>Design de produto para sistemas e jornadas complexas</li>
-        <li>Arquitetura da informacao e clareza de interface</li>
-        <li>Acessibilidade digital e qualidade de experiencia</li>
-        <li>Mentoria e troca com profissionais da area</li>
-      </ul>
-
-      <h2>Mentoria</h2>
-      <p>
-        Atuo como mentor no <a href="https://adplist.org/" target="_blank" rel="noopener">ADPList</a>,
-        compartilhando repertorio sobre produto, experiencia digital e estrutura de trabalho.
-      </p>
-
-      <h2>Projetos paralelos</h2>
-      <p>
-        Mantenho o <strong>Foco Acessivel</strong>, projeto dedicado a acessibilidade digital com conteudos
-        publicados em multiplas plataformas de audio e video.
-      </p>
-
-      <h2>Mais informacoes</h2>
-      <p>
-        Para referencias profissionais e outros perfis publicos, use os links em
-        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener">linktr.ee/wagnerbeethoven</a>.
-      </p>
+    {# ── Resumo ───────────────────────────────────────────── #}
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Resumo</h2>
+      <div class="prose">
+        <p>
+          Atuo com design de produto, experiência digital e acessibilidade, principalmente em contextos complexos.
+          Meu interesse está na estrutura que sustenta o produto: informação bem organizada, clareza de uso,
+          redução de fricção e consistência ao longo do tempo.
+        </p>
+      </div>
     </div>
 
-    <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-button" style="width: auto; display: inline-flex;">
-      <i class="fa-brands fa-linktree" aria-hidden="true"></i> Ver links profissionais
-    </a>
+    {# ── Áreas de atuação ─────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Áreas de atuação</h2>
+      <div class="resume-tags">
+        <span class="resume-tag"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Design de produto</span>
+        <span class="resume-tag"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Arquitetura da informação</span>
+        <span class="resume-tag"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i> UX Research</span>
+        <span class="resume-tag"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i> Usabilidade</span>
+        <span class="resume-tag"><i class="fa-solid fa-universal-access" aria-hidden="true"></i> Acessibilidade digital</span>
+        <span class="resume-tag"><i class="fa-solid fa-route" aria-hidden="true"></i> Jornadas complexas</span>
+        <span class="resume-tag"><i class="fa-solid fa-comments" aria-hidden="true"></i> Mentoria</span>
+        <span class="resume-tag"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> Design system</span>
+      </div>
+    </div>
+
+    {# ── Foco Acessível ───────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-microphone" style="color:#e05c7a" aria-hidden="true"></i> Principais projetos</h2>
+      <p class="uses-section-desc">Projeto autoral dedicado à acessibilidade digital, com conteúdo publicado em múltiplas plataformas.</p>
+
+      <div class="resume-project">
+        <div class="resume-project-banner">
+          <div class="resume-project-banner-info">
+            <p class="resume-project-name">Foco Acessível</p>
+            <p class="resume-project-desc">Podcast e canal sobre acessibilidade digital — boas práticas, entrevistas e perspectivas do dia a dia.</p>
+            <div class="stream-links">
+              <a href="{{ site.focoAcessivel.youtube }}" target="_blank" rel="noopener" class="stream-link stream-link--youtube" aria-label="YouTube do Foco Acessível">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube
+              </a>
+              <a href="{{ site.focoAcessivel.spotify }}" target="_blank" rel="noopener" class="stream-link stream-link--spotify" aria-label="Spotify do Foco Acessível">
+                <i class="fa-brands fa-spotify" aria-hidden="true"></i> Spotify
+              </a>
+              <a href="{{ site.focoAcessivel.apple }}" target="_blank" rel="noopener" class="stream-link stream-link--apple" aria-label="Apple Podcasts do Foco Acessível">
+                <i class="fa-brands fa-apple" aria-hidden="true"></i> Apple
+              </a>
+              <a href="{{ site.focoAcessivel.deezer }}" target="_blank" rel="noopener" class="stream-link stream-link--deezer" aria-label="Deezer do Foco Acessível">
+                <i class="fa-brands fa-deezer" aria-hidden="true"></i> Deezer
+              </a>
+              <a href="{{ site.focoAcessivel.amazon }}" target="_blank" rel="noopener" class="stream-link stream-link--amazon" aria-label="Amazon Music do Foco Acessível">
+                <i class="fa-brands fa-amazon" aria-hidden="true"></i> Amazon
+              </a>
+              <a href="{{ site.focoAcessivel.site }}" target="_blank" rel="noopener" class="stream-link stream-link--site" aria-label="Site do Foco Acessível">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i> Site
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="resume-project-embed">
+          <iframe
+            src="https://open.spotify.com/embed/show/4D6HigcXDCdNuCXxrkStWL?utm_source=generator&theme=0"
+            width="100%"
+            height="232"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Foco Acessível no Spotify"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    {# ── Mentoria ─────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-chalkboard-user" style="color:#c47db8" aria-hidden="true"></i> Mentoria</h2>
+      <div class="prose">
+        <p>
+          Atuo como mentor no <a href="https://adplist.org/mentors/wagner-beethoven/" target="_blank" rel="noopener">ADPList</a>,
+          compartilhando repertório sobre produto, experiência digital e estrutura de trabalho.
+        </p>
+      </div>
+    </div>
+
+    {# ── Links profissionais ───────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-link" style="color:#f0c040" aria-hidden="true"></i> Links profissionais</h2>
+      <div class="resume-links-grid">
+        <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-linkedin" style="color:#0077b5" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-bluesky" style="color:#0085ff" aria-hidden="true"></i>
+          <span>Bluesky</span>
+        </a>
+        <a href="https://behance.net/wagnerbeethoven" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-behance" style="color:#1769ff" aria-hidden="true"></i>
+          <span>Behance</span>
+        </a>
+        <a href="https://medium.com/@wagnerbeethoven" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-medium" style="color:var(--text-primary)" aria-hidden="true"></i>
+          <span>Medium</span>
+        </a>
+        <a href="https://speakerdeck.com/wagnerbeethoven" target="_blank" rel="noopener me" class="resume-link-card">
+          <i class="fa-brands fa-speaker-deck" style="color:#009287" aria-hidden="true"></i>
+          <span>Speaker Deck</span>
+        </a>
+        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="resume-link-card">
+          <i class="fa-brands fa-linktree" style="color:#43e55e" aria-hidden="true"></i>
+          <span>Linktree</span>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>

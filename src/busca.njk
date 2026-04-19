@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+permalink: "/busca/"
+title: Busca
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Busca</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Busca"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Busca</h1>
+      <p class="entry-summary">Pesquise em todo o conteúdo do site — posts, notas, poesias, livros, filmes e mais.</p>
+    </header>
+
+    <div class="search-page-wrap">
+      <div class="search-page-field">
+        <i class="fa-solid fa-magnifying-glass search-page-icon" aria-hidden="true"></i>
+        <input
+          type="search"
+          id="q"
+          class="search-page-input"
+          placeholder="O que você procura?"
+          autocomplete="off"
+          aria-label="Pesquisar no site"
+          autofocus
+        />
+      </div>
+      <div id="search-results" class="search-page-results hidden" role="list" aria-label="Resultados da busca" aria-live="polite"></div>
+      <p class="search-page-hint" id="search-hint">Digite pelo menos 2 caracteres para pesquisar.</p>
+    </div>
+
+  </div>
+</section>

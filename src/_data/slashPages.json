@@ -56,7 +56,7 @@
       { "url": "/changelog/",    "icon": "fa-clock-rotate-left","color": "#7ab87a", "title": "Changelog",     "description": "Histórico de mudanças e melhorias no site." },
       { "url": "/accessibility/","icon": "fa-universal-access", "color": "#5b8dd9", "title": "Acessibilidade","description": "Compromissos e declaração de acessibilidade deste site." },
       { "url": "/sitemap/",      "icon": "fa-map",              "color": "#7ab87a", "title": "Mapa do site",  "description": "Visão geral de todas as páginas e seções." },
-      { "url": "/colophon/",     "icon": "fa-scroll",           "color": "#888",    "title": "Colofão",       "description": "Como este site é feito: tecnologia, fontes, filosofia." }
+      { "url": "/colophon/",     "icon": "fa-scroll",           "color": "#888",    "title": "Colophon",       "description": "Como este site é feito: tecnologia, fontes, filosofia." }
     ]
   },
   {

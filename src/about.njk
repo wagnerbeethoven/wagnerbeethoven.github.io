@@ -21,7 +21,7 @@ title: Sobre
       {% set breadcrumb = [{label: "Sobre"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Sobre mim</h1>
-      <p class="entry-summary">Quem escreve, o que sustenta este espaco e por que ele existe.</p>
+      <p class="entry-summary">Quem escreve, o que sustenta este espaço e por que ele existe.</p>
     </header>
 
     <div class="h-card flex flex-col sm:flex-row gap-5 items-start mb-8">
@@ -32,7 +32,7 @@ title: Sobre
           <span class="p-locality">Olinda</span>, <span class="p-region">PE</span>, <span class="p-country-name">Brasil</span>
         </p>
         <p class="p-note text-[var(--text-secondary)] mb-4">
-          Designer de produto, acessibilidade e experiencia digital. Escreve na web desde quando isso ainda parecia aventura.
+          Designer de produto, acessibilidade e experiência digital. Escreve na web desde quando isso ainda parecia aventura.
         </p>
         <div class="flex flex-wrap gap-2">
           <a class="pill" href="{{ site.url }}" rel="me u-url">
@@ -42,12 +42,12 @@ title: Sobre
             <i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.email }}
           </a>
           {% if site.social.github %}
-          <a class="pill" rel="me" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">
+          <a class="pill" rel="me noopener" href="https://github.com/{{ site.social.github }}" target="_blank">
             <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> GitHub
           </a>
           {% endif %}
           {% if site.social.bluesky %}
-          <a class="pill" rel="me" href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener">
+          <a class="pill" rel="me noopener" href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank">
             <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
           </a>
           {% endif %}
@@ -62,20 +62,20 @@ title: Sobre
 
     <div class="prose mb-8">
       <p>
-        A Margem Viva e um espaco pessoal onde publico textos, notas e paginas mais duraveis,
-        fora da logica de plataforma. Aqui nao tem pressao de frequencia, algoritmo ou performance.
+        A Margem Viva é um espaço pessoal onde publico textos, notas e páginas mais duráveis,
+        fora da lógica de plataforma. Aqui não tem pressão de frequência, algoritmo ou performance.
       </p>
 
       <p>
-        Penso a internet como lugar de presenca, arquivo e troca. Este site nasce dessa vontade
-        de ter uma casa propria na web, com um ritmo mais humano. Escrita, leitura, cultura de internet,
-        filmes, series e ideias que ainda nao precisam virar projeto. Tenho interesse por sites simples,
+        Penso a internet como lugar de presença, arquivo e troca. Este site nasce dessa vontade
+        de ter uma casa própria na web, com um ritmo mais humano. Escrita, leitura, cultura de internet,
+        filmes, séries e ideias que ainda não precisam virar projeto. Tenho interesse por sites simples,
         com feeds, blogrolls e arquivos. Lugares que parecem feitos por gente.
       </p>
 
       <h2>Sobre este site</h2>
       <p>
-        A Margem Viva funciona como laboratorio e arquivo. Um espaco para testar, organizar pensamento
+        A Margem Viva funciona como laboratório e arquivo. Um espaço para testar, organizar pensamento
         e registrar percurso, sem misturar com o trabalho e sem depender de timeline.
         Feito com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy</a>, com feeds RSS,
         webmentions, microformatos e tudo que faz um site parecer um lar na web.
@@ -83,20 +83,20 @@ title: Sobre
 
       <h2>No profissional</h2>
       <p>
-        Trabalho com design de produto, experiencia digital e acessibilidade, principalmente em sistemas complexos.
-        Meu foco esta na estrutura: organizacao da informacao, clareza, reducao de friccao e consistencia ao longo do tempo.
+        Trabalho com design de produto, experiência digital e acessibilidade, principalmente em sistemas complexos.
+        Meu foco está na estrutura: organização da informação, clareza, redução de fricção e consistência ao longo do tempo.
         Mais do que interface, me interessa o que sustenta o produto.
       </p>
       <p>
-        Atuo como mentor no ADPList e meus links profissionais estao reunidos no
+        Atuo como mentor no ADPList e meus links profissionais estão reunidos no
         <a href="{{ site.social.linktree }}" target="_blank" rel="noopener">Linktree</a>.
       </p>
     </div>
 
     <div class="border-t border-[var(--border-subtle)] pt-7 mb-8">
-      <h2 class="text-xl font-extrabold mb-1">Foco Acessivel</h2>
+      <h2 class="text-xl font-extrabold mb-1">Foco Acessível</h2>
       <p class="text-[var(--text-secondary)] text-sm mb-5">
-        Projeto sobre acessibilidade digital com episodios no YouTube e nas principais plataformas de podcast.
+        Projeto sobre acessibilidade digital com episódios no YouTube e nas principais plataformas de podcast.
       </p>
       <div class="share-row flex-wrap">
         {% if site.focoAcessivel.site %}
@@ -116,7 +116,7 @@ title: Sobre
         {% endif %}
         {% if site.focoAcessivel.deezer %}
         <a href="{{ site.focoAcessivel.deezer }}" class="share-chip" target="_blank" rel="noopener">
-          <i class="fa-brands fa-deezer" style="color:#EF5466" aria-hidden="true"></i> Deezer
+          <i class="fa-brands fa-deezer" style="color:#A238FF" aria-hidden="true"></i> Deezer
         </a>
         {% endif %}
         {% if site.focoAcessivel.apple %}
@@ -138,9 +138,9 @@ title: Sobre
     </div>
 
     <div class="border-t border-[var(--border-subtle)] pt-7">
-      <h2 class="text-xl font-extrabold mb-1">Presenca na web</h2>
+      <h2 class="text-xl font-extrabold mb-1">Presença na web</h2>
       <p class="text-[var(--text-secondary)] text-sm mb-5">
-        Links com <code rel="me">rel=me</code> para verificacao de identidade IndieWeb.
+        Links com <code>rel="me"</code> para verificação de identidade IndieWeb.
       </p>
       <div class="sidebar-list">
         <a href="{{ site.url }}" rel="me u-url" class="sidebar-link">
@@ -150,17 +150,17 @@ title: Sobre
           <i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.email }}
         </a>
         {% if site.social.github %}
-        <a href="https://github.com/{{ site.social.github }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+        <a href="https://github.com/{{ site.social.github }}" rel="me noopener" target="_blank" class="sidebar-link">
           <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> github.com/{{ site.social.github }}
         </a>
         {% endif %}
         {% if site.social.bluesky %}
-        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" rel="me noopener" target="_blank" class="sidebar-link">
           <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> @{{ site.social.bluesky }}
         </a>
         {% endif %}
         {% if site.social.linktree %}
-        <a href="{{ site.social.linktree }}" rel="me" target="_blank" rel="noopener" class="sidebar-link">
+        <a href="{{ site.social.linktree }}" rel="me noopener" target="_blank" class="sidebar-link">
           <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> linktr.ee/wagnerbeethoven
         </a>
         {% endif %}
