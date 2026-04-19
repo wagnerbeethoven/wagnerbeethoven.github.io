@@ -3375,6 +3375,27 @@ select:focus-visible {
   line-height: 1.4;
 }
 
+.uses-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.uses-card-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.uses-card-link .fa-arrow-up-right-from-square {
+  font-size: 0.6rem;
+}
+
 /* ── Accessibility controls page ────────────────────────── */
 
 .a11y-controls-section {

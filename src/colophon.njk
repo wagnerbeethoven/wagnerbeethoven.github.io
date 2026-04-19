@@ -28,7 +28,7 @@ title: Colofão
     <div class="uses-section" style="border-top:none;padding-top:0">
       <h2 class="uses-section-title"><i class="fa-brands fa-github" aria-hidden="true"></i> Ponto de partida</h2>
       <p class="uses-section-desc">
-        Este site foi construído a partir do <a href="https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter" target="_blank" rel="noopener">11ty Indie Web Blog Starter</a>, de Brennan Brown. O starter foi escolhido por duas razões principais: já vem integrado com os protocolos IndieWeb (webmentions, microformatos h-card e h-entry, feed Atom) e tem acessibilidade como premissa — HTML semântico, navegação por teclado e compatibilidade com leitores de tela desde o início. A partir daí, o design e as funcionalidades foram completamente reescritos.
+        Este site foi construído a partir do <strong>11ty Indie Web Blog Starter</strong>, de Brennan Brown. O starter foi escolhido por duas razões principais: já vem integrado com os protocolos IndieWeb (webmentions, microformatos h-card e h-entry, feed Atom) e tem acessibilidade como premissa — HTML semântico, navegação por teclado e compatibilidade com leitores de tela desde o início. A partir daí, o design e as funcionalidades foram completamente reescritos.
       </p>
       <div class="uses-grid">
         <div class="uses-card">
@@ -37,7 +37,18 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">11ty Indie Web Blog Starter</p>
-            <p class="uses-card-desc">Base do projeto. IndieWeb + acessibilidade como premissa. Por <a href="https://github.com/brennanbrown" target="_blank" rel="noopener">Brennan Brown</a>.</p>
+            <p class="uses-card-desc">Base do projeto. IndieWeb + acessibilidade como premissa. Por Brennan Brown.</p>
+            <a href="https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter" target="_blank" rel="noopener" class="uses-card-link">github.com/brennanbrown <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
+            <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">{{ site.name }} no GitHub</p>
+            <p class="uses-card-desc">Repositório público do site. Código-fonte aberto.</p>
+            <a href="{{ site.social.url }}" target="_blank" rel="noopener" class="uses-card-link">github.com/wagnerbeethoven <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -47,7 +58,7 @@ title: Colofão
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Geração e templates</h2>
       <p class="uses-section-desc">
-        O site é gerado com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy 3.0+</a>, um gerador de sites estáticos minimalista em Node.js. A escolha foi deliberada: sem framework de frontend, sem hidratação, sem bundle pesado — apenas HTML gerado no build e servido direto. Os templates são escritos em Nunjucks, que oferece lógica suficiente para layouts, coleções e partials sem virar um projeto separado.
+        O site é gerado com <strong>Eleventy 3.0+</strong>, um gerador de sites estáticos minimalista em Node.js. A escolha foi deliberada: sem framework de frontend, sem hidratação, sem bundle pesado — apenas HTML gerado no build e servido direto. Os templates são escritos em Nunjucks, que oferece lógica suficiente para layouts, coleções e partials sem virar um projeto separado.
       </p>
       <div class="uses-grid">
         <div class="uses-card">
@@ -57,6 +68,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Eleventy 3.0+</p>
             <p class="uses-card-desc">Gerador estático em Node.js. Zero JavaScript enviado ao cliente por padrão.</p>
+            <a href="https://www.11ty.dev/" target="_blank" rel="noopener" class="uses-card-link">11ty.dev <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -66,6 +78,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Nunjucks</p>
             <p class="uses-card-desc">Engine de templates para layouts, partials e coleções.</p>
+            <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener" class="uses-card-link">mozilla.github.io/nunjucks <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -85,6 +98,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Tailwind CSS</p>
             <p class="uses-card-desc">Utilitários de layout. O design system usa custom properties nativas.</p>
+            <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="uses-card-link">tailwindcss.com <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -94,6 +108,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Inter</p>
             <p class="uses-card-desc">Tipografia principal via Google Fonts.</p>
+            <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener" class="uses-card-link">fonts.google.com/specimen/Inter <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -103,6 +118,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Font Awesome 7.0</p>
             <p class="uses-card-desc">Iconografia Solid e Brands em todo o site, via CDN.</p>
+            <a href="https://fontawesome.com/" target="_blank" rel="noopener" class="uses-card-link">fontawesome.com <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -121,7 +137,8 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">GitHub</p>
-            <p class="uses-card-desc">Repositório público. Código sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.</p>
+            <p class="uses-card-desc">Versionamento e repositório público do código-fonte.</p>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="uses-card-link">github.com <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -131,6 +148,7 @@ title: Colofão
           <div class="uses-card-body">
             <p class="uses-card-name">Netlify</p>
             <p class="uses-card-desc">Deploy contínuo a cada push na branch main.</p>
+            <a href="https://www.netlify.com/" target="_blank" rel="noopener" class="uses-card-link">netlify.com <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -140,7 +158,7 @@ title: Colofão
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
       <p class="uses-section-desc">
-        Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via <a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a>. O feed Atom em <a href="/feed.xml">/feed.xml</a> cobre todas as 11 coleções do site em ordem cronológica.
+        Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via webmention.io. O feed Atom cobre todas as 11 coleções do site em ordem cronológica.
       </p>
       <div class="uses-grid">
         <div class="uses-card">
@@ -149,7 +167,8 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Feed Atom</p>
-            <p class="uses-card-desc">Feed único em <a href="/feed.xml">/feed.xml</a> — todas as coleções.</p>
+            <p class="uses-card-desc">Feed único cobrindo todas as 11 coleções do site.</p>
+            <a href="/feed.xml" class="uses-card-link">/feed.xml <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -158,7 +177,8 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Webmentions</p>
-            <p class="uses-card-desc">Recebidas via webmention.io. h-card e h-entry nas páginas.</p>
+            <p class="uses-card-desc">Recebidas e processadas via webmention.io. h-card e h-entry nas páginas.</p>
+            <a href="https://webmention.io/" target="_blank" rel="noopener" class="uses-card-link">webmention.io <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -168,8 +188,20 @@ title: Colofão
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Licença e autoria</h2>
       <p class="uses-section-desc">
-        O código-fonte deste site é licenciado sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a> — qualquer pessoa pode usar, modificar e distribuir, desde que mantenha a mesma licença e disponibilize as alterações. Os textos, fotos e conteúdos editoriais são de autoria própria, salvo quando indicado explicitamente. O site foi desenvolvido com assistência do <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a> (Anthropic).
+        Os textos, fotos e conteúdos editoriais deste site são licenciados sob <strong>Creative Commons BY-NC-SA 4.0</strong> — você pode compartilhar e adaptar o conteúdo, desde que dê crédito, não use para fins comerciais e distribua sob a mesma licença. O site foi desenvolvido com assistência do <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a> (Anthropic).
       </p>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+            <i class="fa-brands fa-creative-commons" style="color:#e07b54" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">CC BY-NC-SA 4.0</p>
+            <p class="uses-card-desc">Atribuição · Não comercial · Compartilha igual.</p>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" class="uses-card-link">creativecommons.org <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
