@@ -4,16 +4,26 @@ permalink: "/sitemap/"
 title: Mapa do site
 ---
 <section class="page-hero">
-  <div class="page-hero-inner">
-    {% set breadcrumb = [{label: "Mapa do site"}] %}
-    {% include "partials/breadcrumb.njk" %}
-    <h1 class="page-title">Mapa do site</h1>
-    <p class="page-subtitle">Um mapa completo com tudo nesse site. Explore e descubra!</p>
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Mapa do site</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="content-frame">
   <div class="content-surface">
+
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Mapa do site"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Mapa do site</h1>
+      <p class="entry-summary">Um mapa completo com tudo nesse site. Explore e descubra!</p>
+    </header>
 
     {% set totalPosts   = collections.posts   | default([]) | length %}
     {% set totalNotes   = collections.notes   | default([]) | length %}
@@ -28,10 +38,7 @@ title: Mapa do site
     {% set totalPhotos  = collections.photos  | default([]) | length %}
     {% set totalTags    = collections.tagList | default([]) | length %}
 
-    <header class="entry-header-card">
-      <h2 class="entry-title">Estatísticas</h2>
-      <p class="entry-summary">Números do que foi publicado até agora.</p>
-    </header>
+    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Estatísticas</h2>
 
     <div class="sitemap-stats">
       <div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>
@@ -101,12 +108,12 @@ title: Mapa do site
         <a href="/comics/" class="sitemap-link"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
         <a href="/photos/" class="sitemap-link"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
         <a href="/recipes/" class="sitemap-link"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
-        <a href="/music/" class="sitemap-link"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
+        <a href="/music/" class="sitemap-link"><i class="fa-solid fa-music" style="color:#d51007" aria-hidden="true"></i> Música</a>
       </div>
     </div>
 
     <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Outros</h2>
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-bars" style="color:#000" aria-hidden="true"></i> Outros</h2>
       <div class="sitemap-grid">
         <a href="/links/" class="sitemap-link"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Links</a>
         <a href="/blogroll/" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blogroll</a>

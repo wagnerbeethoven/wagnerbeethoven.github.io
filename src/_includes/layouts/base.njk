@@ -121,7 +121,7 @@
             <a href="/comics/" class="sidebar-link{% if current == '/comics/' %} active{% endif %}"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
             <a href="/photos/" class="sidebar-link{% if current == '/photos/' %} active{% endif %}"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
             <a href="/recipes/" class="sidebar-link{% if current | slice(0,9) == '/recipes/' %} active{% endif %}"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
-            <a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
+            <a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-music" style="color:#d51007" aria-hidden="true"></i> Música</a>
           </nav>
         </details>
 
@@ -140,41 +140,6 @@
           </nav>
         </details>
 
-        <details class="sidebar-accordion">
-          <summary class="sidebar-accordion-summary">
-            <span>Acessibilidade</span>
-            <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
-          </summary>
-          <div class="sidebar-accordion-content">
-            <div class="sidebar-control-stack">
-
-              <button type="button" id="dark-toggle" class="sidebar-control-button" aria-pressed="false">
-                <i class="fa-solid fa-moon" aria-hidden="true"></i> <span>Tema escuro</span>
-              </button>
-
-              <div class="flex gap-2">
-                <button type="button" id="font-dec" class="sidebar-control-button flex-1" aria-label="Diminuir texto">
-                  <i class="fa-solid fa-minus" aria-hidden="true"></i> A
-                </button>
-                <button type="button" id="font-reset" class="sidebar-control-button flex-1" aria-label="Resetar tamanho do texto">
-                  <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> A
-                </button>
-                <button type="button" id="font-inc" class="sidebar-control-button flex-1" aria-label="Aumentar texto">
-                  <i class="fa-solid fa-plus" aria-hidden="true"></i> A
-                </button>
-              </div>
-
-              <button type="button" id="contrast-toggle" class="sidebar-control-button" aria-pressed="false">
-                <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Mais contraste
-              </button>
-
-              <button type="button" id="motion-toggle" class="sidebar-control-button" aria-pressed="false">
-                <i class="fa-solid fa-wind" aria-hidden="true"></i> Reduzir movimento
-              </button>
-
-            </div>
-          </div>
-        </details>
       </section>
     </aside>
 

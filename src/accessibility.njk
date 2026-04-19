@@ -4,43 +4,108 @@ permalink: "/accessibility/"
 title: Acessibilidade
 ---
 <section class="page-hero">
-  <div class="page-hero-inner">
-    {% set breadcrumb = [{label: "Acessibilidade"}] %}
-      {% include "partials/breadcrumb.njk" %}
-    <h1 class="page-title">Acessibilidade</h1>
-    <p class="page-subtitle">Como este site foi construido para ser acessivel a todos.</p>
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Acessibilidade</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="content-frame">
   <div class="content-surface">
+
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Acessibilidade"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Acessibilidade</h1>
+      <p class="entry-summary">Ferramentas de personalização e compromisso com um site acessível a todos.</p>
+    </header>
+
+    <section class="a11y-controls-section">
+      <h2 class="a11y-controls-title"><i class="fa-solid fa-sliders" style="color:var(--accent)" aria-hidden="true"></i> Preferências de exibição</h2>
+      <p class="a11y-controls-desc">As preferências são salvas no navegador e aplicadas em todas as páginas do site.</p>
+
+      <div class="a11y-controls-grid">
+
+        <div class="a11y-control-card">
+          <div class="a11y-control-card-header">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            <span>Tema</span>
+          </div>
+          <p class="a11y-control-card-desc">Alternar entre tema claro e escuro.</p>
+          <button type="button" id="dark-toggle" class="a11y-btn" aria-pressed="false">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i> Tema escuro
+          </button>
+        </div>
+
+        <div class="a11y-control-card">
+          <div class="a11y-control-card-header">
+            <i class="fa-solid fa-text-height" aria-hidden="true"></i>
+            <span>Tamanho do texto</span>
+          </div>
+          <p class="a11y-control-card-desc">Ajuste o tamanho da fonte em todo o site.</p>
+          <div class="a11y-font-row">
+            <button type="button" id="font-dec" class="a11y-btn a11y-btn--icon" aria-label="Diminuir texto">
+              <i class="fa-solid fa-minus" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="font-reset" class="a11y-btn a11y-btn--icon" aria-label="Resetar tamanho do texto">
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="font-inc" class="a11y-btn a11y-btn--icon" aria-label="Aumentar texto">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="a11y-control-card">
+          <div class="a11y-control-card-header">
+            <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+            <span>Contraste</span>
+          </div>
+          <p class="a11y-control-card-desc">Aumenta o contraste entre texto e fundo.</p>
+          <button type="button" id="contrast-toggle" class="a11y-btn" aria-pressed="false">
+            <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Mais contraste
+          </button>
+        </div>
+
+        <div class="a11y-control-card">
+          <div class="a11y-control-card-header">
+            <i class="fa-solid fa-wind" aria-hidden="true"></i>
+            <span>Movimento</span>
+          </div>
+          <p class="a11y-control-card-desc">Desativa animações e transições do site.</p>
+          <button type="button" id="motion-toggle" class="a11y-btn" aria-pressed="false">
+            <i class="fa-solid fa-wind" aria-hidden="true"></i> Reduzir movimento
+          </button>
+        </div>
+
+      </div>
+    </section>
+
     <div class="prose">
       <h2>Compromisso</h2>
       <p>
-        Este site busca conformidade com WCAG 2.1 nivel AA. Toda decisao de design leva em conta
-        legibilidade, contraste, navegacao por teclado e compatibilidade com leitores de tela.
+        Este site busca conformidade com WCAG 2.1 nível AA. Toda decisão de design leva em conta
+        legibilidade, contraste, navegação por teclado e compatibilidade com leitores de tela.
       </p>
 
-      <h2>Recursos disponiveis</h2>
-      <ul>
-        <li>Ajuste de tamanho de fonte via menu A11y no cabecalho</li>
-        <li>Alternancia de contraste alto</li>
-        <li>Reducao de movimento para usuarios com preferencia <code>prefers-reduced-motion</code></li>
-        <li>Preferencias salvas no navegador via <code>localStorage</code></li>
-      </ul>
-
-      <h2>Estrutura semantica</h2>
+      <h2>Estrutura semântica</h2>
       <p>
-        Uso de HTML semantico (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+        Uso de HTML semântico (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
         <code>&lt;aside&gt;</code>), landmarks ARIA e microformatos h-card/h-entry para melhor
         interoperabilidade com ferramentas assistivas e agregadores IndieWeb.
       </p>
 
-      <h2>Problemas e sugestoes</h2>
+      <h2>Problemas e sugestões</h2>
       <p>
         Encontrou alguma barreira de acessibilidade? <a href="/contact/">Entre em contato</a> ou
-        mencione <strong>#MargemViva</strong> no Bluesky. Todo relato e levado a serio.
+        mencione <strong>#MargemViva</strong> no Bluesky. Todo relato é levado a sério.
       </p>
     </div>
+
   </div>
 </section>

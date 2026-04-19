@@ -3131,6 +3131,107 @@ select:focus-visible {
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
+/* ── Accessibility controls page ────────────────────────── */
+
+.a11y-controls-section {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border-subtle));
+  border-radius: 0.5rem;
+}
+
+.a11y-controls-title {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.a11y-controls-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.a11y-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .a11y-controls-grid { grid-template-columns: 1fr; }
+}
+
+.a11y-control-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.a11y-control-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.a11y-control-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+.a11y-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--bg-hero);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  width: 100%;
+  justify-content: center;
+}
+
+.a11y-btn:hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-hero));
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.a11y-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.a11y-btn--icon {
+  width: auto;
+  flex: 1;
+  padding: 0.45rem 0.5rem;
+}
+
+.a11y-font-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
 /* ── Sitemap ─────────────────────────────────────────────── */
 
 .sitemap-stats {
