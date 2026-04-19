@@ -1,1 +1,4 @@
-{"layout":"layouts/movie.njk","permalink":"/movies/{{ page.fileSlug }}/"}
+{
+    "layout": "layouts/movie.njk",
+    "permalink": "/movies/{{ page.fileSlug }}/"
+}
