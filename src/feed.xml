@@ -9,30 +9,46 @@ templateEngine: njk
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ site.url }}/feed.xml" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {% if collections.posts and (collections.posts | length) %}
-  <updated>{{ collections.posts[0].date | htmlDateString }}T00:00:00Z</updated>
-  {% else %}
-  <updated>{{ '1970-01-01' }}</updated>
-  {% endif %}
   <id>{{ site.url }}/</id>
   <author>
     <name>{{ site.author }}</name>
   </author>
-  {% if collections.posts and (collections.posts | length) %}
-  {% for post in collections.posts | slice(0, 20) %}
+
+  {%- set allItems = [] -%}
+  {%- set allItems = allItems.concat(collections.posts | default([])) -%}
+  {%- set allItems = allItems.concat(collections.notes | default([])) -%}
+  {%- set allItems = allItems.concat(collections.poetry | default([])) -%}
+  {%- set allItems = allItems.concat(collections.books | default([])) -%}
+  {%- set allItems = allItems.concat(collections.movies | default([])) -%}
+  {%- set allItems = allItems.concat(collections.series | default([])) -%}
+  {%- set allItems = allItems.concat(collections.games | default([])) -%}
+  {%- set allItems = allItems.concat(collections.comics | default([])) -%}
+  {%- set allItems = allItems.concat(collections.music | default([])) -%}
+  {%- set allItems = allItems.concat(collections.recipes | default([])) -%}
+  {%- set allItems = allItems.concat(collections.photos | default([])) -%}
+  {%- set feed = allItems | sort(true, false, "date") | slice(0, 30) -%}
+
+  {% if feed | length %}
+  <updated>{{ feed[0].date | htmlDateString }}T00:00:00Z</updated>
+  {% else %}
+  <updated>1970-01-01T00:00:00Z</updated>
+  {% endif %}
+
+  {% for item in feed %}
   <entry>
-    <title>{{ post.data.title }}</title>
-    <link href="{{ site.url }}{{ post.url }}"/>
-    <updated>{{ post.date | htmlDateString }}T00:00:00Z</updated>
-    <id>{{ site.url }}{{ post.url }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(site.url) }}</content>
-    {% if post.data.description %}
-    <summary>{{ post.data.description }}</summary>
+    <title>{{ item.data.title or item.data.artist or "(sem título)" }}</title>
+    <link href="{{ site.url }}{{ item.url }}"/>
+    <updated>{{ item.date | htmlDateString }}T00:00:00Z</updated>
+    <id>{{ site.url }}{{ item.url }}</id>
+    {% if item.templateContent %}
+    <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(site.url) }}</content>
     {% endif %}
-    {% for tag in post.data.tags %}
+    {% if item.data.description or item.data.note %}
+    <summary>{{ item.data.description or item.data.note }}</summary>
+    {% endif %}
+    {% for tag in item.data.tags | default([]) %}
     <category term="{{ tag }}"/>
     {% endfor %}
   </entry>
   {% endfor %}
-  {% endif %}
 </feed>

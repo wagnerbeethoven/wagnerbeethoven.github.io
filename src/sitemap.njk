@@ -6,7 +6,7 @@ title: Mapa do site
 <section class="page-hero">
   <div class="page-hero-inner">
     {% set breadcrumb = [{label: "Mapa do site"}] %}
-      {% include "partials/breadcrumb.njk" %}
+    {% include "partials/breadcrumb.njk" %}
     <h1 class="page-title">Mapa do site</h1>
     <p class="page-subtitle">Um mapa completo com tudo nesse site. Explore e descubra!</p>
   </div>
@@ -15,38 +15,42 @@ title: Mapa do site
 <section class="content-frame">
   <div class="content-surface">
 
-    {% set totalPosts = collections.posts | default([]) | length %}
-    {% set totalNotes = collections.notes | default([]) | length %}
-    {% set totalPoems = collections.poetry | default([]) | length %}
-    {% set totalTags  = collections.tagList | default([]) | length %}
+    {% set totalPosts   = collections.posts   | default([]) | length %}
+    {% set totalNotes   = collections.notes   | default([]) | length %}
+    {% set totalPoems   = collections.poetry  | default([]) | length %}
+    {% set totalBooks   = collections.books   | default([]) | length %}
+    {% set totalMovies  = collections.movies  | default([]) | length %}
+    {% set totalSeries  = collections.series  | default([]) | length %}
+    {% set totalGames   = collections.games   | default([]) | length %}
+    {% set totalComics  = collections.comics  | default([]) | length %}
+    {% set totalMusic   = collections.music   | default([]) | length %}
+    {% set totalRecipes = collections.recipes | default([]) | length %}
+    {% set totalPhotos  = collections.photos  | default([]) | length %}
+    {% set totalTags    = collections.tagList | default([]) | length %}
 
     <header class="entry-header-card">
-      <h2 class="entry-title">Estatisticas</h2>
-      <p class="entry-summary">Numeros do que foi publicado ate agora.</p>
+      <h2 class="entry-title">Estatísticas</h2>
+      <p class="entry-summary">Números do que foi publicado até agora.</p>
     </header>
 
-    <div class="grid grid-cols-2 gap-3 mb-10">
-      <div class="content-surface" style="margin:0">
-        <p class="text-sm text-[var(--text-secondary)] mb-1">Total de posts</p>
-        <p class="text-3xl font-extrabold text-[var(--accent)]">{{ totalPosts }}</p>
-      </div>
-      <div class="content-surface" style="margin:0">
-        <p class="text-sm text-[var(--text-secondary)] mb-1">Notas publicadas</p>
-        <p class="text-3xl font-extrabold text-[var(--accent)]">{{ totalNotes }}</p>
-      </div>
-      <div class="content-surface" style="margin:0">
-        <p class="text-sm text-[var(--text-secondary)] mb-1">Poemas</p>
-        <p class="text-3xl font-extrabold text-[var(--accent)]">{{ totalPoems }}</p>
-      </div>
-      <div class="content-surface" style="margin:0">
-        <p class="text-sm text-[var(--text-secondary)] mb-1">Tags usadas</p>
-        <p class="text-3xl font-extrabold text-[var(--accent)]">{{ totalTags }}</p>
-      </div>
+    <div class="sitemap-stats">
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Notas</p><p class="sitemap-stat-value">{{ totalNotes }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Poemas</p><p class="sitemap-stat-value">{{ totalPoems }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Livros</p><p class="sitemap-stat-value">{{ totalBooks }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Filmes</p><p class="sitemap-stat-value">{{ totalMovies }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Séries</p><p class="sitemap-stat-value">{{ totalSeries }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Jogos</p><p class="sitemap-stat-value">{{ totalGames }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Quadrinhos</p><p class="sitemap-stat-value">{{ totalComics }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Álbuns</p><p class="sitemap-stat-value">{{ totalMusic }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Receitas</p><p class="sitemap-stat-value">{{ totalRecipes }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Fotos</p><p class="sitemap-stat-value">{{ totalPhotos }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Tags</p><p class="sitemap-stat-value">{{ totalTags }}</p></div>
     </div>
 
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}
-    <div class="border-t border-[var(--border-subtle)] pt-7 mb-10">
-      <h2 class="text-xl font-extrabold mb-4">Posts por ano</h2>
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Posts por ano</h2>
       <div class="sidebar-list">
         {% for year in collections.archiveTree %}
         <a href="/archive/#{{ year.year }}" class="sidebar-link">
@@ -59,8 +63,8 @@ title: Mapa do site
     {% endif %}
 
     {% if collections.tagList and collections.tagList.length > 0 %}
-    <div class="border-t border-[var(--border-subtle)] pt-7 mb-10">
-      <h2 class="text-xl font-extrabold mb-4">Nuvem de tags</h2>
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</h2>
       <div class="inline-pills">
         {% for tag in collections.tagList %}
         <a href="/tags/{{ tag | slug }}/" class="pill">#{{ tag }}</a>
@@ -69,81 +73,66 @@ title: Mapa do site
     </div>
     {% endif %}
 
-    <div class="border-t border-[var(--border-subtle)] pt-7">
-
-      <section class="mb-8">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-book-open text-[var(--accent)]" aria-hidden="true"></i> Sobre mim
-        </h2>
-        <div class="sidebar-list">
-          <a href="/about/" class="sidebar-link"><i class="fa-regular fa-hand" aria-hidden="true"></i> Sobre</a>
-          <a href="/now/" class="sidebar-link"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Agora</a>
-          <a href="/contact/" class="sidebar-link"><i class="fa-solid fa-comment" aria-hidden="true"></i> Contato</a>
-          <a href="/why/" class="sidebar-link"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Por que este site existe</a>
-          <a href="/values/" class="sidebar-link"><i class="fa-solid fa-heart" aria-hidden="true"></i> Valores</a>
-        </div>
-      </section>
-
-      <section class="mb-8 pt-6 border-t border-[var(--border-subtle)]">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-user text-[var(--accent)]" aria-hidden="true"></i> Pessoal
-        </h2>
-        <div class="sidebar-list">
-          <a href="/blog/" class="sidebar-link"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Blog</a>
-          <a href="/archive/" class="sidebar-link"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Arquivo</a>
-          <a href="/tags/" class="sidebar-link"><i class="fa-solid fa-tags" aria-hidden="true"></i> Tags</a>
-          <a href="/notes/" class="sidebar-link"><i class="fa-solid fa-note-sticky" aria-hidden="true"></i> Notas</a>
-          <a href="/poetry/" class="sidebar-link"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i> Poesias</a>
-          <a href="/blogroll/" class="sidebar-link"><i class="fa-solid fa-rss" aria-hidden="true"></i> Blogroll</a>
-        </div>
-      </section>
-
-      <section class="mb-8 pt-6 border-t border-[var(--border-subtle)]">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-magnifying-glass text-[var(--accent)]" aria-hidden="true"></i> Colecoes
-        </h2>
-        <div class="sidebar-list">
-          <a href="/bookshelf/" class="sidebar-link"><i class="fa-solid fa-book" aria-hidden="true"></i> Livros</a>
-          <a href="/links/" class="sidebar-link"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Links</a>
-          <a href="/movies/" class="sidebar-link"><i class="fa-solid fa-film" aria-hidden="true"></i> Filmes</a>
-          <a href="/series/" class="sidebar-link"><i class="fa-solid fa-tv" aria-hidden="true"></i> Series</a>
-          <a href="/games/" class="sidebar-link"><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Jogos</a>
-          <a href="/photos/" class="sidebar-link"><i class="fa-solid fa-camera" aria-hidden="true"></i> Fotos</a>
-        </div>
-      </section>
-
-      <section class="mb-8 pt-6 border-t border-[var(--border-subtle)]">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-gear text-[var(--accent)]" aria-hidden="true"></i> Ferramentas
-        </h2>
-        <div class="sidebar-list">
-          <a href="/uses/" class="sidebar-link"><i class="fa-solid fa-laptop" aria-hidden="true"></i> O que uso</a>
-          <a href="/portfolio/" class="sidebar-link"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Projetos</a>
-          <a href="/resume/" class="sidebar-link"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Curriculo</a>
-        </div>
-      </section>
-
-      <section class="mb-8 pt-6 border-t border-[var(--border-subtle)]">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-satellite-dish text-[var(--accent)]" aria-hidden="true"></i> Feeds
-        </h2>
-        <div class="sidebar-list">
-          <a href="/feed.xml" class="sidebar-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blog: RSS/Atom</a>
-        </div>
-      </section>
-
-      <section class="pt-6 border-t border-[var(--border-subtle)]">
-        <h2 class="text-xl font-extrabold mb-3">
-          <i class="fa-solid fa-wrench text-[var(--accent)]" aria-hidden="true"></i> Meta
-        </h2>
-        <div class="sidebar-list">
-          <a href="/style/" class="sidebar-link"><i class="fa-solid fa-palette" aria-hidden="true"></i> Style Guide</a>
-          <a href="/accessibility/" class="sidebar-link"><i class="fa-solid fa-universal-access" aria-hidden="true"></i> Acessibilidade</a>
-          <a href="/colophon/" class="sidebar-link"><i class="fa-solid fa-scroll" aria-hidden="true"></i> Colofao</a>
-          <a href="/sitemap/" class="sidebar-link"><i class="fa-solid fa-map" aria-hidden="true"></i> Mapa do site</a>
-        </div>
-      </section>
-
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Páginas</h2>
+      <div class="sitemap-grid">
+        <a href="/" class="sitemap-link"><i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial</a>
+        <a href="/about/" class="sitemap-link"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim</a>
+        <a href="/now/" class="sitemap-link"><i class="fa-solid fa-location-dot" style="color:#e05c7a" aria-hidden="true"></i> Now</a>
+        <a href="/contact/" class="sitemap-link"><i class="fa-solid fa-envelope" style="color:#7ab87a" aria-hidden="true"></i> Contato</a>
+        <a href="/uses/" class="sitemap-link"><i class="fa-solid fa-laptop" style="color:#888" aria-hidden="true"></i> O que uso</a>
+        <a href="/portfolio/" class="sitemap-link"><i class="fa-solid fa-diagram-project" style="color:#5b8dd9" aria-hidden="true"></i> Projetos</a>
+        <a href="/resume/" class="sitemap-link"><i class="fa-solid fa-file-lines" style="color:#888" aria-hidden="true"></i> Currículo</a>
+        <a href="/values/" class="sitemap-link"><i class="fa-solid fa-heart" style="color:#e05c7a" aria-hidden="true"></i> Valores</a>
+        <a href="/why/" class="sitemap-link"><i class="fa-solid fa-circle-question" style="color:#c47db8" aria-hidden="true"></i> Por que este site</a>
+      </div>
     </div>
+
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Coleções</h2>
+      <div class="sitemap-grid">
+        <a href="/blog/" class="sitemap-link"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>
+        <a href="/notes/" class="sitemap-link"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>
+        <a href="/poetry/" class="sitemap-link"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>
+        <a href="/bookshelf/" class="sitemap-link"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>
+        <a href="/movies/" class="sitemap-link"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>
+        <a href="/series/" class="sitemap-link"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>
+        <a href="/games/" class="sitemap-link"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>
+        <a href="/comics/" class="sitemap-link"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
+        <a href="/photos/" class="sitemap-link"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
+        <a href="/recipes/" class="sitemap-link"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
+        <a href="/music/" class="sitemap-link"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
+      </div>
+    </div>
+
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Outros</h2>
+      <div class="sitemap-grid">
+        <a href="/links/" class="sitemap-link"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Links</a>
+        <a href="/blogroll/" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blogroll</a>
+        <a href="/archive/" class="sitemap-link"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Arquivo</a>
+        <a href="/tags/" class="sitemap-link"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</a>
+        <a href="/changelog/" class="sitemap-link"><i class="fa-solid fa-clock-rotate-left" style="color:#7ab87a" aria-hidden="true"></i> Changelog</a>
+        <a href="/slashes/" class="sitemap-link"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Páginas</a>
+      </div>
+    </div>
+
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-satellite-dish" style="color:#f26522" aria-hidden="true"></i> Feeds</h2>
+      <div class="sitemap-grid">
+        <a href="/feed.xml" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> RSS/Atom</a>
+      </div>
+    </div>
+
+    <div class="sitemap-section">
+      <h2 class="sitemap-section-title"><i class="fa-solid fa-wrench" style="color:#888" aria-hidden="true"></i> Meta</h2>
+      <div class="sitemap-grid">
+        <a href="/style/" class="sitemap-link"><i class="fa-solid fa-palette" style="color:#c47db8" aria-hidden="true"></i> Style Guide</a>
+        <a href="/accessibility/" class="sitemap-link"><i class="fa-solid fa-universal-access" style="color:#5b8dd9" aria-hidden="true"></i> Acessibilidade</a>
+        <a href="/colophon/" class="sitemap-link"><i class="fa-solid fa-scroll" style="color:#888" aria-hidden="true"></i> Colofão</a>
+        <a href="/sitemap/" class="sitemap-link"><i class="fa-solid fa-map" style="color:#7ab87a" aria-hidden="true"></i> Mapa do site</a>
+      </div>
+    </div>
+
   </div>
 </section>
