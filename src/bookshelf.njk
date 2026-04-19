@@ -26,9 +26,9 @@ permalink: /bookshelf/
 
     {% set allBooks = collections.books | default([]) %}
     {% if allBooks | length > 0 %}
-    <div class="book-grid">
+    <div class="book-grid book-grid--4">
       {% for item in allBooks %}
-      <div class="book-card">
+      <a href="{{ item.url }}" class="book-card">
         <div class="book-cover-wrap">
           {% if item.data.isbn %}
           <img class="book-card-cover"
@@ -46,7 +46,7 @@ permalink: /bookshelf/
         </div>
         <p class="book-card-title">{{ item.data.title }}</p>
         <p class="book-card-author">{{ item.data.author }}</p>
-      </div>
+      </a>
       {% endfor %}
     </div>
     {% else %}

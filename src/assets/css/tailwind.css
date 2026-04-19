@@ -2420,10 +2420,28 @@ select:focus-visible {
   gap: 1.25rem;
 }
 
+.book-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .book-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .book-card {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-card:hover .book-card-cover {
+  box-shadow: 3px 5px 16px rgba(0,0,0,0.28), inset -3px 0 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .book-card-cover {
