@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 permalink: "/colophon/"
-title: Colophon
+title: Colofão
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -20,50 +20,129 @@ title: Colophon
     <header class="entry-header-card">
       {% set breadcrumb = [{label: "Colofão"}] %}
       {% include "partials/breadcrumb.njk" %}
-      <h1 class="entry-title">Colofao</h1>
-      <p class="entry-summary">Stack, ferramentas, fontes e decisoes tecnicas por tras deste site.</p>
+      <h1 class="entry-title">Colofão</h1>
+      <p class="entry-summary">Stack, ferramentas, fontes e decisões técnicas por trás deste site.</p>
     </header>
 
-    <div class="prose">
-      <h2>Gerador</h2>
-      <p>
-        Este site e construido com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy 3.0+</a>,
-        um gerador de sites estaticos minimalista escrito em Node.js.
-        Templates em Nunjucks, sem framework de frontend.
-      </p>
-
-      <h2>Estilos</h2>
-      <p>
-        CSS escrito a mao com custom properties (variaveis CSS nativas).
-        Tailwind CSS e usado apenas como utilitario de layout — sem componentes de terceiro.
-        Sem CSS-in-JS, sem preprocessador obrigatorio.
-      </p>
-
-      <h2>Tipografia e iconografia</h2>
-      <p>
-        Fonte principal: <strong>Inter</strong> (Google Fonts).
-        Icones: <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome 7.0</a> via CDN.
-      </p>
-
-      <h2>IndieWeb</h2>
-      <ul>
-        <li><a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a> — recebe e processa webmentions</li>
-        <li>Microformatos h-card e h-entry em todas as paginas relevantes</li>
-        <li>Feed Atom em <a href="/feed.xml">/feed.xml</a></li>
-        <li>Links com <code>rel=me</code> para verificacao de identidade</li>
-      </ul>
-
-      <h2>Licenca</h2>
-      <p>
-        O codigo-fonte deste site e licenciado sob
-        <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.
-        Os textos e conteudos sao de autoria propria, salvo quando indicado.
-      </p>
-
-      <h2>Codigo-fonte</h2>
-      <p>
-        Disponivel no <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>.
-      </p>
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Geração e templates</h2>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#c0b000 12%,var(--bg-card))">
+            <i class="fa-solid fa-bolt" style="color:#c0b000" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Eleventy 3.0+</p>
+            <p class="uses-card-desc">Gerador de site estático minimalista em Node.js. Sem framework de frontend.</p>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+            <i class="fa-solid fa-file-code" style="color:#e07b54" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Nunjucks</p>
+            <p class="uses-card-desc">Engine de templates para layouts, partials e lógica de views.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Estilos e UI</h2>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#06b6d4 12%,var(--bg-card))">
+            <i class="fa-solid fa-wind" style="color:#06b6d4" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Tailwind CSS</p>
+            <p class="uses-card-desc">Utilitários de layout. Todo o design system usa CSS custom properties nativas.</p>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#528bff 12%,var(--bg-card))">
+            <i class="fa-solid fa-icons" style="color:#528bff" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Font Awesome 7.0</p>
+            <p class="uses-card-desc">Iconografia via CDN. Solid e Brands em todo o site.</p>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#4a90d9 12%,var(--bg-card))">
+            <i class="fa-solid fa-font" style="color:#4a90d9" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Inter</p>
+            <p class="uses-card-desc">Tipografia principal via Google Fonts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Publicação e versionamento</h2>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
+            <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">GitHub</p>
+            <p class="uses-card-desc">Repositório público. Código-fonte aberto sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.</p>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#00C7B7 12%,var(--bg-card))">
+            <i class="fa-solid fa-cloud-arrow-up" style="color:#00C7B7" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Netlify</p>
+            <p class="uses-card-desc">Deploy automático a cada push na branch main.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
+            <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Feed Atom</p>
+            <p class="uses-card-desc">Feed único em <a href="/feed.xml">/feed.xml</a> cobrindo todas as 11 coleções do site.</p>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#c47db8 12%,var(--bg-card))">
+            <i class="fa-solid fa-share-nodes" style="color:#c47db8" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Microformatos + Webmentions</p>
+            <p class="uses-card-desc">h-card e h-entry nas páginas. <a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a> para receber menções.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-robot" aria-hidden="true"></i> Desenvolvimento assistido</h2>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#d97757 12%,var(--bg-card))">
+            <i class="fa-solid fa-robot" style="color:#d97757" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Claude (Anthropic)</p>
+            <p class="uses-card-desc">Features, refatorações e decisões de arquitetura via Claude Code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>

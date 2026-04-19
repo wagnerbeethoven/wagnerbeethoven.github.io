@@ -1,0 +1,174 @@
+---
+layout: layouts/base.njk
+permalink: "/style/"
+title: Style Guide
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/sitemap/" class="editorial-back" aria-label="Voltar para mapa do site"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Design system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Style Guide"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Style Guide</h1>
+      <p class="entry-summary">Referência visual do design system deste site: cores, tipografia, componentes e padrões de interface.</p>
+    </header>
+
+    {# ── Cores ────────────────────────────────────────────── #}
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Cores</h2>
+      <div class="sg-color-grid">
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--accent)"></div>
+          <p class="sg-swatch-name">Accent</p>
+          <p class="sg-swatch-var"><code>--accent</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--accent-soft)"></div>
+          <p class="sg-swatch-name">Accent soft</p>
+          <p class="sg-swatch-var"><code>--accent-soft</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--bg-card);border:1px solid var(--border-subtle)"></div>
+          <p class="sg-swatch-name">Card</p>
+          <p class="sg-swatch-var"><code>--bg-card</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--bg-hero)"></div>
+          <p class="sg-swatch-name">Hero</p>
+          <p class="sg-swatch-var"><code>--bg-hero</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--text-primary)"></div>
+          <p class="sg-swatch-name">Texto principal</p>
+          <p class="sg-swatch-var"><code>--text-primary</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--text-secondary)"></div>
+          <p class="sg-swatch-name">Texto secundário</p>
+          <p class="sg-swatch-var"><code>--text-secondary</code></p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-block" style="background:var(--border-subtle)"></div>
+          <p class="sg-swatch-name">Borda</p>
+          <p class="sg-swatch-var"><code>--border-subtle</code></p>
+        </div>
+      </div>
+    </div>
+
+    {# ── Tipografia ───────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-font" aria-hidden="true"></i> Tipografia</h2>
+      <div class="prose sg-typography-demo">
+        <h1>Heading 1 — Inter 700</h1>
+        <h2>Heading 2 — Inter 600</h2>
+        <h3>Heading 3 — Inter 600</h3>
+        <h4>Heading 4 — uppercase 600</h4>
+        <p>Parágrafo padrão em Inter regular. Linha de exemplo para demonstrar o ritmo tipográfico, espaçamento entre linhas e largura máxima de 70 caracteres para leitura confortável.</p>
+        <p><strong>Negrito</strong>, <em>itálico</em>, <a href="#">link com sublinhado</a> e <code>código inline</code>.</p>
+      </div>
+    </div>
+
+    {# ── Listas ───────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-list" aria-hidden="true"></i> Listas</h2>
+      <div class="sg-two-col">
+        <div class="prose">
+          <h3>Lista não ordenada</h3>
+          <ul>
+            <li>Primeiro item da lista</li>
+            <li>Segundo item com mais texto para ver o wrap</li>
+            <li>Terceiro item</li>
+          </ul>
+        </div>
+        <div class="prose">
+          <h3>Lista ordenada</h3>
+          <ol>
+            <li>Primeiro passo do processo</li>
+            <li>Segundo passo com detalhe</li>
+            <li>Terceiro passo final</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    {# ── Blockquote e código ──────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Citação e código</h2>
+      <div class="prose">
+        <blockquote>Um texto em destaque, uma citação ou observação importante que merece atenção especial do leitor.</blockquote>
+        <pre><code>// Exemplo de bloco de código
+const site = "Margem Viva";
+console.log(`Bem-vindo ao ${site}`);</code></pre>
+      </div>
+    </div>
+
+    {# ── Badges ───────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-tag" aria-hidden="true"></i> Badges de status</h2>
+      <div class="sg-badges">
+        <span class="media-badge media-badge--done">Lido</span>
+        <span class="media-badge media-badge--watching">Assistindo</span>
+        <span class="media-badge media-badge--want">Quero ver</span>
+        <span class="media-badge media-badge--done">5★</span>
+      </div>
+    </div>
+
+    {# ── Pills ────────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-tags" aria-hidden="true"></i> Pills e tags</h2>
+      <div class="inline-pills">
+        <a href="/tags/design/" class="pill">#design</a>
+        <a href="/tags/tecnologia/" class="pill">#tecnologia</a>
+        <a href="/tags/escrita/" class="pill">#escrita</a>
+        <a href="/tags/musica/" class="pill">#música</a>
+      </div>
+    </div>
+
+    {# ── Cards ────────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-square" aria-hidden="true"></i> Cards</h2>
+      <div class="sg-two-col">
+        <a href="#" class="entry-card h-entry">
+          <p class="entry-card-meta"><time>19 abr 2026</time> · Blog</p>
+          <p class="entry-card-title">Exemplo de entry card</p>
+          <p class="entry-card-body">Texto de preview do conteúdo. Aparece nas listagens da home e coleções.</p>
+        </a>
+        <div class="entry-card">
+          <p class="entry-card-meta">Variação sem link</p>
+          <p class="entry-card-title">Card estático</p>
+          <p class="entry-card-body">Usado quando o card não é clicável ou é apenas informativo.</p>
+        </div>
+      </div>
+    </div>
+
+    {# ── Ícones de coleções ───────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Ícones das coleções</h2>
+      <div class="sg-icon-grid">
+        <div class="sg-icon-item"><i class="fa-solid fa-pen-nib" style="color:#e07b54"></i><span>Blog</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-note-sticky" style="color:#f0c040"></i><span>Notas</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-feather-pointed" style="color:#c47db8"></i><span>Poesias</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-book" style="color:#5b8dd9"></i><span>Livros</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-film" style="color:#e05c7a"></i><span>Filmes</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-tv" style="color:#5bc4c4"></i><span>Séries</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-gamepad" style="color:#7ab87a"></i><span>Jogos</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-book-open" style="color:#f0c040"></i><span>Quadrinhos</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-camera" style="color:#e05c7a"></i><span>Fotos</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-utensils" style="color:#e0a050"></i><span>Receitas</span></div>
+        <div class="sg-icon-item"><i class="fa-solid fa-record-vinyl" style="color:#d51007"></i><span>Música</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
