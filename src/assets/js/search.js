@@ -1,15 +1,17 @@
 (function() {
   let searchIndex = null;
   let flexSearch = null;
+  let isPageMode = false;
 
-  // Initialize search when DOM is ready
   document.addEventListener('DOMContentLoaded', initializeSearch);
 
   async function initializeSearch() {
     const searchInput = document.getElementById('q');
     const searchResults = document.getElementById('search-results');
-    
+
     if (!searchInput) return;
+
+    isPageMode = searchResults && searchResults.classList.contains('search-page-results');
 
     try {
       // FlexSearch should already be loaded via script tag
@@ -122,10 +124,9 @@
   }
 
   function displaySearchResults(items, query, searchResults) {
-    if (!searchResults) {
-      // Create search results container if it doesn't exist
-      searchResults = createSearchResultsContainer();
-    }
+    if (!searchResults) return;
+
+    const hint = document.getElementById('search-hint');
 
     if (items.length === 0) {
       searchResults.innerHTML = `<div class="search-result-empty">Nenhum resultado para "${query}"</div>`;
@@ -133,12 +134,13 @@
       searchResults.innerHTML = items.map(item => `
         <a href="${item.id}" class="search-result-item" role="option">
           <div class="search-result-title">${highlightMatch(item.title, query)}</div>
-          ${item.description || item.content ? `<div class="search-result-desc">${highlightMatch((item.description || item.content || '').slice(0, 100), query)}</div>` : ''}
+          ${item.description || item.content ? `<div class="search-result-desc">${highlightMatch((item.description || item.content || '').slice(0, 120), query)}</div>` : ''}
         </a>
       `).join('');
     }
 
     searchResults.classList.remove('hidden');
+    if (hint) hint.style.display = 'none';
   }
 
   function createSearchResultsContainer() {
@@ -156,7 +158,8 @@
   }
 
   function hideSearchResults(searchResults) {
-    if (searchResults) {
+    if (!searchResults) return;
+    if (!isPageMode) {
       searchResults.classList.add('hidden');
     }
   }
