@@ -21,11 +21,15 @@ title: Colofão
       {% set breadcrumb = [{label: "Colofão"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Colofão</h1>
-      <p class="entry-summary">Stack, ferramentas, fontes e decisões técnicas por trás deste site.</p>
+      <p class="entry-summary">As decisões técnicas, ferramentas e filosofia por trás da construção deste site.</p>
     </header>
 
+    {# ── Geração ──────────────────────────────────────────── #}
     <div class="uses-section" style="border-top:none;padding-top:0">
       <h2 class="uses-section-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Geração e templates</h2>
+      <p class="uses-section-desc">
+        O site é gerado com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy 3.0+</a>, um gerador de sites estáticos minimalista em Node.js. A escolha foi deliberada: sem framework de frontend, sem hidratação, sem bundle pesado — apenas HTML gerado no build e servido direto. Os templates são escritos em Nunjucks, que oferece lógica suficiente para layouts, coleções e partials sem virar um projeto separado.
+      </p>
       <div class="uses-grid">
         <div class="uses-card">
           <div class="uses-card-icon" style="background:color-mix(in srgb,#c0b000 12%,var(--bg-card))">
@@ -33,7 +37,7 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Eleventy 3.0+</p>
-            <p class="uses-card-desc">Gerador de site estático minimalista em Node.js. Sem framework de frontend.</p>
+            <p class="uses-card-desc">Gerador estático em Node.js. Zero JavaScript enviado ao cliente por padrão.</p>
           </div>
         </div>
         <div class="uses-card">
@@ -42,14 +46,18 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Nunjucks</p>
-            <p class="uses-card-desc">Engine de templates para layouts, partials e lógica de views.</p>
+            <p class="uses-card-desc">Engine de templates para layouts, partials e coleções.</p>
           </div>
         </div>
       </div>
     </div>
 
+    {# ── Estilos ──────────────────────────────────────────── #}
     <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Estilos e UI</h2>
+      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Estilos</h2>
+      <p class="uses-section-desc">
+        O design system é construído sobre CSS custom properties nativas — sem CSS-in-JS, sem Sass, sem variáveis compiladas. O Tailwind CSS entra apenas como utilitário de layout pontual; todo o visual do site (cores, tipografia, temas claro/escuro, componentes) vive em <code>tailwind.css</code>, o arquivo fonte que o Tailwind CLI processa. A tipografia usa <strong>Inter</strong> via Google Fonts, e a iconografia é toda do Font Awesome 7.0 via CDN.
+      </p>
       <div class="uses-grid">
         <div class="uses-card">
           <div class="uses-card-icon" style="background:color-mix(in srgb,#06b6d4 12%,var(--bg-card))">
@@ -57,16 +65,7 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Tailwind CSS</p>
-            <p class="uses-card-desc">Utilitários de layout. Todo o design system usa CSS custom properties nativas.</p>
-          </div>
-        </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#528bff 12%,var(--bg-card))">
-            <i class="fa-solid fa-icons" style="color:#528bff" aria-hidden="true"></i>
-          </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Font Awesome 7.0</p>
-            <p class="uses-card-desc">Iconografia via CDN. Solid e Brands em todo o site.</p>
+            <p class="uses-card-desc">Utilitários de layout. O design system usa custom properties nativas.</p>
           </div>
         </div>
         <div class="uses-card">
@@ -78,11 +77,24 @@ title: Colofão
             <p class="uses-card-desc">Tipografia principal via Google Fonts.</p>
           </div>
         </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#528bff 12%,var(--bg-card))">
+            <i class="fa-solid fa-icons" style="color:#528bff" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Font Awesome 7.0</p>
+            <p class="uses-card-desc">Iconografia Solid e Brands em todo o site, via CDN.</p>
+          </div>
+        </div>
       </div>
     </div>
 
+    {# ── Publicação ───────────────────────────────────────── #}
     <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Publicação e versionamento</h2>
+      <h2 class="uses-section-title"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Versionamento e publicação</h2>
+      <p class="uses-section-desc">
+        O código-fonte fica no GitHub em repositório público. A cada push na branch <code>main</code>, o Netlify detecta a mudança, roda o build (<code>npm run build</code>) e publica automaticamente — sem passo manual. O processo leva menos de dois minutos do commit ao ar.
+      </p>
       <div class="uses-grid">
         <div class="uses-card">
           <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
@@ -90,7 +102,7 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">GitHub</p>
-            <p class="uses-card-desc">Repositório público. Código-fonte aberto sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.</p>
+            <p class="uses-card-desc">Repositório público. Código sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>.</p>
           </div>
         </div>
         <div class="uses-card">
@@ -99,14 +111,18 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Netlify</p>
-            <p class="uses-card-desc">Deploy automático a cada push na branch main.</p>
+            <p class="uses-card-desc">Deploy contínuo a cada push na branch main.</p>
           </div>
         </div>
       </div>
     </div>
 
+    {# ── IndieWeb ─────────────────────────────────────────── #}
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
+      <p class="uses-section-desc">
+        Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via <a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a>. O feed Atom em <a href="/feed.xml">/feed.xml</a> cobre todas as 11 coleções do site em ordem cronológica.
+      </p>
       <div class="uses-grid">
         <div class="uses-card">
           <div class="uses-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
@@ -114,7 +130,7 @@ title: Colofão
           </div>
           <div class="uses-card-body">
             <p class="uses-card-name">Feed Atom</p>
-            <p class="uses-card-desc">Feed único em <a href="/feed.xml">/feed.xml</a> cobrindo todas as 11 coleções do site.</p>
+            <p class="uses-card-desc">Feed único em <a href="/feed.xml">/feed.xml</a> — todas as coleções.</p>
           </div>
         </div>
         <div class="uses-card">
@@ -122,26 +138,19 @@ title: Colofão
             <i class="fa-solid fa-share-nodes" style="color:#c47db8" aria-hidden="true"></i>
           </div>
           <div class="uses-card-body">
-            <p class="uses-card-name">Microformatos + Webmentions</p>
-            <p class="uses-card-desc">h-card e h-entry nas páginas. <a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a> para receber menções.</p>
+            <p class="uses-card-name">Webmentions</p>
+            <p class="uses-card-desc">Recebidas via webmention.io. h-card e h-entry nas páginas.</p>
           </div>
         </div>
       </div>
     </div>
 
+    {# ── Licença ──────────────────────────────────────────── #}
     <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-robot" aria-hidden="true"></i> Desenvolvimento assistido</h2>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#d97757 12%,var(--bg-card))">
-            <i class="fa-solid fa-robot" style="color:#d97757" aria-hidden="true"></i>
-          </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Claude (Anthropic)</p>
-            <p class="uses-card-desc">Features, refatorações e decisões de arquitetura via Claude Code.</p>
-          </div>
-        </div>
-      </div>
+      <h2 class="uses-section-title"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Licença e autoria</h2>
+      <p class="uses-section-desc">
+        O código-fonte deste site é licenciado sob <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a> — qualquer pessoa pode usar, modificar e distribuir, desde que mantenha a mesma licença e disponibilize as alterações. Os textos, fotos e conteúdos editoriais são de autoria própria, salvo quando indicado explicitamente. O site foi desenvolvido com assistência do <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a> (Anthropic).
+      </p>
     </div>
 
   </div>

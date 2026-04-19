@@ -3312,6 +3312,28 @@ select:focus-visible {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.uses-section-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 70ch;
+  margin-bottom: 1rem;
+}
+
+.uses-section-desc a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.uses-section-desc code {
+  background: var(--accent-soft);
+  border-radius: 3px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.88em;
+}
+
 .uses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
