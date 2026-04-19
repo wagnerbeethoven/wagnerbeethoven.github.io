@@ -37,7 +37,7 @@ description: Todas as páginas deste site com uma breve descrição do que você
       <div class="link-cards">
         {% for item in section.items %}
         <a href="{{ item.url }}" class="link-card">
-          <i class="fa-solid fa-arrow-right link-card-icon" aria-hidden="true" style="color:{{ section.color }}"></i>
+          <i class="fa-solid {{ item.icon }}" aria-hidden="true" style="color:{{ item.color }}"></i>
           <div class="link-card-body">
             <p class="link-card-title">{{ item.title }}</p>
             <p class="link-card-url">{{ item.url }}</p>

@@ -61,6 +61,23 @@
   applyAccessibility();
   updateProgress();
 
+  // Sidebar toggle (desktop)
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  if (sidebarToggle) {
+    const collapsed = localStorage.getItem("sidebarCollapsed") === "1";
+    if (collapsed) {
+      document.body.classList.add("sidebar-collapsed");
+      sidebarToggle.setAttribute("aria-expanded", "false");
+      sidebarToggle.setAttribute("aria-label", "Expandir menu");
+    }
+    sidebarToggle.addEventListener("click", function () {
+      const isCollapsed = document.body.classList.toggle("sidebar-collapsed");
+      localStorage.setItem("sidebarCollapsed", isCollapsed ? "1" : "0");
+      sidebarToggle.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+      sidebarToggle.setAttribute("aria-label", isCollapsed ? "Expandir menu" : "Recolher menu");
+    });
+  }
+
   window.addEventListener("scroll", updateProgress, { passive: true });
 
   if (darkToggle) {
