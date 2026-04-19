@@ -1342,11 +1342,7 @@ select:focus-visible {
 
 .sidebar-accordion,
 .sidebar-subaccordion {
-  border-top: 1px dashed var(--border-subtle);
-}
-
-.sidebar-accordion:first-child {
-  border-top: 0;
+  border-top: none;
 }
 
 .sidebar-accordion-summary,
@@ -1356,11 +1352,15 @@ select:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.85rem 0;
-  color: var(--text-primary);
-  font-size: 0.96rem;
-  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.6rem 0 0.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.1rem;
 }
 
 .sidebar-accordion-summary::-webkit-details-marker,
@@ -1369,9 +1369,10 @@ select:focus-visible {
 }
 
 .sidebar-chevron {
-  color: var(--text-muted);
-  font-size: 0.76rem;
+  color: var(--text-secondary);
+  font-size: 0.6rem;
   transition: transform 160ms ease;
+  flex-shrink: 0;
 }
 
 .sidebar-accordion[open]>.sidebar-accordion-summary .sidebar-chevron,
@@ -3619,10 +3620,6 @@ select:focus-visible {
   letter-spacing: 0.01em;
 }
 
-.sidebar-accordion-summary span {
-  font-size: 0.8rem;
-}
-
 /* — Paddings e espaçamentos compactos ————————————————————— */
 
 .content-surface     {
@@ -3930,10 +3927,6 @@ body                 {
 .sidebar-button      {
   font-size: 0.875rem;
   padding: 0.45rem 0.85rem;
-}
-
-.sidebar-accordion-summary span {
-  font-size: 0.875rem;
 }
 
 .sidebar-control-button {
