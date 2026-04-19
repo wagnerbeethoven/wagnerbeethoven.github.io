@@ -1,4 +1,23 @@
 {
   "layout": "layouts/recipe.njk",
   "permalink": "/recipes/{{ page.fileSlug }}/"
+  // ---
+  // title: Arroz de coco
+  // description: Arroz cremoso com leite de coco, perfeito para acompanhar frutos do mar.
+  // time: 30
+  // servings: 4
+  // tags: [salgado, nordeste, acompanhamento]
+  // ---
+  // ## Ingredientes
+  // - 2 xícaras de arroz agulhinha
+  // - 400ml de leite de coco
+  // - 400ml de água
+  // - 1 cebola picada
+  // - 2 dentes de alho
+  // - 2 colheres de azeite
+  // - Sal e cebolinha a gosto
+  // ## Modo de fazer
+  // Refogue a cebola e o alho no azeite até dourar. Adicione o arroz e mexa por 2 minutos. Tempere com sal.
+  // Acrescente a água e o leite de coco. Quando ferver, reduza o fogo, tampe a panela e cozinhe por 15 minutos ou até secar.
+  // Finalize com cebolinha fresca.
 }
