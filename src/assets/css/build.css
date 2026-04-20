@@ -1335,72 +1335,22 @@ select:focus-visible {
   color: var(--text-primary);
 }
 
-.sidebar-accordions {
-  display: grid;
-  gap: 0;
-}
-
-.sidebar-accordion,
-.sidebar-subaccordion {
-  border-top: 1px dashed var(--border-subtle);
-}
-
-.sidebar-accordion:first-child {
-  border-top: 0;
-}
-
-.sidebar-accordion-summary,
-.sidebar-subaccordion-summary {
-  list-style: none;
-  cursor: pointer;
+.sidebar-nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.85rem 0;
-  color: var(--text-primary);
-  font-size: 0.96rem;
-  font-weight: 700;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.5rem;
 }
 
-.sidebar-accordion-summary::-webkit-details-marker,
-.sidebar-subaccordion-summary::-webkit-details-marker {
-  display: none;
+.sidebar-divider {
+  border: none;
+  border-top: 1px dashed var(--border-subtle);
+  margin: 0.5rem 0;
 }
 
-.sidebar-chevron {
-  color: var(--text-muted);
-  font-size: 0.76rem;
-  transition: transform 160ms ease;
-}
-
-.sidebar-accordion[open]>.sidebar-accordion-summary .sidebar-chevron,
-.sidebar-subaccordion[open]>.sidebar-subaccordion-summary .sidebar-chevron {
-  transform: rotate(180deg);
-}
-
-.sidebar-accordion-content {
-  padding: 0 0 0.8rem;
-}
-
-.sidebar-archive-list {
-  display: grid;
-  gap: 0.15rem;
-}
-
-.sidebar-subaccordion {
-  padding-left: 0.15rem;
-}
-
-.sidebar-subaccordion-summary {
-  padding: 0.45rem 0;
+.sidebar-link--explore {
   color: var(--text-secondary);
   font-size: 0.88rem;
-  font-weight: 700;
-}
-
-.sidebar-month-list {
-  padding: 0 0 0.55rem 0.4rem;
 }
 
 .sidebar-count {
@@ -1665,6 +1615,16 @@ select:focus-visible {
   line-height: 1.7;
 }
 
+.last-updated {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-tertiary, var(--text-secondary));
+  font-style: italic;
+}
+
 .content-eyebrow {
   display: inline-block;
   margin-bottom: 0.7rem;
@@ -1889,6 +1849,106 @@ select:focus-visible {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px dashed var(--border-strong);
+}
+
+.cusdis-section {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.cusdis-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.cusdis-engage {
+  margin-bottom: 1.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: var(--surface-alt, var(--bg-secondary));
+  border: 1px solid var(--border-subtle);
+}
+
+.cusdis-engage-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.cusdis-engage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cusdis-engage-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: border-color 120ms, background 120ms;
+}
+
+.cusdis-engage-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle, var(--bg-secondary));
+  text-decoration: none;
+}
+
+.cusdis-engage-or {
+  font-size: 0.82rem;
+  color: var(--text-tertiary, var(--text-muted));
+  margin: 0;
+}
+
+.cusdis-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 120ms, color 120ms;
+}
+
+.cusdis-toggle-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.cusdis-toggle-chevron {
+  font-size: 0.72rem;
+  transition: transform 200ms ease;
+}
+
+.cusdis-toggle-btn[aria-expanded="true"] .cusdis-toggle-chevron {
+  transform: rotate(180deg);
+}
+
+.cusdis-widget {
+  margin-top: 1.25rem;
 }
 
 .inline-pills {
