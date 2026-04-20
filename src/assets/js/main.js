@@ -235,6 +235,10 @@
     ".pill",
     ".editorial-back",
     ".topbar-search-btn",
+    ".share-icon-btn",
+    ".share-chip",
+    ".site-footer-webrings",
+    ".site-footer-copy",
     "[data-no-ext-icon]"
   ].join(",");
 

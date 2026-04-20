@@ -11,7 +11,13 @@
     "build:icons": "node scripts/generate-icons.js",
     "build:assets": "node scripts/fetch-assets.js",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/build.css --minify",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site",
+    "add:movie": "node scripts/add-content.js movie",
+    "add:serie": "node scripts/add-content.js serie",
+    "add:book":  "node scripts/add-content.js book",
+    "add:comic": "node scripts/add-content.js comic",
+    "add:game":  "node scripts/add-content.js game",
+    "add:music": "node scripts/add-content.js music"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

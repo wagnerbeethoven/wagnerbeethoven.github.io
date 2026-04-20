@@ -11,9 +11,14 @@ module.exports = function(eleventyConfig) {
       return "null";
     }
   });
+  const toDateTime = (d) =>
+    typeof d === "string"
+      ? DateTime.fromISO(d, { zone: "utc" })
+      : DateTime.fromJSDate(d, { zone: "utc" });
+
   eleventyConfig.addFilter("readableDate", (dateObj, format = "LLLL dd, yyyy") => {
     try {
-      return DateTime.fromJSDate(dateObj, { zone: "utc" }).setLocale("pt-BR").toFormat(format);
+      return toDateTime(dateObj).setLocale("pt-BR").toFormat(format);
     } catch {
       return "";
     }
@@ -22,7 +27,7 @@ module.exports = function(eleventyConfig) {
   // For use in datetime="..." attributes (YYYY-MM-DD)
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     try {
-      return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+      return toDateTime(dateObj).toFormat("yyyy-LL-dd");
     } catch {
       return "";
     }
@@ -31,7 +36,7 @@ module.exports = function(eleventyConfig) {
   // Short date dd/mm/yy for compact displays
   eleventyConfig.addFilter("shortDate", (dateObj) => {
     try {
-      return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd/LL/yy");
+      return toDateTime(dateObj).toFormat("dd/LL/yy");
     } catch {
       return "";
     }
@@ -40,7 +45,7 @@ module.exports = function(eleventyConfig) {
   // Relative date: "há X dias/semanas/meses" for recent; dd/mm/yyyy for older
   eleventyConfig.addFilter("relativeDate", (dateObj) => {
     try {
-      const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+      const dt = toDateTime(dateObj);
       const days = DateTime.now().diff(dt, "days").days;
       if (days < 1)   return "hoje";
       if (days < 2)   return "há 1 dia";
