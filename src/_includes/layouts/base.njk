@@ -214,39 +214,35 @@
             <a href="/slashes/">Páginas</a>
             <a href="/accessibility/">Acessibilidade</a>
           </nav>
+          {% set fediringHost = site.url | replace('https://', '') | replace('http://', '') | replace('/', '') %}
           <div class="site-footer-webrings" aria-label="Webrings">
             <span class="webring-link">
               <span class="webring-nav">
-                <a href="https://fediring.net/previous?host={{ site.url | replace('https://', '') | replace('http://', '') }}" aria-label="Site anterior no Fediring">‹</a>
+                <a href="{{ site.webrings.fediring.home }}previous?host={{ fediringHost }}" aria-label="Site anterior no Fediring">‹</a>
               </span>
-              <a href="https://fediring.net/" class="webring-link" target="_blank" rel="noopener">Fediring</a>
+              <a href="{{ site.webrings.fediring.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.fediring.label }}</a>
               <span class="webring-nav">
-                <a href="https://fediring.net/next?host={{ site.url | replace('https://', '') | replace('http://', '') }}" aria-label="Próximo site no Fediring">›</a>
+                <a href="{{ site.webrings.fediring.home }}next?host={{ fediringHost }}" aria-label="Próximo site no Fediring">›</a>
               </span>
             </span>
             <span class="webring-link">
-              <span class="webring-nav">
-                <a href="https://xn--sr8hvo.ws/previous" aria-label="Site anterior no IndieWeb Ring">‹</a>
-              </span>
-              <a href="https://xn--sr8hvo.ws/" class="webring-link" target="_blank" rel="noopener">IndieWeb Ring</a>
-              <span class="webring-nav">
-                <a href="https://xn--sr8hvo.ws/next" aria-label="Próximo site no IndieWeb Ring">›</a>
-              </span>
-            </span>
-            <span class="webring-link">
-              <span class="webring-nav">
-                <a href="https://a11y-webring.club/prev" aria-label="Site anterior no A11Y Webring">‹</a>
-              </span>
-              <a href="https://a11y-webring.club/" class="webring-link" target="_blank" rel="noopener">A11Y Webring</a>
-              <span class="webring-nav">
-                <a href="https://a11y-webring.club/next" aria-label="Próximo site no A11Y Webring">›</a>
-              </span>
+              {% if site.webrings.indieweb.previous %}
+                <span class="webring-nav">
+                  <a href="{{ site.webrings.indieweb.previous }}" aria-label="Site anterior no IndieWeb Ring">‹</a>
+                </span>
+              {% endif %}
+              <a href="{{ site.webrings.indieweb.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.indieweb.label }}</a>
+              {% if site.webrings.indieweb.next %}
+                <span class="webring-nav">
+                  <a href="{{ site.webrings.indieweb.next }}" aria-label="Próximo site no IndieWeb Ring">›</a>
+                </span>
+              {% endif %}
             </span>
             <span class="webring-link">
               <span class="webring-nav">
                 <a href="#" class="eb-prev nav-recente" aria-label="Site anterior no Entreblogs">‹</a>
               </span>
-              <a href="https://entreblogs.com.br/" class="webring-link" target="_blank" rel="noopener">Entreblogs</a>
+              <a href="{{ site.webrings.entreblogs.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.entreblogs.label }}</a>
               <span class="webring-nav">
                 <a href="#" class="eb-next nav-anterior" aria-label="Próximo site no Entreblogs">›</a>
               </span>
