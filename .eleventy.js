@@ -1,7 +1,22 @@
 const { DateTime } = require("luxon");
 const tagColors = require("./src/_data/tagColors.json");
+const fs = require("fs");
+const path = require("path");
+
+// Load .env without dotenv dependency
+try {
+  const envPath = path.join(__dirname, ".env");
+  if (fs.existsSync(envPath)) {
+    fs.readFileSync(envPath, "utf8").split("\n").forEach(line => {
+      const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*([^#]*)/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, "");
+    });
+  }
+} catch { /* ignore */ }
 
 module.exports = function(eleventyConfig) {
+  // Expose env vars to templates (never commit values — only keys used at build time)
+  eleventyConfig.addGlobalData("lastfmKey", () => process.env.LASTFM_KEY || "");
   // Filters
   // JSON stringify helper for Nunjucks (used by search.json)
   eleventyConfig.addFilter("json", (value, spaces = 0) => {
