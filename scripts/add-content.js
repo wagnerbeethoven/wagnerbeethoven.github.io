@@ -1,0 +1,587 @@
+#!/usr/bin/env node
+/**
+ * add-content.js — cria entradas de mídia buscando dados automaticamente
+ *
+ * Uso:
+ *   node scripts/add-content.js movie   "Duna"
+ *   node scripts/add-content.js serie   "Dark"
+ *   node scripts/add-content.js book    "Sapiens"
+ *   node scripts/add-content.js music   "Radiohead" "OK Computer"
+ *   node scripts/add-content.js comic   "Watchmen"
+ *   node scripts/add-content.js game    "Return of the Obra Dinn"
+ *
+ * Variáveis de ambiente (.env ou export):
+ *   TMDB_KEY    — TMDB (filmes + séries)   https://www.themoviedb.org/settings/api
+ *   LASTFM_KEY  — Last.fm (músicas)        https://www.last.fm/api/account/create
+ *   RAWG_KEY    — RAWG (jogos)             https://rawg.io/apidocs
+ *   COMICVINE_KEY — Comic Vine (quadrinhos) https://comicvine.gamespot.com/api
+ *   (quadrinhos e livros usam APIs públicas sem chave)
+ */
+
+const fs   = require("fs");
+const path = require("path");
+
+// Carrega .env da raiz do projeto (silencioso se não existir)
+try {
+  const envPath = path.join(__dirname, "..", ".env");
+  if (fs.existsSync(envPath)) {
+    fs.readFileSync(envPath, "utf8").split("\n").forEach(line => {
+      const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*)$/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, "");
+    });
+  }
+} catch { /* ignora */ }
+
+// ── Terminal colors ───────────────────────────────────────────────────────────
+const R = "\x1b[0m", B = "\x1b[1m", DIM = "\x1b[2m";
+const GREEN = "\x1b[32m", YELLOW = "\x1b[33m", RED = "\x1b[31m", CYAN = "\x1b[36m";
+const ok   = (m) => console.log(`${GREEN}✔${R} ${m}`);
+const warn = (m) => console.log(`${YELLOW}⚠${R}  ${m}`);
+const err  = (m) => console.error(`${RED}✖${R} ${m}`);
+const info = (m) => console.log(`${CYAN}→${R} ${m}`);
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function slug(str) {
+  return str.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function today() { return new Date().toISOString().slice(0, 10); }
+
+function yamlStr(val) {
+  if (!val && val !== 0) return '""';
+  const s = String(val);
+  if (/[:#\[\]{},|>&*!'"@%`]/.test(s) || s.includes("\n") || /^\s|\s$/.test(s))
+    return `"${s.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+  return s;
+}
+
+function yamlList(arr) {
+  if (!arr || !arr.length) return "[]";
+  return `[${arr.map(v => yamlStr(v)).join(", ")}]`;
+}
+
+async function get(url) {
+  const res = await fetch(url, { headers: { "User-Agent": "margem-viva/1.0 (add-content)" } });
+  if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
+  return res.json();
+}
+
+function stripHtml(str) {
+  return String(str || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function writeFile(dir, filename, content) {
+  const fullDir  = path.join(__dirname, "..", "src", dir);
+  const fullPath = path.join(fullDir, filename);
+  if (!fs.existsSync(fullDir)) fs.mkdirSync(fullDir, { recursive: true });
+  if (fs.existsSync(fullPath)) {
+    warn(`Arquivo já existe: src/${dir}/${filename}`);
+    warn("Delete o arquivo e rode novamente para recriar.");
+    return false;
+  }
+  fs.writeFileSync(fullPath, content, "utf8");
+  ok(`Criado: src/${dir}/${filename}`);
+  return true;
+}
+
+// ── TMDB — filmes e séries ────────────────────────────────────────────────────
+const TMDB        = "https://api.themoviedb.org/3";
+const IMG         = "https://image.tmdb.org/t/p/w500";
+const LANG        = "pt-BR";
+const countryNames = new Intl.DisplayNames(["pt-BR"], { type: "region" });
+const ptCountry    = (iso) => { try { return countryNames.of(iso) || iso; } catch { return iso; } };
+
+function pickTrailer(videos) {
+  const yt = (videos?.results || []).filter(v => v.site === "YouTube");
+  return (
+    yt.find(v => v.official && v.type === "Trailer" && v.iso_639_1 === "pt") ||
+    yt.find(v => v.official && v.type === "Trailer") ||
+    yt.find(v => v.type === "Trailer") ||
+    yt[0]
+  )?.key || "";
+}
+
+async function tmdbMovieDetail(id, key) {
+  const [d, c, v] = await Promise.all([
+    get(`${TMDB}/movie/${id}?language=${LANG}&api_key=${key}`),
+    get(`${TMDB}/movie/${id}/credits?language=${LANG}&api_key=${key}`),
+    get(`${TMDB}/movie/${id}/videos?language=${LANG}&api_key=${key}`),
+  ]);
+  return {
+    title:     d.title,
+    directors: c.crew?.filter(x => x.job === "Director").map(x => x.name) || [],
+    writers:   c.crew?.filter(x => ["Screenplay","Writer","Story"].includes(x.job)).map(x => x.name).slice(0,3) || [],
+    cast:      c.cast?.slice(0,4).map(x => x.name) || [],
+    genres:    d.genres?.map(g => g.name) || [],
+    country:   d.production_countries?.map(c => ptCountry(c.iso_3166_1)) || [],
+    duration:  d.runtime || null,
+    year:      d.release_date?.slice(0,4) || "",
+    image:     d.poster_path ? IMG + d.poster_path : "",
+    overview:  d.overview || "",
+    trailer:   pickTrailer(v),
+  };
+}
+
+async function tmdbSerieDetail(id, key) {
+  const [d, c, v] = await Promise.all([
+    get(`${TMDB}/tv/${id}?language=${LANG}&api_key=${key}`),
+    get(`${TMDB}/tv/${id}/credits?language=${LANG}&api_key=${key}`),
+    get(`${TMDB}/tv/${id}/videos?language=${LANG}&api_key=${key}`),
+  ]);
+  const fy = d.first_air_date?.slice(0,4) || "";
+  const ly = d.last_air_date?.slice(0,4)  || "";
+  return {
+    title:    d.name,
+    networks: d.networks?.map(n => n.name) || [],
+    years:    fy && ly && fy !== ly ? `${fy}–${ly}` : fy,
+    seasons:  d.number_of_seasons || "",
+    genres:   d.genres?.map(g => g.name) || [],
+    image:    d.poster_path ? IMG + d.poster_path : "",
+    overview: d.overview || "",
+    trailer:  pickTrailer(v),
+  };
+}
+
+// ── Open Library — livros ─────────────────────────────────────────────────────
+async function fetchBook(query) {
+  info(`Buscando livro: "${query}" no Open Library...`);
+  const d = await get(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=5`);
+  const b = d.docs?.[0];
+  if (!b) throw new Error("Nenhum livro encontrado.");
+  const isbn = b.isbn?.[0] || "";
+  info(`Encontrado: ${B}${b.title}${R}${b.author_name?.[0] ? ` — ${b.author_name[0]}` : ""}`);
+  return {
+    title:     b.title || query,
+    author:    b.author_name?.[0] || "",
+    year:      b.first_publish_year ? String(b.first_publish_year) : "",
+    isbn,
+    pages:     b.number_of_pages_median || "",
+    publisher: b.publisher?.[0] || "",
+    image:     isbn ? `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg` : "",
+    subjects:  (b.subject || []).slice(0, 5),
+  };
+}
+
+// ── Google Books — quadrinhos ─────────────────────────────────────────────────
+async function fetchComicGoogleBooks(query) {
+  info(`Buscando quadrinho: "${query}" no Google Books...`);
+  const d = await get(
+    `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&printType=books`
+  );
+  const item = d.items?.[0];
+  if (!item) throw new Error("Nenhum quadrinho encontrado.");
+  const v = item.volumeInfo;
+  const authors = v.authors || [];
+  const isbn    = v.industryIdentifiers?.find(i => i.type === "ISBN_13")?.identifier
+               || v.industryIdentifiers?.find(i => i.type === "ISBN_10")?.identifier || "";
+  const image   = v.imageLinks?.thumbnail?.replace("http://", "https://").replace("&zoom=1", "&zoom=3") || "";
+  info(`Encontrado: ${B}${v.title}${R}${authors[0] ? ` — ${authors[0]}` : ""}`);
+  return {
+    source:    "google-books",
+    title:     v.title || query,
+    writer:    authors[0] || "",
+    artist:    authors[1] || "",
+    publisher: v.publisher || "",
+    year:      v.publishedDate?.slice(0,4) || "",
+    isbn,
+    image,
+    categories: (v.categories || []).slice(0, 4),
+    synopsis:  stripHtml(v.description || ""),
+  };
+}
+
+async function fetchComicComicVine(query) {
+  const key = process.env.COMICVINE_KEY;
+  if (!key) return null;
+
+  info(`Buscando quadrinho: "${query}" na Comic Vine...`);
+  const search = await get(
+    `https://comicvine.gamespot.com/api/search/?api_key=${encodeURIComponent(key)}&format=json&resources=volume&limit=5&query=${encodeURIComponent(query)}&field_list=id,name,start_year,publisher,image,deck,description,count_of_issues`
+  );
+  const volume = search.results?.[0];
+  if (!volume) return null;
+
+  let writer = "", artist = "", cover = "", year = volume.start_year || "";
+  let tags = [];
+  let synopsis = stripHtml(volume.deck || volume.description || "");
+
+  try {
+    const issues = await get(
+      `https://comicvine.gamespot.com/api/issues/?api_key=${encodeURIComponent(key)}&format=json&filter=volume:${volume.id}&limit=1&sort=cover_date:asc&field_list=name,issue_number,cover_date,image,description,person_credits`
+    );
+    const issue = issues.results?.[0];
+    if (issue) {
+      cover = issue.image?.original_url || issue.image?.small_url || "";
+      year = issue.cover_date?.slice(0,4) || year;
+      synopsis = stripHtml(issue.description || synopsis);
+      const people = issue.person_credits || [];
+      writer = people.filter((p) => /writer/i.test(p.role || "")).map((p) => p.name).slice(0, 2).join(", ");
+      artist = people.filter((p) => /(artist|penciler|inker|cover)/i.test(p.role || "")).map((p) => p.name).slice(0, 3).join(", ");
+    }
+  } catch {
+    /* ignora enriquecimento por issue */
+  }
+
+  if (volume.publisher?.name) tags.push(volume.publisher.name);
+
+  return {
+    source:    "comic-vine",
+    title:     volume.name || query,
+    writer,
+    artist,
+    publisher: volume.publisher?.name || "",
+    year,
+    isbn:      "",
+    image:     cover || volume.image?.original_url || volume.image?.small_url || "",
+    categories: tags,
+    synopsis,
+  };
+}
+
+async function fetchComic(query) {
+  const [google, comicvine] = await Promise.all([
+    fetchComicGoogleBooks(query).catch(() => null),
+    fetchComicComicVine(query).catch(() => null),
+  ]);
+
+  if (!google && !comicvine) throw new Error("Nenhum quadrinho encontrado.");
+
+  const base = google || comicvine;
+  const extra = comicvine || google;
+
+  if (base?.title) {
+    info(`Encontrado: ${B}${base.title}${R}${base.writer ? ` — ${base.writer}` : ""}`);
+  }
+
+  return {
+    title:      base?.title || extra?.title || query,
+    writer:     comicvine?.writer || google?.writer || "",
+    artist:     comicvine?.artist || google?.artist || "",
+    publisher:  google?.publisher || comicvine?.publisher || "",
+    year:       google?.year || comicvine?.year || "",
+    isbn:       google?.isbn || "",
+    image:      google?.image || comicvine?.image || "",
+    categories: [...new Set([...(google?.categories || []), ...(comicvine?.categories || [])])].slice(0, 6),
+    synopsis:   comicvine?.synopsis || google?.synopsis || "",
+  };
+}
+
+// ── RAWG — jogos ──────────────────────────────────────────────────────────────
+async function fetchGame(query) {
+  const key = process.env.RAWG_KEY || "";
+  const url = `https://api.rawg.io/api/games?search=${encodeURIComponent(query)}&page_size=5`
+            + (key ? `&key=${key}` : "");
+  info(`Buscando jogo: "${query}" no RAWG...`);
+  const d = await get(url);
+  const g = d.results?.[0];
+  if (!g) throw new Error("Nenhum jogo encontrado.");
+  info(`Encontrado: ${B}${g.name}${R} (${g.released?.slice(0,4) || "?"})`);
+
+  // Busca detalhes para enriquecer a entrada
+  let developer = "", genres = [], platforms = [], overview = "", trailer = "";
+  try {
+    const keyParam = key ? `?key=${key}` : "";
+    const [detail, movies] = await Promise.all([
+      get(`https://api.rawg.io/api/games/${g.id}${keyParam}`),
+      get(`https://api.rawg.io/api/games/${g.id}/movies${keyParam}`).catch(() => ({ results: [] })),
+    ]);
+    developer  = detail.developers?.[0]?.name || "";
+    genres     = detail.genres?.map(x => x.name) || [];
+    platforms  = detail.platforms?.map(x => x.platform.name).slice(0,3) || [];
+    overview   = (detail.description_raw || "").replace(/\s+/g, " ").trim();
+    trailer    = movies?.results?.[0]?.data?.max || movies?.results?.[0]?.data?.["480"] || detail.clip?.clip || detail.clip?.clips?.full || "";
+  } catch { /* ignora erros de detalhe */ }
+
+  return {
+    title:     g.name,
+    developer,
+    platform:  platforms.join(", "),
+    year:      g.released?.slice(0,4) || "",
+    image:     g.background_image || "",
+    genres,
+    overview,
+    trailer,
+  };
+}
+
+// ── Last.fm / MusicBrainz — álbuns ───────────────────────────────────────────
+async function fetchAlbum(artist, album) {
+  const key = process.env.LASTFM_KEY;
+  let lastfm = null;
+  let musicbrainz = null;
+
+  if (key) {
+    try {
+      info(`Buscando álbum: "${artist} — ${album}" no Last.fm...`);
+      const d = await get(
+        `https://ws.audioscrobbler.com/2.0/?method=album.getinfo` +
+        `&artist=${encodeURIComponent(artist)}&album=${encodeURIComponent(album)}` +
+        `&api_key=${key}&lang=pt&format=json`
+      );
+      if (!d.error && d.album) {
+        const a = d.album;
+        lastfm = {
+          title:  a.name,
+          artist: a.artist,
+          image:  a.image?.find(i => i.size === "extralarge")?.["#text"]
+               || a.image?.find(i => i.size === "large")?.["#text"]
+               || "",
+          tags:   a.tags?.tag?.map(t => t.name).slice(0,5) || [],
+          wiki:   a.wiki?.summary
+                    ?.replace(/<[^>]+>/g," ")
+                    .replace(/Read more on Last\.fm\.?$/i, "")
+                    .replace(/\s+/g," ")
+                    .trim()
+                    .slice(0,600) || "",
+        };
+      }
+    } catch {
+      /* segue com MusicBrainz */
+    }
+  } else {
+    warn("LASTFM_KEY não definido. Last.fm será pulado.");
+  }
+
+  try {
+    info(`Buscando álbum: "${artist} — ${album}" no MusicBrainz...`);
+    const q = `release:"${album}" AND artist:"${artist}"`;
+    const d = await get(`https://musicbrainz.org/ws/2/release/?query=${encodeURIComponent(q)}&fmt=json&limit=5`);
+    const r = d.releases?.[0];
+    if (r) {
+      let image = "";
+      try {
+        const ca = await get(`https://coverartarchive.org/release/${r.id}`);
+        image = ca.images?.[0]?.thumbnails?.large || ca.images?.[0]?.image || "";
+      } catch { /* sem capa */ }
+      musicbrainz = {
+        title:  r.title,
+        artist,
+        year:   r.date?.slice(0,4) || "",
+        label:  r["label-info"]?.[0]?.label?.name || "",
+        image,
+      };
+    }
+  } catch {
+    /* ignora e usa Last.fm se houver */
+  }
+
+  if (!lastfm && !musicbrainz) throw new Error("Álbum não encontrado.");
+
+  const merged = {
+    title:  lastfm?.title || musicbrainz?.title || album,
+    artist: lastfm?.artist || musicbrainz?.artist || artist,
+    year:   musicbrainz?.year || "",
+    label:  musicbrainz?.label || "",
+    image:  lastfm?.image || musicbrainz?.image || "",
+    tags:   lastfm?.tags || [],
+    wiki:   lastfm?.wiki || "",
+  };
+
+  info(`Encontrado: ${B}${merged.title}${R} — ${merged.artist}`);
+  return merged;
+}
+
+// ── Frontmatters ──────────────────────────────────────────────────────────────
+const fm = {
+  movie: (d) => `---
+title: ${yamlStr(d.title)}
+director: ${yamlStr(d.directors.join(", "))}
+cast: ${yamlStr(d.cast.join(", "))}
+writers: ${yamlStr(d.writers.join(", "))}
+year: ${d.year}
+country: ${yamlList(d.country)}
+duration: ${d.duration || '""'}
+image: ${yamlStr(d.image)}
+ rating: ""
+tags: ${yamlList(d.genres)}
+synopsis: ${yamlStr(d.overview)}
+note: ""
+trailer: ${yamlStr(d.trailer)}
+`,
+
+  serie: (d) => `---
+title: ${yamlStr(d.title)}
+platform: ${yamlStr(d.networks.join(", "))}
+years: ${yamlStr(d.years)}
+seasons: ${d.seasons}
+image: ${yamlStr(d.image)}
+status: want
+rating: ""
+tags: ${yamlList(d.genres)}
+synopsis: ${yamlStr(d.overview)}
+note: ""
+trailer: ${yamlStr(d.trailer)}
+`,
+
+  book: (d) => `---
+title: ${yamlStr(d.title)}
+author: ${yamlStr(d.author)}
+year: ${d.year}
+publisher: ${yamlStr(d.publisher)}
+pages: ${d.pages || '""'}
+isbn: ${yamlStr(d.isbn)}
+image: ${yamlStr(d.image)}
+status: want
+rating: ""
+tags: ${yamlList(d.subjects)}
+note: ""
+---
+`,
+
+  comic: (d) => `---
+title: ${yamlStr(d.title)}
+writer: ${yamlStr(d.writer)}
+artist: ${yamlStr(d.artist)}
+publisher: ${yamlStr(d.publisher)}
+year: ${d.year}
+volumes: ""
+image: ${yamlStr(d.image)}
+status: want
+rating: ""
+tags: ${yamlList(d.categories)}
+synopsis: ${yamlStr(d.synopsis)}
+note: ""
+---
+`,
+
+  game: (d) => `---
+title: ${yamlStr(d.title)}
+developer: ${yamlStr(d.developer)}
+platform: ${yamlStr(d.platform)}
+year: ${d.year}
+image: ${yamlStr(d.image)}
+status: want
+rating: ""
+tags: ${yamlList(d.genres)}
+synopsis: ${yamlStr(d.overview)}
+note: ""
+trailer: ${yamlStr(d.trailer)}
+---
+`,
+
+  music: (d) => `---
+title: ${yamlStr(d.title)}
+artist: ${yamlStr(d.artist)}
+year: ${yamlStr(d.year)}
+label: ${yamlStr(d.label)}
+genre: ""
+image: ${yamlStr(d.image)}
+spotify: ""
+rating: ""
+tags: ${yamlList(d.tags)}
+note: ""
+---
+${d.wiki ? `\n${d.wiki}\n` : ""}`,
+};
+
+// ── Comandos ──────────────────────────────────────────────────────────────────
+async function addMovie(query) {
+  const key = process.env.TMDB_KEY;
+  if (!key) { err("TMDB_KEY não definido. Veja o help."); process.exit(1); }
+  info(`Buscando filme: "${query}" no TMDB...`);
+  const r = await get(`${TMDB}/search/movie?query=${encodeURIComponent(query)}&language=${LANG}&api_key=${key}`);
+  const h = r.results?.[0];
+  if (!h) { err("Nenhum filme encontrado."); process.exit(1); }
+  info(`Encontrado: ${B}${h.title}${R} (${h.release_date?.slice(0,4) || "?"})`);
+  const d = await tmdbMovieDetail(h.id, key);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("movies", f, fm.movie(d));
+  console.log(`\n${DIM}${fm.movie(d)}${R}`);
+}
+
+async function addSerie(query) {
+  const key = process.env.TMDB_KEY;
+  if (!key) { err("TMDB_KEY não definido. Veja o help."); process.exit(1); }
+  info(`Buscando série: "${query}" no TMDB...`);
+  const r = await get(`${TMDB}/search/tv?query=${encodeURIComponent(query)}&language=${LANG}&api_key=${key}`);
+  const h = r.results?.[0];
+  if (!h) { err("Nenhuma série encontrada."); process.exit(1); }
+  info(`Encontrada: ${B}${h.name}${R} (${h.first_air_date?.slice(0,4) || "?"})`);
+  const d = await tmdbSerieDetail(h.id, key);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("series", f, fm.serie(d));
+  console.log(`\n${DIM}${fm.serie(d)}${R}`);
+}
+
+async function addBook(query) {
+  const d = await fetchBook(query);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("bookshelf", f, fm.book(d));
+  console.log(`\n${DIM}${fm.book(d)}${R}`);
+}
+
+async function addComic(query) {
+  const d = await fetchComic(query);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("comics", f, fm.comic(d));
+  console.log(`\n${DIM}${fm.comic(d)}${R}`);
+}
+
+async function addGame(query) {
+  const d = await fetchGame(query);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("games", f, fm.game(d));
+  console.log(`\n${DIM}${fm.game(d)}${R}`);
+}
+
+async function addMusic(artist, album) {
+  if (!album) { err(`Informe artista E álbum:\n  node scripts/add-content.js music "Artista" "Álbum"`); process.exit(1); }
+  const d = await fetchAlbum(artist, album);
+  const f = `${today()}-${slug(d.title)}.md`;
+  writeFile("music", f, fm.music(d));
+  console.log(`\n${DIM}${fm.music(d)}${R}`);
+}
+
+function showHelp() {
+  console.log(`
+${B}add-content${R} — adiciona entradas de mídia automaticamente
+
+${B}Uso:${R}
+  node scripts/add-content.js movie  ${DIM}"Título"${R}
+  node scripts/add-content.js serie  ${DIM}"Título"${R}
+  node scripts/add-content.js book   ${DIM}"Título"${R}
+  node scripts/add-content.js comic  ${DIM}"Título"${R}
+  node scripts/add-content.js game   ${DIM}"Título"${R}
+  node scripts/add-content.js music  ${DIM}"Artista" "Álbum"${R}
+
+${B}Variáveis de ambiente:${R}
+  TMDB_KEY    Filmes e séries  → https://www.themoviedb.org/settings/api
+  LASTFM_KEY  Músicas          → https://www.last.fm/api/account/create  (opcional, usa MusicBrainz sem ela)
+  RAWG_KEY       Jogos            → https://rawg.io/apidocs                 (opcional, funciona sem chave com limitações)
+  COMICVINE_KEY  Quadrinhos       → https://comicvine.gamespot.com/api      (opcional, enriquece o Google Books)
+  (livros usam Open Library; quadrinhos usam Google Books com fallback/enriquecimento opcional)
+
+${B}Exemplos:${R}
+  node scripts/add-content.js movie  "Cidade de Deus"
+  node scripts/add-content.js serie  "Breaking Bad"
+  node scripts/add-content.js book   "Dom Casmurro"
+  node scripts/add-content.js comic  "Saga"
+  node scripts/add-content.js game   "Hollow Knight"
+  node scripts/add-content.js music  "Criolo" "Nó na Orelha"
+`);
+}
+
+// ── Entry point ───────────────────────────────────────────────────────────────
+const [type, ...args] = process.argv.slice(2);
+
+(async () => {
+  try {
+    switch (type) {
+      case "movie":  await addMovie(args.join(" ")); break;
+      case "serie":  await addSerie(args.join(" ")); break;
+      case "book":   await addBook(args.join(" "));  break;
+      case "comic":  await addComic(args.join(" ")); break;
+      case "game":   await addGame(args.join(" "));  break;
+      case "music":  await addMusic(args[0], args.slice(1).join(" ")); break;
+      default:       showHelp();
+    }
+  } catch (e) {
+    err(e.message);
+    process.exit(1);
+  }
+})();
