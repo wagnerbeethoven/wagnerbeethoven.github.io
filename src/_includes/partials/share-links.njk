@@ -20,8 +20,10 @@
      class="share-icon-btn" aria-label="Compartilhar no Mastodon">
     <i class="fa-brands fa-mastodon" style="color:#6364FF" aria-hidden="true"></i>
   </a>
-  <button onclick="navigator.share ? navigator.share({title: '{{ title }}', url: '{{ site.url }}{{ page.url }}'}) : navigator.clipboard.writeText('{{ site.url }}{{ page.url }}')"
-          class="share-chip" aria-label="Copiar link">
+  <button class="share-chip js-share-btn"
+          aria-label="Copiar link"
+          data-share-title="{{ title }}"
+          data-share-url="{{ site.url }}{{ page.url }}">
     <i class="fa-solid fa-link" style="color:var(--accent)" aria-hidden="true"></i> <span>Copiar link</span>
   </button>
 </div>

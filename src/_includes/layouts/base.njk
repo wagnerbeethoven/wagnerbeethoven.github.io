@@ -48,6 +48,7 @@
   <link rel="dns-prefetch" href="https://cusdis.com">
   <link rel="stylesheet" href="/assets/css/build.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Feed" href="/feed.xml" />
+  <link rel="alternate" type="application/feed+json" title="{{ site.name }} JSON Feed" href="/feed.json" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="mask-icon" href="/assets/favicon.svg" color="#bb4d33">
@@ -56,6 +57,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#681414" />
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.min.css">
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js" defer></script>
@@ -78,7 +80,7 @@
     <div class="sidebar-overlay" aria-hidden="true"></div>
 
     <aside class="site-sidebar h-card" id="site-sidebar">
-      <img class="sidebar-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" />
+      <img class="sidebar-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" width="80" height="80" />
       <div class="sidebar-name p-name">{{ site.author }}</div>
       <div class="sidebar-meta">{{ site.location }}</div>
       <p class="sr-only p-note">{{ site.bio.short }}</p>

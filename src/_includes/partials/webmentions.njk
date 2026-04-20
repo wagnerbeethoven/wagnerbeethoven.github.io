@@ -4,7 +4,7 @@
       <article class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
         <div class="flex items-start space-x-3">
           {% if mention.author.photo %}
-            <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="w-10 h-10 rounded-full" />
+            <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="w-10 h-10 rounded-full" width="40" height="40" loading="lazy" />
           {% else %}
             <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
               <span class="text-sm font-medium">{{ mention.author.name | first }}</span>

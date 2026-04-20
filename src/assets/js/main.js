@@ -273,4 +273,20 @@
     icon.setAttribute("aria-hidden", "true");
     a.appendChild(icon);
   });
+
+  // Share button (replaces inline onclick)
+  document.querySelectorAll(".js-share-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var title = btn.dataset.shareTitle || document.title;
+      var url   = btn.dataset.shareUrl   || location.href;
+      if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(function () {});
+      } else {
+        navigator.clipboard.writeText(url).then(function () {
+          var label = btn.querySelector("span");
+          if (label) { var orig = label.textContent; label.textContent = "Copiado!"; setTimeout(function () { label.textContent = orig; }, 2000); }
+        }).catch(function () {});
+      }
+    });
+  });
 })();
