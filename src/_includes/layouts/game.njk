@@ -13,86 +13,101 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<div class="content-surface">
-  <nav class="breadcrumb" aria-label="Navegação estrutural">
-    <ol class="breadcrumb-list">
-      <li class="breadcrumb-item"><a href="/">Início</a></li>
-      <li class="breadcrumb-item"><a href="/games/">Jogos</a></li>
-      <li class="breadcrumb-item breadcrumb-item--current" aria-current="page">{{ title }}</li>
-    </ol>
-  </nav>
+<section class="content-frame">
+  <div class="content-surface media-page">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Jogos", url: "/games/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">{{ title }}</h1>
+      {% if developer %}<p class="media-page-subtitle">{{ developer }}</p>{% endif %}
+      {% if platform %}
+        {% set platformText = platform | lower %}
+        <ul class="platform-icons" aria-label="Plataformas">
+          {% if "pc" in platformText %}
+            <li class="platform-icons-item" title="PC" aria-label="PC"><i class="fa-solid fa-desktop" aria-hidden="true"></i></li>
+          {% endif %}
+          {% if "playstation" in platformText %}
+            <li class="platform-icons-item" title="PlayStation" aria-label="PlayStation"><i class="fa-brands fa-playstation" aria-hidden="true"></i></li>
+          {% endif %}
+          {% if "xbox" in platformText %}
+            <li class="platform-icons-item" title="Xbox" aria-label="Xbox"><i class="fa-brands fa-xbox" aria-hidden="true"></i></li>
+          {% endif %}
+          {% if "nintendo" in platformText or "switch" in platformText %}
+            <li class="platform-icons-item" title="Nintendo" aria-label="Nintendo"><i class="fa-solid fa-gamepad" aria-hidden="true"></i></li>
+          {% endif %}
+          {% if "ios" in platformText or "android" in platformText or "mobile" in platformText %}
+            <li class="platform-icons-item" title="Mobile" aria-label="Mobile"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></li>
+          {% endif %}
+          {% if "mac" in platformText or "linux" in platformText %}
+            <li class="platform-icons-item" title="Desktop" aria-label="Desktop"><i class="fa-solid fa-laptop" aria-hidden="true"></i></li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    </header>
 
-  <div class="content-frame">
-    <article class="media-card">
+    <div class="media-detail">
       <div class="media-poster">
         {% if image %}
           <img src="{{ image }}" alt="Capa de {{ title }}" class="media-poster-img" loading="lazy">
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem imagem disponível">
-            <span>🎮</span>
-          </div>
+          <div class="media-poster-placeholder" aria-label="Sem imagem disponivel">🎮</div>
         {% endif %}
       </div>
 
-      <div class="media-info">
-        <h1 class="media-title">{{ title }}</h1>
-
+      <div class="media-detail-info">
         <dl class="media-meta">
-          {% if developer %}
-            <dt>Desenvolvedora</dt>
-            <dd>{{ developer }}</dd>
-          {% endif %}
-          {% if platform %}
-            <dt>Plataforma</dt>
-            <dd>{{ platform }}</dd>
-          {% endif %}
-          {% if year %}
-            <dt>Ano</dt>
-            <dd>{{ year }}</dd>
-          {% endif %}
+          {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
           {% if rating %}
             {% set r = rating | int %}
-            <dt>Avaliação</dt>
-            <dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd>
+            <div><dt>Avaliacao</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
           {% endif %}
         </dl>
 
         {% if tags %}
-          <ul class="media-tags" aria-label="Tags">
+          <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li class="media-tag-pill">{{ tag }}</li>
+              <li><span class="pill">{{ tag }}</span></li>
             {% endfor %}
           </ul>
         {% endif %}
       </div>
-    </article>
+    </div>
+
+    {% set synopsisText = synopsis or (content | striptags | trim) %}
+    {% if synopsisText %}
+      <h2 class="media-section-title">Sinopse</h2>
+      <div class="media-text-block">
+        <p class="media-note">{{ synopsisText }}</p>
+      </div>
+    {% endif %}
 
     {% if trailer %}
+      <h2 class="media-section-title">Trailer</h2>
       <div class="media-trailer">
-        <h2 class="media-trailer-title">Trailer</h2>
-        <div class="media-trailer-embed">
+        {% if ".mp4" in trailer or ".webm" in trailer %}
+          <video controls preload="metadata" playsinline>
+            <source src="{{ trailer }}">
+          </video>
+        {% else %}
+          {% if "youtube.com/" in trailer or "youtu.be/" in trailer or "youtube-nocookie.com/" in trailer %}
+            {% set trailerSrc = trailer %}
+          {% else %}
+            {% set trailerSrc = "https://www.youtube.com/embed/" + trailer %}
+          {% endif %}
           <iframe
-            src="https://www.youtube.com/embed/{{ trailer }}"
+            src="{{ trailerSrc }}"
             title="Trailer de {{ title }}"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy"
           ></iframe>
-        </div>
+        {% endif %}
       </div>
     {% endif %}
 
-    {% if note or content %}
-      <div class="media-review">
-        {% if note %}
-          <p class="media-note">{{ note }}</p>
-        {% endif %}
-        {% if content %}
-          <div class="prose">{{ content | safe }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+    {% if note %}<p class="media-note">{{ note }}</p>{% endif %}
+    {% if content and synopsis %}<div class="prose">{{ content | safe }}</div>{% endif %}
 
     {% include "partials/share-links.njk" %}
   </div>
-</div>
+</section>
