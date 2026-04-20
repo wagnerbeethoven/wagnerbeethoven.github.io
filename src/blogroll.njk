@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/blogroll/"
 title: Blogroll
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Blogroll
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Blogroll</h1>
       <p class="entry-summary">Uma lista curada de blogs, sites e feeds que leio e recomendo.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="prose mb-8">

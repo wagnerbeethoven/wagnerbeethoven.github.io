@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/sitemap/"
 title: Mapa do site
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -23,12 +24,13 @@ title: Mapa do site
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Mapa do site</h1>
       <p class="entry-summary">Um mapa completo com tudo neste site, incluindo páginas fixas e conteúdo publicado.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set totalPosts = collections.posts | default([]) | length %}
     {% set totalNotes = collections.notes | default([]) | length %}
     {% set totalPoems = collections.poetry | default([]) | length %}
-    {% set totalBooks = collections.books | default([]) | length %}
+    {% set totalBooks = collections.bookshelf | default([]) | length %}
     {% set totalMovies = collections.movies | default([]) | length %}
     {% set totalSeries = collections.series | default([]) | length %}
     {% set totalGames = collections.games | default([]) | length %}

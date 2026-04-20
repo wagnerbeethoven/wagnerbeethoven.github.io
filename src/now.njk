@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 permalink: "/now/"
 title: Now
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Now
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">No que estou agora</h1>
       <p class="entry-summary">Um retrato simples do que esta recebendo minha energia neste momento.</p>
+      {% include "partials/last-updated.njk" %}
     </header>
 
     <div class="prose">

@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/colophon/"
 title: Colophon
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Colophon
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Colophon</h1>
       <p class="entry-summary">As decisões técnicas, ferramentas e filosofia por trás da construção deste site.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {# ── Ponto de partida ─────────────────────────────────── #}

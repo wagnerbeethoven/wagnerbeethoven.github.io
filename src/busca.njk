@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/busca/"
 title: Busca
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Busca
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Busca</h1>
       <p class="entry-summary">Pesquise em todo o conteúdo do site — posts, notas, poesias, livros, filmes e mais.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="search-page-wrap">

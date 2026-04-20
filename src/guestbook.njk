@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/guestbook/"
 title: Livro de visitas
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Livro de visitas
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Livro de visitas</h1>
       <p class="entry-summary">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. Fico feliz em saber que você esteve aqui.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {# ── Formulário ─────────────────────────────────────────── #}

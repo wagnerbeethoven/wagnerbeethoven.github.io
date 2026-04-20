@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 title: Livros
 permalink: /bookshelf/
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ permalink: /bookshelf/
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Livros</h1>
       <p class="entry-summary">Um espaço para registrar leituras, releituras e notas de percurso.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set allBooks = collections.bookshelf | default([]) %}

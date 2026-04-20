@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 permalink: "/about/"
 title: Sobre
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Sobre
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Sobre mim</h1>
       <p class="entry-summary">Quem escreve, o que sustenta este espaço e por que ele existe.</p>
+      {% include "partials/last-updated.njk" %}
     </header>
 
     <div class="prose mb-8">
@@ -87,7 +89,7 @@ title: Sobre
       </p>
       <p>
         Publico <a href="/blog/">textos</a> e <a href="/notes/">notas rápidas</a>,
-        às vezes <a href="/poetry/">poesia</a> e uma coleção viva de
+        às vezes <a href="/poetry/">poesia</a> (que não são minhas) e uma coleção viva de
         <a href="/links/">links</a> interessantes que encontro pela web.
         Há também uma <a href="/now/">página /now</a> com o que estou fazendo no momento,
         uma lista das <a href="/uses/">ferramentas que uso</a> e um

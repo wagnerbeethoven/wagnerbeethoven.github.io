@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/archive/"
 title: Arquivo
+showUpdated: true
 ---
 {% set monthNames = {
   "01": "janeiro",
@@ -39,6 +40,7 @@ title: Arquivo
       {% set total = (collections.posts | default([]) | length) + (collections.notes | default([]) | length) + (collections.poetry | default([]) | length) + (collections.recipes | default([]) | length) %}
       {{ total }} item{% if total != 1 %}s{% endif %} publicado{% if total != 1 %}s{% endif %}, organizados por ano e mês.
       </p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}

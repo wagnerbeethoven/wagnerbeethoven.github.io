@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 title: Currículo
 permalink: /resume/
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ permalink: /resume/
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Currículo</h1>
       <p class="entry-summary">Uma versão aberta do meu perfil, com o que faz sentido publicar sem filtro de plataforma.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="uses-section" style="border-top:none;padding-top:0">

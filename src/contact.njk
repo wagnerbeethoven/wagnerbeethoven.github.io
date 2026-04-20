@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/contact/"
 title: Contato
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Contato
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Entre em contato</h1>
       <p class="entry-summary">Se você quiser conversar, dar sugestões ou colaborar, este é o lugar certo.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="uses-section" style="border-top:none;padding-top:0">

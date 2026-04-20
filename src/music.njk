@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/music/"
 title: Música
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Música
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Música</h1>
       <p class="entry-summary">Álbuns que marcaram, artistas que ficaram e o que está tocando agora.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set allAlbums = collections.music | default([]) %}

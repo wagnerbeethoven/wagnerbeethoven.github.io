@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 title: Projetos
 permalink: /projects/
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ permalink: /projects/
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Projetos</h1>
       <p class="entry-summary">Projetos pessoais, experimentos e coisas que merecem uma pagina propria.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="feed-stack">

@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 title: Portfólio
 permalink: /portfolio/
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ permalink: /portfolio/
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Portfólio</h1>
       <p class="entry-summary">Uma visão geral das frentes em que atuo — design de produto, acessibilidade e arquitetura da informação.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {# ── Sobre o trabalho ─────────────────────────────────── #}

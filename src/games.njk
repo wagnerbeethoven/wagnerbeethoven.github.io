@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/games/"
 title: Jogos
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Jogos
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Jogos</h1>
       <p class="entry-summary">Um registro do que joguei, do que estou jogando e da lista de espera.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set allGames = collections.games | default([]) %}

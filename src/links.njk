@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 title: Links
 permalink: /links/
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ permalink: /links/
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Links</h1>
       <p class="entry-summary">Referencias, sites e lugares da web que valem revisitar.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     <div class="link-cards">

@@ -1,8 +1,9 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/slashes/"
 title: Páginas do site
 description: Todas as páginas deste site com uma breve descrição do que você encontra em cada uma.
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -26,6 +27,7 @@ description: Todas as páginas deste site com uma breve descrição do que você
         Uma lista completa do que existe neste site — atualizada conforme o que está efetivamente publicado.
         Inspirado na convenção <a href="https://slashpages.net/" target="_blank" rel="noopener">slashpages.net</a>.
       </p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set totalPosts = collections.posts | default([]) | length %}

@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/style/"
 title: Style Guide
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Style Guide
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Style Guide</h1>
       <p class="entry-summary">Referência visual do design system deste site: cores, tipografia, componentes e padrões de interface.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {# ── Cores ────────────────────────────────────────────── #}

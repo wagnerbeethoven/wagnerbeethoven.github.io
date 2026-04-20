@@ -1,8 +1,9 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/changelog/"
 title: Changelog
 description: Histórico de mudanças, melhorias e publicações neste site.
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -26,6 +27,7 @@ description: Histórico de mudanças, melhorias e publicações neste site.
         Registro automático de todas as mudanças e publicações feitas neste site,
         gerado a partir do histórico do repositório git.
       </p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% if changelog.byMonth | length > 0 %}

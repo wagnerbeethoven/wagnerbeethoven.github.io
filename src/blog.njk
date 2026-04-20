@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 pagination:
   data: collections.posts
@@ -6,6 +6,7 @@ pagination:
   alias: posts
 permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 title: Blog
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -26,6 +27,7 @@ title: Blog
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Blog</h1>
       <p class="entry-summary">Leitura longa, notas duráveis e arquivo pessoal.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% if posts | length > 0 %}

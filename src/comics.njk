@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/comics/"
 title: Quadrinhos
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Quadrinhos
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Quadrinhos</h1>
       <p class="entry-summary">Graphic novels, HQs e mangás — o que li, o que estou lendo e o que quero ler.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set allComics = collections.comics | default([]) %}

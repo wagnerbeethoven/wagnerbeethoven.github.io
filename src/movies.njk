@@ -1,7 +1,8 @@
----
+﻿---
 layout: layouts/base.njk
 permalink: "/movies/"
 title: Filmes
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,6 +23,7 @@ title: Filmes
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Filmes</h1>
       <p class="entry-summary">Um registro do que assisti, do que ficou e do que ainda quero ver.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set allMovies = collections.movies | default([]) %}

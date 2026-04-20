@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 title: Notas
 pagination:
@@ -7,6 +7,7 @@ pagination:
   alias: items
   reverse: true
 permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -27,6 +28,7 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Notas</h1>
       <p class="entry-summary">Observações curtas, fragmentos e ideias que pedem pouco contexto.</p>
+      {%- include "partials/last-updated.njk" %}
     </header>
 
     {% set items = items | default([]) %}
