@@ -1,0 +1,82 @@
+<section class="cusdis-section" aria-label="Comentários">
+  <h2 class="cusdis-heading">
+    <i class="fa-regular fa-comments" aria-hidden="true"></i> Comentários
+  </h2>
+
+  <div class="cusdis-engage">
+    <p class="cusdis-engage-text">Tem algo a dizer sobre este texto? Algumas formas de responder:</p>
+    <ul class="cusdis-engage-list">
+      <li>
+        <a href="mailto:{{ site.email }}?subject={{ title | urlencode }}" class="cusdis-engage-link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          Mande um e-mail
+        </a>
+      </li>
+      <li>
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener" class="cusdis-engage-link">
+          <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+          Comente no Bluesky
+        </a>
+      </li>
+      <li>
+        <a href="/guestbook/" class="cusdis-engage-link">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          Assine o livro de visitas
+        </a>
+      </li>
+    </ul>
+    <button
+      class="cusdis-toggle-btn"
+      aria-expanded="false"
+      aria-controls="cusdis-widget"
+      type="button"
+    >
+      <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+      <span>Deixar um comentário aqui</span>
+      <i class="fa-solid fa-chevron-down cusdis-toggle-chevron" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div id="cusdis-widget" class="cusdis-widget" hidden>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="eb72c89e-1a3c-456a-a8a3-3554a1facbfd"
+      data-page-id="{{ page.url }}"
+      data-page-url="{{ site.url }}{{ page.url }}"
+      data-page-title="{{ title or (page.date | readableDate('dd MMM yyyy')) }}"
+      data-theme="auto"
+    ></div>
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.currentScript.previousElementSibling.previousElementSibling.querySelector('.cusdis-toggle-btn');
+      var widget = document.getElementById('cusdis-widget');
+      var loaded = false;
+
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        if (!open) {
+          widget.hidden = false;
+          btn.setAttribute('aria-expanded', 'true');
+          if (!loaded) {
+            loaded = true;
+            var s = document.createElement('script');
+            s.src = 'https://cusdis.com/js/cusdis.es.js';
+            s.async = true;
+            s.defer = true;
+            document.body.appendChild(s);
+            s.onload = function () {
+              if (window.CUSDIS && window.CUSDIS.renderTo) {
+                window.CUSDIS.renderTo(document.getElementById('cusdis_thread'));
+              }
+            };
+          }
+        } else {
+          widget.hidden = true;
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</section>

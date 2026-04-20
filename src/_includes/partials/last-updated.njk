@@ -1,0 +1,14 @@
+{% if updated or showUpdated %}
+  {% if updated %}
+    {% set _updatedDate = updated %}
+  {% else %}
+    {% set _updatedDate = page.inputPath | gitLastModified %}
+  {% endif %}
+  {% if _updatedDate %}
+  <p class="last-updated">
+    <i class="fa-regular fa-clock" aria-hidden="true"></i>
+    Última atualização:
+    <time datetime="{{ _updatedDate | htmlDateString }}">{{ _updatedDate | readableDate("dd 'de' MMMM 'de' yyyy") }}</time>
+  </p>
+  {% endif %}
+{% endif %}
