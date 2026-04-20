@@ -192,13 +192,17 @@
   const lightboxBackdrop = document.getElementById("lightbox-backdrop");
   const lightboxCloseBtn = document.getElementById("lightbox-close-btn");
 
-  function openLightbox(src, alt, caption) {
+  var _lightboxTrigger = null;
+
+  function openLightbox(src, alt, caption, trigger) {
     if (!lightbox || !lightboxImg) return;
+    _lightboxTrigger = trigger || document.activeElement;
     lightboxImg.src = src;
     lightboxImg.alt = alt || "";
     if (lightboxCaption) lightboxCaption.textContent = caption || alt || "";
     lightbox.classList.remove("hidden");
     document.body.style.overflow = "hidden";
+    if (lightboxCloseBtn) lightboxCloseBtn.focus();
   }
 
   function closeLightbox() {
@@ -206,12 +210,30 @@
     lightbox.classList.add("hidden");
     document.body.style.overflow = "";
     if (lightboxImg) lightboxImg.src = "";
+    if (_lightboxTrigger) { _lightboxTrigger.focus(); _lightboxTrigger = null; }
+  }
+
+  // Focus trap inside lightbox
+  if (lightbox) {
+    lightbox.addEventListener("keydown", function (e) {
+      if (e.key !== "Tab") return;
+      var focusable = Array.from(lightbox.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )).filter(function (el) { return !el.disabled; });
+      if (!focusable.length) { e.preventDefault(); return; }
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
   }
 
   document.querySelectorAll("[data-lightbox]").forEach(function (el) {
     el.addEventListener("click", function (e) {
       e.preventDefault();
-      openLightbox(el.dataset.lightbox, el.dataset.alt, el.dataset.caption);
+      openLightbox(el.dataset.lightbox, el.dataset.alt, el.dataset.caption, el);
     });
   });
 
@@ -219,7 +241,7 @@
   if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") { closeLightbox(); }
+    if (e.key === "Escape" && lightbox && !lightbox.classList.contains("hidden")) { closeLightbox(); }
   });
 
   // External link icons

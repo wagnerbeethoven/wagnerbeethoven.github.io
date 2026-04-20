@@ -21,10 +21,15 @@ layout: layouts/base.njk
     </header>
 
     <article class="note-card note-card--single h-entry">
+      <a class="u-url hidden" href="{{ site.url }}{{ page.url }}">Permalink</a>
+      <span class="sr-only p-author h-card">
+        <a class="p-name u-url" href="{{ site.url }}" rel="me">{{ site.author }}</a>
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </span>
       <div class="note-card-header">
-        <img class="note-card-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40">
+        <img class="note-card-avatar" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40" loading="lazy">
         <div class="note-card-identity">
-          <span class="note-card-name p-name">{{ site.author }}</span>
+          <span class="note-card-name">{{ site.author }}</span>
           <time class="note-card-handle dt-published" datetime="{{ page.date | htmlDateString }}">
             {{ page.date | readableDate("dd MMM yyyy, HH:mm") }}
           </time>

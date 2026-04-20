@@ -42,6 +42,10 @@
   <meta name="twitter:image:alt" content="{{ site.name }} preview" />
   <link rel="webmention" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/webmention" />
   <link rel="pingback" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/xmlrpc" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://webmention.io">
+  <link rel="dns-prefetch" href="https://cusdis.com">
   <link rel="stylesheet" href="/assets/css/build.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Feed" href="/feed.xml" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -77,9 +81,9 @@
       <img class="sidebar-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" />
       <div class="sidebar-name p-name">{{ site.author }}</div>
       <div class="sidebar-meta">{{ site.location }}</div>
-      <!-- <p class="sr-only p-note">{{ site.bio.short }}</p> -->
-      <!-- <a class="sr-only u-url" href="{{ site.url }}">{{ site.url }}</a> -->
-      <!-- <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> -->
+      <p class="sr-only p-note">{{ site.bio.short }}</p>
+      <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
+      <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
       <a href="/busca/" class="sidebar-search-link" aria-label="Pesquisar no site">
         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         <span>Pesquisar</span>
