@@ -1,0 +1,101 @@
+---
+layout: layouts/base.njk
+permalink: "/guestbook/"
+title: Livro de visitas
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Livro de visitas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Livro de visitas"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Livro de visitas</h1>
+      <p class="entry-summary">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. Fico feliz em saber que você esteve aqui.</p>
+    </header>
+
+    {# ── Formulário ─────────────────────────────────────────── #}
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-pen-to-square" style="color:var(--accent)" aria-hidden="true"></i> Deixe uma mensagem</h2>
+      <form
+        name="livro-de-visitas"
+        method="POST"
+        action="/guestbook/obrigado/"
+        netlify
+        netlify-honeypot="bot-field"
+        class="contact-form"
+        novalidate
+      >
+        <input type="hidden" name="form-name" value="livro-de-visitas">
+        <p class="contact-form-honeypot" aria-hidden="true">
+          <label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="contact-form-row">
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="gb-name">Nome <span aria-hidden="true">*</span></label>
+            <input type="text" id="gb-name" name="name" class="contact-form-input"
+              placeholder="Como você se chama?" required autocomplete="name">
+          </div>
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="gb-url">Site ou perfil <span class="contact-form-optional">(opcional)</span></label>
+            <input type="url" id="gb-url" name="url" class="contact-form-input"
+              placeholder="https://seusite.com" autocomplete="url">
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <label class="contact-form-label" for="gb-message">Mensagem <span aria-hidden="true">*</span></label>
+          <textarea id="gb-message" name="message" class="contact-form-textarea"
+            rows="4" placeholder="Diga olá, deixe uma dica, compartilhe algo..." required></textarea>
+        </div>
+
+        <div class="contact-form-footer">
+          <button type="submit" class="contact-form-submit">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i> Assinar o livro
+          </button>
+        </div>
+      </form>
+    </div>
+
+    {# ── Entradas ───────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-comments" style="color:#7ab87a" aria-hidden="true"></i> Mensagens</h2>
+
+      {% if guestbook and guestbook | length > 0 %}
+        <div class="guestbook-list">
+          {% for entry in guestbook | reverse %}
+          <article class="guestbook-entry h-cite">
+            <div class="guestbook-entry-header">
+              <strong class="guestbook-entry-name p-author">
+                {% if entry.url %}
+                  <a href="{{ entry.url }}" target="_blank" rel="noopener nofollow" data-no-ext-icon>{{ entry.name }}</a>
+                {% else %}
+                  {{ entry.name }}
+                {% endif %}
+              </strong>
+              {% if entry.date %}
+                <time class="guestbook-entry-date dt-published" datetime="{{ entry.date }}">{{ entry.date | readableDate }}</time>
+              {% endif %}
+            </div>
+            <p class="guestbook-entry-message e-content">{{ entry.message }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="empty-card">Ainda não há entradas. Seja o primeiro a assinar!</div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>

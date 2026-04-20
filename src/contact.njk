@@ -6,7 +6,7 @@ title: Contato
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Entre em contato</p>
@@ -21,56 +21,84 @@ title: Contato
       {% set breadcrumb = [{label: "Contato"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Entre em contato</h1>
-      <p class="entry-summary">Se voce quiser conversar comigo ou me dar sugestoes, este e o lugar certo. Siga qualquer link abaixo para encontrar os lugares aonde costumo estar.</p>
+      <p class="entry-summary">Se você quiser conversar, dar sugestões ou colaborar, este é o lugar certo.</p>
     </header>
 
-    <div class="prose mb-6">
-      <blockquote><strong>A melhor forma de falar comigo e por e-mail.</strong></blockquote>
-    </div>
-
-    <h2 class="text-2xl font-extrabold mb-4">Redes sociais</h2>
-    <div class="sidebar-list mb-10">
-      <a href="mailto:{{ site.email }}" class="sidebar-link">
-        <i class="fa-solid fa-envelope" style="color:var(--accent)" aria-hidden="true"></i> {{ site.email }}
-      </a>
-      {% if site.social.github %}
-      <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" class="sidebar-link">
-        <i class="fa-brands fa-github" style="color:#181717" aria-hidden="true"></i> GitHub <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
-      </a>
-      {% endif %}
-      {% if site.social.bluesky %}
-      <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener" class="sidebar-link">
-        <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
-      </a>
-      {% endif %}
-      {% if site.social.linktree %}
-      <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-link">
-        <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> Linktree <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
-      </a>
-      {% endif %}
-      {% if site.focoAcessivel and site.focoAcessivel.youtube %}
-      <a href="{{ site.focoAcessivel.youtube }}" target="_blank" rel="noopener" class="sidebar-link">
-        <i class="fa-brands fa-youtube" style="color:#FF0000" aria-hidden="true"></i> YouTube <span aria-hidden="true" class="text-[var(--text-muted)] text-xs">↗</span>
-      </a>
-      {% endif %}
-    </div>
-
-    <h2 class="text-2xl font-extrabold mb-4">Livro de visitas</h2>
-    <div class="prose mb-6">
-      <p>
-        Quer deixar uma mensagem, um ola ou um comentario? Me mencione no
-        <a href="https://bsky.app/profile/{{ site.social.bluesky }}">Bluesky</a>
-        com a hashtag <strong>#MargemViva</strong> ou mande um e-mail direto.
-        As melhores mensagens aparecem aqui.
-      </p>
-    </div>
-
-    <div class="feed-stack">
-      <div class="post-card">
-        <p class="post-card-excerpt">
-          <em>Ainda nao ha entradas no livro de visitas. Seja o primeiro a deixar uma mensagem!</em>
+    <div class="uses-section" style="border-top:none;padding-top:0">
+      <h2 class="uses-section-title"><i class="fa-solid fa-envelope" style="color:var(--accent)" aria-hidden="true"></i> Envie uma mensagem</h2>
+      <form
+        name="contato"
+        method="POST"
+        action="/contact/obrigado/"
+        netlify
+        netlify-honeypot="bot-field"
+        class="contact-form"
+        novalidate
+      >
+        <input type="hidden" name="form-name" value="contato">
+        <p class="contact-form-honeypot" aria-hidden="true">
+          <label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
         </p>
+
+        <div class="contact-form-row">
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="contact-name">Nome</label>
+            <input type="text" id="contact-name" name="name" class="contact-form-input"
+              placeholder="Seu nome" required autocomplete="name">
+          </div>
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="contact-email">E-mail</label>
+            <input type="email" id="contact-email" name="email" class="contact-form-input"
+              placeholder="seu@email.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <label class="contact-form-label" for="contact-subject">Assunto</label>
+          <input type="text" id="contact-subject" name="subject" class="contact-form-input"
+            placeholder="Sobre o que você quer falar?">
+        </div>
+
+        <div class="contact-form-group">
+          <label class="contact-form-label" for="contact-message">Mensagem</label>
+          <textarea id="contact-message" name="message" class="contact-form-textarea"
+            rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+
+        <div class="contact-form-footer">
+          <button type="submit" class="contact-form-submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensagem
+          </button>
+          <p class="contact-form-hint">Ou escreva direto para <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-share-nodes" style="color:#7ab87a" aria-hidden="true"></i> Redes sociais</h2>
+      <div class="sidebar-list">
+        {% if site.social.bluesky %}
+        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="sidebar-link">
+          <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
+        </a>
+        {% endif %}
+        {% if site.social.github %}
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener me" class="sidebar-link">
+          <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i> GitHub
+        </a>
+        {% endif %}
+        {% if site.social.linkedin %}
+        <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener me" class="sidebar-link">
+          <i class="fa-brands fa-linkedin" style="color:#0077B5" aria-hidden="true"></i> LinkedIn
+        </a>
+        {% endif %}
+        {% if site.social.linktree %}
+        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-link">
+          <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> Linktree
+        </a>
+        {% endif %}
       </div>
     </div>
+
   </div>
 </section>
