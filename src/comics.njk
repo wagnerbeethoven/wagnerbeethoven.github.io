@@ -6,7 +6,7 @@ title: Quadrinhos
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Quadrinhos e graphic novels</p>
@@ -28,20 +28,18 @@ title: Quadrinhos
     {% if allComics | length > 0 %}
     <div class="media-grid">
       {% for item in allComics %}
-      <div class="media-card">
+      <a href="{{ item.url }}" class="media-card" aria-label="{{ item.data.title }}">
         <div class="media-card-poster">
-          {{ item.data.poster or '📚' }}
-          {% if item.data.status == 'read' %}<span class="media-badge media-badge--done">Lido</span>
-          {% elif item.data.status == 'reading' %}<span class="media-badge media-badge--watching">Lendo</span>
-          {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Quero ler</span>
+          {% if item.data.image %}
+            <img src="{{ item.data.image }}" alt="" loading="lazy">
+          {% elif item.data.poster %}
+            <img src="{{ item.data.poster }}" alt="" loading="lazy">
+          {% else %}
+            💬
           {% endif %}
+          <span class="media-card-cover-label">{{ item.data.title }}</span>
         </div>
-        <div class="media-card-body">
-          <p class="media-card-title">{{ item.data.title }}</p>
-          <p class="media-card-meta">{{ item.data.writer }}{% if item.data.year %} · {{ item.data.year }}{% endif %}{% if item.data.volumes %} · {{ item.data.volumes }}v{% endif %}</p>
-          {% if item.data.note %}<p class="media-card-note">{{ item.data.note }}</p>{% endif %}
-        </div>
-      </div>
+      </a>
       {% endfor %}
     </div>
     {% else %}
