@@ -41,12 +41,25 @@ permalink: "/"
       <h2 class="home-section-title"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</h2>
       <a href="/notes/" class="home-section-more">Ver todas →</a>
     </div>
-    <div class="home-grid home-grid-2">
+    <div class="note-stream">
       {% for item in recentNotes %}
-      <a href="{{ item.url }}" class="entry-card h-entry">
-        <p class="entry-card-meta"><time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>{% if item.data.title %} · {{ item.data.title }}{% endif %}</p>
-        <p class="entry-card-body e-content">{{ item.templateContent | striptags | truncate(160) }}</p>
-      </a>
+      <article class="note-card h-entry">
+        <div class="note-card-header">
+          <img class="note-card-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40">
+          <div class="note-card-identity">
+            <span class="note-card-name p-name">{{ site.author }}</span>
+            <a class="note-card-handle u-url" href="{{ item.url }}">
+              <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate("dd MMM yyyy") }}</time>
+            </a>
+          </div>
+        </div>
+        <div class="note-card-body e-content prose">{{ item.templateContent | safe }}</div>
+        {% if item.data.tags and item.data.tags | length %}
+        <div class="note-card-footer">
+          {% for tag in item.data.tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% endif %}{% endfor %}
+        </div>
+        {% endif %}
+      </article>
       {% endfor %}
     </div>
   </div>
@@ -99,72 +112,94 @@ permalink: "/"
       <h2 class="home-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar</h2>
     </div>
     <div class="home-collections-grid">
+      {% set cnt = collections.posts | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/blog/" class="home-collection-card">
         <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i>
         <span>Blog</span>
-        {% set cnt = collections.posts | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.notes | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/notes/" class="home-collection-card">
         <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i>
         <span>Notas</span>
-        {% set cnt = collections.notes | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.poetry | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/poetry/" class="home-collection-card">
         <i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i>
         <span>Poesias</span>
-        {% set cnt = collections.poetry | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.bookshelf | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/bookshelf/" class="home-collection-card">
         <i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i>
         <span>Livros</span>
-        {% set cnt = collections.books | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.movies | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/movies/" class="home-collection-card">
         <i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i>
         <span>Filmes</span>
-        {% set cnt = collections.movies | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.series | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/series/" class="home-collection-card">
         <i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i>
         <span>Séries</span>
-        {% set cnt = collections.series | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.games | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/games/" class="home-collection-card">
         <i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i>
         <span>Jogos</span>
-        {% set cnt = collections.games | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.comics | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/comics/" class="home-collection-card">
         <i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i>
         <span>Quadrinhos</span>
-        {% set cnt = collections.comics | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.recipes | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/recipes/" class="home-collection-card">
         <i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i>
         <span>Receitas</span>
-        {% set cnt = collections.recipes | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.photos | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/photos/" class="home-collection-card">
         <i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i>
         <span>Fotos</span>
-        {% set cnt = collections.photos | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
+      {% set cnt = collections.music | default([]) | length %}
+      {% if cnt > 0 %}
       <a href="/music/" class="home-collection-card">
         <i class="fa-solid fa-music" style="color:#d51007" aria-hidden="true"></i>
         <span>Música</span>
-        {% set cnt = collections.music | default([]) | length %}
-        {% if cnt > 0 %}<small>{{ cnt }}</small>{% endif %}
+        <small>{{ cnt }}</small>
       </a>
+      {% endif %}
     </div>
   </div>
 
