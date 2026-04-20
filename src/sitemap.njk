@@ -22,37 +22,37 @@ title: Mapa do site
       {% set breadcrumb = [{label: "Mapa do site"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Mapa do site</h1>
-      <p class="entry-summary">Um mapa completo com tudo nesse site. Explore e descubra!</p>
+      <p class="entry-summary">Um mapa completo com tudo neste site, incluindo páginas fixas e conteúdo publicado.</p>
     </header>
 
-    {% set totalPosts   = collections.posts   | default([]) | length %}
-    {% set totalNotes   = collections.notes   | default([]) | length %}
-    {% set totalPoems   = collections.poetry  | default([]) | length %}
-    {% set totalBooks   = collections.books   | default([]) | length %}
-    {% set totalMovies  = collections.movies  | default([]) | length %}
-    {% set totalSeries  = collections.series  | default([]) | length %}
-    {% set totalGames   = collections.games   | default([]) | length %}
-    {% set totalComics  = collections.comics  | default([]) | length %}
-    {% set totalMusic   = collections.music   | default([]) | length %}
+    {% set totalPosts = collections.posts | default([]) | length %}
+    {% set totalNotes = collections.notes | default([]) | length %}
+    {% set totalPoems = collections.poetry | default([]) | length %}
+    {% set totalBooks = collections.books | default([]) | length %}
+    {% set totalMovies = collections.movies | default([]) | length %}
+    {% set totalSeries = collections.series | default([]) | length %}
+    {% set totalGames = collections.games | default([]) | length %}
+    {% set totalComics = collections.comics | default([]) | length %}
+    {% set totalMusic = collections.music | default([]) | length %}
     {% set totalRecipes = collections.recipes | default([]) | length %}
-    {% set totalPhotos  = collections.photos  | default([]) | length %}
-    {% set totalTags    = collections.tagList | default([]) | length %}
+    {% set totalPhotos = collections.photos | default([]) | length %}
+    {% set totalTags = collections.tagList | default([]) | length %}
 
     <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Estatísticas</h2>
 
     <div class="sitemap-stats">
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Notas</p><p class="sitemap-stat-value">{{ totalNotes }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Poemas</p><p class="sitemap-stat-value">{{ totalPoems }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Livros</p><p class="sitemap-stat-value">{{ totalBooks }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Filmes</p><p class="sitemap-stat-value">{{ totalMovies }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Séries</p><p class="sitemap-stat-value">{{ totalSeries }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Jogos</p><p class="sitemap-stat-value">{{ totalGames }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Quadrinhos</p><p class="sitemap-stat-value">{{ totalComics }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Álbuns</p><p class="sitemap-stat-value">{{ totalMusic }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Receitas</p><p class="sitemap-stat-value">{{ totalRecipes }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Fotos</p><p class="sitemap-stat-value">{{ totalPhotos }}</p></div>
-      <div class="sitemap-stat"><p class="sitemap-stat-label">Tags</p><p class="sitemap-stat-value">{{ totalTags }}</p></div>
+      {% if totalPosts > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>{% endif %}
+      {% if totalNotes > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Notas</p><p class="sitemap-stat-value">{{ totalNotes }}</p></div>{% endif %}
+      {% if totalPoems > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Poemas</p><p class="sitemap-stat-value">{{ totalPoems }}</p></div>{% endif %}
+      {% if totalBooks > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Livros</p><p class="sitemap-stat-value">{{ totalBooks }}</p></div>{% endif %}
+      {% if totalMovies > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Filmes</p><p class="sitemap-stat-value">{{ totalMovies }}</p></div>{% endif %}
+      {% if totalSeries > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Séries</p><p class="sitemap-stat-value">{{ totalSeries }}</p></div>{% endif %}
+      {% if totalGames > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Jogos</p><p class="sitemap-stat-value">{{ totalGames }}</p></div>{% endif %}
+      {% if totalComics > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Quadrinhos</p><p class="sitemap-stat-value">{{ totalComics }}</p></div>{% endif %}
+      {% if totalMusic > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Álbuns</p><p class="sitemap-stat-value">{{ totalMusic }}</p></div>{% endif %}
+      {% if totalRecipes > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Receitas</p><p class="sitemap-stat-value">{{ totalRecipes }}</p></div>{% endif %}
+      {% if totalPhotos > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Fotos</p><p class="sitemap-stat-value">{{ totalPhotos }}</p></div>{% endif %}
+      {% if totalTags > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Tags</p><p class="sitemap-stat-value">{{ totalTags }}</p></div>{% endif %}
     </div>
 
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}
@@ -95,28 +95,33 @@ title: Mapa do site
       </div>
     </div>
 
+    {% if totalPosts > 0 or totalNotes > 0 or totalPoems > 0 or totalPhotos > 0 or totalRecipes > 0 %}
     <div class="sitemap-section">
       <h2 class="sitemap-section-title"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Conteúdo</h2>
       <div class="sitemap-grid">
-        <a href="/blog/" class="sitemap-link"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>
-        <a href="/notes/" class="sitemap-link"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>
-        <a href="/poetry/" class="sitemap-link"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>
-        <a href="/photos/" class="sitemap-link"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
-        <a href="/recipes/" class="sitemap-link"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
+        {% if totalPosts > 0 %}<a href="/blog/" class="sitemap-link"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>{% endif %}
+        {% if totalNotes > 0 %}<a href="/notes/" class="sitemap-link"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>{% endif %}
+        {% if totalPoems > 0 %}<a href="/poetry/" class="sitemap-link"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>{% endif %}
+        {% if totalPhotos > 0 %}<a href="/photos/" class="sitemap-link"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>{% endif %}
+        {% if totalRecipes > 0 %}<a href="/recipes/" class="sitemap-link"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>{% endif %}
       </div>
     </div>
+    {% endif %}
 
+    {% if totalBooks > 0 or totalMovies > 0 or totalSeries > 0 or totalGames > 0 or totalComics > 0 or totalMusic > 0 %}
     <div class="sitemap-section">
       <h2 class="sitemap-section-title"><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Coleções</h2>
       <div class="sitemap-grid">
-        <a href="/bookshelf/" class="sitemap-link"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>
-        <a href="/movies/" class="sitemap-link"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>
-        <a href="/series/" class="sitemap-link"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>
-        <a href="/games/" class="sitemap-link"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>
-        <a href="/comics/" class="sitemap-link"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
-        <a href="/music/" class="sitemap-link"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
+        {% if totalBooks > 0 %}<a href="/bookshelf/" class="sitemap-link"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>{% endif %}
+        {% if totalMovies > 0 %}<a href="/movies/" class="sitemap-link"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>{% endif %}
+        {% if totalSeries > 0 %}<a href="/series/" class="sitemap-link"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>{% endif %}
+        {% if totalGames > 0 %}<a href="/games/" class="sitemap-link"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>{% endif %}
+        {% if totalComics > 0 %}<a href="/comics/" class="sitemap-link"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>{% endif %}
+        {% if totalMusic > 0 %}<a href="/music/" class="sitemap-link"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>{% endif %}
       </div>
     </div>
+    {% endif %}
+
 
     <div class="sitemap-section">
       <h2 class="sitemap-section-title"><i class="fa-solid fa-bars" style="color:#000" aria-hidden="true"></i> Outros</h2>
@@ -124,7 +129,7 @@ title: Mapa do site
         <a href="/links/" class="sitemap-link"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Links</a>
         <a href="/blogroll/" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blogroll</a>
         <a href="/archive/" class="sitemap-link"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Arquivo</a>
-        <a href="/tags/" class="sitemap-link"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</a>
+        {% if totalTags > 0 %}<a href="/tags/" class="sitemap-link"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</a>{% endif %}
         <a href="/changelog/" class="sitemap-link"><i class="fa-solid fa-clock-rotate-left" style="color:#7ab87a" aria-hidden="true"></i> Changelog</a>
         <a href="/slashes/" class="sitemap-link"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Páginas</a>
       </div>
@@ -141,10 +146,9 @@ title: Mapa do site
       <h2 class="sitemap-section-title"><i class="fa-solid fa-wrench" style="color:#888" aria-hidden="true"></i> Meta</h2>
       <div class="sitemap-grid">
         <a href="/busca/" class="sitemap-link"><i class="fa-solid fa-magnifying-glass" style="color:#5b8dd9" aria-hidden="true"></i> Busca</a>
-        <a href="/style/" class="sitemap-link"><i class="fa-solid fa-palette" style="color:#c47db8" aria-hidden="true"></i> Style Guide</a>
+        <a href="/style/" class="sitemap-link"><i class="fa-solid fa-palette" style="color:#c47db8" aria-hidden="true"></i> Style guide</a>
         <a href="/accessibility/" class="sitemap-link"><i class="fa-solid fa-universal-access" style="color:#5b8dd9" aria-hidden="true"></i> Acessibilidade</a>
-        <a href="/colophon/" class="sitemap-link"><i class="fa-solid fa-scroll" style="color:#888" aria-hidden="true"></i> Colophon</a>
-        <!-- <a href="/sitemap/" class="sitemap-link"><i class="fa-solid fa-map" style="color:#7ab87a" aria-hidden="true"></i> Mapa do site</a> -->
+        <a href="/colophon/" class="sitemap-link"><i class="fa-solid fa-scroll" style="color:#888" aria-hidden="true"></i> Colofão</a>
       </div>
     </div>
 
