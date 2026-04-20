@@ -10,15 +10,25 @@ O script busca os dados nas APIs e cria o arquivo pronto. Você só precisa revi
 
 ### Configuração inicial (uma vez só)
 
-Crie um arquivo `.env` na raiz do projeto ou exporte as variáveis antes de rodar:
+Crie um arquivo `.env` na raiz do projeto:
 
 ```bash
-export TMDB_KEY=sua_chave      # filmes e séries → themoviedb.org/settings/api
-export LASTFM_KEY=sua_chave    # músicas         → last.fm/api/account/create
-export RAWG_KEY=sua_chave      # jogos           → rawg.io/apidocs
+TMDB_KEY=sua_chave        # filmes e séries  → themoviedb.org/settings/api
+YOUTUBE_KEY=sua_chave     # músicas          → console.cloud.google.com → YouTube Data API v3
+RAWG_KEY=sua_chave        # jogos            → rawg.io/apidocs (opcional)
 ```
 
 > Livros e quadrinhos usam APIs públicas sem cadastro.
+
+#### Como obter a chave YouTube (grátis)
+
+1. Acesse [console.cloud.google.com](https://console.cloud.google.com) e crie um projeto
+2. Menu lateral → **APIs e serviços** → **Biblioteca**
+3. Pesquise "YouTube Data API v3" → **Ativar**
+4. **Credenciais** → **Criar credenciais** → **Chave de API**
+5. Copie a chave e cole no `.env`: `YOUTUBE_KEY=AIza...`
+
+Quota gratuita: 10.000 unidades/dia — suficiente para ~50 álbuns por dia.
 
 ### Comandos
 
@@ -168,25 +178,49 @@ trailer: ""
 
 ### Música — `src/music/`
 
+O script busca dados em quatro fontes em paralelo:
+- **YouTube Music (Innertube)** → capa quadrada, `browseId`, número de faixas, ano
+- **YouTube Data API v3** → `youtubeList` (playlist) + `youtube` (vídeo) para embed
+- **MusicBrainz** → ano de lançamento original, gravadora, `tags` de gênero
+- **Last.fm** → descrição/resenha do álbum (escrita no corpo do arquivo)
+
 ```markdown
 ---
 title: Nó na Orelha
 artist: Criolo
-year: 2011
-label: Oloko Records
-genre: Hip-hop
-image: "https://..."
-spotify: ID_DO_ALBUM_NO_SPOTIFY
-rating: 5
-tags: [Hip-hop, MPB]
+year: 2012
+label: "Stern's Music"
+genre: ""
+image: "https://lh3.googleusercontent.com/..."
+youtube: ajJ2_WM1EIg
+youtubeList: PLIahuVdd5IBZ-KfQkJTDtxOptuIaEEEw5
+browseId: MPREb_8vdtlt9izAW
+tracks: 11
+tags: [brazilian music, hardcore hip hop, hip hop, jazz]
 note: ""
 ---
 
-Texto opcional com mais reflexões sobre o álbum.
+Descrição do álbum vinda do Last.fm (preenchida automaticamente).
+Edite ou apague se quiser escrever a sua própria.
 ```
 
-> O campo `spotify` recebe **só o ID** do álbum, não a URL completa.
-> Exemplo: para `https://open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE` use `6dVIqQ8qmQ5GBnJ9shOYGE`.
+> **`tags`** — gêneros musicais vindos do MusicBrainz, votados pela comunidade (ex: `hip hop`, `art rock`, `electronic`). Diferentes de `genre`: enquanto `genre` é um campo livre pra você preencher com o gênero principal, `tags` são múltiplos rótulos automáticos usados para navegação por `/tags/`. Edite à vontade.
+>
+> **`genre`** — campo livre para o gênero principal do álbum. Deixe `""` ou preencha manualmente (ex: `Hip-hop`). Não é preenchido automaticamente.
+>
+> **`browseId`** — ID interno do YouTube Music para a página do álbum (começa com `MPREb_`). Com ele, o botão "YouTube Music" na página abre direto no álbum em vez de fazer uma busca. Preenchido automaticamente.
+>
+> **`youtubeList`** — ID da playlist do álbum no YouTube. O embed na página toca o álbum completo em sequência.
+>
+> **`youtube`** — ID do vídeo (fallback quando não há playlist).
+>
+> **`tracks`** — número de faixas, preenchido automaticamente.
+>
+> **`spotify`** — opcional. Só o ID do álbum. Ex: para `open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE` use `6dVIqQ8qmQ5GBnJ9shOYGE`. Se informado e não houver YouTube, exibe o embed do Spotify.
+>
+> **Corpo do arquivo** — preenchido com a descrição do Last.fm (em português quando disponível). Aparece na seção "Sobre o álbum" da página. Edite ou apague livremente.
+>
+> **Atenção:** o ano vem do MusicBrainz (lançamento original). Se não encontrado, usa a data de publicação do YouTube — pode precisar de ajuste manual.
 
 ---
 

@@ -12,7 +12,7 @@
  *
  * Variáveis de ambiente (.env ou export):
  *   TMDB_KEY    — TMDB (filmes + séries)   https://www.themoviedb.org/settings/api
- *   LASTFM_KEY  — Last.fm (músicas)        https://www.last.fm/api/account/create
+ *   YOUTUBE_KEY — YouTube (músicas)         console.cloud.google.com → YouTube Data API v3
  *   RAWG_KEY    — RAWG (jogos)             https://rawg.io/apidocs
  *   COMICVINE_KEY — Comic Vine (quadrinhos) https://comicvine.gamespot.com/api
  *   (quadrinhos e livros usam APIs públicas sem chave)
@@ -67,6 +67,36 @@ async function get(url) {
   if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
   return res.json();
 }
+
+// ── YouTube Music (Innertube) helpers ─────────────────────────────────────────
+const YTM_BASE = "https://music.youtube.com/youtubei/v1";
+const YTM_KEY  = "AIzaSyC9XL3ZjWddXya6X74dJoCTL-NKNELL6TV"; // public web client key
+const YTM_CTX  = { client: { clientName: "WEB_REMIX", clientVersion: "1.20240401.01.00", hl: "pt", gl: "BR" } };
+
+async function ytmPost(endpoint, body) {
+  const res = await fetch(`${YTM_BASE}/${endpoint}?key=${YTM_KEY}`, {
+    method:  "POST",
+    headers: { "Content-Type": "application/json", "Origin": "https://music.youtube.com", "Referer": "https://music.youtube.com/" },
+    body:    JSON.stringify({ context: YTM_CTX, ...body }),
+  });
+  if (!res.ok) throw new Error(`YTMusic HTTP ${res.status}`);
+  return res.json();
+}
+
+// Walk entire Innertube response tree collecting all values for a given key
+function walk(obj, key) {
+  const out = [];
+  (function t(o) {
+    if (!o || typeof o !== "object") return;
+    if (Array.isArray(o)) { o.forEach(t); return; }
+    if (key in o) out.push(o[key]);
+    Object.values(o).forEach(t);
+  })(obj);
+  return out;
+}
+
+function runs(obj) { return (obj?.runs || []).map(r => r.text || "").join("").trim(); }
+function bigThumb(arr) { return [...(arr || [])].sort((a,b) => (b.width||0)-(a.width||0))[0]?.url || ""; }
 
 function stripHtml(str) {
   return String(str || "")
@@ -309,81 +339,139 @@ async function fetchGame(query) {
   };
 }
 
-// ── Last.fm / MusicBrainz — álbuns ───────────────────────────────────────────
+// ── Música: YouTube Music + YouTube Data API + MusicBrainz ───────────────────
 async function fetchAlbum(artist, album) {
-  const key = process.env.LASTFM_KEY;
-  let lastfm = null;
-  let musicbrainz = null;
+  const ytKey = process.env.YOUTUBE_KEY;
+  if (!ytKey) { err("YOUTUBE_KEY não definido. Veja README."); process.exit(1); }
 
-  if (key) {
-    try {
-      info(`Buscando álbum: "${artist} — ${album}" no Last.fm...`);
-      const d = await get(
-        `https://ws.audioscrobbler.com/2.0/?method=album.getinfo` +
-        `&artist=${encodeURIComponent(artist)}&album=${encodeURIComponent(album)}` +
-        `&api_key=${key}&lang=pt&format=json`
-      );
-      if (!d.error && d.album) {
-        const a = d.album;
-        lastfm = {
-          title:  a.name,
-          artist: a.artist,
-          image:  a.image?.find(i => i.size === "extralarge")?.["#text"]
-               || a.image?.find(i => i.size === "large")?.["#text"]
-               || "",
-          tags:   a.tags?.tag?.map(t => t.name).slice(0,5) || [],
-          wiki:   a.wiki?.summary
-                    ?.replace(/<[^>]+>/g," ")
-                    .replace(/Read more on Last\.fm\.?$/i, "")
-                    .replace(/\s+/g," ")
-                    .trim()
-                    .slice(0,600) || "",
-        };
-      }
-    } catch {
-      /* segue com MusicBrainz */
-    }
-  } else {
-    warn("LASTFM_KEY não definido. Last.fm será pulado.");
-  }
+  info(`Buscando álbum: "${artist} — ${album}"...`);
 
-  try {
-    info(`Buscando álbum: "${artist} — ${album}" no MusicBrainz...`);
-    const q = `release:"${album}" AND artist:"${artist}"`;
-    const d = await get(`https://musicbrainz.org/ws/2/release/?query=${encodeURIComponent(q)}&fmt=json&limit=5`);
-    const r = d.releases?.[0];
-    if (r) {
-      let image = "";
+  // Tudo em paralelo
+  const [ytmSearch, ytEmbed, mb, lfm] = await Promise.allSettled([
+    ytmPost("search", { query: `${artist} ${album}`, params: "EgWKAQIYAWoKEAMQBBAKEAUQCQ==" }),
+    (async () => {
+      const q = encodeURIComponent(`${artist} ${album}`);
+      const b = "https://www.googleapis.com/youtube/v3/search";
+      const [pl, vid] = await Promise.all([
+        get(`${b}?q=${q}+album&type=playlist&part=snippet&maxResults=3&key=${ytKey}`),
+        get(`${b}?q=${q}&type=video&topicId=%2Fm%2F04rlf&part=snippet&maxResults=3&key=${ytKey}`),
+      ]);
+      return { pl: pl.items?.[0], vid: vid.items?.[0] };
+    })(),
+    (async () => {
+      const q = `release:"${album}" AND artist:"${artist}"`;
+      const d = await get(`https://musicbrainz.org/ws/2/release/?query=${encodeURIComponent(q)}&fmt=json&limit=3`);
+      const r = d.releases?.[0];
+      if (!r) return null;
+      let tags = [];
       try {
-        const ca = await get(`https://coverartarchive.org/release/${r.id}`);
-        image = ca.images?.[0]?.thumbnails?.large || ca.images?.[0]?.image || "";
-      } catch { /* sem capa */ }
-      musicbrainz = {
-        title:  r.title,
-        artist,
-        year:   r.date?.slice(0,4) || "",
-        label:  r["label-info"]?.[0]?.label?.name || "",
-        image,
-      };
-    }
-  } catch {
-    /* ignora e usa Last.fm se houver */
+        const rgId = r["release-group"]?.id;
+        if (rgId) {
+          const rg = await get(`https://musicbrainz.org/ws/2/release-group/${rgId}?inc=tags&fmt=json`);
+          tags = rg.tags?.sort((a,b)=>b.count-a.count).slice(0,5).map(t=>t.name) || [];
+        }
+      } catch { /* ignora */ }
+      return { year: r.date?.slice(0,4)||"", label: r["label-info"]?.[0]?.label?.name||"", tags };
+    })(),
+    (async () => {
+      const lfmKey = process.env.LASTFM_KEY;
+      if (!lfmKey) return null;
+      const url = `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&artist=${encodeURIComponent(artist)}&album=${encodeURIComponent(album)}&api_key=${lfmKey}&format=json&lang=pt`;
+      const d = await get(url);
+      const wiki = d.album?.wiki?.summary || d.album?.wiki?.content || "";
+      if (!wiki) return null;
+      // Last.fm appends " <a href="https://www.last.fm/...">Read more on Last.fm</a>." — strip it
+      const clean = wiki.replace(/<a\b[^>]*>.*?<\/a>/gi, "").replace(/\.\s*$/, "").trim();
+      return clean || null;
+    })(),
+  ]);
+
+  // ── YouTube Music → capa quadrada + faixas + browseId ──
+  let image = "", ytmYear = "", browseId = "", tracks = [];
+  if (ytmSearch.status === "fulfilled") {
+    try {
+      // Direct walk for MPREb_ browseIds (mirrors confirmed debug test)
+      const allBrowseIds = walk(ytmSearch.value, "browseId").filter(id => String(id || "").startsWith("MPREb_"));
+      browseId = allBrowseIds[0] || "";
+
+      // Find matching renderer for image + year
+      const items = walk(ytmSearch.value, "musicResponsiveListItemRenderer");
+      const hit   = items.find(i => {
+        const ids = walk(i, "browseId").filter(id => String(id || "").startsWith("MPREb_"));
+        return ids.length > 0;
+      }) || items[0];
+
+      if (hit) {
+        const sub = runs(hit.flexColumns?.[1]?.musicResponsiveListItemFlexColumnRenderer?.text);
+        ytmYear   = sub.match(/\b(19|20)\d{2}\b/)?.[0] || "";
+        const thumbArrays = walk(hit, "thumbnails");
+        image = bigThumb(thumbArrays[0] || []);
+        info(`YouTube Music: ${B}${runs(hit.flexColumns?.[0]?.musicResponsiveListItemFlexColumnRenderer?.text)}${R}${browseId ? ` [${browseId}]` : ""}${ytmYear ? ` (${ytmYear})` : ""}`);
+
+        // Browse album → faixas
+        if (browseId) {
+          try {
+            const browse = await ytmPost("browse", { browseId });
+            // Capa maior do header — walk retorna array-de-arrays, achata e pega maior
+            const allThumbs = walk(browse, "thumbnails").flat();
+            const bigImg = [...allThumbs].sort((a,b)=>(b.width||0)-(a.width||0))[0]?.url || "";
+            if (bigImg) image = bigImg;
+            // Faixas
+            const tItems = walk(browse, "musicResponsiveListItemRenderer");
+            tracks = tItems.map(item => {
+              const name     = runs(item.flexColumns?.[0]?.musicResponsiveListItemFlexColumnRenderer?.text);
+              const duration = runs(item.fixedColumns?.[0]?.musicResponsiveListItemFixedColumnRenderer?.text);
+              return name ? `${name}${duration ? `  ${duration}` : ""}` : null;
+            }).filter(Boolean);
+            if (tracks.length) info(`Faixas: ${tracks.length} encontradas`);
+          } catch { /* ignora falha de browse */ }
+        }
+      }
+    } catch { /* ignora parsing */ }
   }
 
-  if (!lastfm && !musicbrainz) throw new Error("Álbum não encontrado.");
+  // ── YouTube Data API → playlist + video para embed ──
+  let playlistId = "", videoId = "", ytImage = "";
+  if (ytEmbed.status === "fulfilled") {
+    const { pl, vid } = ytEmbed.value;
+    if (pl) {
+      playlistId = pl.id.playlistId;
+      ytImage = pl.snippet.thumbnails?.high?.url || "";
+      if (!ytmYear) ytmYear = pl.snippet.publishedAt?.slice(0,4) || "";
+      info(`Playlist: ${B}${pl.snippet.title}${R}`);
+    }
+    if (vid) {
+      videoId = vid.id.videoId;
+      if (!image && !ytImage) ytImage = vid.snippet.thumbnails?.high?.url || "";
+      if (!ytmYear) ytmYear = vid.snippet.publishedAt?.slice(0,4) || "";
+      info(`Vídeo: ${B}${vid.snippet.title}${R}`);
+    }
+  }
 
-  const merged = {
-    title:  lastfm?.title || musicbrainz?.title || album,
-    artist: lastfm?.artist || musicbrainz?.artist || artist,
-    year:   musicbrainz?.year || "",
-    label:  musicbrainz?.label || "",
-    image:  lastfm?.image || musicbrainz?.image || "",
-    tags:   lastfm?.tags || [],
-    wiki:   lastfm?.wiki || "",
+  // ── MusicBrainz → gravadora + ano real + tags ──
+  const mbData = mb.status === "fulfilled" ? mb.value : null;
+  if (mbData) info(`MusicBrainz: ${mbData.label ? mbData.label + " " : ""}${mbData.year ? `(${mbData.year})` : ""}`);
+
+  // ── Last.fm → descrição do álbum ──
+  const wiki = (lfm.status === "fulfilled" && lfm.value) ? lfm.value : "";
+  if (wiki) info(`Last.fm: descrição encontrada (${wiki.length} chars)`);
+
+  if (!browseId && !playlistId && !videoId) throw new Error("Álbum não encontrado.");
+  info(`Encontrado: ${B}${album}${R} — ${artist}`);
+
+  return {
+    title:       album,
+    artist,
+    year:        mbData?.year  || ytmYear || "",
+    label:       mbData?.label || "",
+    image:       image || ytImage,
+    youtube:     videoId,
+    youtubeList: playlistId,
+    browseId,
+    tracks,
+    tags:        mbData?.tags  || [],
+    wiki,
   };
-
-  info(`Encontrado: ${B}${merged.title}${R} — ${merged.artist}`);
-  return merged;
 }
 
 // ── Frontmatters ──────────────────────────────────────────────────────────────
@@ -471,8 +559,10 @@ year: ${yamlStr(d.year)}
 label: ${yamlStr(d.label)}
 genre: ""
 image: ${yamlStr(d.image)}
-spotify: ""
-rating: ""
+youtube: ${yamlStr(d.youtube)}
+youtubeList: ${yamlStr(d.youtubeList)}
+browseId: ${yamlStr(d.browseId)}
+tracks: ${d.tracks?.length || '""'}
 tags: ${yamlList(d.tags)}
 note: ""
 ---
@@ -551,7 +641,7 @@ ${B}Uso:${R}
 
 ${B}Variáveis de ambiente:${R}
   TMDB_KEY    Filmes e séries  → https://www.themoviedb.org/settings/api
-  LASTFM_KEY  Músicas          → https://www.last.fm/api/account/create  (opcional, usa MusicBrainz sem ela)
+  YOUTUBE_KEY Músicas          → console.cloud.google.com → YouTube Data API v3 (grátis, 10k req/dia)
   RAWG_KEY       Jogos            → https://rawg.io/apidocs                 (opcional, funciona sem chave com limitações)
   COMICVINE_KEY  Quadrinhos       → https://comicvine.gamespot.com/api      (opcional, enriquece o Google Books)
   (livros usam Open Library; quadrinhos usam Google Books com fallback/enriquecimento opcional)
