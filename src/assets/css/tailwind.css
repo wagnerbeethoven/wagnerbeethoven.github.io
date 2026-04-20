@@ -2320,48 +2320,82 @@ a.pill:focus-visible {
 .note-stream {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
-.note-entry {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border-subtle);
+.note-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.note-entry:first-child {
-  padding-top: 0;
+.note-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.note-entry:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.note-entry-meta {
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+.note-card-header {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
 }
 
-.note-entry-meta a {
+.note-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.note-card-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.note-card-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.note-card-handle {
+  font-size: 0.75rem;
   color: var(--text-secondary);
   text-decoration: none;
-  font-weight: 600;
 }
 
-.note-entry-meta a:hover {
-  color: var(--accent);
+.note-card-handle:hover { color: var(--accent); }
+
+.note-card-body { font-size: 0.9375rem; line-height: 1.6; }
+.note-card-body.prose p:last-child { margin-bottom: 0; }
+
+.note-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-subtle);
 }
 
-.note-entry .prose p:last-child {
-  margin-bottom: 0;
-}
+/* Single note page — sem hover, fonte maior */
+.note-card--single { cursor: default; }
+.note-card--single:hover { border-color: var(--border-subtle); box-shadow: none; }
+.note-card--single .note-card-body { font-size: 1rem; }
 
-.note-entry .prose {
-  font-size: 0.9rem;
-}
+/* Legacy — individual note pages */
+.note-entry { padding: 1.25rem 0; border-bottom: 1px solid var(--border-subtle); }
+.note-entry:first-child { padding-top: 0; }
+.note-entry:last-child { border-bottom: none; padding-bottom: 0; }
+.note-entry .prose p:last-child { margin-bottom: 0; }
+.note-entry .prose { font-size: 0.9rem; }
 
 /* ── Polaroid photos ─────────────────────────────────────── */
 

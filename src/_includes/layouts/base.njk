@@ -106,11 +106,11 @@
             <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
           </summary>
           <nav class="sidebar-list sidebar-accordion-content" aria-label="Conteúdo">
-            <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>
-            <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>
-            <a href="/poetry/" class="sidebar-link{% if current | slice(0,8) == '/poetry/' %} active{% endif %}"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>
-            <a href="/photos/" class="sidebar-link{% if current == '/photos/' %} active{% endif %}"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>
-            <a href="/recipes/" class="sidebar-link{% if current | slice(0,9) == '/recipes/' %} active{% endif %}"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>
+            {% if collections.posts | length > 0 %}<a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>{% endif %}
+            {% if collections.notes | length > 0 %}<a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>{% endif %}
+            {% if collections.poetry | length > 0 %}<a href="/poetry/" class="sidebar-link{% if current | slice(0,8) == '/poetry/' %} active{% endif %}"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>{% endif %}
+            {% if collections.photos | length > 0 %}<a href="/photos/" class="sidebar-link{% if current == '/photos/' %} active{% endif %}"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>{% endif %}
+            {% if collections.recipes | length > 0 %}<a href="/recipes/" class="sidebar-link{% if current | slice(0,9) == '/recipes/' %} active{% endif %}"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>{% endif %}
           </nav>
         </details>
 
@@ -120,12 +120,12 @@
             <i class="fa-solid fa-chevron-down sidebar-chevron" aria-hidden="true"></i>
           </summary>
           <nav class="sidebar-list sidebar-accordion-content" aria-label="Coleções">
-            <a href="/bookshelf/" class="sidebar-link{% if current == '/bookshelf/' %} active{% endif %}"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>
-            <a href="/movies/" class="sidebar-link{% if current == '/movies/' %} active{% endif %}"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>
-            <a href="/series/" class="sidebar-link{% if current == '/series/' %} active{% endif %}"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>
-            <a href="/games/" class="sidebar-link{% if current == '/games/' %} active{% endif %}"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>
-            <a href="/comics/" class="sidebar-link{% if current == '/comics/' %} active{% endif %}"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>
-            <a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>
+            {% if collections.bookshelf | length > 0 %}<a href="/bookshelf/" class="sidebar-link{% if current == '/bookshelf/' %} active{% endif %}"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>{% endif %}
+            {% if collections.movies | length > 0 %}<a href="/movies/" class="sidebar-link{% if current == '/movies/' %} active{% endif %}"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>{% endif %}
+            {% if collections.series | length > 0 %}<a href="/series/" class="sidebar-link{% if current == '/series/' %} active{% endif %}"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>{% endif %}
+            {% if collections.games | length > 0 %}<a href="/games/" class="sidebar-link{% if current == '/games/' %} active{% endif %}"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>{% endif %}
+            {% if collections.comics | length > 0 %}<a href="/comics/" class="sidebar-link{% if current == '/comics/' %} active{% endif %}"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>{% endif %}
+            {% if collections.music | length > 0 %}<a href="/music/" class="sidebar-link{% if current | slice(0,7) == '/music/' %} active{% endif %}"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>{% endif %}
           </nav>
         </details>
 

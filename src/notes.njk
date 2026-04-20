@@ -33,15 +33,22 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
     {% if items | length > 0 %}
     <div class="note-stream">
       {% for item in items %}
-      <article class="note-entry h-entry">
-        <div class="note-entry-meta">
-          <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
-          {% if item.data.title %}
-          <span aria-hidden="true">·</span>
-          <a class="u-url" href="{{ item.url }}">{{ item.data.title }}</a>
-          {% endif %}
+      <article class="note-card h-entry">
+        <div class="note-card-header">
+          <img class="note-card-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40">
+          <div class="note-card-identity">
+            <span class="note-card-name p-name">{{ site.author }}</span>
+            <a class="note-card-handle u-url" href="{{ item.url }}">
+              <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate("dd MMM yyyy") }}</time>
+            </a>
+          </div>
         </div>
-        <div class="e-content prose">{{ item.templateContent | safe }}</div>
+        <div class="note-card-body e-content prose">{{ item.templateContent | safe }}</div>
+        {% if item.data.tags and item.data.tags | length %}
+        <div class="note-card-footer">
+          {% for tag in item.data.tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% endif %}{% endfor %}
+        </div>
+        {% endif %}
       </article>
       {% endfor %}
     </div>

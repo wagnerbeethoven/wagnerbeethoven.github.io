@@ -15,21 +15,33 @@ layout: layouts/base.njk
 
 <section class="content-frame">
   <div class="content-surface">
-    <article class="h-entry">
-      <header class="entry-header-card">
-        {% set breadcrumb = [{label: "Notas", url: "/notes/"}, {label: title}] %}
-        {% include "partials/breadcrumb.njk" %}
-        <h1 class="entry-title p-name">{{ title }}</h1>
-        {% if page.date %}
-        <p class="entry-meta">
-          <time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | relativeDate }}</time>
-        </p>
-        {% endif %}
-        <a class="u-url hidden" href="{{ page.url }}">Permalink</a>
-      </header>
-      <div class="e-content prose">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Notas", url: "/notes/"}, {label: title or (page.date | readableDate("dd MMM yyyy"))}] %}
+      {% include "partials/breadcrumb.njk" %}
+    </header>
+
+    <article class="note-card note-card--single h-entry">
+      <div class="note-card-header">
+        <img class="note-card-avatar u-photo" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40">
+        <div class="note-card-identity">
+          <span class="note-card-name p-name">{{ site.author }}</span>
+          <time class="note-card-handle dt-published" datetime="{{ page.date | htmlDateString }}">
+            {{ page.date | readableDate("dd MMM yyyy, HH:mm") }}
+          </time>
+        </div>
+      </div>
+
+      <div class="note-card-body e-content prose">
         {{ content | safe }}
       </div>
+
+      {% if tags %}
+        <div class="note-card-footer">
+          {% for tag in tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% endif %}{% endfor %}
+        </div>
+      {% endif %}
+
+      <a class="u-url hidden" href="{{ page.url }}">Permalink</a>
     </article>
   </div>
 </section>
