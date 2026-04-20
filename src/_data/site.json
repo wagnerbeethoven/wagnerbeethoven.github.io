@@ -11,6 +11,135 @@
     "bluesky": "wagnerbeethoven.com.br",
     "linktree": "https://linktr.ee/wagnerbeethoven"
   },
+  "links": [
+    {
+      "id": "site-oficial",
+      "label": "Site oficial",
+      "url": "https://wagnerbeethoven.com.br/",
+      "icon": "fa-globe",
+      "brandColor": "#7ab87a",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/wagnerbeethoven/",
+      "icon": "fa-linkedin",
+      "iconStyle": "brands",
+      "brandColor": "#0077B5",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://www.github.com/wagnerbeethoven/",
+      "icon": "fa-github",
+      "iconStyle": "brands",
+      "brandColor": "#181717",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "behance",
+      "label": "Behance",
+      "url": "https://www.behance.net/wagnerbeethoven/",
+      "icon": "fa-behance",
+      "iconStyle": "brands",
+      "brandColor": "#1769FF",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "medium",
+      "label": "Medium",
+      "url": "https://wagnerbeethoven.medium.com/",
+      "icon": "fa-medium",
+      "iconStyle": "brands",
+      "brandColor": "#12100E",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "speakerdeck",
+      "label": "Speaker Deck",
+      "url": "https://speakerdeck.com/wagnerbeethoven/",
+      "icon": "fa-speaker-deck",
+      "iconStyle": "brands",
+      "brandColor": "#009287",
+      "group": "professional",
+      "rel": "noopener me"
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "displayLabel": "WhatsApp · 81 99105-3481",
+      "url": "https://wa.me/5581991053481",
+      "icon": "fa-whatsapp",
+      "iconStyle": "brands",
+      "brandColor": "#25D366",
+      "group": "contact",
+      "rel": "noopener"
+    },
+    {
+      "id": "telegram",
+      "label": "Telegram",
+      "displayLabel": "Telegram · 81 99105-3481",
+      "url": "https://t.me/+5581991053481",
+      "icon": "fa-telegram",
+      "iconStyle": "brands",
+      "brandColor": "#229ED9",
+      "group": "contact",
+      "rel": "noopener"
+    },
+    {
+      "id": "email",
+      "label": "E-mail",
+      "displayLabel": "oi@wagnerbeethoven.com.br",
+      "url": "mailto:oi@wagnerbeethoven.com.br",
+      "icon": "fa-envelope",
+      "brandColor": "#e07b54",
+      "group": "personal",
+      "rel": "me u-email"
+    },
+    {
+      "id": "bluesky",
+      "label": "Bluesky",
+      "url": "https://bsky.app/profile/wagnerbeethoven.com.br",
+      "icon": "fa-bluesky",
+      "iconStyle": "brands",
+      "brandColor": "#0085FF",
+      "group": "personal",
+      "rel": "noopener me"
+    },
+    {
+      "id": "margem-viva",
+      "label": "Margem Viva",
+      "displayLabel": "margemviva.netlify.app",
+      "url": "https://margemviva.netlify.app/",
+      "icon": "fa-house",
+      "brandColor": "#5b8dd9",
+      "group": "personal",
+      "rel": "me u-url"
+    }
+  ],
+  "webrings": {
+    "fediring": {
+      "label": "Fediring",
+      "home": "https://fediring.net/"
+    },
+    "indieweb": {
+      "label": "IndieWeb Ring",
+      "home": "https://xn--sr8hvo.ws/",
+      "previous": "",
+      "next": ""
+    },
+    "entreblogs": {
+      "label": "Entreblogs",
+      "home": "https://entreblogs.com.br/"
+    }
+  },
   "focoAcessivel": {
     "site": "https://focoacessivel.com.br",
     "youtube": "https://youtube.com/@focoacessivel",

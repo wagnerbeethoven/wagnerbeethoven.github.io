@@ -75,30 +75,12 @@ title: Contato
     </div>
 
     <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-share-nodes" style="color:#7ab87a" aria-hidden="true"></i> Redes sociais</h2>
-      <div class="sidebar-list">
-        {% if site.social.bluesky %}
-        <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="sidebar-link">
-          <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i> Bluesky
-        </a>
-        {% endif %}
-        {% if site.social.github %}
-        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener me" class="sidebar-link">
-          <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i> GitHub
-        </a>
-        {% endif %}
-        {% if site.social.linkedin %}
-        <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener me" class="sidebar-link">
-          <i class="fa-brands fa-linkedin" style="color:#0077B5" aria-hidden="true"></i> LinkedIn
-        </a>
-        {% endif %}
-        {% if site.social.linktree %}
-        <a href="{{ site.social.linktree }}" target="_blank" rel="noopener" class="sidebar-link">
-          <i class="fa-brands fa-linktree" style="color:#43E660" aria-hidden="true"></i> Linktree
-        </a>
-        {% endif %}
+      <h2 class="uses-section-title"><i class="fa-solid fa-address-book" style="color:#7ab87a" aria-hidden="true"></i> Contato direto</h2>
+      <div class="resume-links-grid">
+        {% set ids = ["email", "whatsapp", "telegram"] %}
+        {% set variant = "resume-card" %}
+        {% include "partials/site-links.njk" %}
       </div>
     </div>
-
   </div>
 </section>

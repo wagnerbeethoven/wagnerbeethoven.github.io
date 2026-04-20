@@ -1,0 +1,21 @@
+{% set renderVariant = variant | default("pill") %}
+{% set renderIds = ids | default([]) %}
+{% for link in site.links %}
+  {% if renderIds | length == 0 or link.id in renderIds %}
+    {% set iconStyle = link.iconStyle | default("solid") %}
+    {% set relValue = link.rel | default("noopener") %}
+    {% set displayLabel = link.displayLabel | default(link.label) %}
+    {% set textColor = link.textColor | default("#ffffff") %}
+    {% if renderVariant == "resume-card" %}
+      <a href="{{ link.url }}" target="_blank" rel="{{ relValue }}" class="resume-link-card">
+        <i class="fa-{% if iconStyle == 'brands' %}brands{% else %}solid{% endif %} {{ link.icon }}" {% if link.brandColor %}style="color:{{ link.brandColor }}"{% endif %} aria-hidden="true"></i>
+        <span>{{ link.label }}</span>
+      </a>
+    {% else %}
+      <a href="{{ link.url }}" target="_blank" rel="{{ relValue }}" class="pill" style="--pill-brand: {{ link.brandColor | default('#1a1f2e') }}; --pill-ink: {{ textColor }};">
+        <i class="fa-{% if iconStyle == 'brands' %}brands{% else %}solid{% endif %} {{ link.icon }}" aria-hidden="true"></i>
+        <span>{{ displayLabel }}</span>
+      </a>
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -1900,13 +1900,34 @@ select:focus-visible {
 .pill {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--border-subtle);
+  gap: 0.45rem;
+  border: 1px solid var(--pill-brand, var(--border-subtle));
   border-radius: 999px;
   padding: 0.32rem 0.75rem;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--pill-brand, var(--accent-soft));
+  color: var(--pill-ink, var(--accent));
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.pill i {
+  color: currentColor !important;
+}
+
+a.pill:hover,
+a.pill:focus-visible {
+  background: #fff;
+  color: var(--pill-brand, var(--accent));
+  border-color: var(--pill-brand, var(--accent));
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+a.pill:focus-visible {
+  outline: 2px solid var(--pill-brand, var(--accent));
+  outline-offset: 2px;
 }
 
 .utility-row {
@@ -5282,15 +5303,65 @@ a.entry-card:hover {
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
-  color: #fff;
-  transition: opacity 0.15s;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.media-stream-btn:hover { opacity: 0.85; }
+.media-stream-btn--yt        { background: #FF0000; color: #fff; }
+.media-stream-btn--yt:hover  { background: #fff; color: #FF0000; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(255,0,0,0.22); }
+.media-stream-btn--yt:active { transform: translateY(0); box-shadow: none; }
+
+.media-stream-btn--sp        { background: #1DB954; color: #fff; }
+.media-stream-btn--sp:hover  { background: #fff; color: #1DB954; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(29,185,84,0.22); }
+.media-stream-btn--sp:active { transform: translateY(0); box-shadow: none; }
+
+/* ── Proporções de poster ───────────────────────────────────── */
+
+.media-poster--portrait img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.media-poster--portrait .media-poster-placeholder {
+  height: 240px;
+}
+
+.media-poster--square {
+  width: 180px;
+}
+
+.media-poster--square img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+/* ── Album player (YouTube embed com tracklist) ────────────── */
+
+.album-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  margin-bottom: 1.5rem;
+}
+
+.album-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 @media (max-width: 540px) {
   .media-detail { flex-direction: column; align-items: center; }
-  .media-poster, .media-poster-placeholder { width: 140px; }
+  .media-poster, .media-poster--square, .media-poster-placeholder { width: 140px; }
   .media-poster-placeholder { height: 190px; }
 }
 

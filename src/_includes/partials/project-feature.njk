@@ -1,0 +1,45 @@
+<div class="resume-project">
+  <div class="resume-project-banner">
+    <div class="resume-project-banner-info">
+      <p class="resume-project-name">{{ projectTitle }}</p>
+      <p class="resume-project-desc">{{ projectDescription }}</p>
+      <div class="stream-links">
+        {% if site.focoAcessivel.youtube %}
+        <a href="{{ site.focoAcessivel.youtube }}" target="_blank" rel="noopener" class="stream-link stream-link--youtube" aria-label="YouTube do {{ projectTitle }}">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.spotify %}
+        <a href="{{ site.focoAcessivel.spotify }}" target="_blank" rel="noopener" class="stream-link stream-link--spotify" aria-label="Spotify do {{ projectTitle }}">
+          <i class="fa-brands fa-spotify" aria-hidden="true"></i> Spotify
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.apple %}
+        <a href="{{ site.focoAcessivel.apple }}" target="_blank" rel="noopener" class="stream-link stream-link--apple" aria-label="Apple Podcasts do {{ projectTitle }}">
+          <i class="fa-brands fa-apple" aria-hidden="true"></i> Apple
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.deezer %}
+        <a href="{{ site.focoAcessivel.deezer }}" target="_blank" rel="noopener" class="stream-link stream-link--deezer" aria-label="Deezer do {{ projectTitle }}">
+          <i class="fa-brands fa-deezer" aria-hidden="true"></i> Deezer
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.amazon %}
+        <a href="{{ site.focoAcessivel.amazon }}" target="_blank" rel="noopener" class="stream-link stream-link--amazon" aria-label="Amazon Music do {{ projectTitle }}">
+          <i class="fa-brands fa-amazon" aria-hidden="true"></i> Amazon
+        </a>
+        {% endif %}
+        {% if site.focoAcessivel.site %}
+        <a href="{{ site.focoAcessivel.site }}" target="_blank" rel="noopener" class="stream-link stream-link--site" aria-label="Site do {{ projectTitle }}">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i> Site
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if projectEmbed %}
+  <div class="resume-project-embed">
+    {{ projectEmbed | safe }}
+  </div>
+  {% endif %}
+</div>
