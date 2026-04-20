@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const tagColors = require("./src/_data/tagColors.json");
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 // Load .env without dotenv dependency
 try {
@@ -54,6 +55,24 @@ module.exports = function(eleventyConfig) {
       return toDateTime(dateObj).toFormat("dd/LL/yy");
     } catch {
       return "";
+    }
+  });
+
+  // Git last-modified date for a source file (falls back to fs mtime if git unavailable)
+  eleventyConfig.addFilter("gitLastModified", (inputPath) => {
+    try {
+      const absPath = path.resolve(inputPath);
+      const result = execSync(`git log -1 --format=%cI -- "${absPath}"`, {
+        encoding: "utf8",
+        stdio: ["pipe", "pipe", "ignore"],
+      }).trim();
+      if (result) return new Date(result);
+    } catch { /* git unavailable */ }
+    // fallback: file mtime
+    try {
+      return fs.statSync(path.resolve(inputPath)).mtime;
+    } catch {
+      return null;
     }
   });
 
