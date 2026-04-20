@@ -19,7 +19,8 @@
       { "url": "/blog/",   "icon": "fa-pen-nib",          "color": "#e07b54", "title": "Blog",    "description": "Textos longos, reflexões e leitura duradoura." },
       { "url": "/notes/",  "icon": "fa-note-sticky",      "color": "#f0c040", "title": "Notas",   "description": "Fragmentos, observações rápidas e ideias em rascunho." },
       { "url": "/poetry/", "icon": "fa-feather-pointed",  "color": "#c47db8", "title": "Poesias", "description": "Textos em verso, poemas e experimentos com palavras." },
-      { "url": "/recipes/","icon": "fa-utensils",         "color": "#e0a050", "title": "Receitas","description": "O que cozinho, o que aprendi e o que vale repetir." }
+      { "url": "/recipes/","icon": "fa-utensils",         "color": "#e0a050", "title": "Receitas","description": "O que cozinho, o que aprendi e o que vale repetir." },
+      { "url": "/photos/",  "icon": "fa-camera",          "color": "#e05c7a", "title": "Fotos",      "description": "Fotografia: imagens que quis guardar." }
     ]
   },
   {
@@ -32,7 +33,6 @@
       { "url": "/series/",  "icon": "fa-tv",              "color": "#5bc4c4", "title": "Séries",     "description": "Séries que acompanho ou já terminei." },
       { "url": "/games/",   "icon": "fa-gamepad",         "color": "#7ab87a", "title": "Jogos",      "description": "Jogos zerados, em andamento e na fila." },
       { "url": "/comics/",  "icon": "fa-book-open",       "color": "#f0c040", "title": "Quadrinhos", "description": "Graphic novels, HQs e mangás lidos e em andamento." },
-      { "url": "/photos/",  "icon": "fa-camera",          "color": "#e05c7a", "title": "Fotos",      "description": "Fotografia: imagens que quis guardar." },
       { "url": "/music/",   "icon": "fa-record-vinyl",    "color": "#d51007", "title": "Música",     "description": "Álbuns que marcaram, artistas que ficaram." }
     ]
   },
