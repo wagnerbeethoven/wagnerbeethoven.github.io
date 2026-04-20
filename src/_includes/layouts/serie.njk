@@ -23,37 +23,25 @@ layout: layouts/base.njk
     </header>
 
     <div class="media-detail">
-      <div class="media-poster">
+      <div class="media-poster media-poster--portrait">
         {% if image %}
           <img src="{{ image }}" alt="Poster de {{ title }}" class="media-poster-img" loading="lazy">
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem poster disponível">📺</div>
+          <div class="media-poster-placeholder" aria-hidden="true">📺</div>
         {% endif %}
       </div>
 
       <div class="media-detail-info">
         <dl class="media-meta">
-          {% if platform %}<div><dt>Plataforma</dt><dd>{{ platform }}</dd></div>{% endif %}
+          {% if platform %}<div class="media-meta-wide"><dt>Plataforma</dt><dd>{{ platform }}</dd></div>{% endif %}
           {% if years %}<div><dt>Anos</dt><dd>{{ years }}</dd></div>{% endif %}
           {% if seasons %}<div><dt>Temporadas</dt><dd>{{ seasons }}</dd></div>{% endif %}
-          {% if status %}
-            <div><dt>Status</dt><dd>
-              {%- if status == 'done' %}Assistida
-              {%- elif status == 'watching' %}Assistindo
-              {%- elif status == 'want' %}Quero ver
-              {%- else %}{{ status }}{% endif %}
-            </dd></div>
-          {% endif %}
-          {% if rating %}
-            {% set r = rating | int %}
-            <div><dt>Avaliação</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
-          {% endif %}
         </dl>
 
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><span class="pill">{{ tag }}</span></li>
+              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}

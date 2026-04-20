@@ -31,35 +31,23 @@ layout: layouts/base.njk
                alt="Capa de {{ title }}" class="media-poster-img" loading="lazy"
                onerror="this.parentElement.innerHTML='<div class=\'media-poster-placeholder\'>📚</div>'" />
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem capa disponível">📚</div>
+          <div class="media-poster-placeholder" aria-hidden="true">📚</div>
         {% endif %}
       </div>
 
       <div class="media-detail-info">
         <dl class="media-meta">
-          {% if author %}<div><dt>Autor</dt><dd>{{ author }}</dd></div>{% endif %}
+          {% if author %}<div class="media-meta-wide"><dt>Autor</dt><dd>{{ author }}</dd></div>{% endif %}
+          {% if publisher %}<div class="media-meta-wide"><dt>Editora</dt><dd>{{ publisher }}</dd></div>{% endif %}
           {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
-          {% if publisher %}<div><dt>Editora</dt><dd>{{ publisher }}</dd></div>{% endif %}
           {% if pages %}<div><dt>Páginas</dt><dd>{{ pages }}</dd></div>{% endif %}
           {% if isbn %}<div><dt>ISBN</dt><dd>{{ isbn }}</dd></div>{% endif %}
-          {% if status %}
-            <div><dt>Status</dt><dd>
-              {%- if status == 'reading' %}Lendo
-              {%- elif status == 'read' %}Lido
-              {%- elif status == 'want' %}Para ler
-              {%- else %}{{ status }}{% endif %}
-            </dd></div>
-          {% endif %}
-          {% if rating %}
-            {% set r = rating | int %}
-            <div><dt>Avaliação</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
-          {% endif %}
         </dl>
 
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><span class="pill">{{ tag }}</span></li>
+              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}

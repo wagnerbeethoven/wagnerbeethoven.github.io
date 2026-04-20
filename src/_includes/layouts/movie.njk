@@ -23,11 +23,11 @@ layout: layouts/base.njk
     </header>
 
     <div class="media-detail">
-      <div class="media-poster">
+      <div class="media-poster media-poster--portrait">
         {% if image %}
           <img src="{{ image }}" alt="Poster de {{ title }}" class="media-poster-img" loading="lazy">
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem poster disponível">🎬</div>
+          <div class="media-poster-placeholder" aria-hidden="true">🎬</div>
         {% endif %}
       </div>
 
@@ -35,7 +35,7 @@ layout: layouts/base.njk
         <dl class="media-meta">
           {% if director %}<div class="media-meta-wide"><dt>Direção</dt><dd>{{ director }}</dd></div>{% endif %}
           {% if cast %}<div class="media-meta-wide"><dt>Elenco</dt><dd>{{ cast }}</dd></div>{% endif %}
-          {% if writers %}<div><dt>Roteiro</dt><dd>{{ writers }}</dd></div>{% endif %}
+          {% if writers %}<div class="media-meta-wide"><dt>Roteiro</dt><dd>{{ writers }}</dd></div>{% endif %}
           {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
           {% if country %}
             <div><dt>País</dt><dd>{{ country if country is string else country | join(", ") }}</dd></div>
@@ -43,24 +43,12 @@ layout: layouts/base.njk
           {% if duration %}
             <div><dt>Duração</dt><dd>{{ duration }}{% if duration is number %} min{% endif %}</dd></div>
           {% endif %}
-          {% if status %}
-            <div><dt>Status</dt><dd>
-              {%- if status == 'done' %}Assistido
-              {%- elif status == 'watching' %}Assistindo
-              {%- elif status == 'want' %}Quero ver
-              {%- else %}{{ status }}{% endif %}
-            </dd></div>
-          {% endif %}
-          {% if rating %}
-            {% set r = rating | int %}
-            <div><dt>Avaliação</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
-          {% endif %}
         </dl>
 
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><span class="pill">{{ tag }}</span></li>
+              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}

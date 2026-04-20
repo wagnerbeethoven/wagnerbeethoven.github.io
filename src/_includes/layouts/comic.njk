@@ -23,31 +23,27 @@ layout: layouts/base.njk
     </header>
 
     <div class="media-detail">
-      <div class="media-poster">
+      <div class="media-poster media-poster--portrait">
         {% if image %}
           <img src="{{ image }}" alt="Capa de {{ title }}" class="media-poster-img" loading="lazy">
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem capa disponivel">💬</div>
+          <div class="media-poster-placeholder" aria-hidden="true">💬</div>
         {% endif %}
       </div>
 
       <div class="media-detail-info">
         <dl class="media-meta">
-          {% if writer %}<div><dt>Roteiro</dt><dd>{{ writer }}</dd></div>{% endif %}
-          {% if artist %}<div><dt>Arte</dt><dd>{{ artist }}</dd></div>{% endif %}
+          {% if writer %}<div class="media-meta-wide"><dt>Roteiro</dt><dd>{{ writer }}</dd></div>{% endif %}
+          {% if artist %}<div class="media-meta-wide"><dt>Arte</dt><dd>{{ artist }}</dd></div>{% endif %}
           {% if publisher %}<div><dt>Editora</dt><dd>{{ publisher }}</dd></div>{% endif %}
           {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
           {% if volumes %}<div><dt>Volumes</dt><dd>{{ volumes }}</dd></div>{% endif %}
-          {% if rating %}
-            {% set r = rating | int %}
-            <div><dt>Avaliacao</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
-          {% endif %}
         </dl>
 
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><span class="pill">{{ tag }}</span></li>
+              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}

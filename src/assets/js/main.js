@@ -239,6 +239,7 @@
     ".share-chip",
     ".site-footer-webrings",
     ".site-footer-copy",
+    ".media-stream-btn",
     "[data-no-ext-icon]"
   ].join(",");
 

@@ -46,27 +46,24 @@ layout: layouts/base.njk
     </header>
 
     <div class="media-detail">
-      <div class="media-poster">
+      <div class="media-poster media-poster--portrait">
         {% if image %}
           <img src="{{ image }}" alt="Capa de {{ title }}" class="media-poster-img" loading="lazy">
         {% else %}
-          <div class="media-poster-placeholder" aria-label="Sem imagem disponivel">🎮</div>
+          <div class="media-poster-placeholder" aria-hidden="true">🎮</div>
         {% endif %}
       </div>
 
       <div class="media-detail-info">
         <dl class="media-meta">
+          {% if developer %}<div class="media-meta-wide"><dt>Desenvolvedor</dt><dd>{{ developer }}</dd></div>{% endif %}
           {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
-          {% if rating %}
-            {% set r = rating | int %}
-            <div><dt>Avaliacao</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
-          {% endif %}
         </dl>
 
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><span class="pill">{{ tag }}</span></li>
+              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}
@@ -75,7 +72,7 @@ layout: layouts/base.njk
 
     {% set synopsisText = synopsis or (content | striptags | trim) %}
     {% if synopsisText %}
-      <h2 class="media-section-title">Sinopse</h2>
+      <h2 class="media-section-title">Sobre o jogo</h2>
       <div class="media-text-block">
         <p class="media-note">{{ synopsisText }}</p>
       </div>
