@@ -6,7 +6,7 @@ permalink: /bookshelf/
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Leituras e referências</p>
@@ -24,32 +24,25 @@ permalink: /bookshelf/
       <p class="entry-summary">Um espaço para registrar leituras, releituras e notas de percurso.</p>
     </header>
 
-    {% set allBooks = collections.books | default([]) %}
+    {% set allBooks = collections.bookshelf | default([]) %}
     {% if allBooks | length > 0 %}
-    <div class="book-grid book-grid--4">
+    <div class="media-grid">
       {% for item in allBooks %}
-      <a href="{{ item.url }}" class="book-card">
-        <div class="book-cover-wrap">
-          {% if item.data.isbn %}
-          <img class="book-card-cover"
-            src="https://covers.openlibrary.org/b/isbn/{{ item.data.isbn }}-M.jpg"
-            alt="Capa de {{ item.data.title }}"
-            loading="lazy"
-            onerror="this.style.background='var(--bg-hero)';this.removeAttribute('src')" />
+      <a href="{{ item.url }}" class="media-card" aria-label="{{ item.data.title }}{% if item.data.author %} — {{ item.data.author }}{% endif %}">
+        <div class="media-card-poster">
+          {% if item.data.image %}
+            <img src="{{ item.data.image }}" alt="" loading="lazy">
+          {% elif item.data.isbn %}
+            <img src="https://covers.openlibrary.org/b/isbn/{{ item.data.isbn }}-M.jpg" alt="" loading="lazy"
+                 onerror="this.parentElement.innerHTML='<span style=\'font-size:2.5rem\'>📖</span>'">
           {% else %}
-          <div class="book-card-cover" style="background:var(--bg-hero);display:flex;align-items:center;justify-content:center;font-size:2rem;">📖</div>
+            📖
           {% endif %}
           {% if item.data.status == 'reading' %}<span class="media-badge media-badge--watching">Lendo</span>
           {% elif item.data.status == 'read' %}<span class="media-badge media-badge--done">Lido</span>
-          {% elif item.data.status == 'want' %}<span class="media-badge media-badge--want">Para ler</span>
           {% endif %}
+          <span class="media-card-cover-label">{{ item.data.title }}{% if item.data.author %}<br><span style="font-weight:400;opacity:.85">{{ item.data.author }}</span>{% endif %}</span>
         </div>
-        <p class="book-card-title">{{ item.data.title }}</p>
-        <p class="book-card-author">{{ item.data.author }}</p>
-        {% if item.data.rating %}
-        {% set r = item.data.rating | int %}
-        <p class="book-card-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</p>
-        {% endif %}
       </a>
       {% endfor %}
     </div>

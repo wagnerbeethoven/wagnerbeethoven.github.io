@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/photos/" class="editorial-back" aria-label="Voltar para fotos"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Fotos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Fotos", url: "/photos/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
+    </header>
+
+    {% if image %}
+      <figure class="photo-figure">
+        <img src="{{ image }}" alt="{{ alt or title }}" class="photo-full" loading="lazy">
+        {% if caption %}<figcaption class="photo-caption">{{ caption }}</figcaption>{% endif %}
+      </figure>
+    {% else %}
+      <div class="media-poster-placeholder" style="height:16rem;font-size:3rem" aria-label="Sem foto disponível">📷</div>
+    {% endif %}
+
+    <div class="media-info" style="margin-top:1.5rem">
+      <h1 class="media-title">{{ title }}</h1>
+
+      <dl class="media-meta">
+        {% if date %}<div><dt>Data</dt><dd><time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></dd></div>{% endif %}
+        {% if location %}<div><dt>Local</dt><dd>{{ location }}</dd></div>{% endif %}
+        {% if camera %}<div><dt>Câmera</dt><dd>{{ camera }}</dd></div>{% endif %}
+        {% if lens %}<div><dt>Lente</dt><dd>{{ lens }}</dd></div>{% endif %}
+      </dl>
+
+      {% if tags %}
+        <ul class="inline-pills" aria-label="Tags">
+          {% for tag in tags %}
+            <li><span class="pill">{{ tag }}</span></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {% if note %}
+      <p class="media-note">{{ note }}</p>
+    {% endif %}
+
+    {% if content %}
+      <div class="prose">{{ content | safe }}</div>
+    {% endif %}
+
+    {% include "partials/share-links.njk" %}
+  </div>
+</section>

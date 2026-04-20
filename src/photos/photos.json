@@ -1,6 +1,4 @@
 {
-    "permalink": "false"
-    // "alt": "Tarde",
-    // "caption": "Tarde de sexta que não tinha pressa",
-    // "src": "https://picsum.photos/seed/tarde6/400/400"
+    "layout": "layouts/photo.njk",
+    "permalink": "/photos/{{ page.fileSlug }}/"
 }

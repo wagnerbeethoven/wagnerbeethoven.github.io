@@ -44,16 +44,16 @@ title: Arquivo
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}
 
       {% for year in collections.archiveTree %}
-      <section class="{% if not loop.first %}mt-10 pt-8 border-t border-[var(--border-subtle)]{% endif %}" aria-labelledby="archive-year-{{ year.year }}">
-        <div class="flex items-baseline justify-between mb-5">
-          <h2 class="text-2xl font-extrabold" id="archive-year-{{ year.year }}">{{ year.year }}</h2>
+      <section class="archive-year-section{% if not loop.first %} archive-year-section--bordered{% endif %}" aria-labelledby="archive-year-{{ year.year }}">
+        <div class="archive-year-header">
+          <h2 class="archive-year-title" id="archive-year-{{ year.year }}">{{ year.year }}</h2>
           <span class="sidebar-count">{{ year.count }} item{% if year.count != 1 %}s{% endif %}</span>
         </div>
 
         {% for month in year.months %}
-        <div class="mb-7" id="{{ year.year }}-{{ month.key }}">
-          <h3 class="text-sm font-bold text-[var(--text-secondary)] uppercase tracking-widest mb-3">
-            <a href="#{{ year.year }}-{{ month.key }}" class="hover:text-[var(--accent)]">{{ monthNames[month.key] or month.label }}/{{ year.year }}</a>
+        <div class="archive-month" id="{{ year.year }}-{{ month.key }}">
+          <h3 class="archive-month-title">
+            <a href="#{{ year.year }}-{{ month.key }}">{{ monthNames[month.key] or month.label }}/{{ year.year }}</a>
           </h3>
           <div class="home-blog-list">
             {% for post in month.posts %}

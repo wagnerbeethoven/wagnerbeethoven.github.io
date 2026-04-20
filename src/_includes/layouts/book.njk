@@ -14,13 +14,15 @@ layout: layouts/base.njk
 </section>
 
 <section class="content-frame">
-  <div class="content-surface">
+  <div class="content-surface media-page">
     <header class="entry-header-card">
       {% set breadcrumb = [{label: "Livros", url: "/bookshelf/"}, {label: title}] %}
       {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">{{ title }}</h1>
+      {% if author %}<p class="media-page-subtitle">{{ author }}</p>{% endif %}
     </header>
 
-    <article class="media-card">
+    <div class="media-detail">
       <div class="media-poster">
         {% if image %}
           <img src="{{ image }}" alt="Capa de {{ title }}" class="media-poster-img" loading="lazy">
@@ -33,9 +35,7 @@ layout: layouts/base.njk
         {% endif %}
       </div>
 
-      <div class="media-info">
-        <h1 class="media-title">{{ title }}</h1>
-
+      <div class="media-detail-info">
         <dl class="media-meta">
           {% if author %}<div><dt>Autor</dt><dd>{{ author }}</dd></div>{% endif %}
           {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
@@ -59,20 +59,15 @@ layout: layouts/base.njk
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><a href="/tags/{{ tag | slug }}/" class="inline-pill">{{ tag }}</a></li>
+              <li><span class="pill">{{ tag }}</span></li>
             {% endfor %}
           </ul>
         {% endif %}
       </div>
-    </article>
+    </div>
 
-    {% if note %}
-      <p class="media-note">{{ note }}</p>
-    {% endif %}
-
-    {% if content %}
-      <div class="prose">{{ content | safe }}</div>
-    {% endif %}
+    {% if note %}<p class="media-note">{{ note }}</p>{% endif %}
+    {% if content %}<div class="prose">{{ content | safe }}</div>{% endif %}
 
     {% include "partials/share-links.njk" %}
   </div>
