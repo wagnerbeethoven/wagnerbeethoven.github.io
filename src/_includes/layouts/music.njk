@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/music/" class="editorial-back" aria-label="Voltar para música"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Música</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface media-page">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Música", url: "/music/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">{{ title }}</h1>
+      {% if artist %}<p class="media-page-subtitle">{{ artist }}</p>{% endif %}
+    </header>
+
+    <div class="media-detail">
+      <div class="media-poster">
+        {% if image %}
+          <img src="{{ image }}" alt="Capa de {{ title }}" class="media-poster-img" loading="lazy">
+        {% else %}
+          <div class="media-poster-placeholder" aria-label="Sem capa disponível">🎵</div>
+        {% endif %}
+      </div>
+
+      <div class="media-detail-info">
+        <dl class="media-meta">
+          {% if artist %}<div><dt>Artista</dt><dd>{{ artist }}</dd></div>{% endif %}
+          {% if year %}<div><dt>Ano</dt><dd>{{ year }}</dd></div>{% endif %}
+          {% if genre %}<div><dt>Gênero</dt><dd>{{ genre }}</dd></div>{% endif %}
+          {% if label %}<div><dt>Gravadora</dt><dd>{{ label }}</dd></div>{% endif %}
+          {% if rating %}
+            {% set r = rating | int %}
+            <div><dt>Avaliação</dt><dd class="media-rating" aria-label="{{ r }} de 5 estrelas">{% for i in range(r) %}★{% endfor %}{% for i in range(5 - r) %}☆{% endfor %}</dd></div>
+          {% endif %}
+        </dl>
+
+        {% if tags %}
+          <ul class="inline-pills" aria-label="Tags">
+            {% for tag in tags %}
+              <li><span class="pill">{{ tag }}</span></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if spotify %}
+      <h2 class="media-section-title">Ouvir no Spotify</h2>
+      <iframe
+        src="https://open.spotify.com/embed/album/{{ spotify }}?utm_source=generator&theme=0"
+        width="100%"
+        height="232"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="{{ title }} no Spotify"
+        style="border-radius:0.5rem;border:none;display:block;margin-bottom:1.5rem"
+      ></iframe>
+    {% endif %}
+
+    {% if note %}<p class="media-note">{{ note }}</p>{% endif %}
+    {% if content %}<div class="prose">{{ content | safe }}</div>{% endif %}
+
+    {% include "partials/share-links.njk" %}
+  </div>
+</section>
