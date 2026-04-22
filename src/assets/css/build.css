@@ -2455,14 +2455,14 @@ a.pill:focus-visible {
   margin-bottom: 0;
 }
 
-/* .note-card-footer {
+.note-card-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 1rem;
   margin-top: 0.75rem;
   padding-top: 0.65rem;
-  border-top: 1px solid var(--border-subtle);
-} */
+  /* border-top: 1px solid var(--border-subtle); */
+}
 
 /* Single note page — sem hover, fonte maior */
 
@@ -6075,6 +6075,8 @@ a.entry-card:hover {
 .note-stream .note-card-body,
 .note-stream .note-card-images,
 .note-stream .note-card-footer {
+  gap: .5rem;
+  padding-top: 1.5rem;
   position: relative;
   z-index: 1;
 }
