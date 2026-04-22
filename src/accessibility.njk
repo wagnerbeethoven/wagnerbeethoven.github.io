@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/accessibility/"
 title: Acessibilidade
@@ -23,8 +23,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Acessibilidade"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Acessibilidade</h1>
-      <p class="entry-summary">Estado atual de acessibilidade do site, recursos de leitura e marcações semânticas publicadas.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     <section class="a11y-controls-section">
@@ -130,7 +129,15 @@ showUpdated: true
         <li><code>h-card</code> na identidade do autor, com <code>p-name</code>, <code>u-photo</code>, <code>u-url</code>, <code>u-email</code> e <code>p-note</code>.</li>
         <li><code>rel="me"</code> nos links de identidade pública, como GitHub, Bluesky e Linktree.</li>
         <li><code>h-entry</code> nos posts, com <code>p-name</code>, <code>p-author</code>, <code>dt-published</code>, <code>u-photo</code> e <code>p-category</code>.</li>
+        <li>Feeds em quatro formatos: Atom (<a href="/feed.xml">/feed.xml</a>), RSS 2.0 (<a href="/rss.xml">/rss.xml</a>), JSON Feed (<a href="/feed.json">/feed.json</a>) e alias Atom (<a href="/atom.xml">/atom.xml</a>).</li>
+        <li>Auto-descoberta de feeds via <code>&lt;link rel="alternate"&gt;</code> no <code>&lt;head&gt;</code> de todas as páginas.</li>
+        <li><code>sitemap.xml</code> publicado em <a href="/sitemap.xml">/sitemap.xml</a> para indexação por mecanismos de busca.</li>
       </ul>
+
+      <h2>Privacidade e analytics</h2>
+      <p>
+        O site usa <strong>GoatCounter</strong> para análise de tráfego — sem cookies, sem rastreamento de dados pessoais, sem fingerprinting. Os dados são agregados, anônimos e <a href="https://wagnerbeethoven.goatcounter.com" target="_blank" rel="noopener">publicamente acessíveis</a>. Nenhuma informação pessoal do visitante é coletada ou compartilhada.
+      </p>
 
       <h2>O que ainda merece atenção</h2>
       <ul>
@@ -149,9 +156,10 @@ showUpdated: true
       <h2>Problemas e sugestões</h2>
       <p>
         Encontrou alguma barreira de acessibilidade? <a href="/contact/">Entre em contato</a> ou
-        mencione <strong>#MargemViva</strong> no Bluesky. Todo relato é levado a sério.
+        fale comigo no Bluesky em <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me">@{{ site.social.bluesky }}</a>. 
       </p>
     </div>
+    {% include "partials/last-updated.njk" %}
 
   </div>
 </section>

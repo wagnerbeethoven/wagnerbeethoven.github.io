@@ -22,41 +22,44 @@ showUpdated: true
       {% set breadcrumb = [{label: "Valores"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Valores</h1>
-      <p class="entry-summary">Principios que orientam o que publico, como construo e por que continuo.</p>
-      {% include "partials/last-updated.njk" %}
-    </header>
+      {% include "partials/page-summary.njk" %}    </header>
 
     <div class="prose">
-      <h2>Acessibilidade como padrao</h2>
+      <h2>Acessibilidade não é acabamento</h2>
       <p>
-        Nao como checklist. Como forma de pensar. Acessibilidade afeta estrutura, linguagem, contraste,
-        navegacao e hierarquia. Aqui ela e considerada desde o inicio, nao adicionada depois.
+        Não é a última camada antes de lançar. É uma decisão que afeta estrutura, linguagem, contraste,
+        hierarquia — tudo. Quando fica pra depois, o custo dobra e o resultado piora. Prefiro pensar nisso
+        desde o início, mesmo que o projeto seja pequeno, mesmo que ninguém vá cobrar.
       </p>
 
-      <h2>Web aberta e descentralizada</h2>
+      <h2>A web é minha, não da plataforma</h2>
       <p>
-        Acredito num modelo de internet onde as pessoas possuem seus proprios espacos,
-        controlam seus dados e publicam sem intermediario. Feeds RSS, webmentions e dominio proprio
-        sao escolhas tecnicas com implicacao politica.
+        Já perdi conteúdo quando plataforma encerrou. Já vi post sumir sem explicação. Já escrevi textos
+        longos que ninguém viu porque o algoritmo decidiu que não. Cansei. Ter domínio próprio, feed RSS
+        e controle sobre o arquivo é a resposta prática que encontrei pra isso.
       </p>
 
-      <h2>Escrita honesta sem pressao</h2>
+      <h2>Escrevo quando tenho o que dizer</h2>
       <p>
-        Nao otimizo para algoritmo, SEO ou compartilhamento. Escrevo quando tenho algo a dizer,
-        no formato que o assunto pede. Um post curto pode ser mais honesto do que um longo bem formatado.
+        Não tenho meta de frequência, não otimizo pra SEO, não penso em viralizar. Quando alguma coisa
+        fica remoendo na cabeça e precisa sair em texto, eu escrevo. Às vezes é longo, às vezes é
+        uma linha. O formato serve ao conteúdo, não o contrário.
       </p>
 
-      <h2>Lentidao e durabilidade</h2>
+      <h2>Menos, mas que dure</h2>
       <p>
-        Prefiro publicar menos e guardar mais. Um texto que vai durar cinco anos vale mais do que
-        dez que envelhecem mal. Isso vale para a tecnologia tambem: HTML simples dura mais do que frameworks.
+        Tenho mais interesse em guardar do que em publicar muito. Um texto que ainda vai fazer sentido
+        daqui a cinco anos vale mais do que dez que envelhecem mal. Isso vale pro código também:
+        HTML direto dura mais do que framework da moda.
       </p>
 
-      <h2>Presenca sem performance</h2>
+      <h2>Presença, não personagem</h2>
       <p>
-        Nao estou construindo marca pessoal. Estou registrando percurso. A diferenca parece pequena,
-        mas muda tudo — o tom, a frequencia, o que vale escrever.
+        Não estou construindo marca pessoal. Estou registrando percurso — com os erros, as mudanças de
+        ideia, os interesses que não têm utilidade imediata. A diferença parece pequena, mas muda tudo:
+        o tom, a frequência, o que vale colocar aqui.
       </p>
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

@@ -10,7 +10,7 @@ showUpdated: true
       <a href="/about/" class="editorial-back" aria-label="Voltar para sobre"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Motivacao e intenção</p>
+        <p class="editorial-hello">Motivação e intenção</p>
       </div>
     </div>
   </div>
@@ -22,44 +22,43 @@ showUpdated: true
       {% set breadcrumb = [{label: "Por que este site existe"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Por que este site existe</h1>
-      <p class="entry-summary">Nao e um portfolio. Nao e um blog profissional. E uma casa na web.</p>
-      {% include "partials/last-updated.njk" %}
-    </header>
+      {% include "partials/page-summary.njk" %}    </header>
 
     <div class="prose">
       <p>
-        Por um longo tempo publiquei em plataformas. Twitter, Medium, LinkedIn — lugares onde o algoritmo
-        decide quem ve o que voce escreve, onde o formato e imposto e onde o historico some sem aviso.
+        Por muito tempo publiquei em plataformas. Twitter, Medium, LinkedIn — lugares onde o algoritmo
+        decide quem vê o que você escreve, onde o formato é imposto e onde o histórico some sem aviso.
         Cansei disso.
       </p>
 
       <p>
-        A Margem Viva existe porque quero ter um lugar proprio na internet. Um espaco que eu controlo,
-        que dura mais do que uma timeline, que nao depende de nenhuma empresa continuar existindo.
+        A Margem Viva existe porque quero ter um lugar próprio na internet. Um espaço que eu controlo,
+        que dura mais do que uma timeline, que não depende de nenhuma empresa continuar existindo.
       </p>
 
-      <h2>O que esse espaco nao e</h2>
+      <h2>O que esse espaço não é</h2>
       <ul>
-        <li>Nao e um portfolio de trabalho</li>
-        <li>Nao tem pressao de frequencia ou consistencia</li>
-        <li>Nao foi feito para ter audiencia</li>
-        <li>Nao vai virar produto, curso ou newsletter paga</li>
+        <li>Não é um portfólio de trabalho</li>
+        <li>Não tem pressão de frequência ou consistência</li>
+        <li>Não foi feito para ter audiência</li>
+        <li>Não vai virar produto, curso ou newsletter paga</li>
       </ul>
 
-      <h2>O que esse espaco e</h2>
+      <h2>O que esse espaço é</h2>
       <ul>
         <li>Um arquivo de textos e pensamentos que quero guardar</li>
         <li>Um lugar para escrever sem otimizar para nada</li>
         <li>Uma forma de participar da web de um jeito mais humano</li>
-        <li>Um experimento tecnico constante — Eleventy, feeds, webmentions, microformatos</li>
-        <li>Um espaco de presenca, nao de performance</li>
+        <li>Um experimento técnico contínuo — Eleventy, feeds, webmentions, microformatos</li>
+        <li>Um espaço de presença, não de performance</li>
       </ul>
 
       <p>
         Me interessa a ideia do <a href="https://indieweb.org/" target="_blank" rel="noopener">IndieWeb</a>:
-        publicar no proprio dominio, manter o arquivo, federar com outros sem depender de plataforma.
-        Este site e minha contribuicao pratica a essa ideia.
+        publicar no próprio domínio, manter o arquivo, federar com outros sem depender de plataforma.
+        Este site é minha contribuição prática a essa ideia.
       </p>
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

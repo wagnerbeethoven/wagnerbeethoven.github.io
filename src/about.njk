@@ -22,8 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Sobre"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Sobre mim</h1>
-      <p class="entry-summary">Quem escreve, o que sustenta este espaço e por que ele existe.</p>
-      {% include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     <div class="prose mb-8">
@@ -39,6 +38,16 @@ showUpdated: true
         onde converso com designers em diferentes momentos de carreira sobre processo, portfólio e
         desenvolvimento profissional.
       </p>
+    </div>
+
+    <h3 class="prose mb-4" style="margin-top:0">Meus links</h3>
+    <div class="resume-links-grid mb-8">
+      {% set ids = ["site-oficial", "linkedin", "github", "behance", "medium", "speakerdeck", "whatsapp", "telegram", "email", "bluesky", "margem-viva"] %}
+      {% set variant = "resume-card" %}
+      {% include "partials/site-links.njk" %}
+    </div>
+
+    <div class="prose mb-8">
       <h2>Foco Acessível</h2>
       <p>
         Sou criador e idealizador do <strong>Foco Acessível</strong>, projeto sobre acessibilidade digital com episódios
@@ -47,11 +56,7 @@ showUpdated: true
       </p>
     </div>
 
-    <div class="resume-links-grid mb-8">
-      {% set ids = ["site-oficial", "linkedin", "github", "behance", "medium", "speakerdeck", "whatsapp", "telegram", "email", "bluesky", "margem-viva"] %}
-      {% set variant = "resume-card" %}
-      {% include "partials/site-links.njk" %}
-    </div>
+  
 
     <div class="mb-8">
       {% set projectTitle = "Foco Acessível" %}
@@ -95,12 +100,8 @@ showUpdated: true
         uma lista das <a href="/uses/">ferramentas que uso</a> e um
         <a href="/guestbook/">livro de visitas</a> aberto a quem quiser deixar uma mensagem.
       </p>
-      <p>
-        Construído com <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy</a>,
-        com feeds RSS, webmentions e microformatos.
-        Detalhes técnicos estão no <a href="/colophon/">colofão</a> e
-        as mudanças ao longo do tempo ficam no <a href="/changelog/">changelog</a>.
-      </p>
+      
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>
