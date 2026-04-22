@@ -1179,6 +1179,8 @@ video {
   --bg-sidebar: #ffffff;
   --bg-card: #ffffff;
   --bg-hero: #681414;
+  --hero-text: #fffaf7;
+  --hero-text-muted: #ffe4da;
   --text-primary: #1d1d1b;
   --text-secondary: #73716b;
   --text-muted: #99958f;
@@ -1197,6 +1199,8 @@ video {
   --bg-sidebar: #171717;
   --bg-card: #1d1d1d;
   --bg-hero: #2f0909;
+  --hero-text: #fff8f2;
+  --hero-text-muted: #ffd7ca;
   --text-primary: #f4f1eb;
   --text-secondary: #c0bbb2;
   --text-muted: #948f87;
@@ -1427,7 +1431,7 @@ select:focus-visible {
   width: min(100%, var(--main-max));
   margin: 0 auto;
   text-align: center;
-  color: #fff6f3;
+  color: var(--hero-text);
 }
 
 .page-hero-inner--editorial {
@@ -1439,7 +1443,7 @@ select:focus-visible {
   align-items: flex-start;
   gap: 0.9rem;
   margin-bottom: 1.8rem;
-  color: #fff6f3;
+  color: var(--hero-text);
 }
 
 .editorial-back {
@@ -1448,7 +1452,7 @@ select:focus-visible {
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  color: #fff6f3;
+  color: var(--hero-text);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
@@ -1459,7 +1463,7 @@ select:focus-visible {
 
 .editorial-back:hover,
 .editorial-back:focus-visible {
-  background: #fff6f3;
+  background: var(--hero-text);
   color: var(--bg-hero);
 }
 
@@ -1478,7 +1482,8 @@ select:focus-visible {
 .editorial-hello {
   margin: 0.28rem 0 0;
   font-size: 0.94rem;
-  color: rgba(255, 246, 243, 0.88);
+  color: var(--hero-text-muted);
+  font-weight: 600;
 }
 
 .page-kicker {
