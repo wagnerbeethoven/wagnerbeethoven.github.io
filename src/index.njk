@@ -24,7 +24,6 @@ permalink: "/"
       <a href="{{ post.url }}" class="home-blog-row h-entry">
         <div class="home-blog-row-main">
           <span class="home-blog-row-title p-name">{{ post.data.title }}</span>
-            {% if post.data.description %}<span class="home-blog-row-desc p-summary">{{ post.data.description }}</span>{% endif %}
         </div>
         <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
       </a>
@@ -33,7 +32,7 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Notas — 2 colunas ─────────────────────────────────── #}
+  {# ── Notas ─────────────────────────────────────────────── #}
   {% set recentNotes = collections.notes | default([]) | head(8) %}
   {% if recentNotes | length > 0 %}
   <div class="home-section" style="--section-tint:#f0c040">
@@ -41,29 +40,23 @@ permalink: "/"
       <h2 class="home-section-title"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</h2>
       <a href="/notes/" class="home-section-more">Ver todas →</a>
     </div>
-    <div class="note-stream">
+    <div class="home-blog-list">
       {% for item in recentNotes %}
-      <article class="note-card h-entry">
-        <a class="u-url hidden" href="{{ site.url }}{{ item.url }}">Permalink</a>
+      <a href="{{ item.url }}" class="home-blog-row h-entry">
         <span class="sr-only p-author h-card">
-          <a class="p-name u-url" href="{{ site.url }}" rel="me">{{ site.author }}</a>
+          <span class="p-name">{{ site.author }}</span>
         </span>
-        <div class="note-card-header">
-          <img class="note-card-avatar" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40" loading="lazy">
-          <div class="note-card-identity">
-            <span class="note-card-name">{{ site.author }}</span>
-            <a class="note-card-handle u-url" href="{{ item.url }}">
-              <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate("dd MMM yyyy") }}</time>
-            </a>
-          </div>
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">
+            {%- if item.data.title -%}
+              {{ item.data.title }}
+            {%- else -%}
+              {{ item.templateContent | striptags | truncate(100) }}
+            {%- endif -%}
+          </span>
         </div>
-        <div class="note-card-body e-content prose">{{ item.templateContent | safe }}</div>
-        {% if item.data.tags and item.data.tags | length %}
-        <div class="note-card-footer">
-          {% for tag in item.data.tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% endif %}{% endfor %}
-        </div>
-        {% endif %}
-      </article>
+        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
+      </a>
       {% endfor %}
     </div>
   </div>
@@ -72,7 +65,7 @@ permalink: "/"
   {# ── Fotos ─────────────────────────────────────────────── #}
   {% set recentPhotos = collections.photos | default([]) | head(4) %}
   {% if recentPhotos | length > 0 %}
-  <div class="home-section" style="--section-tint:#e05c7a">
+  <div class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</h2>
       <a href="/photos/" class="home-section-more">Ver todas →</a>
@@ -88,25 +81,28 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Poesia (último) ───────────────────────────────────── #}
-  {% set latestPoem = collections.poetry | default([]) | head(1) %}
-  {% if latestPoem | length > 0 %}
-  {% set poem = latestPoem[0] %}
-  <div class="home-section" style="--section-tint:#c47db8">
+  {# ── Poesia ────────────────────────────────────────────── #}
+  {% set recentPoems = collections.poetry | default([]) | head(6) %}
+  {% if recentPoems | length > 0 %}
+  <div class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesia</h2>
       <a href="/poetry/" class="home-section-more">Ver todas →</a>
     </div>
-    <a href="{{ poem.url }}" class="entry-card h-entry">
-      <p class="entry-card-title p-name">{{ poem.data.title or 'Sem título' }}</p>
-      <p class="entry-card-meta">
-        {% if poem.data.author %}{{ poem.data.author }} · {% endif %}
-        <time class="dt-published" datetime="{{ poem.date | htmlDateString }}">{{ poem.date | shortDate }}</time>
-      </p>
-      {% if poem.templateContent %}
-      <p class="entry-card-body" style="font-style:italic;white-space:pre-line">{{ poem.templateContent | striptags | truncate(220) }}</p>
-      {% endif %}
-    </a>
+    <div class="home-blog-list">
+      {% for poem in recentPoems %}
+      <a href="{{ poem.url }}" class="home-blog-row h-entry">
+         <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">
+          {% if poem.data.author %}{{ poem.data.author }}{% endif %} 
+         </span>
+         </div>
+          <span class="home-blog-row-date">
+           {{ poem.data.title or 'Sem título' }}
+          </span>
+      </a>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
 
