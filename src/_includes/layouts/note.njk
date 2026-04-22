@@ -59,7 +59,7 @@ showUpdated: true
 
       {% if tags %}
         <div class="note-card-footer">
-          {% for tag in tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% endif %}{% endfor %}
+          {% for tag in tags %}{% if tag != "notes" %}<a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">{{ tag }}</a>{% endif %}{% endfor %}
         </div>
       {% endif %}
 

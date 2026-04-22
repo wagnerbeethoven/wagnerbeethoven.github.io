@@ -2761,7 +2761,8 @@ a.media-card:focus-visible .media-card-cover-label {
 
 .home-section {
   margin-bottom: 2.5rem;
-    background: #fff;
+    background: var(--bg-page);
+    color: var(--text-primary);
     border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
   padding: 1.25rem;

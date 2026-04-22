@@ -23,12 +23,12 @@ showUpdated: true
       {% set breadcrumb = [{label: "Páginas"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Páginas <span class="slash-title-slash">/</span></h1>
-      <p class="entry-summary">
+
+    </header>
+      <p class="prose mb-8">
         Uma lista completa do que existe neste site — atualizada conforme o que está efetivamente publicado.
         Inspirado na convenção <a href="https://slashpages.net/" target="_blank" rel="noopener">slashpages.net</a>.
       </p>
-    </header>
-
     {% for group in slashPages %}
     <div class="slash-section">
       <h2 class="slash-section-title">

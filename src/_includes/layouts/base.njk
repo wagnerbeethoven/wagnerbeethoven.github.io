@@ -90,7 +90,7 @@
       <p class="sr-only p-note">{{ site.bio.short }}</p>
       <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
       <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-     
+
 
       <nav class="sidebar-nav" aria-label="Navegação principal">
         <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}">
@@ -118,7 +118,7 @@
 
         <hr class="sidebar-divider" aria-hidden="true">
 
-        <a href="/stats/" class="sidebar-link sidebar-link--explore{% if current == '/stats/' %} active{% endif %}">
+        <a href="/slashes/" class="sidebar-link sidebar-link--explore{% if current == '/slashes/' %} active{% endif %}">
           <i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar tudo
         </a>
       </nav>
@@ -155,7 +155,7 @@
         <div class="site-footer-inner">
           <p class="site-footer-copy">
            {{ buildInfo.year }}
-           <span class="site-footer-sep" aria-hidden="true">&mdash;</span>
+            <span class="site-footer-sep" aria-hidden="true">&bull;</span>
            {{ site.author }}
             <span class="site-footer-sep" aria-hidden="true">&bull;</span>
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" title="Creative Commons BY-NC-SA 4.0">
@@ -164,15 +164,22 @@
               <i class="fa-brands fa-creative-commons-nc" aria-hidden="true"></i>
               <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i>
             </a>
+
+          </p>
+          <nav class="site-footer-links" aria-label="Links do rodapé">
+
+            <a href="/slashes/">Páginas</a>
+
+            <a href="/stats/">Estatísticas</a>
+
+            <a href="/accessibility/">Acessibilidade</a>
+
+            <a href="/changelog/">Changelog</a>
+
             <a href="/feed/" title="Feeds RSS/Atom" aria-label="Assinar feeds">
               <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
             </a>
-          </p>
-          <nav class="site-footer-links" aria-label="Links do rodapé">
-            <a href="/stats/">Estatísticas</a>
-            <a href="/changelog/">Changelog</a>
-            <a href="/slashes/">Páginas</a>
-            <a href="/accessibility/">Acessibilidade</a>
+
           </nav>
           {% set fediringHost = site.url | replace('https://', '') | replace('http://', '') | replace('/', '') %}
           <div class="site-footer-webrings" aria-label="Webrings">
@@ -206,8 +213,8 @@
               <span class="webring-nav">
                 <a href="#" class="eb-next nav-anterior" aria-label="Próximo site no Entreblogs">›</a>
               </span>
-               <script src="https://entreblogs.com.br/assets/webrings/onionring-variables.js"></script>
-  <script src="https://entreblogs.com.br//assets/webrings/onionring-widget.js"></script>
+              <script src="https://entreblogs.com.br/assets/webrings/onionring-variables.js"></script>
+              <script src="https://entreblogs.com.br//assets/webrings/onionring-widget.js"></script>
             </span>
           </div>
         </div>

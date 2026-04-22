@@ -48,7 +48,7 @@ showUpdated: true
       {% if tags %}
       <div class="inline-pills">
         {% for tag in tags %}
-        <a class="pill p-category" href="/tags/{{ tag | slug }}/">#{{ tag }}</a>
+        <a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">#{{ tag }}</a>
         {% endfor %}
       </div>
       {% endif %}

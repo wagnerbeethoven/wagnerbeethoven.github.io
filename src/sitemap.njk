@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 permalink: "/stats/"
 title: Estatísticas
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,9 +23,10 @@ title: Estatísticas
       {% set breadcrumb = [{label: "Estatísticas"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Estatísticas</h1>
-      <p class="entry-summary">Números do site: conteúdo publicado e coleções.</p>
+      {% include "partials/page-summary.njk" %}
     </header>
 
+    {% set totalPages = slashPages | slashPageCount %}
     {% set totalPosts = collections.posts | default([]) | length %}
     {% set totalNotes = collections.notes | default([]) | length %}
     {% set totalPoems = collections.poetry | default([]) | length %}
@@ -37,10 +39,15 @@ title: Estatísticas
     {% set totalRecipes = collections.recipes | default([]) | length %}
     {% set totalPhotos = collections.photos | default([]) | length %}
     {% set totalTags = collections.tagList | default([]) | length %}
+    {% set totalEntries = totalPosts + totalNotes + totalPoems + totalBooks + totalMovies + totalSeries + totalGames + totalComics + totalMusic + totalRecipes + totalPhotos %}
 
-    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Conteúdo</h2>
+    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Visão geral</h2>
 
     <div class="sitemap-stats">
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Itens publicados</p><p class="sitemap-stat-value">{{ totalEntries }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Páginas listadas</p><p class="sitemap-stat-value">{{ totalPages }}</p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Estatisticas de acesso</p><p class="sitemap-stat-value"><a href="https://{{ site.analytics.siteId }}.goatcounter.com" target="_blank" rel="noopener" class="soft-link">Painel GoatCounter</a></p></div>
+      <div class="sitemap-stat"><p class="sitemap-stat-label">Sitemap XML</p><p class="sitemap-stat-value"><a href="/sitemap.xml" class="soft-link">ver</a></p></div>
       {% if totalPosts > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>{% endif %}
       {% if totalNotes > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Notas</p><p class="sitemap-stat-value">{{ totalNotes }}</p></div>{% endif %}
       {% if totalPoems > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Poemas</p><p class="sitemap-stat-value">{{ totalPoems }}</p></div>{% endif %}
@@ -58,6 +65,10 @@ title: Estatísticas
     <p style="margin-top:2rem">
       <a href="/slashes/" class="soft-link"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Ver todas as páginas do site →</a>
     </p>
+    <p class="prose mt-3">
+      As estatisticas de acesso ficam no <a href="https://{{ site.analytics.siteId }}.goatcounter.com" target="_blank" rel="noopener" class="soft-link">painel do GoatCounter</a>, que ja esta integrado ao site.
+    </p>
 
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

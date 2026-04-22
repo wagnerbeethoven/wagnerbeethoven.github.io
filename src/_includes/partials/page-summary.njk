@@ -1,4 +1,4 @@
-{% set pageInfo = page.url | pageInfo %}
+{% set pageInfo = pageMeta[page.url] %}
 {% if pageInfo and pageInfo.description %}
 <p class="entry-summary">{{ pageInfo.description }}</p>
 {% endif %}

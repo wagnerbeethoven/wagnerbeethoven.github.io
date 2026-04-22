@@ -62,7 +62,7 @@ layout: layouts/base.njk
 
         {% if tags %}
         <div class="inline-pills" style="margin-top:0.75rem">
-          {% for tag in tags %}<a class="pill p-category" href="/tags/{{ tag | slug }}/">#{{ tag }}</a>{% endfor %}
+          {% for tag in tags %}<a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">#{{ tag }}</a>{% endfor %}
         </div>
         {% endif %}
       </div>

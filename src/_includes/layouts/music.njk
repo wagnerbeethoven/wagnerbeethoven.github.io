@@ -53,7 +53,7 @@ layout: layouts/base.njk
         {% if tags %}
           <ul class="inline-pills" aria-label="Tags">
             {% for tag in tags %}
-              <li><a class="pill p-category" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+              <li><a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">{{ tag }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}

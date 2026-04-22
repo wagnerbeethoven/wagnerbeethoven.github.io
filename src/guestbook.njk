@@ -22,9 +22,9 @@ showUpdated: true
       {% set breadcrumb = [{label: "Livro de visitas"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Livro de visitas</h1>
-      <p class="entry-summary">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. Fico feliz em saber que você esteve aqui.</p>
     </header>
 
+    <p class="prose mb-8">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. <br>Fico feliz em saber que você esteve aqui.</p>
     {# ── Formulário ─────────────────────────────────────────── #}
     <div class="uses-section" style="border-top:none;padding-top:0">
       <h2 class="uses-section-title"><i class="fa-solid fa-pen-to-square" style="color:var(--accent)" aria-hidden="true"></i> Deixe uma mensagem</h2>
@@ -70,33 +70,30 @@ showUpdated: true
     </div>
 
     {# ── Entradas ───────────────────────────────────────────── #}
+    {% if guestbook and guestbook | length > 0 %}
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-comments" style="color:#7ab87a" aria-hidden="true"></i> Mensagens</h2>
-
-      {% if guestbook and guestbook | length > 0 %}
-        <div class="guestbook-list">
-          {% for entry in guestbook | reverse %}
-          <article class="guestbook-entry h-cite">
-            <div class="guestbook-entry-header">
-              <strong class="guestbook-entry-name p-author">
-                {% if entry.url %}
-                  <a href="{{ entry.url }}" target="_blank" rel="noopener nofollow" data-no-ext-icon>{{ entry.name }}</a>
-                {% else %}
-                  {{ entry.name }}
-                {% endif %}
-              </strong>
-              {% if entry.date %}
-                <time class="guestbook-entry-date dt-published" datetime="{{ entry.date }}">{{ entry.date | readableDate }}</time>
+      <div class="guestbook-list">
+        {% for entry in guestbook | reverse %}
+        <article class="guestbook-entry h-cite">
+          <div class="guestbook-entry-header">
+            <strong class="guestbook-entry-name p-author">
+              {% if entry.url %}
+                <a href="{{ entry.url }}" target="_blank" rel="noopener nofollow" data-no-ext-icon>{{ entry.name }}</a>
+              {% else %}
+                {{ entry.name }}
               {% endif %}
-            </div>
-            <p class="guestbook-entry-message e-content">{{ entry.message }}</p>
-          </article>
-          {% endfor %}
-        </div>
-      {% else %}
-        <div class="empty-card">Ainda não há entradas. Seja o primeiro a assinar!</div>
-      {% endif %}
+            </strong>
+            {% if entry.date %}
+              <time class="guestbook-entry-date dt-published" datetime="{{ entry.date }}">{{ entry.date | readableDate }}</time>
+            {% endif %}
+          </div>
+          <p class="guestbook-entry-message e-content">{{ entry.message }}</p>
+        </article>
+        {% endfor %}
+      </div>
     </div>
+    {% endif %}
     {% include "partials/last-updated.njk" %}
 
   </div>

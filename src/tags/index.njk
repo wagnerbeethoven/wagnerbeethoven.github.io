@@ -29,9 +29,9 @@ permalink: /tags/
       {% for tag in collections.tagMeta %}
       <div class="tag-group" id="tag-{{ tag.name | slug }}">
         <h2 class="tag-group-title">
-          <a href="/tags/{{ tag.name | slug }}/" class="tag-group-link">
+          <span class="tag-group-link">
             <span class="pill">#{{ tag.name }}</span>
-          </a>
+          </span>
           <span class="tag-group-count">{{ tag.count }} {% if tag.count == 1 %}post{% else %}posts{% endif %}</span>
         </h2>
         {% if tag.posts %}
@@ -39,7 +39,17 @@ permalink: /tags/
           {% for post in tag.posts %}
           <li class="tag-post-row">
             <time class="tag-post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
-            <a class="tag-post-title" href="{{ post.url }}">{{ post.data.title or 'Sem título' }}</a>
+            <a class="tag-post-title" href="{{ post.url }}">
+              {% if post.data.title %}
+                {{ post.data.title }}
+              {% elif post.data.excerpt %}
+                <span class="archive-excerpt">{{ post.data.excerpt }}</span>
+              {% elif post.data.images and post.data.images.length > 0 %}
+                <span class="archive-excerpt">— imagem —</span>
+              {% else %}
+                <span class="archive-excerpt">—</span>
+              {% endif %}
+            </a>
           </li>
           {% endfor %}
         </ul>

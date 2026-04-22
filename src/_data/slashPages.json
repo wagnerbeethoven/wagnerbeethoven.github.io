@@ -4,12 +4,55 @@
     "icon": "fa-user",
     "color": "#5b8dd9",
     "items": [
-      { "url": "/about/",   "icon": "fa-user",            "color": "#5b8dd9", "title": "Sobre",                   "description": "Quem sou, o que faço e por onde ando." },
-      { "url": "/now/",    "icon": "fa-location-dot",     "color": "#e05c7a", "title": "Now",                     "description": "O que estou fazendo, lendo e pensando agora." },
-      { "url": "/why/",    "icon": "fa-circle-question",  "color": "#c47db8", "title": "Por que este site existe", "description": "A motivação por trás de manter um espaço próprio na web." },
-      { "url": "/values/", "icon": "fa-heart",            "color": "#e05c7a", "title": "Valores",                 "description": "Princípios que guiam meu trabalho e minha forma de estar no mundo." },
-      { "url": "/contact/","icon": "fa-envelope",         "color": "#7ab87a", "title": "Contato",                 "description": "Como me encontrar e falar comigo." },
-      { "url": "/guestbook/","icon": "fa-book-open",      "color": "#c47db8", "title": "Livro de visitas",        "description": "Deixe uma mensagem ou um oi." }
+      {
+        "url": "/",
+        "icon": "fa-house",
+        "color": "#e07b54",
+        "title": "Início",
+        "description": "Página inicial e atalhos para o que há de mais recente."
+      },
+      {
+        "url": "/about/",
+        "icon": "fa-user",
+        "color": "#5b8dd9",
+        "title": "Sobre",
+        "description": "Quem eu sou e o que faço por aqui."
+      },
+      {
+        "url": "/now/",
+        "icon": "fa-location-dot",
+        "color": "#e05c7a",
+        "title": "Now",
+        "description": "O que está ocupando minha cabeça e meu tempo agora."
+      },
+      {
+        "url": "/why/",
+        "icon": "fa-circle-question",
+        "color": "#c47db8",
+        "title": "Por que este site existe",
+        "description": "Por que resolvi manter esse espaço e o que quero fazer com ele."
+      },
+      {
+        "url": "/values/",
+        "icon": "fa-heart",
+        "color": "#e05c7a",
+        "title": "Valores",
+        "description": "Coisas que guiam como eu trabalho, escrevo e uso esse site."
+      },
+      {
+        "url": "/contact/",
+        "icon": "fa-envelope",
+        "color": "#7ab87a",
+        "title": "Contato",
+        "description": "Como falar comigo."
+      },
+      {
+        "url": "/guestbook/",
+        "icon": "fa-book-open",
+        "color": "#c47db8",
+        "title": "Livro de visitas",
+        "description": "Deixe um oi."
+      }
     ]
   },
   {
@@ -17,11 +60,41 @@
     "icon": "fa-pen-nib",
     "color": "#e07b54",
     "items": [
-      { "url": "/blog/",   "icon": "fa-pen-nib",          "color": "#e07b54", "title": "Blog",    "description": "Textos longos, reflexões e leitura duradoura." },
-      { "url": "/notes/",  "icon": "fa-note-sticky",      "color": "#f0c040", "title": "Notas",   "description": "Fragmentos, observações rápidas e ideias em rascunho." },
-      { "url": "/poetry/", "icon": "fa-feather-pointed",  "color": "#c47db8", "title": "Poesias", "description": "Textos em verso, poemas e experimentos com palavras." },
-      { "url": "/recipes/","icon": "fa-utensils",         "color": "#e0a050", "title": "Receitas","description": "O que cozinho, o que aprendi e o que vale repetir." },
-      { "url": "/photos/", "icon": "fa-camera",           "color": "#e05c7a", "title": "Fotos",   "description": "Fotografia: imagens que quis guardar." }
+      {
+        "url": "/blog/",
+        "icon": "fa-pen-nib",
+        "color": "#e07b54",
+        "title": "Blog",
+        "description": "Textos mais longos."
+      },
+      {
+        "url": "/notes/",
+        "icon": "fa-note-sticky",
+        "color": "#f0c040",
+        "title": "Notas",
+        "description": "Coisas curtas, ideias soltas e registros rápidos."
+      },
+      {
+        "url": "/poetry/",
+        "icon": "fa-feather-pointed",
+        "color": "#c47db8",
+        "title": "Poesias",
+        "description": "Poemas de outros autores que resolvi guardar aqui."
+      },
+      {
+        "url": "/recipes/",
+        "icon": "fa-utensils",
+        "color": "#e0a050",
+        "title": "Receitas",
+        "description": "Coisas que já cozinhei e quero repetir."
+      },
+      {
+        "url": "/photos/",
+        "icon": "fa-camera",
+        "color": "#e05c7a",
+        "title": "Fotos",
+        "description": "Imagens que resolvi guardar."
+      }
     ]
   },
   {
@@ -29,12 +102,48 @@
     "icon": "fa-layer-group",
     "color": "#7ab87a",
     "items": [
-      { "url": "/bookshelf/","icon": "fa-book",           "color": "#5b8dd9", "title": "Livros",     "description": "Leituras concluídas, em andamento e lista de desejo." },
-      { "url": "/movies/",  "icon": "fa-film",            "color": "#e05c7a", "title": "Filmes",     "description": "Cinema: o que assisti, o que ficou, o que ainda quero ver." },
-      { "url": "/series/",  "icon": "fa-tv",              "color": "#5bc4c4", "title": "Séries",     "description": "Séries que acompanho ou já terminei." },
-      { "url": "/games/",   "icon": "fa-gamepad",         "color": "#7ab87a", "title": "Jogos",      "description": "Jogos zerados, em andamento e na fila." },
-      { "url": "/comics/",  "icon": "fa-book-open",       "color": "#f0c040", "title": "Quadrinhos", "description": "Graphic novels, HQs e mangás lidos e em andamento." },
-      { "url": "/music/",   "icon": "fa-record-vinyl",    "color": "#d51007", "title": "Música",     "description": "Álbuns que marcaram, artistas que ficaram." }
+      {
+        "url": "/bookshelf/",
+        "icon": "fa-book",
+        "color": "#5b8dd9",
+        "title": "Livros",
+        "description": "O que li, estou lendo ou quero ler."
+      },
+      {
+        "url": "/movies/",
+        "icon": "fa-film",
+        "color": "#e05c7a",
+        "title": "Filmes",
+        "description": "Filmes que vi e quero lembrar."
+      },
+      {
+        "url": "/series/",
+        "icon": "fa-tv",
+        "color": "#5bc4c4",
+        "title": "Séries",
+        "description": "Séries que acompanhei ou ainda estou vendo."
+      },
+      {
+        "url": "/games/",
+        "icon": "fa-gamepad",
+        "color": "#7ab87a",
+        "title": "Jogos",
+        "description": "Jogos que joguei ou estão na fila."
+      },
+      {
+        "url": "/comics/",
+        "icon": "fa-book-open",
+        "color": "#f0c040",
+        "title": "Quadrinhos",
+        "description": "HQs e mangás que passaram por aqui."
+      },
+      {
+        "url": "/music/",
+        "icon": "fa-record-vinyl",
+        "color": "#d51007",
+        "title": "Música",
+        "description": "Coisas que escuto e ficaram."
+      }
     ]
   },
   {
@@ -42,12 +151,48 @@
     "icon": "fa-compass",
     "color": "#c47db8",
     "items": [
-      { "url": "/tags/",    "icon": "fa-tags",            "color": "#c47db8", "title": "Tags",    "description": "Todos os assuntos e marcadores usados no site." },
-      { "url": "/archive/", "icon": "fa-calendar-days",  "color": "#5b8dd9", "title": "Arquivo", "description": "Histórico cronológico de tudo o que publiquei." },
-      { "url": "/links/",   "icon": "fa-bookmark",       "color": "#f0c040", "title": "Links",   "description": "Referências e lugares da web que valem revisitar." },
-      { "url": "/blogroll/","icon": "fa-rss",             "color": "#f26522", "title": "Blogroll","description": "Blogs e sites que acompanho e recomendo." },
-      { "url": "/busca/",   "icon": "fa-magnifying-glass","color": "#5b8dd9", "title": "Busca",  "description": "Pesquise conteúdo publicado neste site." },
-      { "url": "/feed/",    "icon": "fa-satellite-dish", "color": "#f26522", "title": "Feeds",   "description": "Assine o site via Atom, RSS ou JSON Feed." }
+      {
+        "url": "/tags/",
+        "icon": "fa-tags",
+        "color": "#c47db8",
+        "title": "Tags",
+        "description": "Temas usados pra organizar o conteúdo."
+      },
+      {
+        "url": "/archive/",
+        "icon": "fa-calendar-days",
+        "color": "#5b8dd9",
+        "title": "Arquivo",
+        "description": "Tudo que já foi publicado, em ordem de tempo."
+      },
+      {
+        "url": "/links/",
+        "icon": "fa-bookmark",
+        "color": "#f0c040",
+        "title": "Links",
+        "description": "Coisas da internet que acho que valem voltar."
+      },
+      {
+        "url": "/blogroll/",
+        "icon": "fa-rss",
+        "color": "#f26522",
+        "title": "Blogroll",
+        "description": "Sites que acompanho."
+      },
+      {
+        "url": "/busca/",
+        "icon": "fa-magnifying-glass",
+        "color": "#5b8dd9",
+        "title": "Busca",
+        "description": "Procure por qualquer coisa no site."
+      },
+      {
+        "url": "/feed/",
+        "icon": "fa-satellite-dish",
+        "color": "#f26522",
+        "title": "Feeds",
+        "description": "Dá pra acompanhar por RSS, Atom ou JSON."
+      }
     ]
   },
   {
@@ -55,11 +200,55 @@
     "icon": "fa-gear",
     "color": "#f0c040",
     "items": [
-      { "url": "/stats/",        "icon": "fa-chart-simple",     "color": "#7ab87a", "title": "Estatísticas",  "description": "Números do site: conteúdo, coleções e histórico." },
-      { "url": "/changelog/",    "icon": "fa-clock-rotate-left","color": "#7ab87a", "title": "Changelog",     "description": "Histórico de mudanças e melhorias no site." },
-      { "url": "/accessibility/","icon": "fa-universal-access", "color": "#5b8dd9", "title": "Acessibilidade","description": "Compromissos e declaração de acessibilidade deste site." },
-      { "url": "/colophon/",     "icon": "fa-scroll",           "color": "#888",    "title": "Colophon",      "description": "Como este site é feito: tecnologia, fontes, filosofia." },
-      { "url": "/style/",        "icon": "fa-palette",          "color": "#c47db8", "title": "Style guide",   "description": "Referência visual de componentes e estilos do site." }
+      {
+        "url": "/stats/",
+        "icon": "fa-chart-simple",
+        "color": "#7ab87a",
+        "title": "Estatísticas",
+        "description": "Números sobre conteúdo, coleções e visitas locais."
+      },
+      {
+        "url": "/changelog/",
+        "icon": "fa-clock-rotate-left",
+        "color": "#7ab87a",
+        "title": "Changelog",
+        "description": "O que já mudou por aqui."
+      },
+      {
+        "url": "/accessibility/",
+        "icon": "fa-universal-access",
+        "color": "#5b8dd9",
+        "title": "Acessibilidade",
+        "description": "Como penso acessibilidade neste site."
+      },
+      {
+        "url": "/colophon/",
+        "icon": "fa-scroll",
+        "color": "#888",
+        "title": "Colophon",
+        "description": "Como esse site foi feito."
+      },
+      {
+        "url": "/style/",
+        "icon": "fa-palette",
+        "color": "#c47db8",
+        "title": "Style guide",
+        "description": "Componentes e estilos usados."
+      },
+      {
+        "url": "/slashes/",
+        "icon": "fa-slash",
+        "color": "#f0c040",
+        "title": "Páginas",
+        "description": "Índice das páginas principais deste site."
+      },
+      {
+        "url": "/sitemap.xml",
+        "icon": "fa-sitemap",
+        "color": "#7ab87a",
+        "title": "Sitemap XML",
+        "description": "Mapa técnico do site para buscadores e leitores automáticos."
+      }
     ]
   },
   {
@@ -67,9 +256,34 @@
     "icon": "fa-briefcase",
     "color": "#5bc4c4",
     "items": [
-      { "url": "/portfolio/","icon": "fa-diagram-project","color": "#5bc4c4", "title": "Portfólio","description": "Seleção de trabalhos de design e desenvolvimento." },
-      { "url": "/resume/",  "icon": "fa-file-lines",     "color": "#888",    "title": "Currículo","description": "Experiência profissional e formação." },
-      { "url": "/uses/",    "icon": "fa-laptop",         "color": "#888",    "title": "O que uso","description": "Ferramentas, apps e configurações que uso no dia a dia." }
+      {
+        "url": "/portfolio/",
+        "icon": "fa-diagram-project",
+        "color": "#5bc4c4",
+        "title": "Portfólio",
+        "description": "Como trabalho com design de produto e os tipos de problema que costumo resolver."
+      },
+      {
+        "url": "/projects/",
+        "icon": "fa-folder-open",
+        "color": "#e0a050",
+        "title": "Projetos",
+        "description": "Projetos pessoais, experimentos e coisas em construção."
+      },
+      {
+        "url": "/resume/",
+        "icon": "fa-file-lines",
+        "color": "#888",
+        "title": "Currículo",
+        "description": "Minha experiência."
+      },
+      {
+        "url": "/uses/",
+        "icon": "fa-laptop",
+        "color": "#888",
+        "title": "O que uso",
+        "description": "Ferramentas e setup do dia a dia."
+      }
     ]
   }
 ]

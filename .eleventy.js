@@ -248,7 +248,13 @@ module.exports = function(eleventyConfig) {
       .trim()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "");
-    collectionApi.getFilteredByGlob("src/blog/**/*.md").forEach((item) => {
+    const globs = [
+      "src/blog/**/*.md",
+      "src/notes/**/*.md",
+      "src/poetry/**/*.md",
+      "src/recipes/**/*.md",
+    ];
+    collectionApi.getFilteredByGlob(globs).forEach((item) => {
       const t = item.data && item.data.tags;
       if (Array.isArray(t)) {
         t.forEach((tag) => {
@@ -263,6 +269,17 @@ module.exports = function(eleventyConfig) {
     return list.sort((a, b) => String(a).localeCompare(String(b)));
   });
 
+  eleventyConfig.addCollection("allContent", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob([
+        "src/blog/**/*.md",
+        "src/notes/**/*.md",
+        "src/poetry/**/*.md",
+        "src/recipes/**/*.md",
+      ])
+      .sort((a, b) => (a.date > b.date ? -1 : 1));
+  });
+
   // Unique list of categories from posts
   eleventyConfig.addCollection("categoryList", (collectionApi) => {
     const cats = new Set();
@@ -272,6 +289,24 @@ module.exports = function(eleventyConfig) {
     });
     return Array.from(cats).sort((a, b) => a.localeCompare(b));
   });
+
+  // Shared excerpt extractor used by tagMeta and archiveTree
+  const extractExcerpt = (item) => {
+    let raw = item.rawInput || "";
+    if (!raw && item.inputPath) {
+      try { raw = fs.readFileSync(item.inputPath, "utf8"); } catch { raw = ""; }
+    }
+    const bodyMatch = raw.match(/^---[\s\S]*?---\s*([\s\S]*)/);
+    const body = bodyMatch ? bodyMatch[1] : "";
+    return body
+      .replace(/!\[.*?\]\(.*?\)/g, "")
+      .replace(/\[([^\]]+)\]\(.*?\)/g, "$1")
+      .replace(/#{1,6}\s+/g, "")
+      .replace(/[*_`~]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 140) || null;
+  };
 
   eleventyConfig.addCollection("tagMeta", (collectionApi) => {
     const tagMap = new Map();
@@ -286,12 +321,17 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => (a.date > b.date ? -1 : 1))
       .forEach((item) => {
         const tags = Array.isArray(item.data?.tags) ? item.data.tags : [];
+        const excerpt = extractExcerpt(item);
         tags.forEach((tag) => {
           if (!tag) return;
           if (!tagMap.has(tag)) tagMap.set(tag, { name: tag, count: 0, posts: [] });
           const entry = tagMap.get(tag);
           entry.count += 1;
-          entry.posts.push(item);
+          entry.posts.push({
+            url: item.url,
+            date: item.date,
+            data: { ...item.data, excerpt },
+          });
         });
       });
 
@@ -301,22 +341,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("archiveTree", (collectionApi) => {
     const toArchiveItem = (item, archiveType) => {
-      // rawInput disponível na fase de collection; templateContent não é
-      // Fallback: lê do disco se rawInput vier vazio (Eleventy 3.x)
-      let raw = item.rawInput || "";
-      if (!raw && item.inputPath) {
-        try { raw = fs.readFileSync(item.inputPath, "utf8"); } catch { raw = ""; }
-      }
-      const bodyMatch = raw.match(/^---[\s\S]*?---\s*([\s\S]*)/);
-      const body = bodyMatch ? bodyMatch[1] : "";
-      const excerpt = body
-        .replace(/!\[.*?\]\(.*?\)/g, "")
-        .replace(/\[([^\]]+)\]\(.*?\)/g, "$1")
-        .replace(/#{1,6}\s+/g, "")
-        .replace(/[*_`~]/g, "")
-        .replace(/\s+/g, " ")
-        .trim()
-        .slice(0, 140) || null;
+      const excerpt = extractExcerpt(item);
       return {
         url: item.url,
         date: item.date,
@@ -433,6 +458,11 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("pageInfo", (url) => pageMeta[url] || null);
+
+  eleventyConfig.addFilter("slashPageCount", (groups) => {
+    if (!Array.isArray(groups)) return 0;
+    return groups.reduce((count, group) => count + (Array.isArray(group.items) ? group.items.length : 0), 0);
+  });
 
   return {
     dir: {

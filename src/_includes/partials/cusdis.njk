@@ -44,47 +44,58 @@
       data-page-id="{{ page.url }}"
       data-page-url="{{ site.url }}{{ page.url }}"
       data-page-title="{{ title or (page.date | readableDate('dd MMM yyyy')) }}"
+      data-lang="pt-BR"
       data-theme="auto"
     ></div>
   </div>
 
+  <style>
+    #cusdis_thread iframe {
+      min-height: 420px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+    }
+    .cusdis-widget {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      border: 1px solid var(--border-subtle, #e0e0e0);
+      border-radius: 8px;
+    }
+  </style>
+
+  <script>
+    // Tradução pt-BR via API do Cusdis (antes do script carregar)
+    window.CUSDIS_LOCALE = {
+      powered_by: 'Comentários via Cusdis',
+      post_comment: 'Enviar',
+      loading: 'Carregando…',
+      email: 'E-mail',
+      nickname: 'Nome',
+      reply_placeholder: 'Escreva aqui…',
+      reply_btn: 'Responder',
+      sending: 'Enviando…',
+      mod_badge: 'Moderador',
+      content_is_required: 'O conteúdo é obrigatório',
+      nickname_is_required: 'O nome é obrigatório',
+      comment_has_been_sent: 'Comentário enviado, aguardando aprovação.',
+    };
+  </script>
+
   <script>
     (function () {
-      var btn = document.currentScript.previousElementSibling.previousElementSibling.querySelector('.cusdis-toggle-btn');
+      var btn = document.querySelector('.cusdis-toggle-btn');
       var widget = document.getElementById('cusdis-widget');
       var thread = document.getElementById('cusdis_thread');
       var loaded = false;
 
-      // Tradução do widget Cusdis
-      var cusdisI18n = {
-        'Nickname': 'Nome',
-        'Email': 'E-mail',
-        'Send': 'Enviar',
-        'Reply': 'Responder',
-        'Leave a comment': 'Deixar um comentário',
-        'Loading': 'Carregando…',
-        'Powered by': 'Desenvolvido por',
-      };
-      function translateCusdis(root) {
-        root.querySelectorAll('[placeholder]').forEach(function (el) {
-          var t = cusdisI18n[el.placeholder];
-          if (t) el.placeholder = t;
-        });
-        root.querySelectorAll('button').forEach(function (el) {
-          var t = cusdisI18n[el.textContent.trim()];
-          if (t) el.textContent = t;
-        });
-        root.querySelectorAll('a, span, p, label').forEach(function (el) {
-          if (!el.children.length) {
-            var t = cusdisI18n[el.textContent.trim()];
-            if (t) el.textContent = t;
-          }
-        });
+      function syncTheme() {
+        var dark = document.documentElement.getAttribute('data-theme') === 'dark'
+          || document.documentElement.classList.contains('dark');
+        thread.setAttribute('data-theme', dark ? 'dark' : 'light');
       }
-      if (thread) {
-        new MutationObserver(function () { translateCusdis(thread); })
-          .observe(thread, { childList: true, subtree: true });
-      }
+      syncTheme();
+      new MutationObserver(syncTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
 
       btn.addEventListener('click', function () {
         var open = btn.getAttribute('aria-expanded') === 'true';
@@ -93,6 +104,7 @@
           btn.setAttribute('aria-expanded', 'true');
           if (!loaded) {
             loaded = true;
+            syncTheme();
             var s = document.createElement('script');
             s.src = 'https://cusdis.com/js/cusdis.es.js';
             s.async = true;
