@@ -1,0 +1,45 @@
+---
+permalink: /feed.json
+eleventyExcludeFromCollections: true
+templateEngine: njk
+---
+{%- set allItems = [] -%}
+{%- set allItems = allItems.concat(collections.posts | default([])) -%}
+{%- set allItems = allItems.concat(collections.notes | default([])) -%}
+{%- set allItems = allItems.concat(collections.poetry | default([])) -%}
+{%- set allItems = allItems.concat(collections.books | default([])) -%}
+{%- set allItems = allItems.concat(collections.movies | default([])) -%}
+{%- set allItems = allItems.concat(collections.series | default([])) -%}
+{%- set allItems = allItems.concat(collections.games | default([])) -%}
+{%- set allItems = allItems.concat(collections.comics | default([])) -%}
+{%- set allItems = allItems.concat(collections.music | default([])) -%}
+{%- set allItems = allItems.concat(collections.recipes | default([])) -%}
+{%- set allItems = allItems.concat(collections.photos | default([])) -%}
+{%- set feed = allItems | sort(true, false, "date") | head(30) -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ site.name | dump | safe }},
+  "description": {{ site.description | dump | safe }},
+  "home_page_url": {{ site.url | dump | safe }},
+  "feed_url": {{ (site.url + "/feed.json") | dump | safe }},
+  "language": "pt-BR",
+  "authors": [
+    {
+      "name": {{ site.author | dump | safe }},
+      "url": {{ site.url | dump | safe }}
+    }
+  ],
+  "items": [
+    {%- for item in feed %}
+    {
+      "id": {{ (site.url + item.url) | dump | safe }},
+      "url": {{ (site.url + item.url) | dump | safe }},
+      "title": {{ (item.data.title or item.data.artist or (item.date | readableDate("dd MMM yyyy"))) | dump | safe }},
+      "content_html": {{ (item.templateContent | htmlToAbsoluteUrls(site.url)) | dump | safe }},
+      "date_published": {{ item.date | feedDate | dump | safe }}{% if item.data.description or item.data.note %},
+      "summary": {{ (item.data.description or item.data.note) | dump | safe }}{% endif %}{% if item.data.tags and item.data.tags | length %},
+      "tags": {{ item.data.tags | dump | safe }}{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}

@@ -1,0 +1,50 @@
+---
+permalink: /atom.xml
+eleventyExcludeFromCollections: true
+templateEngine: njk
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name | escape }}</title>
+  <subtitle>{{ site.description | escape }}</subtitle>
+  <link href="{{ site.url }}/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/"/>
+  <id>{{ site.url }}/</id>
+  <author>
+    <name>{{ site.author | escape }}</name>
+  </author>
+
+  {%- set allItems = [] -%}
+  {%- set allItems = allItems.concat(collections.posts | default([])) -%}
+  {%- set allItems = allItems.concat(collections.notes | default([])) -%}
+  {%- set allItems = allItems.concat(collections.poetry | default([])) -%}
+  {%- set allItems = allItems.concat(collections.books | default([])) -%}
+  {%- set allItems = allItems.concat(collections.movies | default([])) -%}
+  {%- set allItems = allItems.concat(collections.series | default([])) -%}
+  {%- set allItems = allItems.concat(collections.games | default([])) -%}
+  {%- set allItems = allItems.concat(collections.comics | default([])) -%}
+  {%- set allItems = allItems.concat(collections.music | default([])) -%}
+  {%- set allItems = allItems.concat(collections.recipes | default([])) -%}
+  {%- set allItems = allItems.concat(collections.photos | default([])) -%}
+  {%- set feed = allItems | sort(true, false, "date") | head(30) -%}
+
+  <updated>{% if feed | length %}{{ feed[0].date | feedDate }}{% else %}1970-01-01T00:00:00Z{% endif %}</updated>
+
+  {% for item in feed %}
+  <entry>
+    <title>{{ item.data.title or item.data.artist or "(sem titulo)" | escape }}</title>
+    <link href="{{ site.url }}{{ item.url }}"/>
+    <updated>{{ item.date | feedDate }}</updated>
+    <id>{{ site.url }}{{ item.url }}</id>
+    {% if item.data.description or item.data.note %}
+    <summary>{{ item.data.description or item.data.note | escape }}</summary>
+    {% endif %}
+    {% if item.templateContent %}
+    <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(site.url) | escape }}</content>
+    {% endif %}
+    {% for tag in item.data.tags | default([]) %}
+    <category term="{{ tag | escape }}"/>
+    {% endfor %}
+  </entry>
+  {% endfor %}
+</feed>
