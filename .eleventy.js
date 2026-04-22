@@ -302,7 +302,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("archiveTree", (collectionApi) => {
     const toArchiveItem = (item, archiveType) => {
       // rawInput disponível na fase de collection; templateContent não é
-      const raw = item.rawInput || "";
+      // Fallback: lê do disco se rawInput vier vazio (Eleventy 3.x)
+      let raw = item.rawInput || "";
+      if (!raw && item.inputPath) {
+        try { raw = fs.readFileSync(item.inputPath, "utf8"); } catch { raw = ""; }
+      }
       const bodyMatch = raw.match(/^---[\s\S]*?---\s*([\s\S]*)/);
       const body = bodyMatch ? bodyMatch[1] : "";
       const excerpt = body

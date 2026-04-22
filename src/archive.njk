@@ -57,7 +57,15 @@ title: Arquivo
             <a href="{{ post.url }}" class="home-blog-row h-entry">
               <div class="home-blog-row-main">
                 <span class="home-blog-row-title p-name">
-                  {% if post.data.title %}{{ post.data.title }}{% else %}<span class="archive-excerpt">{{ post.data.excerpt }}</span>{% endif %}
+                  {% if post.data.title %}
+                    {{ post.data.title }}
+                  {% elif post.data.excerpt %}
+                    <span class="archive-excerpt">{{ post.data.excerpt }}</span>
+                  {% elif post.data.images and post.data.images.length > 0 %}
+                    <span class="archive-excerpt">— imagem —</span>
+                  {% else %}
+                    <span class="archive-excerpt">—</span>
+                  {% endif %}
                 </span>
               </div>
               <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
