@@ -8,13 +8,15 @@
   {% else %}
   <title>{{ site.name }}</title>
   {% endif %}
-  <meta name="description" content="{{ description or site.description }}" />
+  {% set pageInfo = page.url | pageInfo %}
+  {% set pageDescription = (pageInfo and pageInfo.description) or description or site.description %}
+  <meta name="description" content="{{ pageDescription }}" />
   <meta name="generator" content="Eleventy" />
   {% if site.url %}
   <link rel="canonical" href="{{ site.url }}{{ page.url or '/' }}" />
   {% endif %}
   {% set ogTitle = title or site.name %}
-  {% set ogDescription = description or site.description %}
+  {% set ogDescription = pageDescription %}
   {% set ogUrl = (site.url and (site.url + (page.url or '/'))) or '' %}
   {% set rawImage = image or '/screenshot.png' %}
   {% if site.url %}
@@ -47,7 +49,9 @@
   <link rel="dns-prefetch" href="https://webmention.io">
   <link rel="dns-prefetch" href="https://cusdis.com">
   <link rel="stylesheet" href="/assets/css/build.css" />
-  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Feed" href="/feed.xml" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Atom Feed" href="/feed.xml" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Atom Feed" href="/atom.xml" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Feed" href="/rss.xml" />
   <link rel="alternate" type="application/feed+json" title="{{ site.name }} JSON Feed" href="/feed.json" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -86,10 +90,7 @@
       <p class="sr-only p-note">{{ site.bio.short }}</p>
       <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
       <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-      <a href="/busca/" class="sidebar-search-link" aria-label="Pesquisar no site">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        <span>Pesquisar</span>
-      </a>
+     
 
       <nav class="sidebar-nav" aria-label="Navegação principal">
         <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}">
@@ -117,7 +118,7 @@
 
         <hr class="sidebar-divider" aria-hidden="true">
 
-        <a href="/sitemap/" class="sidebar-link sidebar-link--explore{% if current == '/sitemap/' %} active{% endif %}">
+        <a href="/stats/" class="sidebar-link sidebar-link--explore{% if current == '/stats/' %} active{% endif %}">
           <i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar tudo
         </a>
       </nav>
@@ -129,6 +130,9 @@
           <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
           <span class="sidebar-toggle-label">Recolher</span>
         </button>
+        <a href="/busca/" class="topbar-search-btn desktop-topbar-search" aria-label="Pesquisar no site">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="mobile-topbar">
         <button class="hamburger-btn" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-sidebar">
@@ -160,9 +164,12 @@
               <i class="fa-brands fa-creative-commons-nc" aria-hidden="true"></i>
               <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i>
             </a>
+            <a href="/feed/" title="Feeds RSS/Atom" aria-label="Assinar feeds">
+              <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
+            </a>
           </p>
           <nav class="site-footer-links" aria-label="Links do rodapé">
-            <a href="/sitemap/">Mapa do site</a>
+            <a href="/stats/">Estatísticas</a>
             <a href="/changelog/">Changelog</a>
             <a href="/slashes/">Páginas</a>
             <a href="/accessibility/">Acessibilidade</a>

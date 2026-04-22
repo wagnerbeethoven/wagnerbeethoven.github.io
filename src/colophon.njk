@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/colophon/"
 title: Colophon
@@ -7,7 +7,7 @@ showUpdated: true
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/sitemap/" class="editorial-back" aria-label="Voltar para mapa do site"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/stats/" class="editorial-back" aria-label="Voltar para estatísticas"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Como este site foi feito</p>
@@ -22,8 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Colophon"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Colophon</h1>
-      <p class="entry-summary">As decisões técnicas, ferramentas e filosofia por trás da construção deste site.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {# ── Ponto de partida ─────────────────────────────────── #}
@@ -50,7 +49,7 @@ showUpdated: true
           <div class="uses-card-body">
             <p class="uses-card-name">{{ site.name }} no GitHub</p>
             <p class="uses-card-desc">Repositório público do site. Código-fonte aberto.</p>
-            <a href="{{ site.social.url }}" target="_blank" rel="noopener" class="uses-card-link"><span>github.com/wagnerbeethoven</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{ site.social.github }}/" target="_blank" rel="noopener" class="uses-card-link"><span>github.com/{{ site.social.github }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -160,7 +159,7 @@ showUpdated: true
     <div class="uses-section">
       <h2 class="uses-section-title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
       <p class="uses-section-desc">
-        Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via webmention.io. O feed Atom cobre todas as 11 coleções do site em ordem cronológica.
+        Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via webmention.io. O site publica quatro formatos de feed cobrindo posts, notas, poesias e receitas — compatíveis com a maioria dos leitores RSS.
       </p>
       <div class="uses-grid">
         <div class="uses-card">
@@ -168,9 +167,29 @@ showUpdated: true
             <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
           </div>
           <div class="uses-card-body">
-            <p class="uses-card-name">Feed Atom</p>
-            <p class="uses-card-desc">Feed único cobrindo todas as 11 coleções do site.</p>
+            <p class="uses-card-name">Atom Feed</p>
+            <p class="uses-card-desc">Posts, notas, poesias e receitas em ordem cronológica.</p>
             <a href="/feed.xml" class="uses-card-link"><span>/feed.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+            <i class="fa-solid fa-rss" style="color:#e07b54" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">RSS 2.0</p>
+            <p class="uses-card-desc">Compatível com a maioria dos leitores.</p>
+            <a href="/rss.xml" class="uses-card-link"><span>/rss.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#5b8dd9 12%,var(--bg-card))">
+            <i class="fa-solid fa-code" style="color:#5b8dd9" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">JSON Feed</p>
+            <p class="uses-card-desc">Formato moderno para leitores compatíveis.</p>
+            <a href="/feed.json" class="uses-card-link"><span>/feed.json</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="uses-card">
@@ -181,6 +200,26 @@ showUpdated: true
             <p class="uses-card-name">Webmentions</p>
             <p class="uses-card-desc">Recebidas e processadas via webmention.io. h-card e h-entry nas páginas.</p>
             <a href="https://webmention.io/" target="_blank" rel="noopener" class="uses-card-link"><span>webmention.io</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# ── Analytics ────────────────────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Analytics</h2>
+      <p class="uses-section-desc">
+        O site usa <strong>GoatCounter</strong> para análise de tráfego — sem cookies, sem rastreamento de dados pessoais, sem fingerprinting. Os dados são agregados e anônimos. As estatísticas são públicas.
+      </p>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
+            <i class="fa-solid fa-chart-simple" style="color:#f26522" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">GoatCounter</p>
+            <p class="uses-card-desc">Analytics sem cookies. Dados públicos e agregados.</p>
+            <a href="https://wagnerbeethoven.goatcounter.com" target="_blank" rel="noopener" class="uses-card-link"><span>wagnerbeethoven.goatcounter.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -205,6 +244,7 @@ showUpdated: true
         </div>
       </div>
     </div>
+    {% include "partials/last-updated.njk" %}
 
   </div>
 </section>

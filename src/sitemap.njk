@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
-permalink: "/sitemap/"
-title: Mapa do site
-showUpdated: true
+permalink: "/stats/"
+title: Estatísticas
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -10,7 +9,7 @@ showUpdated: true
       <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Mapa do site</p>
+        <p class="editorial-hello">Estatísticas</p>
       </div>
     </div>
   </div>
@@ -20,11 +19,10 @@ showUpdated: true
   <div class="content-surface">
 
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Mapa do site"}] %}
+      {% set breadcrumb = [{label: "Estatísticas"}] %}
       {% include "partials/breadcrumb.njk" %}
-      <h1 class="entry-title">Mapa do site</h1>
-      <p class="entry-summary">Um mapa completo com tudo neste site, incluindo páginas fixas e conteúdo publicado.</p>
-      {%- include "partials/last-updated.njk" %}
+      <h1 class="entry-title">Estatísticas</h1>
+      <p class="entry-summary">Números do site: conteúdo publicado e coleções.</p>
     </header>
 
     {% set totalPosts = collections.posts | default([]) | length %}
@@ -40,7 +38,7 @@ showUpdated: true
     {% set totalPhotos = collections.photos | default([]) | length %}
     {% set totalTags = collections.tagList | default([]) | length %}
 
-    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Estatísticas</h2>
+    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem"><i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Conteúdo</h2>
 
     <div class="sitemap-stats">
       {% if totalPosts > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Posts</p><p class="sitemap-stat-value">{{ totalPosts }}</p></div>{% endif %}
@@ -57,102 +55,9 @@ showUpdated: true
       {% if totalTags > 0 %}<div class="sitemap-stat"><p class="sitemap-stat-label">Tags</p><p class="sitemap-stat-value">{{ totalTags }}</p></div>{% endif %}
     </div>
 
-    {% if collections.archiveTree and collections.archiveTree.length > 0 %}
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Posts por ano</h2>
-      <div class="sidebar-list">
-        {% for year in collections.archiveTree %}
-        <a href="/archive/#{{ year.year }}" class="sidebar-link">
-          <span>{{ year.year }}</span>
-          <span class="sidebar-count">{{ year.count }} post{% if year.count != 1 %}s{% endif %}</span>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-    {% if collections.tagList and collections.tagList.length > 0 %}
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</h2>
-      <div class="inline-pills">
-        {% for tag in collections.tagList %}
-        <a href="/tags/{{ tag | slug }}/" class="pill">#{{ tag }}</a>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Páginas</h2>
-      <div class="sitemap-grid">
-        <a href="/" class="sitemap-link"><i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial</a>
-        <a href="/about/" class="sitemap-link"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim</a>
-        <a href="/now/" class="sitemap-link"><i class="fa-solid fa-location-dot" style="color:#e05c7a" aria-hidden="true"></i> Now</a>
-        <a href="/contact/" class="sitemap-link"><i class="fa-solid fa-envelope" style="color:#7ab87a" aria-hidden="true"></i> Contato</a>
-        <a href="/uses/" class="sitemap-link"><i class="fa-solid fa-laptop" style="color:#888" aria-hidden="true"></i> O que uso</a>
-        <a href="/portfolio/" class="sitemap-link"><i class="fa-solid fa-diagram-project" style="color:#5b8dd9" aria-hidden="true"></i> Projetos</a>
-        <a href="/resume/" class="sitemap-link"><i class="fa-solid fa-file-lines" style="color:#888" aria-hidden="true"></i> Currículo</a>
-        <a href="/values/" class="sitemap-link"><i class="fa-solid fa-heart" style="color:#e05c7a" aria-hidden="true"></i> Valores</a>
-        <a href="/why/" class="sitemap-link"><i class="fa-solid fa-circle-question" style="color:#c47db8" aria-hidden="true"></i> Por que este site</a>
-      </div>
-    </div>
-
-    {% if totalPosts > 0 or totalNotes > 0 or totalPoems > 0 or totalPhotos > 0 or totalRecipes > 0 %}
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Conteúdo</h2>
-      <div class="sitemap-grid">
-        {% if totalPosts > 0 %}<a href="/blog/" class="sitemap-link"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog</a>{% endif %}
-        {% if totalNotes > 0 %}<a href="/notes/" class="sitemap-link"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas</a>{% endif %}
-        {% if totalPoems > 0 %}<a href="/poetry/" class="sitemap-link"><i class="fa-solid fa-feather-pointed" style="color:#c47db8" aria-hidden="true"></i> Poesias</a>{% endif %}
-        {% if totalPhotos > 0 %}<a href="/photos/" class="sitemap-link"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos</a>{% endif %}
-        {% if totalRecipes > 0 %}<a href="/recipes/" class="sitemap-link"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i> Receitas</a>{% endif %}
-      </div>
-    </div>
-    {% endif %}
-
-    {% if totalBooks > 0 or totalMovies > 0 or totalSeries > 0 or totalGames > 0 or totalComics > 0 or totalMusic > 0 %}
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Coleções</h2>
-      <div class="sitemap-grid">
-        {% if totalBooks > 0 %}<a href="/bookshelf/" class="sitemap-link"><i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i> Livros</a>{% endif %}
-        {% if totalMovies > 0 %}<a href="/movies/" class="sitemap-link"><i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i> Filmes</a>{% endif %}
-        {% if totalSeries > 0 %}<a href="/series/" class="sitemap-link"><i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i> Séries</a>{% endif %}
-        {% if totalGames > 0 %}<a href="/games/" class="sitemap-link"><i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i> Jogos</a>{% endif %}
-        {% if totalComics > 0 %}<a href="/comics/" class="sitemap-link"><i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i> Quadrinhos</a>{% endif %}
-        {% if totalMusic > 0 %}<a href="/music/" class="sitemap-link"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i> Música</a>{% endif %}
-      </div>
-    </div>
-    {% endif %}
-
-
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-bars" style="color:#000" aria-hidden="true"></i> Outros</h2>
-      <div class="sitemap-grid">
-        <a href="/links/" class="sitemap-link"><i class="fa-solid fa-bookmark" style="color:#f0c040" aria-hidden="true"></i> Links</a>
-        <a href="/blogroll/" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> Blogroll</a>
-        <a href="/archive/" class="sitemap-link"><i class="fa-solid fa-calendar-days" style="color:#5b8dd9" aria-hidden="true"></i> Arquivo</a>
-        {% if totalTags > 0 %}<a href="/tags/" class="sitemap-link"><i class="fa-solid fa-tags" style="color:#c47db8" aria-hidden="true"></i> Tags</a>{% endif %}
-        <a href="/changelog/" class="sitemap-link"><i class="fa-solid fa-clock-rotate-left" style="color:#7ab87a" aria-hidden="true"></i> Changelog</a>
-        <a href="/slashes/" class="sitemap-link"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Páginas</a>
-      </div>
-    </div>
-
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-satellite-dish" style="color:#f26522" aria-hidden="true"></i> Feeds</h2>
-      <div class="sitemap-grid">
-        <a href="/feed.xml" class="sitemap-link"><i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i> RSS/Atom</a>
-      </div>
-    </div>
-
-    <div class="sitemap-section">
-      <h2 class="sitemap-section-title"><i class="fa-solid fa-wrench" style="color:#888" aria-hidden="true"></i> Meta</h2>
-      <div class="sitemap-grid">
-        <a href="/busca/" class="sitemap-link"><i class="fa-solid fa-magnifying-glass" style="color:#5b8dd9" aria-hidden="true"></i> Busca</a>
-        <a href="/style/" class="sitemap-link"><i class="fa-solid fa-palette" style="color:#c47db8" aria-hidden="true"></i> Style guide</a>
-        <a href="/accessibility/" class="sitemap-link"><i class="fa-solid fa-universal-access" style="color:#5b8dd9" aria-hidden="true"></i> Acessibilidade</a>
-        <a href="/colophon/" class="sitemap-link"><i class="fa-solid fa-scroll" style="color:#888" aria-hidden="true"></i> Colofão</a>
-      </div>
-    </div>
+    <p style="margin-top:2rem">
+      <a href="/slashes/" class="soft-link"><i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Ver todas as páginas do site →</a>
+    </p>
 
   </div>
 </section>
