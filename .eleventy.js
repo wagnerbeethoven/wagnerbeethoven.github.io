@@ -68,6 +68,15 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  // RFC 3339 date for Atom and JSON Feed timestamps
+  eleventyConfig.addFilter("feedDate", (dateObj) => {
+    try {
+      return toDateTime(dateObj).toUTC().toISO({ suppressMilliseconds: true });
+    } catch {
+      return "";
+    }
+  });
+
   // Git last-modified date for a source file (falls back to fs mtime if git unavailable)
   eleventyConfig.addFilter("gitLastModified", (inputPath) => {
     try {
