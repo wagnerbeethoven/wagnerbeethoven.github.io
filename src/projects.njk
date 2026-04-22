@@ -22,9 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Projetos"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Projetos</h1>
-      <p class="entry-summary">Projetos pessoais, experimentos e coisas que merecem uma pagina propria.</p>
-      {%- include "partials/last-updated.njk" %}
-    </header>
+      <p class="entry-summary">Projetos pessoais, experimentos e coisas que merecem uma pagina propria.</p>    </header>
 
     <div class="feed-stack">
 
@@ -63,5 +61,6 @@ showUpdated: true
       </article>
 
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

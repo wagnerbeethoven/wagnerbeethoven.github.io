@@ -22,9 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Now"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">No que estou agora</h1>
-      <p class="entry-summary">Um retrato simples do que esta recebendo minha energia neste momento.</p>
-      {% include "partials/last-updated.njk" %}
-    </header>
+      {% include "partials/page-summary.njk" %}    </header>
 
     <div class="prose">
     <p>
@@ -58,10 +56,7 @@ showUpdated: true
       <li>misturar este espaco com obrigacao profissional</li>
       <li>publicar so para manter frequencia</li>
     </ul>
-
-    <p class="text-sm text-[var(--text-secondary)] mt-8">
-      Ultima atualizacao: <time datetime="2026-04-18">18 de abril de 2026</time>
-    </p>
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

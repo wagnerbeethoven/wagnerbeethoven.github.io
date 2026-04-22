@@ -88,12 +88,42 @@ function postUrl(uri, handle) {
   return `https://bsky.app/profile/${handle}/post/${rkey(uri)}`;
 }
 
+/** Extrai imagens do embed do post (usa o view resolvido) */
+function extractImages(post) {
+  const embed = post.embed;
+  if (!embed) return [];
+  if (embed.$type !== "app.bsky.embed.images#view") return [];
+  return (embed.images ?? []).map(img => ({
+    thumb: img.thumb ?? "",
+    fullsize: img.fullsize ?? "",
+    alt: img.alt ?? "",
+  }));
+}
+
+/** Extrai link externo do embed do post */
+function extractLinkEmbed(post) {
+  const embed = post.embed;
+  if (!embed) return null;
+  if (embed.$type !== "app.bsky.embed.external#view") return null;
+  const ext = embed.external ?? {};
+  if (!ext.uri) return null;
+  return {
+    url: ext.uri,
+    title: ext.title ?? "",
+    description: ext.description ?? "",
+    thumb: ext.thumb ?? "",
+  };
+}
+
 /** Monta o bloco de frontmatter YAML */
 function buildFrontmatter(post, tags, handle) {
-  const date  = toDateSlug(post.record.createdAt);
-  const uri   = post.uri;
-  const url   = postUrl(uri, handle);
-  const text  = post.record?.text ?? "";
+  const dateSlug  = toDateSlug(post.record.createdAt);
+  const dateISO   = post.record.createdAt;           // datetime completo com hora
+  const uri       = post.uri;
+  const url       = postUrl(uri, handle);
+  const text      = post.record?.text ?? "";
+  const images    = extractImages(post);
+  const linkEmbed = extractLinkEmbed(post);
 
   // Usa primeira linha como título se for curta o suficiente
   const firstLine = text.split("\n")[0].trim();
@@ -101,11 +131,26 @@ function buildFrontmatter(post, tags, handle) {
 
   const lines = ["---"];
   if (title) lines.push(`title: ${JSON.stringify(title)}`);
-  lines.push(`date: ${date}`);
+  lines.push(`date: "${dateISO}"`);
   lines.push("tags:");
   for (const tag of tags) lines.push(`  - ${tag}`);
   lines.push(`bluesky_uri: "${uri}"`);
   lines.push(`bluesky_url: "${url}"`);
+  if (images.length > 0) {
+    lines.push("images:");
+    for (const img of images) {
+      lines.push(`  - thumb: ${JSON.stringify(img.thumb)}`);
+      lines.push(`    fullsize: ${JSON.stringify(img.fullsize)}`);
+      if (img.alt) lines.push(`    alt: ${JSON.stringify(img.alt)}`);
+    }
+  }
+  if (linkEmbed) {
+    lines.push("link_embed:");
+    lines.push(`  url: ${JSON.stringify(linkEmbed.url)}`);
+    if (linkEmbed.title)       lines.push(`  title: ${JSON.stringify(linkEmbed.title)}`);
+    if (linkEmbed.description) lines.push(`  description: ${JSON.stringify(linkEmbed.description)}`);
+    if (linkEmbed.thumb)       lines.push(`  thumb: ${JSON.stringify(linkEmbed.thumb)}`);
+  }
   lines.push("---");
   return lines.join("\n");
 }

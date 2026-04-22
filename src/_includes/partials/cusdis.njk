@@ -52,7 +52,39 @@
     (function () {
       var btn = document.currentScript.previousElementSibling.previousElementSibling.querySelector('.cusdis-toggle-btn');
       var widget = document.getElementById('cusdis-widget');
+      var thread = document.getElementById('cusdis_thread');
       var loaded = false;
+
+      // Tradução do widget Cusdis
+      var cusdisI18n = {
+        'Nickname': 'Nome',
+        'Email': 'E-mail',
+        'Send': 'Enviar',
+        'Reply': 'Responder',
+        'Leave a comment': 'Deixar um comentário',
+        'Loading': 'Carregando…',
+        'Powered by': 'Desenvolvido por',
+      };
+      function translateCusdis(root) {
+        root.querySelectorAll('[placeholder]').forEach(function (el) {
+          var t = cusdisI18n[el.placeholder];
+          if (t) el.placeholder = t;
+        });
+        root.querySelectorAll('button').forEach(function (el) {
+          var t = cusdisI18n[el.textContent.trim()];
+          if (t) el.textContent = t;
+        });
+        root.querySelectorAll('a, span, p, label').forEach(function (el) {
+          if (!el.children.length) {
+            var t = cusdisI18n[el.textContent.trim()];
+            if (t) el.textContent = t;
+          }
+        });
+      }
+      if (thread) {
+        new MutationObserver(function () { translateCusdis(thread); })
+          .observe(thread, { childList: true, subtree: true });
+      }
 
       btn.addEventListener('click', function () {
         var open = btn.getAttribute('aria-expanded') === 'true';
@@ -68,7 +100,7 @@
             document.body.appendChild(s);
             s.onload = function () {
               if (window.CUSDIS && window.CUSDIS.renderTo) {
-                window.CUSDIS.renderTo(document.getElementById('cusdis_thread'));
+                window.CUSDIS.renderTo(thread);
               }
             };
           }

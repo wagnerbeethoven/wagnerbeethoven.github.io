@@ -42,7 +42,7 @@
       // Add documents to search index
       searchIndex.forEach((item, index) => {
         if (item && item.title) {
-          const searchText = `${item.title} ${item.description || ''} ${item.content || ''} ${(item.tags || []).join(' ')}`;
+          const searchText = normalizeSearchText(`${item.title} ${item.description || ''} ${item.content || ''} ${(item.tags || []).join(' ')}`);
           flexSearch.add(index, searchText);
         }
       });
@@ -114,7 +114,7 @@
     if (!flexSearch || !searchIndex) return;
 
     try {
-      const results = flexSearch.search(query, { limit: 8 });
+      const results = flexSearch.search(normalizeSearchText(query), { limit: 8 });
       const items = results.map(index => searchIndex[index]);
       
       displaySearchResults(items, query, searchResults);
@@ -169,6 +169,13 @@
     
     const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
     return text.replace(regex, '<mark class="bg-yellow-200 dark:bg-yellow-800">$1</mark>');
+  }
+
+  function normalizeSearchText(text) {
+    return String(text || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
   }
 
   function loadScript(src) {

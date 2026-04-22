@@ -1183,7 +1183,7 @@ video {
   --border-strong: #d2ccc3;
   --accent: #bb4d33;
   --accent-soft: #fff0eb;
-  --focus: #4c5cff;
+  --focus: #681414;
   --shadow-soft: 0 10px 24px rgba(41, 24, 18, 0.06);
   --sidebar-width: 246px;
   --main-max: 760px;
@@ -1201,7 +1201,7 @@ video {
   --border-strong: #45403a;
   --accent: #f28e70;
   --accent-soft: rgba(242, 142, 112, 0.1);
-  --focus: #91a0ff;
+  --focus: #f28e70;
   --shadow-soft: none;
 }
 
@@ -1262,6 +1262,8 @@ select:focus-visible {
   background: var(--bg-sidebar);
   border-right: 1px solid var(--border-subtle);
   padding: 1.5rem 1rem 2rem;
+  z-index: 220;
+  transition: transform 0.22s ease;
 }
 
 .sidebar-avatar {
@@ -1380,6 +1382,10 @@ select:focus-visible {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.desktop-topbar-search {
+  margin-left: auto;
+}
+
 .sidebar-toggle-btn {
   display: flex;
   align-items: center;
@@ -1437,13 +1443,21 @@ select:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.5rem;
-  padding-top: 0.05rem;
+  width: 2rem;
+  height: 2rem;
   color: #fff6f3;
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
-  margin-top: .35rem;
+  margin-top: 0.2rem;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.editorial-back:hover,
+.editorial-back:focus-visible {
+  background: #fff6f3;
+  color: var(--bg-hero);
 }
 
 .editorial-brand {
@@ -2203,10 +2217,6 @@ a.pill:focus-visible {
     align-items: center;
   }
 
-  .site-sidebar {
-    display: none;
-  }
-
   .site-main {
     margin-left: 0;
   }
@@ -2384,16 +2394,16 @@ a.pill:focus-visible {
 }
 
 .note-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
+  /* background: var(--bg-card); */
+  /* border: 1px solid var(--border-subtle); */
+  /* border-radius: 12px; */
+  /* padding: 1rem 1.1rem; */
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .note-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  /* border-color: var(--accent); */
+  /* box-shadow: 0 2px 12px rgba(0,0,0,0.08); */
 }
 
 .note-card-header {
@@ -2445,14 +2455,14 @@ a.pill:focus-visible {
   margin-bottom: 0;
 }
 
-.note-card-footer {
+/* .note-card-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: 0.75rem;
   padding-top: 0.65rem;
   border-top: 1px solid var(--border-subtle);
-}
+} */
 
 /* Single note page — sem hover, fonte maior */
 
@@ -2790,8 +2800,8 @@ a.media-card:focus-visible .media-card-cover-label {
 
 .home-section {
   margin-bottom: 2.5rem;
-  background: color-mix(in srgb, var(--section-tint, var(--accent)) 8%, var(--bg-card));
-  border: 1px solid color-mix(in srgb, var(--section-tint, var(--accent)) 20%, var(--border-subtle));
+  background: #fff;
+  border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
   padding: 1.25rem;
 }
@@ -5083,7 +5093,7 @@ a.entry-card:hover {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  padding: 0.6rem 0.75rem;
+  padding: .75rem 0;
   border-bottom: 1px solid var(--border-subtle);
   text-decoration: none;
   color: inherit;
@@ -5108,10 +5118,14 @@ a.entry-card:hover {
 }
 
 .home-blog-row-title {
+  display: block;
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .home-blog-row-desc  {
@@ -5282,7 +5296,6 @@ a.entry-card:hover {
 }
 
 .entry-meta-source {
-  font-size: .85rem
 }
 
 /* ── Post footer: localização + clima ───────────────────── */
@@ -5948,4 +5961,297 @@ a.entry-card:hover {
   color: var(--text-primary);
   line-height: 1.65;
   margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Note card compact (listing) ─────────────────────────── */
+
+.note-card-ts {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.note-card-ts:hover {
+  color: var(--accent);
+}
+
+.note-card-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.note-stream .note-card-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-card--single .note-card-body {
+  display: block;
+  overflow: visible;
+}
+
+/* ── Note card images (Bluesky) ──────────────────────────── */
+
+.note-card-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+
+.note-card-image {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  display: block;
+}
+
+.note-card-images--single {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.note-card-images--single .note-card-image {
+  height: auto;
+  max-height: 480px;
+}
+
+/* ── Cusdis overrides ────────────────────────────────────── */
+
+#cusdis textarea {
+  min-height: 120px !important;
+  font-family: inherit !important;
+  font-size: 0.9rem !important;
+  resize: vertical !important;
+}
+
+#cusdis input[type="text"],
+#cusdis input[type="email"] {
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+}
+
+#cusdis button {
+  font-family: inherit !important;
+}
+
+/* ── Note card — card inteiro clicável ───────────────────── */
+
+.note-stream .note-card {
+  position: relative;
+}
+
+.note-stream .note-card-ts::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.note-stream .note-card-body,
+.note-stream .note-card-images,
+.note-stream .note-card-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.note-stream .note-card-footer a {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Archive excerpt (notes sem título) ──────────────────── */
+
+.archive-excerpt {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* ── Archive: data | título | tipo ───────────────────────── */
+
+.home-blog-row-tag {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+/* ── Note link embed (Bluesky external card) ─────────────── */
+
+.note-link-embed {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+  padding: 0.65rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms;
+  overflow: hidden;
+}
+
+.note-link-embed:hover {
+  border-color: var(--accent);
+}
+
+.note-link-embed-thumb {
+  width: 72px;
+  height: 72px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.note-link-embed-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  justify-content: center;
+}
+
+.note-link-embed-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.note-link-embed-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.note-link-embed-url {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Sitemap accordion (details/summary) ─────────────────── */
+
+.sitemap-accordion {
+  border: none;
+}
+
+.sitemap-accordion-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.sitemap-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.sitemap-accordion-chevron {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  transition: transform 200ms ease;
+}
+
+.sitemap-accordion[open] .sitemap-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.sitemap-accordion-body {
+  margin-top: 0.75rem;
+}
+
+/* ── Feed discovery page ─────────────────────────────────── */
+
+.feed-discovery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.feed-discovery-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms;
+}
+
+.feed-discovery-item:hover {
+  border-color: var(--accent);
+}
+
+.feed-discovery-item > i {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.feed-discovery-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.feed-discovery-url {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+  margin: 0;
+}
+
+.feed-discovery-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0;
 }

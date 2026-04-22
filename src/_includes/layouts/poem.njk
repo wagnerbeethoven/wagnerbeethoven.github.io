@@ -21,9 +21,8 @@ layout: layouts/base.njk
         {% include "partials/breadcrumb.njk" %}
         <h1 class="entry-title p-name">{{ title }}</h1>
         <p class="entry-meta">
-          {% if author %}Autoria: <strong class="p-author">{{ author }}</strong>{% endif %}
-          {% if source %}<br><span class="entry-meta-source">Publicado originalmente em {{ source }}</span>{% endif %}
-          {% if page.date %}<br><time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | relativeDate }}</time>{% endif %}
+          {% if author %}<strong class="p-author">{{ author }}</strong> {% if source %}em  <span class="entry-meta-source">{{ source }}</span>{% endif %}{% endif %}
+          {% if page.date %}<p><time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | relativeDate }}</time></p>{% endif %}
         </p>
         <a class="u-url hidden" href="{{ page.url }}">Permalink</a>
       </header>

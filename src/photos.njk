@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/photos/"
 title: Fotos
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,8 +21,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Fotos"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Fotos</h1>
-      <p class="entry-summary">Momentos guardados. Nao e um feed, e um album.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% set allPhotos = collections.photos | default([]) %}

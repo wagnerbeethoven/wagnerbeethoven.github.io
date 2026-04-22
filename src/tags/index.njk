@@ -21,7 +21,7 @@ permalink: /tags/
       {% set breadcrumb = [{label: "Tags"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Tags</h1>
-      <p class="entry-summary">Todos os temas e assuntos usados para organizar os textos.</p>
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% if collections.tagMeta and collections.tagMeta.length %}

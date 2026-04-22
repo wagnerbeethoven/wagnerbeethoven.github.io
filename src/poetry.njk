@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: Poesias
 pagination:
@@ -7,7 +7,6 @@ pagination:
   alias: items
   reverse: true
 permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -27,25 +26,18 @@ showUpdated: true
       {% set breadcrumb = [{label: "Poesias"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Poesias</h1>
-      <p class="entry-summary">Textos curtos, fragmentos e poemas quando esse espaço pedir outra cadência.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% set items = items | default([]) %}
     {% if items | length > 0 %}
-    <div class="home-grid home-grid-2">
+    <div class="home-blog-list h-feed">
       {% for item in items %}
-      <a href="{{ item.url }}" class="entry-card h-entry">
-        <p class="entry-card-title p-name">{{ item.data.title or 'Sem título' }}</p>
-        <p class="entry-card-meta">
-          {% if item.data.author %}<span>{{ item.data.author }}</span> · {% endif %}
-          {% if item.date %}<time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>{% endif %}
-        </p>
-        {% if item.templateContent %}
-        <p class="entry-card-body">{{ item.templateContent | striptags | truncate(160) }}</p>
-        {% elif item.data.description %}
-        <p class="entry-card-body">{{ item.data.description }}</p>
-        {% endif %}
+      <a href="{{ item.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ item.data.author }}</span>
+        </div>
+        <span class="home-blog-row-date">{{ item.data.title or 'Sem título' }}</span>
       </a>
       {% endfor %}
     </div>

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/blogroll/"
 title: Blogroll
@@ -22,9 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Blogroll"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Blogroll</h1>
-      <p class="entry-summary">Uma lista curada de blogs, sites e feeds que leio e recomendo.</p>
-      {%- include "partials/last-updated.njk" %}
-    </header>
+      {% include "partials/page-summary.njk" %}    </header>
 
     <div class="prose mb-8">
       <p>
@@ -90,5 +88,6 @@ showUpdated: true
       </a>
 
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

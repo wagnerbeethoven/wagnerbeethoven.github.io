@@ -24,7 +24,7 @@ eleventyComputed:
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Tags"}] %}
+      {% set breadcrumb = [{label: "Tags", url: "/tags/"}, {label: tag}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">#{{ tag }}</h1>
     </header>
@@ -46,29 +46,14 @@ eleventyComputed:
     {% endfor %}
 
     {% if taggedPosts.length > 0 %}
-    <div class="feed-stack">
+    <div class="home-blog-list h-feed">
       {% for post in taggedPosts %}
-      <article class="post-card h-entry">
-        <h2 class="post-card-title p-name">
-          <a class="u-url" href="{{ post.url }}">{{ post.data.title or 'Sem titulo' }}</a>
-        </h2>
-        {% if post.date %}
-        <p class="post-card-meta dt-published">{{ post.date | readableDate }}</p>
-        {% endif %}
-        {% if post.data.description %}
-        <p class="post-card-excerpt p-summary">{{ post.data.description }}</p>
-        {% endif %}
-        {% if post.data.tags and post.data.tags.length > 0 %}
-        <div class="post-card-footer">
-          <div class="inline-pills">
-            {% for postTag in post.data.tags %}
-            <a href="/tags/{{ postTag | slug }}/" class="pill">#{{ postTag }}</a>
-            {% endfor %}
-          </div>
-          <a class="read-more" href="{{ post.url }}">Ler post</a>
+      <a href="{{ post.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ post.data.title or 'Sem titulo' }}</span>
         </div>
-        {% endif %}
-      </article>
+        {% if post.date %}<time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>{% endif %}
+      </a>
       {% endfor %}
     </div>
     {% else %}

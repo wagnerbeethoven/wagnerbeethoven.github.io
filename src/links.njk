@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: Links
 permalink: /links/
@@ -22,9 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Links"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Links</h1>
-      <p class="entry-summary">Referencias, sites e lugares da web que valem revisitar.</p>
-      {%- include "partials/last-updated.njk" %}
-    </header>
+      {% include "partials/page-summary.njk" %}    </header>
 
     <div class="link-cards">
 
@@ -92,5 +90,6 @@ showUpdated: true
       </a>
 
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

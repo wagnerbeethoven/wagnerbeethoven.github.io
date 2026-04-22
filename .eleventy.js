@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const tagColors = require("./src/_data/tagColors.json");
+const pageMeta = require("./src/_data/pageMeta.js");
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -53,6 +54,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("shortDate", (dateObj) => {
     try {
       return toDateTime(dateObj).toFormat("dd/LL/yy");
+    } catch {
+      return "";
+    }
+  });
+
+  // RFC 2822 date for RSS pubDate fields
+  eleventyConfig.addFilter("rssDate", (dateObj) => {
+    try {
+      return toDateTime(dateObj).toRFC2822();
     } catch {
       return "";
     }
@@ -290,14 +300,29 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("archiveTree", (collectionApi) => {
-    const toArchiveItem = (item, archiveType) => ({
-      url: item.url,
-      date: item.date,
-      data: {
-        ...(item.data || {}),
-        archiveType,
-      },
-    });
+    const toArchiveItem = (item, archiveType) => {
+      // rawInput disponível na fase de collection; templateContent não é
+      const raw = item.rawInput || "";
+      const bodyMatch = raw.match(/^---[\s\S]*?---\s*([\s\S]*)/);
+      const body = bodyMatch ? bodyMatch[1] : "";
+      const excerpt = body
+        .replace(/!\[.*?\]\(.*?\)/g, "")
+        .replace(/\[([^\]]+)\]\(.*?\)/g, "$1")
+        .replace(/#{1,6}\s+/g, "")
+        .replace(/[*_`~]/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 140) || null;
+      return {
+        url: item.url,
+        date: item.date,
+        data: {
+          ...(item.data || {}),
+          archiveType,
+          excerpt,
+        },
+      };
+    };
 
     const archiveItems = [
       ...collectionApi.getFilteredByGlob("src/blog/**/*.md").map((item) => toArchiveItem(item, "Blog")),
@@ -346,20 +371,64 @@ module.exports = function(eleventyConfig) {
 
   // Search index: lightweight documents for FlexSearch (client-side)
   eleventyConfig.addCollection("searchIndex", (collectionApi) => {
-    const posts = collectionApi
-      .getFilteredByGlob("src/blog/**/*.md")
-      .sort((a, b) => (a.date > b.date ? -1 : 1));
+    const globs = [
+      "src/blog/**/*.md",
+      "src/notes/**/*.md",
+      "src/poetry/**/*.md",
+      "src/recipes/**/*.md",
+      "src/movies/**/*.md",
+      "src/series/**/*.md",
+      "src/games/**/*.md",
+      "src/comics/**/*.md",
+      "src/bookshelf/**/*.md",
+      "src/music/**/*.md",
+    ];
 
-    return posts.map((p) => ({
-      id: p.url,
-      title: (p.data && p.data.title) || "",
-      description: (p.data && p.data.description) || "",
-      tags: Array.isArray(p.data?.tags) ? p.data.tags : [],
-      // Avoid using templateContent here (not available during collection build in Eleventy v3)
-      content: "",
-      date: p.date,
-    }));
+    const stripMarkdown = (text) => String(text || "")
+      .replace(/^---[\s\S]*?---\s*/, "")
+      .replace(/!\[[^\]]*\]\([^)]+\)/g, "")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/#{1,6}\s+/g, "")
+      .replace(/[*_`~]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    return globs
+      .flatMap((glob) => collectionApi.getFilteredByGlob(glob))
+      .filter((item) => item.url)
+      .sort((a, b) => (a.date > b.date ? -1 : 1))
+      .map((item) => {
+        const data = item.data || {};
+        const people = [
+          data.author,
+          data.writer,
+          data.artist,
+          data.platform,
+          data.publisher,
+        ].filter(Boolean).join(" ");
+        const metaText = [
+          data.description,
+          data.synopsis,
+          data.note,
+          data.source,
+          data.year,
+          data.years,
+          people,
+        ].filter(Boolean).join(" ");
+
+        return {
+          id: item.url,
+          title: data.title || "Sem título",
+          description: data.description || data.synopsis || data.note || "",
+          tags: Array.isArray(data.tags) ? data.tags : [],
+          content: stripMarkdown(`${metaText} ${item.rawInput || ""}`),
+          date: item.date,
+        };
+      });
   });
+
+  eleventyConfig.addFilter("pageInfo", (url) => pageMeta[url] || null);
 
   return {
     dir: {

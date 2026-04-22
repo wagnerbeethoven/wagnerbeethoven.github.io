@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -40,6 +41,8 @@ layout: layouts/base.njk
     <div class="e-content prose">
       {{ content | safe }}
     </div>
+
+    {%- include "partials/last-updated.njk" %}
 
     <div class="post-end-actions">
       {% if tags %}

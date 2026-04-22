@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/archive/"
 title: Arquivo
-showUpdated: true
 ---
 {% set monthNames = {
   "01": "janeiro",
@@ -36,11 +35,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Arquivo"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Arquivo</h1>
-      <p class="entry-summary">
-      {% set total = (collections.posts | default([]) | length) + (collections.notes | default([]) | length) + (collections.poetry | default([]) | length) + (collections.recipes | default([]) | length) %}
-      {{ total }} item{% if total != 1 %}s{% endif %} publicado{% if total != 1 %}s{% endif %}, organizados por ano e mês.
-      </p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% if collections.archiveTree and collections.archiveTree.length > 0 %}
@@ -62,11 +57,11 @@ showUpdated: true
             <a href="{{ post.url }}" class="home-blog-row h-entry">
               <div class="home-blog-row-main">
                 <span class="home-blog-row-title p-name">
-                  <span class="home-blog-row-desc p-summary">{{ post.data.archiveType or "Conteúdo" }}:</span>
-                  {{ post.data.title }}
+                  {% if post.data.title %}{{ post.data.title }}{% else %}<span class="archive-excerpt">{{ post.data.excerpt }}</span>{% endif %}
                 </span>
               </div>
               <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
+              <span class="home-blog-row-tag">{{ post.data.archiveType }}</span>
             </a>
             {% endfor %}
           </div>

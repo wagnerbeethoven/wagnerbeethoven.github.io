@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/comics/"
 title: Quadrinhos
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,25 +21,18 @@ showUpdated: true
       {% set breadcrumb = [{label: "Quadrinhos"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Quadrinhos</h1>
-      <p class="entry-summary">Graphic novels, HQs e mangás — o que li, o que estou lendo e o que quero ler.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allComics = collections.comics | default([]) %}
+    {% set allComics = collections.comics | default([]) | sort(false, false, "data.title") %}
     {% if allComics | length > 0 %}
-    <div class="media-grid">
+    <div class="home-blog-list h-feed">
       {% for item in allComics %}
-      <a href="{{ item.url }}" class="media-card" aria-label="{{ item.data.title }}">
-        <div class="media-card-poster">
-          {% if item.data.image %}
-            <img src="{{ item.data.image }}" alt="" loading="lazy">
-          {% elif item.data.poster %}
-            <img src="{{ item.data.poster }}" alt="" loading="lazy">
-          {% else %}
-            💬
-          {% endif %}
-          <span class="media-card-cover-label">{{ item.data.title }}</span>
+      <a href="{{ item.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
         </div>
+        <span class="home-blog-row-date">{{ item.data.publisher or 'Sem editora' }}</span>
       </a>
       {% endfor %}
     </div>

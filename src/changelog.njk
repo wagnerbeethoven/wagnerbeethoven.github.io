@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/changelog/"
 title: Changelog
@@ -23,11 +23,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Changelog"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Changelog</h1>
-      <p class="entry-summary">
-        Registro automático de todas as mudanças e publicações feitas neste site,
-        gerado a partir do histórico do repositório git.
-      </p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% if changelog.byMonth | length > 0 %}
@@ -50,5 +46,6 @@ showUpdated: true
     {% else %}
     <div class="empty-card">Histórico não disponível.</div>
     {% endif %}
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

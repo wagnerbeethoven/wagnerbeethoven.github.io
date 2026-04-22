@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -27,11 +28,9 @@ layout: layouts/base.njk
         <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
       </span>
       <div class="note-card-header">
-        <img class="note-card-avatar" src="/assets/profile.jpg" alt="{{ site.author }}" width="40" height="40" loading="lazy">
         <div class="note-card-identity">
-          <span class="note-card-name">{{ site.author }}</span>
           <time class="note-card-handle dt-published" datetime="{{ page.date | htmlDateString }}">
-            {{ page.date | readableDate("dd MMM yyyy, HH:mm") }}
+            {{ page.date | readableDate("dd/MM/yyyy") }} às {{ page.date | readableDate("HH:mm") }}
           </time>
         </div>
       </div>
@@ -39,6 +38,24 @@ layout: layouts/base.njk
       <div class="note-card-body e-content prose">
         {{ content | safe }}
       </div>
+      {% if images and images | length %}
+      <div class="note-card-images note-card-images--single">
+        {% for img in images %}
+        <img src="{{ img.fullsize or img.thumb }}" alt="{{ img.alt or '' }}" loading="lazy" class="note-card-image" />
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if link_embed and link_embed.url %}
+      <a class="note-link-embed u-syndication" href="{{ link_embed.url }}" target="_blank" rel="noopener">
+        {% if link_embed.thumb %}<img class="note-link-embed-thumb" src="{{ link_embed.thumb }}" alt="" loading="lazy" />{% endif %}
+        <div class="note-link-embed-body">
+          {% if link_embed.title %}<p class="note-link-embed-title">{{ link_embed.title }}</p>{% endif %}
+          {% if link_embed.description %}<p class="note-link-embed-desc">{{ link_embed.description }}</p>{% endif %}
+          <span class="note-link-embed-url">{{ link_embed.url | replace("https://", "") | replace("http://", "") | truncate(60) }}</span>
+        </div>
+      </a>
+      {% endif %}
+      {% if not bluesky_uri %}{%- include "partials/last-updated.njk" %}{% endif %}
 
       {% if tags %}
         <div class="note-card-footer">

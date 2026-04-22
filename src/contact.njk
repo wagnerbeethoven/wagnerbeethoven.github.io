@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/contact/"
 title: Contato
@@ -22,8 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Contato"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Entre em contato</h1>
-      <p class="entry-summary">Se você quiser conversar, dar sugestões ou colaborar, este é o lugar certo.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     <div class="uses-section" style="border-top:none;padding-top:0">

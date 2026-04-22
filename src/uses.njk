@@ -22,11 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "O que uso"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">O que uso</h1>
-      <p class="entry-summary">
-        Equipamentos, editores, linguagens e ferramentas que fazem parte da minha rotina de trabalho.
-        Inspirado na convenção <a href="https://uses.tech/" target="_blank" rel="noopener">uses.tech</a>.
-      </p>
-      {% include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {# ── Design ───────────────────────────────────────────── #}
@@ -185,6 +181,7 @@ showUpdated: true
         </div>
       </div>
     </div>
+    {% include "partials/last-updated.njk" %}
 
   </div>
 </section>

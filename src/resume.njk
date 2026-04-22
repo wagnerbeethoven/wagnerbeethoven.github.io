@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: Currículo
 permalink: /resume/
@@ -22,8 +22,7 @@ showUpdated: true
       {% set breadcrumb = [{label: "Currículo"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Currículo</h1>
-      <p class="entry-summary">Uma versão aberta do meu perfil, com o que faz sentido publicar sem filtro de plataforma.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     <div class="uses-section" style="border-top:none;padding-top:0">
@@ -88,5 +87,6 @@ showUpdated: true
         {% include "partials/site-links.njk" %}
       </div>
     </div>
+    {% include "partials/last-updated.njk" %}
   </div>
 </section>

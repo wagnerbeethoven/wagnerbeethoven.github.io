@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/movies/"
 title: Filmes
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,28 +21,18 @@ showUpdated: true
       {% set breadcrumb = [{label: "Filmes"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Filmes</h1>
-      <p class="entry-summary">Um registro do que assisti, do que ficou e do que ainda quero ver.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allMovies = collections.movies | default([]) %}
+    {% set allMovies = collections.movies | default([]) | sort(false, false, "data.title") %}
     {% if allMovies | length > 0 %}
-    <div class="media-grid">
+    <div class="home-blog-list h-feed">
       {% for item in allMovies %}
-      <a href="{{ item.url }}" class="media-card" aria-label="{{ item.data.title }}">
-        <div class="media-card-poster">
-          {% if item.data.image %}
-            <img src="{{ item.data.image }}" alt="" loading="lazy">
-          {% elif item.data.poster %}
-            <img src="{{ item.data.poster }}" alt="" loading="lazy">
-          {% else %}
-            🎬
-          {% endif %}
-          {% if item.data.status == 'done' %}<span class="media-badge media-badge--done">Assistido</span>
-          {% elif item.data.status == 'watching' %}<span class="media-badge media-badge--watching">Assistindo</span>
-          {% endif %}
-          <span class="media-card-cover-label">{{ item.data.title }}</span>
+      <a href="{{ item.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
         </div>
+        <span class="home-blog-row-date">{{ item.data.year or 's/d' }}</span>
       </a>
       {% endfor %}
     </div>

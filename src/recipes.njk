@@ -1,8 +1,7 @@
-﻿---
+---
 layout: layouts/base.njk
 permalink: "/recipes/"
 title: Receitas
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -22,29 +21,18 @@ showUpdated: true
       {% set breadcrumb = [{label: "Receitas"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Receitas</h1>
-      <p class="entry-summary">O que cozinho, o que aprendi e o que vale a pena repetir.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% set allRecipes = collections.recipes | default([]) %}
     {% if allRecipes | length > 0 %}
-    <div class="recipe-list">
+    <div class="home-blog-list h-feed">
       {% for item in allRecipes %}
-      <a href="{{ item.url }}" class="recipe-card">
-        <div class="recipe-card-body">
-          <h2 class="recipe-card-title">{{ item.data.title }}</h2>
-          {% if item.data.description %}<p class="recipe-card-desc">{{ item.data.description }}</p>{% endif %}
-          <div class="recipe-card-meta">
-            {% if item.data.time %}<span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ item.data.time }} min</span>{% endif %}
-            {% if item.data.servings %}<span><i class="fa-solid fa-utensils" aria-hidden="true"></i> {{ item.data.servings }} porções</span>{% endif %}
-          </div>
-          {% if item.data.tags %}
-          <div class="recipe-tags">
-            {% for tag in item.data.tags %}<span class="pill">#{{ tag }}</span>{% endfor %}
-          </div>
-          {% endif %}
+      <a href="{{ item.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
         </div>
-        <span class="recipe-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
       </a>
       {% endfor %}
     </div>

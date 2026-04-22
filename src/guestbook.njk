@@ -23,7 +23,6 @@ showUpdated: true
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Livro de visitas</h1>
       <p class="entry-summary">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. Fico feliz em saber que você esteve aqui.</p>
-      {%- include "partials/last-updated.njk" %}
     </header>
 
     {# ── Formulário ─────────────────────────────────────────── #}
@@ -98,6 +97,7 @@ showUpdated: true
         <div class="empty-card">Ainda não há entradas. Seja o primeiro a assinar!</div>
       {% endif %}
     </div>
+    {% include "partials/last-updated.njk" %}
 
   </div>
 </section>

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 pagination:
   data: collections.posts
@@ -6,7 +6,6 @@ pagination:
   alias: posts
 permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 title: Blog
-showUpdated: true
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -26,26 +25,17 @@ showUpdated: true
       {% set breadcrumb = [{label: "Blog"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Blog</h1>
-      <p class="entry-summary">Leitura longa, notas duráveis e arquivo pessoal.</p>
-      {%- include "partials/last-updated.njk" %}
+      {% include "partials/page-summary.njk" %}
     </header>
 
     {% if posts | length > 0 %}
-    <div class="home-grid home-grid-2 h-feed">
+    <div class="home-blog-list h-feed">
       {% for post in posts %}
-      <a href="{{ post.url }}" class="entry-card h-entry">
-        {% set thumb = post.data.banner or post.data.featuredImage %}
-        {% if thumb %}
-        <img class="entry-card-thumb u-featured" src="{{ thumb }}" alt="{{ post.data.title }}" loading="lazy" />
-        {% endif %}
-        <p class="entry-card-title p-name">{{ post.data.title }}</p>
-        <p class="entry-card-meta">
-          <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-          · {{ post.templateContent | default('') | readingTime }} min
-        </p>
-        {% if post.data.description %}
-        <p class="entry-card-body p-summary">{{ post.data.description | truncate(160) }}</p>
-        {% endif %}
+      <a href="{{ post.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ post.data.title }}</span>
+        </div>
+        <time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
       </a>
       {% endfor %}
     </div>
