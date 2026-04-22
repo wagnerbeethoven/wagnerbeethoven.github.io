@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+permalink: /feed/
+title: Feeds
+eleventyExcludeFromCollections: true
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Assine o site</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Feeds"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Feeds</h1>
+      <p class="entry-summary">Assine para acompanhar no seu leitor favorito.</p>
+    </header>
+
+    <div class="feed-discovery-list">
+      <a href="/feed.xml" class="feed-discovery-item">
+        <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
+        <div>
+          <p class="feed-discovery-name">Atom Feed</p>
+          <p class="feed-discovery-url">{{ site.url }}/feed.xml</p>
+          <p class="feed-discovery-desc">Posts, notas, poesias e receitas</p>
+        </div>
+      </a>
+      <a href="/atom.xml" class="feed-discovery-item">
+        <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
+        <div>
+          <p class="feed-discovery-name">Atom (alias)</p>
+          <p class="feed-discovery-url">{{ site.url }}/atom.xml</p>
+          <p class="feed-discovery-desc">Mesmo conteúdo do feed principal</p>
+        </div>
+      </a>
+      <a href="/rss.xml" class="feed-discovery-item">
+        <i class="fa-solid fa-rss" style="color:#e07b54" aria-hidden="true"></i>
+        <div>
+          <p class="feed-discovery-name">RSS 2.0</p>
+          <p class="feed-discovery-url">{{ site.url }}/rss.xml</p>
+          <p class="feed-discovery-desc">Compatível com a maioria dos leitores</p>
+        </div>
+      </a>
+      <a href="/feed.json" class="feed-discovery-item">
+        <i class="fa-solid fa-code" style="color:#5b8dd9" aria-hidden="true"></i>
+        <div>
+          <p class="feed-discovery-name">JSON Feed</p>
+          <p class="feed-discovery-url">{{ site.url }}/feed.json</p>
+          <p class="feed-discovery-desc">Formato moderno para leitores compatíveis</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

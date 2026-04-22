@@ -1,0 +1,32 @@
+---
+permalink: /rss.xml
+eleventyExcludeFromCollections: true
+templateEngine: njk
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description }}</description>
+    <language>pt-BR</language>
+    <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml"/>
+    {%- set allItems = [] -%}
+    {%- set allItems = allItems.concat(collections.posts | default([])) -%}
+    {%- set allItems = allItems.concat(collections.notes | default([])) -%}
+    {%- set allItems = allItems.concat(collections.poetry | default([])) -%}
+    {%- set allItems = allItems.concat(collections.recipes | default([])) -%}
+    {%- set feed = allItems | sort(true, false, "date") | slice(0, 30) -%}
+    {% if feed | length %}<lastBuildDate>{{ feed[0].date | rssDate }}</lastBuildDate>{% endif %}
+    {% for item in feed %}
+    <item>
+      <title>{{ item.data.title or (item.date | readableDate("dd/MM/yyyy")) }}</title>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      <pubDate>{{ item.date | rssDate }}</pubDate>
+      <dc:creator>{{ site.author }}</dc:creator>
+      {% if item.data.description %}<description>{{ item.data.description | escape }}</description>{% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
