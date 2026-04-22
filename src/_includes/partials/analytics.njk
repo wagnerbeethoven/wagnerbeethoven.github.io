@@ -8,7 +8,9 @@ To enable, uncomment one of the sections below and configure in site.json
 #}
 
 {% if site.analytics and site.analytics.enabled %}
-  {% if site.analytics.provider == 'plausible' %}
+  {% if site.analytics.provider == 'goatcounter' %}
+    <script data-goatcounter="https://{{ site.analytics.siteId }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {% elif site.analytics.provider == 'plausible' %}
     <!-- Plausible Analytics -->
     <script defer data-domain="{{ site.analytics.domain or (site.url | replace('https://', '') | replace('http://', '')) }}" src="https://plausible.io/js/script.js"></script>
   {% elif site.analytics.provider == 'fathom' %}

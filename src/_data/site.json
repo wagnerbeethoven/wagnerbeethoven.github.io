@@ -160,10 +160,9 @@
   "location": "Olinda, PE, Brasil",
   "timezone": "America/Fortaleza",
   "analytics": {
-    "enabled": false,
-    "provider": "plausible",
-    "domain": "",
-    "siteId": ""
+    "enabled": true,
+    "provider": "goatcounter",
+    "siteId": "wagnerbeethoven"
   },
   "webmentions": {
     "enabled": true,
