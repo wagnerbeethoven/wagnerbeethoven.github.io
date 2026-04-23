@@ -15,9 +15,14 @@ showUpdated: true
 </section>
 
 <section class="content-frame">
+
+
+
   <article class="content-surface h-entry">
     <a class="u-url hidden" href="{{ site.url }}{{ page.url }}">Permalink</a>
     <header class="entry-header-card post-view-header">
+      {% set breadcrumb = [{label: "Blog", url: "/blog/"}, {label: title}] %}
+      {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title p-name">{{ title }}</h1>
       <p class="post-view-meta">
         Publicado por <span class="p-author h-card"><a class="p-name u-url" href="{{ site.url }}" rel="me">{{ author or site.author }}</a></span>
@@ -29,11 +34,11 @@ showUpdated: true
       {% endif %}
     </header>
 
-    {% if featuredImage %}
+    {% if banner %}
     <figure class="post-featured-figure">
-      <img class="post-featured-image u-featured" src="{{ featuredImage }}" alt="{{ featuredImageAlt or ('Imagem de destaque para ' + title) }}" loading="lazy" />
-      {% if featuredImageCaption %}
-      <figcaption class="post-featured-caption">{{ featuredImageCaption }}</figcaption>
+      <img class="post-featured-image u-featured" src="{{ banner }}" alt="{{ alt or ('Imagem de destaque para ' + title) }}" loading="lazy" />
+      {% if caption %}
+      <figcaption class="post-featured-caption">{{ caption }}</figcaption>
       {% endif %}
     </figure>
     {% endif %}
