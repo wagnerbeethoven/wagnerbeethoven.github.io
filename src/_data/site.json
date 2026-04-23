@@ -116,6 +116,17 @@
       "rel": "noopener me"
     },
     {
+      "id": "lastfm",
+      "label": "Last.fm",
+      "displayLabel": "last.fm/user/wagnerbeethoven",
+      "url": "https://last.fm/user/wagnerbeethoven",
+      "icon": "fa-lastfm",
+      "iconStyle": "brands",
+      "brandColor": "#D51007",
+      "group": "personal",
+      "rel": "noopener me"
+    },
+    {
       "id": "margem-viva",
       "label": "Margem Viva",
       "displayLabel": "margemviva.netlify.app",

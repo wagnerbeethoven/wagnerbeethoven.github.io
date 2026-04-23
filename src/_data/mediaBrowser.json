@@ -1,0 +1,20 @@
+{
+  "music": {
+    "pageSize": 15
+  },
+  "movies": {
+    "pageSize": 20
+  },
+  "series": {
+    "pageSize": 20
+  },
+  "games": {
+    "pageSize": 20
+  },
+  "bookshelf": {
+    "pageSize": 20
+  },
+  "comics": {
+    "pageSize": 20
+  }
+}

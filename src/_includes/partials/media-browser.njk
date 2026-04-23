@@ -1,0 +1,137 @@
+{% if items | length > 0 %}
+<section
+  class="media-browser"
+  data-media-browser
+  data-storage-key="{{ storageKey }}"
+  data-default-view="table"
+  data-default-sort-field="release"
+  data-default-sort-direction="desc"
+  data-page-size="{{ pageSize or 25 }}"
+>
+  <div class="media-browser-toolbar">
+    <div class="media-browser-chip-group" role="group" aria-label="Modo de visualização">
+      <button type="button" class="media-browser-chip is-active" data-view-toggle="table" aria-pressed="true" title="Tabela">
+        <i class="fa-solid fa-table-list" aria-hidden="true"></i>
+        <span>Tabela</span>
+      </button>
+      <button type="button" class="media-browser-chip" data-view-toggle="grid" aria-pressed="false" title="Grade">
+        <i class="fa-solid fa-grip" aria-hidden="true"></i>
+        <span>Grade</span>
+      </button>
+    </div>
+
+    <div class="media-browser-chip-group" role="group" aria-label="Campo de ordenação">
+      <button type="button" class="media-browser-chip is-active" data-sort-field="release" aria-pressed="true" title="Ordenar por lançamento">
+        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+        <span>Lançamento</span>
+      </button>
+      <button type="button" class="media-browser-chip" data-sort-field="title" aria-pressed="false" title="Ordenar por título">
+        <i class="fa-solid fa-arrow-down-a-z" aria-hidden="true"></i>
+        <span>Título</span>
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="media-browser-chip media-browser-chip--icon is-active"
+      data-sort-direction-toggle
+      data-direction="desc"
+      aria-pressed="true"
+      title="Ordem decrescente"
+      aria-label="Alternar entre ordem decrescente e crescente"
+    >
+      <i class="fa-solid fa-arrow-down-wide-short" aria-hidden="true"></i>
+      <span class="sr-only">Alternar direção da ordenação</span>
+    </button>
+  </div>
+
+  <div class="media-browser-list home-blog-list h-feed" data-media-list>
+    {% for item in items %}
+      {% set yearLabel = item.data.year or item.data.years or "Ano desconhecido" %}
+      {% if kind == "music" %}
+        {% set metaPrimary = item.data.artist or "Artista desconhecido" %}
+        {% set metaSecondary = item.data.label or (item.data.tags[0] if item.data.tags and item.data.tags[0] else "Sem selo informado") %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "square" %}
+        {% set placeholderIcon = "fa-headphones" %}
+      {% elseif kind == "series" %}
+        {% set metaPrimary = item.data.platform or "Plataforma desconhecida" %}
+        {% if item.data.seasons %}
+          {% set metaSecondary = item.data.seasons + " temporada" + ("s" if item.data.seasons != 1 else "") %}
+        {% else %}
+          {% set metaSecondary = "Sem temporadas informadas" %}
+        {% endif %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "portrait" %}
+        {% set placeholderIcon = "fa-tv" %}
+      {% elseif kind == "games" %}
+        {% set metaPrimary = item.data.developer or "Estúdio desconhecido" %}
+        {% set metaSecondary = item.data.platform or "Plataforma não informada" %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "portrait" %}
+        {% set placeholderIcon = "fa-gamepad" %}
+      {% elseif kind == "bookshelf" %}
+        {% set metaPrimary = item.data.author or "Autor desconhecido" %}
+        {% set metaSecondary = item.data.publisher or "Editora não informada" %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "portrait" %}
+        {% set placeholderIcon = "fa-book-open" %}
+      {% elseif kind == "comics" %}
+        {% set metaPrimary = item.data.writer or "Autor desconhecido" %}
+        {% set metaSecondary = item.data.publisher or "Editora não informada" %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "portrait" %}
+        {% set placeholderIcon = "fa-book-skull" %}
+      {% elseif kind == "movies" %}
+        {% set metaPrimary = item.data.director or "Direção não informada" %}
+        {% set metaSecondary = item.data.country[0] if item.data.country and item.data.country[0] else "País não informado" %}
+        {% set asideLabel = yearLabel %}
+        {% set coverShape = "portrait" %}
+        {% set placeholderIcon = "fa-film" %}
+      {% endif %}
+
+    <a
+      href="{{ item.url }}"
+      class="media-browser-item home-blog-row h-entry"
+      data-media-item
+      data-sort-index="{{ loop.index0 }}"
+      data-sort-title="{{ item.data.title }}"
+      data-sort-year="{{ item.data.year or item.data.years or '' }}"
+      data-sort-date="{{ item.date | htmlDateString }}"
+    >
+      <div class="media-browser-cover media-browser-cover--{{ coverShape }}">
+        {% if item.data.image %}
+        <img src="{{ item.data.image }}" alt="Capa de {{ item.data.title }}" loading="lazy" decoding="async">
+        {% else %}
+        <div class="media-browser-cover-placeholder" aria-hidden="true">
+          <i class="fa-solid {{ placeholderIcon }}"></i>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="media-browser-main home-blog-row-main">
+        <span class="media-browser-title home-blog-row-title p-name">{{ item.data.title }}</span>
+        <span class="media-browser-meta">{{ metaPrimary }}</span>
+        <span class="media-browser-submeta">{{ metaSecondary }}</span>
+      </div>
+
+      <span class="media-browser-aside home-blog-row-date">{{ asideLabel }}</span>
+    </a>
+    {% endfor %}
+  </div>
+
+  <nav class="media-browser-pagination" data-media-pagination aria-label="Paginação da coleção">
+    <button type="button" class="media-browser-page-nav" data-page-nav="prev" disabled>
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      <span>Anterior</span>
+    </button>
+    <div class="media-browser-page-list" data-page-list></div>
+    <button type="button" class="media-browser-page-nav" data-page-nav="next" disabled>
+      <span>Próxima</span>
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </nav>
+</section>
+{% else %}
+<div class="empty-card">{{ emptyMessage }}</div>
+{% endif %}

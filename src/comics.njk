@@ -24,20 +24,11 @@ title: Quadrinhos
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allComics = collections.comics | default([]) | sort(false, false, "data.title") %}
-    {% if allComics | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in allComics %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
-        </div>
-        <span class="home-blog-row-date">{{ item.data.publisher or 'Sem editora' }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-card">Nenhum quadrinho ainda.</div>
-    {% endif %}
+    {% set items = collections.comics | default([]) %}
+    {% set kind = "comics" %}
+    {% set storageKey = "comics" %}
+    {% set pageSize = mediaBrowser.comics.pageSize %}
+    {% set emptyMessage = "Nenhum quadrinho ainda." %}
+    {% include "partials/media-browser.njk" %}
   </div>
 </section>

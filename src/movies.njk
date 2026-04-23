@@ -24,20 +24,11 @@ title: Filmes
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allMovies = collections.movies | default([]) | sort(false, false, "data.title") %}
-    {% if allMovies | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in allMovies %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
-        </div>
-        <span class="home-blog-row-date">{{ item.data.year or 's/d' }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-card">Nenhum filme ainda.</div>
-    {% endif %}
+    {% set items = collections.movies | default([]) %}
+    {% set kind = "movies" %}
+    {% set storageKey = "movies" %}
+    {% set pageSize = mediaBrowser.movies.pageSize %}
+    {% set emptyMessage = "Nenhum filme ainda." %}
+    {% include "partials/media-browser.njk" %}
   </div>
 </section>

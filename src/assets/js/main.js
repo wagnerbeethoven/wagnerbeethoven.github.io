@@ -289,4 +289,197 @@
       }
     });
   });
+
+  // Media browser: grid/table + sorting
+  function parseReleaseYear(raw) {
+    var match = String(raw || "").match(/(19|20)\d{2}/);
+    return match ? parseInt(match[0], 10) : -1;
+  }
+
+  function getStringValue(item, key) {
+    return String(item.dataset[key] || "").toLocaleLowerCase("pt-BR");
+  }
+
+  function sortMediaItems(items, field, direction) {
+    var copy = items.slice();
+    copy.sort(function (a, b) {
+      var titleA = getStringValue(a, "sortTitle");
+      var titleB = getStringValue(b, "sortTitle");
+      var indexA = Number(a.dataset.sortIndex || 0);
+      var indexB = Number(b.dataset.sortIndex || 0);
+      var multiplier = direction === "asc" ? 1 : -1;
+
+      if (field === "title") {
+        return (titleA.localeCompare(titleB, "pt-BR", { sensitivity: "base" }) * multiplier) || indexA - indexB;
+      }
+
+      var yearA = parseReleaseYear(a.dataset.sortYear);
+      var yearB = parseReleaseYear(b.dataset.sortYear);
+      return ((yearA - yearB) * multiplier)
+        || (titleA.localeCompare(titleB, "pt-BR", { sensitivity: "base" }) * multiplier)
+        || indexA - indexB;
+    });
+    return copy;
+  }
+
+  document.querySelectorAll("[data-media-browser]").forEach(function (browser) {
+    var storageKey = browser.dataset.storageKey || "media-browser";
+    var list = browser.querySelector("[data-media-list]");
+    var viewButtons = Array.from(browser.querySelectorAll("[data-view-toggle]"));
+    var sortFieldButtons = Array.from(browser.querySelectorAll("[data-sort-field]"));
+    var sortDirectionToggle = browser.querySelector("[data-sort-direction-toggle]");
+    var pagination = browser.querySelector("[data-media-pagination]");
+    var pageList = browser.querySelector("[data-page-list]");
+    var prevButton = browser.querySelector("[data-page-nav='prev']");
+    var nextButton = browser.querySelector("[data-page-nav='next']");
+    if (!list || !sortFieldButtons.length || !sortDirectionToggle || !viewButtons.length) return;
+
+    var defaultView = browser.dataset.defaultView || "table";
+    var defaultSortField = browser.dataset.defaultSortField || "release";
+    var defaultSortDirection = browser.dataset.defaultSortDirection || "desc";
+    var pageSize = Math.max(1, Number(browser.dataset.pageSize || 25));
+    var viewKey = "media-view:" + storageKey;
+    var sortFieldKey = "media-sort-field:" + storageKey;
+    var sortDirectionKey = "media-sort-direction:" + storageKey;
+    var pageKey = "media-page:" + storageKey;
+    var currentPage = 1;
+
+    function applyView(view) {
+      browser.dataset.view = view;
+      viewButtons.forEach(function (button) {
+        var active = button.dataset.viewToggle === view;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      localStorage.setItem(viewKey, view);
+    }
+
+    function renderPagination(totalPages) {
+      if (!pagination || !pageList || !prevButton || !nextButton) return;
+      pagination.hidden = totalPages <= 1;
+      pageList.innerHTML = "";
+
+      function addPageButton(page) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "media-browser-page-btn" + (page === currentPage ? " is-active" : "");
+        button.dataset.page = String(page);
+        button.setAttribute("aria-label", "Ir para página " + page);
+        button.setAttribute("aria-current", page === currentPage ? "page" : "false");
+        button.textContent = String(page);
+        pageList.appendChild(button);
+      }
+
+      function addEllipsis() {
+        var span = document.createElement("span");
+        span.className = "media-browser-page-ellipsis";
+        span.textContent = "…";
+        pageList.appendChild(span);
+      }
+
+      if (totalPages <= 7) {
+        for (var page = 1; page <= totalPages; page += 1) addPageButton(page);
+      } else {
+        addPageButton(1);
+        if (currentPage > 3) addEllipsis();
+        for (var middle = Math.max(2, currentPage - 1); middle <= Math.min(totalPages - 1, currentPage + 1); middle += 1) {
+          addPageButton(middle);
+        }
+        if (currentPage < totalPages - 2) addEllipsis();
+        addPageButton(totalPages);
+      }
+
+      prevButton.disabled = currentPage <= 1;
+      nextButton.disabled = currentPage >= totalPages;
+    }
+
+    function applyPagination() {
+      var items = Array.from(list.querySelectorAll("[data-media-item]"));
+      var totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+      if (currentPage > totalPages) currentPage = totalPages;
+      var start = (currentPage - 1) * pageSize;
+      var end = start + pageSize;
+      items.forEach(function (item, index) {
+        item.hidden = index < start || index >= end;
+      });
+      renderPagination(totalPages);
+      localStorage.setItem(pageKey, String(currentPage));
+    }
+
+    function applySort(field, direction, preservePage) {
+      var items = Array.from(list.querySelectorAll("[data-media-item]"));
+      sortMediaItems(items, field, direction).forEach(function (item) {
+        list.appendChild(item);
+      });
+      sortFieldButtons.forEach(function (button) {
+        var active = button.dataset.sortField === field;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      sortDirectionToggle.dataset.direction = direction;
+      sortDirectionToggle.classList.toggle("is-active", direction === "desc");
+      sortDirectionToggle.setAttribute("aria-pressed", direction === "desc" ? "true" : "false");
+      sortDirectionToggle.title = direction === "desc" ? "Ordem decrescente" : "Ordem crescente";
+      var icon = sortDirectionToggle.querySelector("i");
+      if (icon) {
+        icon.className = direction === "desc"
+          ? "fa-solid fa-arrow-down-wide-short"
+          : "fa-solid fa-arrow-up-short-wide";
+      }
+      localStorage.setItem(sortFieldKey, field);
+      localStorage.setItem(sortDirectionKey, direction);
+      if (!preservePage) currentPage = 1;
+      applyPagination();
+    }
+
+    viewButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        applyView(button.dataset.viewToggle || defaultView);
+      });
+    });
+
+    sortFieldButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var activeDirection = localStorage.getItem(sortDirectionKey) || defaultSortDirection;
+        applySort(button.dataset.sortField || defaultSortField, activeDirection);
+      });
+    });
+
+    sortDirectionToggle.addEventListener("click", function () {
+      var activeField = localStorage.getItem(sortFieldKey) || defaultSortField;
+      var nextDirection = (localStorage.getItem(sortDirectionKey) || defaultSortDirection) === "desc" ? "asc" : "desc";
+      applySort(activeField, nextDirection);
+    });
+
+    if (pageList) {
+      pageList.addEventListener("click", function (event) {
+        var target = event.target.closest("[data-page]");
+        if (!target) return;
+        currentPage = Number(target.dataset.page || 1);
+        applyPagination();
+      });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener("click", function () {
+        currentPage = Math.max(1, currentPage - 1);
+        applyPagination();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", function () {
+        var totalPages = Math.max(1, Math.ceil(list.querySelectorAll("[data-media-item]").length / pageSize));
+        currentPage = Math.min(totalPages, currentPage + 1);
+        applyPagination();
+      });
+    }
+
+    var initialView = localStorage.getItem(viewKey) || defaultView;
+    var initialSortField = localStorage.getItem(sortFieldKey) || defaultSortField;
+    var initialSortDirection = localStorage.getItem(sortDirectionKey) || defaultSortDirection;
+    currentPage = Math.max(1, Number(localStorage.getItem(pageKey) || 1));
+    applyView(initialView);
+    applySort(initialSortField, initialSortDirection, true);
+  });
 })();

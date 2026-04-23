@@ -4,7 +4,9 @@ layout: layouts/base.njk
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/music/" class="editorial-back" aria-label="Voltar para música"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/music/" class="editorial-back" aria-label="Voltar para música">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Música</p>
@@ -16,10 +18,19 @@ layout: layouts/base.njk
 <section class="content-frame">
   <div class="content-surface media-page">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Música", url: "/music/"}, {label: title}] %}
+      {% set breadcrumb = [
+        {
+          label: "Música",
+          url: "/music/"
+        }, {
+          label: title
+        }
+      ] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">{{ title }}</h1>
-      {% if artist %}<p class="media-page-subtitle">{{ artist }}</p>{% endif %}
+      {% if artist %}
+        <p class="media-page-subtitle">{{ artist }}</p>
+      {% endif %}
     </header>
 
     <div class="media-detail">
@@ -34,32 +45,55 @@ layout: layouts/base.njk
       <div class="media-detail-info">
         <dl class="media-meta">
           {% if artist %}
-            <div class="media-meta-wide"><dt>Artista</dt><dd>{{ artist }}</dd></div>
+            <div class="media-meta-wide">
+              <dt>Artista</dt>
+              <dd>{{ artist }}</dd>
+            </div>
+          {% endif %}
+          {% if title %}
+            <div class="media-meta-wide">
+              <dt>Álbum</dt>
+              <dd>{{ title }}</dd>
+            </div>
           {% endif %}
           {% if label %}
-            <div class="media-meta-wide"><dt>Gravadora</dt><dd>{{ label }}</dd></div>
+            <div>
+              <dt>Gravadora</dt>
+              <dd>{{ label }}</dd>
+            </div>
           {% endif %}
           {% if year %}
-            <div><dt>Ano</dt><dd>{{ year }}</dd></div>
-          {% endif %}
-          {% if genre %}
-            <div><dt>Gênero</dt><dd>{{ genre }}</dd></div>
+            <div>
+              <dt>Ano</dt>
+              <dd>{{ year }}</dd>
+            </div>
           {% endif %}
           {% if tracks %}
-            <div><dt>Faixas</dt><dd>{{ tracks }}</dd></div>
+            <div>
+              <dt>Faixas</dt>
+              <dd>{{ tracks }}</dd>
+            </div>
+          {% endif %}
+          {% if genre %}
+            <div class="media-meta-wide">
+              <dt>Gênero</dt>
+              <dd>{{ genre }}</dd>
+            </div>
           {% endif %}
         </dl>
 
-        {% if tags %}
-          <ul class="inline-pills" aria-label="Tags">
-            {% for tag in tags %}
-              <li><a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">{{ tag }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
       </div>
     </div>
 
+    {% if tags %}
+      <ul class="mb-5 inline-pills" aria-label="Tags">
+        {% for tag in tags %}
+          <li>
+            <a class="pill p-category" href="/tags/#tag-{{ tag | slug }}">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
     {# ── Descrição ──────────────────────────────────────────── #}
     {% if content %}
       <h2 class="media-section-title">Sobre o álbum</h2>
@@ -96,7 +130,9 @@ layout: layouts/base.njk
     {% endif %}
 
     {# ── Nota pessoal + links ────────────────────────────────── #}
-    {% if note %}<p class="media-note">{{ note }}</p>{% endif %}
+    {% if note %}
+      <p class="media-note">{{ note }}</p>
+    {% endif %}
 
     <div class="media-stream-links">
       {% if browseId %}

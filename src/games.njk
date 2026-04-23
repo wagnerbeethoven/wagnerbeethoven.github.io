@@ -24,20 +24,11 @@ title: Jogos
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allGames = collections.games | default([]) | sort(false, false, "data.title") %}
-    {% if allGames | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in allGames %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
-        </div>
-        <span class="home-blog-row-date">{{ item.data.year or 's/d' }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-card">Nenhum jogo ainda.</div>
-    {% endif %}
+    {% set items = collections.games | default([]) %}
+    {% set kind = "games" %}
+    {% set storageKey = "games" %}
+    {% set pageSize = mediaBrowser.games.pageSize %}
+    {% set emptyMessage = "Nenhum jogo ainda." %}
+    {% include "partials/media-browser.njk" %}
   </div>
 </section>

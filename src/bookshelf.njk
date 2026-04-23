@@ -24,20 +24,11 @@ permalink: /bookshelf/
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allBooks = collections.bookshelf | default([]) %}
-    {% if allBooks | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in allBooks %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}{% if item.data.author %} / {{ item.data.author }}{% endif %}</span>
-        </div>
-        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
-      </a>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-card">Nenhum livro ainda.</div>
-    {% endif %}
+    {% set items = collections.bookshelf | default([]) %}
+    {% set kind = "bookshelf" %}
+    {% set storageKey = "bookshelf" %}
+    {% set pageSize = mediaBrowser.bookshelf.pageSize %}
+    {% set emptyMessage = "Nenhum livro ainda." %}
+    {% include "partials/media-browser.njk" %}
   </div>
 </section>

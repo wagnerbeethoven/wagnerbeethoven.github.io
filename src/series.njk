@@ -24,26 +24,11 @@ title: Séries
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allSeries = collections.series | default([]) %}
-    {% if allSeries | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in allSeries %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
-        </div>
-        <span class="home-blog-row-date">
-          {% if item.data.seasons %}
-            {{ item.data.seasons }} temporada{% if item.data.seasons != 1 %}s{% endif %}
-          {% else %}
-            s/d
-          {% endif %}
-        </span>
-      </a>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-card">Nenhuma série ainda.</div>
-    {% endif %}
+    {% set items = collections.series | default([]) %}
+    {% set kind = "series" %}
+    {% set storageKey = "series" %}
+    {% set pageSize = mediaBrowser.series.pageSize %}
+    {% set emptyMessage = "Nenhuma série ainda." %}
+    {% include "partials/media-browser.njk" %}
   </div>
 </section>
