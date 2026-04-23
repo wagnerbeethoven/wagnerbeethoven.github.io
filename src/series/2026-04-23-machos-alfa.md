@@ -10,3 +10,4 @@ tags: [Comédia]
 synopsis: "Os amigos Pedro, Luis, Raul e Santi se sentem perdidos em um mundo de empoderamento feminino e, entre trapalhadas, tentam se ajustar à nova realidade."
 note: ""
 trailer: "il--hNX7h3A"
+---

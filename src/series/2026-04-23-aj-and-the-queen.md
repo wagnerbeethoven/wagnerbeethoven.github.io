@@ -10,3 +10,4 @@ tags: [Comédia, Drama]
 synopsis: "A Drag Queen Ruby Red viaja pelo país num trailer velho e acaba encontrando uma ajudante inesperada no caminho: AJ, uma passageira linguaruda de 10 anos de idade."
 note: ""
 trailer: "FfvnMu0maM8"
+---

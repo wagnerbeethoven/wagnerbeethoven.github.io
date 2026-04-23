@@ -10,3 +10,4 @@ tags: [Reality, Documentário]
 synopsis: "Modelos, jurados e integrantes da produção de America’s Next Top Model, incluindo Tyra Banks, revisitam o legado complexo do reality nesta série documental reveladora."
 note: ""
 trailer: "64eaReTHCgc"
+---
