@@ -622,7 +622,7 @@ async function addGame(query) {
 async function addMusic(artist, album) {
   if (!album) { err(`Informe artista E álbum:\n  node scripts/add-content.js music "Artista" "Álbum"`); process.exit(1); }
   const d = await fetchAlbum(artist, album);
-  const f = `${today()}-${slug(d.title)}.md`;
+  const f = `${[d.artist, d.title, d.year].filter(Boolean).map(slug).join("-")}.md`;
   writeFile("music", f, fm.music(d));
   console.log(`\n${DIM}${fm.music(d)}${R}`);
 }
