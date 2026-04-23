@@ -1837,8 +1837,14 @@ select:focus-visible {
 }
 
 .prose img {
-  border-radius: 14px;
   border: 1px solid var(--border-subtle);
+}
+
+.prose iframe {
+  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 .post-view-header {
