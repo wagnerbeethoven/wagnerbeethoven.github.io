@@ -136,8 +136,8 @@
     "indieweb": {
       "label": "IndieWeb Ring",
       "home": "https://xn--sr8hvo.ws/",
-      "previous": "",
-      "next": ""
+      "previous": "https://xn--sr8hvo.ws/previous",
+      "next": "https://xn--sr8hvo.ws/next"
     },
     "entreblogs": {
       "label": "Entreblogs",
