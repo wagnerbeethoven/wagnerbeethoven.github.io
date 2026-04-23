@@ -1233,7 +1233,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg-page);
+  background: var(--bg-page) url(../retro-stars.png) repeat;
   color: var(--text-primary);
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
