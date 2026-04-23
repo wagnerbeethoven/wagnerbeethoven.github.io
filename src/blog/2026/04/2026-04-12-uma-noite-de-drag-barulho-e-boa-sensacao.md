@@ -3,64 +3,46 @@ title: "Uma noite de drag, barulho e boa sensação"
 date: 2026-04-12
 tags: [drag queen, show]
 location: "Teatro RioMar, Fortaleza — CE"
-banner: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEVX7NCPjHYD9p1rQ-iOQZ1t1463d1ArqxQ67Po-1vLjSrcMgGj5ZimO9-UY6zlHL6ojBrtLUpyc5RcsfWbPZdj8FsGiroHb9Z3dBGwws7j4amGmhYZ13bC2AdmsRIA3DceSn6t2NieVFqXGPk4Tlzxnlj4TsoICY5nEwod5B5ujTe0f62Nw636nXYgUmg/w640-h360/as%204%201.jpg"
+banner: "https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao.jpg"
+alt: "Quatro performers em um palco, alinhados lado a lado, usando figurinos elaborados com penas, estruturas grandes e cores vibrantes. ao fundo, um telão com “Drag Race Brasil ao vivo”. iluminação em tons de roxo e rosa."
 ---
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEVX7NCPjHYD9p1rQ-iOQZ1t1463d1ArqxQ67Po-1vLjSrcMgGj5ZimO9-UY6zlHL6ojBrtLUpyc5RcsfWbPZdj8FsGiroHb9Z3dBGwws7j4amGmhYZ13bC2AdmsRIA3DceSn6t2NieVFqXGPk4Tlzxnlj4TsoICY5nEwod5B5ujTe0f62Nw636nXYgUmg/w640-h360/as%204%201.jpg" alt="DesiRée Beck, Adora Black, Melody Queen e Ruby Nox no palco" />
-<figcaption>DesiRée Beck, Adora Black, Melody Queen, Ruby Nox.</figcaption>
-</figure>
+Meu final de semana começou acelerado. Fui assistir ao [Drag Race Brasil Live](https://www.instagram.com/p/DWzmI0yj3jR/), no RioMar, e saí de lá com uma sensação muito boa. É muito diferente estar num lugar onde a gente, sendo LGBTQIA+, consegue relaxar um pouco — não é uma segurança total, mas já muda tudo no corpo e na cabeça.
 
-<p>Meu final de semana começou acelerado. Fui assistir ao <a href="https://www.instagram.com/p/DWzmI0yj3jR/" target="_blank">Drag Race Brasil Live</a>, no RioMar, e saí de lá com uma sensação muito boa. É muito diferente estar num lugar onde a gente, sendo LGBTQIA+, consegue relaxar um pouco — não é uma segurança total, mas já muda tudo no corpo e na cabeça.</p>
+Registrei algumas coisas em foto e vídeo, mas o que ficou foi o momento mesmo. Sempre gostei de show de drag. Lembro de assistir RuPaul's Drag Race com qualidade péssima, tudo meio borrado, mas mesmo assim já dava pra perceber que tinha algo ali que era grande, que ia fazer história.
 
-<p>Registrei algumas coisas em foto e vídeo, mas o que ficou foi o momento mesmo. Sempre gostei de show de drag. Lembro de assistir RuPaul's Drag Race com qualidade péssima, tudo meio borrado, mas mesmo assim já dava pra perceber que tinha algo ali que era grande, que ia fazer história.</p>
+Fui sem expectativa. Só sabia que as brasileiras entregam muito ao vivo, já tinha sentido isso quando fui ao Realness. Inclusive, já combinei com T que a gente precisa se organizar pra ver em São Paulo em 2027.
 
-<p>Fui sem expectativa. Só sabia que as brasileiras entregam muito ao vivo, já tinha sentido isso quando fui ao Realness. Inclusive, já combinei com T que a gente precisa se organizar pra ver em São Paulo em 2027.</p>
+## Mellody Queen
 
-<h3>Mellody Queen</h3>
+![Mellody Queen: performer com figurino estampado em tons de vermelho e dourado, mangas volumosas e acessórios grandes. segura o microfone e faz gestos expressivos com as mãos.](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao-mellody.png "Mellody Queen")
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihcuqho6PDJx5Bu8Y6ykPkN_u5QPchE5AbgXnbPE5lNSp2lvgcK__BreDacxUEZ6AiWrMG5gYEtXBZKkjmpQ1n7vr9PCA1UatP_8i2BEhgCtkLrNUqRf8jV1DJxDohWextfQuw7p4Uy56XpbnfllFsHbnd0wFvgOGIbTe8pQCZNnU5LW81_CCgEnF0tiza/w640-h284/melody.png" alt="Mellody Queen no palco" />
-</figure>
+Mellody abriu com um medley da Anitta de diversas faixas do disco _Funk Generation_. Gravei só o começo, mas quando virou a energia — com direito a bate-cabelo — a galera foi junto na hora. Foi aquele momento de grito mesmo. A segunda música, "[Todxs Putxs](https://www.youtube.com/watch?v=tVK1tlhIIUE)", da Ekena, me pegou. Não foi só performance, teve fala, teve entrega. Ela terminou emocionada e foi muito aplaudida, com razão.
 
-<p>Mellody abriu com um medley da Anitta de diversas faixas do disco <i>Funk Generation</i>. Gravei só o começo, mas quando virou a energia — com direito a bate-cabelo — a galera foi junto na hora. Foi aquele momento de grito mesmo. A segunda música, "<a href="https://www.youtube.com/watch?v=tVK1tlhIIUE" target="_blank">Todxs Putxs</a>", da Ekena, me pegou. Não foi só performance, teve fala, teve entrega. Ela terminou emocionada e foi muito aplaudida, com razão.</p>
+## Adora Black
 
-<h3>Adora Black</h3>
+![Adora: 1. performer em destaque, usando um figurino dourado com capa longa e uma coroa grande com pontas, lembrando uma estética de deidade ou figura mitológica. iluminação focada, fundo escuro.; 2. performer com asas grandes douradas sendo sustentado por dançarinos no palco. há fumaça e luz dramática, criando um efeito de entrada ou momento de destaque.; 3. performer segurando um microfone, cantando no palco. usa figurino curto com botas e luvas, em pose de apresentação solo sob luz direta.](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao-adora.png "Adora Black")
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzDzBIL1I01kdQJE5losQkr5hbpbWQx1UwW7ONaoJ7JYJ7bdoKWQxHCpnpTnitPcC_1u6iDS6vxt6LiZbz62o5egEb8Nl5Gwg1CLRQdiEIbBcvmQJKJc-P9iDDskxZIEdksamnUzUDfwUOejPqObBZfM-Hlq9Nsvh7BmeRB5NZtVPQ9KdYWQTnxGXjqMkI/w640-h285/adora.png" alt="Adora Black no palco" />
-</figure>
+Adora é linda, isso é inegável. Os looks são muito bem feitos, tudo muito caprichado. A primeira performance, com "[Liberdade](https://www.youtube.com/watch?v=4d64QUtQIv4)", da Priscilla, foi bonita de ver. Mas quando entrou numa música mais pesada, tipo "[Kaça](https://www.youtube.com/watch?v=RvMmTGagft8)", senti que faltou energia. Ficou meio duro, sem muita fluidez. Não é nem só sobre saber dançar, é sobre segurar o palco — e ali pareceu que faltou um pouco.
 
-<p>Adora é linda, isso é inegável. Os looks são muito bem feitos, tudo muito caprichado. A primeira performance, com "<a href="https://www.youtube.com/watch?v=4d64QUtQIv4" target="_blank">Liberdade</a>", da Priscilla, foi bonita de ver. Mas quando entrou numa música mais pesada, tipo "<a href="https://www.youtube.com/watch?v=RvMmTGagft8" target="_blank">Kaça</a>", senti que faltou energia. Ficou meio duro, sem muita fluidez. Não é nem só sobre saber dançar, é sobre segurar o palco — e ali pareceu que faltou um pouco.</p>
+## DesiRée Beck
 
-<h3>DesiRée Beck</h3>
+![DesiRée: sequência de três fotos do mesmo performer com vestido justo metálico, cantando com intensidade. expressões faciais fortes e postura corporal marcada, destacando performance vocal.](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao-desiree.png "DesiRée Beck")
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHUZGDHE31u44INMGPkTL4NKajJ3nuzR3QOkORBruhd5yK70MTC13ssZGS1buOD45v_LCvchNWRe3zdBAYREq_rS-Wmt9bWv7vdBqjbRP6lPHHFr0Ejk8qHGH1K2mhVCp8nJxu37SQe4rDGktZyabbWjsqrOZPQixXaollNSomKMbsSegKUOVtcisRtDkj/w640-h285/desirre.png" alt="DesiRée Beck no palco" />
-</figure>
+DesiRée veio com [Beyoncé](https://www.youtube.com/watch?v=yhsLbDKV6XQ) e já chegou dominando tudo. Energia alta, presença forte, parecia que o palco era dela mesmo. Na segunda apresentação, [lenta](https://youtu.be/_8nHFPMIRyk), ela mostrou outro lado — o lipsync tava tão bem feito que em vários momentos parecia que era ela cantando de verdade. Foi daqueles que você fica só olhando, sem nem pensar muito.
 
-<p>DesiRée veio com <a href="https://www.youtube.com/watch?v=yhsLbDKV6XQ" target="_blank">Beyoncé</a> e já chegou dominando tudo. Energia alta, presença forte, parecia que o palco era dela mesmo. Na segunda apresentação, <a href="https://youtu.be/_8nHFPMIRyk" target="_blank">lenta</a>, ela mostrou outro lado — o lipsync tava tão bem feito que em vários momentos parecia que era ela cantando de verdade. Foi daqueles que você fica só olhando, sem nem pensar muito.</p>
+## Poseidon
 
-<h3>Poseidon</h3>
+![Poseidon: ruiva com vestido longo rosa brilhante, estilo glamouroso, segurando microfone e se apresentando de forma mais clássica. iluminação quente e fundo com o telão parcialmente visível.](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao-poseidon.png "Poseidon Drag")
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrSNMj0AmxLXWuADkkFnOhoUIvR2QZwiEVAK3RIKumOwi3uMtc-hlNbmNWPETxTZY0MEY9BHWt7eUZ5dOwLqAXNK4T2sslVGD6htJXWajS7sfFNFeqSi7B9Ki8dkYYRJRMoQQn-Xycqn0BHfBr3dkKDOQV0EvtB6VTi4Gna5nvr0zozPAg-IbxS1wvstF7/w640-h284/poseidon.png" alt="Poseidon no palco" />
-</figure>
+Poseidon foi uma surpresa muito boa. Interagiu com o público, trouxe uma sensação diferente. Dublou "[The Greatest Love of All](https://www.youtube.com/watch?v=uHVFig1GRYA)" e contou que, sendo pernambucana, tinha família na plateia vendo ela de drag pela primeira vez. Isso mudou completamente o clima — foi mais íntimo e me pareceu verdadeiro. Foi uma das apresentações mais aplaudidas da noite, e dava pra entender o porquê.
 
-<p>Poseidon foi uma surpresa muito boa. Interagiu com o público, trouxe uma sensação diferente. Dublou "<a href="https://www.youtube.com/watch?v=uHVFig1GRYA" target="_blank">The Greatest Love of All</a>" e contou que, sendo pernambucana, tinha família na plateia vendo ela de drag pela primeira vez. Isso mudou completamente o clima — foi mais íntimo e me pareceu verdadeiro. Foi uma das apresentações mais aplaudidas da noite, e dava pra entender o porquê.</p>
+## Ruby Nox
 
-<h3>Ruby Nox</h3>
+![Ruby: três cenas: 1. performer com figurino amarelo com penas, entrando em cena entre cortinas; 2. performer com grande adereço de cabeça em formato radial, em pose central; 3. performer cercado por dançarinos, com figurino branco cheio de penas, em coreografia coletiva.](https://raw.githubusercontent.com/wagnerbeethoven/wagnerbeethoven-pic/refs/heads/main/2026-04-12-uma-noite-de-drag-barulho-e-boa-sensacao-ruby.png "Ruby Nox")
 
-<figure>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1K72nj3pWaNt8vaBztXwKoTNq0rWNg-n6nOFUOcf4XdG9jHsolAcrhyXE8ipR7wA6DgND0s9mFObKsMyvTjpelBoAgGN7iEy5nfK-l9uJV8_hP6BJ0-fc8iCNP-1ZRWPv40JrlofxYR5fG92twbT7TQcM0a5z1a9F2bkaVeROO_JULbsgYvC65w0uMI-p/s16000/ruby%203.png" alt="Ruby Nox no palco" />
-</figure>
+Ruby Nox foi o momento que me pegou de verdade. Não foi nem por ela ter vencido — foi pela sensação que ficou. Enquanto outras performances seguiam um ritmo mais esperado, ela fez algo diferente. Em "Ne Me Quitte Pas", não parecia só dublagem. Tinha silêncio, tinha pausa, tinha intenção em cada movimento. Teve um momento que eu parei de filmar, só pra assistir. Quando ela chamou a Haus of Nox pro palco, virou outra coisa — trouxe coletividade e emoção. Foi bonito de ver, de um jeito que ela homenageou todo o time que ajudou ela a ganhar o programa.
 
-<p>Ruby Nox foi o momento que me pegou de verdade. Não foi nem por ela ter vencido — foi pela sensação que ficou. Enquanto outras performances seguiam um ritmo mais esperado, ela fez algo diferente. Em "Ne Me Quitte Pas", não parecia só dublagem. Tinha silêncio, tinha pausa, tinha intenção em cada movimento. Teve um momento que eu parei de filmar, só pra assistir. Quando ela chamou a Haus of Nox pro palco, virou outra coisa — trouxe coletividade e emoção. Foi bonito de ver, de um jeito que ela homenageou todo o time que ajudou ela a ganhar o programa.</p>
+No geral, foi uma experiência muito acima do que eu esperava. Não só pelos shows, mas pelo que eles representam. Ver drag ao vivo, com essa qualidade e com esse público, reforça que não é nicho. É cultura, é expressão e, em muitos casos, é também resistência.
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e8zrD6vEnC8" title="Ruby Nox — Ne Me Quitte Pas" allowfullscreen></iframe>
-</figure>
-
-<p>No geral, foi uma experiência muito acima do que eu esperava. Não só pelos shows, mas pelo que eles representam. Ver drag ao vivo, com essa qualidade e com esse público, reforça que não é nicho. É cultura, é expressão e, em muitos casos, é também resistência.</p>
-
-<p>Saí com vontade de ver logo e já esperando pelo Drag Race Brasil 3.</p>
+Saí com vontade de ver logo e já esperando pelo Drag Race Brasil 3.
