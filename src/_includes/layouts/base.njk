@@ -1,242 +1,254 @@
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {% if title %}
-  <title>{{ title }} - {{ site.name }}</title>
-  {% else %}
-  <title>{{ site.name }}</title>
-  {% endif %}
-  {% set pageInfo = page.url | pageInfo %}
-  {% set pageDescription = (pageInfo and pageInfo.description) or description or site.description %}
-  <meta name="description" content="{{ pageDescription }}" />
-  <meta name="generator" content="Eleventy" />
-  {% if site.url %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url or '/' }}" />
-  {% endif %}
-  {% set ogTitle = title or site.name %}
-  {% set ogDescription = pageDescription %}
-  {% set ogUrl = (site.url and (site.url + (page.url or '/'))) or '' %}
-  {% set rawImage = image or '/screenshot.png' %}
-  {% if site.url %}
-    {% if rawImage | slice(0,4) == 'http' %}
-      {% set ogImage = rawImage %}
-    {% elseif rawImage | slice(0,1) == '/' %}
-      {% set ogImage = site.url + rawImage %}
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {% if title %}
+      <title>{{ title }} - {{ site.name }}</title>
     {% else %}
-      {% set ogImage = site.url + '/' + rawImage %}
+      <title>{{ site.name }}</title>
     {% endif %}
-  {% else %}
-    {% set ogImage = rawImage %}
-  {% endif %}
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="{{ site.name }}" />
-  {% if ogUrl %}<meta property="og:url" content="{{ ogUrl }}" />{% endif %}
-  <meta property="og:title" content="{{ ogTitle }}" />
-  <meta property="og:description" content="{{ ogDescription }}" />
-  <meta property="og:image" content="{{ ogImage }}" />
-  <meta property="og:image:alt" content="{{ site.name }} preview" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ ogTitle }}" />
-  <meta name="twitter:description" content="{{ ogDescription }}" />
-  <meta name="twitter:image" content="{{ ogImage }}" />
-  <meta name="twitter:image:alt" content="{{ site.name }} preview" />
-  <link rel="webmention" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/webmention" />
-  <link rel="pingback" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/xmlrpc" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="dns-prefetch" href="https://webmention.io">
-  <link rel="dns-prefetch" href="https://cusdis.com">
-  <link rel="stylesheet" href="/assets/css/build.css" />
-  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Feed principal" href="/feed.xml" />
-  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Atom Feed" href="/atom.xml" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Feed" href="/rss.xml" />
-  <link rel="alternate" type="application/feed+json" title="{{ site.name }} JSON Feed" href="/feed.json" />
-  <link rel="icon" href="/assets/favicon.ico" sizes="any">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="mask-icon" href="/assets/favicon.svg" color="#bb4d33">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#681414" />
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.min.css">
-  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('pre code').forEach((el) => {
-        if (window.hljs && typeof window.hljs.highlightElement === 'function') {
-          window.hljs.highlightElement(el);
-        }
+    {% set pageInfo = page.url | pageInfo %}
+    {% set pageDescription = (pageInfo and pageInfo.description)or description or site.description %}
+    <meta name="description" content="{{ pageDescription }}"/>
+    <meta name="generator" content="Eleventy"/>
+    {% if site.url %}
+      <link rel="canonical" href="{{ site.url }}{{ page.url or '/' }}"/>
+    {% endif %}
+    {% set ogTitle = title or site.name %}
+    {% set ogDescription = pageDescription %}
+    {% set ogUrl = (site.url and(site.url + (page.url or '/')))or '' %}
+    {% set rawImage = image or '/screenshot.png' %}
+    {% if site.url %}
+      {% if rawImage | slice(0, 4) == 'http' %}
+        {% set ogImage = rawImage %}
+      {% elseif rawImage | slice(0,1) == '/' %}
+        {% set ogImage = site.url + rawImage %}
+      {% else %}
+        {% set ogImage = site.url + '/' + rawImage %}
+      {% endif %}
+    {% else %}
+      {% set ogImage = rawImage %}
+    {% endif %}
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    {% if ogUrl %}<meta property="og:url" content="{{ ogUrl }}"/>{% endif %}
+    <meta property="og:title" content="{{ ogTitle }}"/>
+    <meta property="og:description" content="{{ ogDescription }}"/>
+    <meta property="og:image" content="{{ ogImage }}"/>
+    <meta property="og:image:alt" content="{{ site.name }} preview"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ ogTitle }}"/>
+    <meta name="twitter:description" content="{{ ogDescription }}"/>
+    <meta name="twitter:image" content="{{ ogImage }}"/>
+    <meta name="twitter:image:alt" content="{{ site.name }} preview"/>
+    <link rel="webmention" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/webmention"/>
+    <link rel="pingback" href="https://webmention.io/{{ site.url | replace('https://', '') | replace('http://', '') }}/xmlrpc"/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://webmention.io">
+    <link rel="dns-prefetch" href="https://cusdis.com">
+    <link rel="stylesheet" href="/assets/css/build.css"/>
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Feed principal" href="/feed.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Atom Feed" href="/atom.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/feed+json" title="{{ site.name }} JSON Feed" href="/feed.json"/>
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#bb4d33">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#681414"/>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js" defer></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        document
+          .querySelectorAll('pre code')
+          .forEach((el) => {
+            if (window.hljs && typeof window.hljs.highlightElement === 'function') {
+              window
+                .hljs
+                .highlightElement(el);
+            }
+          });
       });
-    });
-  </script>
-  {% include "partials/analytics.njk" %}
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
-  {% set current = page.url or '/' %}
-  <div class="site-shell">
-    <div id="progress-bar" aria-hidden="true"></div>
-    <div class="sidebar-overlay" aria-hidden="true"></div>
+    </script>
+    {% include "partials/analytics.njk" %}
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+    {% set current = page.url or '/' %}
+    <div class="site-shell">
+      <div id="progress-bar" aria-hidden="true"></div>
+      <div class="sidebar-overlay" aria-hidden="true"></div>
 
-    <aside class="site-sidebar h-card" id="site-sidebar">
-      <img class="sidebar-avatar u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80" />
-      <div class="sidebar-name p-name">{{ site.author }}</div>
-      <div class="sidebar-meta">{{ site.location }}</div>
-      <p class="sr-only p-note">{{ site.bio.short }}</p>
-      <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
-      <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <aside class="site-sidebar h-card" id="site-sidebar">
+        <img class="sidebar-avatar u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
+        <div class="sidebar-name p-name">{{ site.author }}</div>
+        <div class="sidebar-meta">{{ site.location }}</div>
+        <p class="sr-only p-note">{{ site.bio.short }}</p>
+        <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
+        <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
 
+        <link  href="{{ site.url }}" rel="me">
 
-      <nav class="sidebar-nav" aria-label="Navegação principal">
-        <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}">
-          <i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial
+        <link  href="mailto:{{ site.email }}" rel="me">
+
+        <link href="{{site.social.siteoficial}}" rel="me">
+        <link href="http://linkedin.com/in/{{site.social.linkedin}}" rel="me">
+        <link href="http://github.com/{{site.social.github}}" rel="me">
+        <link href="https://bsky.app/profile/{{site.social.bluesky}}" rel="me">
+
+        <nav class="sidebar-nav" aria-label="Navegação principal">
+          <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}">
+            <i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial
         </a>
-        {% if collections.posts | length > 0 %}
-        <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}">
-          <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog
+          {% if collections.posts | length > 0 %}
+            <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}">
+              <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog
         </a>
-        {% endif %}
-        {% if collections.notes | length > 0 %}
-        <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}">
-          <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas
+          {% endif %}
+          {% if collections.notes | length > 0 %}
+            <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}">
+              <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas
         </a>
-        {% endif %}
-        <a href="/about/" class="sidebar-link{% if current == '/about/' %} active{% endif %}">
-          <i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim
+          {% endif %}
+          <a href="/about/" class="sidebar-link{% if current == '/about/' %} active{% endif %}">
+            <i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim
         </a>
-        <a href="/now/" class="sidebar-link{% if current == '/now/' %} active{% endif %}">
-          <i class="fa-solid fa-location-dot" style="color:#e05c7a" aria-hidden="true"></i> Now
+          <a href="/now/" class="sidebar-link{% if current == '/now/' %} active{% endif %}">
+            <i class="fa-solid fa-location-dot" style="color:#e05c7a" aria-hidden="true"></i> Now
         </a>
-        <a href="/contact/" class="sidebar-link{% if current == '/contact/' %} active{% endif %}">
-          <i class="fa-solid fa-envelope" style="color:#7ab87a" aria-hidden="true"></i> Contato
+          <a href="/contact/" class="sidebar-link{% if current == '/contact/' %} active{% endif %}">
+            <i class="fa-solid fa-envelope" style="color:#7ab87a" aria-hidden="true"></i> Contato
         </a>
 
-        <hr class="sidebar-divider" aria-hidden="true">
+          <hr class="sidebar-divider" aria-hidden="true">
 
-        <a href="/slashes/" class="sidebar-link sidebar-link--explore{% if current == '/slashes/' %} active{% endif %}">
-          <i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar tudo
+          <a href="/slashes/" class="sidebar-link sidebar-link--explore{% if current == '/slashes/' %} active{% endif %}">
+            <i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar tudo
         </a>
-      </nav>
-    </aside>
+        </nav>
+      </aside>
 
-    <div class="site-main">
-      <div class="desktop-topbar">
-        <button class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Recolher menu" aria-expanded="true" aria-controls="site-sidebar">
-          <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
-          <span class="sidebar-toggle-label">Recolher</span>
-        </button>
-        <a href="/busca/" class="topbar-search-btn desktop-topbar-search" aria-label="Pesquisar no site">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="mobile-topbar">
-        <button class="hamburger-btn" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-sidebar">
-          <span class="bar bar-1"></span>
-          <span class="bar bar-2"></span>
-          <span class="bar bar-3"></span>
-        </button>
-        <strong class="flex-1 text-center">{{ site.name }}</strong>
-        <a href="/busca/" class="topbar-search-btn" aria-label="Pesquisar no site">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        </a>
-        <a href="/about/" class="soft-link topbar-profile" style="flex-shrink:0">Perfil</a>
-      </div>
-
-      <main class="main-inner" id="main-content" tabindex="-1">
-        {{ content | safe }}
-      </main>
-
-      <footer class="site-footer">
-        <div class="site-footer-inner">
-          <p class="site-footer-copy">
-           {{ buildInfo.year }}
-            <span class="site-footer-sep" aria-hidden="true">&bull;</span>
-           {{ site.author }}
-            <span class="site-footer-sep" aria-hidden="true">&bull;</span>
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" title="Creative Commons BY-NC-SA 4.0">
-              <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
-              <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i>
-              <i class="fa-brands fa-creative-commons-nc" aria-hidden="true"></i>
-              <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i>
-            </a>
-
-          </p>
-          <nav class="site-footer-links" aria-label="Links do rodapé">
-
-            <a href="/slashes/">Páginas</a>
-
-            <a href="/stats/">Estatísticas</a>
-
-            <a href="/accessibility/">Acessibilidade</a>
-
-            <a href="/changelog/">Changelog</a>
-
-            <a href="/feed/" title="Feeds RSS/Atom" aria-label="Assinar feeds">
-              <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
-            </a>
-
-          </nav>
-          {% set fediringHost = site.url | replace('https://', '') | replace('http://', '') | replace('/', '') %}
-          <div class="site-footer-webrings" aria-label="Webrings">
-            <span class="webring-link">
-              <span class="webring-nav">
-                <a href="{{ site.webrings.fediring.home }}previous?host={{ fediringHost }}" aria-label="Site anterior no Fediring">‹</a>
-              </span>
-              <a href="{{ site.webrings.fediring.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.fediring.label }}</a>
-              <span class="webring-nav">
-                <a href="{{ site.webrings.fediring.home }}next?host={{ fediringHost }}" aria-label="Próximo site no Fediring">›</a>
-              </span>
-            </span>
-            <span class="webring-link">
-              {% if site.webrings.indieweb.previous %}
-                <span class="webring-nav">
-                  <a href="{{ site.webrings.indieweb.previous }}" aria-label="Site anterior no IndieWeb Ring">‹</a>
-                </span>
-              {% endif %}
-              <a href="{{ site.webrings.indieweb.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.indieweb.label }}</a>
-              {% if site.webrings.indieweb.next %}
-                <span class="webring-nav">
-                  <a href="{{ site.webrings.indieweb.next }}" aria-label="Próximo site no IndieWeb Ring">›</a>
-                </span>
-              {% endif %}
-            </span>
-            <span class="webring-link">
-              <span class="webring-nav">
-                <a href="#" class="eb-prev nav-recente" aria-label="Site anterior no Entreblogs">‹</a>
-              </span>
-              <a href="{{ site.webrings.entreblogs.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.entreblogs.label }}</a>
-              <span class="webring-nav">
-                <a href="#" class="eb-next nav-anterior" aria-label="Próximo site no Entreblogs">›</a>
-              </span>
-              <script src="https://entreblogs.com.br/assets/webrings/onionring-variables.js"></script>
-              <script src="https://entreblogs.com.br//assets/webrings/onionring-widget.js"></script>
-            </span>
-          </div>
+      <div class="site-main">
+        <div class="desktop-topbar">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Recolher menu" aria-expanded="true" aria-controls="site-sidebar">
+            <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
+            <span class="sidebar-toggle-label">Recolher</span>
+          </button>
+          <a href="/busca/" class="topbar-search-btn desktop-topbar-search" aria-label="Pesquisar no site">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </a>
         </div>
-      </footer>
-    </div>
+        <div class="mobile-topbar">
+          <button class="hamburger-btn" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-sidebar">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+          </button>
+          <strong class="flex-1 text-center">{{ site.name }}</strong>
+          <a href="/busca/" class="topbar-search-btn" aria-label="Pesquisar no site">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </a>
+          <a href="/about/" class="soft-link topbar-profile" style="flex-shrink:0">Perfil</a>
+        </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Ver foto em tamanho maior">
-      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
-      <div class="lightbox-inner">
-        <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Fechar">
-          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
-        <img id="lightbox-img" class="lightbox-img" src="" alt="" />
-        <p id="lightbox-caption" class="lightbox-caption"></p>
+        <main class="main-inner" id="main-content" tabindex="-1">
+          {{ content | safe }}
+        </main>
+
+        <footer class="site-footer">
+          <div class="site-footer-inner">
+            <p class="site-footer-copy">
+              {{ buildInfo.year }}
+              <span class="site-footer-sep" aria-hidden="true">&bull;</span>
+              {{ site.author }}
+              <span class="site-footer-sep" aria-hidden="true">&bull;</span>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" title="Creative Commons BY-NC-SA 4.0">
+                <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
+                <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i>
+                <i class="fa-brands fa-creative-commons-nc" aria-hidden="true"></i>
+                <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i>
+              </a>
+
+            </p>
+            <nav class="site-footer-links" aria-label="Links do rodapé">
+
+              <a href="/slashes/">Páginas</a>
+
+              <a href="/stats/">Estatísticas</a>
+
+              <a href="/accessibility/">Acessibilidade</a>
+
+              <a href="/changelog/">Changelog</a>
+
+              <a href="/feed/" title="Feeds RSS/Atom" aria-label="Assinar feeds">
+                <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
+              </a>
+
+            </nav>
+            {% set fediringHost = site.url | replace('https://', '') | replace('http://', '') | replace('/', '') %}
+            <div class="site-footer-webrings" aria-label="Webrings">
+              <span class="webring-link">
+                <span class="webring-nav">
+                  <a href="{{ site.webrings.fediring.home }}previous?host={{ fediringHost }}" aria-label="Site anterior no Fediring">‹</a>
+                </span>
+                <a href="{{ site.webrings.fediring.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.fediring.label }}</a>
+                <span class="webring-nav">
+                  <a href="{{ site.webrings.fediring.home }}next?host={{ fediringHost }}" aria-label="Próximo site no Fediring">›</a>
+                </span>
+              </span>
+              <span class="webring-link">
+                {% if site.webrings.indieweb.previous %}
+                  <span class="webring-nav">
+                    <a href="{{ site.webrings.indieweb.previous }}" aria-label="Site anterior no IndieWeb Ring">‹</a>
+                  </span>
+                {% endif %}
+                <a href="{{ site.webrings.indieweb.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.indieweb.label }}</a>
+                {% if site.webrings.indieweb.next %}
+                  <span class="webring-nav">
+                    <a href="{{ site.webrings.indieweb.next }}" aria-label="Próximo site no IndieWeb Ring">›</a>
+                  </span>
+                {% endif %}
+              </span>
+              <span class="webring-link">
+                <span class="webring-nav">
+                  <a href="#" class="eb-prev nav-recente" aria-label="Site anterior no Entreblogs">‹</a>
+                </span>
+                <a href="{{ site.webrings.entreblogs.home }}" class="webring-link" target="_blank" rel="noopener">{{ site.webrings.entreblogs.label }}</a>
+                <span class="webring-nav">
+                  <a href="#" class="eb-next nav-anterior" aria-label="Próximo site no Entreblogs">›</a>
+                </span>
+                <script src="https://entreblogs.com.br/assets/webrings/onionring-variables.js"></script>
+                <script src="https://entreblogs.com.br//assets/webrings/onionring-widget.js"></script>
+              </span>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Ver foto em tamanho maior">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-inner">
+          <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Fechar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+          <img id="lightbox-img" class="lightbox-img" src="" alt=""/>
+          <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/flexsearch.min.js"></script>
-  <script src="/assets/js/search.js"></script>
-</body>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/flexsearch.min.js"></script>
+    <script src="/assets/js/search.js"></script>
+  </body>
 </html>

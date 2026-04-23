@@ -129,7 +129,9 @@
   "webrings": {
     "fediring": {
       "label": "Fediring",
-      "home": "https://fediring.net/"
+      "home": "https://fediring.net/",
+      "previous": "https://fediring.net/previous?host=margemviva.netlify.app",
+      "next": "https://fediring.net/next?host=margemviva.netlify.app"
     },
     "indieweb": {
       "label": "IndieWeb Ring",
