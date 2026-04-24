@@ -20,6 +20,9 @@ layout: layouts/base.njk
     <header class="entry-header-card">
       {% set breadcrumb = [
         {
+          label: "Coleções",
+          url: "/collections/"
+        }, {
           label: "Música",
           url: "/music/"
         }, {
@@ -72,12 +75,6 @@ layout: layouts/base.njk
             <div>
               <dt>Faixas</dt>
               <dd>{{ tracks }}</dd>
-            </div>
-          {% endif %}
-          {% if genre %}
-            <div class="media-meta-wide">
-              <dt>Gênero</dt>
-              <dd>{{ genre }}</dd>
             </div>
           {% endif %}
         </dl>

@@ -16,7 +16,7 @@ layout: layouts/base.njk
 <section class="content-frame">
   <div class="content-surface media-page">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Quadrinhos", url: "/comics/"}, {label: title}] %}
+      {% set breadcrumb = [{label: "Coleções", url: "/collections/"}, {label: "Quadrinhos", url: "/comics/"}, {label: title}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">{{ title }}</h1>
       {% if writer %}<p class="media-page-subtitle">{{ writer }}</p>{% endif %}

@@ -16,7 +16,7 @@ layout: layouts/base.njk
 <section class="content-frame">
   <div class="content-surface media-page">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Séries", url: "/series/"}, {label: title}] %}
+      {% set breadcrumb = [{label: "Coleções", url: "/collections/"}, {label: "Séries", url: "/series/"}, {label: title}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">{{ title }}</h1>
       {% if platform %}<p class="media-page-subtitle">{{ platform }}{% if years %} · {{ years }}{% endif %}</p>{% endif %}

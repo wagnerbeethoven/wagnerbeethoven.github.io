@@ -16,7 +16,7 @@ layout: layouts/base.njk
 <section class="content-frame">
   <div class="content-surface media-page">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Jogos", url: "/games/"}, {label: title}] %}
+      {% set breadcrumb = [{label: "Coleções", url: "/collections/"}, {label: "Jogos", url: "/games/"}, {label: title}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">{{ title }}</h1>
       {% if developer %}<p class="media-page-subtitle">{{ developer }}</p>{% endif %}
