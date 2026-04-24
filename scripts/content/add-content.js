@@ -15,7 +15,7 @@
  *   YOUTUBE_KEY — YouTube (músicas)         console.cloud.google.com → YouTube Data API v3
  *   RAWG_KEY    — RAWG (jogos)             https://rawg.io/apidocs
  *   COMICVINE_KEY — Comic Vine (quadrinhos) https://comicvine.gamespot.com/api
- *   (quadrinhos e livros usam APIs públicas sem chave)
+ *   (livros e quadrinhos usam Google Books — sem chave necessária)
  */
 
 const fs   = require("fs");
@@ -177,23 +177,31 @@ async function tmdbSerieDetail(id, key) {
   };
 }
 
-// ── Open Library — livros ─────────────────────────────────────────────────────
+// ── Google Books — livros ─────────────────────────────────────────────────────
 async function fetchBook(query) {
-  info(`Buscando livro: "${query}" no Open Library...`);
-  const d = await get(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=5`);
-  const b = d.docs?.[0];
-  if (!b) throw new Error("Nenhum livro encontrado.");
-  const isbn = b.isbn?.[0] || "";
-  info(`Encontrado: ${B}${b.title}${R}${b.author_name?.[0] ? ` — ${b.author_name[0]}` : ""}`);
+  info(`Buscando livro: "${query}" no Google Books...`);
+  const d = await get(
+    `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&printType=books`
+  );
+  const item = d.items?.[0];
+  if (!item) throw new Error("Nenhum livro encontrado.");
+  const v       = item.volumeInfo;
+  const authors = v.authors || [];
+  const isbn    = v.industryIdentifiers?.find(i => i.type === "ISBN_13")?.identifier
+               || v.industryIdentifiers?.find(i => i.type === "ISBN_10")?.identifier || "";
+  const image   = v.imageLinks?.thumbnail
+                    ?.replace("http://", "https://")
+                    .replace("&zoom=1", "&zoom=3") || "";
+  info(`Encontrado: ${B}${v.title}${R}${authors[0] ? ` — ${authors[0]}` : ""}`);
   return {
-    title:     b.title || query,
-    author:    b.author_name?.[0] || "",
-    year:      b.first_publish_year ? String(b.first_publish_year) : "",
+    title:     v.title || query,
+    author:    authors.join(", "),
+    year:      v.publishedDate?.slice(0, 4) || "",
     isbn,
-    pages:     b.number_of_pages_median || "",
-    publisher: b.publisher?.[0] || "",
-    image:     isbn ? `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg` : "",
-    subjects:  (b.subject || []).slice(0, 5),
+    pages:     v.pageCount || "",
+    publisher: v.publisher || "",
+    image,
+    subjects:  (v.categories || []).slice(0, 5),
   };
 }
 
@@ -644,7 +652,7 @@ ${B}Variáveis de ambiente:${R}
   YOUTUBE_KEY Músicas          → console.cloud.google.com → YouTube Data API v3 (grátis, 10k req/dia)
   RAWG_KEY       Jogos            → https://rawg.io/apidocs                 (opcional, funciona sem chave com limitações)
   COMICVINE_KEY  Quadrinhos       → https://comicvine.gamespot.com/api      (opcional, enriquece o Google Books)
-  (livros usam Open Library; quadrinhos usam Google Books com fallback/enriquecimento opcional)
+  (livros e quadrinhos usam Google Books; Comic Vine é opcional e enriquece quadrinhos)
 
 ${B}Exemplos:${R}
   node scripts/content/add-content.js movie  "Cidade de Deus"
@@ -665,13 +673,4 @@ const [type, ...args] = process.argv.slice(2);
       case "movie":  await addMovie(args.join(" ")); break;
       case "serie":  await addSerie(args.join(" ")); break;
       case "book":   await addBook(args.join(" "));  break;
-      case "comic":  await addComic(args.join(" ")); break;
-      case "game":   await addGame(args.join(" "));  break;
-      case "music":  await addMusic(args[0], args.slice(1).join(" ")); break;
-      default:       showHelp();
-    }
-  } catch (e) {
-    err(e.message);
-    process.exit(1);
-  }
-})();
+      case "com
