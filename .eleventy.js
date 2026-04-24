@@ -264,6 +264,12 @@ module.exports = function(eleventyConfig) {
       "src/notes/**/*.md",
       "src/poetry/**/*.md",
       "src/recipes/**/*.md",
+      "src/music/**/*.md",
+      "src/movies/**/*.md",
+      "src/bookshelf/**/*.md",
+      "src/comics/**/*.md",
+      "src/games/**/*.md",
+      "src/series/**/*.md",
     ];
     collectionApi.getFilteredByGlob(globs).forEach((item) => {
       const t = item.data && item.data.tags;
@@ -326,6 +332,12 @@ module.exports = function(eleventyConfig) {
       "src/notes/**/*.md",
       "src/poetry/**/*.md",
       "src/recipes/**/*.md",
+      "src/music/**/*.md",
+      "src/movies/**/*.md",
+      "src/bookshelf/**/*.md",
+      "src/comics/**/*.md",
+      "src/games/**/*.md",
+      "src/series/**/*.md",
     ];
     collectionApi
       .getFilteredByGlob(globs)
