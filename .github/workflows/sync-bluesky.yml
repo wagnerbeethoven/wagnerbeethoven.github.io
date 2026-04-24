@@ -24,7 +24,7 @@ jobs:
           node-version: "20"
 
       - name: Sync Bluesky posts
-        run: node scripts/sync-bluesky.js
+        run: node scripts/content/sync-bluesky.js
 
       - name: Commit novas notas
         run: |
