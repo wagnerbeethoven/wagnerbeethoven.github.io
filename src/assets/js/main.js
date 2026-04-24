@@ -329,6 +329,7 @@
     var viewButtons = Array.from(browser.querySelectorAll("[data-view-toggle]"));
     var sortFieldButtons = Array.from(browser.querySelectorAll("[data-sort-field]"));
     var sortDirectionToggle = browser.querySelector("[data-sort-direction-toggle]");
+    var pageSizeSelect = browser.querySelector("[data-page-size-select]");
     var pagination = browser.querySelector("[data-media-pagination]");
     var pageList = browser.querySelector("[data-page-list]");
     var prevButton = browser.querySelector("[data-page-nav='prev']");
@@ -338,11 +339,13 @@
     var defaultView = browser.dataset.defaultView || "table";
     var defaultSortField = browser.dataset.defaultSortField || "release";
     var defaultSortDirection = browser.dataset.defaultSortDirection || "desc";
-    var pageSize = Math.max(1, Number(browser.dataset.pageSize || 25));
+    var defaultPageSize = Math.max(1, Number(browser.dataset.pageSize || 25));
     var viewKey = "media-view:" + storageKey;
     var sortFieldKey = "media-sort-field:" + storageKey;
     var sortDirectionKey = "media-sort-direction:" + storageKey;
     var pageKey = "media-page:" + storageKey;
+    var pageSizeKey = "media-page-size:" + storageKey;
+    var pageSize = Math.max(1, Number(localStorage.getItem(pageSizeKey) || defaultPageSize));
     var currentPage = 1;
 
     function applyView(view) {
@@ -444,6 +447,23 @@
         applyView(button.dataset.viewToggle || defaultView);
       });
     });
+
+    if (pageSizeSelect) {
+      // Set closest option to current pageSize
+      var availableOptions = Array.from(pageSizeSelect.options).map(function (o) { return Number(o.value); });
+      var bestMatch = availableOptions.reduce(function (prev, cur) {
+        return Math.abs(cur - pageSize) < Math.abs(prev - pageSize) ? cur : prev;
+      });
+      pageSizeSelect.value = String(bestMatch);
+      pageSize = bestMatch;
+
+      pageSizeSelect.addEventListener("change", function () {
+        pageSize = Math.max(1, Number(pageSizeSelect.value));
+        localStorage.setItem(pageSizeKey, String(pageSize));
+        currentPage = 1;
+        applyPagination();
+      });
+    }
 
     sortFieldButtons.forEach(function (button) {
       button.addEventListener("click", function () {

@@ -1,19 +1,15 @@
 ---
 layout: layouts/base.njk
 title: Livros
-pagination:
-  data: collections.books
-  size: 20
-  alias: items
-permalink: "/bookshelf/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: "/bookshelf/"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Leituras e referÃªncias</p>
+        <p class="editorial-hello">Leituras e referências</p>
       </div>
     </div>
   </div>
@@ -22,20 +18,17 @@ permalink: "/bookshelf/{% if pagination.pageNumber > 0 %}page/{{ pagination.page
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Livros"}] %}
+      {% set breadcrumb = [{label: "Coleções", url: "/collections/"}, {label: "Livros"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Livros</h1>
       {% include "partials/page-summary.njk" %}
     </header>
 
+    {% set items = collections.books %}
     {% set kind = "bookshelf" %}
     {% set storageKey = "bookshelf" %}
     {% set pageSize = mediaBrowser.bookshelf.pageSize %}
-    {% set paginationMode = "server" %}
     {% set emptyMessage = "Nenhum livro ainda." %}
     {% include "partials/media-browser.njk" %}
-
-    {% set paginationLabel = "Paginação dos livros" %}
-    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

@@ -6562,6 +6562,33 @@ a.entry-card:hover {
   padding: 0 0.2rem;
 }
 
+.media-browser-item[hidden] {
+  display: none !important;
+}
+
+.media-browser-page-size {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.media-browser-page-size label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.media-browser-page-size select {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.4rem;
+  background: var(--surface-raised, var(--bg-card));
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .media-browser {
     --media-columns: 4;

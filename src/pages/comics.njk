@@ -1,16 +1,12 @@
 ---
 layout: layouts/base.njk
 title: Quadrinhos
-pagination:
-  data: collections.comics
-  size: 20
-  alias: items
-permalink: "/comics/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: "/comics/"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Quadrinhos e graphic novels</p>
@@ -22,20 +18,17 @@ permalink: "/comics/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNum
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Quadrinhos"}] %}
+      {% set breadcrumb = [{label: "Coleções", url: "/collections/"}, {label: "Quadrinhos"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Quadrinhos</h1>
       {% include "partials/page-summary.njk" %}
     </header>
 
+    {% set items = collections.comics %}
     {% set kind = "comics" %}
     {% set storageKey = "comics" %}
     {% set pageSize = mediaBrowser.comics.pageSize %}
-    {% set paginationMode = "server" %}
     {% set emptyMessage = "Nenhum quadrinho ainda." %}
     {% include "partials/media-browser.njk" %}
-
-    {% set paginationLabel = "Paginação dos quadrinhos" %}
-    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>
