@@ -15,25 +15,25 @@ Atualizado em: 2026-04-21
 - Posts antigos de `src/blog/*.md` foram removidos do caminho raiz e reaparecem como arquivos novos em `src/blog/2026/04/*.md`.
 - Muitas notas importadas do Bluesky em `src/notes/*.md` aparecem como deletadas no Git. Tratar como estado atual do trabalho, nao como erro a reverter.
 - Novos feeds foram adicionados:
-  - `src/rss.xml`
-  - `src/atom.xml`
-  - `src/feed-discovery.njk`
-- `src/atom.xml` e `src/feed-discovery.njk` apontam para Atom/RSS/JSON Feed; conferir depois se `/feed.xml` e `/feed.json` existem ou se ainda precisam ser implementados.
+  - `src/feeds/rss.xml.njk`
+  - `src/feeds/atom.xml.njk`
+  - `src/feeds/feed-discovery.njk`
+- `src/feeds/atom.xml.njk` e `src/feeds/feed-discovery.njk` apontam para Atom/RSS/JSON Feed; conferir depois se `/feed.xml` e `/feed.json` existem ou se ainda precisam ser implementados.
 - `.eleventy.js` recebeu filtro `rssDate` e passou a gerar excerpt para itens da arvore de arquivo.
-- `scripts/sync-bluesky.js` passou a preservar datetime completo, imagens e embeds externos no frontmatter das notas.
+- `scripts/content/sync-bluesky.js` passou a preservar datetime completo, imagens e embeds externos no frontmatter das notas.
 - Layouts de notas foram ajustados para exibir horario, imagens, link embeds e `last-updated` apenas em notas que nao vieram do Bluesky.
 - A home mudou o bloco de notas para lista compacta e a secao de poesia agora lista varios poemas recentes.
-- CSS em `src/assets/css/tailwind.css` e `src/assets/css/build.css` foi bastante alterado para suportar esses novos estados visuais.
+- CSS em `src/assets/css/tailwind.css` e no output gerado `.generated/assets/css/build.css` foi bastante alterado para suportar esses novos estados visuais.
 
 ## Arquivos Importantes Alterados
 
 - Configuracao Eleventy: `.eleventy.js`
-- Sincronizacao Bluesky: `scripts/sync-bluesky.js`
+- Sincronizacao Bluesky: `scripts/content/sync-bluesky.js`
 - Layouts: `src/_includes/layouts/base.njk`, `note.njk`, `post.njk`
 - Comentarios: `src/_includes/partials/cusdis.njk`
-- Listagens e paginas: `src/index.njk`, `src/archive.njk`, `src/notes.njk`, `src/sitemap.njk`, paginas de colecoes
-- Feeds: `src/rss.xml`, `src/atom.xml`, `src/feed-discovery.njk`
-- Estilos: `src/assets/css/tailwind.css`, `src/assets/css/build.css`
+- Listagens e paginas: `src/pages/index.njk`, `src/pages/archive.njk`, `src/pages/notes.njk`, `src/pages/sitemap.njk`, paginas de colecoes
+- Feeds: `src/feeds/rss.xml.njk`, `src/feeds/atom.xml.njk`, `src/feeds/feed-discovery.njk`
+- Estilos: `src/assets/css/tailwind.css`, `.generated/assets/css/build.css`
 
 ## Atencoes
 

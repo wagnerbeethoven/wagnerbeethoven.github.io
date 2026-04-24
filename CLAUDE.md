@@ -12,19 +12,19 @@ npm run dev
 npm run build
 
 # CSS only (dev)
-npm run dev:css    # tailwind watch: src/assets/css/tailwind.css → build.css
+npm run dev:css    # tailwind watch: src/assets/css/tailwind.css → .generated/assets/css/build.css
 
 # Content scripts
-node scripts/sync-bluesky.js           # Import Bluesky posts as notes to src/notes/
-node scripts/add-content.js movie "Title"   # Fetch TMDB metadata + create md file
-node scripts/add-content.js series|game|book|comic|music "Title"
+node scripts/content/sync-bluesky.js              # Import Bluesky posts as notes to src/notes/
+node scripts/content/add-content.js movie "Title" # Fetch TMDB metadata + create md file
+node scripts/content/add-content.js series|game|book|comic|music "Title"
 ```
 
 ## Architecture
 
 Eleventy 3.x static site. Nunjucks templates. Tailwind CSS (pre-compiled, NOT JIT from directives).
 
-**CSS pipeline:** `src/assets/css/tailwind.css` → PostCSS (tailwindcss + autoprefixer) → `src/assets/css/build.css`. `tailwind.css` is the source file — append custom CSS there directly. `custom.css` exists but is empty.
+**CSS pipeline:** `src/assets/css/tailwind.css` → PostCSS (tailwindcss + autoprefixer) → `.generated/assets/css/build.css` → passthrough copy to `/assets/css/build.css`. `tailwind.css` is the source file — append custom CSS there directly.
 
 **Templates:** `src/_includes/layouts/` has one layout per content type (base, post, note, poem, recipe, movie, book, game, comic, serie, album, photo). All extend `base.njk`. Partials in `src/_includes/partials/`.
 
@@ -64,7 +64,7 @@ Eleventy 3.x static site. Nunjucks templates. Tailwind CSS (pre-compiled, NOT JI
 
 **Never use `item.templateContent` inside collection builders** — causes `TemplateContentPrematureUseError` in Eleventy v3. Use `item.rawInput` and strip frontmatter + markdown with regex.
 
-**Feed files** (`src/feed.xml`, `src/rss.xml`, `src/atom.xml`, `src/feed.json`) must have `templateEngine: njk` in frontmatter since they are `.xml`/`.json` files that need Nunjucks processing.
+**Feed files** (`src/feeds/feed.xml.njk`, `src/feeds/rss.xml.njk`, `src/feeds/atom.xml.njk`, `src/feeds/feed.json.njk`) must have `templateEngine: njk` in frontmatter since they are feed outputs that need Nunjucks processing.
 
 **Bluesky notes frontmatter** includes `bluesky_uri`, `images[]` (with `thumb`/`alt`), `link_embed` (with `url`/`title`/`thumb`). Sync script stores full ISO datetime as `date` so `HH:mm` renders correctly.
 
