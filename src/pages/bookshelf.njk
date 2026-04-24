@@ -1,15 +1,19 @@
 ---
 layout: layouts/base.njk
 title: Livros
-permalink: /bookshelf/
+pagination:
+  data: collections.books
+  size: 20
+  alias: items
+permalink: "/bookshelf/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Leituras e referências</p>
+        <p class="editorial-hello">Leituras e referÃªncias</p>
       </div>
     </div>
   </div>
@@ -24,11 +28,14 @@ permalink: /bookshelf/
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set items = collections.bookshelf | default([]) %}
     {% set kind = "bookshelf" %}
     {% set storageKey = "bookshelf" %}
     {% set pageSize = mediaBrowser.bookshelf.pageSize %}
+    {% set paginationMode = "server" %}
     {% set emptyMessage = "Nenhum livro ainda." %}
     {% include "partials/media-browser.njk" %}
+
+    {% set paginationLabel = "Paginação dos livros" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

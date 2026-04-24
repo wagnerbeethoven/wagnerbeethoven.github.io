@@ -1,7 +1,11 @@
 ---
 layout: layouts/base.njk
-permalink: "/recipes/"
-title: Receitas
+title: Poesias
+pagination:
+  data: collections.poetry
+  size: 10
+  alias: items
+permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -9,7 +13,7 @@ title: Receitas
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">O que cozinho e aprendo</p>
+        <p class="editorial-hello">Textos em verso</p>
       </div>
     </div>
   </div>
@@ -18,26 +22,31 @@ title: Receitas
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Receitas"}] %}
+      {% set breadcrumb = [{label: "Poesias"}] %}
       {% include "partials/breadcrumb.njk" %}
-      <h1 class="entry-title">Receitas</h1>
+      <h1 class="entry-title">Poesias</h1>
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set allRecipes = collections.recipes | default([]) %}
-    {% if allRecipes | length > 0 %}
+    {% set items = items | default([]) %}
+    {% if items | length > 0 %}
     <div class="home-blog-list h-feed">
-      {% for item in allRecipes %}
+      {% for item in items %}
       <a href="{{ item.url }}" class="home-blog-row h-entry">
         <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
+          <span class="home-blog-row-title p-name">{{ item.data.author }}</span>
         </div>
-        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
+        <span class="home-blog-row-date">{{ item.data.title or 'Sem tÃ­tulo' }}</span>
       </a>
       {% endfor %}
     </div>
     {% else %}
-    <div class="empty-card">Nenhuma receita ainda.</div>
+    <div class="empty-card">Ainda nÃ£o hÃ¡ poemas publicados.</div>
     {% endif %}
+
+    {% set paginationLabel = "Paginação das poesias" %}
+    {% set paginationPrevLabel = "Mais recentes" %}
+    {% set paginationNextLabel = "Mais antigas" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

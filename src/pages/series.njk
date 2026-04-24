@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: SÃ©ries
+pagination:
+  data: collections.series
+  size: 20
+  alias: items
+permalink: "/series/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">SÃ©ries e o que acompanho</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "SÃ©ries"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">SÃ©ries</h1>
+      {% include "partials/page-summary.njk" %}
+    </header>
+
+    {% set kind = "series" %}
+    {% set storageKey = "series" %}
+    {% set pageSize = mediaBrowser.series.pageSize %}
+    {% set paginationMode = "server" %}
+    {% set emptyMessage = "Nenhuma sÃ©rie ainda." %}
+    {% include "partials/media-browser.njk" %}
+
+    {% set paginationLabel = "Paginação das séries" %}
+    {% include "partials/collection-pagination.njk" %}
+  </div>
+</section>

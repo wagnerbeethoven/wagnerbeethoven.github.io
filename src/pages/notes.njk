@@ -5,7 +5,6 @@ pagination:
   data: collections.notes
   size: 20
   alias: items
-  reverse: true
 permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
@@ -14,7 +13,7 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Observações rápidas e fragmentos</p>
+        <p class="editorial-hello">ObservaÃ§Ãµes rÃ¡pidas e fragmentos</p>
       </div>
     </div>
   </div>
@@ -51,16 +50,12 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
       {% endfor %}
     </div>
     {% else %}
-    <div class="empty-card">Ainda não há notas publicadas.</div>
+    <div class="empty-card">Ainda nÃ£o hÃ¡ notas publicadas.</div>
     {% endif %}
 
-    <nav class="utility-row mt-4" aria-label="Paginação">
-      {% if pagination.href.previous %}
-      <a class="soft-link" href="{{ pagination.href.previous }}">Mais recentes</a>
-      {% else %}<span></span>{% endif %}
-      {% if pagination.href.next %}
-      <a class="soft-link" href="{{ pagination.href.next }}">Mais antigas</a>
-      {% endif %}
-    </nav>
+    {% set paginationLabel = "Paginação das notas" %}
+    {% set paginationPrevLabel = "Mais recentes" %}
+    {% set paginationNextLabel = "Mais antigas" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

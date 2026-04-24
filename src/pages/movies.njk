@@ -1,12 +1,16 @@
 ---
 layout: layouts/base.njk
-permalink: "/movies/"
 title: Filmes
+pagination:
+  data: collections.movies
+  size: 20
+  alias: items
+permalink: "/movies/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">Cinema e o que fica</p>
@@ -24,11 +28,14 @@ title: Filmes
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set items = collections.movies | default([]) %}
     {% set kind = "movies" %}
     {% set storageKey = "movies" %}
     {% set pageSize = mediaBrowser.movies.pageSize %}
+    {% set paginationMode = "server" %}
     {% set emptyMessage = "Nenhum filme ainda." %}
     {% include "partials/media-browser.njk" %}
+
+    {% set paginationLabel = "Paginação dos filmes" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

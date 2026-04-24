@@ -1,12 +1,11 @@
 ---
 layout: layouts/base.njk
-title: Poesias
+title: Receitas
 pagination:
-  data: collections.poetry
-  size: 10
+  data: collections.recipes
+  size: 12
   alias: items
-  reverse: true
-permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: "/recipes/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
@@ -14,7 +13,7 @@ permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNum
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Textos em verso</p>
+        <p class="editorial-hello">O que cozinho e aprendo</p>
       </div>
     </div>
   </div>
@@ -23,9 +22,9 @@ permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNum
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Poesias"}] %}
+      {% set breadcrumb = [{label: "Receitas"}] %}
       {% include "partials/breadcrumb.njk" %}
-      <h1 class="entry-title">Poesias</h1>
+      <h1 class="entry-title">Receitas</h1>
       {% include "partials/page-summary.njk" %}
     </header>
 
@@ -35,23 +34,17 @@ permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNum
       {% for item in items %}
       <a href="{{ item.url }}" class="home-blog-row h-entry">
         <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">{{ item.data.author }}</span>
+          <span class="home-blog-row-title p-name">{{ item.data.title }}</span>
         </div>
-        <span class="home-blog-row-date">{{ item.data.title or 'Sem título' }}</span>
+        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
       </a>
       {% endfor %}
     </div>
     {% else %}
-    <div class="empty-card">Ainda não há poemas publicados.</div>
+    <div class="empty-card">Nenhuma receita ainda.</div>
     {% endif %}
 
-    <nav class="utility-row mt-4" aria-label="Paginação">
-      {% if pagination.href.previous %}
-      <a class="soft-link" href="{{ pagination.href.previous }}">Mais recentes</a>
-      {% else %}<span></span>{% endif %}
-      {% if pagination.href.next %}
-      <a class="soft-link" href="{{ pagination.href.next }}">Mais antigas</a>
-      {% endif %}
-    </nav>
+    {% set paginationLabel = "Paginação das receitas" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>

@@ -1,0 +1,85 @@
+---
+layout: layouts/base.njk
+permalink: "/collections/"
+title: Coleções
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Mídias e arquivos organizados</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Coleções"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Coleções</h1>
+      <p class="entry-summary">Um atalho único para todas as páginas de mídia do site.</p>
+    </header>
+
+    <div class="home-section home-section--plain">
+      <div class="home-collections-grid">
+        {% set cnt = collections.books | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/bookshelf/" class="home-collection-card">
+          <i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i>
+          <span>Livros</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+
+        {% set cnt = collections.movies | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/movies/" class="home-collection-card">
+          <i class="fa-solid fa-film" style="color:#e05c7a" aria-hidden="true"></i>
+          <span>Filmes</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+
+        {% set cnt = collections.series | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/series/" class="home-collection-card">
+          <i class="fa-solid fa-tv" style="color:#5bc4c4" aria-hidden="true"></i>
+          <span>Séries</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+
+        {% set cnt = collections.games | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/games/" class="home-collection-card">
+          <i class="fa-solid fa-gamepad" style="color:#7ab87a" aria-hidden="true"></i>
+          <span>Jogos</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+
+        {% set cnt = collections.comics | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/comics/" class="home-collection-card">
+          <i class="fa-solid fa-book-open" style="color:#f0c040" aria-hidden="true"></i>
+          <span>Quadrinhos</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+
+        {% set cnt = collections.music | default([]) | length %}
+        {% if cnt > 0 %}
+        <a href="/music/" class="home-collection-card">
+          <i class="fa-solid fa-music" style="color:#d51007" aria-hidden="true"></i>
+          <span>Música</span>
+          <small>{{ cnt }}</small>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

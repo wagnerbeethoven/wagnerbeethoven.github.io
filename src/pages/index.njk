@@ -5,13 +5,12 @@ permalink: "/"
 <section class="page-hero">
   <div class="page-hero-inner">
     <h1 class="page-title">{{ site.name }}</h1>
-    <p class="page-subtitle prose">Ola, sou <a href="/about/">{{ site.author }}</a>.</p>
+    <p class="page-subtitle prose">Olá, sou <a href="/about/">{{ site.author }}</a>.</p>
   </div>
 </section>
 
 <section class="content-frame" style="margin-top: 2rem">
 
-  {# ── Blog — 1 por linha ────────────────────────────────── #}
   {% set recentPosts = collections.posts | default([]) | head(8) %}
   {% if recentPosts | length > 0 %}
   <div class="home-section" style="--section-tint:#e07b54">
@@ -32,7 +31,6 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Notas ─────────────────────────────────────────────── #}
   {% set recentNotes = collections.notes | default([]) | head(8) %}
   {% if recentNotes | length > 0 %}
   <div class="home-section" style="--section-tint:#f0c040">
@@ -62,7 +60,6 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Fotos ─────────────────────────────────────────────── #}
   {% set recentPhotos = collections.photos | default([]) | head(4) %}
   {% if recentPhotos | length > 0 %}
   <div class="home-section">
@@ -81,7 +78,6 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Poesia ────────────────────────────────────────────── #}
   {% set recentPoems = collections.poetry | default([]) | head(6) %}
   {% if recentPoems | length > 0 %}
   <div class="home-section">
@@ -94,7 +90,7 @@ permalink: "/"
       <a href="{{ poem.url }}" class="home-blog-row h-entry">
          <div class="home-blog-row-main">
           <span class="home-blog-row-title p-name">
-          {% if poem.data.author %}{{ poem.data.author }}{% endif %} 
+          {% if poem.data.author %}{{ poem.data.author }}{% endif %}
          </span>
          </div>
           <span class="home-blog-row-date">
@@ -106,7 +102,6 @@ permalink: "/"
   </div>
   {% endif %}
 
-  {# ── Coleções ──────────────────────────────────────────── #}
   <div class="home-section home-section--plain">
     <div class="home-section-header">
       <h2 class="home-section-title"><i class="fa-solid fa-layer-group" style="color:#888" aria-hidden="true"></i> Explorar</h2>
@@ -120,6 +115,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.notes | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/notes/" class="home-collection-card">
@@ -128,6 +124,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.poetry | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/poetry/" class="home-collection-card">
@@ -136,7 +133,8 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
-      {% set cnt = collections.bookshelf | default([]) | length %}
+
+      {% set cnt = collections.books | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/bookshelf/" class="home-collection-card">
         <i class="fa-solid fa-book" style="color:#5b8dd9" aria-hidden="true"></i>
@@ -144,6 +142,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.movies | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/movies/" class="home-collection-card">
@@ -152,6 +151,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.series | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/series/" class="home-collection-card">
@@ -160,6 +160,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.games | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/games/" class="home-collection-card">
@@ -168,6 +169,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.comics | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/comics/" class="home-collection-card">
@@ -176,6 +178,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.recipes | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/recipes/" class="home-collection-card">
@@ -184,6 +187,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.photos | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/photos/" class="home-collection-card">
@@ -192,6 +196,7 @@ permalink: "/"
         <small>{{ cnt }}</small>
       </a>
       {% endif %}
+
       {% set cnt = collections.music | default([]) | length %}
       {% if cnt > 0 %}
       <a href="/music/" class="home-collection-card">

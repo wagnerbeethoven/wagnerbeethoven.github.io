@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+permalink: false
+eleventyComputed:
+  title: "Posts tagged '{{ tag }}'"
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/tags/" class="editorial-back" aria-label="Voltar para tags"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+        <p class="editorial-hello">Posts com a tag #{{ tag }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Tags", url: "/tags/"}, {label: tag}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">#{{ tag }}</h1>
+    </header>
+
+    {% set currentSlug = (tag | slug) %}
+    {% set taggedPosts = [] %}
+    {% for post in collections.allContent %}
+      {% set matched = false %}
+      {% if post.data.tags %}
+        {% for t in post.data.tags %}
+          {% if (t | slug) == currentSlug %}
+            {% set matched = true %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if matched %}
+        {% set taggedPosts = (taggedPosts.push(post), taggedPosts) %}
+      {% endif %}
+    {% endfor %}
+
+    {% if taggedPosts.length > 0 %}
+    <div class="home-blog-list h-feed">
+      {% for post in taggedPosts %}
+      <a href="{{ post.url }}" class="home-blog-row h-entry">
+        <div class="home-blog-row-main">
+          <span class="home-blog-row-title p-name">{{ post.data.title or 'Sem titulo' }}</span>
+        </div>
+        {% if post.date %}<time class="home-blog-row-date dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-card">
+      <p class="text-[var(--text-secondary)]">Nenhum post encontrado com esta tag.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

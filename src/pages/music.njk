@@ -1,12 +1,16 @@
 ---
 layout: layouts/base.njk
-permalink: "/music/"
 title: Música
+pagination:
+  data: collections.music
+  size: 15
+  alias: items
+permalink: "/music/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a pÃ¡gina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
         <p class="editorial-hello">O que estou ouvindo</p>
@@ -24,20 +28,25 @@ title: Música
       {% include "partials/page-summary.njk" %}
     </header>
 
-    {% set items = collections.music | default([]) %}
     {% set kind = "music" %}
     {% set storageKey = "music" %}
     {% set pageSize = mediaBrowser.music.pageSize %}
-    {% set emptyMessage = "Nenhum álbum ainda." %}
+    {% set paginationMode = "server" %}
+    {% set emptyMessage = "Nenhum Ã¡lbum ainda." %}
     {% include "partials/media-browser.njk" %}
 
+    {% set paginationLabel = "Paginação da música" %}
+    {% include "partials/collection-pagination.njk" %}
+
+    {% if pagination.pageNumber == 0 %}
     <div class="home-section-header" style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border-subtle)">
       <h2 class="home-section-title">
         <i class="fa-solid fa-headphones" style="color:#d51007" aria-hidden="true"></i> Ouvindo recentemente
       </h2>
-      <a href="https://www.last.fm/user/{{ site.lastfm.user }}" target="_blank" rel="noopener" class="home-section-more">Ver perfil →</a>
+      <a href="https://www.last.fm/user/{{ site.lastfm.user }}" target="_blank" rel="noopener" class="home-section-more">Ver perfil â†’</a>
     </div>
     {% include "partials/lastfm-widget.njk" %}
+    {% endif %}
 
   </div>
 </section>

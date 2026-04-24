@@ -13,7 +13,7 @@ title: Blog
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Textos e reflexões</p>
+        <p class="editorial-hello">Textos e reflexÃµes</p>
       </div>
     </div>
   </div>
@@ -40,16 +40,12 @@ title: Blog
       {% endfor %}
     </div>
     {% else %}
-    <div class="empty-card">Ainda não há artigos publicados.</div>
+    <div class="empty-card">Ainda nÃ£o hÃ¡ artigos publicados.</div>
     {% endif %}
 
-    <nav class="utility-row mt-4" aria-label="Paginação">
-      {% if pagination.href.previous %}
-      <a class="soft-link" href="{{ pagination.href.previous }}">Mais recentes</a>
-      {% else %}<span></span>{% endif %}
-      {% if pagination.href.next %}
-      <a class="soft-link" href="{{ pagination.href.next }}">Mais antigos</a>
-      {% endif %}
-    </nav>
+    {% set paginationLabel = "Paginação do blog" %}
+    {% set paginationPrevLabel = "Mais recentes" %}
+    {% set paginationNextLabel = "Mais antigos" %}
+    {% include "partials/collection-pagination.njk" %}
   </div>
 </section>
