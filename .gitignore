@@ -123,6 +123,8 @@ netlify/functions-serve/
 # Adjust paths based on your pipeline; _site is already ignored.
 *.tmp
 *.temp
+.generated/
+src/assets/css/build.css
 
 # ----------------------------
 # Misc / Temporary
@@ -138,4 +140,12 @@ temp/
 *.lock
 # (Allow package-lock.json specifically)
 !package-lock.json
+
+# ----------------------------
+# Local AI tool state
+# ----------------------------
+# Keep plugin source in /plugins tracked when intentional.
+# Ignore local Codex/agent runtime config and installed plugin copies.
+.codex/
+.agents/
 .claude/
