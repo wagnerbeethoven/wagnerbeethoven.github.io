@@ -2037,6 +2037,69 @@ a.pill:focus-visible {
   color: var(--text-primary);
 }
 
+.collection-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+.collection-pagination-pages {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-inline: auto;
+}
+
+.collection-pagination-link,
+.collection-pagination-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.collection-pagination-link:hover,
+.collection-pagination-page:hover,
+.collection-pagination-link:focus-visible,
+.collection-pagination-page:focus-visible {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.collection-pagination-page.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.collection-pagination-link.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.collection-pagination-ellipsis {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  padding: 0 0.15rem;
+}
+
 .footer-meta {
   margin-top: 1.5rem;
   padding-top: 1rem;
