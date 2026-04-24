@@ -193,16 +193,59 @@ async function fetchBook(query) {
                     ?.replace("http://", "https://")
                     .replace("&zoom=1", "&zoom=3") || "";
   info(`Encontrado: ${B}${v.title}${R}${authors[0] ? ` — ${authors[0]}` : ""}`);
+  const description = v.description?.replace(/\s+/g, " ").trim()
+    || await fetchOpenLibraryDescription(isbn)
+    || await fetchOpenAIDescription(`Escreva uma breve descrição do livro "${v.title || query}"${authors[0] ? ` de ${authors[0]}` : ""}. Máximo 2 frases em português.`);
   return {
-    title:     v.title || query,
-    author:    authors.join(", "),
-    year:      v.publishedDate?.slice(0, 4) || "",
+    title:       v.title || query,
+    author:      authors.join(", "),
+    year:        v.publishedDate?.slice(0, 4) || "",
     isbn,
-    pages:     v.pageCount || "",
-    publisher: v.publisher || "",
+    pages:       v.pageCount || "",
+    publisher:   v.publisher || "",
     image,
-    subjects:  (v.categories || []).slice(0, 5),
+    subjects:    (v.categories || []).slice(0, 5),
+    description,
   };
+}
+
+async function fetchOpenLibraryDescription(isbn) {
+  if (!isbn) return "";
+  try {
+    info("Sem descrição no Google Books. Buscando no OpenLibrary...");
+    const book = await get(`https://openlibrary.org/isbn/${isbn}.json`);
+    const workKey = book.works?.[0]?.key;
+    if (!workKey) return "";
+    const work = await get(`https://openlibrary.org${workKey}.json`);
+    const desc = work.description;
+    const raw = typeof desc === "string" ? desc : (desc?.value || "");
+    return raw.replace(/\s+/g, " ").trim();
+  } catch {
+    return "";
+  }
+}
+
+async function fetchOpenAIDescription(prompt) {
+  const key = process.env.OPENAI_KEY;
+  if (!key) return "";
+  try {
+    info("Buscando descrição no ChatGPT (OpenAI)...");
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 200,
+        temperature: 0.5,
+      }),
+    });
+    if (!res.ok) return "";
+    const d = await res.json();
+    return d.choices?.[0]?.message?.content?.trim().replace(/\s+/g, " ") || "";
+  } catch {
+    return "";
+  }
 }
 
 // ── Google Books — quadrinhos ─────────────────────────────────────────────────
@@ -461,8 +504,10 @@ async function fetchAlbum(artist, album) {
   if (mbData) info(`MusicBrainz: ${mbData.label ? mbData.label + " " : ""}${mbData.year ? `(${mbData.year})` : ""}`);
 
   // ── Last.fm → descrição do álbum ──
-  const wiki = (lfm.status === "fulfilled" && lfm.value) ? lfm.value : "";
-  if (wiki) info(`Last.fm: descrição encontrada (${wiki.length} chars)`);
+  const lfmWiki = (lfm.status === "fulfilled" && lfm.value) ? lfm.value : "";
+  if (lfmWiki) info(`Last.fm: descrição encontrada (${lfmWiki.length} chars)`);
+  const wiki = lfmWiki
+    || await fetchOpenAIDescription(`Escreva uma breve descrição do álbum "${album}" de ${artist}. Máximo 2 frases em português.`);
 
   if (!browseId && !playlistId && !videoId) throw new Error("Álbum não encontrado.");
   info(`Encontrado: ${B}${album}${R} — ${artist}`);
@@ -522,6 +567,7 @@ publisher: ${yamlStr(d.publisher)}
 pages: ${d.pages || '""'}
 isbn: ${yamlStr(d.isbn)}
 image: ${yamlStr(d.image)}
+description: ${yamlStr(d.description)}
 status: want
 rating: ""
 tags: ${yamlList(d.subjects)}
@@ -565,14 +611,12 @@ title: ${yamlStr(d.title)}
 artist: ${yamlStr(d.artist)}
 year: ${yamlStr(d.year)}
 label: ${yamlStr(d.label)}
-genre: ""
 image: ${yamlStr(d.image)}
 youtube: ${yamlStr(d.youtube)}
 youtubeList: ${yamlStr(d.youtubeList)}
 browseId: ${yamlStr(d.browseId)}
 tracks: ${d.tracks?.length || '""'}
 tags: ${yamlList(d.tags)}
-note: ""
 ---
 ${d.wiki ? `\n${d.wiki}\n` : ""}`,
 };
@@ -673,4 +717,13 @@ const [type, ...args] = process.argv.slice(2);
       case "movie":  await addMovie(args.join(" ")); break;
       case "serie":  await addSerie(args.join(" ")); break;
       case "book":   await addBook(args.join(" "));  break;
-      case "com
+      case "comic":  await addComic(args.join(" ")); break;
+      case "game":   await addGame(args.join(" "));  break;
+      case "music":  await addMusic(args[0], args.slice(1).join(" ")); break;
+      default:       showHelp();
+    }
+  } catch (e) {
+    err(e.message);
+    process.exit(1);
+  }
+})();
