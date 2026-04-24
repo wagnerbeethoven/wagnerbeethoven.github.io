@@ -323,6 +323,7 @@
   }
 
   document.querySelectorAll("[data-media-browser]").forEach(function (browser) {
+    var paginationMode = browser.dataset.paginationMode || "client";
     var storageKey = browser.dataset.storageKey || "media-browser";
     var list = browser.querySelector("[data-media-list]");
     var viewButtons = Array.from(browser.querySelectorAll("[data-view-toggle]"));
@@ -395,6 +396,12 @@
 
     function applyPagination() {
       var items = Array.from(list.querySelectorAll("[data-media-item]"));
+      if (paginationMode === "server") {
+        items.forEach(function (item) {
+          item.hidden = false;
+        });
+        return;
+      }
       var totalPages = Math.max(1, Math.ceil(items.length / pageSize));
       if (currentPage > totalPages) currentPage = totalPages;
       var start = (currentPage - 1) * pageSize;
@@ -428,7 +435,7 @@
       }
       localStorage.setItem(sortFieldKey, field);
       localStorage.setItem(sortDirectionKey, direction);
-      if (!preservePage) currentPage = 1;
+      if (!preservePage && paginationMode !== "server") currentPage = 1;
       applyPagination();
     }
 
@@ -478,7 +485,7 @@
     var initialView = localStorage.getItem(viewKey) || defaultView;
     var initialSortField = localStorage.getItem(sortFieldKey) || defaultSortField;
     var initialSortDirection = localStorage.getItem(sortDirectionKey) || defaultSortDirection;
-    currentPage = Math.max(1, Number(localStorage.getItem(pageKey) || 1));
+    currentPage = paginationMode === "server" ? 1 : Math.max(1, Number(localStorage.getItem(pageKey) || 1));
     applyView(initialView);
     applySort(initialSortField, initialSortDirection, true);
   });
