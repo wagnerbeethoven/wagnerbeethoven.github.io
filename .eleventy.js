@@ -184,9 +184,11 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy for static assets (CSS, JS, images)
   // Copies from src/assets/* to _site/assets/*
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Generated CSS stays outside src/ but is published at /assets/css/build.css
+  eleventyConfig.addPassthroughCopy({ ".generated/assets/css/build.css": "assets/css/build.css" });
   // PWA assets: manifest and service worker to site root
-  eleventyConfig.addPassthroughCopy({ "src/manifest.webmanifest": "manifest.webmanifest" });
-  eleventyConfig.addPassthroughCopy({ "src/sw.js": "sw.js" });
+  eleventyConfig.addPassthroughCopy({ "src/system/manifest.webmanifest": "manifest.webmanifest" });
+  eleventyConfig.addPassthroughCopy({ "src/system/sw.js": "sw.js" });
 
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) => {
