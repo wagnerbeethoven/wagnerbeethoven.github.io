@@ -1,0 +1,36 @@
+{% set pager = pager or pagination %}
+{% set totalPages = pager.hrefs.length if pager and pager.hrefs else 0 %}
+{% if totalPages > 1 %}
+<nav class="collection-pagination" aria-label="{{ paginationLabel or 'Paginação' }}">
+  {% if pager.href.previous %}
+  <a class="collection-pagination-link" href="{{ pager.href.previous }}">{{ paginationPrevLabel or 'Anterior' }}</a>
+  {% else %}
+  <span class="collection-pagination-link is-disabled" aria-disabled="true">{{ paginationPrevLabel or 'Anterior' }}</span>
+  {% endif %}
+
+  <div class="collection-pagination-pages" aria-label="Páginas">
+    {% set lastRendered = -1 %}
+    {% for href in pager.hrefs %}
+      {% set pageNumber = loop.index0 %}
+      {% set shouldRender = totalPages <= 7 or pageNumber == 0 or pageNumber == totalPages - 1 or (pageNumber >= pager.pageNumber - 1 and pageNumber <= pager.pageNumber + 1) %}
+      {% if shouldRender %}
+        {% if lastRendered != -1 and pageNumber > lastRendered + 1 %}
+        <span class="collection-pagination-ellipsis" aria-hidden="true">…</span>
+        {% endif %}
+        {% if pageNumber == pager.pageNumber %}
+        <span class="collection-pagination-page is-active" aria-current="page">{{ loop.index }}</span>
+        {% else %}
+        <a class="collection-pagination-page" href="{{ href }}" aria-label="Ir para página {{ loop.index }}">{{ loop.index }}</a>
+        {% endif %}
+        {% set lastRendered = pageNumber %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if pager.href.next %}
+  <a class="collection-pagination-link" href="{{ pager.href.next }}">{{ paginationNextLabel or 'Próxima' }}</a>
+  {% else %}
+  <span class="collection-pagination-link is-disabled" aria-disabled="true">{{ paginationNextLabel or 'Próxima' }}</span>
+  {% endif %}
+</nav>
+{% endif %}

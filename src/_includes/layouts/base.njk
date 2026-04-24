@@ -92,9 +92,10 @@
         <img class="sidebar-avatar u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
         <div class="sidebar-name p-name">{{ site.author }}</div>
         <div class="sidebar-meta">{{ site.location }}</div>
-        <p class="sr-only p-note">{{ site.bio.short }}</p>
-        <a class="sr-only u-url" href="{{ site.url }}" rel="me">{{ site.url }}</a>
-        <a class="sr-only u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        
+        <link class="p-note" href="{{ site.bio.short }}" />
+        <link class="u-url" href="{{ site.url }}" rel="me"/>
+        <link class="u-email" href="mailto:{{ site.email }}" rel="me"/>
 
         <link  href="{{ site.url }}" rel="me">
 

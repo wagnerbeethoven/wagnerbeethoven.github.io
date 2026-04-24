@@ -3,6 +3,7 @@
   class="media-browser"
   data-media-browser
   data-storage-key="{{ storageKey }}"
+  data-pagination-mode="{{ paginationMode or 'client' }}"
   data-default-view="table"
   data-default-sort-field="release"
   data-default-sort-direction="desc"
@@ -120,6 +121,7 @@
     {% endfor %}
   </div>
 
+  {% if (paginationMode or "client") == "client" %}
   <nav class="media-browser-pagination" data-media-pagination aria-label="Paginação da coleção">
     <button type="button" class="media-browser-page-nav" data-page-nav="prev" disabled>
       <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -131,6 +133,7 @@
       <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
     </button>
   </nav>
+  {% endif %}
 </section>
 {% else %}
 <div class="empty-card">{{ emptyMessage }}</div>
