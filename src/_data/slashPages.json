@@ -103,6 +103,13 @@
     "color": "#7ab87a",
     "items": [
       {
+        "url": "/collections/",
+        "icon": "fa-compact-disc",
+        "color": "#5b8dd9",
+        "title": "Coleções",
+        "description": "Visão geral com atalhos para todas as coleções de mídia."
+      },
+      {
         "url": "/bookshelf/",
         "icon": "fa-book",
         "color": "#5b8dd9",
