@@ -1230,7 +1230,7 @@ body {
   color: var(--text-primary);
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
-  
+
 }
 
 img {
@@ -1381,6 +1381,11 @@ select:focus-visible {
 
 .sidebar-collapsed .site-main {
   margin-left: 0;
+}
+
+.desktop-topbar,
+.mobile-topbar {
+  background: var(--bg-hero);
 }
 
 .desktop-topbar {
