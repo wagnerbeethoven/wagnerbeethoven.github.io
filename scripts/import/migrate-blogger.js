@@ -1,5 +1,5 @@
 // One-shot Blogger Atom → Eleventy markdown migration
-// Usage: node scripts/migrate-blogger.js <feed.atom> <output-dir>
+// Usage: node scripts/import/migrate-blogger.js <feed.atom> <output-dir>
 const fs = require('fs');
 const path = require('path');
 

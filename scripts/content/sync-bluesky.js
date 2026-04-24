@@ -3,7 +3,7 @@
  * sync-bluesky.js — importa posts do Bluesky como notas .md em src/notes/
  *
  * Uso:
- *   node scripts/sync-bluesky.js
+ *   node scripts/content/sync-bluesky.js
  *
  * Variáveis de ambiente:
  *   BLUESKY_HANDLE — handle do Bluesky (ex: wagnerbeethoven.com.br)
@@ -17,8 +17,8 @@ const path = require("path");
 
 // ── Config ────────────────────────────────────────────────────────────────────
 
-const SITE_JSON = path.join(__dirname, "../src/_data/site.json");
-const NOTES_DIR = path.join(__dirname, "../src/notes");
+const SITE_JSON = path.join(__dirname, "..", "..", "src", "_data", "site.json");
+const NOTES_DIR = path.join(__dirname, "..", "..", "src", "notes");
 const API_BASE  = "https://public.api.bsky.app/xrpc";
 const MAX_POSTS = 1000; // limite de segurança
 

@@ -3,12 +3,12 @@
  * add-content.js — cria entradas de mídia buscando dados automaticamente
  *
  * Uso:
- *   node scripts/add-content.js movie   "Duna"
- *   node scripts/add-content.js serie   "Dark"
- *   node scripts/add-content.js book    "Sapiens"
- *   node scripts/add-content.js music   "Radiohead" "OK Computer"
- *   node scripts/add-content.js comic   "Watchmen"
- *   node scripts/add-content.js game    "Return of the Obra Dinn"
+ *   node scripts/content/add-content.js movie   "Duna"
+ *   node scripts/content/add-content.js serie   "Dark"
+ *   node scripts/content/add-content.js book    "Sapiens"
+ *   node scripts/content/add-content.js music   "Radiohead" "OK Computer"
+ *   node scripts/content/add-content.js comic   "Watchmen"
+ *   node scripts/content/add-content.js game    "Return of the Obra Dinn"
  *
  * Variáveis de ambiente (.env ou export):
  *   TMDB_KEY    — TMDB (filmes + séries)   https://www.themoviedb.org/settings/api
@@ -23,7 +23,7 @@ const path = require("path");
 
 // Carrega .env da raiz do projeto (silencioso se não existir)
 try {
-  const envPath = path.join(__dirname, "..", ".env");
+  const envPath = path.join(__dirname, "..", "..", ".env");
   if (fs.existsSync(envPath)) {
     fs.readFileSync(envPath, "utf8").split("\n").forEach(line => {
       const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*)$/);
@@ -106,7 +106,7 @@ function stripHtml(str) {
 }
 
 function writeFile(dir, filename, content) {
-  const fullDir  = path.join(__dirname, "..", "src", dir);
+  const fullDir  = path.join(__dirname, "..", "..", "src", dir);
   const fullPath = path.join(fullDir, filename);
   if (!fs.existsSync(fullDir)) fs.mkdirSync(fullDir, { recursive: true });
   if (fs.existsSync(fullPath)) {
@@ -620,7 +620,7 @@ async function addGame(query) {
 }
 
 async function addMusic(artist, album) {
-  if (!album) { err(`Informe artista E álbum:\n  node scripts/add-content.js music "Artista" "Álbum"`); process.exit(1); }
+  if (!album) { err(`Informe artista E álbum:\n  node scripts/content/add-content.js music "Artista" "Álbum"`); process.exit(1); }
   const d = await fetchAlbum(artist, album);
   const f = `${[d.artist, d.title, d.year].filter(Boolean).map(slug).join("-")}.md`;
   writeFile("music", f, fm.music(d));
@@ -632,12 +632,12 @@ function showHelp() {
 ${B}add-content${R} — adiciona entradas de mídia automaticamente
 
 ${B}Uso:${R}
-  node scripts/add-content.js movie  ${DIM}"Título"${R}
-  node scripts/add-content.js serie  ${DIM}"Título"${R}
-  node scripts/add-content.js book   ${DIM}"Título"${R}
-  node scripts/add-content.js comic  ${DIM}"Título"${R}
-  node scripts/add-content.js game   ${DIM}"Título"${R}
-  node scripts/add-content.js music  ${DIM}"Artista" "Álbum"${R}
+  node scripts/content/add-content.js movie  ${DIM}"Título"${R}
+  node scripts/content/add-content.js serie  ${DIM}"Título"${R}
+  node scripts/content/add-content.js book   ${DIM}"Título"${R}
+  node scripts/content/add-content.js comic  ${DIM}"Título"${R}
+  node scripts/content/add-content.js game   ${DIM}"Título"${R}
+  node scripts/content/add-content.js music  ${DIM}"Artista" "Álbum"${R}
 
 ${B}Variáveis de ambiente:${R}
   TMDB_KEY    Filmes e séries  → https://www.themoviedb.org/settings/api
@@ -647,12 +647,12 @@ ${B}Variáveis de ambiente:${R}
   (livros usam Open Library; quadrinhos usam Google Books com fallback/enriquecimento opcional)
 
 ${B}Exemplos:${R}
-  node scripts/add-content.js movie  "Cidade de Deus"
-  node scripts/add-content.js serie  "Breaking Bad"
-  node scripts/add-content.js book   "Dom Casmurro"
-  node scripts/add-content.js comic  "Saga"
-  node scripts/add-content.js game   "Hollow Knight"
-  node scripts/add-content.js music  "Criolo" "Nó na Orelha"
+  node scripts/content/add-content.js movie  "Cidade de Deus"
+  node scripts/content/add-content.js serie  "Breaking Bad"
+  node scripts/content/add-content.js book   "Dom Casmurro"
+  node scripts/content/add-content.js comic  "Saga"
+  node scripts/content/add-content.js game   "Hollow Knight"
+  node scripts/content/add-content.js music  "Criolo" "Nó na Orelha"
 `);
 }
 
