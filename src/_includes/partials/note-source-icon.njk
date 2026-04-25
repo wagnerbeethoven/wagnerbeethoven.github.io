@@ -1,0 +1,15 @@
+{#
+  note-source-icon.njk — ícone de plataforma inline (sem texto)
+  Plataformas suportadas: bluesky, mastodon, x
+#}
+{% set _p = item.data.source_platform %}
+{% if not _p and item.data.bluesky_url %}{% set _p = "bluesky" %}{% endif %}
+
+{% if _p %}
+  {% if _p == "bluesky" %}{% set _i = "fa-bluesky" %}{% set _c = "#0085FF" %}
+  {% elif _p == "x" %}{% set _i = "fa-x-twitter" %}{% set _c = "var(--text-primary)" %}
+  {% elif _p == "mastodon" %}{% set _i = "fa-mastodon" %}{% set _c = "#6364FF" %}
+  {% else %}{% set _i = "fa-globe" %}{% set _c = "var(--text-secondary)" %}
+  {% endif %}
+  <i class="fa-brands {{ _i }} note-source-icon" style="color:{{ _c }}" aria-label="{{ _p }}" title="Publicado no {{ _p }}"></i>
+{% endif %}

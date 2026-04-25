@@ -178,20 +178,6 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
       {% include "partials/author-card.njk" %}
     </div>
 
-    {# ── Perfil (card) ────────────────────────────────────── #}
-    <div class="section-block">
-      <h2 class="section-label"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Bloco de perfil</h2>
-      <p class="section-intro">Usado em <code>/card/</code>. Foto circular + metadados lado a lado.</p>
-      <div class="card-profile-block">
-        <img src="{{ site.avatarurl }}" alt="{{ site.avataralt }}" class="card-profile-photo" width="80" height="80"/>
-        <div class="card-profile-meta">
-          <p class="card-name">{{ site.author }}</p>
-          <p class="card-pronoun">ele/dele <span class="card-pronoun-en">he/him</span></p>
-          <p class="card-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ site.location }}</p>
-        </div>
-      </div>
-    </div>
-
     {# ── Links de resumo ──────────────────────────────────── #}
     <div class="section-block">
       <h2 class="section-label"><i class="fa-solid fa-link" aria-hidden="true"></i> Resume link cards</h2>

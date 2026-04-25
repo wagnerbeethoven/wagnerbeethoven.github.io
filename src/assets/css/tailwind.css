@@ -2000,7 +2000,7 @@ select:focus-visible {
 }
 
 .cusdis-section {
- 
+  margin-top: 2.5rem;
 }
 
 .cusdis-heading {
@@ -2841,7 +2841,7 @@ a.media-card:focus-visible .media-card-cover-label {
 
 /* ── Icons      ──────────────────────────────────────────── */
 .icon-pixelfed {
-margin-left: 0.5rem;
+  margin-left: 0.5rem;
 
 }
 
@@ -3798,20 +3798,20 @@ margin-left: 0.5rem;
 }
 
 .project-card-banner {
-  background: linear-gradient(135deg, #0f1117 0%, #1a1f2e 100%);
+  background: var(--bg-hero);
   padding: 1.5rem;
 }
 
 .project-card-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--hero-text);
   margin: 0 0 0.35rem;
 }
 
 .project-card-desc {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--hero-text-muted);
   margin: 0 0 1rem;
   line-height: 1.5;
 }
@@ -3836,52 +3836,52 @@ margin-left: 0.5rem;
 
 .project-link:hover,
 .project-link:focus-visible {
-  background: #fff;
-  color: var(--stream-color);
+  background: var(--hero-text);
+  color: var(--project-link-color);
   transform: translateY(-1px);
   outline: none;
 }
 
 .project-link:focus-visible {
-  outline: 3px solid var(--stream-color);
+  outline: 3px solid var(--hero-text);
   outline-offset: 2px;
 }
 
 .project-link--youtube {
-  --stream-color: #cc0000;
+  --project-link-color: #cc0000;
   background: #cc0000;
   color: #fff;
 }
 
 .project-link--spotify {
-  --stream-color: #158a3e;
+  --project-link-color: #158a3e;
   background: #158a3e;
   color: #fff;
 }
 
 .project-link--apple {
-  --stream-color: #1a1a1a;
+  --project-link-color: #1a1a1a;
   background: #1a1a1a;
   color: #fff;
 }
 
 .project-link--deezer {
-  --stream-color: #7b20dc;
+  --project-link-color: #7b20dc;
   background: #7b20dc;
   color: #fff;
 }
 
 .project-link--amazon {
-  --stream-color: #c47600;
+  --project-link-color: #c47600;
   background: #c47600;
   color: #fff;
 }
 
 .project-link--site {
-  --stream-color: #1a1f2e;
+  --project-link-color: var(--bg-hero);
   background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--hero-text);
+  border: 1px solid var(--hero-text-muted);
 }
 
 .project-card-embed {
@@ -4706,12 +4706,10 @@ a.info-card:hover {
 /* — Paddings e espaçamentos compactos ————————————————————— */
 
 .content-surface {
-  padding: 1.1rem 1rem 2rem;
+  padding: 1.5rem;
 }
 
-.entry-header-card {
-  padding: 0.75rem 0.95rem;
-}
+
 
 .post-card {
   padding: 0.9rem;
@@ -6873,6 +6871,7 @@ a.entry-card:hover {
     animation: none;
   }
 }
+
 /* ── Author card (post footer) ───────────────────────────── */
 
 .author-card {
@@ -6987,4 +6986,41 @@ a.entry-card:hover {
 .project-card-title a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+/* ── Note source badge + icon ────────────────────────────── */
+
+.note-source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--note-source-color, var(--text-secondary));
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.note-source-badge:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note-source-badge i {
+  font-size: 0.85em;
+}
+
+.note-source-icon {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.home-blog-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
 }

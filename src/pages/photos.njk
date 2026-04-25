@@ -6,7 +6,9 @@ title: Fotos
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
       </div>
@@ -17,28 +19,30 @@ title: Fotos
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Fotos"}] %}
+      {% set breadcrumb = [
+        {
+          label: "Fotos"
+        }
+      ] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Fotos</h1>
-      {% include "partials/page-summary.njk" %}
+      <p class="entry-summary">
+      Fotos publicadas no <a href="https://pixelfed.com/wagnerbeethoven" class="icon-pixelfed" target="_blank" rel="noopener me">{% include "partials/icon-pixelfed.njk" %} Pixelfed</a> e sincronizadas automaticamente aqui.
+      </p>
     </header>
-
-    <p class="prose mb-4">
-      Fotos publicadas no <a href="https://pixelfed.com/wagnerbeethoven" target="_blank" rel="noopener me">{% include "partials/icon-pixelfed.njk" %} Pixelfed</a> e sincronizadas automaticamente aqui.
-    </p>
 
     {% set allPhotos = collections.photos | default([]) %}
     {% if allPhotos | length > 0 %}
-    <div class="polaroid-grid">
-      {% for item in allPhotos %}
-      <figure class="polaroid">
-        <img src="{{ item.data.image }}" alt="{{ item.data.alt or item.data.title }}" loading="lazy" />
-        <figcaption class="polaroid-caption">{{ item.data.caption }}</figcaption>
-      </figure>
-      {% endfor %}
-    </div>
+      <div class="polaroid-grid">
+        {% for item in allPhotos %}
+          <figure class="polaroid">
+            <img src="{{ item.data.image }}" alt="{{ item.data.alt or item.data.title }}" loading="lazy"/>
+            <figcaption class="polaroid-caption">{{ item.data.caption }}</figcaption>
+          </figure>
+        {% endfor %}
+      </div>
     {% else %}
-    <div class="empty-card">Nenhuma foto ainda.</div>
+      <div class="empty-card">Nenhuma foto ainda.</div>
     {% endif %}
   </div>
 </section>

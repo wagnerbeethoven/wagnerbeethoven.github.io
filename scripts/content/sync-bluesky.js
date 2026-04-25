@@ -136,6 +136,8 @@ function buildFrontmatter(post, tags, handle) {
   for (const tag of tags) lines.push(`  - ${tag}`);
   lines.push(`bluesky_uri: "${uri}"`);
   lines.push(`bluesky_url: "${url}"`);
+  lines.push(`source_platform: "bluesky"`);
+  lines.push(`source_url: "${url}"`);
   if (images.length > 0) {
     lines.push("images:");
     for (const img of images) {

@@ -31,6 +31,7 @@ showUpdated: true
           <time class="note-card-handle dt-published" datetime="{{ page.date | htmlDateString }}">
             {{ page.date | readableDate("dd/MM/yyyy") }} às {{ page.date | readableDate("HH:mm") }}
           </time>
+          {% include "partials/note-source.njk" %}
         </div>
       </div>
 

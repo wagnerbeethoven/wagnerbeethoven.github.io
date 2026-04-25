@@ -36,14 +36,16 @@ showUpdated: true
       </h2>
       <div class="link-cards">
         {% for item in group.items %}
-        <a href="{{ item.url }}" class="link-card link-card--{{ item.title | slugify }}">
-          <i class="fa-solid {{ item.icon }}" aria-hidden="true" style="color:{{ item.color }}"></i>
-          <div class="link-card-body">
-            <p class="link-card-title">{{ item.title }}</p>
-            <p class="link-card-url">{{ item.url }}</p>
-            <p class="link-card-desc">{{ item.description }}</p>
-          </div>
-        </a>
+          {% if not item.collection or collections[item.collection] | length > 0 %}
+          <a href="{{ item.url }}" class="link-card link-card--{{ item.title | slugify }}">
+            <i class="fa-solid {{ item.icon }}" aria-hidden="true" style="color:{{ item.color }}"></i>
+            <div class="link-card-body">
+              <p class="link-card-title">{{ item.title }}</p>
+              <p class="link-card-url">{{ item.url }}</p>
+              <p class="link-card-desc">{{ item.description }}</p>
+            </div>
+          </a>
+          {% endif %}
         {% endfor %}
       </div>
     </div>

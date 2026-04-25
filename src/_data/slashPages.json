@@ -93,21 +93,24 @@
         "icon": "fa-feather-pointed",
         "color": "#c47db8",
         "title": "Poesias",
-        "description": "Poemas de outros autores que resolvi guardar aqui."
+        "description": "Poemas de outros autores que resolvi guardar aqui.",
+        "collection": "poetry"
       },
       {
         "url": "/recipes/",
         "icon": "fa-utensils",
         "color": "#e0a050",
         "title": "Receitas",
-        "description": "Coisas que já cozinhei e quero repetir."
+        "description": "Coisas que já cozinhei e quero repetir.",
+        "collection": "recipes"
       },
       {
         "url": "/photos/",
         "icon": "fa-camera",
         "color": "#e05c7a",
         "title": "Fotos",
-        "description": "Imagens que resolvi guardar."
+        "description": "Imagens que resolvi guardar.",
+        "collection": "photos"
       }
     ]
   },

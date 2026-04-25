@@ -5,7 +5,7 @@
     "description": "Projeto sobre acessibilidade digital com episódios no YouTube e nas principais plataformas de podcast. Falo sobre boas práticas, tecnologia assistiva, legislação e o que significa construir produtos que funcionam para mais pessoas.",
     "url": "https://focoacessivel.com.br",
     "status": "active",
-    "tags": ["acessibilidade", "podcast", "educação"],
+    "tags": ["acessibilidade", "podcast", "tecnologia"],
     "links": [
       { "label": "YouTube",      "url": "https://youtube.com/@focoacessivel",                                                                              "icon": "fa-youtube", "iconStyle": "brands", "variant": "youtube" },
       { "label": "Spotify",      "url": "https://open.spotify.com/show/4D6HigcXDCdNuCXxrkStWL",                                                           "icon": "fa-spotify", "iconStyle": "brands", "variant": "spotify" },
@@ -18,8 +18,8 @@
   },
   {
     "id": "wagnerbeethoven",
-    "title": "wagnerbeethoven.com.br",
-    "description": "Site profissional com portfólio, estudos de caso e presença online como designer de produto com foco em experiência digital e acessibilidade.",
+    "title": "Site profissional",
+    "description": "Site profissional com portfólio, estudos de case e presença online como designer de produto com foco em experiência digital e acessibilidade.",
     "url": "https://wagnerbeethoven.com.br",
     "status": "active",
     "tags": ["design", "portfólio", "produto"],

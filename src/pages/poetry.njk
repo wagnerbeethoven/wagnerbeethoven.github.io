@@ -35,12 +35,12 @@ permalink: "/poetry/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNum
         <div class="home-blog-row-main">
           <span class="home-blog-row-title p-name">{{ item.data.author }}</span>
         </div>
-        <span class="home-blog-row-date">{{ item.data.title or 'Sem tÃ­tulo' }}</span>
+        <span class="home-blog-row-date">{{ item.data.title or 'Sem título' }}</span>
       </a>
       {% endfor %}
     </div>
     {% else %}
-    <div class="empty-card">Ainda nÃ£o hÃ¡ poemas publicados.</div>
+    <div class="empty-card">Ainda não há poemas publicados.</div>
     {% endif %}
 
     {% set paginationLabel = "Paginação das poesias" %}

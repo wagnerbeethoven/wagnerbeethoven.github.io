@@ -10,7 +10,9 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
 <section class="page-hero">
   <div class="page-hero-inner page-hero-inner--editorial">
     <div class="editorial-bar">
-      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
       </div>
@@ -21,37 +23,45 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Notas"}] %}
+      {% set breadcrumb = [
+        {
+          label: "Notas"
+        }
+      ] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Notas</h1>
-      {% include "partials/page-summary.njk" %}
+      <p class="entry-summary">
+      Notas atualmente publicadas no <a href="https://bsky.app/profile/wagnerbeethoven.com.br" target="_blank" rel="noopener me">
+          <i class="fab fa-bluesky" aria-hidden="true"></i> Bluesky</a> e sincronizadas automaticamente aqui.
+      </p>
     </header>
-    <p class="prose mb-4">
-      Notas atualmente publicadas no <a href="https://bsky.app/profile/wagnerbeethoven.com.br" target="_blank" rel="noopener me"><i class="fab fa-bluesky" aria-hidden="true"></i> Bluesky</a> e sincronizadas automaticamente aqui.
-    </p>
+
     {% set items = items | default([]) %}
     {% if items | length > 0 %}
-    <div class="home-blog-list h-feed">
-      {% for item in items %}
-      <a href="{{ item.url }}" class="home-blog-row h-entry">
-        <span class="sr-only p-author h-card">
-          <span class="p-name">{{ site.author }}</span>
-        </span>
-        <div class="home-blog-row-main">
-          <span class="home-blog-row-title p-name">
-            {%- if item.data.title -%}
-              {{ item.data.title }}
-            {%- else -%}
-              {{ item.templateContent | striptags | truncate(100) }}
-            {%- endif -%}
-          </span>
-        </div>
-        <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
-      </a>
-      {% endfor %}
-    </div>
+      <div class="home-blog-list h-feed">
+        {% for item in items %}
+          <a href="{{ item.url }}" class="home-blog-row h-entry">
+            <span class="sr-only p-author h-card">
+              <span class="p-name">{{ site.author }}</span>
+            </span>
+            <div class="home-blog-row-main">
+              <span class="home-blog-row-title p-name">
+                {%- if item.data.title -%}
+                  {{ item.data.title }}
+                {%- else -%}
+                  {{ item.templateContent | striptags | truncate(100) }}
+                {%- endif -%}
+              </span>
+            </div>
+            <span class="home-blog-row-meta">
+              {% include "partials/note-source-icon.njk" %}
+              <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
+            </span>
+          </a>
+        {% endfor %}
+      </div>
     {% else %}
-    <div class="empty-card">Ainda nÃ£o hÃ¡ notas publicadas.</div>
+      <div class="empty-card">Ainda não há notas publicadas.</div>
     {% endif %}
 
     {% set paginationLabel = "Paginação das notas" %}

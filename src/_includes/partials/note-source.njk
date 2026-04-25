@@ -1,0 +1,47 @@
+{#
+  note-source.njk — badge de origem da nota
+  Lê: source_platform + source_url (novo padrão)
+  Fallback: bluesky_url (notas antigas do Bluesky)
+  Plataformas suportadas: bluesky, mastodon, x
+#}
+{% set _platform = source_platform %}
+{% set _url      = source_url %}
+
+{# fallback para notas Bluesky antigas #}
+{% if not _platform and bluesky_url %}
+  {% set _platform = "bluesky" %}
+  {% set _url      = bluesky_url %}
+{% endif %}
+
+{% if _platform and _url %}
+  {% if _platform == "bluesky" %}
+    {% set _icon  = "fa-bluesky" %}
+    {% set _label = "Bluesky" %}
+    {% set _color = "#0085FF" %}
+  {% elif _platform == "x" %}
+    {% set _icon  = "fa-x-twitter" %}
+    {% set _label = "X" %}
+    {% set _color = "var(--text-primary)" %}
+  {% elif _platform == "mastodon" %}
+    {% set _icon  = "fa-mastodon" %}
+    {% set _label = "Mastodon" %}
+    {% set _color = "#6364FF" %}
+  {% else %}
+    {% set _icon  = "fa-globe" %}
+    {% set _label = _platform %}
+    {% set _color = "var(--text-secondary)" %}
+  {% endif %}
+
+  <a
+    href="{{ _url }}"
+    target="_blank"
+    rel="noopener syndication"
+    class="note-source-badge"
+    style="--note-source-color: {{ _color }}"
+    aria-label="Ver publicação original no {{ _label }}"
+    data-no-ext-icon
+  >
+    <i class="fa-brands {{ _icon }}" aria-hidden="true"></i>
+    <span>Ver no {{ _label }}</span>
+  </a>
+{% endif %}

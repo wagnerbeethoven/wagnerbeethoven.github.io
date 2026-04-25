@@ -247,8 +247,10 @@
   // External link icons
   var skipSelectors = [
     ".stream-link",
-    ".resume-link-card",
-    ".uses-card-link",
+    ".social-card",
+    ".social-grid a",
+    ".info-card-link",
+    ".project-link",
     ".sidebar-link",
     ".sidebar-search-link",
     ".sidebar-button",
