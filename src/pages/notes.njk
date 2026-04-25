@@ -13,7 +13,6 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Observações rápidas e fragmentos</p>
       </div>
     </div>
   </div>
@@ -27,7 +26,9 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
       <h1 class="entry-title">Notas</h1>
       {% include "partials/page-summary.njk" %}
     </header>
-
+    <p class="prose mb-4">
+      Notas atualmente publicadas no <a href="https://bsky.app/profile/wagnerbeethoven.com.br" target="_blank" rel="noopener me"><i class="fab fa-bluesky" aria-hidden="true"></i> Bluesky</a> e sincronizadas automaticamente aqui.
+    </p>
     {% set items = items | default([]) %}
     {% if items | length > 0 %}
     <div class="home-blog-list h-feed">

@@ -89,37 +89,34 @@
       <div class="sidebar-overlay" aria-hidden="true"></div>
 
       <aside class="site-sidebar h-card" id="site-sidebar">
-        <img class="sidebar-avatar u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
-        <div class="sidebar-name p-name">{{ site.author }}</div>
-        <div class="sidebar-meta">{{ site.location }}</div>
-        
-        <link class="p-note" href="{{ site.bio.short }}" />
-        <link class="u-url" href="{{ site.url }}" rel="me"/>
-        <link class="u-email" href="mailto:{{ site.email }}" rel="me"/>
-
-        <link  href="{{ site.url }}" rel="me">
-
-        <link  href="mailto:{{ site.email }}" rel="me">
-
-        <link href="{{site.social.siteoficial}}" rel="me">
-        <link href="http://linkedin.com/in/{{site.social.linkedin}}" rel="me">
-        <link href="http://github.com/{{site.social.github}}" rel="me">
-        <link href="https://bsky.app/profile/{{site.social.bluesky}}" rel="me">
+        <div class="sidebar-profile">
+          <img class="sidebar-avatar card-profile-photo u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
+          <div class="sidebar-name p-name">{{ site.author }}</div>
+          <div class="sidebar-pronoun"><a href="/name/#pronouns">ele/dele</a></div>
+          <div class="sidebar-meta">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            {{ site.location }}</div>
+        </div>
 
         <nav class="sidebar-nav" aria-label="Navegação principal">
           <a href="/" class="sidebar-link{% if current == '/' %} active{% endif %}">
             <i class="fa-solid fa-house" style="color:#e07b54" aria-hidden="true"></i> Página inicial
         </a>
-          {% if collections.posts | length > 0 %}
-            <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}">
-              <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog
+          {# Páginas dinâmicas #}
+
+          <a href="/blog/" class="sidebar-link{% if current | slice(0,6) == '/blog/' %} active{% endif %}">
+            <i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i> Blog
         </a>
-          {% endif %}
-          {% if collections.notes | length > 0 %}
-            <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}">
-              <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas
+
+          <a href="/notes/" class="sidebar-link{% if current | slice(0,7) == '/notes/' %} active{% endif %}">
+            <i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i> Notas
         </a>
-          {% endif %}
+
+          <a href="/photos/" class="sidebar-link{% if current | slice(0,8) == '/photos/' %} active{% endif %}">
+            <i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i> Fotos
+        </a>
+
+          {# Páginas estáticas #}
           <a href="/about/" class="sidebar-link{% if current == '/about/' %} active{% endif %}">
             <i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Sobre mim
         </a>
@@ -137,6 +134,16 @@
         </a>
         </nav>
       </aside>
+      {# Indieweb Authentication #}
+      <link class="p-note" href="{{ site.bio.short }}"/>
+      <link class="u-url" href="{{ site.url }}" rel="me"/>
+      <link class="u-email" href="mailto:{{ site.email }}" rel="me"/>
+      <link  href="{{ site.url }}" rel="me">
+      <link  href="mailto:{{ site.email }}" rel="me">
+      <link href="{{site.social.siteoficial}}" rel="me">
+      <link href="http://linkedin.com/in/{{site.social.linkedin}}" rel="me">
+      <link href="http://github.com/{{site.social.github}}" rel="me">
+      <link href="https://bsky.app/profile/{{site.social.bluesky}}" rel="me">
 
       <div class="site-main">
         <div class="desktop-topbar">
