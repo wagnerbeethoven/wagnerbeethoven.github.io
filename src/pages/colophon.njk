@@ -10,7 +10,6 @@ showUpdated: true
       <a href="/stats/" class="editorial-back" aria-label="Voltar para estatísticas"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Como este site foi feito</p>
       </div>
     </div>
   </div>
@@ -200,6 +199,36 @@ showUpdated: true
             <p class="uses-card-name">Webmentions</p>
             <p class="uses-card-desc">Recebidas e processadas via webmention.io. h-card e h-entry nas páginas.</p>
             <a href="https://webmention.io/" target="_blank" rel="noopener" class="uses-card-link"><span>webmention.io</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# ── Automações de conteúdo ───────────────────────────── #}
+    <div class="uses-section">
+      <h2 class="uses-section-title"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Automações de conteúdo</h2>
+      <p class="uses-section-desc">
+        Parte do conteúdo é importado automaticamente de redes sociais via GitHub Actions — sem intervenção manual. Os scripts buscam os dados nas APIs, criam os arquivos <code>.md</code> com frontmatter correto e fazem commit direto no repositório. O Netlify detecta o push e publica.
+      </p>
+      <div class="uses-grid">
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#0085FF 12%,var(--bg-card))">
+            <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i>
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Bluesky → Notas</p>
+            <p class="uses-card-desc">Posts do Bluesky são importados como notas em <code>/notes/</code> a cada 6 horas.</p>
+            <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="uses-card-link"><span>@{{ site.social.bluesky }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="uses-card">
+          <div class="uses-card-icon" style="background:color-mix(in srgb,#E1306C 12%,var(--bg-card));color:#E1306C">
+            {% include "partials/icon-pixelfed.njk" %}
+          </div>
+          <div class="uses-card-body">
+            <p class="uses-card-name">Pixelfed → Fotos</p>
+            <p class="uses-card-desc">Fotos publicadas no Pixelfed são sincronizadas diariamente em <code>/photos/</code>.</p>
+            <a href="https://pixelfed.com/wagnerbeethoven" target="_blank" rel="noopener me" class="uses-card-link"><span>pixelfed.com/wagnerbeethoven</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

@@ -9,7 +9,6 @@ title: Fotos
       <a href="/" class="editorial-back" aria-label="Voltar para a pagina inicial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
       <div class="editorial-brand">
         <p class="editorial-site">{{ site.name }}</p>
-        <p class="editorial-hello">Fragmentos visuais</p>
       </div>
     </div>
   </div>
@@ -24,12 +23,16 @@ title: Fotos
       {% include "partials/page-summary.njk" %}
     </header>
 
+    <p class="prose mb-4">
+      Fotos publicadas no <a href="https://pixelfed.com/wagnerbeethoven" target="_blank" rel="noopener me">{% include "partials/icon-pixelfed.njk" %} Pixelfed</a> e sincronizadas automaticamente aqui.
+    </p>
+
     {% set allPhotos = collections.photos | default([]) %}
     {% if allPhotos | length > 0 %}
     <div class="polaroid-grid">
       {% for item in allPhotos %}
       <figure class="polaroid">
-        <img src="{{ item.data.src }}" alt="{{ item.data.alt }}" loading="lazy" />
+        <img src="{{ item.data.image }}" alt="{{ item.data.alt or item.data.title }}" loading="lazy" />
         <figcaption class="polaroid-caption">{{ item.data.caption }}</figcaption>
       </figure>
       {% endfor %}

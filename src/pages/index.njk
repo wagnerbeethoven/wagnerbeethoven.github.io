@@ -70,8 +70,8 @@ permalink: "/"
     <div class="polaroid-grid">
       {% for photo in recentPhotos %}
       <figure class="polaroid">
-        <img src="{{ photo.data.src }}" alt="{{ photo.data.alt or photo.data.caption }}" loading="lazy" />
-        <figcaption class="polaroid-caption">{{ photo.data.caption or photo.data.alt }}</figcaption>
+        <img src="{{ photo.data.image }}" alt="{{ photo.data.alt or photo.data.title }}" loading="lazy" />
+        <figcaption class="polaroid-caption">{{ photo.data.caption or photo.data.title }}</figcaption>
       </figure>
       {% endfor %}
     </div>
