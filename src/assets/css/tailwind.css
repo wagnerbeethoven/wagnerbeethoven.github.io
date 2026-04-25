@@ -1274,6 +1274,11 @@ select:focus-visible {
   transition: transform 0.22s ease;
 }
 
+.sidebar-profile {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .sidebar-avatar {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -1285,19 +1290,21 @@ select:focus-visible {
 }
 
 .sidebar-name {
-  margin-top: 1rem;
-  text-align: center;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.06em;
+  margin-top: 1rem;
   text-transform: uppercase;
 }
 
-.sidebar-meta {
-  margin-top: 0.9rem;
+.sidebar-pronoun {
+  margin: 0.5rem 0;
+}
+
+.sidebar-meta,
+.sidebar-pronoun {
   color: var(--text-secondary);
-  font-size: 0.92rem;
-  text-align: center;
+  font-size: 0.8rem;
 }
 
 .sidebar-button {
@@ -1386,6 +1393,23 @@ select:focus-visible {
 .desktop-topbar,
 .mobile-topbar {
   background: var(--bg-hero);
+  color: var(--hero-text);
+}
+
+.desktop-topbar a,
+.desktop-topbar button,
+.mobile-topbar a,
+.mobile-topbar button,
+.mobile-topbar strong {
+  color: var(--hero-text);
+}
+
+.desktop-topbar a:hover,
+.desktop-topbar button:hover,
+.mobile-topbar a:hover {
+  background: var(--hero-text);
+  color: var(--bg-hero);
+  border-radius: 999px;
 }
 
 .desktop-topbar {
@@ -1419,6 +1443,16 @@ select:focus-visible {
   background: var(--bg-hover);
 }
 
+.desktop-topbar .sidebar-toggle-btn {
+  color: var(--hero-text);
+}
+
+.desktop-topbar .sidebar-toggle-btn:hover {
+  background: var(--hero-text);
+  color: var(--bg-hero);
+  border-radius: 999px;
+}
+
 .mobile-topbar {
   display: none;
 }
@@ -1444,10 +1478,22 @@ select:focus-visible {
   text-align: left;
 }
 
+.page-hero:has(.page-hero-inner--editorial) {
+  padding: 1.75rem 1rem;
+}
+
+.page-hero:has(.page-hero-inner--editorial) .editorial-bar {
+  margin-bottom: 0;
+}
+
+.page-hero:has(.page-hero-inner--editorial) .editorial-site {
+  font-size: 1.9rem;
+}
+
 .editorial-bar {
   display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1.8rem;
   color: var(--hero-text);
 }
@@ -1456,13 +1502,13 @@ select:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 2rem;
   height: 2rem;
   color: var(--hero-text);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1;
-  margin-top: 0.2rem;
   border-radius: 999px;
   transition: background 0.15s ease, color 0.15s ease;
 }
@@ -1475,21 +1521,21 @@ select:focus-visible {
 
 .editorial-brand {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .editorial-site {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.03em;
-}
-
-.editorial-hello {
-  margin: 0.28rem 0 0;
-  font-size: 0.94rem;
-  color: var(--hero-text-muted);
-  font-weight: 600;
+  color: var(--hero-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .page-kicker {
@@ -1510,6 +1556,18 @@ select:focus-visible {
   margin: 0.45rem 0 0;
   font-size: 0.95rem;
   opacity: 0.88;
+}
+
+.page-hero .page-subtitle a {
+  color: var(--hero-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--hero-text-muted);
+  transition: text-decoration-color 0.15s;
+}
+
+.page-hero .page-subtitle a:hover {
+  text-decoration-color: var(--hero-text);
 }
 
 .content-frame {
@@ -1833,6 +1891,21 @@ select:focus-visible {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.14em;
+}
+
+.prose hr {
+  margin-bottom: 1rem;
+}
+
+.prose figure {
+  margin-bottom: 1.5rem;
+}
+
+.prose figcaption {
+  font-size: 0.875rem;
+  opacity: 0.65;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .prose img {
@@ -2801,6 +2874,10 @@ a.media-card:focus-visible .media-card-cover-label {
   line-height: 1.5;
 }
 
+.link-card--paginas {
+  display: none
+}
+
 /* ── Book grid ───────────────────────────────────────────── */
 
 .book-grid {
@@ -3531,6 +3608,12 @@ a.media-card:focus-visible .media-card-cover-label {
 
 .topbar-search-btn:hover {
   background: var(--border-subtle);
+}
+
+.desktop-topbar .topbar-search-btn:hover,
+.mobile-topbar .topbar-search-btn:hover {
+  background: var(--hero-text);
+  color: var(--bg-hero);
 }
 
 /* ── Search modal ────────────────────────────────────────── */
@@ -4908,7 +4991,7 @@ body {
 }
 
 .editorial-site {
-  font-size: 0.8125rem;
+  /* font-size: 0.8125rem; */
 }
 
 /* — Home collection cards ——————————————————————————————————— */
@@ -6632,5 +6715,60 @@ a.entry-card:hover {
 
   .media-browser-page-nav {
     width: calc(50% - 0.5rem);
+  }
+}
+
+/* /card — personal name card */
+.card-profile-block {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-profile-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--color-border, #e5e7eb);
+}
+
+.card-profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.card-pronoun {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.card-pronoun-en {
+  font-style: italic;
+}
+
+.card-location {
+  font-size: 0.875rem;
+  opacity: 0.65;
+  margin: 0;
+}
+
+.card-location i {
+  margin-right: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .card-profile-block {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
