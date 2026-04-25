@@ -1,0 +1,149 @@
+---
+layout: layouts/base.njk
+permalink: "/stats/"
+title: Estatísticas
+showUpdated: true
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+
+    <header class="entry-header-card">
+      {% set breadcrumb = [
+        {
+          label: "Estatísticas"
+        }
+      ] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Estatísticas</h1>
+      {% include "partials/page-summary.njk" %}
+    </header>
+
+    {% set totalPages = slashPages | slashPageCount %}
+    {% set totalPosts = collections.posts | default([]) | length %}
+    {% set totalNotes = collections.notes | default([]) | length %}
+    {% set totalPoems = collections.poetry | default([]) | length %}
+    {% set totalBooks = collections.bookshelf | default([]) | length %}
+    {% set totalMovies = collections.movies | default([]) | length %}
+    {% set totalSeries = collections.series | default([]) | length %}
+    {% set totalGames = collections.games | default([]) | length %}
+    {% set totalComics = collections.comics | default([]) | length %}
+    {% set totalMusic = collections.music | default([]) | length %}
+    {% set totalRecipes = collections.recipes | default([]) | length %}
+    {% set totalPhotos = collections.photos | default([]) | length %}
+    {% set totalTags = collections.tagList | default([]) | length %}
+    {% set totalEntries = totalPosts + totalNotes + totalPoems + totalBooks + totalMovies + totalSeries + totalGames + totalComics + totalMusic + totalRecipes + totalPhotos %}
+
+    <h2 class="sitemap-section-title" style="margin-bottom:0.75rem">
+      <i class="fa-solid fa-chart-simple" style="color:var(--accent)" aria-hidden="true"></i> Visão geral</h2>
+
+    <div class="sitemap-stats">
+      <a href="/archive" title="Acessar todos os itens publicados" class="sitemap-stat">
+        <p class="sitemap-stat-label">Itens publicados</p>
+        <p class="sitemap-stat-value">{{ totalEntries }}</p>
+      </a>
+      <a href="/slashes" title="Acessar todas as páginas listadas" class="sitemap-stat">
+        <p class="sitemap-stat-label">Páginas listadas</p>
+        <p class="sitemap-stat-value">{{ totalPages }}</p>
+      </a>
+      {% if totalTags > 0 %}
+        <a href="/tags" title="Acessar todas as tags" class="sitemap-stat">
+          <p class="sitemap-stat-label">Tags</p>
+          <p class="sitemap-stat-value">{{ totalTags }}</p>
+        </a>
+      {% endif %}
+    </div>
+    <hr class="mb-8">
+    <div class="sitemap-stats">
+      {% if totalPosts > 0 %}
+        <a href="/posts" title="Acessar todos os posts" class="sitemap-stat">
+          <p class="sitemap-stat-label">Posts</p>
+          <p class="sitemap-stat-value">{{ totalPosts }}</p>
+        </a>
+      {% endif %}
+      {% if totalNotes > 0 %}
+        <a href="/notes" title="Acessar todas as notas" class="sitemap-stat">
+          <p class="sitemap-stat-label">Notas</p>
+          <p class="sitemap-stat-value">{{ totalNotes }}</p>
+        </a>
+      {% endif %}
+      {% if totalPoems > 0 %}
+        <a href="/poetry" title="Acessar todos os poemas" class="sitemap-stat">
+          <p class="sitemap-stat-label">Poemas</p>
+          <p class="sitemap-stat-value">{{ totalPoems }}</p>
+        </a>
+      {% endif %}
+      {% if totalBooks > 0 %}
+        <a href="/bookshelf" title="Acessar todos os livros" class="sitemap-stat">
+          <p class="sitemap-stat-label">Livros</p>
+          <p class="sitemap-stat-value">{{ totalBooks }}</p>
+        </a>
+      {% endif %}
+      {% if totalMovies > 0 %}
+        <a href="/movies" title="Acessar todos os filmes" class="sitemap-stat">
+          <p class="sitemap-stat-label">Filmes</p>
+          <p class="sitemap-stat-value">{{ totalMovies }}</p>
+        </a>
+      {% endif %}
+      {% if totalSeries > 0 %}
+        <a href="/series" title="Acessar todas as séries" class="sitemap-stat">
+          <p class="sitemap-stat-label">Séries</p>
+          <p class="sitemap-stat-value">{{ totalSeries }}</p>
+        </a>
+      {% endif %}
+      {% if totalGames > 0 %}
+        <a href="/games" title="Acessar todos os jogos" class="sitemap-stat">
+          <p class="sitemap-stat-label">Jogos</p>
+          <p class="sitemap-stat-value">{{ totalGames }}</p>
+        </a>
+      {% endif %}
+      {% if totalComics > 0 %}
+        <a href="/comics" title="Acessar todos os quadrinhos" class="sitemap-stat">
+          <p class="sitemap-stat-label">Quadrinhos</p>
+          <p class="sitemap-stat-value">{{ totalComics }}</p>
+        </a>
+      {% endif %}
+      {% if totalMusic > 0 %}
+        <a href="/music" title="Acessar todos os álbuns" class="sitemap-stat">
+          <p class="sitemap-stat-label">Álbuns</p>
+          <p class="sitemap-stat-value">{{ totalMusic }}</p>
+        </a>
+      {% endif %}
+      {% if totalRecipes > 0 %}
+        <a href="/recipes" title="Acessar todas as receitas" class="sitemap-stat">
+          <p class="sitemap-stat-label">Receitas</p>
+          <p class="sitemap-stat-value">{{ totalRecipes }}</p>
+        </a>
+      {% endif %}
+      {% if totalPhotos > 0 %}
+        <a href="/photos" title="Acessar todas as fotos" class="sitemap-stat">
+          <p class="sitemap-stat-label">Fotos</p>
+          <p class="sitemap-stat-value">{{ totalPhotos }}</p>
+        </a>
+      {% endif %}
+
+    </div>
+
+    <p style="margin-top:2rem">
+      <a href="/slashes/" class="soft-link">
+        <i class="fa-solid fa-slash" style="color:#f0c040" aria-hidden="true"></i> Ver todas as páginas do site →</a>
+    </p>
+    <p class="prose mt-3">
+      As estatisticas de acesso ficam no <a href="https://{{ site.analytics.siteId }}.goatcounter.com" target="_blank" rel="noopener" class="soft-link">painel do GoatCounter</a>, que ja esta integrado ao site. <br>Ver <a href="/sitemap.xml" class="soft-link">Sitemap XML</a>.
+    </p>
+
+    {% include "partials/last-updated.njk" %}
+  </div>
+</section>
