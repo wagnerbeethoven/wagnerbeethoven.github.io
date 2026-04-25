@@ -1,0 +1,30 @@
+[
+  {
+    "id": "foco-acessivel",
+    "title": "Foco Acessível",
+    "description": "Projeto sobre acessibilidade digital com episódios no YouTube e nas principais plataformas de podcast. Falo sobre boas práticas, tecnologia assistiva, legislação e o que significa construir produtos que funcionam para mais pessoas.",
+    "url": "https://focoacessivel.com.br",
+    "status": "active",
+    "tags": ["acessibilidade", "podcast", "educação"],
+    "links": [
+      { "label": "YouTube",      "url": "https://youtube.com/@focoacessivel",                                                                              "icon": "fa-youtube", "iconStyle": "brands", "variant": "youtube" },
+      { "label": "Spotify",      "url": "https://open.spotify.com/show/4D6HigcXDCdNuCXxrkStWL",                                                           "icon": "fa-spotify", "iconStyle": "brands", "variant": "spotify" },
+      { "label": "Apple",        "url": "https://podcasts.apple.com/us/podcast/foco-acess%C3%ADvel/id16902860337",                                         "icon": "fa-apple",   "iconStyle": "brands", "variant": "apple"   },
+      { "label": "Deezer",       "url": "https://www.deezer.com/pt/show/6060897",                                                                          "icon": "fa-deezer",  "iconStyle": "brands", "variant": "deezer"  },
+      { "label": "Amazon Music", "url": "https://music.amazon.com.br/podcasts/9d5a371f-7ea8-4ba1-b558-416e4337591e/foco-acess%C3%ADvel",                  "icon": "fa-amazon",  "iconStyle": "brands", "variant": "amazon"  },
+      { "label": "Site",         "url": "https://focoacessivel.com.br",                                                                                    "icon": "fa-globe",   "iconStyle": "solid",  "variant": "site"    }
+    ],
+    "embed": "<iframe src=\"https://open.spotify.com/embed/show/4D6HigcXDCdNuCXxrkStWL?utm_source=generator&theme=0\" width=\"100%\" height=\"232\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" title=\"Foco Acessível no Spotify\"></iframe>"
+  },
+  {
+    "id": "wagnerbeethoven",
+    "title": "wagnerbeethoven.com.br",
+    "description": "Site profissional com portfólio, estudos de caso e presença online como designer de produto com foco em experiência digital e acessibilidade.",
+    "url": "https://wagnerbeethoven.com.br",
+    "status": "active",
+    "tags": ["design", "portfólio", "produto"],
+    "links": [
+      { "label": "Acessar", "url": "https://wagnerbeethoven.com.br", "icon": "fa-globe", "iconStyle": "solid", "variant": "site" }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+permalink: "/identity/"
+title: Identidade
+description: Quem sou além do trabalho — gênero, orientação e por que escolho falar sobre isso aqui.
+showUpdated: true
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre mim"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Sobre", url: "/about/"}, {label: "Identidade"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Identidade</h1>
+    </header>
+
+    <div class="prose mb-8">
+
+      <p>
+        Cresci num tempo em que falar sobre isso não era simples. Ainda não é, em muitos lugares.
+        Mas este site é meu, e uma das razões de ter um espaço próprio na internet é exatamente essa:
+        poder ser quem sou sem pedir permissão pra algoritmo nenhum.
+      </p>
+
+      <h2>Gênero</h2>
+      <p>
+        Sou <strong>cisgênero</strong> — minha identidade de gênero corresponde ao sexo que me foi
+        atribuído ao nascer. Uso pronomes <strong>ele/dele</strong> (he/him em inglês).
+        Mais sobre como usar meu nome e pronomes na <a href="/name/">página /name</a>.
+      </p>
+
+      <h2>Orientação sexual</h2>
+      <p>
+        Sou <strong>gay</strong>. Isso faz parte de quem eu sou há muito tempo — tempo suficiente
+        pra eu ter aprendido a não tratar como segredo e tempo suficiente pra saber que
+        visibilidade ainda importa.
+      </p>
+      <p>
+        Não faço disso o centro de tudo que publico aqui, mas também não escondo.
+        É só mais uma camada de quem eu sou, junto com designer, nordestino, leitor de
+        quadrinhos e pessoa que anota tudo.
+      </p>
+
+      <h2>Por que escrever sobre isso</h2>
+      <p>
+        Na web independente, tem uma tradição de se apresentar inteiro. Essa página existe porque acho que faz diferença quando alguém
+        que te lê sabe com quem está falando de verdade.
+      </p>
+      <p>
+        Se você chegou aqui e isso fez alguma diferença pra você, ótimo.
+        Se não fez diferença nenhuma, também ótimo.
+      </p>
+
+    </div>
+
+    {% include "partials/last-updated.njk" %}
+  </div>
+</section>

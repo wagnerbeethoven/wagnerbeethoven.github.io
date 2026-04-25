@@ -1,0 +1,31 @@
+<div class="project-card">
+  <div class="project-card-banner">
+    <div class="project-card-info">
+      <p class="project-card-title">
+        <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a>
+      </p>
+      <p class="project-card-desc">{{ project.description }}</p>
+      {% if project.links | length %}
+      <div class="project-links">
+        {% for link in project.links %}
+        <a
+          href="{{ link.url }}"
+          target="_blank"
+          rel="noopener"
+          class="project-link project-link--{{ link.variant }}"
+          aria-label="{{ link.label }} — {{ project.title }}"
+        >
+          <i class="fa-{{ link.iconStyle or 'solid' }} {{ link.icon }}" aria-hidden="true"></i>
+          {{ link.label }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if project.embed %}
+  <div class="project-card-embed">
+    {{ project.embed | safe }}
+  </div>
+  {% endif %}
+</div>

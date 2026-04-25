@@ -26,6 +26,13 @@
         "description": "Como usar meu nome, meus pronomes"
       },
       {
+        "url": "/identity/",
+        "icon": "fa-heart",
+        "color": "#e05c7a",
+        "title": "Identidade",
+        "description": "Gênero, orientação e por que escolho falar sobre isso aqui."
+      },
+      {
         "url": "/now/",
         "icon": "fa-location-dot",
         "color": "#e05c7a",

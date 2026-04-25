@@ -37,6 +37,10 @@ showUpdated: true
         onde converso com designers em diferentes momentos de carreira sobre processo, portfólio e
         desenvolvimento profissional.
       </p>
+      <p>
+        Sou cisgênero e gay. Se quiser saber mais sobre como me identifico,
+        tenho uma <a href="/identity/">página de identidade</a>.
+      </p>
     </div>
 
     <h3 class="prose mb-4" style="margin-top:0">Meus links</h3>
@@ -46,31 +50,17 @@ showUpdated: true
       {% include "partials/site-links.njk" %}
     </div>
 
-    <div class="prose mb-8">
-      <h3>Foco Acessível</h3>
+    <div class="prose mb-4">
+      <h2>Foco Acessível</h2>
       <p>
-        Sou criador e idealizador do <strong>Foco Acessível</strong>, projeto sobre acessibilidade digital com episódios
-        no <a href="http://youtube.com/@focoacessivel" target="_blank" rel="noopener noreferrer">YouTube</a> e nas principais plataformas de podcast. Falo sobre boas práticas, tecnologia assistiva,
-        legislação e o que significa construir produtos que funcionam para mais pessoas.
+        Sou criador e idealizador do <strong>Foco Acessível</strong>, projeto sobre acessibilidade digital.
+        Episódios no YouTube e nas principais plataformas de podcast.
       </p>
     </div>
 
-  
-
     <div class="mb-8">
-      {% set projectTitle = "Foco Acessível" %}
-      {% set projectDescription = "Projeto sobre acessibilidade digital com episódios no YouTube e nas principais plataformas de podcast." %}
-      {% set projectEmbed %}
-        <iframe
-          src="https://open.spotify.com/embed/show/4D6HigcXDCdNuCXxrkStWL?utm_source=generator&theme=0"
-          width="100%"
-          height="232"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Foco Acessível no Spotify"
-        ></iframe>
-      {% endset %}
-      {% include "partials/project-feature.njk" %}
+      {% set project = projects | selectattr("id", "equalto", "foco-acessivel") | first %}
+      {% include "partials/project-card.njk" %}
     </div>
 
     <div class="prose mb-8">

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: Projetos
 permalink: /projects/
@@ -18,48 +18,31 @@ showUpdated: true
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [{label: "Projetos"}] %}
+      {% set breadcrumb = [{label: "Portfólio", url: "/portfolio/"}, {label: "Projetos"}] %}
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Projetos</h1>
-      <p class="entry-summary">Projetos pessoais, experimentos e coisas que merecem uma pagina propria.</p>    </header>
+      <p class="entry-summary">Projetos pessoais, experimentos e coisas que mantenho.</p>
+    </header>
 
-    <div class="feed-stack">
-
-      <article class="post-card">
-        <h2 class="post-card-title"><a href="{{ site.url }}">Margem Viva</a></h2>
-        <p class="post-card-meta">Site pessoal · Em andamento</p>
-        <p class="post-card-excerpt">
-          Este site funciona como laboratorio e arquivo. Um lugar para publicar com autonomia,
-          testar estrutura e manter um ritmo mais humano de presenca na web.
-        </p>
-        <div class="post-card-footer">
+    <div class="project-stack">
+      {% for project in projects %}
+      <div class="project-stack-item">
+        <div class="project-stack-meta">
+          <h2 class="project-stack-title">{{ project.title }}</h2>
+          {% if project.tags | length %}
           <div class="inline-pills">
-            <span class="pill">#escrita</span>
-            <span class="pill">#arquivo</span>
-            <span class="pill">#indieweb</span>
+            {% for tag in project.tags %}
+            <span class="pill">#{{ tag }}</span>
+            {% endfor %}
           </div>
-          <a href="{{ site.url }}" class="read-more" target="_blank" rel="noopener">Ver site</a>
+          {% endif %}
         </div>
-      </article>
-
-      <article class="post-card">
-        <h2 class="post-card-title"><a href="{{ site.focoAcessivel.site }}" target="_blank" rel="noopener">Foco Acessivel</a></h2>
-        <p class="post-card-meta">Podcast e conteudo · Em andamento</p>
-        <p class="post-card-excerpt">
-          Projeto voltado a acessibilidade digital com conteudos publicados em audio, video e multiplas plataformas.
-          Uma extensao do meu interesse por estrutura, clareza e experiencia digital mais inclusiva.
-        </p>
-        <div class="post-card-footer">
-          <div class="inline-pills">
-            <span class="pill">#acessibilidade</span>
-            <span class="pill">#podcast</span>
-            <span class="pill">#educacao</span>
-          </div>
-          <a href="{{ site.focoAcessivel.site }}" class="read-more" target="_blank" rel="noopener">Ver projeto</a>
-        </div>
-      </article>
-
+        {% set project = project %}
+        {% include "partials/project-card.njk" %}
+      </div>
+      {% endfor %}
     </div>
+
     {% include "partials/last-updated.njk" %}
   </div>
 </section>

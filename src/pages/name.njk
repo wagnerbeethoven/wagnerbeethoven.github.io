@@ -20,11 +20,8 @@ description: Como usar meu nome, meus pronomes
 <section class="content-frame">
   <div class="content-surface">
     <header class="entry-header-card">
-      {% set breadcrumb = [
-        {
-          label: "Meu nome"
-        }
-      ] %}
+           {% set breadcrumb = [{label: "Sobre", url: "/about/"}, {label: "Meu nome"}] %}
+
       {% include "partials/breadcrumb.njk" %}
       <h1 class="entry-title">Meu nome</h1>
       {% include "partials/page-summary.njk" %}
@@ -83,6 +80,7 @@ description: Como usar meu nome, meus pronomes
         <li>Ele trabalha com produto, acessibilidade e sistemas digitais.</li>
         <li>Este projeto é dele.</li>
       </ul>
+      <p>Sou cisgênero e gay. Mais sobre identidade na <a href="/identity/">página /identity</a>.</p>
 
      
     </div>
