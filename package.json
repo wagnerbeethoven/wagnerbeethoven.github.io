@@ -5,8 +5,10 @@
   "description": "Margem Viva — site pessoal de Wagner Beethoven",
   "scripts": {
     "dev": "npm run build:css && run-p dev:css dev:serve",
+    "dev:incremental": "npm run build:css && run-p dev:css dev:serve:incremental",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o .generated/assets/css/build.css --watch",
     "dev:serve": "eleventy --serve --port=8080",
+    "dev:serve:incremental": "eleventy --serve --port=8080 --incremental",
     "build": "npm run build:icons && npm run build:assets && npm run build:css && eleventy",
     "build:icons": "node scripts/build/generate-icons.js",
     "build:assets": "node scripts/build/fetch-assets.js",
@@ -17,7 +19,9 @@
     "add:book":  "node scripts/content/add-content.js book",
     "add:comic": "node scripts/content/add-content.js comic",
     "add:game":  "node scripts/content/add-content.js game",
-    "add:music": "node scripts/content/add-content.js music"
+    "add:music": "node scripts/content/add-content.js music",
+    "add:post": "node scripts/content/add-post.js",
+    "sync:pixelfed": "node scripts/content/sync-pixelfed.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
