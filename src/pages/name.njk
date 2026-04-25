@@ -1,0 +1,93 @@
+---
+layout: layouts/base.njk
+title: Meu nome
+permalink: /name/
+description: Como usar meu nome, meus pronomes
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [
+        {
+          label: "Meu nome"
+        }
+      ] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Meu nome</h1>
+      {% include "partials/page-summary.njk" %}
+    </header>
+
+
+    <div class="prose mb-8">
+      <h2 id="how-to-pronounce-my-name">Como pronunciar meu nome</h2>
+      <p>
+        <strong>Wagner</strong> — <code>VAG-ner</code> &nbsp;·&nbsp; <em>/ˈvaɡ.nɛʁ/</em><br>
+        Pronuncia-se com <em>g</em> sonoro, como em <em>gato</em>. Não é <em>Uágner</em> nem <em>Ouágner</em>.
+      </p>
+      <p>
+        <strong>Beethoven</strong> — <code>BAY-toh-ven</code> &nbsp;·&nbsp; <em>/ˈbe.to.vẽj̃/</em><br>
+        No Brasil costuma-se dizer <em>Bê-to-vên</em>. Tanto faz — já me acostumei com todas as variações.
+      </p>
+
+      <h2 id="how-to-use-my-name">Como usar meu nome</h2>
+
+      <h3 id="personal-name">Nome pessoal</h3>
+      <ul>
+        <li>Prefiro: <strong>Wagner</strong>
+        </li>
+        <li>Também aceito: <strong>Wagner Beethoven</strong>
+        </li>
+        <li>Também pode chamar de: <strong>Beethoven</strong>, <strong>Wag</strong>, <strong>Waguinho</strong> e <strong>Panda</strong> (🐼).
+        </li>
+      </ul>
+
+      <h3 id="email-messages">Em e-mails e mensagens</h3>
+      <ul>
+        <li>Saudação informal: <em>Oi, Wagner</em>
+        </li>
+        <li>Saudação formal: <em>Prezado Wagner Beethoven</em>
+        </li>
+      </ul>
+
+      <h3 id="formal-name">Nome formal (documentos, créditos, eventos)</h3>
+      <ul>
+        <li>
+          <strong>Wagner Beethoven</strong>
+        </li>
+      </ul>
+
+      <h3 id="citation-scientific">Citação científica (ABNT / <em>last name first</em>)</h3>
+      <p>Em referências bibliográficas e citações acadêmicas, use o sobrenome em caixa alta seguido das iniciais:</p>
+      <ul>
+        <li>ABNT: <strong>VIANA, W. B. M.</strong></li>
+        <li>APA / Vancouver: <strong>Viana, W. B. M.</strong></li>
+      </ul>
+
+      <h2 id="pronouns">Pronomes</h2>
+      <p>Meus pronomes são <strong>ele/dele</strong> (he/him em inglês).</p>
+      <ul>
+        <li>Wagner é designer.</li>
+        <li>Ele trabalha com produto, acessibilidade e sistemas digitais.</li>
+        <li>Este projeto é dele.</li>
+      </ul>
+
+     
+    </div>
+
+
+    {% include "partials/last-updated.njk" %}
+  </div>
+</section>
