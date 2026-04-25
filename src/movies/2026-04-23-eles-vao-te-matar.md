@@ -9,7 +9,6 @@ duration: 94
 image: "https://image.tmdb.org/t/p/w500/kPiqEJ8reCWKZXIWgweQd6eR2tP.jpg"
 tags: [Ação, Terror, Comédia]
 synopsis: "Uma mulher aceita um emprego como governanta em um arranha-céu de Nova York, sem saber da história de desaparecimentos do prédio. Ela logo percebe que a comunidade está envolta em mistério."
-note: ""
 trailer: _K2H-eTIhQc
 ---
 

@@ -9,5 +9,4 @@ duration: 95
 image: "https://image.tmdb.org/t/p/w500/b3WeTp42eJSRuE4UZfyPCOJW4c.jpg"
 tags: [Família, Comédia, Aventura, Fantasia, Animação]
 synopsis: "Depois de salvar o Reino dos Cogumelos, Mario e seus amigos se encontram em uma missão intergaláctica para deter um novo vilão ameaçador."
-note: ""
 trailer: x9UMEBPG10w

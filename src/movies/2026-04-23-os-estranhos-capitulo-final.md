@@ -9,6 +9,5 @@ duration: 91
 image: "https://image.tmdb.org/t/p/w500/yxvbGxB7rOEaO2Oat0GHL5PiSvX.jpg"
 tags: [Terror, Thriller]
 synopsis: Maya enfrenta os assassinos mascarados uma última vez em um acerto de contas brutal e cíclico de sobrevivência e vingança.
-note: ""
 trailer: G25sguQrTOQ
 ---
