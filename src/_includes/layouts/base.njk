@@ -90,7 +90,9 @@
 
       <aside class="site-sidebar h-card" id="site-sidebar">
         <div class="sidebar-profile">
-          <img class="sidebar-avatar card-profile-photo u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
+          <a href="/pfp/" aria-label="Ver histórico de fotos de perfil" data-no-ext-icon>
+            <img class="sidebar-avatar card-profile-photo u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
+          </a>
           <div class="sidebar-name p-name">{{ site.author }}</div>
           <div class="sidebar-pronoun"><a href="/name/#pronouns">ele/dele</a></div>
           <div class="sidebar-meta">
