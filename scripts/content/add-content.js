@@ -538,10 +538,8 @@ year: ${d.year}
 country: ${yamlList(d.country)}
 duration: ${d.duration || '""'}
 image: ${yamlStr(d.image)}
- rating: ""
 tags: ${yamlList(d.genres)}
 synopsis: ${yamlStr(d.overview)}
-note: ""
 trailer: ${yamlStr(d.trailer)}
 `,
 
@@ -551,11 +549,8 @@ platform: ${yamlStr(d.networks.join(", "))}
 years: ${yamlStr(d.years)}
 seasons: ${d.seasons}
 image: ${yamlStr(d.image)}
-status: want
-rating: ""
 tags: ${yamlList(d.genres)}
 synopsis: ${yamlStr(d.overview)}
-note: ""
 trailer: ${yamlStr(d.trailer)}
 `,
 
@@ -568,10 +563,7 @@ pages: ${d.pages || '""'}
 isbn: ${yamlStr(d.isbn)}
 image: ${yamlStr(d.image)}
 description: ${yamlStr(d.description)}
-status: want
-rating: ""
 tags: ${yamlList(d.subjects)}
-note: ""
 ---
 `,
 
@@ -583,11 +575,8 @@ publisher: ${yamlStr(d.publisher)}
 year: ${d.year}
 volumes: ""
 image: ${yamlStr(d.image)}
-status: want
-rating: ""
 tags: ${yamlList(d.categories)}
 synopsis: ${yamlStr(d.synopsis)}
-note: ""
 ---
 `,
 
@@ -597,11 +586,8 @@ developer: ${yamlStr(d.developer)}
 platform: ${yamlStr(d.platform)}
 year: ${d.year}
 image: ${yamlStr(d.image)}
-status: want
-rating: ""
 tags: ${yamlList(d.genres)}
 synopsis: ${yamlStr(d.overview)}
-note: ""
 trailer: ${yamlStr(d.trailer)}
 ---
 `,
@@ -631,6 +617,7 @@ async function addMovie(query) {
   if (!h) { err("Nenhum filme encontrado."); process.exit(1); }
   info(`Encontrado: ${B}${h.title}${R} (${h.release_date?.slice(0,4) || "?"})`);
   const d = await tmdbMovieDetail(h.id, key);
+  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve sinopse do filme "${d.title}" (${d.year}). Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("movies", f, fm.movie(d));
   console.log(`\n${DIM}${fm.movie(d)}${R}`);
@@ -645,6 +632,7 @@ async function addSerie(query) {
   if (!h) { err("Nenhuma série encontrada."); process.exit(1); }
   info(`Encontrada: ${B}${h.name}${R} (${h.first_air_date?.slice(0,4) || "?"})`);
   const d = await tmdbSerieDetail(h.id, key);
+  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve sinopse da série "${d.title}". Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("series", f, fm.serie(d));
   console.log(`\n${DIM}${fm.serie(d)}${R}`);
@@ -659,6 +647,7 @@ async function addBook(query) {
 
 async function addComic(query) {
   const d = await fetchComic(query);
+  if (!d.synopsis) d.synopsis = await fetchOpenAIDescription(`Escreva uma breve sinopse do quadrinho "${d.title}"${d.writer ? ` de ${d.writer}` : ""}. Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("comics", f, fm.comic(d));
   console.log(`\n${DIM}${fm.comic(d)}${R}`);
@@ -666,6 +655,7 @@ async function addComic(query) {
 
 async function addGame(query) {
   const d = await fetchGame(query);
+  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve descrição do jogo "${d.title}" (${d.year}). Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("games", f, fm.game(d));
   console.log(`\n${DIM}${fm.game(d)}${R}`);
