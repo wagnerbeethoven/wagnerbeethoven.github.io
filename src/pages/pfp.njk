@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+permalink: "/pfp/"
+title: Fotos de perfil
+description: Um arquivo visual de todas as minhas fotos de perfil ao longo do tempo.
+showUpdated: true
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/about/" class="editorial-back" aria-label="Voltar para sobre mim"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+    <header class="entry-header-card">
+      {% set breadcrumb = [{label: "Sobre", url: "/about/"}, {label: "Fotos de perfil"}] %}
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">Fotos de perfil</h1>
+      <p class="entry-summary">Um arquivo de como fui aparecendo por aqui ao longo do tempo.</p>
+    </header>
+
+    {% if pfp | length > 0 %}
+      {% set currentYear = "" %}
+      {% for item in pfp %}
+        {% if item.date != currentYear %}
+          {% if currentYear != "" %}</div>{% endif %}
+          {% set currentYear = item.date %}
+          <h2 class="pfp-year-heading">{{ item.date }}</h2>
+          <div class="pfp-grid">
+        {% endif %}
+        <figure class="pfp-polaroid">
+          <div class="pfp-polaroid-photo">
+            <img
+              src="{{ item.image }}"
+              alt="{{ item.alt or ('Foto de perfil — ' + item.date) }}"
+              loading="lazy"
+            />
+          </div>
+        </figure>
+        {% if loop.last %}</div>{% endif %}
+      {% endfor %}
+    {% else %}
+    <div class="empty-card">Nenhuma foto ainda.</div>
+    {% endif %}
+
+    {% include "partials/last-updated.njk" %}
+  </div>
+</section>
