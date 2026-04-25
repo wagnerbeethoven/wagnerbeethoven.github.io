@@ -1,0 +1,23 @@
+<aside class="author-card" aria-label="Sobre o autor">
+  <img
+    src="{{ site.avatarurl }}"
+    alt="{{ site.avataralt }}"
+    class="author-card-photo"
+    width="72"
+    height="72"
+  />
+  <div class="author-card-body">
+    <p class="author-card-name">
+      <a href="/about/" rel="author">{{ site.author }}</a>
+    </p>
+    <p class="author-card-meta">
+      <span class="author-card-pronouns">ele/dele</span>
+      <span class="author-card-sep" aria-hidden="true">·</span>
+      <span class="author-card-location">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        {{ site.location }}
+      </span>
+    </p>
+    <p class="author-card-bio">{{ site.bio.short }}</p>
+  </div>
+</aside>

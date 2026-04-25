@@ -1268,6 +1268,7 @@ body {
   margin: 0;
   background: var(--bg-page) url(../retro-stars.png) repeat;
   color: var(--text-primary);
+  background-attachment: fixed;
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
 
@@ -1612,7 +1613,7 @@ select:focus-visible {
 
 .content-frame {
   width: min(100% - 2rem, var(--main-max));
-  margin: -1.6rem auto 0;
+  margin: -1rem auto 0;
   position: relative;
   z-index: 1;
 }
@@ -2040,16 +2041,8 @@ select:focus-visible {
 .cusdis-engage-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: border-color 120ms, background 120ms;
+
+  text-decoration: underline;
 }
 
 .cusdis-engage-link:hover {
@@ -2846,6 +2839,12 @@ a.media-card:focus-visible .media-card-cover-label {
 .media-badge--playing {
   background: var(--badge-playing-bg);
   color: var(--badge-playing-text);
+}
+
+/* ── Icons      ──────────────────────────────────────────── */
+.icon-pixelfed {
+margin-left: 0.5rem;
+
 }
 
 /* ── Link cards ──────────────────────────────────────────── */
@@ -3957,23 +3956,39 @@ a.media-card:focus-visible .media-card-cover-label {
 }
 
 .social-card {
+  --social-brand: var(--border-subtle);
   display: flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.75rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--social-brand) 10%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--social-brand) 25%, var(--border-subtle));
   border-radius: 0.5rem;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
-  transition: border-color 0.12s, background 0.12s;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
 .social-card:hover {
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  background: color-mix(in srgb, var(--social-brand) 18%, var(--bg-card));
+  border-color: color-mix(in srgb, var(--social-brand) 60%, var(--border-subtle));
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--social-brand) 20%, transparent);
+}
+
+/* Dark theme: lift brand color with white before tinting
+   so very dark brands (ex: GitHub #181717) stay visible */
+.dark .social-card {
+  --_brand-lifted: color-mix(in srgb, var(--social-brand) 45%, white);
+  background: color-mix(in srgb, var(--_brand-lifted) 14%, var(--bg-card));
+  border-color: color-mix(in srgb, var(--_brand-lifted) 28%, var(--border-subtle));
+}
+
+.dark .social-card:hover {
+  background: color-mix(in srgb, var(--_brand-lifted) 24%, var(--bg-card));
+  border-color: color-mix(in srgb, var(--_brand-lifted) 55%, var(--border-subtle));
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--_brand-lifted) 25%, transparent);
 }
 
 @media (max-width: 600px) {
@@ -6810,5 +6825,135 @@ a.entry-card:hover {
   .card-profile-block {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ── Page transitions (View Transitions API) ─────────────────
+   Cross-document fade + subtle upward slide. Graceful fallback
+   in unsupported browsers (instant navigation, no error).     */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: vt-fade-out 0.18s ease-in forwards;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 0.22s ease-out forwards;
+}
+
+@keyframes vt-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+/* ── Author card (post footer) ───────────────────────────── */
+
+.author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.author-card-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border-subtle);
+}
+
+.author-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.author-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.author-card-name a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.author-card-name a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.author-card-meta {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.author-card-sep {
+  opacity: 0.4;
+}
+
+.author-card-location i {
+  margin-right: 0.2rem;
+}
+
+.author-card-bio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0.35rem 0 0;
+}
+
+@media (max-width: 480px) {
+  .author-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .author-card-meta {
+    justify-content: center;
   }
 }
