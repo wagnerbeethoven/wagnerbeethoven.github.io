@@ -9,9 +9,7 @@
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o .generated/assets/css/build.css --watch",
     "dev:serve": "eleventy --serve --port=8080",
     "dev:serve:incremental": "eleventy --serve --port=8080 --incremental",
-    "build": "npm run build:icons && npm run build:assets && npm run build:css && eleventy",
-    "build:icons": "node scripts/build/generate-icons.js",
-    "build:assets": "node scripts/build/fetch-assets.js",
+    "build": "npm run build:css && eleventy",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o .generated/assets/css/build.css --minify",
     "clean": "rimraf _site",
     "add:movie": "node scripts/content/add-content.js movie",
@@ -31,7 +29,6 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.47",
     "rimraf": "^5.0.10",
-    "sharp": "^0.34.3",
     "tailwindcss": "^3.4.13"
   },
   "engines": {
