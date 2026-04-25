@@ -1,0 +1,44 @@
+name: Sync Pixelfed photos
+
+on:
+  schedule:
+    # Roda diariamente às 07:00 UTC (04:00 Fortaleza)
+    - cron: "0 7 * * *"
+  workflow_dispatch: # permite rodar manualmente pelo GitHub
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync Pixelfed photos
+        env:
+          PIXELFED_INSTANCE: ${{ secrets.PIXELFED_INSTANCE }}
+          PIXELFED_TOKEN: ${{ secrets.PIXELFED_TOKEN }}
+          PIXELFED_HANDLE: ${{ secrets.PIXELFED_HANDLE }}
+        run: node scripts/content/sync-pixelfed.js
+
+      - name: Commit novas fotos
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/photos/
+          if git diff --staged --quiet; then
+            echo "Nenhuma foto nova para commitar."
+          else
+            COUNT=$(git diff --staged --name-only | wc -l)
+            git commit -m "sync(pixelfed): importa ${COUNT} foto(s) nova(s)"
+            git push
+          fi
