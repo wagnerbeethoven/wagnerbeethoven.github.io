@@ -7,7 +7,7 @@
     {% set displayLabel = link.displayLabel | default(link.label) %}
     {% set textColor = link.textColor | default("#ffffff") %}
     {% if renderVariant == "resume-card" %}
-      <a href="{{ link.url }}" target="_blank" rel="{{ relValue }}" class="resume-link-card">
+      <a href="{{ link.url }}" target="_blank" rel="{{ relValue }}" class="social-card">
         <i class="fa-{% if iconStyle == 'brands' %}brands{% else %}solid{% endif %} {{ link.icon }}" {% if link.brandColor %}style="color:{{ link.brandColor }}"{% endif %} aria-hidden="true"></i>
         <span>{{ link.label }}</span>
       </a>

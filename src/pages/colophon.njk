@@ -25,250 +25,250 @@ showUpdated: true
     </header>
 
     {# ── Ponto de partida ─────────────────────────────────── #}
-    <div class="uses-section" style="border-top:none;padding-top:0">
-      <h2 class="uses-section-title"><i class="fa-brands fa-github" aria-hidden="true"></i> Ponto de partida</h2>
-      <p class="uses-section-desc">
+    <div class="section-block" style="border-top:none;padding-top:0">
+      <h2 class="section-label"><i class="fa-brands fa-github" aria-hidden="true"></i> Ponto de partida</h2>
+      <p class="section-intro">
         Este site foi construído a partir do <strong>11ty Indie Web Blog Starter</strong>, de Brennan Brown. O starter foi escolhido por duas razões principais: já vem integrado com os protocolos IndieWeb (webmentions, microformatos h-card e h-entry, feed Atom) e tem acessibilidade como premissa — HTML semântico, navegação por teclado e compatibilidade com leitores de tela desde o início. A partir daí, o design e as funcionalidades foram completamente reescritos.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
             <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">11ty Indie Web Blog Starter</p>
-            <p class="uses-card-desc">Base do projeto. IndieWeb + acessibilidade como premissa. Por Brennan Brown.</p>
-            <a href="https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter" target="_blank" rel="noopener" class="uses-card-link"><span>github.com/brennanbrown</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">11ty Indie Web Blog Starter</p>
+            <p class="info-card-desc">Base do projeto. IndieWeb + acessibilidade como premissa. Por Brennan Brown.</p>
+            <a href="https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter" target="_blank" rel="noopener" class="info-card-link"><span>github.com/brennanbrown</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
             <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">{{ site.name }} no GitHub</p>
-            <p class="uses-card-desc">Repositório público do site. Código-fonte aberto.</p>
-            <a href="https://github.com/{{ site.social.github }}/" target="_blank" rel="noopener" class="uses-card-link"><span>github.com/{{ site.social.github }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">{{ site.name }} no GitHub</p>
+            <p class="info-card-desc">Repositório público do site. Código-fonte aberto.</p>
+            <a href="https://github.com/{{ site.social.github }}/" target="_blank" rel="noopener" class="info-card-link"><span>github.com/{{ site.social.github }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Geração ──────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Geração e templates</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Geração e templates</h2>
+      <p class="section-intro">
         O site é gerado com <strong>Eleventy 3.0+</strong>, um gerador de sites estáticos minimalista em Node.js. A escolha foi deliberada: sem framework de frontend, sem hidratação, sem bundle pesado — apenas HTML gerado no build e servido direto. Os templates são escritos em Nunjucks, que oferece lógica suficiente para layouts, coleções e partials sem virar um projeto separado.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#c0b000 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#c0b000 12%,var(--bg-card))">
             <i class="fa-solid fa-bolt" style="color:#c0b000" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Eleventy 3.0+</p>
-            <p class="uses-card-desc">Gerador estático em Node.js. Zero JavaScript enviado ao cliente por padrão.</p>
-            <a href="https://www.11ty.dev/" target="_blank" rel="noopener" class="uses-card-link"><span>11ty.dev</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Eleventy 3.0+</p>
+            <p class="info-card-desc">Gerador estático em Node.js. Zero JavaScript enviado ao cliente por padrão.</p>
+            <a href="https://www.11ty.dev/" target="_blank" rel="noopener" class="info-card-link"><span>11ty.dev</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
             <i class="fa-solid fa-file-code" style="color:#e07b54" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Nunjucks</p>
-            <p class="uses-card-desc">Engine de templates para layouts, partials e coleções.</p>
-            <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener" class="uses-card-link"><span>mozilla.github.io/nunjucks</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Nunjucks</p>
+            <p class="info-card-desc">Engine de templates para layouts, partials e coleções.</p>
+            <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener" class="info-card-link"><span>mozilla.github.io/nunjucks</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Estilos ──────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Estilos</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-palette" aria-hidden="true"></i> Estilos</h2>
+      <p class="section-intro">
         O design system é construído sobre CSS custom properties nativas — sem CSS-in-JS, sem Sass, sem variáveis compiladas. O Tailwind CSS entra apenas como utilitário de layout pontual; todo o visual do site (cores, tipografia, temas claro/escuro, componentes) vive em <code>tailwind.css</code>, o arquivo fonte que o Tailwind CLI processa. A tipografia usa <strong>Inter</strong> via Google Fonts, e a iconografia é toda do Font Awesome 7.0 via CDN.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#06b6d4 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#06b6d4 12%,var(--bg-card))">
             <i class="fa-solid fa-wind" style="color:#06b6d4" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Tailwind CSS</p>
-            <p class="uses-card-desc">Utilitários de layout. O design system usa custom properties nativas.</p>
-            <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="uses-card-link"><span>tailwindcss.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Tailwind CSS</p>
+            <p class="info-card-desc">Utilitários de layout. O design system usa custom properties nativas.</p>
+            <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="info-card-link"><span>tailwindcss.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#4a90d9 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#4a90d9 12%,var(--bg-card))">
             <i class="fa-solid fa-font" style="color:#4a90d9" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Inter</p>
-            <p class="uses-card-desc">Tipografia principal via Google Fonts.</p>
-            <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener" class="uses-card-link"><span>fonts.google.com/Inter</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Inter</p>
+            <p class="info-card-desc">Tipografia principal via Google Fonts.</p>
+            <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener" class="info-card-link"><span>fonts.google.com/Inter</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#528bff 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#528bff 12%,var(--bg-card))">
             <i class="fa-solid fa-icons" style="color:#528bff" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Font Awesome 7.0</p>
-            <p class="uses-card-desc">Iconografia Solid e Brands em todo o site, via CDN.</p>
-            <a href="https://fontawesome.com/" target="_blank" rel="noopener" class="uses-card-link"><span>fontawesome.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Font Awesome 7.0</p>
+            <p class="info-card-desc">Iconografia Solid e Brands em todo o site, via CDN.</p>
+            <a href="https://fontawesome.com/" target="_blank" rel="noopener" class="info-card-link"><span>fontawesome.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Publicação ───────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Versionamento e publicação</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Versionamento e publicação</h2>
+      <p class="section-intro">
         O código-fonte fica no GitHub em repositório público. A cada push na branch <code>main</code>, o Netlify detecta a mudança, roda o build (<code>npm run build</code>) e publica automaticamente — sem passo manual. O processo leva menos de dois minutos do commit ao ar.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#181717 12%,var(--bg-card))">
             <i class="fa-brands fa-github" style="color:var(--text-primary)" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">GitHub</p>
-            <p class="uses-card-desc">Versionamento e repositório público do código-fonte.</p>
-            <a href="https://github.com/" target="_blank" rel="noopener" class="uses-card-link"><span>github.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">GitHub</p>
+            <p class="info-card-desc">Versionamento e repositório público do código-fonte.</p>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="info-card-link"><span>github.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#00C7B7 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#00C7B7 12%,var(--bg-card))">
             <i class="fa-solid fa-cloud-arrow-up" style="color:#00C7B7" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Netlify</p>
-            <p class="uses-card-desc">Deploy contínuo a cada push na branch main.</p>
-            <a href="https://www.netlify.com/" target="_blank" rel="noopener" class="uses-card-link"><span>netlify.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Netlify</p>
+            <p class="info-card-desc">Deploy contínuo a cada push na branch main.</p>
+            <a href="https://www.netlify.com/" target="_blank" rel="noopener" class="info-card-link"><span>netlify.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── IndieWeb ─────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> IndieWeb e feeds</h2>
+      <p class="section-intro">
         Este site segue princípios IndieWeb: o conteúdo vive aqui, não em plataformas de terceiros. Todas as páginas relevantes marcam microformatos <code>h-card</code> e <code>h-entry</code> para interoperabilidade com agregadores e leitores. As webmentions são processadas via webmention.io. O site publica quatro formatos de feed cobrindo posts, notas, poesias e receitas — compatíveis com a maioria dos leitores RSS.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
             <i class="fa-solid fa-rss" style="color:#f26522" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Atom Feed</p>
-            <p class="uses-card-desc">Posts, notas, poesias e receitas em ordem cronológica.</p>
-            <a href="/feed.xml" class="uses-card-link"><span>/feed.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Atom Feed</p>
+            <p class="info-card-desc">Posts, notas, poesias e receitas em ordem cronológica.</p>
+            <a href="/feed.xml" class="info-card-link"><span>/feed.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
             <i class="fa-solid fa-rss" style="color:#e07b54" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">RSS 2.0</p>
-            <p class="uses-card-desc">Compatível com a maioria dos leitores.</p>
-            <a href="/rss.xml" class="uses-card-link"><span>/rss.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">RSS 2.0</p>
+            <p class="info-card-desc">Compatível com a maioria dos leitores.</p>
+            <a href="/rss.xml" class="info-card-link"><span>/rss.xml</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#5b8dd9 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#5b8dd9 12%,var(--bg-card))">
             <i class="fa-solid fa-code" style="color:#5b8dd9" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">JSON Feed</p>
-            <p class="uses-card-desc">Formato moderno para leitores compatíveis.</p>
-            <a href="/feed.json" class="uses-card-link"><span>/feed.json</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">JSON Feed</p>
+            <p class="info-card-desc">Formato moderno para leitores compatíveis.</p>
+            <a href="/feed.json" class="info-card-link"><span>/feed.json</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#c47db8 12%,var(--bg-card))">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#c47db8 12%,var(--bg-card))">
             <i class="fa-solid fa-share-nodes" style="color:#c47db8" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Webmentions</p>
-            <p class="uses-card-desc">Recebidas e processadas via webmention.io. h-card e h-entry nas páginas.</p>
-            <a href="https://webmention.io/" target="_blank" rel="noopener" class="uses-card-link"><span>webmention.io</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Webmentions</p>
+            <p class="info-card-desc">Recebidas e processadas via webmention.io. h-card e h-entry nas páginas.</p>
+            <a href="https://webmention.io/" target="_blank" rel="noopener" class="info-card-link"><span>webmention.io</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Automações de conteúdo ───────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Automações de conteúdo</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Automações de conteúdo</h2>
+      <p class="section-intro">
         Parte do conteúdo é importado automaticamente de redes sociais via GitHub Actions — sem intervenção manual. Os scripts buscam os dados nas APIs, criam os arquivos <code>.md</code> com frontmatter correto e fazem commit direto no repositório. O Netlify detecta o push e publica.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#0085FF 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#0085FF 12%,var(--bg-card))">
             <i class="fa-brands fa-bluesky" style="color:#0085FF" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Bluesky → Notas</p>
-            <p class="uses-card-desc">Posts do Bluesky são importados como notas em <code>/notes/</code> a cada 6 horas.</p>
-            <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="uses-card-link"><span>@{{ site.social.bluesky }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Bluesky → Notas</p>
+            <p class="info-card-desc">Posts do Bluesky são importados como notas em <code>/notes/</code> a cada 6 horas.</p>
+            <a href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener me" class="info-card-link"><span>@{{ site.social.bluesky }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#E1306C 12%,var(--bg-card));color:#E1306C">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#E1306C 12%,var(--bg-card));color:#E1306C">
             {% include "partials/icon-pixelfed.njk" %}
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">Pixelfed → Fotos</p>
-            <p class="uses-card-desc">Fotos publicadas no Pixelfed são sincronizadas diariamente em <code>/photos/</code>.</p>
-            <a href="https://pixelfed.com/wagnerbeethoven" target="_blank" rel="noopener me" class="uses-card-link"><span>pixelfed.com/wagnerbeethoven</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">Pixelfed → Fotos</p>
+            <p class="info-card-desc">Fotos publicadas no Pixelfed são sincronizadas diariamente em <code>/photos/</code>.</p>
+            <a href="https://pixelfed.com/wagnerbeethoven" target="_blank" rel="noopener me" class="info-card-link"><span>pixelfed.com/wagnerbeethoven</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Analytics ────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Analytics</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Analytics</h2>
+      <p class="section-intro">
         O site usa <strong>GoatCounter</strong> para análise de tráfego — sem cookies, sem rastreamento de dados pessoais, sem fingerprinting. Os dados são agregados e anônimos. As estatísticas são públicas.
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#f26522 12%,var(--bg-card))">
             <i class="fa-solid fa-chart-simple" style="color:#f26522" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">GoatCounter</p>
-            <p class="uses-card-desc">Analytics sem cookies. Dados públicos e agregados.</p>
-            <a href="https://wagnerbeethoven.goatcounter.com" target="_blank" rel="noopener" class="uses-card-link"><span>wagnerbeethoven.goatcounter.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">GoatCounter</p>
+            <p class="info-card-desc">Analytics sem cookies. Dados públicos e agregados.</p>
+            <a href="https://wagnerbeethoven.goatcounter.com" target="_blank" rel="noopener" class="info-card-link"><span>wagnerbeethoven.goatcounter.com</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
 
     {# ── Licença ──────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Licença e autoria</h2>
-      <p class="uses-section-desc">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Licença e autoria</h2>
+      <p class="section-intro">
         Os textos, fotos e conteúdos editoriais deste site são licenciados sob <strong>Creative Commons BY-NC-SA 4.0</strong> — você pode compartilhar e adaptar o conteúdo, desde que dê crédito, não use para fins comerciais e distribua sob a mesma licença. O site foi desenvolvido com assistência do <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a> (Anthropic).
       </p>
-      <div class="uses-grid">
-        <div class="uses-card">
-          <div class="uses-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon" style="background:color-mix(in srgb,#e07b54 12%,var(--bg-card))">
             <i class="fa-brands fa-creative-commons" style="color:#e07b54" aria-hidden="true"></i>
           </div>
-          <div class="uses-card-body">
-            <p class="uses-card-name">CC BY-NC-SA 4.0</p>
-            <p class="uses-card-desc">Atribuição · Não comercial · Compartilha igual.</p>
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" class="uses-card-link"><span>creativecommons.org</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="info-card-body">
+            <p class="info-card-name">CC BY-NC-SA 4.0</p>
+            <p class="info-card-desc">Atribuição · Não comercial · Compartilha igual.</p>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license" class="info-card-link"><span>creativecommons.org</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

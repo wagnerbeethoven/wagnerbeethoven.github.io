@@ -1175,20 +1175,44 @@ video {
 }
 
 :root {
+  /* Backgrounds */
   --bg-page: #e9e8e6;
   --bg-sidebar: #ffffff;
   --bg-card: #ffffff;
   --bg-hero: #681414;
+  --bg-hover: rgba(0, 0, 0, 0.05);
+
+  /* Hero text */
   --hero-text: #fffaf7;
   --hero-text-muted: #ffe4da;
+
+  /* Text */
   --text-primary: #1d1d1b;
   --text-secondary: #73716b;
   --text-muted: #99958f;
+
+  /* Borders */
   --border-subtle: #e7e2db;
   --border-strong: #d2ccc3;
+
+  /* Accent */
   --accent: #bb4d33;
   --accent-soft: #fff0eb;
   --focus: #681414;
+
+  /* Overlays */
+  --overlay-bg: rgba(0, 0, 0, 0.65);
+  --overlay-bg-heavy: rgba(0, 0, 0, 0.88);
+
+  /* Status badges */
+  --badge-done-bg: #e4f5e9;
+  --badge-done-text: #2a7d3a;
+  --badge-want-bg: #f0eaff;
+  --badge-want-text: #6b3fa0;
+  --badge-playing-bg: #fff3cd;
+  --badge-playing-text: #7a5300;
+
+  /* Misc */
   --shadow-soft: 0 10px 24px rgba(41, 24, 18, 0.06);
   --sidebar-width: 246px;
   --main-max: 760px;
@@ -1199,16 +1223,32 @@ video {
   --bg-sidebar: #171717;
   --bg-card: #1d1d1d;
   --bg-hero: #2f0909;
+  --bg-hover: rgba(255, 255, 255, 0.06);
+
   --hero-text: #fff8f2;
   --hero-text-muted: #ffd7ca;
+
   --text-primary: #f4f1eb;
   --text-secondary: #c0bbb2;
   --text-muted: #948f87;
+
   --border-subtle: #2d2a27;
   --border-strong: #45403a;
+
   --accent: #f28e70;
   --accent-soft: rgba(242, 142, 112, 0.1);
   --focus: #f28e70;
+
+  --overlay-bg: rgba(0, 0, 0, 0.75);
+  --overlay-bg-heavy: rgba(0, 0, 0, 0.92);
+
+  --badge-done-bg: rgba(74, 222, 128, 0.12);
+  --badge-done-text: #6ee7a0;
+  --badge-want-bg: rgba(167, 139, 250, 0.12);
+  --badge-want-text: #c4b5fd;
+  --badge-playing-bg: rgba(251, 191, 36, 0.12);
+  --badge-playing-text: #fcd34d;
+
   --shadow-soft: none;
 }
 
@@ -2300,7 +2340,7 @@ a.pill:focus-visible {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--overlay-bg);
   z-index: 199;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -2794,18 +2834,18 @@ a.media-card:focus-visible .media-card-cover-label {
 }
 
 .media-badge--done {
-  background: #e4f5e9;
-  color: #2a7d3a;
+  background: var(--badge-done-bg);
+  color: var(--badge-done-text);
 }
 
 .media-badge--want {
-  background: #f0eaff;
-  color: #6b3fa0;
+  background: var(--badge-want-bg);
+  color: var(--badge-want-text);
 }
 
 .media-badge--playing {
-  background: #fff3cd;
-  color: #7a5300;
+  background: var(--badge-playing-bg);
+  color: var(--badge-playing-text);
 }
 
 /* ── Link cards ──────────────────────────────────────────── */
@@ -3635,7 +3675,7 @@ a.media-card:focus-visible .media-card-cover-label {
 .search-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: var(--overlay-bg);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -3909,14 +3949,14 @@ a.media-card:focus-visible .media-card-cover-label {
   opacity: 0.85;
 }
 
-.resume-links-grid {
+.social-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 0.75rem;
   margin-top: 0.5rem;
 }
 
-.resume-link-card {
+.social-card {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -3931,7 +3971,7 @@ a.media-card:focus-visible .media-card-cover-label {
   transition: border-color 0.12s, background 0.12s;
 }
 
-.resume-link-card:hover {
+.social-card:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
 }
@@ -4030,18 +4070,18 @@ a.media-card:focus-visible .media-card-cover-label {
 
 /* ── Uses page ───────────────────────────────────────────── */
 
-.uses-section {
+.section-block {
   margin-bottom: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-subtle);
 }
 
-.uses-section:first-of-type {
+.section-block:first-of-type {
   border-top: none;
   padding-top: 0;
 }
 
-.uses-section-title {
+.section-label {
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -4055,7 +4095,7 @@ a.media-card:focus-visible .media-card-cover-label {
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.uses-section-desc {
+.section-intro {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.75;
@@ -4063,27 +4103,27 @@ a.media-card:focus-visible .media-card-cover-label {
   margin-bottom: 1rem;
 }
 
-.uses-section-desc a {
+.section-intro a {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 }
 
-.uses-section-desc code {
+.section-intro code {
   background: var(--accent-soft);
   border-radius: 3px;
   padding: 0.05rem 0.3rem;
   font-size: 0.88em;
 }
 
-.uses-grid {
+.info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 0.75rem;
 }
 
-.uses-card {
+.info-card {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -4095,12 +4135,12 @@ a.media-card:focus-visible .media-card-cover-label {
   color: inherit;
 }
 
-a.uses-card:hover {
+a.info-card:hover {
   border-color: var(--accent);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
-.uses-card-icon {
+.info-card-icon {
   width: 2.4rem;
   height: 2.4rem;
   flex-shrink: 0;
@@ -4111,21 +4151,21 @@ a.uses-card:hover {
   font-size: 1.1rem;
 }
 
-.uses-card-name {
+.info-card-name {
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.3;
 }
 
-.uses-card-desc {
+.info-card-desc {
   font-size: 0.775rem;
   color: var(--text-secondary);
   margin-top: 0.15rem;
   line-height: 1.4;
 }
 
-.uses-card-link {
+.info-card-link {
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -4139,19 +4179,19 @@ a.uses-card:hover {
   min-width: 0;
 }
 
-.uses-card-link span {
+.info-card-link span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: calc(100% - 3rem);
 }
 
-.uses-card-link:hover {
+.info-card-link:hover {
   opacity: 1;
   text-decoration: underline;
 }
 
-.uses-card-link .fa-arrow-up-right-from-square {
+.info-card-link .fa-arrow-up-right-from-square {
   font-size: 0.6rem;
   flex-shrink: 0;
 }
@@ -5191,7 +5231,7 @@ a.entry-card:hover {
 .lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
+  background: var(--overlay-bg-heavy);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }

@@ -24,8 +24,8 @@ showUpdated: true
       {% include "partials/page-summary.njk" %}
     </header>
 
-    <div class="uses-section" style="border-top:none;padding-top:0">
-      <h2 class="uses-section-title"><i class="fa-solid fa-envelope" style="color:var(--accent)" aria-hidden="true"></i> Envie uma mensagem</h2>
+    <div class="section-block" style="border-top:none;padding-top:0">
+      <h2 class="section-label"><i class="fa-solid fa-envelope" style="color:var(--accent)" aria-hidden="true"></i> Envie uma mensagem</h2>
       <form
         name="contato"
         method="POST"
@@ -74,9 +74,9 @@ showUpdated: true
       </form>
     </div>
 
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-address-book" style="color:#7ab87a" aria-hidden="true"></i> Contato direto</h2>
-      <div class="resume-links-grid">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-address-book" style="color:#7ab87a" aria-hidden="true"></i> Contato direto</h2>
+      <div class="social-grid">
         {% set ids = ["email", "whatsapp", "telegram"] %}
         {% set variant = "resume-card" %}
         {% include "partials/site-links.njk" %}

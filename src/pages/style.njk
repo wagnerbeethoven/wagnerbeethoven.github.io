@@ -25,8 +25,8 @@ showUpdated: true
     </header>
 
     {# ── Cores ────────────────────────────────────────────── #}
-    <div class="uses-section" style="border-top:none;padding-top:0">
-      <h2 class="uses-section-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Cores</h2>
+    <div class="section-block" style="border-top:none;padding-top:0">
+      <h2 class="section-label"><i class="fa-solid fa-palette" aria-hidden="true"></i> Cores</h2>
       <div class="sg-color-grid">
         <div class="sg-swatch">
           <div class="sg-swatch-block" style="background:var(--accent)"></div>
@@ -67,8 +67,8 @@ showUpdated: true
     </div>
 
     {# ── Tipografia ───────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-font" aria-hidden="true"></i> Tipografia</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-font" aria-hidden="true"></i> Tipografia</h2>
       <div class="prose sg-typography-demo">
         <h1>Heading 1 — Inter 700</h1>
         <h2>Heading 2 — Inter 600</h2>
@@ -80,8 +80,8 @@ showUpdated: true
     </div>
 
     {# ── Listas ───────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-list" aria-hidden="true"></i> Listas</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-list" aria-hidden="true"></i> Listas</h2>
       <div class="sg-two-col">
         <div class="prose">
           <h3>Lista não ordenada</h3>
@@ -103,8 +103,8 @@ showUpdated: true
     </div>
 
     {# ── Blockquote e código ──────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Citação e código</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Citação e código</h2>
       <div class="prose">
         <blockquote>Um texto em destaque, uma citação ou observação importante que merece atenção especial do leitor.</blockquote>
         <pre><code>// Exemplo de bloco de código
@@ -114,8 +114,8 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
     </div>
 
     {# ── Badges ───────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-tag" aria-hidden="true"></i> Badges de status</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-tag" aria-hidden="true"></i> Badges de status</h2>
       <div class="sg-badges">
         <span class="media-badge media-badge--done">Lido</span>
         <span class="media-badge media-badge--watching">Assistindo</span>
@@ -125,8 +125,8 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
     </div>
 
     {# ── Pills ────────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-tags" aria-hidden="true"></i> Pills e tags</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-tags" aria-hidden="true"></i> Pills e tags</h2>
       <div class="inline-pills">
         <a href="/tags/design/" class="pill">#design</a>
         <a href="/tags/tecnologia/" class="pill">#tecnologia</a>
@@ -136,8 +136,8 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
     </div>
 
     {# ── Cards ────────────────────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-square" aria-hidden="true"></i> Cards</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-square" aria-hidden="true"></i> Cards</h2>
       <div class="sg-two-col">
         <a href="#" class="entry-card h-entry">
           <p class="entry-card-meta"><time>19 abr 2026</time> · Blog</p>
@@ -153,8 +153,8 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
     </div>
 
     {# ── Ícones de coleções ───────────────────────────────── #}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Ícones das coleções</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Ícones das coleções</h2>
       <div class="sg-icon-grid">
         <div class="sg-icon-item"><i class="fa-solid fa-pen-nib" style="color:#e07b54" aria-hidden="true"></i><span>Blog</span></div>
         <div class="sg-icon-item"><i class="fa-solid fa-note-sticky" style="color:#f0c040" aria-hidden="true"></i><span>Notas</span></div>
@@ -167,8 +167,62 @@ console.log(`Bem-vindo ao ${site}`);</code></pre>
         <div class="sg-icon-item"><i class="fa-solid fa-camera" style="color:#e05c7a" aria-hidden="true"></i><span>Fotos</span></div>
         <div class="sg-icon-item"><i class="fa-solid fa-utensils" style="color:#e0a050" aria-hidden="true"></i><span>Receitas</span></div>
         <div class="sg-icon-item"><i class="fa-solid fa-record-vinyl" style="color:#d51007" aria-hidden="true"></i><span>Música</span></div>
+        <div class="sg-icon-item" style="color:#E1306C">{% include "partials/icon-pixelfed.njk" %}<span>Pixelfed</span></div>
       </div>
     </div>
+
+    {# ── Perfil (card) ────────────────────────────────────── #}
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Bloco de perfil</h2>
+      <p class="section-intro">Usado em <code>/card/</code>. Foto circular + metadados lado a lado.</p>
+      <div class="card-profile-block">
+        <img src="{{ site.avatarurl }}" alt="{{ site.avataralt }}" class="card-profile-photo" width="80" height="80"/>
+        <div class="card-profile-meta">
+          <p class="card-name">{{ site.author }}</p>
+          <p class="card-pronoun">ele/dele <span class="card-pronoun-en">he/him</span></p>
+          <p class="card-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ site.location }}</p>
+        </div>
+      </div>
+    </div>
+
+    {# ── Links de resumo ──────────────────────────────────── #}
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-link" aria-hidden="true"></i> Resume link cards</h2>
+      <p class="section-intro">Grade de links com ícone + label. Usado em <code>/about/</code> e <code>/card/</code>.</p>
+      <div class="social-grid">
+        {% set ids = ["email", "linkedin", "github", "bluesky"] %}
+        {% set variant = "resume-card" %}
+        {% include "partials/site-links.njk" %}
+      </div>
+    </div>
+
+    {# ── Badges de status ─────────────────────────────────── #}
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-tag" aria-hidden="true"></i> Badges de status</h2>
+      <p class="section-intro">Cores via <code>--badge-*</code>. Suporte a tema claro/escuro.</p>
+      <div class="sg-badges">
+        <span class="media-badge media-badge--done">Assistido</span>
+        <span class="media-badge media-badge--watching">Assistindo</span>
+        <span class="media-badge media-badge--want">Quero ver</span>
+        <span class="media-badge media-badge--playing">Jogando</span>
+      </div>
+    </div>
+
+    {# ── Variáveis CSS ────────────────────────────────────── #}
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-code" aria-hidden="true"></i> Variáveis CSS</h2>
+      <div class="sg-color-grid">
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--bg-hero)"></div><p class="sg-swatch-name">Hero</p><p class="sg-swatch-var"><code>--bg-hero</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--hero-text);border:1px solid var(--border-subtle)"></div><p class="sg-swatch-name">Hero text</p><p class="sg-swatch-var"><code>--hero-text</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--hero-text-muted);border:1px solid var(--border-subtle)"></div><p class="sg-swatch-name">Hero muted</p><p class="sg-swatch-var"><code>--hero-text-muted</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--overlay-bg)"></div><p class="sg-swatch-name">Overlay</p><p class="sg-swatch-var"><code>--overlay-bg</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--overlay-bg-heavy)"></div><p class="sg-swatch-name">Overlay heavy</p><p class="sg-swatch-var"><code>--overlay-bg-heavy</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--badge-done-bg);border:1px solid var(--border-subtle)"></div><p class="sg-swatch-name">Badge done</p><p class="sg-swatch-var"><code>--badge-done-bg</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--badge-want-bg);border:1px solid var(--border-subtle)"></div><p class="sg-swatch-name">Badge want</p><p class="sg-swatch-var"><code>--badge-want-bg</code></p></div>
+        <div class="sg-swatch"><div class="sg-swatch-block" style="background:var(--badge-playing-bg);border:1px solid var(--border-subtle)"></div><p class="sg-swatch-name">Badge playing</p><p class="sg-swatch-var"><code>--badge-playing-bg</code></p></div>
+      </div>
+    </div>
+
     {% include "partials/last-updated.njk" %}
 
   </div>

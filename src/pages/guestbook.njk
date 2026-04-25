@@ -25,8 +25,8 @@ showUpdated: true
 
     <p class="prose mb-8">Passou por aqui? Deixe um olá, um link do seu site ou só uma palavra. <br>Fico feliz em saber que você esteve aqui.</p>
     {# ── Formulário ─────────────────────────────────────────── #}
-    <div class="uses-section" style="border-top:none;padding-top:0">
-      <h2 class="uses-section-title"><i class="fa-solid fa-pen-to-square" style="color:var(--accent)" aria-hidden="true"></i> Deixe uma mensagem</h2>
+    <div class="section-block" style="border-top:none;padding-top:0">
+      <h2 class="section-label"><i class="fa-solid fa-pen-to-square" style="color:var(--accent)" aria-hidden="true"></i> Deixe uma mensagem</h2>
       <form
         name="livro-de-visitas"
         method="POST"
@@ -70,8 +70,8 @@ showUpdated: true
 
     {# ── Entradas ───────────────────────────────────────────── #}
     {% if guestbook and guestbook | length > 0 %}
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-comments" style="color:#7ab87a" aria-hidden="true"></i> Mensagens</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-comments" style="color:#7ab87a" aria-hidden="true"></i> Mensagens</h2>
       <div class="guestbook-list">
         {% for entry in guestbook | reverse %}
         <article class="guestbook-entry h-cite">

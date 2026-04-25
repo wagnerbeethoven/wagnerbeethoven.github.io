@@ -24,8 +24,8 @@ showUpdated: true
       {% include "partials/page-summary.njk" %}
     </header>
 
-    <div class="uses-section" style="border-top:none;padding-top:0">
-      <h2 class="uses-section-title"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Resumo</h2>
+    <div class="section-block" style="border-top:none;padding-top:0">
+      <h2 class="section-label"><i class="fa-solid fa-user" style="color:#5b8dd9" aria-hidden="true"></i> Resumo</h2>
       <div class="prose">
         <p>
           Atuo com design de produto, experiência digital e acessibilidade, principalmente em contextos complexos.
@@ -35,8 +35,8 @@ showUpdated: true
       </div>
     </div>
 
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Áreas de atuação</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-layer-group" style="color:#7ab87a" aria-hidden="true"></i> Áreas de atuação</h2>
       <div class="resume-tags">
         <span class="resume-tag"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Design de produto</span>
         <span class="resume-tag"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Arquitetura da informação</span>
@@ -49,9 +49,9 @@ showUpdated: true
       </div>
     </div>
 
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-microphone" style="color:#e05c7a" aria-hidden="true"></i> Principais projetos</h2>
-      <p class="uses-section-desc">Projeto autoral dedicado à acessibilidade digital, com conteúdo publicado em múltiplas plataformas.</p>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-microphone" style="color:#e05c7a" aria-hidden="true"></i> Principais projetos</h2>
+      <p class="section-intro">Projeto autoral dedicado à acessibilidade digital, com conteúdo publicado em múltiplas plataformas.</p>
 
       {% set projectTitle = "Foco Acessível" %}
       {% set projectDescription = "Podcast e canal sobre acessibilidade digital — boas práticas, entrevistas e perspectivas do dia a dia." %}
@@ -68,8 +68,8 @@ showUpdated: true
       {% include "partials/project-feature.njk" %}
     </div>
 
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-chalkboard-user" style="color:#c47db8" aria-hidden="true"></i> Mentoria</h2>
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-chalkboard-user" style="color:#c47db8" aria-hidden="true"></i> Mentoria</h2>
       <div class="prose">
         <p>
           Atuo como mentor no <a href="https://adplist.org/mentors/wagner-beethoven/" target="_blank" rel="noopener">ADPList</a>,
@@ -78,9 +78,9 @@ showUpdated: true
       </div>
     </div>
 
-    <div class="uses-section">
-      <h2 class="uses-section-title"><i class="fa-solid fa-link" style="color:#f0c040" aria-hidden="true"></i> Links profissionais</h2>
-      <div class="resume-links-grid">
+    <div class="section-block">
+      <h2 class="section-label"><i class="fa-solid fa-link" style="color:#f0c040" aria-hidden="true"></i> Links profissionais</h2>
+      <div class="social-grid">
         {% set ids = ["site-oficial", "linkedin", "github", "behance", "medium", "speakerdeck"] %}
         {% set variant = "resume-card" %}
         {% include "partials/site-links.njk" %}
