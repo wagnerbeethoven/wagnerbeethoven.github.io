@@ -33,6 +33,13 @@
         "description": "Gênero, orientação e por que escolho falar sobre isso aqui."
       },
       {
+        "url": "/pfp/",
+        "icon": "fa-image-portrait",
+        "color": "#5b8dd9",
+        "title": "Fotos de perfil",
+        "description": "Um arquivo visual de todas as minhas fotos de perfil."
+      },
+      {
         "url": "/now/",
         "icon": "fa-location-dot",
         "color": "#e05c7a",

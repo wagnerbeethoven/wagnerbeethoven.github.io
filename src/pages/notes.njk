@@ -54,7 +54,7 @@ permalink: "/notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumb
               </span>
             </div>
             <span class="home-blog-row-meta">
-              {% include "partials/note-source-icon.njk" %}
+              {# {% include "partials/note-source-icon.njk" %} #}
               <time class="home-blog-row-date dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | shortDate }}</time>
             </span>
           </a>

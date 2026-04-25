@@ -19,7 +19,8 @@
     "add:game":  "node scripts/content/add-content.js game",
     "add:music": "node scripts/content/add-content.js music",
     "add:post": "node scripts/content/add-post.js",
-    "sync:pixelfed": "node scripts/content/sync-pixelfed.js"
+    "sync:pixelfed": "node scripts/content/sync-pixelfed.js",
+    "gen:pfp": "node -e \"const fs=require('fs');const dir='src/assets/img/pfp';const files=fs.readdirSync(dir).filter(f=>/\\.(jpg|jpeg|png|webp)$/i.test(f)).sort((a,b)=>b.localeCompare(a));const json=files.map(f=>{const name=f.replace(/\\.[^.]+$/,'');const year=name.slice(0,4);const seq=name.slice(4);return{date:year,image:'/assets/img/pfp/'+f,alt:'Foto de perfil de '+year+(seq!=='0'&&seq!=='1'?' ('+seq+')':''),caption:year};});fs.writeFileSync('src/_data/pfp.json',JSON.stringify(json,null,2),'utf8');console.log('✔ pfp.json gerado com '+json.length+' fotos.');\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
