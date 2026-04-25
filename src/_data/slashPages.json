@@ -19,6 +19,13 @@
         "description": "Quem eu sou e o que faço por aqui."
       },
       {
+        "url": "/name/",
+        "icon": "fa-bullhorn",
+        "color": "#e05c7a",
+        "title": "Meu nome",
+        "description": "Como usar meu nome, meus pronomes"
+      },
+      {
         "url": "/now/",
         "icon": "fa-location-dot",
         "color": "#e05c7a",
