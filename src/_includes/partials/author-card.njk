@@ -1,22 +1,30 @@
 <aside class="author-card" aria-label="Sobre o autor">
-  <img
+  <a href="/pfp/" aria-label="Ver histórico de fotos de perfil">
+    <img
     src="{{ site.avatarurl }}"
     alt="{{ site.avataralt }}"
-    class="author-card-photo"
+    class="author-card-photo sidebar-avatar"
     width="72"
     height="72"
-  />
+/>
+  </a>
   <div class="author-card-body">
     <p class="author-card-name">
       <a href="/about/" rel="author">{{ site.author }}</a>
     </p>
     <p class="author-card-meta">
-      <span class="author-card-pronouns">ele/dele</span>
+      <a href="/name/#pronouns" class="author-card-pronouns" rel="nofollow">
+        <i class="fa-solid fa-person" aria-hidden="true"></i> Ele/Dele</a>
       <span class="author-card-sep" aria-hidden="true">·</span>
-      <span class="author-card-location">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+      <a href="/identity" class="author-card-pronouns" rel="nofollow">
+        <i class="fa-solid fa-mars-double" aria-hidden="true"></i> LGBT</a>
+
+      <span class="author-card-sep" aria-hidden="true">·</span>
+      <a href="/location/" class="author-card-location">
+        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
         {{ site.location }}
-      </span>
+      </a>
     </p>
     <p class="author-card-bio">{{ site.bio.short }}</p>
   </div>

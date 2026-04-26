@@ -40,6 +40,13 @@
         "description": "Um arquivo visual de todas as minhas fotos de perfil."
       },
       {
+        "url": "/location/",
+        "icon": "fa-map-location-dot",
+        "color": "#7ab87a",
+        "title": "Onde moro",
+        "description": "Olinda, PE — a cidade onde vivo, em texto, impressão e detalhe."
+      },
+      {
         "url": "/now/",
         "icon": "fa-location-dot",
         "color": "#e05c7a",

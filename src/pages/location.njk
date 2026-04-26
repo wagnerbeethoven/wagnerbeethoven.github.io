@@ -1,0 +1,324 @@
+---
+layout: layouts/base.njk
+permalink: "/location/"
+title: Onde moro
+showUpdated: true
+---
+<section class="page-hero">
+  <div class="page-hero-inner page-hero-inner--editorial">
+    <div class="editorial-bar">
+      <a href="/" class="editorial-back" aria-label="Voltar para a página inicial">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </a>
+      <div class="editorial-brand">
+        <p class="editorial-site">{{ site.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-frame">
+  <div class="content-surface">
+
+    <header class="entry-header-card">
+        {% set breadcrumb = [{label: "Sobre", url: "/about/"}, {label: "Onde em moro"}] %}
+
+      {% include "partials/breadcrumb.njk" %}
+      <h1 class="entry-title">
+        Olinda, PE
+      </h1>
+      <p class="entry-summary">
+        Cidade onde vivo. Patrimônio da UNESCO, ladeiras, carnaval, mar e uma rotina que não cabe em cartão-postal.
+      </p>
+    </header>
+
+    {# IndieWeb: h-adr microformat #}
+    <span class="sr-only h-adr">
+      <span class="p-locality">Olinda</span>,
+      <span class="p-region">Pernambuco</span>,
+      <span class="p-country-name">Brasil</span>
+      <span class="p-geo h-geo">
+        <abbr class="p-latitude" title="-8.0089">-8.0089</abbr>
+        <abbr class="p-longitude" title="-34.8553">-34.8553</abbr>
+      </span>
+    </span>
+
+    {# ── Banner principal ──────────────────────────────────────── #}
+    <figure class="location-banner">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Olinda_e_Recife.jpg"
+        alt="Vista aérea de Olinda em primeiro plano, com as igrejas barrocas e casas coloridas sobre as ladeiras, e Recife ao fundo separado pelo Rio Beberibe"
+        loading="eager"
+        width="1200"
+      />
+      <figcaption class="location-banner-caption">
+        Olinda (frente) e Recife (fundo) — separadas pelo Rio Beberibe, coladas no cotidiano.
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p>
+        Olinda é uma das cidades históricas mais conhecidas do Brasil.
+        Fica colada com Recife, mistura arquitetura colonial, cultura popular e um cotidiano urbano bem vivo.
+      </p>
+      <p>
+        É o tipo de cidade que não se consome só como turismo.
+        Ela acontece no detalhe, nas ladeiras, no barulho, no improviso.
+      </p>
+    </div>
+
+    {# ── História ──────────────────────────────────────────────── #}
+    <section class="location-section" aria-labelledby="location-historia">
+      <div class="location-section-header">
+        <h2 class="location-section-title" id="location-historia">
+          <i class="fa-solid fa-scroll" style="color:#c47db8" aria-hidden="true"></i>
+          Um pouco da história
+        </h2>
+      </div>
+
+      <figure class="location-photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/40/AMH-6713-KB_Views_of_Olinda_and_Recife.jpg"
+          alt="Gravura histórica do século XVII mostrando as cidades de Olinda e Recife vistas do mar, com embarcações em primeiro plano"
+          loading="lazy"
+          width="800"
+        />
+        <figcaption class="location-photo-caption">
+          Olinda e Recife vistas do mar — gravura do século XVII, período da ocupação holandesa.
+        </figcaption>
+      </figure>
+
+      <div class="prose">
+        <p>
+          Fundada em 1535, Olinda foi um dos principais centros econômicos do período colonial,
+          especialmente por conta da produção de açúcar. É a mais antiga cidade brasileira
+          com título de Patrimônio Mundial pela UNESCO — reconhecida em 1982.
+        </p>
+        <p>
+          A cidade foi invadida e destruída durante a ocupação holandesa no século XVII
+          e depois reconstruída mantendo o traçado urbano original.
+          Esse traçado é parte do motivo pelo qual a cidade ainda parece ser do passado em vários pontos.
+        </p>
+        <p>
+          Uma curiosidade pouco conhecida: em 1860, um astrônomo francês chamado Emmanuel Liais
+          descobriu um cometa daqui — o único cometa descoberto no Brasil, que ficou conhecido como
+          <strong>Cometa Olinda</strong>.
+        </p>
+      </div>
+    </section>
+
+    {# ── O que define ──────────────────────────────────────────── #}
+    <section class="location-section" aria-labelledby="location-define">
+      <div class="location-section-header">
+        <h2 class="location-section-title" id="location-define">
+          <i class="fa-solid fa-city" style="color:#5b8dd9" aria-hidden="true"></i>
+          O que define a cidade
+        </h2>
+      </div>
+
+      <figure class="location-photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/57/Colonial_Church_in_Olinda.jpg"
+          alt="Rua de Olinda com igreja colonial ao fundo, casas coloridas nas laterais e vegetação tropical"
+          loading="lazy"
+          width="800"
+        />
+        <figcaption class="location-photo-caption">
+          Rua típica do centro histórico — lajotas, igrejas e casas coloridas em qualquer direção que você olhe.
+        </figcaption>
+      </figure>
+
+      <div class="prose">
+        <p>
+          Olinda não é plana. A cidade é feita de ladeiras, o que muda completamente a experiência
+          de circular por ela — seja a pé, de bicicleta ou de carro.
+        </p>
+        <p>
+          As casas coloridas, igrejas antigas e mirantes criam uma relação constante com o mar,
+          mesmo quando você está no meio da cidade. Em vários pontos, você para, vira para o lado
+          e o Atlântico está ali.
+        </p>
+      </div>
+    </section>
+
+    {# ── Carnaval ──────────────────────────────────────────────── #}
+    <section class="location-section" aria-labelledby="location-carnaval">
+      <div class="location-section-header">
+        <h2 class="location-section-title" id="location-carnaval">
+          <i class="fa-solid fa-music" style="color:#e05c7a" aria-hidden="true"></i>
+          Carnaval
+        </h2>
+      </div>
+
+      <figure class="location-photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Bonecos_de_Olinda_-_Pernambuco%2C_Brasil.jpg"
+          alt="Bonecos gigantes do carnaval de Olinda desfilando pelas ladeiras, com multidão ao redor"
+          loading="lazy"
+          width="800"
+        />
+        <figcaption class="location-photo-caption">
+         Bonecos de Olinda em meio aos foliões durante o Carnaval no Centro Histórico.
+        </figcaption>
+      </figure>
+
+      <div class="prose">
+        <p>
+          O carnaval de Olinda não tem arquibancada. Acontece na rua, nas ladeiras, nas escadarias.
+          Não tem palco principal nem hora certa — começa quando começa e termina quando termina.
+          Isso é raro no Brasil hoje.
+        </p>
+        <p>
+          Dois ritmos dominam: o <strong>frevo</strong>, com seu andamento acelerado e os guarda-chuvas coloridos,
+          e o <strong>maracatu</strong>, mais grave, com percussão densa e raízes africanas.
+          São ritmos que existem fora do carnaval também — qualquer fim de semana pode ter um ensaio
+          em algum ponto da cidade.
+        </p>
+        <p>
+          Os <strong>bonecos gigantes</strong> são o símbolo mais visível. Cada um é operado por uma só pessoa
+          por dentro, usando as pernas pra sustentá-lo enquanto anda. Chegam a vários metros de altura
+          e costumam representar figuras históricas, políticos e personalidades populares.
+        </p>
+        <p>
+          Em 2006, Olinda foi escolhida como a primeira Capital Brasileira da Cultura —
+          em parte pelo carnaval, em parte pela preservação cultural que vai além dele.
+        </p>
+        <p>
+          Se você nunca foi: é barulhento, quente, cheio e difícil de navegar.
+          Também é uma das experiências mais intensas que já tive numa cidade.
+          Não tem jeito certo de fazer — é só entrar.
+        </p>
+      </div>
+    </section>
+
+    {# ── Praias ────────────────────────────────────────────────── #}
+
+
+
+      <figure class="location-photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Orla-de_Olinda-PE.jpg"
+          alt="A praia de Bairro Novo em Olinda, Pernambuco"
+          loading="lazy"
+          width="800"
+        />
+        <figcaption class="location-photo-caption">
+          A praia de Bairro Novo.
+        </figcaption>
+      </figure>
+
+
+
+    <section class="location-section" aria-labelledby="location-praias">
+      <div class="location-section-header">
+        <h2 class="location-section-title" id="location-praias">
+          <i class="fa-solid fa-umbrella-beach" style="color:#5b8dd9" aria-hidden="true"></i>
+          Praias
+        </h2>
+        <span class="sidebar-count">7 praias</span>
+      </div>
+      <div class="prose">
+        <p>
+          As praias de Olinda são urbanas e extensas, mas não são o principal atrativo da cidade.
+          O mar costuma ser agitado em alguns trechos, e existem áreas com recifes.
+          Funciona mais pra caminhada, contemplação e rotina do que turismo clássico de praia.
+        </p>
+        <p>Entre as mais conhecidas:</p>
+        <ul>
+          <li><strong>Bairro Novo</strong> — mais movimentada, próxima do centro</li>
+          <li><strong>Casa Caiada</strong> — um pouco mais calma, extensão de Olinda com Paulista</li>
+          <li><strong>Rio Doce</strong> — mais ao norte, bairro residencial</li>
+        </ul>
+      </div>
+    </section>
+
+    {# ── Pontos turísticos ─────────────────────────────────────── #}
+    <section class="location-section" aria-labelledby="location-pontos">
+      <div class="location-section-header">
+        <h2 class="location-section-title" id="location-pontos">
+          <i class="fa-solid fa-landmark" style="color:#e07b54" aria-hidden="true"></i>
+          Pontos para conhecer
+        </h2>
+        <span class="sidebar-count">6 lugares</span>
+      </div>
+
+      <figure class="location-photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/85/Church_of_Carmel%2C_Olinda20150715-DSC05360.JPG"
+          alt="Igreja Nossa Senhora do Carmo em Olinda, fachada barroca branca com torres ao pôr do sol"
+          loading="lazy"
+          width="800"
+        />
+        <figcaption class="location-photo-caption">
+          Igreja do Carmo — o tipo de construção que você encontra numa esquina qualquer e para pra olhar.
+        </figcaption>
+      </figure>
+
+      <div class="location-spots-grid">
+        <div class="location-spot">
+          <strong class="location-spot-name">Alto da Sé</strong>
+          <p class="location-spot-desc">Um dos pontos mais altos, com vista ampla para o mar e Recife. É onde a cidade "se revela". Obrigatório.</p>
+        </div>
+        <div class="location-spot">
+          <strong class="location-spot-name">Mosteiro de São Bento</strong>
+          <p class="location-spot-desc">Edifício religioso marcante, com interior bastante detalhado. Os primeiros cursos de direito do Brasil começaram aqui, em 1828.</p>
+        </div>
+        <div class="location-spot">
+          <strong class="location-spot-name">Igreja da Sé</strong>
+          <p class="location-spot-desc">Um dos cartões-postais. Costuma ser associada ao pôr do sol — e o pôr do sol é mesmo muito bom dali.</p>
+        </div>
+        <div class="location-spot">
+          <strong class="location-spot-name">Mercado da Ribeira</strong>
+          <p class="location-spot-desc">Espaço com artesanato e produção local. Bom pra dar uma olhada sem pressa.</p>
+        </div>
+        <div class="location-spot">
+          <strong class="location-spot-name">Museu do Mamulengo</strong>
+          <p class="location-spot-desc">Dedicado ao teatro de bonecos popular nordestino. Pequeno, mas denso.</p>
+        </div>
+        <div class="location-spot">
+          <strong class="location-spot-name">Ladeira da Misericórdia</strong>
+          <p class="location-spot-desc">Uma das mais fotografadas. A rua em si é o ponto — colorida, íngreme e cheia de detalhe.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="prose">
+      <h2>Como a cidade funciona no dia a dia</h2>
+      <p>
+        Olinda não é só cenário histórico. Existe uma vida cotidiana acontecendo ali —
+        moradores convivendo com o turismo, trânsito complicado nas áreas históricas,
+        comércio local misturado com bares e cafés, eventos culturais frequentes.
+      </p>
+      <p>
+        Isso cria uma cidade meio híbrida: parte patrimônio, parte rotina.
+        Às vezes as duas coisas ao mesmo tempo, na mesma rua.
+      </p>
+
+      <h2>Uma observação mais pessoal</h2>
+      <p>
+        Se você vier esperando só um destino turístico, pode parecer limitada.
+        O centro histórico é pequeno, os museus são poucos e a infraestrutura de turismo
+        não é das mais organizadas.
+      </p>
+      <p>
+        Mas se você andar sem muita pressa, observar as ruas e aceitar o ritmo da cidade,
+        ela começa a fazer mais sentido. Olinda é mais experiência do que atração.
+      </p>
+      <p>
+        Eu moro aqui porque gosto de cidade com história visível, com ladeira, com barulho de
+        festa e silêncio de rua vazia coexistindo a dois quarteirões de distância.
+        Não é perfeita. Mas é viva.
+      </p>
+    </div>
+
+    <p class="location-wikimedia-credit">
+      <i class="fa-brands fa-wikipedia-w" aria-hidden="true"></i>
+      Fotos via <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>,
+      licenças CC BY-SA e domínio público.<br>Algumas informações complementares extraídas da
+      <a href="https://pt.wikipedia.org/wiki/Olinda" target="_blank" rel="noopener">Wikipedia</a>.
+    </p>
+
+    {% include "partials/last-updated.njk" %}
+
+  </div>
+</section>

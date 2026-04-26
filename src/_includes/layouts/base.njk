@@ -94,10 +94,15 @@
             <img class="sidebar-avatar card-profile-photo u-photo" src="{{site.avatarurl}}" alt="{{ site.avataralt }}" width="80" height="80"/>
           </a>
           <div class="sidebar-name p-name">{{ site.author }}</div>
-          <div class="sidebar-pronoun"><a href="/name/#pronouns">ele/dele</a></div>
-          <div class="sidebar-meta">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            {{ site.location }}</div>
+          <div class="sidebar-info">
+            <a href="/name/#pronouns"><i class="fa-solid fa-person" aria-hidden="true"></i> Ele/Dele</a>
+            <span aria-hidden="true">·</span>
+            <a href="/identity" rel="nofollow"><i class="fa-solid fa-mars-double" aria-hidden="true"></i> LGBT</a>
+          </div>
+
+          <a href="/location/" class="sidebar-location">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            {{ site.location }}</a>
         </div>
 
         <nav class="sidebar-nav" aria-label="Navegação principal">
