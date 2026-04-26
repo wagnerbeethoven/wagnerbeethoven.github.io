@@ -64,6 +64,14 @@ showUpdated: true
           <p class="sitemap-stat-value">{{ totalTags }}</p>
         </a>
       {% endif %}
+      <div class="sitemap-stat">
+        <p class="sitemap-stat-label">Total de palavras</p>
+        <p class="sitemap-stat-value">{{ siteStats.totalWordsFormatted }}</p>
+      </div>
+      <div class="sitemap-stat">
+        <p class="sitemap-stat-label">Média de palavras por post</p>
+        <p class="sitemap-stat-value">{{ siteStats.averageWordsPerPost }}</p>
+      </div>
     </div>
     <hr class="mb-8">
     <div class="sitemap-stats">

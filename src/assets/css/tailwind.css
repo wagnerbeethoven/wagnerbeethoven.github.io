@@ -5985,6 +5985,21 @@ a.entry-card:hover {
   color: var(--accent);
 }
 
+.related-posts {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.related-posts-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
 .archive-stats-section {
   margin-bottom: 2.5rem;
   padding-top: 2rem;

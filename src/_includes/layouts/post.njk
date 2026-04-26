@@ -61,6 +61,23 @@ showUpdated: true
       <a href="/blog/" class="soft-link">Voltar para o arquivo</a>
     </div>
 
+    {% set related = collections.posts | relatedPosts(page.url, tags, 3) %}
+    {% if related.length > 0 %}
+    <section class="related-posts" aria-labelledby="related-posts-title">
+      <h2 class="related-posts-title" id="related-posts-title">Textos relacionados</h2>
+      <div class="home-blog-list">
+        {% for post in related %}
+        <a href="{{ post.url }}" class="home-blog-row">
+          <div class="home-blog-row-main">
+            <span class="home-blog-row-title">{{ post.data.title }}</span>
+          </div>
+          <time class="home-blog-row-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
     {% include "partials/author-card.njk" %}
 
     {% include "partials/cusdis.njk" %}
