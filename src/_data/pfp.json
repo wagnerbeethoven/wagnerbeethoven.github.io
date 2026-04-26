@@ -1,6 +1,12 @@
 [
   {
     "date": "2026",
+    "image": "/assets/img/pfp/20263.jpg",
+    "alt": "Foto de perfil de 2026 (3)",
+    "caption": "2026"
+  }, 
+  {
+    "date": "2026",
     "image": "/assets/img/pfp/20262.jpg",
     "alt": "Foto de perfil de 2026 (2)",
     "caption": "2026"
@@ -201,12 +207,6 @@
     "date": "2013",
     "image": "/assets/img/pfp/20133.jpg",
     "alt": "Foto de perfil de 2013 (3)",
-    "caption": "2013"
-  },
-  {
-    "date": "2013",
-    "image": "/assets/img/pfp/20132.jpg",
-    "alt": "Foto de perfil de 2013 (2)",
     "caption": "2013"
   },
   {
