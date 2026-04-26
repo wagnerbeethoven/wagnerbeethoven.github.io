@@ -487,6 +487,22 @@ module.exports = function(eleventyConfig) {
     return groups.reduce((count, group) => count + (Array.isArray(group.items) ? group.items.length : 0), 0);
   });
 
+  eleventyConfig.addFilter("relatedPosts", (collection, currentUrl, tags, limit = 3) => {
+    if (!tags || !tags.length) return [];
+    const tagSet = new Set(tags);
+    return collection
+      .filter((post) => post.url !== currentUrl)
+      .map((post) => {
+        const postTags = Array.isArray(post.data.tags) ? post.data.tags : [];
+        const shared = postTags.filter((t) => tagSet.has(t)).length;
+        return { post, shared };
+      })
+      .filter(({ shared }) => shared > 0)
+      .sort((a, b) => b.shared - a.shared || b.post.date - a.post.date)
+      .slice(0, limit)
+      .map(({ post }) => post);
+  });
+
   return {
     dir: {
       input: "src",
