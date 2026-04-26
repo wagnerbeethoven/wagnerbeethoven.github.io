@@ -11,10 +11,11 @@
  *   node scripts/content/add-content.js game    "Return of the Obra Dinn"
  *
  * Variáveis de ambiente (.env ou export):
- *   TMDB_KEY    — TMDB (filmes + séries)   https://www.themoviedb.org/settings/api
- *   YOUTUBE_KEY — YouTube (músicas)         console.cloud.google.com → YouTube Data API v3
- *   RAWG_KEY    — RAWG (jogos)             https://rawg.io/apidocs
- *   COMICVINE_KEY — Comic Vine (quadrinhos) https://comicvine.gamespot.com/api
+ *   TMDB_KEY      — TMDB (filmes + séries)   https://www.themoviedb.org/settings/api
+ *   YOUTUBE_KEY   — YouTube (músicas)         console.cloud.google.com → YouTube Data API v3
+ *   RAWG_KEY      — RAWG (jogos)             https://rawg.io/apidocs
+ *   COMICVINE_KEY — Comic Vine (quadrinhos)  https://comicvine.gamespot.com/api
+ *   GROQ_KEY      — Groq/Llama (fallback AI) https://console.groq.com
  *   (livros e quadrinhos usam Google Books — sem chave necessária)
  */
 
@@ -195,7 +196,7 @@ async function fetchBook(query) {
   info(`Encontrado: ${B}${v.title}${R}${authors[0] ? ` — ${authors[0]}` : ""}`);
   const description = v.description?.replace(/\s+/g, " ").trim()
     || await fetchOpenLibraryDescription(isbn)
-    || await fetchOpenAIDescription(`Escreva uma breve descrição do livro "${v.title || query}"${authors[0] ? ` de ${authors[0]}` : ""}. Máximo 2 frases em português.`);
+    || await fetchGroqDescription(`Escreva uma breve descrição do livro "${v.title || query}"${authors[0] ? ` de ${authors[0]}` : ""}. Máximo 2 frases em português.`);
   return {
     title:       v.title || query,
     author:      authors.join(", "),
@@ -225,25 +226,31 @@ async function fetchOpenLibraryDescription(isbn) {
   }
 }
 
-async function fetchOpenAIDescription(prompt) {
-  const key = process.env.OPENAI_KEY;
-  if (!key) return "";
+async function fetchGroqDescription(prompt) {
+  const key = process.env.GROQ_KEY;
+  if (!key) { warn("GROQ_KEY não definido — fallback AI ignorado."); return ""; }
   try {
-    info("Buscando descrição no ChatGPT (OpenAI)...");
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    info("Buscando descrição no Groq (Llama)...");
+    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "llama-3.1-8b-instant",
         messages: [{ role: "user", content: prompt }],
         max_tokens: 200,
         temperature: 0.5,
       }),
     });
-    if (!res.ok) return "";
+    if (!res.ok) {
+      let body = "";
+      try { body = await res.text(); } catch { /* ignora */ }
+      warn(`Groq falhou: HTTP ${res.status}${body ? ` — ${body.slice(0, 200)}` : ""}`);
+      return "";
+    }
     const d = await res.json();
     return d.choices?.[0]?.message?.content?.trim().replace(/\s+/g, " ") || "";
-  } catch {
+  } catch (e) {
+    warn(`Groq erro: ${e.message}`);
     return "";
   }
 }
@@ -507,7 +514,7 @@ async function fetchAlbum(artist, album) {
   const lfmWiki = (lfm.status === "fulfilled" && lfm.value) ? lfm.value : "";
   if (lfmWiki) info(`Last.fm: descrição encontrada (${lfmWiki.length} chars)`);
   const wiki = lfmWiki
-    || await fetchOpenAIDescription(`Escreva uma breve descrição do álbum "${album}" de ${artist}. Máximo 2 frases em português.`);
+    || await fetchGroqDescription(`Escreva uma breve descrição do álbum "${album}" de ${artist}. Máximo 2 frases em português.`);
 
   if (!browseId && !playlistId && !videoId) throw new Error("Álbum não encontrado.");
   info(`Encontrado: ${B}${album}${R} — ${artist}`);
@@ -617,7 +624,7 @@ async function addMovie(query) {
   if (!h) { err("Nenhum filme encontrado."); process.exit(1); }
   info(`Encontrado: ${B}${h.title}${R} (${h.release_date?.slice(0,4) || "?"})`);
   const d = await tmdbMovieDetail(h.id, key);
-  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve sinopse do filme "${d.title}" (${d.year}). Máximo 2 frases em português.`);
+  if (!d.overview) d.overview = await fetchGroqDescription(`Escreva uma breve sinopse do filme "${d.title}" (${d.year}). Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("movies", f, fm.movie(d));
   console.log(`\n${DIM}${fm.movie(d)}${R}`);
@@ -632,7 +639,7 @@ async function addSerie(query) {
   if (!h) { err("Nenhuma série encontrada."); process.exit(1); }
   info(`Encontrada: ${B}${h.name}${R} (${h.first_air_date?.slice(0,4) || "?"})`);
   const d = await tmdbSerieDetail(h.id, key);
-  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve sinopse da série "${d.title}". Máximo 2 frases em português.`);
+  if (!d.overview) d.overview = await fetchGroqDescription(`Escreva uma breve sinopse da série "${d.title}". Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("series", f, fm.serie(d));
   console.log(`\n${DIM}${fm.serie(d)}${R}`);
@@ -647,7 +654,7 @@ async function addBook(query) {
 
 async function addComic(query) {
   const d = await fetchComic(query);
-  if (!d.synopsis) d.synopsis = await fetchOpenAIDescription(`Escreva uma breve sinopse do quadrinho "${d.title}"${d.writer ? ` de ${d.writer}` : ""}. Máximo 2 frases em português.`);
+  if (!d.synopsis) d.synopsis = await fetchGroqDescription(`Escreva uma breve sinopse do quadrinho "${d.title}"${d.writer ? ` de ${d.writer}` : ""}. Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("comics", f, fm.comic(d));
   console.log(`\n${DIM}${fm.comic(d)}${R}`);
@@ -655,7 +662,7 @@ async function addComic(query) {
 
 async function addGame(query) {
   const d = await fetchGame(query);
-  if (!d.overview) d.overview = await fetchOpenAIDescription(`Escreva uma breve descrição do jogo "${d.title}" (${d.year}). Máximo 2 frases em português.`);
+  if (!d.overview) d.overview = await fetchGroqDescription(`Escreva uma breve descrição do jogo "${d.title}" (${d.year}). Máximo 2 frases em português.`);
   const f = `${today()}-${slug(d.title)}.md`;
   writeFile("games", f, fm.game(d));
   console.log(`\n${DIM}${fm.game(d)}${R}`);
@@ -682,10 +689,11 @@ ${B}Uso:${R}
   node scripts/content/add-content.js music  ${DIM}"Artista" "Álbum"${R}
 
 ${B}Variáveis de ambiente:${R}
-  TMDB_KEY    Filmes e séries  → https://www.themoviedb.org/settings/api
-  YOUTUBE_KEY Músicas          → console.cloud.google.com → YouTube Data API v3 (grátis, 10k req/dia)
-  RAWG_KEY       Jogos            → https://rawg.io/apidocs                 (opcional, funciona sem chave com limitações)
-  COMICVINE_KEY  Quadrinhos       → https://comicvine.gamespot.com/api      (opcional, enriquece o Google Books)
+  TMDB_KEY      Filmes e séries  → https://www.themoviedb.org/settings/api
+  YOUTUBE_KEY   Músicas          → console.cloud.google.com → YouTube Data API v3 (grátis, 10k req/dia)
+  RAWG_KEY      Jogos            → https://rawg.io/apidocs                 (opcional, funciona sem chave com limitações)
+  COMICVINE_KEY Quadrinhos       → https://comicvine.gamespot.com/api      (opcional, enriquece o Google Books)
+  GROQ_KEY      Fallback AI      → https://console.groq.com                (grátis, gera descrições ausentes)
   (livros e quadrinhos usam Google Books; Comic Vine é opcional e enriquece quadrinhos)
 
 ${B}Exemplos:${R}
