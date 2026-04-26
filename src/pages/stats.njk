@@ -144,6 +144,37 @@ showUpdated: true
       As estatisticas de acesso ficam no <a href="https://{{ site.analytics.siteId }}.goatcounter.com" target="_blank" rel="noopener" class="soft-link">painel do GoatCounter</a>, que ja esta integrado ao site. <br>Ver <a href="/sitemap.xml" class="soft-link">Sitemap XML</a>.
     </p>
 
+    {# ── Publicações por ano ──────────────────────────────────── #}
+    {% if collections.archiveTree and collections.archiveTree.length > 0 %}
+    <section class="archive-stats-section" aria-labelledby="stats-years-title">
+      <h2 class="archive-section-title" id="stats-years-title">
+        <i class="fa-solid fa-calendar-days" style="color:var(--accent)" aria-hidden="true"></i> Posts por ano
+      </h2>
+      <ul class="archive-year-list">
+        {% for year in collections.archiveTree %}
+        <li class="archive-year-row">
+          <a href="/archive/#archive-year-{{ year.year }}" class="archive-year-row-label">{{ year.year }}</a>
+          <span class="archive-year-row-count">{{ year.count }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {# ── Nuvem de tags ────────────────────────────────────────── #}
+    {% if collections.tagMeta and collections.tagMeta.length > 0 %}
+    <section class="archive-stats-section" aria-labelledby="stats-tags-title">
+      <h2 class="archive-section-title" id="stats-tags-title">
+        <i class="fa-solid fa-tags" style="color:var(--accent)" aria-hidden="true"></i> Nuvem de tags
+      </h2>
+      <div class="archive-tag-cloud">
+        {% for tag in collections.tagMeta %}
+        <a href="/tags/{{ tag.name | slug }}/" class="archive-tag-pill">{{ tag.name }}</a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
     {% include "partials/last-updated.njk" %}
   </div>
 </section>
