@@ -1,0 +1,44 @@
+<div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true" aria-label="Visualizar foto" hidden>
+  <button class="lb-close" id="lb-close" aria-label="Fechar lightbox">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <figure class="lb-polaroid">
+    <img class="lb-img" id="lb-img" src="" alt="" />
+    <figcaption class="lb-caption" id="lb-caption"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function () {
+  const overlay   = document.getElementById('lb-overlay');
+  const lbImg     = document.getElementById('lb-img');
+  const lbCaption = document.getElementById('lb-caption');
+  const lbClose   = document.getElementById('lb-close');
+
+  function open(img, alt, caption) {
+    lbImg.src             = img;
+    lbImg.alt             = alt;
+    lbCaption.textContent = caption;
+    overlay.hidden        = false;
+    lbClose.focus();
+  }
+
+  function close() {
+    overlay.hidden = true;
+    lbImg.src      = '';
+  }
+
+  document.querySelectorAll('.polaroid--clickable').forEach(function (el) {
+    el.addEventListener('click', function () {
+      open(el.dataset.img, el.dataset.alt, el.dataset.caption);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  lbClose.addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>

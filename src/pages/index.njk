@@ -69,7 +69,13 @@ permalink: "/"
     </div>
     <div class="polaroid-grid">
       {% for photo in recentPhotos %}
-      <figure class="polaroid">
+      <figure class="polaroid polaroid--clickable"
+        role="button"
+        tabindex="0"
+        aria-label="Ampliar foto{{ ': ' + photo.data.caption if photo.data.caption else '' }}"
+        data-img="{{ photo.data.image }}"
+        data-alt="{{ photo.data.alt or photo.data.title or '' }}"
+        data-caption="{{ photo.data.caption or photo.data.title or '' }}">
         <img src="{{ photo.data.image }}" alt="{{ photo.data.alt or photo.data.title }}" loading="lazy" />
         <figcaption class="polaroid-caption">{{ photo.data.caption or photo.data.title }}</figcaption>
       </figure>
@@ -209,3 +215,5 @@ permalink: "/"
   </div>
 
 </section>
+
+{% include "partials/lightbox.njk" %}
