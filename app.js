@@ -8,11 +8,11 @@
 const projectsElement =
     document.querySelector("#projects");
 
-const categoryFilters =
-    document.querySelector("#category-filters");
+const categorySelect =
+    document.querySelector("#category-filter");
 
-const relationshipFilters =
-    document.querySelector("#relationship-filters");
+const relationshipSelect =
+    document.querySelector("#relationship-filter");
 
 const searchInput =
     document.querySelector("#search");
@@ -26,8 +26,19 @@ const counterLabel =
 const activeFilter =
     document.querySelector("#active-filter");
 
-document.querySelector("#year").textContent =
-    new Date().getFullYear();
+const year =
+    document.querySelector("#year");
+
+
+/* --------------------------------------------------
+   Utilidades
+-------------------------------------------------- */
+
+if (year) {
+    year.textContent =
+        new Date().getFullYear();
+}
+
 
 function escapeHTML(value = "") {
     return String(value)
@@ -38,7 +49,16 @@ function escapeHTML(value = "") {
         .replaceAll("'", "&#039;");
 }
 
-function initials(name) {
+
+function normalize(value = "") {
+    return String(value)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
+
+
+function initials(name = "") {
     return name
         .replace(/[+/]/g, " ")
         .split(/\s+/)
@@ -49,71 +69,160 @@ function initials(name) {
         .toUpperCase();
 }
 
-function normalize(value) {
-    return String(value)
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
+
+/* --------------------------------------------------
+   Logos
+-------------------------------------------------- */
+
+function getAutomaticLogo(project) {
+
+    if (!project.url) {
+        return "";
+    }
+
+    try {
+
+        const hostname =
+            new URL(project.url).hostname;
+
+        return (
+            "https://www.google.com/s2/favicons" +
+            "?domain=" +
+            encodeURIComponent(hostname) +
+            "&sz=128"
+        );
+
+    } catch {
+
+        return "";
+    }
 }
 
-function createFilterButton(value, type) {
 
-    const button =
-        document.createElement("button");
+function logoTemplate(project) {
 
-    button.type = "button";
-    button.className = "filter";
-    button.textContent = value;
-    button.dataset.value = value;
-    button.dataset.type = type;
+    /*
+     * Ordem:
+     *
+     * 1. logo definida em projects.json
+     * 2. favicon do site
+     * 3. iniciais do projeto
+     */
 
-    const selected =
-        state[type] === value;
+    const logo =
+        project.logo ||
+        getAutomaticLogo(project);
 
-    button.setAttribute(
-        "aria-pressed",
-        String(selected)
-    );
+    const fallback =
+        escapeHTML(initials(project.name));
 
-    button.addEventListener("click", () => {
+    if (!logo) {
 
-        state[type] = value;
+        return `
+            <div
+                class="logo"
+                aria-hidden="true"
+            >
+                <span class="logo-fallback">
+                    ${fallback}
+                </span>
+            </div>
+        `;
+    }
 
-        renderFilters();
-        renderProjects();
-    });
+    return `
+        <div
+            class="logo"
+            aria-hidden="true"
+        >
+            <img
+                src="${escapeHTML(logo)}"
+                alt=""
+                loading="lazy"
+                onerror="
+                    this.hidden = true;
+                    this.nextElementSibling.hidden = false;
+                "
+            >
 
-    return button;
+            <span
+                class="logo-fallback"
+                hidden
+            >
+                ${fallback}
+            </span>
+        </div>
+    `;
 }
+
+
+/* --------------------------------------------------
+   Selects
+-------------------------------------------------- */
+
+function createOptions(values, selectedValue) {
+
+    return values
+        .map(value => {
+
+            const selected =
+                value === selectedValue
+                    ? " selected"
+                    : "";
+
+            return `
+                <option
+                    value="${escapeHTML(value)}"
+                    ${selected}
+                >
+                    ${escapeHTML(value)}
+                </option>
+            `;
+        })
+        .join("");
+}
+
 
 function renderFilters() {
 
     const categories = [
         "Todos",
         ...new Set(
-            state.projects.map(project => project.category)
+            state.projects
+                .map(project => project.category)
+                .filter(Boolean)
         )
     ];
+
 
     const relationships = [
         "Todos",
         ...new Set(
-            state.projects.map(project => project.relationship)
+            state.projects
+                .map(project => project.relationship)
+                .filter(Boolean)
         )
     ];
 
-    categoryFilters.replaceChildren(
-        ...categories.map(value =>
-            createFilterButton(value, "category")
-        )
-    );
 
-    relationshipFilters.replaceChildren(
-        ...relationships.map(value =>
-            createFilterButton(value, "relationship")
-        )
-    );
+    categorySelect.innerHTML =
+        createOptions(
+            categories,
+            state.category
+        );
+
+
+    relationshipSelect.innerHTML =
+        createOptions(
+            relationships,
+            state.relationship
+        );
 }
+
+
+/* --------------------------------------------------
+   Filtro dos projetos
+-------------------------------------------------- */
 
 function projectMatches(project) {
 
@@ -121,26 +230,39 @@ function projectMatches(project) {
         state.category === "Todos" ||
         project.category === state.category;
 
+
     const relationshipMatch =
         state.relationship === "Todos" ||
-        project.relationship === state.relationship;
+        project.relationship ===
+            state.relationship;
+
 
     const query =
-        normalize(state.query.trim());
+        normalize(
+            state.query.trim()
+        );
+
 
     const searchable =
-        normalize([
-            project.name,
-            project.repositoryName,
-            project.description,
-            project.category,
-            project.relationship,
-            ...(project.tags || [])
-        ].join(" "));
+        normalize(
+            [
+                project.name,
+                project.repositoryName,
+                project.description,
+                project.category,
+                project.relationship,
+                project.visibility,
+                ...(project.tags || [])
+            ]
+                .filter(Boolean)
+                .join(" ")
+        );
+
 
     const queryMatch =
         !query ||
         searchable.includes(query);
+
 
     return (
         categoryMatch &&
@@ -149,34 +271,18 @@ function projectMatches(project) {
     );
 }
 
-function logoTemplate(project) {
 
-    if (project.logo) {
-        return `
-            <div class="logo">
-                <img
-                    src="${escapeHTML(project.logo)}"
-                    alt=""
-                    loading="lazy"
-                >
-            </div>
-        `;
-    }
-
-    return `
-        <div class="logo" aria-hidden="true">
-            <span class="logo-fallback">
-                ${escapeHTML(initials(project.name))}
-            </span>
-        </div>
-    `;
-}
+/* --------------------------------------------------
+   Links
+-------------------------------------------------- */
 
 function linksTemplate(project) {
 
     const links = [];
 
+
     if (project.url) {
+
         links.push(`
             <a
                 href="${escapeHTML(project.url)}"
@@ -188,7 +294,9 @@ function linksTemplate(project) {
         `);
     }
 
+
     if (project.repository) {
+
         links.push(`
             <a
                 href="${escapeHTML(project.repository)}"
@@ -200,7 +308,23 @@ function linksTemplate(project) {
         `);
     }
 
+
+    if (project.originalRepository) {
+
+        links.push(`
+            <a
+                href="${escapeHTML(project.originalRepository)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Projeto original
+            </a>
+        `);
+    }
+
+
     if (!links.length) {
+
         return `
             <p class="private-note">
                 Sem link público
@@ -208,19 +332,51 @@ function linksTemplate(project) {
         `;
     }
 
+
     return links.join("");
 }
 
-function cardTemplate(project) {
+
+/* --------------------------------------------------
+   Tags
+-------------------------------------------------- */
+
+function tagsTemplate(project) {
+
+    if (
+        !project.tags ||
+        !project.tags.length
+    ) {
+        return "";
+    }
+
 
     const tags =
-        (project.tags || [])
+        project.tags
             .map(tag => `
                 <span class="tag">
                     ${escapeHTML(tag)}
                 </span>
             `)
             .join("");
+
+
+    return `
+        <div
+            class="tags"
+            aria-label="Características"
+        >
+            ${tags}
+        </div>
+    `;
+}
+
+
+/* --------------------------------------------------
+   Card
+-------------------------------------------------- */
+
+function cardTemplate(project) {
 
     return `
         <article class="card">
@@ -231,29 +387,39 @@ function cardTemplate(project) {
 
                 <div class="badges">
 
-                    <span class="badge relationship">
-                        ${escapeHTML(project.relationship)}
+                    <span
+                        class="badge relationship"
+                    >
+                        ${escapeHTML(
+                            project.relationship
+                        )}
                     </span>
 
                     <span class="badge">
-                        ${escapeHTML(project.visibility)}
+                        ${escapeHTML(
+                            project.visibility
+                        )}
                     </span>
 
                 </div>
 
             </div>
 
+
             <h3>
                 ${escapeHTML(project.name)}
             </h3>
 
+
             <p class="description">
-                ${escapeHTML(project.description)}
+                ${escapeHTML(
+                    project.description
+                )}
             </p>
 
-            <div class="tags" aria-label="Características">
-                ${tags}
-            </div>
+
+            ${tagsTemplate(project)}
+
 
             <footer class="card-footer">
                 ${linksTemplate(project)}
@@ -263,54 +429,126 @@ function cardTemplate(project) {
     `;
 }
 
+
+/* --------------------------------------------------
+   Informação dos filtros ativos
+-------------------------------------------------- */
+
+function renderActiveFilters(filteredCount) {
+
+    const active = [];
+
+
+    if (state.category !== "Todos") {
+
+        active.push(
+            `Categoria: ${state.category}`
+        );
+    }
+
+
+    if (
+        state.relationship !== "Todos"
+    ) {
+
+        active.push(
+            `Relação: ${state.relationship}`
+        );
+    }
+
+
+    if (state.query.trim()) {
+
+        active.push(
+            `Busca: "${state.query.trim()}"`
+        );
+    }
+
+
+    if (!active.length) {
+
+        activeFilter.textContent =
+            `Exibindo todos os ${state.projects.length} projetos cadastrados.`;
+
+        return;
+    }
+
+
+    activeFilter.textContent =
+        `${filteredCount} ${
+            filteredCount === 1
+                ? "resultado"
+                : "resultados"
+        } · ${active.join(" · ")}`;
+}
+
+
+/* --------------------------------------------------
+   Renderização
+-------------------------------------------------- */
+
 function renderProjects() {
 
     const filtered =
-        state.projects.filter(projectMatches);
+        state.projects.filter(
+            projectMatches
+        );
+
+
+    /*
+     * Contador
+     */
 
     counter.textContent =
         filtered.length;
+
 
     counterLabel.textContent =
         filtered.length === 1
             ? "projeto"
             : "projetos";
 
-    const active = [];
 
-    if (state.category !== "Todos") {
-        active.push(state.category);
-    }
+    /*
+     * Informação textual dos filtros
+     */
 
-    if (state.relationship !== "Todos") {
-        active.push(state.relationship);
-    }
+    renderActiveFilters(
+        filtered.length
+    );
 
-    if (state.query.trim()) {
-        active.push(`Busca: "${state.query.trim()}"`);
-    }
 
-    activeFilter.textContent =
-        active.length
-            ? `Filtros ativos: ${active.join(" · ")}`
-            : `Exibindo todos os ${state.projects.length} projetos cadastrados.`;
+    /*
+     * Nenhum resultado
+     */
 
     if (!filtered.length) {
 
         projectsElement.innerHTML = `
             <p class="status">
-                Nenhum projeto encontrado com esses filtros.
+                Nenhum projeto encontrado
+                com esses filtros.
             </p>
         `;
 
         return;
     }
 
+
+    /*
+     * Cards
+     */
+
     projectsElement.innerHTML =
         filtered
             .map(cardTemplate)
             .join("");
 }
+
+
+/* --------------------------------------------------
+   Carregamento do JSON
+-------------------------------------------------- */
 
 async function loadProjects() {
 
@@ -319,32 +557,67 @@ async function loadProjects() {
         "true"
     );
 
+
     try {
 
         const response =
             await fetch("./projects.json");
 
+
         if (!response.ok) {
+
             throw new Error(
-                `Erro ${response.status}`
+                `Erro HTTP ${response.status}`
             );
         }
 
-        state.projects =
+
+        const data =
             await response.json();
+
+
+        if (!Array.isArray(data)) {
+
+            throw new Error(
+                "projects.json precisa conter um array."
+            );
+        }
+
+
+        state.projects =
+            data;
+
 
         renderFilters();
         renderProjects();
 
+
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "Erro ao carregar projetos:",
+            error
+        );
+
 
         projectsElement.innerHTML = `
-            <p class="status">
-                Não foi possível carregar o catálogo de projetos.
-            </p>
+            <div class="status">
+
+                <strong>
+                    Não foi possível carregar
+                    o catálogo.
+                </strong>
+
+                <p>
+                    Se você abriu o index.html
+                    diretamente pelo computador,
+                    execute o projeto por um
+                    servidor HTTP local.
+                </p>
+
+            </div>
         `;
+
 
     } finally {
 
@@ -354,6 +627,11 @@ async function loadProjects() {
         );
     }
 }
+
+
+/* --------------------------------------------------
+   Eventos
+-------------------------------------------------- */
 
 searchInput.addEventListener(
     "input",
@@ -365,5 +643,34 @@ searchInput.addEventListener(
         renderProjects();
     }
 );
+
+
+categorySelect.addEventListener(
+    "change",
+    event => {
+
+        state.category =
+            event.target.value;
+
+        renderProjects();
+    }
+);
+
+
+relationshipSelect.addEventListener(
+    "change",
+    event => {
+
+        state.relationship =
+            event.target.value;
+
+        renderProjects();
+    }
+);
+
+
+/* --------------------------------------------------
+   Inicialização
+-------------------------------------------------- */
 
 loadProjects();

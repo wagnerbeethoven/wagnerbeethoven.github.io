@@ -106,32 +106,36 @@
 
         </header>
 
-        <section class="controls" aria-label="Filtrar projetos">
+     <section class="controls" aria-label="Filtrar projetos">
 
-            <div class="search">
-                <label for="search">Buscar</label>
+    <div class="search">
+        <label for="search">Buscar</label>
 
-                <input
-                    id="search"
-                    type="search"
-                    placeholder="Nome, descrição ou tecnologia"
-                    autocomplete="off"
-                >
-            </div>
+        <input
+            id="search"
+            type="search"
+            placeholder="Nome, descrição ou tecnologia"
+            autocomplete="off"
+        >
+    </div>
 
-            <div>
-                <p class="control-label">Categoria</p>
+    <div class="select-field">
+        <label for="category-filter">Categoria</label>
 
-                <div id="category-filters" class="filters"></div>
-            </div>
+        <select id="category-filter">
+            <option value="Todos">Todos</option>
+        </select>
+    </div>
 
-            <div>
-                <p class="control-label">Minha relação</p>
+    <div class="select-field">
+        <label for="relationship-filter">Minha relação</label>
 
-                <div id="relationship-filters" class="filters"></div>
-            </div>
+        <select id="relationship-filter">
+            <option value="Todos">Todos</option>
+        </select>
+    </div>
 
-        </section>
+</section>
 
         <div id="active-filter" class="active-filter" aria-live="polite"></div>
 

@@ -415,7 +415,7 @@
   },
 
   {
-    "name": "Aceleradora Ágil — Que Viagem",
+    "name": "Que Viagem — Aceleradora Ágil ",
     "repositoryName": "aceleradora-agil-que-viagem",
     "description": "Projeto desenvolvido durante atividade de formação e experimentação prática.",
     "category": "Estudos",
@@ -427,9 +427,9 @@
     "tags": ["Estudo", "Projeto"]
   },
   {
-    "name": "Inclusica — Clima",
-    "repositoryName": "aceleradora-inclusica-clima",
-    "description": "Projeto desenvolvido no contexto da Aceleradora Inclusica.",
+    "name": "Medição de Clima — Aceleradora Inclusiva",
+    "repositoryName": "aceleradora-Inclusiva-clima",
+    "description": "Projeto desenvolvido no contexto da Aceleradora Inclusiva.",
     "category": "Estudos",
     "relationship": "Colaboração",
     "visibility": "Privado",
@@ -439,9 +439,9 @@
     "tags": ["Estudo", "Inclusão"]
   },
   {
-    "name": "Inclusica — VesteBem",
-    "repositoryName": "aceleradora-inclusica-vestebem",
-    "description": "Projeto desenvolvido no contexto da Aceleradora Inclusica.",
+    "name": "Veste Bem — Aceleradora Inclusiva",
+    "repositoryName": "aceleradora-Inclusiva-vestebem",
+    "description": "Projeto desenvolvido no contexto da Aceleradora Inclusiva.",
     "category": "Estudos",
     "relationship": "Colaboração",
     "visibility": "Privado",
