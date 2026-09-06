@@ -1,168 +1,36 @@
-﻿const GITHUB_USER = "wagnerbeethoven";
-
-const hiddenRepositories = new Set([
-    "wagnerbeethoven",
-    "wagnerbeethoven.github.io"
-]);
-
-const customDescriptions = {
-    "figma-plugin-html-layers":
-        "Plugin e experimento para trabalhar com estruturas HTML e camadas no Figma.",
-
-    "figma-plugin-samples":
-        "Coleção de estudos, exemplos e experimentos para desenvolvimento de plugins do Figma.",
-
-    "figma-plugin-selection-to-variables":
-        "Plugin para transformar propriedades de elementos selecionados em variáveis no Figma.",
-
-    "ai-a11y":
-        "Recursos e experimentos que aproximam inteligência artificial e acessibilidade digital.",
-
-    "ai-claude-code-templates":
-        "Templates e referências para estruturar fluxos e projetos utilizando Claude Code.",
-
-    "ai-code-review-graph":
-        "Experimentos com inteligência artificial aplicada à revisão e análise de código.",
-
-    "ai-graphic-design-skill":
-        "Skill experimental para apoiar tarefas e processos de design gráfico com inteligência artificial.",
-
-    "ai-open-codesign":
-        "Recursos e experimentos de codesign apoiados por inteligência artificial.",
-
-    "ai-open-design":
-        "Explorações sobre processos de design, ferramentas abertas e inteligência artificial.",
-
-    "ai-ruflo":
-        "Experimentação e estudo de workflows multiagente e automações com inteligência artificial.",
-
-    "revista-zena":
-        "Projeto editorial e arquivo digital da Revista Zena."
-};
-
-const state = {
-    repositories: [],
-    filter: "all",
+﻿const state = {
+    projects: [],
+    category: "Todos",
+    relationship: "Todos",
     query: ""
 };
 
-const repositoryContainer =
-    document.querySelector("#repositories");
+const projectsElement =
+    document.querySelector("#projects");
 
-const search =
+const categoryFilters =
+    document.querySelector("#category-filters");
+
+const relationshipFilters =
+    document.querySelector("#relationship-filters");
+
+const searchInput =
     document.querySelector("#search");
 
-const filters =
-    [...document.querySelectorAll(".filter")];
+const counter =
+    document.querySelector("#counter");
 
-const repoCount =
-    document.querySelector("#repo-count");
+const counterLabel =
+    document.querySelector("#counter-label");
 
-const repoCountLabel =
-    document.querySelector("#repo-count-label");
+const activeFilter =
+    document.querySelector("#active-filter");
 
 document.querySelector("#year").textContent =
     new Date().getFullYear();
 
-function getCategory(repository) {
-
-    if (repository.name.startsWith("ai-")) {
-        return "ai";
-    }
-
-    if (repository.name.startsWith("figma-plugin-")) {
-        return "figma";
-    }
-
-    return "other";
-}
-
-function getCategoryLabel(category) {
-
-    const labels = {
-        ai: "IA",
-        figma: "Figma",
-        other: "Projeto"
-    };
-
-    return labels[category];
-}
-
-function getInitials(repository) {
-
-    if (repository.name.startsWith("figma-plugin-")) {
-        return "FG";
-    }
-
-    if (repository.name.startsWith("ai-")) {
-        return "AI";
-    }
-
-    return repository.name
-        .split("-")
-        .slice(0, 2)
-        .map(word => word.charAt(0))
-        .join("")
-        .toUpperCase();
-}
-
-function formatName(repositoryName) {
-
-    const names = {
-        "figma-plugin-html-layers":
-            "HTML Layers",
-
-        "figma-plugin-samples":
-            "Figma Plugin Samples",
-
-        "figma-plugin-selection-to-variables":
-            "Selection to Variables",
-
-        "ai-a11y":
-            "AI + Accessibility",
-
-        "ai-claude-code-templates":
-            "Claude Code Templates",
-
-        "ai-code-review-graph":
-            "Code Review Graph",
-
-        "ai-graphic-design-skill":
-            "Graphic Design Skill",
-
-        "ai-open-codesign":
-            "Open Codesign",
-
-        "ai-open-design":
-            "Open Design",
-
-        "ai-ruflo":
-            "Ruflo",
-
-        "revista-zena":
-            "Revista Zena"
-    };
-
-    return names[repositoryName] ??
-        repositoryName
-            .split("-")
-            .map(word =>
-                word.charAt(0).toUpperCase() +
-                word.slice(1)
-            )
-            .join(" ");
-}
-
-function getDescription(repository) {
-
-    return customDescriptions[repository.name]
-        ?? repository.description
-        ?? "Projeto e experimento publicado no meu GitHub.";
-}
-
 function escapeHTML(value = "") {
-
-    return value
+    return String(value)
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
@@ -170,257 +38,332 @@ function escapeHTML(value = "") {
         .replaceAll("'", "&#039;");
 }
 
-function cardTemplate(repository) {
+function initials(name) {
+    return name
+        .replace(/[+/]/g, " ")
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map(word => word[0])
+        .join("")
+        .toUpperCase();
+}
 
-    const category =
-        getCategory(repository);
+function normalize(value) {
+    return String(value)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
 
-    const language =
-        repository.language
-            ? `
-                <span>
-                    <span
-                        class="language-dot"
-                        aria-hidden="true"
-                    ></span>
-                    ${escapeHTML(repository.language)}
-                </span>
-            `
-            : "";
+function createFilterButton(value, type) {
+
+    const button =
+        document.createElement("button");
+
+    button.type = "button";
+    button.className = "filter";
+    button.textContent = value;
+    button.dataset.value = value;
+    button.dataset.type = type;
+
+    const selected =
+        state[type] === value;
+
+    button.setAttribute(
+        "aria-pressed",
+        String(selected)
+    );
+
+    button.addEventListener("click", () => {
+
+        state[type] = value;
+
+        renderFilters();
+        renderProjects();
+    });
+
+    return button;
+}
+
+function renderFilters() {
+
+    const categories = [
+        "Todos",
+        ...new Set(
+            state.projects.map(project => project.category)
+        )
+    ];
+
+    const relationships = [
+        "Todos",
+        ...new Set(
+            state.projects.map(project => project.relationship)
+        )
+    ];
+
+    categoryFilters.replaceChildren(
+        ...categories.map(value =>
+            createFilterButton(value, "category")
+        )
+    );
+
+    relationshipFilters.replaceChildren(
+        ...relationships.map(value =>
+            createFilterButton(value, "relationship")
+        )
+    );
+}
+
+function projectMatches(project) {
+
+    const categoryMatch =
+        state.category === "Todos" ||
+        project.category === state.category;
+
+    const relationshipMatch =
+        state.relationship === "Todos" ||
+        project.relationship === state.relationship;
+
+    const query =
+        normalize(state.query.trim());
+
+    const searchable =
+        normalize([
+            project.name,
+            project.repositoryName,
+            project.description,
+            project.category,
+            project.relationship,
+            ...(project.tags || [])
+        ].join(" "));
+
+    const queryMatch =
+        !query ||
+        searchable.includes(query);
+
+    return (
+        categoryMatch &&
+        relationshipMatch &&
+        queryMatch
+    );
+}
+
+function logoTemplate(project) {
+
+    if (project.logo) {
+        return `
+            <div class="logo">
+                <img
+                    src="${escapeHTML(project.logo)}"
+                    alt=""
+                    loading="lazy"
+                >
+            </div>
+        `;
+    }
 
     return `
-        <article class="repo-card">
+        <div class="logo" aria-hidden="true">
+            <span class="logo-fallback">
+                ${escapeHTML(initials(project.name))}
+            </span>
+        </div>
+    `;
+}
 
-            <div class="repo-card-header">
+function linksTemplate(project) {
 
-                <div
-                    class="repo-icon"
-                    aria-hidden="true"
-                >
-                    ${escapeHTML(getInitials(repository))}
-                </div>
+    const links = [];
 
-                <span class="repo-type">
-                    ${escapeHTML(getCategoryLabel(category))}
+    if (project.url) {
+        links.push(`
+            <a
+                href="${escapeHTML(project.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Acessar projeto
+            </a>
+        `);
+    }
+
+    if (project.repository) {
+        links.push(`
+            <a
+                href="${escapeHTML(project.repository)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+        `);
+    }
+
+    if (!links.length) {
+        return `
+            <p class="private-note">
+                Sem link público
+            </p>
+        `;
+    }
+
+    return links.join("");
+}
+
+function cardTemplate(project) {
+
+    const tags =
+        (project.tags || [])
+            .map(tag => `
+                <span class="tag">
+                    ${escapeHTML(tag)}
                 </span>
+            `)
+            .join("");
+
+    return `
+        <article class="card">
+
+            <div class="card-top">
+
+                ${logoTemplate(project)}
+
+                <div class="badges">
+
+                    <span class="badge relationship">
+                        ${escapeHTML(project.relationship)}
+                    </span>
+
+                    <span class="badge">
+                        ${escapeHTML(project.visibility)}
+                    </span>
+
+                </div>
 
             </div>
 
             <h3>
-                <a
-                    href="${escapeHTML(repository.html_url)}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Acessar ${escapeHTML(formatName(repository.name))} no GitHub"
-                >
-                    ${escapeHTML(formatName(repository.name))}
-                </a>
+                ${escapeHTML(project.name)}
             </h3>
 
-            <p class="repo-description">
-                ${escapeHTML(getDescription(repository))}
+            <p class="description">
+                ${escapeHTML(project.description)}
             </p>
 
-            <div class="repo-meta">
-                ${language}
-
-                ${
-                    repository.stargazers_count > 0
-                        ? `
-                            <span>
-                                ★ ${repository.stargazers_count}
-                                <span class="sr-only">
-                                    estrelas
-                                </span>
-                            </span>
-                        `
-                        : ""
-                }
+            <div class="tags" aria-label="Características">
+                ${tags}
             </div>
+
+            <footer class="card-footer">
+                ${linksTemplate(project)}
+            </footer>
 
         </article>
     `;
 }
 
-function filterRepositories() {
+function renderProjects() {
 
-    const normalizedQuery =
-        state.query
-            .trim()
-            .toLocaleLowerCase("pt-BR");
+    const filtered =
+        state.projects.filter(projectMatches);
 
-    return state.repositories.filter(repository => {
+    counter.textContent =
+        filtered.length;
 
-        const matchesFilter =
-            state.filter === "all" ||
-            getCategory(repository) === state.filter;
+    counterLabel.textContent =
+        filtered.length === 1
+            ? "projeto"
+            : "projetos";
 
-        const searchableText = `
-            ${repository.name}
-            ${formatName(repository.name)}
-            ${getDescription(repository)}
-        `.toLocaleLowerCase("pt-BR");
+    const active = [];
 
-        const matchesSearch =
-            !normalizedQuery ||
-            searchableText.includes(normalizedQuery);
+    if (state.category !== "Todos") {
+        active.push(state.category);
+    }
 
-        return matchesFilter && matchesSearch;
-    });
-}
+    if (state.relationship !== "Todos") {
+        active.push(state.relationship);
+    }
 
-function render() {
+    if (state.query.trim()) {
+        active.push(`Busca: "${state.query.trim()}"`);
+    }
 
-    const repositories =
-        filterRepositories();
+    activeFilter.textContent =
+        active.length
+            ? `Filtros ativos: ${active.join(" · ")}`
+            : `Exibindo todos os ${state.projects.length} projetos cadastrados.`;
 
-    repoCount.textContent =
-        repositories.length;
+    if (!filtered.length) {
 
-    repoCountLabel.textContent =
-        repositories.length === 1
-            ? "repositório"
-            : "repositórios";
-
-    if (!repositories.length) {
-
-        repositoryContainer.innerHTML = `
-            <p class="empty">
-                Nenhum projeto encontrado para esse filtro.
+        projectsElement.innerHTML = `
+            <p class="status">
+                Nenhum projeto encontrado com esses filtros.
             </p>
         `;
 
         return;
     }
 
-    repositoryContainer.innerHTML =
-        repositories
+    projectsElement.innerHTML =
+        filtered
             .map(cardTemplate)
             .join("");
 }
 
-async function loadRepositories() {
+async function loadProjects() {
 
-    repositoryContainer.setAttribute(
+    projectsElement.setAttribute(
         "aria-busy",
         "true"
     );
 
     try {
 
-        const response = await fetch(
-            `https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`
-        );
+        const response =
+            await fetch("./projects.json");
 
         if (!response.ok) {
             throw new Error(
-                `GitHub retornou ${response.status}`
+                `Erro ${response.status}`
             );
         }
 
-        const repositories =
+        state.projects =
             await response.json();
 
-        state.repositories =
-            repositories
-                .filter(repository =>
-                    !repository.fork &&
-                    !repository.archived &&
-                    !hiddenRepositories.has(repository.name)
-                )
-                .sort((a, b) => {
-
-                    const categoryOrder = {
-                        figma: 0,
-                        ai: 1,
-                        other: 2
-                    };
-
-                    const categoryDifference =
-                        categoryOrder[getCategory(a)] -
-                        categoryOrder[getCategory(b)];
-
-                    if (categoryDifference !== 0) {
-                        return categoryDifference;
-                    }
-
-                    return formatName(a.name)
-                        .localeCompare(
-                            formatName(b.name),
-                            "pt-BR"
-                        );
-                });
-
-        render();
+        renderFilters();
+        renderProjects();
 
     } catch (error) {
 
         console.error(error);
 
-        repositoryContainer.innerHTML = `
-            <div class="error">
-                <p>
-                    Não foi possível carregar os projetos agora.
-                </p>
-
-                <p>
-                    <a
-                        href="https://github.com/${GITHUB_USER}?tab=repositories"
-                    >
-                        Acessar meus repositórios diretamente no GitHub.
-                    </a>
-                </p>
-            </div>
+        projectsElement.innerHTML = `
+            <p class="status">
+                Não foi possível carregar o catálogo de projetos.
+            </p>
         `;
 
     } finally {
 
-        repositoryContainer.setAttribute(
+        projectsElement.setAttribute(
             "aria-busy",
             "false"
         );
     }
 }
 
-search.addEventListener(
+searchInput.addEventListener(
     "input",
     event => {
 
         state.query =
             event.target.value;
 
-        render();
+        renderProjects();
     }
 );
 
-filters.forEach(button => {
-
-    button.addEventListener(
-        "click",
-        () => {
-
-            state.filter =
-                button.dataset.filter;
-
-            filters.forEach(filter => {
-
-                const active =
-                    filter === button;
-
-                filter.classList.toggle(
-                    "active",
-                    active
-                );
-
-                filter.setAttribute(
-                    "aria-pressed",
-                    String(active)
-                );
-            });
-
-            render();
-        }
-    );
-});
-
-loadRepositories();
+loadProjects();
