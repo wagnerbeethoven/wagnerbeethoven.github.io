@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wagner Beethoven — Projetos</title>
+
+    <meta name="description" content="Produtos, experimentos, trabalhos, ferramentas e projetos desenvolvidos, colaborados ou mantidos como referência por Wagner Beethoven.">
+    <meta name="author" content="Wagner Beethoven">
+    <meta name="color-scheme" content="light dark">
+
+    <meta property="og:title" content="Wagner Beethoven — Projetos">
+    <meta property="og:description" content="Produtos, experimentos, trabalhos, ferramentas e referências de Wagner Beethoven.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wagnerbeethoven.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/3411635?v=4">
+
+    <link rel="icon" href="https://github.com/wagnerbeethoven.png?size=64">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<div class="layout">
+
+    <aside class="profile">
+
+        <div>
+            <a class="avatar-link" href="https://wagnerbeethoven.com.br">
+                <img
+                    class="avatar"
+                    src="https://avatars.githubusercontent.com/u/3411635?v=4"
+                    alt="Wagner Beethoven"
+                    width="152"
+                    height="152"
+                >
+            </a>
+
+            <p class="kicker">Product · UX · Acessibilidade</p>
+
+            <h1>Wagner Beethoven</h1>
+
+            <p class="location">Olinda, Pernambuco, Brasil</p>
+
+            <p class="bio">
+                Product Designer com mais de 15 anos de experiência.
+                Trabalho com UX, pesquisa, prototipação, acessibilidade,
+                design systems e produtos digitais. Também construo
+                projetos independentes e experimento com tecnologia e IA.
+            </p>
+
+            <nav class="social" aria-label="Redes e perfis">
+
+                <a href="https://wagnerbeethoven.com.br">
+                    Site
+                </a>
+
+                <a href="https://github.com/wagnerbeethoven">
+                    GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/wagnerbeethoven/">
+                    LinkedIn
+                </a>
+
+                <a href="https://www.figma.com/@wagnerbeethoven">
+                    Figma
+                </a>
+
+                <a href="https://bsky.app/profile/wagnerbeethoven.com.br">
+                    Bluesky
+                </a>
+
+            </nav>
+        </div>
+
+        <p class="copyright">
+            © <span id="year"></span> Wagner Beethoven
+        </p>
+
+    </aside>
+
+    <main id="conteudo" class="content">
+
+        <header class="hero">
+
+            <div>
+                <p class="kicker">Arquivo de projetos</p>
+
+                <h2>Projetos</h2>
+
+                <p class="lead">
+                    Produtos, experimentos, trabalhos, ferramentas e
+                    projetos que desenvolvi, colaborei ou mantenho como
+                    referência.
+                </p>
+            </div>
+
+            <div class="counter" aria-live="polite">
+                <strong id="counter">0</strong>
+                <span id="counter-label">projetos</span>
+            </div>
+
+        </header>
+
+        <section class="controls" aria-label="Filtrar projetos">
+
+            <div class="search">
+                <label for="search">Buscar</label>
+
+                <input
+                    id="search"
+                    type="search"
+                    placeholder="Nome, descrição ou tecnologia"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div>
+                <p class="control-label">Categoria</p>
+
+                <div id="category-filters" class="filters"></div>
+            </div>
+
+            <div>
+                <p class="control-label">Minha relação</p>
+
+                <div id="relationship-filters" class="filters"></div>
+            </div>
+
+        </section>
+
+        <div id="active-filter" class="active-filter" aria-live="polite"></div>
+
+        <section
+            id="projects"
+            class="projects"
+            aria-label="Lista de projetos"
+            aria-busy="true"
+        >
+            <p class="status">Carregando projetos…</p>
+        </section>
+
+        <noscript>
+            <p class="status">
+                O JavaScript precisa estar habilitado para exibir e
+                filtrar o catálogo de projetos.
+            </p>
+        </noscript>
+
+    </main>
+
+</div>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
